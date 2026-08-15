@@ -188,6 +188,36 @@
       font-size: 0.9rem;
       color: var(--muted);
     }
+    .prio-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .prio-btn {
+      min-width: 3.5rem;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 0.55rem 1rem;
+      font: inherit;
+      font-weight: 650;
+      cursor: pointer;
+    }
+    .prio-btn[aria-pressed="true"] {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: #fff;
+    }
+    .prio-help {
+      margin: 0.75rem 0 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .prio-help li { margin-bottom: 0.35rem; }
+    .prio-help strong { color: var(--ink); }
   </style>
 </head>
 <body>
@@ -209,16 +239,16 @@
 
       <div class="card">
         <h2>Priorité</h2>
-        <div class="toolbar">
-          <button type="button" class="secondary" id="btn-prio-all">P1–P3</button>
-          <button type="button" class="secondary" id="btn-prio-p1">P1 seul</button>
+        <div class="prio-btns" id="priority-list" role="group" aria-label="Priorités">
+          <button type="button" class="prio-btn" data-prio="P1" aria-pressed="true">P1</button>
+          <button type="button" class="prio-btn" data-prio="P2" aria-pressed="true">P2</button>
+          <button type="button" class="prio-btn" data-prio="P3" aria-pressed="true">P3</button>
         </div>
-        <div class="chapters" id="priority-list">
-          <label><input type="checkbox" value="P1" checked /> <span>P1 — priorité absolue</span></label>
-          <label><input type="checkbox" value="P2" checked /> <span>P2 — bien connaître</span></label>
-          <label><input type="checkbox" value="P3" checked /> <span>P3 — lecture attentive</span></label>
-        </div>
-        <p class="hint">Filtre selon les sections du polycopié (via le lien de cours de chaque QCM).</p>
+        <ul class="prio-help">
+          <li><strong>P1</strong> — à maîtriser en priorité absolue (souvent tombé / socle du chapitre).</li>
+          <li><strong>P2</strong> — à bien connaître (important, un cran en dessous).</li>
+          <li><strong>P3</strong> — lecture attentive suffisante (utile, moins prioritaire).</li>
+        </ul>
       </div>
 
       <div class="card">
@@ -288,7 +318,7 @@
     </section>
   </main>
 
-  <script src="./data/lots.js"></script>
+  <script src="./data/lots.js?v=prio2"></script>
   <script>
     const CHAPTER_META = {
       "01": "Introduction",
@@ -340,20 +370,21 @@
     }
 
     function selectedPriorities() {
-      return [...elPriorityList.querySelectorAll('input[type="checkbox"]:checked')].map(
-        (i) => i.value
+      return [...elPriorityList.querySelectorAll(".prio-btn[aria-pressed='true']")].map(
+        (btn) => btn.getAttribute("data-prio")
       );
     }
 
     function itemPriority(item) {
-      const p = (item && item.priority) || "";
+      const raw = item && (item.priority || item.prio || "");
+      const p = String(raw).trim().toUpperCase();
       if (p === "P1" || p === "P2" || p === "P3") return p;
       const tags = (item && item.tags) || [];
       for (const t of tags) {
-        const u = String(t).toUpperCase();
+        const u = String(t).trim().toUpperCase();
         if (u === "P1" || u === "P2" || u === "P3") return u;
       }
-      return "P2";
+      return null;
     }
 
     function poolFrom(chapters, priorities) {
@@ -361,7 +392,8 @@
       const pool = [];
       for (const ch of chapters) {
         for (const item of lots[ch] || []) {
-          if (allow.has(itemPriority(item))) pool.push(item);
+          const p = itemPriority(item);
+          if (p && allow.has(p)) pool.push(item);
         }
       }
       return pool;
@@ -383,9 +415,13 @@
       if (!chs.length) {
         elPoolHint.textContent = "Coche au moins un chapitre.";
       } else if (!prios.length) {
-        elPoolHint.textContent = "Coche au moins une priorité (P1 / P2 / P3).";
+        elPoolHint.textContent = "Active au moins une priorité (P1 / P2 / P3).";
       } else {
-        elPoolHint.textContent = `${n} question${n > 1 ? "s" : ""} · chapitres sélectionnés · ${prios.join(" + ")}.`;
+        const allPool = poolFrom(chs, ["P1", "P2", "P3"]);
+        const c1 = allPool.filter((i) => itemPriority(i) === "P1").length;
+        const c2 = allPool.filter((i) => itemPriority(i) === "P2").length;
+        const c3 = allPool.filter((i) => itemPriority(i) === "P3").length;
+        elPoolHint.textContent = `${n} question${n > 1 ? "s" : ""} sélectionnée${n > 1 ? "s" : ""} (${prios.join(" + ")}) · dispo dans ces chapitres : P1 ${c1} · P2 ${c2} · P3 ${c3}.`;
       }
       elQcount.max = Math.max(1, n || 1);
       if (Number(elQcount.value) > n && n > 0) elQcount.value = n;
@@ -400,7 +436,13 @@
         elChapterList.appendChild(label);
       }
       elChapterList.addEventListener("change", updatePoolHint);
-      elPriorityList.addEventListener("change", updatePoolHint);
+      elPriorityList.querySelectorAll(".prio-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const on = btn.getAttribute("aria-pressed") !== "true";
+          btn.setAttribute("aria-pressed", on ? "true" : "false");
+          updatePoolHint();
+        });
+      });
       updatePoolHint();
     }
 
@@ -441,7 +483,7 @@
       elItemScore.textContent = "";
       btnValidate.disabled = false;
       btnNext.disabled = true;
-      elProgress.textContent = `${index + 1} / ${sessionItems.length} · ch.${item.chapter} · ${itemPriority(item)} · ${item.id}`;
+      elProgress.textContent = `${index + 1} / ${sessionItems.length} · ch.${item.chapter} · ${itemPriority(item) || "?"} · ${item.id}`;
       elStem.textContent = item.stem;
       elTags.textContent = (item.tags || []).map((t) => `#${t}`).join("  ");
 
@@ -598,16 +640,6 @@
     });
     document.getElementById("btn-none").addEventListener("click", () => {
       elChapterList.querySelectorAll("input").forEach((i) => (i.checked = false));
-      updatePoolHint();
-    });
-    document.getElementById("btn-prio-all").addEventListener("click", () => {
-      elPriorityList.querySelectorAll("input").forEach((i) => (i.checked = true));
-      updatePoolHint();
-    });
-    document.getElementById("btn-prio-p1").addEventListener("click", () => {
-      elPriorityList.querySelectorAll("input").forEach((i) => {
-        i.checked = i.value === "P1";
-      });
       updatePoolHint();
     });
     document.getElementById("btn-start").addEventListener("click", () => {
