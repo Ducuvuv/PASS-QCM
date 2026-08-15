@@ -9,6 +9,7 @@ Site minimal PASS Sorbonne + player QCM.
 | `index.html` | Accueil (rubriques) |
 | `matiere.html` | Matière (placeholder) |
 | `entrainement.html` | Hub entraînement |
+| `flashcards.html` | Flashcards (placeholder decks) |
 | `qcm-player.html` | Session QCM Anatomie |
 | `competitions.html` | Compétitions (placeholder) |
 | `planning.html` | Planning (placeholder) |
