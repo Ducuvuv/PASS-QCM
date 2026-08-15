@@ -222,7 +222,7 @@
 </head>
 <body>
   <main>
-    <p class="meta" style="margin:0 0 0.75rem"><a href="./entrainement.html" style="color:inherit">← Entraînement</a> · <a href="./index.html" style="color:inherit">Accueil</a></p>
+    <p class="meta" style="margin:0 0 0.75rem"><a href="./entrainement.html" style="color:inherit">← Entraînement</a> · <a href="./suivi.html" style="color:inherit">Suivi</a> · <a href="./index.html" style="color:inherit">Accueil</a></p>
     <!-- SETUP -->
     <section id="setup">
       <h1>Test QCM — Anatomie</h1>
@@ -313,11 +313,13 @@
         <div class="actions">
           <button type="button" id="btn-retry">Rejouer (mêmes réglages)</button>
           <button type="button" class="secondary" id="btn-home">Changer de chapitres</button>
+          <a class="secondary" id="btn-suivi" href="./suivi.html" style="display:inline-block;border:1px solid var(--ink);background:#fff;color:var(--ink);border-radius:999px;padding:0.55rem 1rem;text-decoration:none;font:inherit">Voir le suivi</a>
         </div>
       </div>
     </section>
   </main>
 
+  <script src="./js/suivi-store.js"></script>
   <script src="./data/lots.js?v=prio2"></script>
   <script>
     const CHAPTER_META = {
@@ -630,6 +632,10 @@
         total > 0
           ? `${score} bonne${score > 1 ? "s" : ""} · ${wrong.length} à revoir · ${total} question${total > 1 ? "s" : ""}.`
           : "Aucune question répondue.";
+
+      if (window.PASS_SUIVI && history.length) {
+        window.PASS_SUIVI.recordSession(history);
+      }
 
       show("results");
     }

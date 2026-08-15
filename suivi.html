@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suivi — PASS Sorbonne</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <nav class="topnav" aria-label="Navigation principale">
+      <a class="brand" href="./index.html">PASS Sorbonne</a>
+      <ul class="nav-links">
+        <li><a href="./matiere.html">Matière</a></li>
+        <li><a href="./entrainement.html">Entraînement</a></li>
+        <li><a href="./flashcards.html">Flashcards</a></li>
+        <li><a href="./suivi.html" aria-current="page">Suivi</a></li>
+        <li><a href="./competitions.html">Compétitions</a></li>
+        <li><a href="./planning.html">Planning</a></li>
+        <li><a href="./conseils.html">Conseils</a></li>
+      </ul>
+    </nav>
+
+    <h1 class="page-title">Suivi</h1>
+    <p class="page-sub">Niveau par chapitre selon tes sessions QCM (enregistré sur cet appareil).</p>
+
+    <div class="panel">
+      <h2>Légende</h2>
+      <ul class="suivi-legend">
+        <li><span class="pill pill-none" aria-hidden="true"></span> Pas assez de data (&lt; 10 Q sur le chapitre)</li>
+        <li><span class="pill pill-red" aria-hidden="true"></span> Rouge — &lt; 10/20 (&lt; 50 %)</li>
+        <li><span class="pill pill-blue" aria-hidden="true"></span> Bleu — 10 à 15/20 (50–75 %)</li>
+        <li><span class="pill pill-green" aria-hidden="true"></span> Vert — &gt; 15/20 (&gt; 75 %)</li>
+      </ul>
+      <p class="note" style="margin-top:0.75rem">La pastille se met à jour dès que tu as répondu à au moins 10 questions sur ce chapitre (cumul des sessions).</p>
+    </div>
+
+    <div class="panel">
+      <h2>Anatomie (UE5)</h2>
+      <div class="table-wrap">
+        <table class="suivi-table" id="suivi-table">
+          <thead>
+            <tr>
+              <th>Chapitre</th>
+              <th>Niveau</th>
+              <th>Score</th>
+              <th>Q</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="actions">
+        <a class="btn" href="./qcm-player.html">Faire des QCM</a>
+        <button type="button" class="btn secondary" id="btn-reset">Réinitialiser Anatomie</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Autres UE</h2>
+      <p>À brancher quand tu ajouteras d’autres matières.</p>
+    </div>
+  </div>
+
+  <script src="./js/suivi-store.js"></script>
+  <script>
+    const S = window.PASS_SUIVI;
+    const tbody = document.querySelector("#suivi-table tbody");
+
+    function render() {
+      const data = S.getAnatomie();
+      tbody.innerHTML = "";
+      for (const [ch, title] of Object.entries(S.CHAPTERS)) {
+        const row = data[ch];
+        const level = row ? row.level : "none";
+        const n = row ? row.n : 0;
+        const scoreLabel =
+          row && n >= S.MIN_Q
+            ? `${row.score20}/20 (${row.pct} %)`
+            : n
+              ? `— (${n}/${S.MIN_Q} Q)`
+              : "—";
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td><strong>${ch}</strong> — ${title}</td>
+          <td><span class="pill pill-${level}" title="${level}"></span></td>
+          <td>${scoreLabel}</td>
+          <td>${n}</td>
+        `;
+        tbody.appendChild(tr);
+      }
+    }
+
+    document.getElementById("btn-reset").addEventListener("click", () => {
+      if (confirm("Effacer le suivi Anatomie sur cet appareil ?")) {
+        S.resetAnatomie();
+        render();
+      }
+    });
+
+    render();
+  </script>
+</body>
+</html>
