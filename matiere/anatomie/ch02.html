@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ch.02 Système nerveux — Anatomie</title>
+  <link rel="stylesheet" href="../../styles.css" />
+  <link rel="stylesheet" href="../fiche.css" />
+</head>
+<body>
+  <header class="fiche-hud">
+    <div>
+      <a class="site-nav" href="../../matiere.html">← Matière</a>
+      <div class="title">UE5 · Ch.02 — Système nerveux</div>
+    </div>
+    <div class="hud-tools">
+      <div class="hud-chip"><span id="chrono">00:00</span> <button type="button" id="btn-chrono">Start</button></div>
+      <div class="hud-chip"><button type="button" id="btn-focus" aria-pressed="false">Focus</button></div>
+    </div>
+  </header>
+
+  <main class="wrap fiche-main">
+    <p class="lead">Fiche brouillon — style aligné sur le player QCM. Contenu hors programme (tableaux nerfs crâniens III–XII) exclu. Schémas interactifs = plus tard.</p>
+
+    <div class="legend">
+      <span class="tag p1">P1</span>
+      <span class="tag p2">P2</span>
+      <span class="tag p3">P3</span>
+      <span class="tag">⭐ fréquence concours</span>
+    </div>
+
+    <nav class="toc fiche-aside" aria-label="Sommaire">
+      <a href="#p1">1. Trois systèmes <span class="tag p3">P3</span></a>
+      <a href="#p2">2. Moelle spinale <span class="tag p1">P1</span></a>
+      <a href="#p3">3. Tronc cérébral <span class="tag p1">P1</span></a>
+      <a href="#p4">4. LCS <span class="tag p3">P3</span></a>
+      <a href="#p5">5. Cervelet <span class="tag p3">P3</span></a>
+      <a href="#p6">6. Diencéphale <span class="tag p3">P3</span></a>
+      <a href="#p7">7. Méninges <span class="tag p1">P1</span></a>
+      <a href="#p8">8. Hémisphères <span class="tag p1">P1</span></a>
+      <a href="#p9">9. Végétatif <span class="tag p3">P3</span></a>
+    </nav>
+
+    <!-- ========== 1 ========== -->
+    <section class="point" id="p1">
+      <h2>1. Les 3 systèmes nerveux <span class="tag p3">P3</span></h2>
+
+      <h3>1.1. Système nerveux central (névraxe)</h3>
+      <ul>
+        <li>L’<strong>encéphale</strong> = <strong>hémisphères cérébraux</strong> + <strong>tronc cérébral</strong> + <strong>cervelet</strong>.</li>
+        <li>La <strong>moelle spinale</strong> (moelle épinière).</li>
+      </ul>
+
+      <h3>1.2. Système nerveux périphérique</h3>
+      <ul>
+        <li><strong>Nerfs spinaux</strong> : naissent de la moelle, innervent les muscles du corps ; peuvent se regrouper en <strong>ganglions</strong> ou <strong>plexus nerveux</strong>.</li>
+        <li><strong>Nerfs crâniens</strong> :
+          <ul>
+            <li><strong>I (olfactif)</strong> et <strong>II (optique)</strong> = <strong>expansions du SNC</strong>.</li>
+            <li><strong>III à XII</strong> : naissent de <strong>noyaux du tronc cérébral</strong> ; appartiennent au SNP (noms / fonctions / origines détaillés = hors programme).</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>1.3. Système nerveux autonome (végétatif)</h3>
+      <ul>
+        <li>Aucune commande volontaire.</li>
+        <li><strong>Mixte</strong> : centres dans le SNC + voies périphériques.</li>
+      </ul>
+
+      <div class="schema-slot">Schéma — trois systèmes (vue latérale encéphale / moelle / nerfs) — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["nevraxe","systeme nerveux central","snc"],["hemispheres","hemisphere"],["tronc cerebral","tronc"],["cervelet"],["expansions","expansion"]]'>
+        <div class="cloze-item">
+          <p>Le SNC s’appelle aussi <input class="blank" />. L’encéphale = <input class="blank" /> + <input class="blank" /> + <input class="blank" />. Les nerfs I et II sont des <input class="blank" /> du SNC.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Constituants de l’encéphale ?</div>
+          <div class="back">Hémisphères cérébraux, tronc cérébral, cervelet.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">I–II vs III–XII ?</div>
+          <div class="back">I–II = expansions du SNC ; III–XII = noyaux du tronc, SNP.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Le végétatif est-il purement périphérique ?</div>
+          <div class="back">Non : mixte (centres SNC + voies périphériques).</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 2 ========== -->
+    <section class="point" id="p2">
+      <h2>2. La moelle spinale <span class="tag p1">P1</span></h2>
+      <div class="callout hot"><strong>Souvent tombé</strong> Limites (foramen magnum, L1/L2), grise/blanche, cornes, règle C8, plexus.</div>
+
+      <h3>2.1. Généralités</h3>
+      <ul>
+        <li>Partie <strong>inférieure du névraxe</strong> <span class="tag">⭐</span>, dans le <strong>canal vertébral</strong> <span class="tag">⭐</span>, entourée de <strong>méninges</strong>.</li>
+        <li>Long <strong>cordon</strong> d’aspect <strong>segmenté</strong> : renflements et portions rétrécies selon la quantité de nerfs.</li>
+        <li><strong>Substance grise centrale</strong> <span class="tag">⭐</span> : corps cellulaires des neurones, en <strong>cornes</strong> dessinant un <strong>papillon</strong>.</li>
+        <li><strong>Substance blanche périphérique</strong> <span class="tag">⭐</span> : axones en <strong>cordons</strong> —
+          voies <strong>ascendantes sensitives</strong> (périphérie → cerveau),
+          <strong>descendantes motrices</strong> (cerveau → périphérie),
+          <strong>associatives</strong> (gauche ↔ droite, cerveau ou moelle).</li>
+        <li><strong>Canal central / épendymaire</strong> <span class="tag">⭐</span> : au milieu de la grise, <strong>quasi virtuel</strong>.</li>
+      </ul>
+      <div class="callout trap"><strong>Attention / piège</strong> Dans la moelle : grise <em>centrale</em> / blanche <em>périphérique</em> — <strong>inverse</strong> des hémisphères (cortex gris périphérique).</div>
+
+      <h3>2.2. Situation et limites</h3>
+      <ul>
+        <li>Canal vertébral : <strong>7</strong> cervicales, <strong>12</strong> thoraciques (dorsales), <strong>5</strong> lombales, <strong>5</strong> sacrées, <strong>1</strong> coccygienne.</li>
+        <li>Limite <strong>supérieure</strong> : au-dessus de C1 ; <strong>bord inférieur du foramen magnum</strong> <span class="tag">⭐</span> (os occipital).</li>
+        <li>Limite <strong>inférieure</strong> : vertèbres <strong>L1/L2</strong> <span class="tag">⭐⭐</span>.</li>
+      </ul>
+
+      <div class="schema-slot">Schéma — moelle dans le canal, foramen magnum, L1/L2, queue de cheval — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["centrale"],["peripherique"],["foramen magnum"],["l1/l2","l1 l2","l1-l2"],["papillon"]]'>
+        <div class="cloze-item">
+          <p>Substance grise <input class="blank" />, blanche <input class="blank" />. Limite haute : bord inférieur du <input class="blank" /> ; basse : <input class="blank" />. Grise en forme de <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Canal épendymaire : taille ?</div>
+          <div class="back">Très petit, quasi virtuel.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">3 types de voies dans les cordons blancs ?</div>
+          <div class="back">Ascendantes sensitives, descendantes motrices, associatives.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Nombre de vertèbres C / T / L / S / Co ?</div>
+          <div class="back">7 / 12 / 5 / 5 / 1.</div>
+        </div>
+      </div>
+
+      <h3>2.3. Configuration externe</h3>
+      <ul>
+        <li><strong>Renflement cervical</strong> <span class="tag">⭐</span> : naissance de plexus pour les <strong>membres supérieurs</strong>.</li>
+        <li><strong>Moelle thoracique</strong> : plutôt <strong>grêle</strong>.</li>
+        <li><strong>Renflement lombaire</strong> <span class="tag">⭐</span> : naissance de plexus pour les <strong>membres inférieurs</strong>.</li>
+        <li><strong>Cône terminal</strong> : portion terminale en <strong>L1–L2</strong> ; émergence de racines descendant en <strong>queue de cheval</strong>.</li>
+      </ul>
+
+      <h3>2.4. Croissance différentielle</h3>
+      <ul>
+        <li>Chez l’embryon, le canal croît <strong>plus vite</strong> que la moelle → la moelle ne remplit plus que les <strong>2/3</strong> du canal ; le bas contient la <strong>queue de cheval</strong>.</li>
+        <li>Racines <strong>hautes</strong> : trajet plutôt <strong>horizontal</strong> ; racines <strong>basses</strong> : trajet de plus en plus <strong>vertical</strong> (étirement vers leur foramen).</li>
+      </ul>
+
+      <div class="schema-slot">Schéma — renflements, cône terminal, croissance / verticalisation des racines — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["cervical"],["lombaire","lombar"],["2/3","deux tiers"],["queue de cheval"],["vertical","verticale"]]'>
+        <div class="cloze-item">
+          <p>Renflement <input class="blank" /> (MS) et <input class="blank" /> (MI). Moelle = <input class="blank" /> du canal ; bas = <input class="blank" />. Racines basses : trajet de plus en plus <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Où se situe le cône terminal ?</div>
+          <div class="back">L1–L2 ; racines → queue de cheval.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Aspect de la moelle thoracique ?</div>
+          <div class="back">Plutôt grêle (entre les deux renflements).</div>
+        </div>
+      </div>
+
+      <h3>2.5. SNP : racines, 31 paires, plexus, règle C8</h3>
+      <ul>
+        <li><strong>Radicelles</strong> → racines <strong>ventrale</strong> et <strong>dorsale</strong> → <strong>nerf spinal</strong> (sortie par le <strong>foramen intervertébral</strong>) → se redivise en branches ventrale et dorsale.</li>
+        <li>Branches <strong>ventrales</strong> de plusieurs nerfs → <strong>plexus</strong> → troncs → nerfs moteurs et/ou sensitifs.</li>
+        <li>Plexus :
+          <ul>
+            <li><strong>Cervical</strong> : C1–C4</li>
+            <li><strong>Brachial</strong> : C5–T1</li>
+            <li><strong>Lombal</strong> : L1–L4</li>
+            <li><strong>Sacral</strong> : L4–S3</li>
+            <li><strong>Pudendal</strong> : S2–S4</li>
+          </ul>
+        </li>
+        <li><strong>31 paires</strong> de nerfs spinaux : <strong>8</strong> cervicaux, <strong>12</strong> thoraciques, <strong>5</strong> lombaires, <strong>5</strong> sacrés, <strong>1</strong> coccygien.</li>
+      </ul>
+      <div class="callout trap"><strong>Attention / piège — règle C8</strong> 8 nerfs cervicaux pour 7 vertèbres. À l’étage <strong>cervical</strong>, le nerf sort <strong>au-dessus</strong> de la vertèbre correspondante (C1 au-dessus de C1… le <strong>8<sup>e</sup></strong> sort <strong>sous C7</strong>). Aux <strong>autres étages</strong>, le nerf sort <strong>en dessous</strong> de sa vertèbre.</div>
+
+      <div class="schema-slot">Schéma — radicelles → nerf spinal → plexus ; 31 paires ; sortie C8 — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["c5-t1","c5 t1"],["l1-l4","l1 l4"],["l4-s3","l4 s3"],["s2-s4","s2 s4"],["au-dessus","dessus"],["c7"]]'>
+        <div class="cloze-item">
+          <p>Plexus brachial <input class="blank" />, lombal <input class="blank" />, sacral <input class="blank" />, pudendal <input class="blank" />. Cervical : nerf sort <input class="blank" /> de sa vertèbre ; C8 sort sous <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Composition des 31 paires ?</div>
+          <div class="back">8 C + 12 T + 5 L + 5 S + 1 Co.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Plexus cervical : racines ?</div>
+          <div class="back">C1–C4.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Ordre : radicelles → … → nerf spinal ?</div>
+          <div class="back">Racines ventrale et dorsale se réunissent → nerf spinal.</div>
+        </div>
+      </div>
+
+      <h3>2.6. Sillons des cordons blancs</h3>
+      <ul>
+        <li><strong>2 sillons médians</strong> :
+          <ul>
+            <li><strong>Fissure médiane ventrale</strong> (sillon médian antérieur) : avant, <strong>très profonde</strong>.</li>
+            <li><strong>Sillon médian dorsal</strong> : arrière, <strong>moins prononcé</strong>.</li>
+          </ul>
+        </li>
+        <li><strong>2 sillons latéraux / collatéraux</strong> : <strong>ventral latéral</strong> et <strong>dorsal latéral</strong>.</li>
+      </ul>
+
+      <h3>2.7. Configuration interne — cornes</h3>
+      <ul>
+        <li><strong>Corne ventrale</strong> = <strong>motrice</strong> <span class="tag">⭐</span> : corps des <strong>motoneurones</strong> ; axones via racine ventrale puis nerf spinal vers la <strong>cible musculaire</strong> (muscles striés squelettiques). Forme variable selon le niveau.</li>
+        <li><strong>Corne dorsale</strong> = <strong>sensitive</strong> <span class="tag">⭐</span> : tact, douleur, proprioception, <strong>température</strong>. Ne contient <strong>pas</strong> le corps du 1<sup>er</sup> neurone sensitif (celui-ci est dans le <strong>ganglion spinal / rachidien</strong>). Reçoit, transmet vers les centres, peut <strong>filtrer</strong> les infos.</li>
+        <li><strong>Corne latérale</strong> : niveau <strong>thoracique</strong>, entre ventrale et dorsale ; <strong>point de départ du système nerveux autonome</strong>.</li>
+      </ul>
+      <div class="callout trap"><strong>Attention / piège</strong> Corps du 1<sup>er</sup> neurone sensitif = <strong>ganglion spinal</strong>, pas la corne dorsale.</div>
+
+      <div class="schema-slot">Schéma — sillons + coupe papillon (cornes V/D/latérale) — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["ventrale","anterieure"],["profonde","tres profonde"],["motrice"],["sensitive"],["ganglion spinal","ganglion rachidien"],["laterale"],["autonome","vegetatif"]]'>
+        <div class="cloze-item">
+          <p>Fissure médiane <input class="blank" /> = très <input class="blank" />. Corne ventrale = <input class="blank" /> ; dorsale = <input class="blank" />. 1<sup>er</sup> neurone sensitif dans le <input class="blank" />. Corne <input class="blank" /> (thoracique) = départ du <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Modalités de la corne dorsale ?</div>
+          <div class="back">Tact, douleur, proprioception, température.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Sillon médian dorsal vs fissure ventrale ?</div>
+          <div class="back">Dorsal = moins prononcé ; ventral = très profond.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Corne latérale : niveau et rôle ?</div>
+          <div class="back">Thoracique ; départ du SNA.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3 ========== -->
+    <section class="point" id="p3">
+      <h2>3. Le tronc cérébral <span class="tag p1">P1</span></h2>
+      <div class="callout hot"><strong>Souvent tombé</strong> Situation, 3 étages, pédoncules cérébelleux, formation réticulée.</div>
+
+      <h3>3.1. Situation</h3>
+      <ul>
+        <li>Dans la <strong>fosse cérébrale postérieure</strong> <span class="tag">⭐</span>.</li>
+        <li>Prolongement supérieur de la <strong>moelle spinale cervicale</strong> <span class="tag">⭐</span> au niveau du <strong>foramen magnum</strong> (os occipital).</li>
+        <li>Étage <strong>infra-tentoriel</strong> / espace sous-tentoriel.</li>
+        <li>Relations : en haut avec le <strong>cerveau</strong> ; en arrière avec le <strong>cervelet</strong> <span class="tag">⭐⭐</span> par <strong>3 paires de pédoncules cérébelleux</strong> <span class="tag">⭐⭐</span> (1 paire par étage du tronc).</li>
+      </ul>
+
+      <h3>3.2. Trois étages <span class="tag">⭐</span></h3>
+      <ul>
+        <li>Supérieur : <strong>mésencéphale</strong> <span class="tag">⭐⭐</span></li>
+        <li>Moyen : <strong>pont</strong> <span class="tag">⭐⭐</span> (protubérance annulaire)</li>
+        <li>Inférieur : <strong>moelle allongée</strong> <span class="tag">⭐⭐</span> (bulbe rachidien)</li>
+      </ul>
+
+      <h3>3.3. Aspects fonctionnels</h3>
+      <ul>
+        <li><strong>Passage</strong> des voies motrices descendantes et sensitives ascendantes.</li>
+        <li><strong>Formation réticulée</strong> <span class="tag">⭐</span> : sur les <strong>3 étages</strong>, toute la longueur ; ensemble de <strong>noyaux reliés</strong> ; notamment cycle <strong>éveil–sommeil</strong>.</li>
+        <li>Carrefour de circulation du <strong>LCS</strong> (sans détail dans le cours).</li>
+        <li>Noyaux <strong>propres</strong> + noyaux des <strong>nerfs crâniens III à XII</strong>.</li>
+      </ul>
+
+      <div class="schema-slot">Schéma — coupe sagittale / 3 étages + pédoncules — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["fosse cerebrale posterieure","fosse posterieure"],["mesencephale"],["pont"],["moelle allongee","bulbe"],["3","trois"],["formation reticulee","reticulee"]]'>
+        <div class="cloze-item">
+          <p>Situation : <input class="blank" />. Haut → bas : <input class="blank" />, <input class="blank" />, <input class="blank" />. Pédoncules cérébelleux : <input class="blank" /> paires. Cycle éveil–sommeil : <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Infra-tentoriel : le tronc est… ?</div>
+          <div class="back">Sous la tente du cervelet (espace sous-tentoriel).</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Autre nom du pont ?</div>
+          <div class="back">Protubérance annulaire.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Autres noms de la moelle allongée ?</div>
+          <div class="back">Bulbe rachidien.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Combien de paires de pédoncules cérébelleux ?</div>
+          <div class="back">3 (une par étage du tronc).</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 4 ========== -->
+    <section class="point" id="p4">
+      <h2>4. Le liquide cérébro-spinal (LCS) <span class="tag p3">P3</span></h2>
+      <p>Aussi appelé <strong>liquide céphalo-rachidien</strong>.</p>
+
+      <h3>4.1. Généralités</h3>
+      <ul>
+        <li>Dans des cavités épendymaires = <strong>ventricules</strong>, en profondeur de l’encéphale, tapissées d’<strong>épendyme</strong>.</li>
+        <li>Renouvellement constant : sécrétion permanente par les <strong>plexus choroïdes</strong> ; résorption par les <strong>granulations arachnoïdiennes</strong> (méninges).</li>
+        <li>Protection : sert de <strong>tampon</strong> en cas de choc.</li>
+      </ul>
+
+      <h3>4.2. Quatre ventricules et un canal</h3>
+      <ul>
+        <li><strong>2 ventricules latéraux</strong> (hémisphères) → reliés au V3 par les <strong>foramens interventriculaires</strong>.</li>
+        <li><strong>V3</strong> (3<sup>e</sup> ventricule) : impair, médian, dans le <strong>diencéphale</strong> (au-dessus du tronc).</li>
+        <li><strong>Aqueduc du mésencéphale</strong> : médian, relie V3 et V4, en regard du mésencéphale.</li>
+        <li><strong>V4</strong> (4<sup>e</sup> ventricule) : impair, médian, en arrière du <strong>pont</strong> et de la <strong>moelle allongée</strong> ; contient le <strong>foramen de Magendie</strong> (orifice médian) → sortie vers l’<strong>espace sub-arachnoïdien</strong> où le LCS est résorbé.</li>
+      </ul>
+      <p><strong>Trajet</strong> : ventricules latéraux → foramens interventriculaires → V3 → aqueduc du mésencéphale → V4 → foramen de Magendie → espace sub-arachnoïdien.</p>
+
+      <div class="schema-slot">Schéma — système ventriculaire + Magendie — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["plexus choroides"],["granulations arachnoidiennes","granulations"],["foramens interventriculaires","foramen interventriculaire"],["aqueduc","aqueduc du mesencephale"],["magendie","foramen de magendie"],["sub-arachnoidien","sous-arachnoidien"]]'>
+        <div class="cloze-item">
+          <p>Sécrétion : <input class="blank" /> ; résorption : <input class="blank" />. Latéraux → <input class="blank" /> → V3 → <input class="blank" /> → V4 → foramen de <input class="blank" /> → espace <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Où est le V3 ?</div>
+          <div class="back">Dans le diencéphale (impair, médian).</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">V4 est en arrière de… ?</div>
+          <div class="back">Pont et moelle allongée.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Rôle protecteur du LCS ?</div>
+          <div class="back">Tampon en cas de choc.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 5 ========== -->
+    <section class="point" id="p5">
+      <h2>5. Le cervelet <span class="tag p3">P3</span></h2>
+
+      <h3>5.1. « Petit cerveau »</h3>
+      <ul>
+        <li>Relié <strong>en arrière</strong> au tronc cérébral.</li>
+        <li>Contient environ <strong>50 %</strong> des neurones de l’encéphale.</li>
+      </ul>
+
+      <h3>5.2. Fonctions</h3>
+      <ul>
+        <li>Grand système de <strong>contrôle de la voie descendante</strong> de la motricité : <strong>mouvement</strong> et <strong>posture</strong>, <strong>tonus</strong> et <strong>équilibre</strong>, <strong>oculomotricité</strong>.</li>
+        <li>Aussi une fonction <strong>cognitive et émotionnelle</strong>.</li>
+      </ul>
+
+      <div class="schema-slot">Schéma — cervelet (vue antérieure) — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["50","50%"],["tronc","tronc cerebral"],["equilibre"],["oculomotricite"]]'>
+        <div class="cloze-item">
+          <p>Environ <input class="blank" /> des neurones de l’encéphale. Relié en arrière au <input class="blank" />. Contrôle notamment tonus / <input class="blank" /> et <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Fonctions motrices du cervelet ?</div>
+          <div class="back">Mouvement, posture, tonus, équilibre, oculomotricité.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Le cervelet a-t-il un rôle non moteur ?</div>
+          <div class="back">Oui : cognitif et émotionnel.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6 ========== -->
+    <section class="point" id="p6">
+      <h2>6. Le diencéphale <span class="tag p3">P3</span></h2>
+
+      <h3>6.1. Situation</h3>
+      <ul>
+        <li>Entre les <strong>2 hémisphères</strong>, au-dessus du <strong>tronc cérébral</strong>.</li>
+        <li>Centré par une cavité : le <strong>V3</strong>.</li>
+      </ul>
+
+      <h3>6.2. Quatre sous-régions</h3>
+      <ul>
+        <li><strong>Épithalamus</strong> : comprend l’<strong>épiphyse</strong> (mélatonine → sommeil).</li>
+        <li><strong>Hypothalamus</strong> : noyaux qui <strong>rétro-contrôlent le SNA</strong> ; <strong>sécrète des hormones</strong>.</li>
+        <li><strong>Thalamus</strong> : large noyau ovoïde de substance grise ; <strong>relai</strong> vers des régions corticales spécifiques ; transmission, <strong>traitement</strong> et <strong>filtration</strong> des infos sensitives et motrices.</li>
+        <li><strong>Noyau sub-thalamique</strong> : petit noyau important pour la <strong>motricité extra-pyramidale</strong>.</li>
+      </ul>
+
+      <div class="schema-slot">Schéma — 4 parties du diencéphale + V3 — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["epithalamus"],["melatonine"],["hypothalamus"],["thalamus"],["sub-thalamique","noyau sub-thalamique"],["v3","3eme ventricule"]]'>
+        <div class="cloze-item">
+          <p>Épiphyse dans l’<input class="blank" /> → <input class="blank" />. SNA + hormones : <input class="blank" />. Relai cortical : <input class="blank" />. Extra-pyramidale : <input class="blank" />. Cavité : <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Les 4 parties du diencéphale ?</div>
+          <div class="back">Épithalamus, hypothalamus, thalamus, noyau sub-thalamique.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Rôles du thalamus ?</div>
+          <div class="back">Relai, traitement et filtration (sensitif + moteur).</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 7 ========== -->
+    <section class="point" id="p7">
+      <h2>7. Les méninges <span class="tag p1">P1</span></h2>
+      <div class="callout hot"><strong>Souvent tombé</strong> Ordre des feuillets, espaces, faux et tente.</div>
+
+      <h3>7.1–7.2. Enveloppes et 3 feuillets</h3>
+      <ul>
+        <li>Enveloppes protectrices de l’encéphale et de la moelle <span class="tag">⭐</span>.</li>
+        <li>De dehors en dedans :
+          <ul>
+            <li><strong>Dure-mère</strong> <span class="tag">⭐</span> : feuillet externe, <strong>épaisse</strong>.</li>
+            <li><strong>Arachnoïde</strong> <span class="tag">⭐</span> : intermédiaire, <strong>très fine</strong>.</li>
+            <li><strong>Pie-mère</strong> <span class="tag">⭐</span> : interne, au contact du SN, <strong>porte-vaisseaux</strong> (très vascularisée).</li>
+          </ul>
+        </li>
+        <li>Entre pie-mère et arachnoïde : le <strong>SLYM</strong> (<em>subarachnoid lymphatic like membrane</em>) — feuillet très fin, membrane sous-arachnoïdienne de type lymphatique (découvert récemment).</li>
+      </ul>
+
+      <h3>7.3. Trois espaces</h3>
+      <ul>
+        <li><strong>Extra-dural</strong> : os ↔ dure-mère.</li>
+        <li><strong>Sous-dural</strong> : dure-mère ↔ arachnoïde.</li>
+        <li><strong>Sous-arachnoïdien</strong> : arachnoïde ↔ pie-mère.</li>
+      </ul>
+
+      <h3>7.5. Expansions de dure-mère</h3>
+      <ul>
+        <li><strong>Faux du cerveau</strong> <span class="tag">⭐</span> : sépare les hémisphères <strong>droit et gauche</strong>.</li>
+        <li><strong>Tente du cervelet</strong> <span class="tag">⭐</span> :
+          étage <strong>supra-tentoriel</strong> (au-dessus) vs <strong>infra-tentoriel</strong> / sous-tentoriel (en dessous) ;
+          sépare hémisphères cérébraux et cervelet ;
+          délimite le tronc par rapport au diencéphale et aux hémisphères.</li>
+      </ul>
+
+      <div class="schema-slot">Schéma — plans méningés + SLYM + faux / tente — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["dure-mere","dure mere"],["arachnoide"],["pie-mere","pie mere"],["slym"],["faux du cerveau","faux"],["tente du cervelet","tente"]]'>
+        <div class="cloze-item">
+          <p>Dehors → dedans : <input class="blank" />, <input class="blank" />, <input class="blank" />. Entre pie et arachnoïde : <input class="blank" />. Sépare D/G : <input class="blank" /> ; hémisphères / cervelet : <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Quel feuillet est porte-vaisseaux ?</div>
+          <div class="back">Pie-mère.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Espace entre os et dure-mère ?</div>
+          <div class="back">Extra-dural.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Infra-tentoriel contient notamment… ?</div>
+          <div class="back">Tronc cérébral (+ cervelet sous la tente).</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 8 ========== -->
+    <section class="point" id="p8">
+      <h2>8. Les hémisphères cérébraux <span class="tag p1">P1</span></h2>
+      <div class="callout hot"><strong>Souvent tombé</strong> Section la plus dense (~30 notions) : sillons, lenticulaire/thalamus, Broca/Wernicke, faces.</div>
+
+      <h3>8.1. Configuration externe</h3>
+      <ul>
+        <li><strong>2 hémisphères</strong> (D et G), séparés partiellement sur la ligne médiane par la <strong>fissure longitudinale</strong>.</li>
+        <li><strong>Commissures inter-hémisphériques</strong> : faisceaux de substance blanche interconnectant les 2 hémisphères en profondeur. Les 3 principales : <strong>corps calleux</strong> (médian), <strong>commissure antérieure</strong>, <strong>commissure postérieure</strong>.</li>
+        <li><strong>3 faces</strong> : latérale (externe), médiale (interne), inférieure (basale).</li>
+        <li><strong>3 pôles</strong> : frontal, temporal, occipital.</li>
+      </ul>
+
+      <div class="schema-slot">Schéma — fissure longitudinale, commissures, faces, pôles — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["fissure longitudinale"],["corps calleux"],["anterieure"],["posterieure"],["laterale"],["mediale"],["inferieure","basale"]]'>
+        <div class="cloze-item">
+          <p>Séparation partielle D/G : <input class="blank" />. Commissures : <input class="blank" />, commissure <input class="blank" />, commissure <input class="blank" />. Faces : <input class="blank" />, <input class="blank" />, <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Les 3 pôles ?</div>
+          <div class="back">Frontal, temporal, occipital.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Nature des commissures ?</div>
+          <div class="back">Faisceaux de substance blanche interconnectant les hémisphères.</div>
+        </div>
+      </div>
+
+      <h3>8.2. Configuration interne + Brodmann</h3>
+      <ul>
+        <li>Au centre : <strong>cavités ventriculaires</strong> (ventricules latéraux).</li>
+        <li>Sur coupe frontale : substance blanche, ventricule latéral, cortex, <strong>noyau caudé</strong>, <strong>noyau lenticulaire</strong> <span class="tag">⭐⭐⭐</span>, <strong>thalamus</strong> <span class="tag">⭐⭐⭐</span>, noyau sub-thalamique.</li>
+        <li><strong>Substance grise</strong> : cortex cérébral en périphérie ; <strong>noyaux gris centraux</strong> (ganglions de la base) en profondeur dans la blanche :
+          <ul>
+            <li>noyau <strong>caudé</strong></li>
+            <li>noyau <strong>lenticulaire</strong> = <strong>putamen</strong> + <strong>pallidum</strong></li>
+            <li>noyau <strong>sub-thalamique</strong></li>
+          </ul>
+          → programmation et contrôle des mouvements.</li>
+        <li><strong>Substance blanche</strong> : en profondeur, centrale.</li>
+        <li><strong>Brodmann</strong> : parcellisation <strong>cytoarchitectonique</strong> des neurones selon taille du corps cellulaire et composition cellulaire (<strong>pas</strong> selon les lobes) ; chaque région a un <strong>numéro</strong> et souvent un <strong>rôle</strong> fonctionnel.</li>
+      </ul>
+      <div class="callout trap"><strong>Attention / piège</strong> Sur coupe frontale, les deux repères les plus tombés sont le <strong>noyau lenticulaire</strong> ⭐⭐⭐ et le <strong>thalamus</strong> ⭐⭐⭐.</div>
+
+      <div class="schema-slot">Schéma — coupe frontale + carte Brodmann — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["putamen"],["pallidum"],["lenticulaire","noyau lenticulaire"],["thalamus"],["cytoarchitectonique"]]'>
+        <div class="cloze-item">
+          <p>Lenticulaire = <input class="blank" /> + <input class="blank" />. Coupe frontale très tombée : <input class="blank" /> et <input class="blank" />. Brodmann = classification <input class="blank" /> (pas par lobes).</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Noyaux gris centraux listés dans le cours ?</div>
+          <div class="back">Caudé, lenticulaire (putamen + pallidum), sub-thalamique.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Brodmann classe selon… ?</div>
+          <div class="back">Taille / composition cellulaire (cytoarchitectonie), pas les lobes.</div>
+        </div>
+      </div>
+
+      <h3>8.3. Les trois faces — lobes et sillons</h3>
+      <div class="callout trap"><strong>Attention / piège</strong> Le lobe de l’<strong>insula</strong> n’est visible sur <strong>aucune</strong> des trois faces : enfoui en profondeur du <strong>sillon latéral</strong>.</div>
+
+      <h4>Face latérale</h4>
+      <ul>
+        <li>Lobes visibles : <strong>frontal, pariétal, temporal, occipital</strong> (pas l’insula).</li>
+        <li>Sillons : <strong>latéral</strong> (temporal en bas vs frontal + pariétal en haut) ; <strong>central</strong> <span class="tag">⭐⭐</span> (frontal en avant / pariétal en arrière). Pas de grand sillon entre temporal et occipital.</li>
+      </ul>
+
+      <h4>Face médiale</h4>
+      <ul>
+        <li>Lobes visibles : frontal, pariétal, temporal, occipital (pas l’insula).</li>
+        <li>Sillons :
+          <ul>
+            <li><strong>Cingulaire</strong> <span class="tag">⭐⭐⭐</span> : dans frontal et pariétal ; avec le corps calleux délimite le <strong>gyrus cingulaire</strong> ; région cingulaire = entre corps calleux et sillon cingulaire.</li>
+            <li><strong>Pariéto-occipital</strong> <span class="tag">⭐⭐⭐</span> : sépare en partie pariétal et occipital.</li>
+            <li><strong>Central</strong> <span class="tag">⭐⭐</span>.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h4>Face inférieure</h4>
+      <ul>
+        <li>Lobes visibles : <strong>frontal, temporal, occipital</strong> — <strong>pas</strong> le pariétal, <strong>pas</strong> l’insula.</li>
+        <li>Dans le lobe frontal : sillon <strong>olfactif</strong> <span class="tag">⭐⭐</span> (voies olfactives) ; sillon <strong>en H</strong> <span class="tag">⭐⭐</span> (délimite le <strong>gyrus orbitaire</strong>, forme de H).</li>
+      </ul>
+
+      <div class="schema-slot">Schéma — faces latérale / médiale / inférieure + sillons clés — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["central"],["cingulaire"],["parieto-occipital","parieto occipital"],["olfactif"],["en h","h"],["insula"],["parietal"]]'>
+        <div class="cloze-item">
+          <p>Latérale : sillon <input class="blank" /> (frontal/pariétal). Médiale : <input class="blank" /> et <input class="blank" />. Inférieure frontale : <input class="blank" /> et <input class="blank" />. Invisible partout : <input class="blank" />. Absent en face inférieure : lobe <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Sillons ⭐⭐⭐ de la face médiale ?</div>
+          <div class="back">Cingulaire et pariéto-occipital.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Sillon en H délimite… ?</div>
+          <div class="back">Le gyrus orbitaire.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Y a-t-il un grand sillon temporal–occipital ?</div>
+          <div class="back">Non.</div>
+        </div>
+      </div>
+
+      <h3>8.4. Lobe frontal</h3>
+      <ul>
+        <li><strong>Sillons</strong> :
+          <ul>
+            <li><strong>Central</strong> (déborde sur la face médiale).</li>
+            <li><strong>Précentral</strong> : parallèle, en avant du central ; visible en vue latérale <span class="tag">⭐</span>.</li>
+            <li><strong>Frontaux supérieur et inférieur</strong> : latéraux <span class="tag">⭐</span>, horizontaux, du précentral vers l’avant ; vue latérale <span class="tag">⭐</span>.</li>
+            <li><strong>Olfactif</strong> et <strong>en H</strong> : face inférieure.</li>
+          </ul>
+        </li>
+        <li><strong>Régions fonctionnelles</strong> :
+          <ul>
+            <li><strong>Motrice</strong> : primaire = <strong>gyrus précentral</strong> (entre précentral et central) ; <strong>operculaire</strong> (tout en bas vers le sillon latéral) = motricité de la <strong>face</strong>.</li>
+            <li><strong>Prémotrice</strong> : en avant du précentral.</li>
+            <li><strong>Préfrontale</strong> : en avant, <strong>fonctions exécutives</strong>.</li>
+          </ul>
+        </li>
+        <li><strong>Gyrus latéraux</strong> :
+          <ul>
+            <li><strong>Pôle frontal</strong> : en avant du lobe frontal.</li>
+            <li><strong>Gyrus précentral</strong>.</li>
+            <li><strong>F1</strong> / gyrus frontal supérieur <span class="tag">⭐</span> : au-dessus du sillon frontal supérieur <span class="tag">⭐</span>.</li>
+            <li><strong>F2</strong> / gyrus frontal moyen <span class="tag">⭐⭐</span> : entre sillons frontaux supérieur <span class="tag">⭐</span> et inférieur.</li>
+            <li><strong>F3</strong> / gyrus frontal inférieur <span class="tag">⭐</span> : sous le sillon frontal inférieur ; contient la <strong>région de Broca</strong> (langage, hémisphère <strong>dominant</strong> <span class="tag">⭐</span>, souvent <strong>gauche</strong>).</li>
+          </ul>
+        </li>
+        <li><strong>Gyrus basaux</strong> : <strong>gyrus orbitaire</strong> <span class="tag">⭐⭐</span> ; <strong>gyrus droit (rectus)</strong>.</li>
+        <li><strong>Gyrus médiaux</strong> : F1 (en partie) ; <strong>gyrus paracentral antérieur</strong> (lobule paracentral = de part et d’autre du central sur la face interne) ; <strong>gyrus cingulaire antérieur</strong> <span class="tag">⭐</span>.</li>
+      </ul>
+      <div class="callout trap"><strong>Attention / piège</strong> Broca = langage dans le <strong>frontal</strong> (F3, hémisphère dominant) — ne pas confondre avec Wernicke (temporal).</div>
+
+      <div class="schema-slot">Schéma — sillons / F1–F3 / régions motrice–prémotrice–préfrontale — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["precentral"],["broca"],["f3","gyrus frontal inferieur"],["gauche","dominant"],["orbitaire"],["executives","fonctions executives"]]'>
+        <div class="cloze-item">
+          <p>Cortex moteur primaire = gyrus <input class="blank" />. Langage productif : aire de <input class="blank" /> dans <input class="blank" />, souvent hémisphère <input class="blank" />. Gyrus basal ⭐⭐ : <input class="blank" />. Préfrontal = fonctions <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">F1 / F2 / F3 = ?</div>
+          <div class="back">Frontal supérieur / moyen / inférieur.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Région de la région operculaire ?</div>
+          <div class="back">Tout en bas vers le sillon latéral — motricité de la face.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Lobule paracentral : où ?</div>
+          <div class="back">Face interne, de part et d’autre du sillon central.</div>
+        </div>
+      </div>
+
+      <h3>8.5. Lobe pariétal</h3>
+      <ul>
+        <li><strong>Sillons latéraux</strong> :
+          <ul>
+            <li><strong>Post-central</strong> <span class="tag">⭐</span> : parallèle en arrière au central ; se continue sur la face médiale <span class="tag">⭐</span>.</li>
+            <li><strong>Intra-pariétal</strong> <span class="tag">⭐</span> : sépare lobule pariétal <strong>supérieur</strong> et <strong>inférieur</strong>.</li>
+          </ul>
+        </li>
+        <li><strong>Régions latérales</strong> :
+          <ul>
+            <li><strong>Gyrus post-central</strong> : entre central et post-central = région de la <strong>sensibilité</strong>.</li>
+            <li>Lobule / gyrus <strong>pariétal supérieur</strong>.</li>
+            <li>Lobule / gyrus <strong>pariétal inférieur</strong> : <strong>gyrus supra-marginal</strong> <span class="tag">⭐</span> + <strong>gyrus angulaire</strong> <span class="tag">⭐⭐</span>.</li>
+          </ul>
+        </li>
+        <li><strong>Régions médiales</strong> : lobule <strong>para-central postérieur</strong> (en arrière du central) ; <strong>pré-cunéus</strong> <span class="tag">⭐</span> (en arrière du para-central postérieur) ; <strong>gyrus cingulaire postérieur</strong> <span class="tag">⭐</span>.</li>
+        <li><strong>Fonctions</strong> : sensibilité ; projection de la <strong>position dans l’espace</strong>.</li>
+      </ul>
+
+      <div class="schema-slot">Schéma — post-central, intra-pariétal, supra-marginal, angulaire, pré-cunéus — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["post-central","postcentral"],["intra-parietal","intraparietal"],["supra-marginal","supramarginal"],["angulaire"],["pre-cuneus","precuneus","pre cuneus"],["sensibilite","sensitive"]]'>
+        <div class="cloze-item">
+          <p>Sillons : <input class="blank" /> et <input class="blank" />. Pariétal inférieur : gyrus <input class="blank" /> et <input class="blank" />. Médial en arrière du para-central : <input class="blank" />. Gyrus post-central = <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Intra-pariétal sépare… ?</div>
+          <div class="back">Lobules pariétaux supérieur et inférieur.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Gyrus angulaire : combien d’étoiles ?</div>
+          <div class="back">⭐⭐ (souvent tombé).</div>
+        </div>
+      </div>
+
+      <h3>8.6. Lobe temporal</h3>
+      <ul>
+        <li><strong>Sillons</strong> :
+          <ul>
+            <li>Temporaux <strong>supérieur</strong> et <strong>inférieur</strong> : face latérale <span class="tag">⭐⭐</span>, parallèles au sillon latéral.</li>
+            <li><strong>Collatéral</strong> : face inférieure ; sépare <strong>T4</strong> et <strong>T5</strong>.</li>
+          </ul>
+        </li>
+        <li><strong>Régions</strong> :
+          <ul>
+            <li><strong>Pôle temporal</strong> (face latérale).</li>
+            <li><strong>T1</strong> / gyrus temporal supérieur <span class="tag">⭐</span> : entre sillon latéral et temporal supérieur ; contient le <strong>gyrus de Heschl</strong> (en arrière) = <strong>audition</strong> ; comprend l’<strong>aire de Wernicke</strong> <strong>uniquement à gauche</strong> = intégration du <strong>langage</strong>.</li>
+            <li><strong>T2</strong> / moyen : entre sillons temporaux sup. et inf.</li>
+            <li><strong>T3</strong> / inférieur : latéral, se continue en face inférieure.</li>
+            <li><strong>T4</strong> : faces inférieure et médiale ; fusionne avec <strong>O4</strong> en arrière → <strong>gyrus fusiforme</strong> (sans délimitation nette).</li>
+            <li><strong>T5</strong> / gyrus <strong>parahippocampique</strong> : médial.</li>
+            <li><strong>Hippocampe</strong> <span class="tag">⭐</span> : face médiale, proche de T5 ; clé de la <strong>mémoire épisodique</strong>.</li>
+            <li><strong>Complexe amygdalien</strong> : coiffe l’hippocampe (face médiale).</li>
+          </ul>
+        </li>
+        <li><strong>Fonctions</strong> : mémoire ; langage à gauche ; audition.</li>
+      </ul>
+      <div class="callout trap"><strong>Attention / piège</strong> Wernicke = temporal (T1, gauche) ; Broca = frontal (F3). Heschl = audition.</div>
+
+      <div class="schema-slot">Schéma — T1–T5, Heschl, Wernicke, hippocampe, amygdale — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["heschl"],["wernicke"],["gauche"],["fusiforme"],["parahippocampique","t5"],["hippocampe"],["episodique"]]'>
+        <div class="cloze-item">
+          <p>Audition : gyrus de <input class="blank" />. Langage (compréhension) : aire de <input class="blank" /> à <input class="blank" />. T4 + O4 = gyrus <input class="blank" />. T5 = gyrus <input class="blank" />. Mémoire épisodique : <input class="blank" /> (mémoire <input class="blank" />).</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Sillon collatéral sépare… ?</div>
+          <div class="back">T4 et T5.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Amygdale : position ?</div>
+          <div class="back">Coiffe l’hippocampe sur la face médiale.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">T1 est entre quels sillons ?</div>
+          <div class="back">Sillon latéral et sillon temporal supérieur.</div>
+        </div>
+      </div>
+
+      <h3>8.7. Lobe occipital</h3>
+      <ul>
+        <li><strong>Sillons</strong> :
+          <ul>
+            <li><strong>Calcarin</strong> : sépare <strong>O5</strong> et <strong>O6</strong> ; face interne ; projection des <strong>voies visuelles</strong> ; entouré du <strong>cortex visuel primaire</strong>.</li>
+            <li><strong>Intra-occipital</strong> : prolongement de l’intra-pariétal ; sépare <strong>O1</strong> et <strong>O2</strong>.</li>
+          </ul>
+        </li>
+        <li><strong>Régions</strong> :
+          <ul>
+            <li><strong>Pôle occipital</strong> (latéral).</li>
+            <li><strong>O1</strong> supérieur, <strong>O2</strong> moyen, <strong>O3</strong> inférieur (latéral ± inférieur).</li>
+            <li><strong>O4</strong> : inférieur ; continue avec T4 → gyrus fusiforme.</li>
+            <li><strong>O5</strong> / gyrus <strong>lingual</strong> : inférieur et médial.</li>
+            <li><strong>O6</strong> / <strong>cunéus</strong> : médial, en arrière du pré-cunéus pariétal.</li>
+          </ul>
+        </li>
+        <li><strong>Fonction</strong> : zones d’intégration de la <strong>vision</strong>.</li>
+      </ul>
+
+      <div class="schema-slot">Schéma — calcarin, O1–O6, lingual, cunéus — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["calcarin"],["o5"],["o6"],["visuel primaire","cortex visuel primaire"],["lingual"],["cuneus"]]'>
+        <div class="cloze-item">
+          <p>Sillon <input class="blank" /> entre <input class="blank" /> et <input class="blank" />, entouré du cortex <input class="blank" />. O5 = gyrus <input class="blank" /> ; O6 = <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Intra-occipital sépare… ?</div>
+          <div class="back">O1 et O2 (prolongement de l’intra-pariétal).</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Cunéus est en arrière de… ?</div>
+          <div class="back">Du pré-cunéus pariétal.</div>
+        </div>
+      </div>
+
+      <h3>8.8. Insula, système limbique, homonculus</h3>
+      <ul>
+        <li><strong>Insula</strong> : parties <strong>postérieure</strong> et <strong>antérieure</strong> (médiales). Fonctions : réactions émotionnelles au toucher et à la douleur ; réactions <strong>végétatives</strong> ; <strong>cortex gustatif primaire</strong>.</li>
+        <li><strong>Système limbique</strong> (face médiale) : structures de plusieurs lobes + structures <strong>diencéphaliques</strong> —
+          hippocampe et amygdale (temporal) ;
+          gyrus cingulaire (frontal + pariétal) ;
+          cortex <strong>rétro-splénial</strong> ;
+          <strong>corps mamillaire</strong> (hypothalamus) et <strong>noyaux antérieurs du thalamus</strong>.
+          Rôles : <strong>mémoire</strong> et <strong>émotions</strong>.</li>
+        <li><strong>Homonculus de Penfield</strong> : disproportion entre surface corticale dédiée à la commande motrice d’une région et sa taille réelle ; témoigne de la <strong>somatotopie</strong> sur le <strong>gyrus précentral</strong>.</li>
+        <li><strong>Hippocampe</strong> : structure enroulée à la face médiale du temporal ; participe à la mémoire.</li>
+      </ul>
+
+      <div class="schema-slot">Schéma — insula, limbic loop, homonculus de Penfield — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["gustatif","gustatif primaire"],["cingulaire"],["mamillaire","corps mamillaire"],["thalamus"],["somatotopie"],["precentral","gyrus precentral"]]'>
+        <div class="cloze-item">
+          <p>Insula : cortex <input class="blank" /> primaire. Limbique : gyrus <input class="blank" />, corps <input class="blank" />, noyaux antérieurs du <input class="blank" />. Homonculus = <input class="blank" /> sur le gyrus <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Rôles du système limbique ?</div>
+          <div class="back">Mémoire et émotions.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Cortex rétro-splénial : système ?</div>
+          <div class="back">Limbique.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Que montre l’homonculus de Penfield ?</div>
+          <div class="back">Disproportion cortex moteur / taille réelle des régions (somatotopie).</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 9 ========== -->
+    <section class="point" id="p9">
+      <h2>9. Le système nerveux végétatif <span class="tag p3">P3</span></h2>
+
+      <h3>9.1. Généralités</h3>
+      <ul>
+        <li>À cheval sur les autres systèmes : <strong>centres</strong> dans le SNC, <strong>voies périphériques</strong> dans le SNP.</li>
+        <li><strong>Commande à 2 neurones</strong> :
+          <ul>
+            <li><strong>Pré-ganglionnaire</strong> : naît d’un centre → relai dans un <strong>ganglion</strong>.</li>
+            <li><strong>Post-ganglionnaire</strong> : naît du ganglion → <strong>cible</strong> (organe, muscle…).</li>
+          </ul>
+        </li>
+        <li>Systèmes régulateurs : <strong>formation réticulée</strong> (tronc), <strong>hypothalamus</strong> (diencéphale), <strong>cortex cérébral</strong>.</li>
+        <li>Deux composantes antagonistes : <strong>sympathique</strong> (éveil face au danger) vs <strong>parasympathique</strong> (économie).</li>
+      </ul>
+
+      <h3>9.2. Sympathique vs parasympathique</h3>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Sympathique (ergotrope)</th>
+            <th>Parasympathique (trophotrope)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Centres</th>
+            <td>Moelle <strong>thoracique</strong> + haute <strong>lombaire</strong> : noyau <strong>intermédiolatéral</strong> de la <strong>corne latérale</strong>, <strong>T1–L3</strong>.</td>
+            <td>Tronc (noyaux du <strong>plancher du V4</strong> : accessoire du III, salivaire supérieur, salivaire inférieur, cardio-pneumo-entérique) + moelle <strong>sacrée</strong>.</td>
+          </tr>
+          <tr>
+            <th>Ganglions</th>
+            <td><strong>À distance</strong> de l’organe : chaînes <strong>latéro-vertébrale</strong> ou <strong>pré-vertébrale</strong>.</td>
+            <td><strong>À proximité</strong> de l’organe cible.</td>
+          </tr>
+          <tr>
+            <th>Exemples</th>
+            <td>Tachycardie ; ↑ PA ; <strong>mydriase</strong> ; <strong>vasoconstriction</strong>.</td>
+            <td>Bradycardie ; ↓ PA ; <strong>myosis</strong> ; <strong>vasodilatation</strong>.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="schema-slot">Schéma — sympathique vs parasympathique (centres → organes) — plus tard</div>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["ergotrope"],["trophotrope"],["t1-l3","t1 l3"],["intermediolateral","intermedio-lateral"],["proximite","proche"],["mydriase"],["myosis"]]'>
+        <div class="cloze-item">
+          <p>Sympathique = <input class="blank" /> ; para = <input class="blank" />. Centres sympa : corne latérale <input class="blank" /> (noyau <input class="blank" />). Ganglions para : à <input class="blank" /> de l’organe. Pupille : sympa → <input class="blank" /> ; para → <input class="blank" />.</p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="front">Chaînes ganglionnaires sympathiques ?</div>
+          <div class="back">Latéro-vertébrale ou pré-vertébrale (à distance de l’organe).</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Régulateurs du végétatif ?</div>
+          <div class="back">Formation réticulée, hypothalamus, cortex.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Commande végétative : combien de neurones ?</div>
+          <div class="back">2 : pré- puis post-ganglionnaire.</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="front">Noyaux para du plancher du V4 (cours) ?</div>
+          <div class="back">Accessoire du III, salivaire sup., salivaire inf., cardio-pneumo-entérique (+ centres sacrés).</div>
+        </div>
+      </div>
+    </section>
+
+    <p class="lead">Brouillon local — pas publié tant que ce n’est pas parfait. Annexe (nerfs crâniens III–XII détaillés) exclue.</p>
+  </main>
+  <script src="../fiche.js"></script>
+</body>
+</html>
