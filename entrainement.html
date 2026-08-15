@@ -8,33 +8,43 @@
 </head>
 <body>
   <div class="wrap">
-    <nav class="topnav" aria-label="Navigation principale">
-      <a class="brand" href="./index.html">PASS Sorbonne</a>
-      <ul class="nav-links">
-        <li><a href="./matiere.html">Matière</a></li>
-        <li><a href="./entrainement.html" aria-current="page">Entraînement</a></li>
-        <li><a href="./flashcards.html">Flashcards</a></li>
-        <li><a href="./suivi.html">Suivi</a></li>
-        <li><a href="./competitions.html">Compétitions</a></li>
-        <li><a href="./planning.html">Planning</a></li>
-        <li><a href="./conseils.html">Conseils</a></li>
-      </ul>
-    </nav>
+    <header class="site-header">
+      <div class="site-top">
+        <a class="brand" href="./index.html">PASS Sorbonne</a>
+        <span class="site-pill">S1 · Anatomie</span>
+      </div>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-chips">
+          <li><a href="./index.html">Accueil</a></li>
+          <li><a href="./matiere.html">Matière</a></li>
+          <li><a href="./entrainement.html" aria-current="page">Entraînement</a></li>
+          <li><a href="./flashcards.html">Flashcards</a></li>
+          <li><a href="./suivi.html">Suivi</a></li>
+          <li><a href="./planning.html">Planning</a></li>
+          <li><a href="./competitions.html">Compétitions</a></li>
+          <li><a href="./conseils.html">Conseils</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <h1 class="page-title">Entraînement</h1>
     <p class="page-sub">Choisis une matière, puis lance une session QCM.</p>
 
-    <div class="panel">
-      <h2>Anatomie</h2>
-      <p>~210 QCM · multi-chapitres · score et conseils en fin de session.</p>
-      <div class="actions">
-        <a class="btn" href="./qcm-player.html">Lancer une session</a>
+    <section class="rubric-panel" aria-label="Matières">
+      <a class="rubric-row" href="./qcm-player.html">
+        <h2>Anatomie</h2>
+        <span class="badge">Dispo</span>
+        <p>~210 QCM · multi-chapitres · score et conseils en fin de session.</p>
+      </a>
+      <div class="rubric-row" style="cursor:default">
+        <h2>Autres matières</h2>
+        <span class="badge soon">Bientôt</span>
+        <p>Même format de session — à brancher plus tard.</p>
       </div>
-    </div>
+    </section>
 
-    <div class="panel">
-      <h2>Autres matières</h2>
-      <p>Bientôt — même format de session.</p>
+    <div class="actions">
+      <a class="btn" href="./qcm-player.html">Lancer une session Anatomie</a>
     </div>
   </div>
 </body>

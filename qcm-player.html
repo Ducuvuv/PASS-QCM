@@ -4,24 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PASS — Test QCM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #f7f5f1;
-      --card: #fffdf9;
-      --ink: #1c1917;
-      --muted: #78716c;
-      --line: #e7e5e4;
+      --bg: #f3efe6;
+      --card: #faf7f0;
+      --ink: #1a2a22;
+      --muted: #5a6a60;
+      --line: #cfc6b4;
       --ok: #166534;
       --ok-bg: #dcfce7;
       --bad: #991b1b;
       --bad-bg: #fee2e2;
-      --accent: #1d4ed8;
+      --accent: #1f5c45;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: "Segoe UI", system-ui, sans-serif;
-      background: var(--bg);
+      font-family: "Manrope", system-ui, sans-serif;
+      background:
+        radial-gradient(90% 60% at 100% 0%, #e5ecdf, transparent 50%),
+        var(--bg);
       color: var(--ink);
       line-height: 1.45;
     }
@@ -109,9 +114,9 @@
       border-radius: 10px;
       margin-bottom: 0.5rem;
       cursor: pointer;
-      background: #fff;
+      background: var(--card);
     }
-    .choice:has(input:checked) { border-color: var(--accent); background: #eff6ff; }
+    .choice:has(input:checked) { border-color: var(--accent); background: #e3efe8; }
     .choice.reveal-ok { border-color: #86efac; background: var(--ok-bg); }
     .choice.reveal-bad { border-color: #fca5a5; background: var(--bad-bg); }
     .choice input { margin-top: 0.2rem; }
@@ -127,24 +132,26 @@
       margin-top: 1rem;
     }
     button {
-      border: 1px solid var(--ink);
-      background: var(--ink);
+      border: 1px solid var(--accent);
+      background: var(--accent);
       color: #fff;
       border-radius: 999px;
       padding: 0.55rem 1rem;
       font: inherit;
+      font-weight: 650;
       cursor: pointer;
     }
     button.secondary {
-      background: #fff;
+      background: var(--card);
       color: var(--ink);
+      border-color: var(--line);
     }
     button:disabled { opacity: 0.45; cursor: not-allowed; }
     .score-box {
       margin-top: 0.85rem;
       padding: 0.7rem 0.8rem;
       border-radius: 10px;
-      background: #f5f5f4;
+      background: #ebe6dc;
       display: none;
     }
     .score-box.show { display: block; }
@@ -196,7 +203,7 @@
     .prio-btn {
       min-width: 3.5rem;
       border: 1px solid var(--line);
-      background: #fff;
+      background: var(--card);
       color: var(--ink);
       border-radius: 999px;
       padding: 0.55rem 1rem;
@@ -205,8 +212,8 @@
       cursor: pointer;
     }
     .prio-btn[aria-pressed="true"] {
-      border-color: var(--ink);
-      background: var(--ink);
+      border-color: var(--accent);
+      background: var(--accent);
       color: #fff;
     }
     .prio-help {
@@ -313,7 +320,7 @@
         <div class="actions">
           <button type="button" id="btn-retry">Rejouer (mêmes réglages)</button>
           <button type="button" class="secondary" id="btn-home">Changer de chapitres</button>
-          <a class="secondary" id="btn-suivi" href="./suivi.html" style="display:inline-block;border:1px solid var(--ink);background:#fff;color:var(--ink);border-radius:999px;padding:0.55rem 1rem;text-decoration:none;font:inherit">Voir le suivi</a>
+          <a class="secondary" id="btn-suivi" href="./suivi.html" style="display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:0.55rem 1rem;text-decoration:none;font:inherit;font-weight:650">Voir le suivi</a>
         </div>
       </div>
     </section>

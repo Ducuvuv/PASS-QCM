@@ -8,41 +8,49 @@
 </head>
 <body>
   <div class="wrap">
-    <nav class="topnav" aria-label="Navigation principale">
-      <a class="brand" href="./index.html">PASS Sorbonne</a>
-      <ul class="nav-links">
-        <li><a href="./matiere.html" aria-current="page">Matière</a></li>
-        <li><a href="./entrainement.html">Entraînement</a></li>
-        <li><a href="./flashcards.html">Flashcards</a></li>
-        <li><a href="./suivi.html">Suivi</a></li>
-        <li><a href="./competitions.html">Compétitions</a></li>
-        <li><a href="./planning.html">Planning</a></li>
-        <li><a href="./conseils.html">Conseils</a></li>
-      </ul>
-    </nav>
+    <header class="site-header">
+      <div class="site-top">
+        <a class="brand" href="./index.html">PASS Sorbonne</a>
+        <span class="site-pill">S1 · Anatomie</span>
+      </div>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-chips">
+          <li><a href="./index.html">Accueil</a></li>
+          <li><a href="./matiere.html" aria-current="page">Matière</a></li>
+          <li><a href="./entrainement.html">Entraînement</a></li>
+          <li><a href="./flashcards.html">Flashcards</a></li>
+          <li><a href="./suivi.html">Suivi</a></li>
+          <li><a href="./planning.html">Planning</a></li>
+          <li><a href="./competitions.html">Compétitions</a></li>
+          <li><a href="./conseils.html">Conseils</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <h1 class="page-title">Matière</h1>
     <p class="page-sub">Fiches Anatomie — ouvre un chapitre et relis.</p>
 
-    <div class="panel">
-      <h2>Anatomie (UE5)</h2>
-      <p>Chapitre par chapitre — clique pour ouvrir la fiche.</p>
-      <p><a href="./matiere/style-lab.html"><strong>Labo style</strong></a> — page factice pour peaufiner typo, couleurs, cartes.</p>
-      <ul>
-        <li><a href="./matiere/anatomie/ch01.html">01 — Introduction à l’anatomie générale</a></li>
-        <li><a href="./matiere/anatomie/ch02.html">02 — Système nerveux</a></li>
-        <li><a href="./matiere/anatomie/ch03.html">03 — Appareil cardio-circulatoire</a></li>
-        <li><a href="./matiere/anatomie/ch04.html">04 — Appareil respiratoire</a></li>
-        <li><a href="./matiere/anatomie/ch05.html">05 — Organes des sens et voies sensorielles</a></li>
-        <li><a href="./matiere/anatomie/ch06.html">06 — Le rachis</a></li>
-        <li><a href="./matiere/anatomie/ch07.html">07 — Parois du tronc</a></li>
-        <li><a href="./matiere/anatomie/ch08.html">08 — Appareil digestif</a></li>
-        <li><a href="./matiere/anatomie/ch09.html">09 — Appareil génito-urinaire</a></li>
-        <li><a href="./matiere/anatomie/ch10.html">10 — Membre supérieur</a></li>
-        <li><a href="./matiere/anatomie/ch11.html">11 — Membre inférieur</a></li>
-      </ul>
-      <div class="actions">
-        <a class="btn" href="./entrainement.html">S’entraîner en Anatomie</a>
+    <div class="panel list-panel">
+      <div class="panel-head">
+        <h2>Anatomie (UE5)</h2>
+        <p>Chapitre par chapitre — clique pour ouvrir la fiche.</p>
+      </div>
+      <a class="chapter-link" href="./matiere/anatomie/ch01.html">01 — Introduction à l’anatomie générale</a>
+      <a class="chapter-link" href="./matiere/anatomie/ch02.html">02 — Système nerveux</a>
+      <a class="chapter-link" href="./matiere/anatomie/ch03.html">03 — Appareil cardio-circulatoire</a>
+      <a class="chapter-link" href="./matiere/anatomie/ch04.html">04 — Appareil respiratoire</a>
+      <a class="chapter-link" href="./matiere/anatomie/ch05.html">05 — Organes des sens et voies sensorielles</a>
+      <a class="chapter-link" href="./matiere/anatomie/ch06.html">06 — Le rachis</a>
+      <a class="chapter-link" href="./matiere/anatomie/ch07.html">07 — Parois du tronc</a>
+      <a class="chapter-link" href="./matiere/anatomie/ch08.html">08 — Appareil digestif</a>
+      <a class="chapter-link" href="./matiere/anatomie/ch09.html">09 — Appareil génito-urinaire</a>
+      <a class="chapter-link" href="./matiere/anatomie/ch10.html">10 — Membre supérieur</a>
+      <a class="chapter-link" href="./matiere/anatomie/ch11.html">11 — Membre inférieur</a>
+      <div class="panel-head" style="border-top:1px solid var(--line)">
+        <p><a href="./matiere/style-lab.html">Labo style fiches</a> · <a href="./skeleton-lab.html">Labo squelettes</a></p>
+        <div class="actions" style="margin-top:0.75rem">
+          <a class="btn" href="./entrainement.html">S’entraîner en Anatomie</a>
+        </div>
       </div>
     </div>
 

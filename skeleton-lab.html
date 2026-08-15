@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Labo squelettes — PASS Sorbonne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Outfit:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Space+Grotesk:wght@500;600;700&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ——— Lab chrome (pas le site) ——— */
+    :root {
+      --lab-bg: #12141a;
+      --lab-ink: #e8eaef;
+      --lab-muted: #9aa3b2;
+      --lab-line: #2a303c;
+      --lab-accent: #7dd3c7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      background: var(--lab-bg);
+      color: var(--lab-ink);
+      line-height: 1.45;
+    }
+    .lab-bar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: color-mix(in srgb, var(--lab-bg) 88%, transparent);
+      border-bottom: 1px solid var(--lab-line);
+      padding: 0.75rem 1rem 0.9rem;
+    }
+    .lab-bar h1 {
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .lab-bar p {
+      margin: 0 0 0.75rem;
+      color: var(--lab-muted);
+      font-size: 0.85rem;
+      max-width: 40rem;
+    }
+    .lab-bar a { color: var(--lab-accent); }
+    .lab-toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .lab-toc a {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--lab-ink);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.35rem 0.65rem;
+      border: 1px solid var(--lab-line);
+      border-radius: 999px;
+      background: #1a1e27;
+    }
+    .lab-toc a:hover { border-color: var(--lab-accent); color: var(--lab-accent); }
+    .lab-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      padding: 1.25rem 1rem 3.5rem;
+      max-width: 52rem;
+      margin: 0 auto;
+    }
+    .lab-block { scroll-margin-top: 6.5rem; }
+    .lab-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      align-items: baseline;
+      margin-bottom: 0.75rem;
+    }
+    .lab-meta h2 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+    .lab-meta span {
+      color: var(--lab-muted);
+      font-size: 0.82rem;
+    }
+    .frame {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--lab-line);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+    }
+    .frame-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--lab-muted);
+      padding: 0.45rem 0.75rem;
+      background: #1a1e27;
+      border-bottom: 1px solid var(--lab-line);
+    }
+
+    /* Shared mock helpers */
+    .mock { min-height: 28rem; }
+    .mock a { text-decoration: none; }
+    .mock ul { list-style: none; margin: 0; padding: 0; }
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+    }
+    .badge.ok { background: color-mix(in srgb, currentColor 14%, transparent); }
+    .badge.soon { opacity: 0.55; }
+
+    /* =========================
+       A — Actuel peaufiné
+       ========================= */
+    .sk-a {
+      --bg: #f3f0ea;
+      --ink: #171512;
+      --muted: #6a635a;
+      --line: #d8d0c4;
+      --surface: #fffcf8;
+      --accent: #0d4a4c;
+      --soft: #d7ebe9;
+      font-family: "Manrope", system-ui, sans-serif;
+      background:
+        radial-gradient(100% 70% at 0% 0%, #e7efe9, transparent 55%),
+        radial-gradient(80% 50% at 100% 0%, #ebe4d8, transparent 45%),
+        var(--bg);
+      color: var(--ink);
+      padding: 1rem 1.1rem 1.75rem;
+    }
+    .sk-a .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.6rem;
+      padding-bottom: 0.9rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .sk-a .brand {
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      font-size: 1.02rem;
+    }
+    .sk-a .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 0.85rem;
+      font-size: 0.84rem;
+    }
+    .sk-a .links a { color: var(--muted); }
+    .sk-a .links a.cur { color: var(--ink); font-weight: 650; }
+    .sk-a .hero {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(2rem, 7vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+      margin: 0 0 0.45rem;
+    }
+    .sk-a .lead {
+      margin: 0 0 1.35rem;
+      color: var(--muted);
+      max-width: 26rem;
+      font-size: 0.98rem;
+    }
+    .sk-a .grid {
+      display: grid;
+      gap: 0.65rem;
+    }
+    @media (min-width: 520px) {
+      .sk-a .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .sk-a .tile {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.95rem 1rem;
+      color: inherit;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    .sk-a .tile:hover {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .sk-a .tile h3 {
+      margin: 0 0 0.2rem;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .sk-a .tile p {
+      margin: 0 0 0.55rem;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+    .sk-a .badge.ok { color: var(--accent); background: var(--soft); }
+
+    /* =========================
+       B — Carnet d'étude
+       ========================= */
+    .sk-b {
+      --bg: #f7f4ef;
+      --ink: #1c1916;
+      --muted: #5e574e;
+      --rule: #1c1916;
+      --accent: #8b3a2b;
+      font-family: "Spline Sans", system-ui, sans-serif;
+      background:
+        linear-gradient(180deg, #faf7f2 0%, var(--bg) 40%),
+        var(--bg);
+      color: var(--ink);
+      padding: 1.15rem 1.2rem 1.9rem;
+    }
+    .sk-b .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      align-items: baseline;
+      margin-bottom: 1.6rem;
+      padding-bottom: 0.7rem;
+      border-bottom: 2px solid var(--rule);
+    }
+    .sk-b .brand {
+      font-family: "Newsreader", Georgia, serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-right: auto;
+    }
+    .sk-b .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem 1rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .sk-b .links a { color: var(--muted); }
+    .sk-b .links a.cur {
+      color: var(--ink);
+      border-bottom: 1.5px solid var(--accent);
+      padding-bottom: 0.1rem;
+    }
+    .sk-b .hero {
+      font-family: "Newsreader", Georgia, serif;
+      font-size: clamp(2.2rem, 8vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.02;
+      margin: 0 0 0.55rem;
+      max-width: 12ch;
+    }
+    .sk-b .lead {
+      margin: 0 0 1.5rem;
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 28rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 0.85rem;
+    }
+    .sk-b .list { display: grid; gap: 0; }
+    .sk-b .row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.75rem;
+      align-items: baseline;
+      padding: 0.85rem 0;
+      border-top: 1px solid color-mix(in srgb, var(--rule) 18%, transparent);
+      color: inherit;
+    }
+    .sk-b .row:last-child {
+      border-bottom: 1px solid color-mix(in srgb, var(--rule) 18%, transparent);
+    }
+    .sk-b .row h3 {
+      margin: 0;
+      font-family: "Newsreader", Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+    .sk-b .row p {
+      margin: 0.15rem 0 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+      grid-column: 1 / -1;
+    }
+    .sk-b .badge.ok { color: var(--accent); }
+    .sk-b .badge.soon { color: var(--muted); }
+
+    /* =========================
+       C — Dense mobile
+       ========================= */
+    .sk-c {
+      --bg: #0f1413;
+      --ink: #f2f5f3;
+      --muted: #9aaba4;
+      --line: #24302c;
+      --surface: #18201d;
+      --accent: #3ecf9a;
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      background:
+        radial-gradient(90% 60% at 80% -10%, #1a332c, transparent 50%),
+        var(--bg);
+      color: var(--ink);
+      padding: 0.85rem 0.9rem 1.4rem;
+    }
+    .sk-c .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .sk-c .brand {
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      font-size: 0.98rem;
+    }
+    .sk-c .pill {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--accent);
+      border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+      border-radius: 999px;
+      padding: 0.28rem 0.55rem;
+    }
+    .sk-c .chips {
+      display: flex;
+      gap: 0.4rem;
+      overflow-x: auto;
+      padding-bottom: 0.35rem;
+      margin-bottom: 1.1rem;
+      scrollbar-width: none;
+    }
+    .sk-c .chips::-webkit-scrollbar { display: none; }
+    .sk-c .chips a {
+      flex: 0 0 auto;
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.4rem 0.7rem;
+    }
+    .sk-c .chips a.cur {
+      color: var(--bg);
+      background: var(--accent);
+      border-color: var(--accent);
+      font-weight: 600;
+    }
+    .sk-c .hero {
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.15;
+      margin: 0 0 0.35rem;
+    }
+    .sk-c .lead {
+      margin: 0 0 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .sk-c .stack { display: grid; gap: 0.5rem; }
+    .sk-c .tile {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.25rem 0.75rem;
+      align-items: center;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.85rem 0.9rem;
+      color: inherit;
+    }
+    .sk-c .tile h3 {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 650;
+    }
+    .sk-c .tile p {
+      margin: 0;
+      grid-column: 1 / -1;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+    .sk-c .badge.ok { color: var(--accent); }
+    .sk-c .badge.soon { color: var(--muted); }
+
+    /* =========================
+       D — Clinique calme
+       ========================= */
+    .sk-d {
+      --bg: #f5f7f8;
+      --ink: #152028;
+      --muted: #5d6b75;
+      --line: #d5dde3;
+      --accent: #1f5f74;
+      --wash: #e7f1f4;
+      font-family: "Literata", Georgia, serif;
+      background:
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 28%),
+        var(--bg);
+      color: var(--ink);
+      padding: 1.35rem 1.25rem 2rem;
+    }
+    .sk-d .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 1.1rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .sk-d .brand {
+      font-family: "Manrope", system-ui, sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      font-size: 1.05rem;
+      color: var(--accent);
+      margin-right: auto;
+    }
+    .sk-d .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.95rem;
+      font-family: "Manrope", system-ui, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+    .sk-d .links a { color: var(--muted); }
+    .sk-d .links a.cur { color: var(--ink); }
+    .sk-d .hero-block {
+      padding: 1.25rem 1.15rem;
+      background: var(--wash);
+      border-radius: 4px 18px 18px 18px;
+      margin-bottom: 1.5rem;
+    }
+    .sk-d .hero {
+      font-size: clamp(1.9rem, 6vw, 2.45rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin: 0 0 0.45rem;
+    }
+    .sk-d .lead {
+      margin: 0;
+      font-family: "Manrope", system-ui, sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 28rem;
+    }
+    .sk-d .grid {
+      display: grid;
+      gap: 1rem 1.25rem;
+    }
+    @media (min-width: 520px) {
+      .sk-d .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .sk-d .tile {
+      color: inherit;
+      padding: 0.15rem 0 0.85rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .sk-d .tile h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+    .sk-d .tile p {
+      margin: 0 0 0.45rem;
+      font-family: "Manrope", system-ui, sans-serif;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+    .sk-d .badge {
+      font-family: "Manrope", system-ui, sans-serif;
+    }
+    .sk-d .badge.ok { color: var(--accent); background: var(--wash); }
+    .sk-d .badge.soon { color: var(--muted); }
+
+    /* =========================
+       E — Atelier encre
+       ========================= */
+    .sk-e {
+      --bg: #fafafa;
+      --ink: #0a0a0a;
+      --muted: #5c5c5c;
+      --line: #0a0a0a;
+      --accent: #0f766e;
+      font-family: "Instrument Sans", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      padding: 1rem 1.05rem 1.7rem;
+    }
+    .sk-e .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      align-items: center;
+      margin-bottom: 1.4rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 3px solid var(--line);
+    }
+    .sk-e .brand {
+      font-family: "Bricolage Grotesque", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.045em;
+      color: var(--ink);
+      margin-right: auto;
+    }
+    .sk-e .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 0.9rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+    .sk-e .links a { color: var(--muted); }
+    .sk-e .links a.cur {
+      color: var(--ink);
+      box-shadow: inset 0 -2px 0 var(--accent);
+    }
+    .sk-e .hero {
+      font-family: "Bricolage Grotesque", system-ui, sans-serif;
+      font-size: clamp(2.1rem, 8vw, 2.9rem);
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      line-height: 0.98;
+      margin: 0 0 0.5rem;
+      max-width: 11ch;
+    }
+    .sk-e .lead {
+      margin: 0 0 1.35rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 26rem;
+    }
+    .sk-e .grid {
+      display: grid;
+      gap: 0.55rem;
+    }
+    .sk-e .tile {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 0.65rem 0.85rem;
+      align-items: start;
+      border: 2px solid var(--line);
+      padding: 0.85rem 0.9rem;
+      color: inherit;
+      background: #fff;
+    }
+    .sk-e .idx {
+      font-family: "Bricolage Grotesque", system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--accent);
+    }
+    .sk-e .tile h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .sk-e .tile p {
+      margin: 0.2rem 0 0;
+      grid-column: 2;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+    .sk-e .badge.ok { color: var(--ink); border: 1.5px solid var(--ink); border-radius: 0; }
+    .sk-e .badge.soon { color: var(--muted); border: 1.5px dashed var(--muted); border-radius: 0; }
+
+    /* =========================
+       F — Matin ardoise
+       ========================= */
+    .sk-f {
+      --bg: #eef2f5;
+      --ink: #1b2833;
+      --muted: #617384;
+      --line: #c9d5df;
+      --surface: #ffffff;
+      --accent: #2f6f8f;
+      --band: #d9e6ef;
+      font-family: "Manrope", system-ui, sans-serif;
+      background:
+        linear-gradient(165deg, #e4edf3 0%, var(--bg) 42%, #f4f6f8 100%);
+      color: var(--ink);
+      padding: 1.05rem 1.05rem 1.7rem;
+    }
+    .sk-f .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.85rem;
+      align-items: center;
+      margin-bottom: 1.15rem;
+    }
+    .sk-f .brand {
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--accent);
+      margin-right: auto;
+    }
+    .sk-f .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.25rem;
+    }
+    .sk-f .links a {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.35rem 0.6rem;
+      border-radius: 9px;
+    }
+    .sk-f .links a.cur {
+      background: var(--band);
+      color: var(--ink);
+    }
+    .sk-f .hero {
+      font-size: clamp(1.85rem, 6.5vw, 2.35rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+      margin: 0 0 0.4rem;
+    }
+    .sk-f .lead {
+      margin: 0 0 1.2rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+      max-width: 28rem;
+    }
+    .sk-f .grid {
+      display: grid;
+      gap: 0.65rem;
+    }
+    @media (min-width: 520px) {
+      .sk-f .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .sk-f .tile {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1rem 1.05rem;
+      color: inherit;
+      box-shadow: 0 1px 0 rgba(27, 40, 51, 0.04);
+    }
+    .sk-f .tile h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1rem;
+      font-weight: 750;
+    }
+    .sk-f .tile p {
+      margin: 0 0 0.55rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .sk-f .badge.ok { color: var(--accent); background: var(--band); }
+    .sk-f .badge.soon { color: var(--muted); background: #e8eef2; }
+
+    /* =========================
+       G — Sprint
+       ========================= */
+    .sk-g {
+      --bg: #141816;
+      --ink: #f4f7f2;
+      --muted: #9aab9c;
+      --line: #2a332c;
+      --surface: #1c221e;
+      --accent: #c8f542;
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      background:
+        radial-gradient(70% 50% at 0% 0%, #243328, transparent 55%),
+        var(--bg);
+      color: var(--ink);
+      padding: 1rem 1rem 1.6rem;
+    }
+    .sk-g .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.55rem;
+      margin-bottom: 1.25rem;
+    }
+    .sk-g .brand {
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+    .sk-g .brand span { color: var(--accent); }
+    .sk-g .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 0.8rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .sk-g .links a { color: var(--muted); }
+    .sk-g .links a.cur { color: var(--accent); }
+    .sk-g .hero {
+      font-size: clamp(2rem, 7vw, 2.7rem);
+      font-weight: 700;
+      letter-spacing: -0.045em;
+      line-height: 1.02;
+      margin: 0 0 0.4rem;
+    }
+    .sk-g .lead {
+      margin: 0 0 1.2rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+      max-width: 26rem;
+    }
+    .sk-g .grid {
+      display: grid;
+      gap: 0.55rem;
+    }
+    .sk-g .tile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.35rem 0.75rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      border-radius: 10px;
+      padding: 0.9rem 0.95rem;
+      color: inherit;
+    }
+    .sk-g .tile h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 650;
+      width: 100%;
+    }
+    .sk-g .tile p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      flex: 1;
+    }
+    .sk-g .badge.ok {
+      color: var(--bg);
+      background: var(--accent);
+      border-radius: 4px;
+    }
+    .sk-g .badge.soon {
+      color: var(--muted);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+    }
+
+    /* =========================
+       H — Bibliothèque
+       ========================= */
+    .sk-h {
+      --bg: #f3efe6;
+      --ink: #1a2a22;
+      --muted: #5a6a60;
+      --line: #cfc6b4;
+      --surface: #faf7f0;
+      --accent: #1f5c45;
+      --deep: #163528;
+      font-family: "Literata", Georgia, serif;
+      background:
+        radial-gradient(90% 60% at 100% 0%, #e5ecdf, transparent 50%),
+        var(--bg);
+      color: var(--ink);
+      padding: 1.15rem 1.15rem 1.85rem;
+    }
+    .sk-h .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      align-items: baseline;
+      margin-bottom: 1.5rem;
+    }
+    .sk-h .brand {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: -0.03em;
+      color: var(--deep);
+      margin-right: auto;
+    }
+    .sk-h .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      font-family: "Manrope", system-ui, sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .sk-h .links a { color: var(--muted); }
+    .sk-h .links a.cur { color: var(--accent); }
+    .sk-h .hero {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(2rem, 7vw, 2.7rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin: 0 0 0.45rem;
+      color: var(--deep);
+    }
+    .sk-h .lead {
+      margin: 0 0 1.4rem;
+      font-family: "Manrope", system-ui, sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 28rem;
+    }
+    .sk-h .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+    .sk-h .row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.35rem 1rem;
+      padding: 0.95rem 1.05rem;
+      color: inherit;
+      border-bottom: 1px solid var(--line);
+    }
+    .sk-h .row:last-child { border-bottom: 0; }
+    .sk-h .row h3 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .sk-h .row p {
+      margin: 0;
+      grid-column: 1 / -1;
+      font-family: "Manrope", system-ui, sans-serif;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+    .sk-h .badge {
+      font-family: "Manrope", system-ui, sans-serif;
+      align-self: start;
+    }
+    .sk-h .badge.ok { color: var(--accent); background: #e3efe8; }
+    .sk-h .badge.soon { color: var(--muted); }
+
+    /* =========================
+       I — Amphi nuit douce
+       ========================= */
+    .sk-i {
+      --bg: #1c2420;
+      --ink: #eef3ee;
+      --muted: #9aab9f;
+      --line: #334038;
+      --surface: #252e29;
+      --accent: #8fbf9a;
+      --paper: #f0ebe3;
+      font-family: "Manrope", system-ui, sans-serif;
+      background:
+        radial-gradient(80% 50% at 10% 0%, #2a3830, transparent 55%),
+        var(--bg);
+      color: var(--ink);
+      padding: 1.1rem 1.1rem 1.75rem;
+    }
+    .sk-i .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      align-items: baseline;
+      margin-bottom: 1.35rem;
+    }
+    .sk-i .brand {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: -0.03em;
+      color: var(--paper);
+      margin-right: auto;
+    }
+    .sk-i .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 0.9rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .sk-i .links a { color: var(--muted); }
+    .sk-i .links a.cur { color: var(--accent); }
+    .sk-i .hero {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(2rem, 7vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin: 0 0 0.4rem;
+      color: var(--paper);
+    }
+    .sk-i .lead {
+      margin: 0 0 1.3rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+      max-width: 28rem;
+    }
+    .sk-i .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .sk-i .row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.3rem 1rem;
+      padding: 0.9rem 1rem;
+      color: inherit;
+      border-bottom: 1px solid var(--line);
+    }
+    .sk-i .row:last-child { border-bottom: 0; }
+    .sk-i .row h3 { margin: 0; font-size: 1rem; font-weight: 700; }
+    .sk-i .row p {
+      margin: 0;
+      grid-column: 1 / -1;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .sk-i .badge.ok { color: var(--bg); background: var(--accent); }
+    .sk-i .badge.soon { color: var(--muted); }
+
+    /* =========================
+       J — Salle blanche
+       ========================= */
+    .sk-j {
+      --bg: #ffffff;
+      --ink: #111827;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --accent: #0f766e;
+      --soft: #ecfdf5;
+      font-family: "Outfit", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      padding: 1.15rem 1.15rem 1.8rem;
+    }
+    .sk-j .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .sk-j .brand {
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      font-size: 1.08rem;
+      color: var(--ink);
+      margin-right: auto;
+    }
+    .sk-j .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 0.95rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+    .sk-j .links a { color: var(--muted); }
+    .sk-j .links a.cur {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .sk-j .hero {
+      font-size: clamp(2rem, 7vw, 2.7rem);
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      line-height: 1.02;
+      margin: 0 0 0.4rem;
+    }
+    .sk-j .lead {
+      margin: 0 0 1.35rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 28rem;
+    }
+    .sk-j .grid {
+      display: grid;
+      gap: 0.7rem;
+    }
+    @media (min-width: 520px) {
+      .sk-j .grid { grid-template-columns: 1fr 1fr; }
+    }
+    .sk-j .tile {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem 1.05rem;
+      color: inherit;
+    }
+    .sk-j .tile:hover { border-color: var(--accent); }
+    .sk-j .tile h3 {
+      margin: 0 0 0.25rem;
+      font-size: 1.02rem;
+      font-weight: 700;
+    }
+    .sk-j .tile p {
+      margin: 0 0 0.55rem;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+    .sk-j .badge.ok { color: var(--accent); background: var(--soft); }
+    .sk-j .badge.soon { color: var(--muted); background: #f3f4f6; }
+
+    /* =========================
+       K — Cuir & or doux
+       ========================= */
+    .sk-k {
+      --bg: #2a221c;
+      --ink: #f3ebe2;
+      --muted: #b5a494;
+      --line: #46382e;
+      --surface: #342a23;
+      --accent: #d4a574;
+      font-family: "Source Serif 4", Georgia, serif;
+      background:
+        radial-gradient(70% 45% at 90% 0%, #3a2e25, transparent 50%),
+        var(--bg);
+      color: var(--ink);
+      padding: 1.15rem 1.15rem 1.8rem;
+    }
+    .sk-k .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      align-items: baseline;
+      margin-bottom: 1.4rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .sk-k .brand {
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+      color: var(--accent);
+      margin-right: auto;
+    }
+    .sk-k .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 0.95rem;
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    .sk-k .links a { color: var(--muted); }
+    .sk-k .links a.cur { color: var(--ink); }
+    .sk-k .hero {
+      font-size: clamp(2rem, 7vw, 2.65rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.05;
+      margin: 0 0 0.45rem;
+    }
+    .sk-k .lead {
+      margin: 0 0 1.35rem;
+      font-family: "DM Sans", system-ui, sans-serif;
+      color: var(--muted);
+      font-size: 0.92rem;
+      max-width: 28rem;
+    }
+    .sk-k .list { display: grid; gap: 0.55rem; }
+    .sk-k .tile {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.95rem 1rem;
+      color: inherit;
+    }
+    .sk-k .tile h3 {
+      margin: 0 0 0.2rem;
+      font-size: 1.08rem;
+      font-weight: 700;
+    }
+    .sk-k .tile p {
+      margin: 0 0 0.5rem;
+      font-family: "DM Sans", system-ui, sans-serif;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+    .sk-k .badge {
+      font-family: "DM Sans", system-ui, sans-serif;
+    }
+    .sk-k .badge.ok { color: var(--bg); background: var(--accent); }
+    .sk-k .badge.soon { color: var(--muted); border: 1px solid var(--line); }
+
+    /* =========================
+       L — Laboratoire
+       ========================= */
+    .sk-l {
+      --bg: #f2f5f3;
+      --ink: #13201a;
+      --muted: #5d6f66;
+      --line: #c9d5ce;
+      --accent: #0b6e4f;
+      --mint: #d8efe4;
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      background:
+        linear-gradient(180deg, #e8f0eb 0%, var(--bg) 35%),
+        var(--bg);
+      color: var(--ink);
+      padding: 1.05rem 1.05rem 1.7rem;
+    }
+    .sk-l .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem 0.85rem;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+    .sk-l .brand {
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--accent);
+      margin-right: auto;
+      font-size: 1.02rem;
+    }
+    .sk-l .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+    .sk-l .links a {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+    .sk-l .links a.cur {
+      color: var(--accent);
+      background: var(--mint);
+      border-color: color-mix(in srgb, var(--accent) 25%, transparent);
+    }
+    .sk-l .hero {
+      font-size: clamp(1.85rem, 6.5vw, 2.4rem);
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1.08;
+      margin: 0 0 0.35rem;
+    }
+    .sk-l .lead {
+      margin: 0 0 1.15rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      max-width: 28rem;
+    }
+    .sk-l .grid {
+      display: grid;
+      gap: 0.55rem;
+    }
+    .sk-l .tile {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.2rem 0.75rem;
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.85rem 0.95rem;
+      color: inherit;
+    }
+    .sk-l .tile h3 {
+      margin: 0;
+      font-size: 0.98rem;
+      font-weight: 700;
+    }
+    .sk-l .tile p {
+      margin: 0;
+      grid-column: 1 / -1;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+    .sk-l .badge.ok { color: var(--accent); background: var(--mint); }
+    .sk-l .badge.soon { color: var(--muted); }
+
+    /* =========================
+       M — H + chips mobile (mix)
+       ========================= */
+    .sk-m {
+      --bg: #f3efe6;
+      --ink: #1a2a22;
+      --muted: #5a6a60;
+      --line: #cfc6b4;
+      --surface: #faf7f0;
+      --accent: #1f5c45;
+      --deep: #163528;
+      font-family: "Literata", Georgia, serif;
+      background:
+        radial-gradient(90% 60% at 100% 0%, #e5ecdf, transparent 50%),
+        var(--bg);
+      color: var(--ink);
+      padding: 0.95rem 1rem 1.6rem;
+    }
+    .sk-m .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+    .sk-m .brand {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.03em;
+      color: var(--deep);
+    }
+    .sk-m .pill {
+      font-family: "Manrope", system-ui, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--accent);
+      background: #e3efe8;
+      border-radius: 999px;
+      padding: 0.28rem 0.55rem;
+    }
+    .sk-m .chips {
+      display: flex;
+      gap: 0.4rem;
+      overflow-x: auto;
+      padding-bottom: 0.35rem;
+      margin-bottom: 1.1rem;
+      scrollbar-width: none;
+    }
+    .sk-m .chips::-webkit-scrollbar { display: none; }
+    .sk-m .chips a {
+      flex: 0 0 auto;
+      font-family: "Manrope", system-ui, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--muted);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.4rem 0.7rem;
+    }
+    .sk-m .chips a.cur {
+      color: #fff;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+    .sk-m .hero {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(1.85rem, 6.5vw, 2.35rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin: 0 0 0.35rem;
+      color: var(--deep);
+    }
+    .sk-m .lead {
+      margin: 0 0 1.1rem;
+      font-family: "Manrope", system-ui, sans-serif;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .sk-m .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .sk-m .row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.25rem 0.75rem;
+      padding: 0.85rem 0.95rem;
+      color: inherit;
+      border-bottom: 1px solid var(--line);
+    }
+    .sk-m .row:last-child { border-bottom: 0; }
+    .sk-m .row h3 {
+      margin: 0;
+      font-size: 1.02rem;
+      font-weight: 700;
+    }
+    .sk-m .row p {
+      margin: 0;
+      grid-column: 1 / -1;
+      font-family: "Manrope", system-ui, sans-serif;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+    .sk-m .badge {
+      font-family: "Manrope", system-ui, sans-serif;
+    }
+    .sk-m .badge.ok { color: var(--accent); background: #e3efe8; }
+    .sk-m .badge.soon { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header class="lab-bar">
+    <h1>Labo squelettes — site shell</h1>
+    <p>
+      13 directions factices (shell uniquement). Les fiches peuvent rester sur leur CSS.
+      Si tu aimes <strong style="color:var(--lab-ink)">H</strong>, regarde aussi <strong style="color:var(--lab-ink)">M</strong> (= H + nav mobile).
+      <strong style="color:var(--lab-accent)">M est maintenant intégré au site live</strong> (shell + rubriques ; fiches inchangées).
+      <a href="./index.html">← Accueil</a> ·
+      <a href="./matiere/style-lab.html">Labo fiches</a>
+    </p>
+    <ul class="lab-toc">
+      <li><a href="#a">A · Actuel</a></li>
+      <li><a href="#b">B · Carnet</a></li>
+      <li><a href="#c">C · Mobile</a></li>
+      <li><a href="#d">D · Clinique</a></li>
+      <li><a href="#e">E · Encre</a></li>
+      <li><a href="#f">F · Ardoise</a></li>
+      <li><a href="#g">G · Sprint</a></li>
+      <li><a href="#h">H · Bibliothèque ★</a></li>
+      <li><a href="#i">I · Amphi nuit</a></li>
+      <li><a href="#j">J · Salle blanche</a></li>
+      <li><a href="#k">K · Cuir &amp; or</a></li>
+      <li><a href="#l">L · Laboratoire</a></li>
+      <li><a href="#m">M · H + mobile</a></li>
+    </ul>
+  </header>
+
+  <main class="lab-stack">
+    <!-- A -->
+    <section class="lab-block" id="a">
+      <div class="lab-meta">
+        <h2>A — Actuel peaufiné</h2>
+        <span>Même esprit que maintenant, typo + contraste un cran plus nets. Tuiles légères.</span>
+      </div>
+      <div class="frame">
+        <div class="frame-label">Preview · accueil</div>
+        <div class="mock sk-a">
+          <nav class="nav" aria-label="Demo A">
+            <a class="brand" href="#a">PASS Sorbonne</a>
+            <div class="links">
+              <a class="cur" href="#a">Accueil</a>
+              <a href="#a">Matière</a>
+              <a href="#a">Entraînement</a>
+              <a href="#a">Flashcards</a>
+              <a href="#a">Suivi</a>
+            </div>
+          </nav>
+          <h2 class="hero">PASS Sorbonne</h2>
+          <p class="lead">Entraîne-toi, suis le programme — une rubrique à la fois.</p>
+          <div class="grid">
+            <a class="tile" href="#a"><h3>Matière</h3><p>Fiches Anatomie ch.01–11.</p><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#a"><h3>Entraînement</h3><p>QCM — sessions &amp; score.</p><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#a"><h3>Flashcards</h3><p>Decks chapitre par chapitre.</p><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#a"><h3>Compétitions</h3><p>Rooms &amp; affrontements.</p><span class="badge soon">Bientôt</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- B -->
+    <section class="lab-block" id="b">
+      <div class="lab-meta">
+        <h2>B — Carnet d’étude</h2>
+        <span>Look “notes / polycopié”. Peu de cartes : lignes, serif, accent encre.</span>
+      </div>
+      <div class="frame">
+        <div class="frame-label">Preview · accueil</div>
+        <div class="mock sk-b">
+          <nav class="nav" aria-label="Demo B">
+            <a class="brand" href="#b">PASS Sorbonne</a>
+            <div class="links">
+              <a class="cur" href="#b">Accueil</a>
+              <a href="#b">Matière</a>
+              <a href="#b">QCM</a>
+              <a href="#b">Flash</a>
+              <a href="#b">Suivi</a>
+            </div>
+          </nav>
+          <h2 class="hero">PASS Sorbonne</h2>
+          <p class="lead">Le carnet numérique du semestre — cours, questions, révision.</p>
+          <div class="list">
+            <a class="row" href="#b"><h3>Matière</h3><span class="badge ok">Dispo</span><p>Fiches Anatomie, chapitre par chapitre.</p></a>
+            <a class="row" href="#b"><h3>Entraînement</h3><span class="badge ok">Dispo</span><p>Banque QCM filtrable P1 / P2 / P3.</p></a>
+            <a class="row" href="#b"><h3>Flashcards</h3><span class="badge ok">Dispo</span><p>462 cartes — decks 01 à 11.</p></a>
+            <a class="row" href="#b"><h3>Compétitions</h3><span class="badge soon">Bientôt</span><p>Affrontements entre potes.</p></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- C -->
+    <section class="lab-block" id="c">
+      <div class="lab-meta">
+        <h2>C — Dense mobile</h2>
+        <span>Pensé pouce / écran étroit : chips horizontales, liste compacte, contraste fort.</span>
+      </div>
+      <div class="frame">
+        <div class="frame-label">Preview · accueil</div>
+        <div class="mock sk-c">
+          <div class="top">
+            <a class="brand" href="#c">PASS Sorbonne</a>
+            <span class="pill">S1 · Anatomie</span>
+          </div>
+          <div class="chips" aria-label="Demo C nav">
+            <a class="cur" href="#c">Accueil</a>
+            <a href="#c">Matière</a>
+            <a href="#c">QCM</a>
+            <a href="#c">Flash</a>
+            <a href="#c">Suivi</a>
+            <a href="#c">Planning</a>
+          </div>
+          <h2 class="hero">Réviser. Mesurer. Recommencer.</h2>
+          <p class="lead">Tout le parcours Anatomie dans la poche.</p>
+          <div class="stack">
+            <a class="tile" href="#c"><h3>Matière</h3><span class="badge ok">Dispo</span><p>11 fiches prêtes.</p></a>
+            <a class="tile" href="#c"><h3>Entraînement</h3><span class="badge ok">Dispo</span><p>~210 QCM.</p></a>
+            <a class="tile" href="#c"><h3>Flashcards</h3><span class="badge ok">Dispo</span><p>462 cartes.</p></a>
+            <a class="tile" href="#c"><h3>Compétitions</h3><span class="badge soon">Bientôt</span><p>Rooms à venir.</p></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- D -->
+    <section class="lab-block" id="d">
+      <div class="lab-meta">
+        <h2>D — Clinique calme</h2>
+        <span>Beaucoup d’air, lavande bleutée douce, peu de “cartes”. Ambiance soignée / sérieuse.</span>
+      </div>
+      <div class="frame">
+        <div class="frame-label">Preview · accueil</div>
+        <div class="mock sk-d">
+          <nav class="nav" aria-label="Demo D">
+            <a class="brand" href="#d">PASS Sorbonne</a>
+            <div class="links">
+              <a class="cur" href="#d">Accueil</a>
+              <a href="#d">Matière</a>
+              <a href="#d">Entraînement</a>
+              <a href="#d">Flashcards</a>
+              <a href="#d">Suivi</a>
+            </div>
+          </nav>
+          <div class="hero-block">
+            <h2 class="hero">PASS Sorbonne</h2>
+            <p class="lead">Un espace clair pour travailler le semestre — sans bruit visuel.</p>
+          </div>
+          <div class="grid">
+            <a class="tile" href="#d"><h3>Matière</h3><p>Fiches Anatomie ch.01–11.</p><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#d"><h3>Entraînement</h3><p>QCM, score, feedback.</p><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#d"><h3>Flashcards</h3><p>Decks par chapitre.</p><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#d"><h3>Compétitions</h3><p>Affrontements.</p><span class="badge soon">Bientôt</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- E -->
+    <section class="lab-block" id="e">
+      <div class="lab-meta">
+        <h2>E — Atelier encre</h2>
+        <span>Noir / blanc franc, bords nets, accent émeraude. Très graphique.</span>
+      </div>
+      <div class="frame">
+        <div class="frame-label">Preview · accueil</div>
+        <div class="mock sk-e">
+          <nav class="nav" aria-label="Demo E">
+            <a class="brand" href="#e">PASS Sorbonne</a>
+            <div class="links">
+              <a class="cur" href="#e">Accueil</a>
+              <a href="#e">Matière</a>
+              <a href="#e">QCM</a>
+              <a href="#e">Flash</a>
+              <a href="#e">Suivi</a>
+            </div>
+          </nav>
+          <h2 class="hero">PASS Sorbonne</h2>
+          <p class="lead">Structure claire. Zéro décoration inutile.</p>
+          <div class="grid">
+            <a class="tile" href="#e"><span class="idx">01</span><div><h3>Matière</h3><p>Fiches Anatomie ch.01–11.</p></div><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#e"><span class="idx">02</span><div><h3>Entraînement</h3><p>QCM filtrables P1–P3.</p></div><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#e"><span class="idx">03</span><div><h3>Flashcards</h3><p>Decks par chapitre.</p></div><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#e"><span class="idx">04</span><div><h3>Compétitions</h3><p>Rooms à venir.</p></div><span class="badge soon">Soon</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- F -->
+    <section class="lab-block" id="f">
+      <div class="lab-meta">
+        <h2>F — Matin ardoise</h2>
+        <span>Gris-bleu doux, nav en pastilles, tuiles légères. Calme sans être “médical”.</span>
+      </div>
+      <div class="frame">
+        <div class="frame-label">Preview · accueil</div>
+        <div class="mock sk-f">
+          <nav class="nav" aria-label="Demo F">
+            <a class="brand" href="#f">PASS Sorbonne</a>
+            <div class="links">
+              <a class="cur" href="#f">Accueil</a>
+              <a href="#f">Matière</a>
+              <a href="#f">QCM</a>
+              <a href="#f">Flash</a>
+              <a href="#f">Suivi</a>
+            </div>
+          </nav>
+          <h2 class="hero">PASS Sorbonne</h2>
+          <p class="lead">Une interface douce pour les sessions longues.</p>
+          <div class="grid">
+            <a class="tile" href="#f"><h3>Matière</h3><p>Fiches Anatomie ch.01–11.</p><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#f"><h3>Entraînement</h3><p>QCM — sessions &amp; score.</p><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#f"><h3>Flashcards</h3><p>Decks chapitre par chapitre.</p><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#f"><h3>Compétitions</h3><p>Affrontements.</p><span class="badge soon">Bientôt</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- G -->
+    <section class="lab-block" id="g">
+      <div class="lab-meta">
+        <h2>G — Sprint</h2>
+        <span>Énergie révision intensive : sombre + accent acidulé. Bon pour “mode combat / duel”.</span>
+      </div>
+      <div class="frame">
+        <div class="frame-label">Preview · accueil</div>
+        <div class="mock sk-g">
+          <nav class="nav" aria-label="Demo G">
+            <a class="brand" href="#g">PASS <span>Sorbonne</span></a>
+            <div class="links">
+              <a class="cur" href="#g">Accueil</a>
+              <a href="#g">Matière</a>
+              <a href="#g">QCM</a>
+              <a href="#g">Flash</a>
+              <a href="#g">Suivi</a>
+            </div>
+          </nav>
+          <h2 class="hero">Réviser. Scorer. Rejouer.</h2>
+          <p class="lead">Le shell version “entraînement intensif”.</p>
+          <div class="grid">
+            <a class="tile" href="#g"><h3>Matière</h3><p>11 fiches Anatomie.</p><span class="badge ok">GO</span></a>
+            <a class="tile" href="#g"><h3>Entraînement</h3><p>~210 QCM prêts.</p><span class="badge ok">GO</span></a>
+            <a class="tile" href="#g"><h3>Flashcards</h3><p>462 cartes.</p><span class="badge ok">GO</span></a>
+            <a class="tile" href="#g"><h3>Compétitions</h3><p>Rooms bientôt.</p><span class="badge soon">WAIT</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- H -->
+    <section class="lab-block" id="h">
+      <div class="lab-meta">
+        <h2>H — Bibliothèque</h2>
+        <span>Vert forêt + papier, ambiance fac / bibliothèque. Sérieux, chaleureux, lisible.</span>
+      </div>
+      <div class="frame">
+        <div class="frame-label">Preview · accueil</div>
+        <div class="mock sk-h">
+          <nav class="nav" aria-label="Demo H">
+            <a class="brand" href="#h">PASS Sorbonne</a>
+            <div class="links">
+              <a class="cur" href="#h">Accueil</a>
+              <a href="#h">Matière</a>
+              <a href="#h">Entraînement</a>
+              <a href="#h">Flashcards</a>
+              <a href="#h">Suivi</a>
+            </div>
+          </nav>
+          <h2 class="hero">PASS Sorbonne</h2>
+          <p class="lead">Ton espace de travail pour le semestre — clair et posé.</p>
+          <div class="panel">
+            <a class="row" href="#h"><h3>Matière</h3><span class="badge ok">Dispo</span><p>Fiches Anatomie, chapitre par chapitre.</p></a>
+            <a class="row" href="#h"><h3>Entraînement</h3><span class="badge ok">Dispo</span><p>QCM avec filtres P1 / P2 / P3.</p></a>
+            <a class="row" href="#h"><h3>Flashcards</h3><span class="badge ok">Dispo</span><p>Decks 01 à 11.</p></a>
+            <a class="row" href="#h"><h3>Compétitions</h3><span class="badge soon">Bientôt</span><p>Affrontements entre potes.</p></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- I -->
+    <section class="lab-block" id="i">
+      <div class="lab-meta">
+        <h2>I — Amphi nuit douce</h2>
+        <span>Cousin sombre de H : même esprit bibliothèque, version soir / mode focus.</span>
+      </div>
+      <div class="frame">
+        <div class="frame-label">Preview · accueil</div>
+        <div class="mock sk-i">
+          <nav class="nav" aria-label="Demo I">
+            <a class="brand" href="#i">PASS Sorbonne</a>
+            <div class="links">
+              <a class="cur" href="#i">Accueil</a>
+              <a href="#i">Matière</a>
+              <a href="#i">Entraînement</a>
+              <a href="#i">Flashcards</a>
+              <a href="#i">Suivi</a>
+            </div>
+          </nav>
+          <h2 class="hero">PASS Sorbonne</h2>
+          <p class="lead">Révisions du soir — contraste doux, zéro éblouissement.</p>
+          <div class="panel">
+            <a class="row" href="#i"><h3>Matière</h3><span class="badge ok">Dispo</span><p>Fiches Anatomie ch.01–11.</p></a>
+            <a class="row" href="#i"><h3>Entraînement</h3><span class="badge ok">Dispo</span><p>QCM filtrables P1 / P2 / P3.</p></a>
+            <a class="row" href="#i"><h3>Flashcards</h3><span class="badge ok">Dispo</span><p>Decks 01 à 11.</p></a>
+            <a class="row" href="#i"><h3>Compétitions</h3><span class="badge soon">Bientôt</span><p>Rooms à venir.</p></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- J -->
+    <section class="lab-block" id="j">
+      <div class="lab-meta">
+        <h2>J — Salle blanche</h2>
+        <span>Blanc net, teal discret, très “pro / clean”. Moins chaleureux que H.</span>
+      </div>
+      <div class="frame">
+        <div class="frame-label">Preview · accueil</div>
+        <div class="mock sk-j">
+          <nav class="nav" aria-label="Demo J">
+            <a class="brand" href="#j">PASS Sorbonne</a>
+            <div class="links">
+              <a class="cur" href="#j">Accueil</a>
+              <a href="#j">Matière</a>
+              <a href="#j">Entraînement</a>
+              <a href="#j">Flashcards</a>
+              <a href="#j">Suivi</a>
+            </div>
+          </nav>
+          <h2 class="hero">PASS Sorbonne</h2>
+          <p class="lead">Clair, minimal, facile à scanner.</p>
+          <div class="grid">
+            <a class="tile" href="#j"><h3>Matière</h3><p>Fiches Anatomie ch.01–11.</p><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#j"><h3>Entraînement</h3><p>QCM — sessions &amp; score.</p><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#j"><h3>Flashcards</h3><p>Decks par chapitre.</p><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#j"><h3>Compétitions</h3><p>Affrontements.</p><span class="badge soon">Bientôt</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- K -->
+    <section class="lab-block" id="k">
+      <div class="lab-meta">
+        <h2>K — Cuir &amp; or doux</h2>
+        <span>Ambiance cabinet / reliure. Premium, plus “luxe études” que H.</span>
+      </div>
+      <div class="frame">
+        <div class="frame-label">Preview · accueil</div>
+        <div class="mock sk-k">
+          <nav class="nav" aria-label="Demo K">
+            <a class="brand" href="#k">PASS Sorbonne</a>
+            <div class="links">
+              <a class="cur" href="#k">Accueil</a>
+              <a href="#k">Matière</a>
+              <a href="#k">QCM</a>
+              <a href="#k">Flash</a>
+              <a href="#k">Suivi</a>
+            </div>
+          </nav>
+          <h2 class="hero">PASS Sorbonne</h2>
+          <p class="lead">Un outil de semestre qui assume le sérieux.</p>
+          <div class="list">
+            <a class="tile" href="#k"><h3>Matière</h3><p>Fiches Anatomie, chapitre par chapitre.</p><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#k"><h3>Entraînement</h3><p>Banque QCM filtrable.</p><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#k"><h3>Flashcards</h3><p>462 cartes.</p><span class="badge ok">Dispo</span></a>
+            <a class="tile" href="#k"><h3>Compétitions</h3><p>Bientôt.</p><span class="badge soon">Soon</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- L -->
+    <section class="lab-block" id="l">
+      <div class="lab-meta">
+        <h2>L — Laboratoire</h2>
+        <span>Vert plus “science / TP”. Cousin clair de H, nav en pastilles.</span>
+      </div>
+      <div class="frame">
+        <div class="frame-label">Preview · accueil</div>
+        <div class="mock sk-l">
+          <nav class="nav" aria-label="Demo L">
+            <a class="brand" href="#l">PASS Sorbonne</a>
+            <div class="links">
+              <a class="cur" href="#l">Accueil</a>
+              <a href="#l">Matière</a>
+              <a href="#l">QCM</a>
+              <a href="#l">Flash</a>
+              <a href="#l">Suivi</a>
+            </div>
+          </nav>
+          <h2 class="hero">PASS Sorbonne</h2>
+          <p class="lead">Méthode, mesure, répétition — shell version labo.</p>
+          <div class="grid">
+            <a class="tile" href="#l"><h3>Matière</h3><span class="badge ok">Dispo</span><p>11 fiches Anatomie.</p></a>
+            <a class="tile" href="#l"><h3>Entraînement</h3><span class="badge ok">Dispo</span><p>~210 QCM.</p></a>
+            <a class="tile" href="#l"><h3>Flashcards</h3><span class="badge ok">Dispo</span><p>Decks 01–11.</p></a>
+            <a class="tile" href="#l"><h3>Compétitions</h3><span class="badge soon">Bientôt</span><p>Rooms.</p></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- M -->
+    <section class="lab-block" id="m">
+      <div class="lab-meta">
+        <h2>M — H + mobile (mix recommandé)</h2>
+        <span>Même identité Bibliothèque que H, avec chips scrollables pour le téléphone.</span>
+      </div>
+      <div class="frame">
+        <div class="frame-label">Preview · accueil</div>
+        <div class="mock sk-m">
+          <div class="top">
+            <a class="brand" href="#m">PASS Sorbonne</a>
+            <span class="pill">S1 · Anatomie</span>
+          </div>
+          <div class="chips" aria-label="Demo M nav">
+            <a class="cur" href="#m">Accueil</a>
+            <a href="#m">Matière</a>
+            <a href="#m">QCM</a>
+            <a href="#m">Flash</a>
+            <a href="#m">Suivi</a>
+            <a href="#m">Planning</a>
+          </div>
+          <h2 class="hero">PASS Sorbonne</h2>
+          <p class="lead">Ton espace de travail — version poche.</p>
+          <div class="panel">
+            <a class="row" href="#m"><h3>Matière</h3><span class="badge ok">Dispo</span><p>Fiches Anatomie ch.01–11.</p></a>
+            <a class="row" href="#m"><h3>Entraînement</h3><span class="badge ok">Dispo</span><p>QCM avec filtres P1 / P2 / P3.</p></a>
+            <a class="row" href="#m"><h3>Flashcards</h3><span class="badge ok">Dispo</span><p>Decks 01 à 11.</p></a>
+            <a class="row" href="#m"><h3>Compétitions</h3><span class="badge soon">Bientôt</span><p>Affrontements entre potes.</p></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

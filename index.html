@@ -8,63 +8,67 @@
 </head>
 <body>
   <div class="wrap">
-    <nav class="topnav" aria-label="Navigation principale">
-      <a class="brand" href="./index.html">PASS Sorbonne</a>
-      <ul class="nav-links">
-        <li><a href="./matiere.html">Matière</a></li>
-        <li><a href="./entrainement.html">Entraînement</a></li>
-        <li><a href="./flashcards.html">Flashcards</a></li>
-        <li><a href="./suivi.html">Suivi</a></li>
-        <li><a href="./competitions.html">Compétitions</a></li>
-        <li><a href="./planning.html">Planning</a></li>
-        <li><a href="./conseils.html">Conseils</a></li>
-      </ul>
-    </nav>
+    <header class="site-header">
+      <div class="site-top">
+        <a class="brand" href="./index.html">PASS Sorbonne</a>
+        <span class="site-pill">S1 · Anatomie</span>
+      </div>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-chips">
+          <li><a href="./index.html" aria-current="page">Accueil</a></li>
+          <li><a href="./matiere.html">Matière</a></li>
+          <li><a href="./entrainement.html">Entraînement</a></li>
+          <li><a href="./flashcards.html">Flashcards</a></li>
+          <li><a href="./suivi.html">Suivi</a></li>
+          <li><a href="./planning.html">Planning</a></li>
+          <li><a href="./competitions.html">Compétitions</a></li>
+          <li><a href="./conseils.html">Conseils</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <header>
       <h1 class="hero-brand">PASS Sorbonne</h1>
-      <p class="hero-lead">Entraîne-toi, suis le programme, et prépare les affrontements — une rubrique à la fois.</p>
+      <p class="hero-lead">Ton espace de travail pour le semestre — cours, QCM, flashcards.</p>
     </header>
 
-    <section class="grid two" aria-label="Rubriques">
-      <a class="tile" href="./matiere.html">
+    <section class="rubric-panel" aria-label="Rubriques">
+      <a class="rubric-row" href="./matiere.html">
         <h2>Matière</h2>
+        <span class="badge">Dispo</span>
         <p>Fiches Anatomie ch.01–11 — à ouvrir et relire.</p>
-        <span class="badge">Dispo</span>
       </a>
-      <a class="tile" href="./entrainement.html">
+      <a class="rubric-row" href="./entrainement.html">
         <h2>Entraînement</h2>
+        <span class="badge">Dispo</span>
         <p>QCM Anatomie — sessions, score, feedback.</p>
-        <span class="badge">Dispo</span>
       </a>
-      <a class="tile" href="./flashcards.html">
+      <a class="rubric-row" href="./flashcards.html">
         <h2>Flashcards</h2>
+        <span class="badge">Dispo</span>
         <p>Decks Anatomie — ch.01–11 complets.</p>
-        <span class="badge">Dispo</span>
       </a>
-      <a class="tile" href="./suivi.html">
+      <a class="rubric-row" href="./suivi.html">
         <h2>Suivi</h2>
+        <span class="badge">Dispo</span>
         <p>Pastilles par chapitre selon tes scores QCM.</p>
-        <span class="badge">Dispo</span>
       </a>
-      <a class="tile" href="./competitions.html">
-        <h2>Compétitions</h2>
-        <p>Rooms, affrontements, classement.</p>
-        <span class="badge soon">Bientôt</span>
-      </a>
-      <a class="tile" href="./planning.html">
+      <a class="rubric-row" href="./planning.html">
         <h2>Planning</h2>
-        <p>Calendrier + dernières activités par chapitre.</p>
         <span class="badge">Dispo</span>
+        <p>Calendrier + dernières activités par chapitre.</p>
       </a>
-      <a class="tile" href="./conseils.html">
-        <h2>Conseils / FAQ</h2>
-        <p>Méthode et questions fréquentes.</p>
+      <a class="rubric-row" href="./competitions.html">
+        <h2>Compétitions</h2>
         <span class="badge soon">Bientôt</span>
+        <p>Rooms, affrontements, classement.</p>
+      </a>
+      <a class="rubric-row" href="./conseils.html">
+        <h2>Conseils / FAQ</h2>
+        <span class="badge soon">Bientôt</span>
+        <p>Méthode et questions fréquentes.</p>
       </a>
     </section>
-
-    <p class="note">Le style se changera plus tard (couleurs / typo dans <code>styles.css</code>). Le fond reste volontairement simple.</p>
   </div>
 </body>
 </html>
