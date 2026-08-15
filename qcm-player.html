@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PASS — Test QCM</title>
+  <style>
+    :root {
+      --bg: #f7f5f1;
+      --card: #fffdf9;
+      --ink: #1c1917;
+      --muted: #78716c;
+      --line: #e7e5e4;
+      --ok: #166534;
+      --ok-bg: #dcfce7;
+      --bad: #991b1b;
+      --bad-bg: #fee2e2;
+      --accent: #1d4ed8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.45;
+    }
+    main {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 1.25rem 1rem 3rem;
+    }
+    h1 { font-size: 1.25rem; margin: 0 0 0.35rem; }
+    .sub { color: var(--muted); font-size: 0.95rem; margin: 0 0 1.25rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1.1rem 1.15rem;
+      margin-bottom: 1rem;
+    }
+    .card h2 {
+      font-size: 0.95rem;
+      margin: 0 0 0.75rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .chapters {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem 0.75rem;
+    }
+    @media (max-width: 520px) {
+      .chapters { grid-template-columns: 1fr; }
+    }
+    .chapters label {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+      font-size: 0.92rem;
+      cursor: pointer;
+      padding: 0.35rem 0.2rem;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.25rem;
+      align-items: end;
+    }
+    .field label {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+    input[type="number"], select {
+      font: inherit;
+      padding: 0.4rem 0.55rem;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #fff;
+      min-width: 5.5rem;
+    }
+    .hint { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.25rem;
+    }
+    .toolbar button.secondary { font-size: 0.85rem; padding: 0.35rem 0.75rem; }
+    header.quiz-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .stem { font-size: 1.05rem; margin: 0 0 1rem; }
+    .choice {
+      display: flex;
+      gap: 0.65rem;
+      align-items: flex-start;
+      padding: 0.65rem 0.7rem;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      background: #fff;
+    }
+    .choice:has(input:checked) { border-color: var(--accent); background: #eff6ff; }
+    .choice.reveal-ok { border-color: #86efac; background: var(--ok-bg); }
+    .choice.reveal-bad { border-color: #fca5a5; background: var(--bad-bg); }
+    .choice input { margin-top: 0.2rem; }
+    .why { display: none; margin: 0.35rem 0 0 1.5rem; font-size: 0.9rem; color: var(--muted); }
+    .revealed .why { display: block; }
+    .mark { font-weight: 700; font-size: 0.85rem; }
+    .mark.ok { color: var(--ok); }
+    .mark.bad { color: var(--bad); }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    button {
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.55rem 1rem;
+      font: inherit;
+      cursor: pointer;
+    }
+    button.secondary {
+      background: #fff;
+      color: var(--ink);
+    }
+    button:disabled { opacity: 0.45; cursor: not-allowed; }
+    .score-box {
+      margin-top: 0.85rem;
+      padding: 0.7rem 0.8rem;
+      border-radius: 10px;
+      background: #f5f5f4;
+      display: none;
+    }
+    .score-box.show { display: block; }
+    .tags { margin-top: 0.75rem; font-size: 0.8rem; color: var(--muted); }
+    .hidden { display: none !important; }
+    .big-score {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin: 0.25rem 0 0.5rem;
+    }
+    .feedback-block {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+    .feedback-block h3 {
+      font-size: 1rem;
+      margin: 0 0 0.5rem;
+    }
+    .feedback-block ul {
+      margin: 0;
+      padding-left: 1.15rem;
+    }
+    .feedback-block li { margin-bottom: 0.4rem; }
+    .weak-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.5rem;
+    }
+    .chip {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: #fef3c7;
+      border: 1px solid #fcd34d;
+    }
+    .recap {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- SETUP -->
+    <section id="setup">
+      <h1>Test QCM — Anatomie</h1>
+      <p class="sub">Choisis un ou plusieurs chapitres, le nombre de questions, puis lance la session.</p>
+
+      <div class="card">
+        <h2>Chapitres</h2>
+        <div class="toolbar">
+          <button type="button" class="secondary" id="btn-all">Tout</button>
+          <button type="button" class="secondary" id="btn-none">Aucun</button>
+        </div>
+        <div class="chapters" id="chapter-list"></div>
+      </div>
+
+      <div class="card">
+        <h2>Session</h2>
+        <div class="row">
+          <div class="field">
+            <label for="qcount">Nombre de questions</label>
+            <input type="number" id="qcount" min="1" max="210" value="20" />
+          </div>
+          <div class="field">
+            <label for="mode">Tirage</label>
+            <select id="mode">
+              <option value="shuffle">Aléatoire</option>
+              <option value="order">Ordre du lot</option>
+            </select>
+          </div>
+        </div>
+        <p class="hint" id="pool-hint">—</p>
+        <div class="actions">
+          <button type="button" id="btn-start">Commencer</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="hidden">
+      <header class="quiz-bar">
+        <h1>Session en cours</h1>
+        <div class="meta" id="progress">—</div>
+      </header>
+      <div class="card revealed-host" id="panel">
+        <p class="stem" id="stem"></p>
+        <div id="choices"></div>
+        <div class="score-box" id="item-score"></div>
+        <div class="actions">
+          <button type="button" id="btn-validate">Valider / Corrigé</button>
+          <button type="button" class="secondary" id="btn-next" disabled>Suivant</button>
+          <button type="button" class="secondary" id="btn-abort">Abandonner</button>
+        </div>
+        <div class="tags" id="tags"></div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="results" class="hidden">
+      <h1>Résultat</h1>
+      <p class="sub" id="results-sub">—</p>
+      <div class="card">
+        <div class="meta">Score</div>
+        <div class="big-score" id="final-score">—</div>
+        <p id="final-label"></p>
+        <div class="feedback-block">
+          <h3>Feedback</h3>
+          <p id="feedback-text"></p>
+        </div>
+        <div class="feedback-block">
+          <h3>Conseils</h3>
+          <ul id="advice-list"></ul>
+          <div class="weak-tags" id="weak-tags"></div>
+        </div>
+        <p class="recap" id="recap"></p>
+        <div class="actions">
+          <button type="button" id="btn-retry">Rejouer (mêmes réglages)</button>
+          <button type="button" class="secondary" id="btn-home">Changer de chapitres</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./data/lots.js"></script>
+  <script>
+    const CHAPTER_META = {
+      "01": "Introduction",
+      "02": "Système nerveux",
+      "03": "Cardio-circulatoire",
+      "04": "Appareil respiratoire",
+      "05": "Organes des sens",
+      "06": "Rachis",
+      "07": "Parois du tronc",
+      "08": "Appareil digestif",
+      "09": "Génito-urinaire",
+      "10": "Membre supérieur",
+      "11": "Membre inférieur",
+    };
+
+    const lots = window.PASS_LOTS || {};
+    const elSetup = document.getElementById("setup");
+    const elQuiz = document.getElementById("quiz");
+    const elResults = document.getElementById("results");
+    const elChapterList = document.getElementById("chapter-list");
+    const elQcount = document.getElementById("qcount");
+    const elMode = document.getElementById("mode");
+    const elPoolHint = document.getElementById("pool-hint");
+    const elProgress = document.getElementById("progress");
+    const elStem = document.getElementById("stem");
+    const elChoices = document.getElementById("choices");
+    const elItemScore = document.getElementById("item-score");
+    const elTags = document.getElementById("tags");
+    const panel = document.getElementById("panel");
+    const btnValidate = document.getElementById("btn-validate");
+    const btnNext = document.getElementById("btn-next");
+
+    let sessionItems = [];
+    let index = 0;
+    let revealed = false;
+    let correctCount = 0;
+    let history = []; // { id, ok, chapter, tags }
+    let lastSettings = null;
+
+    function availableChapters() {
+      return Object.keys(CHAPTER_META).filter((ch) => (lots[ch] || []).length);
+    }
+
+    function selectedChapters() {
+      return [...elChapterList.querySelectorAll('input[type="checkbox"]:checked')].map(
+        (i) => i.value
+      );
+    }
+
+    function poolFrom(chapters) {
+      const pool = [];
+      for (const ch of chapters) {
+        for (const item of lots[ch] || []) pool.push(item);
+      }
+      return pool;
+    }
+
+    function shuffle(arr) {
+      const a = [...arr];
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    function updatePoolHint() {
+      const chs = selectedChapters();
+      const n = poolFrom(chs).length;
+      elPoolHint.textContent = chs.length
+        ? `${n} question${n > 1 ? "s" : ""} disponibles dans la sélection.`
+        : "Coche au moins un chapitre.";
+      elQcount.max = Math.max(1, n || 1);
+      if (Number(elQcount.value) > n && n > 0) elQcount.value = n;
+      document.getElementById("btn-start").disabled = !chs.length || n === 0;
+    }
+
+    function buildChapterList() {
+      elChapterList.innerHTML = "";
+      for (const ch of availableChapters()) {
+        const label = document.createElement("label");
+        label.innerHTML = `<input type="checkbox" value="${ch}" checked /> <span>${ch} — ${CHAPTER_META[ch]} <span class="meta">(${(lots[ch] || []).length})</span></span>`;
+        elChapterList.appendChild(label);
+      }
+      elChapterList.addEventListener("change", updatePoolHint);
+      updatePoolHint();
+    }
+
+    function show(view) {
+      elSetup.classList.toggle("hidden", view !== "setup");
+      elQuiz.classList.toggle("hidden", view !== "quiz");
+      elResults.classList.toggle("hidden", view !== "results");
+    }
+
+    function norm(arr) {
+      return [...arr].map(String).sort().join(",");
+    }
+
+    function startSession(settings) {
+      lastSettings = settings;
+      const pool = poolFrom(settings.chapters);
+      let picked =
+        settings.mode === "order" ? [...pool] : shuffle(pool);
+      const n = Math.min(settings.count, picked.length);
+      sessionItems = picked.slice(0, n);
+      index = 0;
+      revealed = false;
+      correctCount = 0;
+      history = [];
+      show("quiz");
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      const item = sessionItems[index];
+      if (!item) {
+        finishSession();
+        return;
+      }
+      revealed = false;
+      panel.classList.remove("revealed");
+      elItemScore.classList.remove("show");
+      elItemScore.textContent = "";
+      btnValidate.disabled = false;
+      btnNext.disabled = true;
+      elProgress.textContent = `${index + 1} / ${sessionItems.length} · ch.${item.chapter} · ${item.id}`;
+      elStem.textContent = item.stem;
+      elTags.textContent = (item.tags || []).map((t) => `#${t}`).join("  ");
+
+      elChoices.innerHTML = "";
+      for (const letter of ["A", "B", "C", "D", "E"]) {
+        const label = document.createElement("label");
+        label.className = "choice";
+        label.dataset.letter = letter;
+        label.innerHTML = `
+          <input type="checkbox" name="choice" value="${letter}" />
+          <span><strong>${letter}.</strong> ${item.choices[letter]}
+            <span class="why"></span>
+          </span>
+        `;
+        elChoices.appendChild(label);
+      }
+    }
+
+    function validate() {
+      const item = sessionItems[index];
+      if (!item || revealed) return;
+
+      const selected = [...elChoices.querySelectorAll('input[type="checkbox"]:checked')].map(
+        (i) => i.value
+      );
+      const ok = norm(selected) === norm(item.answer);
+
+      revealed = true;
+      panel.classList.add("revealed");
+      btnNext.disabled = false;
+      btnValidate.disabled = true;
+      if (ok) correctCount += 1;
+      history.push({
+        id: item.id,
+        ok,
+        chapter: item.chapter,
+        tags: item.tags || [],
+      });
+
+      for (const letter of ["A", "B", "C", "D", "E"]) {
+        const row = elChoices.querySelector(`[data-letter="${letter}"]`);
+        const exp = item.explanations[letter];
+        const why = row.querySelector(".why");
+        const isCorrect = !!exp.correct;
+        row.classList.add(isCorrect ? "reveal-ok" : "reveal-bad");
+        row.querySelector("input").disabled = true;
+        why.innerHTML = `<span class="mark ${isCorrect ? "ok" : "bad"}">${
+          isCorrect ? "Vrai" : "Faux"
+        }</span> — ${exp.why}`;
+      }
+
+      elItemScore.classList.add("show");
+      elItemScore.innerHTML = ok
+        ? `<strong>OK</strong> — réponse <strong>${item.answer.join(", ")}</strong>.`
+        : `<strong>À revoir</strong> — tu as coché <strong>${
+            selected.length ? selected.join(", ") : "(rien)"
+          }</strong> · corrigé <strong>${item.answer.join(", ")}</strong>.`;
+    }
+
+    function finishSession() {
+      const total = history.length || sessionItems.length;
+      const score = correctCount;
+      const pct = total ? Math.round((score / total) * 100) : 0;
+
+      document.getElementById("final-score").textContent = `${score} / ${total}`;
+      document.getElementById("final-label").textContent = `${pct} % de réussite`;
+      document.getElementById("results-sub").textContent =
+        lastSettings && lastSettings.chapters.length
+          ? `Chapitres : ${lastSettings.chapters.map((c) => c + " " + CHAPTER_META[c]).join(" · ")}`
+          : "";
+
+      const feedback = document.getElementById("feedback-text");
+      if (pct >= 85) {
+        feedback.textContent =
+          "Très bon niveau sur ce lot. Tu maîtrises bien les notions tirées — garde un rythme de révision courte pour figer.";
+      } else if (pct >= 65) {
+        feedback.textContent =
+          "Base solide, avec encore des trous. Relis les explications des items ratés avant de relancer une session ciblée.";
+      } else if (pct >= 40) {
+        feedback.textContent =
+          "Session fragile : plusieurs notions ne sont pas encore stabilisées. Mieux vaut revoir le cours sur les thèmes faibles, puis refaire 10–15 QCM.";
+      } else {
+        feedback.textContent =
+          "Beaucoup d’erreurs : priorise le polycopié / les points-clés du (des) chapitre(s), puis recommence avec moins de questions.";
+      }
+
+      const wrong = history.filter((h) => !h.ok);
+      const tagCount = {};
+      const chCount = {};
+      for (const h of wrong) {
+        chCount[h.chapter] = (chCount[h.chapter] || 0) + 1;
+        for (const t of h.tags) tagCount[t] = (tagCount[t] || 0) + 1;
+      }
+      const topTags = Object.entries(tagCount)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 6);
+      const weakCh = Object.entries(chCount).sort((a, b) => b[1] - a[1]);
+
+      const advice = [];
+      if (wrong.length === 0) {
+        advice.push("Parfait : enchaîne sur un autre chapitre ou augmente le nombre de questions.");
+        advice.push("Teste un mix multi-chapitres pour vérifier le transfert entre cours.");
+      } else {
+        advice.push(
+          `Relis le corrigé des ${wrong.length} question${wrong.length > 1 ? "s" : ""} manquée${wrong.length > 1 ? "s" : ""} (surtout les distracteurs « presque vrais »).`
+        );
+        if (weakCh.length) {
+          advice.push(
+            `Chapitre(s) à revoir en priorité : ${weakCh
+              .slice(0, 3)
+              .map(([c, n]) => `${c} ${CHAPTER_META[c]} (${n} erreur${n > 1 ? "s" : ""})`)
+              .join(", ")}.`
+          );
+        }
+        if (topTags.length) {
+          advice.push("Concentre-toi sur les tags ci-dessous — ce sont les notions les plus ratées de la session.");
+        }
+        if (pct < 65) {
+          advice.push("Fais une session courte (8–12 Q) sur un seul chapitre faible avant de remélanger.");
+        } else {
+          advice.push("Refais une session aléatoire du même pool dans 24–48 h pour consolider.");
+        }
+        advice.push("En QCM à choix multiples, vérifie chaque proposition A–E : une seule erreur fait rater la question.");
+      }
+
+      const ul = document.getElementById("advice-list");
+      ul.innerHTML = "";
+      for (const a of advice) {
+        const li = document.createElement("li");
+        li.textContent = a;
+        ul.appendChild(li);
+      }
+
+      const weakEl = document.getElementById("weak-tags");
+      weakEl.innerHTML = "";
+      for (const [t, n] of topTags) {
+        const span = document.createElement("span");
+        span.className = "chip";
+        span.textContent = `#${t} ×${n}`;
+        weakEl.appendChild(span);
+      }
+
+      document.getElementById("recap").textContent =
+        total > 0
+          ? `${score} bonne${score > 1 ? "s" : ""} · ${wrong.length} à revoir · ${total} question${total > 1 ? "s" : ""}.`
+          : "Aucune question répondue.";
+
+      show("results");
+    }
+
+    document.getElementById("btn-all").addEventListener("click", () => {
+      elChapterList.querySelectorAll("input").forEach((i) => (i.checked = true));
+      updatePoolHint();
+    });
+    document.getElementById("btn-none").addEventListener("click", () => {
+      elChapterList.querySelectorAll("input").forEach((i) => (i.checked = false));
+      updatePoolHint();
+    });
+    document.getElementById("btn-start").addEventListener("click", () => {
+      const chapters = selectedChapters();
+      const poolN = poolFrom(chapters).length;
+      const count = Math.min(Math.max(1, Number(elQcount.value) || 1), poolN);
+      elQcount.value = count;
+      startSession({ chapters, count, mode: elMode.value });
+    });
+    btnValidate.addEventListener("click", validate);
+    btnNext.addEventListener("click", () => {
+      index += 1;
+      if (index >= sessionItems.length) finishSession();
+      else renderQuestion();
+    });
+    document.getElementById("btn-abort").addEventListener("click", () => {
+      if (history.length) finishSession();
+      else show("setup");
+    });
+    document.getElementById("btn-retry").addEventListener("click", () => {
+      if (lastSettings) startSession(lastSettings);
+    });
+    document.getElementById("btn-home").addEventListener("click", () => show("setup"));
+
+    buildChapterList();
+    show("setup");
+  </script>
+</body>
+</html>
