@@ -11,6 +11,7 @@ Site minimal PASS Sorbonne + player QCM.
 | `entrainement.html` | Hub entraînement |
 | `flashcards.html` | Flashcards (placeholder decks) |
 | `suivi.html` | Suivi niveaux par chapitre (pastilles QCM) |
+| `planning.html` | Planning semaine + dernières activités |
 | `qcm-player.html` | Session QCM Anatomie |
 | `competitions.html` | Compétitions (placeholder) |
 | `planning.html` | Planning (placeholder) |

@@ -22,12 +22,234 @@
     </nav>
 
     <h1 class="page-title">Planning</h1>
-    <p class="page-sub">Organisation des révisions — à peaufiner plus tard.</p>
+    <p class="page-sub">Place tes chapitres sur la semaine. Sur téléphone : choisis un chapitre, puis touche un jour.</p>
 
     <div class="panel">
-      <h2>Cette semaine</h2>
-      <p>Placeholder. Tu pourras poser des objectifs par UE / chapitre.</p>
+      <h2>Chapitres Anatomie</h2>
+      <p class="note" style="margin:0 0 0.75rem">Clique pour sélectionner, puis un jour pour placer. Ou glisse une case sur un jour (ordinateur).</p>
+      <div class="plan-bank" id="chapter-bank"></div>
+      <p class="hint" id="sel-hint">Aucun chapitre sélectionné.</p>
+    </div>
+
+    <div class="panel">
+      <div class="plan-week-nav">
+        <button type="button" class="btn secondary" id="btn-prev">← Semaine</button>
+        <strong id="week-label">—</strong>
+        <button type="button" class="btn secondary" id="btn-next">Semaine →</button>
+      </div>
+      <div class="plan-week" id="week-grid"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Dernières activités</h2>
+      <p class="note" style="margin:0 0 0.75rem">QCM · fiche ouverte · dernier jour placé au planning.</p>
+      <div class="table-wrap">
+        <table class="suivi-table" id="activity-table">
+          <thead>
+            <tr>
+              <th>Chapitre</th>
+              <th>QCM</th>
+              <th>Fiche</th>
+              <th>Planning</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
   </div>
+
+  <script src="./js/suivi-store.js?v=3"></script>
+  <script src="./js/planning-store.js?v=1"></script>
+  <script>
+    const P = window.PASS_PLANNING;
+    const DAYS = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
+    let weekOffset = 0;
+    let selectedChapter = null;
+    let dragChapter = null;
+    let dragPlacementId = null;
+
+    function startOfWeek(offsetWeeks) {
+      const d = new Date();
+      d.setHours(12, 0, 0, 0);
+      const day = (d.getDay() + 6) % 7; // Monday=0
+      d.setDate(d.getDate() - day + offsetWeeks * 7);
+      return d;
+    }
+
+    function iso(d) {
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, "0");
+      const day = String(d.getDate()).padStart(2, "0");
+      return y + "-" + m + "-" + day;
+    }
+
+    function fmtShort(isoOrNull) {
+      if (!isoOrNull) return "—";
+      const s = String(isoOrNull);
+      const day = s.slice(0, 10);
+      if (/^\d{4}-\d{2}-\d{2}$/.test(day)) {
+        const [y, m, d] = day.split("-");
+        return d + "/" + m;
+      }
+      return "—";
+    }
+
+    function weekDates() {
+      const start = startOfWeek(weekOffset);
+      return Array.from({ length: 7 }, (_, i) => {
+        const d = new Date(start);
+        d.setDate(start.getDate() + i);
+        return d;
+      });
+    }
+
+    function renderBank() {
+      const bank = document.getElementById("chapter-bank");
+      bank.innerHTML = "";
+      for (const [ch, title] of Object.entries(P.CHAPTERS)) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "plan-chip" + (selectedChapter === ch ? " selected" : "");
+        btn.draggable = true;
+        btn.textContent = ch + " · " + title;
+        btn.dataset.chapter = ch;
+        btn.addEventListener("click", () => {
+          selectedChapter = selectedChapter === ch ? null : ch;
+          document.getElementById("sel-hint").textContent = selectedChapter
+            ? "Sélectionné : " + selectedChapter + " — touche un jour pour placer."
+            : "Aucun chapitre sélectionné.";
+          renderBank();
+        });
+        btn.addEventListener("dragstart", (e) => {
+          dragChapter = ch;
+          dragPlacementId = null;
+          e.dataTransfer.setData("text/plain", ch);
+          e.dataTransfer.effectAllowed = "copyMove";
+        });
+        bank.appendChild(btn);
+      }
+    }
+
+    function renderWeek() {
+      const dates = weekDates();
+      const label = document.getElementById("week-label");
+      label.textContent =
+        fmtShort(iso(dates[0])) + " → " + fmtShort(iso(dates[6])) + " / " + dates[0].getFullYear();
+
+      const grid = document.getElementById("week-grid");
+      grid.innerHTML = "";
+      dates.forEach((d, i) => {
+        const dateStr = iso(d);
+        const col = document.createElement("div");
+        col.className = "plan-day";
+        col.dataset.date = dateStr;
+        const head = document.createElement("div");
+        head.className = "plan-day-head";
+        head.innerHTML = "<strong>" + DAYS[i] + "</strong> <span>" + fmtShort(dateStr) + "</span>";
+        col.appendChild(head);
+
+        const list = document.createElement("div");
+        list.className = "plan-day-list";
+        P.placementsOn(dateStr).forEach((p) => {
+          const chip = document.createElement("div");
+          chip.className = "plan-item";
+          chip.draggable = true;
+          chip.innerHTML =
+            "<span>" +
+            p.chapter +
+            " " +
+            (P.CHAPTERS[p.chapter] || "") +
+            '</span><button type="button" class="plan-x" aria-label="Retirer">×</button>';
+          chip.querySelector(".plan-x").addEventListener("click", (e) => {
+            e.stopPropagation();
+            P.removePlacement(p.id);
+            renderWeek();
+            renderActivity();
+          });
+          chip.addEventListener("dragstart", (e) => {
+            dragPlacementId = p.id;
+            dragChapter = null;
+            e.dataTransfer.setData("text/plain", p.id);
+            e.dataTransfer.effectAllowed = "move";
+          });
+          list.appendChild(chip);
+        });
+        col.appendChild(list);
+
+        col.addEventListener("click", () => {
+          if (!selectedChapter) return;
+          P.placeChapter(selectedChapter, dateStr);
+          selectedChapter = null;
+          document.getElementById("sel-hint").textContent = "Aucun chapitre sélectionné.";
+          renderBank();
+          renderWeek();
+          renderActivity();
+        });
+        col.addEventListener("dragover", (e) => {
+          e.preventDefault();
+          col.classList.add("drag-over");
+        });
+        col.addEventListener("dragleave", () => col.classList.remove("drag-over"));
+        col.addEventListener("drop", (e) => {
+          e.preventDefault();
+          col.classList.remove("drag-over");
+          if (dragPlacementId) {
+            P.movePlacement(dragPlacementId, dateStr);
+          } else if (dragChapter || selectedChapter) {
+            P.placeChapter(dragChapter || selectedChapter, dateStr);
+          }
+          dragChapter = null;
+          dragPlacementId = null;
+          selectedChapter = null;
+          document.getElementById("sel-hint").textContent = "Aucun chapitre sélectionné.";
+          renderBank();
+          renderWeek();
+          renderActivity();
+        });
+
+        grid.appendChild(col);
+      });
+    }
+
+    function renderActivity() {
+      const tbody = document.querySelector("#activity-table tbody");
+      tbody.innerHTML = "";
+      const all = P.getAllActivity();
+      for (const [ch, title] of Object.entries(P.CHAPTERS)) {
+        const a = all[ch] || {};
+        const tr = document.createElement("tr");
+        tr.innerHTML =
+          "<td><strong>" +
+          ch +
+          "</strong> — " +
+          title +
+          "</td>" +
+          "<td>" +
+          fmtShort(a.lastQcmAt) +
+          "</td>" +
+          "<td>" +
+          fmtShort(a.lastFicheAt) +
+          "</td>" +
+          "<td>" +
+          fmtShort(a.lastPlanningAt) +
+          "</td>";
+        tbody.appendChild(tr);
+      }
+    }
+
+    document.getElementById("btn-prev").addEventListener("click", () => {
+      weekOffset -= 1;
+      renderWeek();
+    });
+    document.getElementById("btn-next").addEventListener("click", () => {
+      weekOffset += 1;
+      renderWeek();
+    });
+
+    renderBank();
+    renderWeek();
+    renderActivity();
+  </script>
 </body>
 </html>

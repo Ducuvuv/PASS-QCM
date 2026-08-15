@@ -31,6 +31,7 @@
       lastScore20: null,
       lastLevel: "none",
       updatedAt: null,
+      lastQcmAt: null,
     };
   }
 
@@ -145,6 +146,7 @@
         lastScore20,
         lastLevel,
         updatedAt: now,
+        lastQcmAt: now,
       };
     }
     save(data);

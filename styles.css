@@ -277,3 +277,105 @@ a { color: var(--accent); }
   color: var(--muted);
 }
 
+.hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.65rem 0 0;
+}
+
+.plan-bank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.plan-chip {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  border-radius: 999px;
+  padding: 0.4rem 0.7rem;
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: grab;
+}
+
+.plan-chip.selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.plan-week-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.plan-week {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.4rem;
+}
+
+@media (max-width: 720px) {
+  .plan-week {
+    grid-template-columns: 1fr;
+  }
+}
+
+.plan-day {
+  min-height: 6.5rem;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  background: #fff;
+  padding: 0.45rem;
+  cursor: pointer;
+}
+
+.plan-day.drag-over {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.plan-day-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.plan-day-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.plan-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+  background: var(--accent-soft);
+  border: 1px solid #b7d4d1;
+  border-radius: 8px;
+  padding: 0.3rem 0.4rem;
+  font-size: 0.78rem;
+  cursor: grab;
+}
+
+.plan-x {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  cursor: pointer;
+  padding: 0 0.15rem;
+  line-height: 1;
+}
+
+

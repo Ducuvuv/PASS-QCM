@@ -106,4 +106,23 @@
   document.querySelectorAll(".flash-card").forEach((card) => {
     card.addEventListener("click", () => card.classList.toggle("flipped"));
   });
+
+  // Suivi activité : ouverture de fiche (chXX.html)
+  (function trackFicheOpen() {
+    const m = (location.pathname || "").match(/ch(\d{2})\.html/i);
+    if (!m) return;
+    const ch = m[1];
+    function go() {
+      if (window.PASS_PLANNING && window.PASS_PLANNING.recordFicheOpen) {
+        window.PASS_PLANNING.recordFicheOpen(ch);
+      }
+    }
+    if (window.PASS_PLANNING) go();
+    else {
+      const s = document.createElement("script");
+      s.src = "../../js/planning-store.js?v=1";
+      s.onload = go;
+      document.head.appendChild(s);
+    }
+  })();
 })();
