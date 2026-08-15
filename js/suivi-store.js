@@ -18,6 +18,9 @@
     "11": "Membre inférieur",
   };
 
+  // Ordre fixe : "10"/"11" sont des clés numériques JS et passeraient sinon avant "01"–"09"
+  const CHAPTER_ORDER = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"];
+
   function emptyRow() {
     return {
       n: 0,
@@ -168,6 +171,7 @@
     KEY,
     MIN_Q,
     CHAPTERS,
+    CHAPTER_ORDER,
     load,
     recordSession,
     getAnatomie,

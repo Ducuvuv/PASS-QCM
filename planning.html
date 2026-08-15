@@ -59,8 +59,8 @@
     </div>
   </div>
 
-  <script src="./js/suivi-store.js?v=3"></script>
-  <script src="./js/planning-store.js?v=1"></script>
+  <script src="./js/suivi-store.js?v=4"></script>
+  <script src="./js/planning-store.js?v=2"></script>
   <script>
     const P = window.PASS_PLANNING;
     const DAYS = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
@@ -107,7 +107,8 @@
     function renderBank() {
       const bank = document.getElementById("chapter-bank");
       bank.innerHTML = "";
-      for (const [ch, title] of Object.entries(P.CHAPTERS)) {
+      for (const ch of P.CHAPTER_ORDER) {
+        const title = P.CHAPTERS[ch];
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "plan-chip" + (selectedChapter === ch ? " selected" : "");
@@ -216,7 +217,8 @@
       const tbody = document.querySelector("#activity-table tbody");
       tbody.innerHTML = "";
       const all = P.getAllActivity();
-      for (const [ch, title] of Object.entries(P.CHAPTERS)) {
+      for (const ch of P.CHAPTER_ORDER) {
+        const title = P.CHAPTERS[ch];
         const a = all[ch] || {};
         const tr = document.createElement("tr");
         tr.innerHTML =

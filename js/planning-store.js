@@ -16,6 +16,8 @@
     "11": "Membre inférieur",
   };
 
+  const CHAPTER_ORDER = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"];
+
   function load() {
     try {
       const raw = localStorage.getItem(KEY);
@@ -115,13 +117,14 @@
 
   function getAllActivity() {
     const out = {};
-    for (const ch of Object.keys(CHAPTERS)) out[ch] = getActivity(ch);
+    for (const ch of CHAPTER_ORDER) out[ch] = getActivity(ch);
     return out;
   }
 
   global.PASS_PLANNING = {
     KEY,
     CHAPTERS,
+    CHAPTER_ORDER,
     load,
     save,
     todayISO,

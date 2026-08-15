@@ -65,7 +65,7 @@
     </div>
   </div>
 
-  <script src="./js/suivi-store.js?v=3"></script>
+  <script src="./js/suivi-store.js?v=4"></script>
   <script>
     const S = window.PASS_SUIVI;
     const tbody = document.querySelector("#suivi-table tbody");
@@ -79,7 +79,8 @@
     function render() {
       const data = S.getAnatomie();
       tbody.innerHTML = "";
-      for (const [ch, title] of Object.entries(S.CHAPTERS)) {
+      for (const ch of S.CHAPTER_ORDER) {
+        const title = S.CHAPTERS[ch];
         const row = data[ch];
         const lastLevel = row ? row.lastLevel || "none" : "none";
         const cumulLevel = row ? row.level || "none" : "none";
