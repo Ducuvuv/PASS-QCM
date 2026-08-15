@@ -5,6 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Flashcards — PASS Sorbonne</title>
   <link rel="stylesheet" href="./styles.css" />
+  <style>
+    .fc-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.15rem;
+      min-height: 11rem;
+      cursor: pointer;
+      margin-bottom: 0.75rem;
+    }
+    .fc-card .meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.5rem; }
+    .fc-card .front { font-size: 1.05rem; font-weight: 600; }
+    .fc-card .back { display: none; margin-top: 0.75rem; color: var(--muted); font-size: 0.98rem; }
+    .fc-card.flipped .back { display: block; }
+    .fc-card.flipped .front { font-weight: 650; }
+    .prio-btns { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.35rem; }
+    .prio-btn {
+      min-width: 3.5rem;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 0.5rem 0.95rem;
+      font: inherit;
+      font-weight: 650;
+      cursor: pointer;
+    }
+    .prio-btn[aria-pressed="true"] {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: #fff;
+    }
+    .prio-help { list-style: none; margin: 0.75rem 0 0; padding: 0; font-size: 0.88rem; color: var(--muted); }
+    .prio-help li { margin-bottom: 0.3rem; }
+    .prio-help strong { color: var(--ink); }
+    .chapters { display: grid; gap: 0.35rem; }
+    .chapters label { display: flex; gap: 0.5rem; align-items: flex-start; cursor: pointer; font-size: 0.92rem; }
+    @media (min-width: 520px) { .chapters { grid-template-columns: 1fr 1fr; } }
+  </style>
 </head>
 <body>
   <div class="wrap">
@@ -21,21 +60,205 @@
       </ul>
     </nav>
 
-    <h1 class="page-title">Flashcards</h1>
-    <p class="page-sub">Révision active — decks à remplir plus tard (espacement / mémoire ensuite).</p>
+    <section id="setup">
+      <h1 class="page-title">Flashcards</h1>
+      <p class="page-sub">Deck Anatomie — pour l’instant : chapitre 01. Les autres arrivent un par un.</p>
 
-    <div class="panel">
-      <h2>Anatomie (UE5)</h2>
-      <p>Placeholder. Tu ajouteras les decks chapitre par chapitre ici.</p>
-      <ul>
-        <li>01 → 11 — à venir</li>
-      </ul>
-    </div>
+      <div class="panel">
+        <h2>Chapitre</h2>
+        <div class="chapters" id="chapter-list"></div>
+      </div>
 
-    <div class="panel">
-      <h2>Autres UE</h2>
-      <p>Placeholder — à ajouter quand tu auras le contenu.</p>
-    </div>
+      <div class="panel">
+        <h2>Priorité</h2>
+        <div class="prio-btns" id="priority-list" role="group" aria-label="Priorités">
+          <button type="button" class="prio-btn" data-prio="P1" aria-pressed="true">P1</button>
+          <button type="button" class="prio-btn" data-prio="P2" aria-pressed="true">P2</button>
+          <button type="button" class="prio-btn" data-prio="P3" aria-pressed="true">P3</button>
+        </div>
+        <ul class="prio-help">
+          <li><strong>P1</strong> — priorité absolue</li>
+          <li><strong>P2</strong> — bien connaître</li>
+          <li><strong>P3</strong> — lecture attentive</li>
+        </ul>
+        <p class="note" id="pool-hint" style="margin-top:0.75rem">—</p>
+        <div class="actions">
+          <button type="button" class="btn" id="btn-start">Commencer</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="play" class="hidden">
+      <p class="note" style="margin-top:0"><a href="#" id="btn-back">← Réglages</a></p>
+      <p class="note" id="progress">—</p>
+      <div class="fc-card" id="card" tabindex="0">
+        <div class="meta" id="card-meta">Touche pour retourner</div>
+        <div class="front" id="card-front"></div>
+        <div class="back" id="card-back"></div>
+      </div>
+      <div class="actions">
+        <button type="button" class="btn secondary" id="btn-prev">Précédent</button>
+        <button type="button" class="btn" id="btn-flip">Retourner</button>
+        <button type="button" class="btn secondary" id="btn-next">Suivant</button>
+      </div>
+    </section>
   </div>
+
+  <script src="./data/flashcards.js?v=ch01"></script>
+  <script>
+    const CHAPTER_ORDER = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"];
+    const CHAPTER_META = {
+      "01": "Introduction",
+      "02": "Système nerveux",
+      "03": "Cardio-circulatoire",
+      "04": "Appareil respiratoire",
+      "05": "Organes des sens",
+      "06": "Rachis",
+      "07": "Parois du tronc",
+      "08": "Appareil digestif",
+      "09": "Génito-urinaire",
+      "10": "Membre supérieur",
+      "11": "Membre inférieur",
+    };
+    const decks = window.PASS_FLASH || {};
+    const elSetup = document.getElementById("setup");
+    const elPlay = document.getElementById("play");
+    const elChapterList = document.getElementById("chapter-list");
+    const elPriorityList = document.getElementById("priority-list");
+    const elHint = document.getElementById("pool-hint");
+    const elCard = document.getElementById("card");
+    const elFront = document.getElementById("card-front");
+    const elBack = document.getElementById("card-back");
+    const elMeta = document.getElementById("card-meta");
+    const elProgress = document.getElementById("progress");
+
+    let session = [];
+    let index = 0;
+
+    function availableChapters() {
+      return CHAPTER_ORDER.filter((ch) => (decks[ch] || []).length);
+    }
+
+    function selectedChapters() {
+      return [...elChapterList.querySelectorAll("input:checked")].map((i) => i.value);
+    }
+
+    function selectedPriorities() {
+      return [...elPriorityList.querySelectorAll(".prio-btn[aria-pressed='true']")].map(
+        (b) => b.getAttribute("data-prio")
+      );
+    }
+
+    function poolFrom(chs, prios) {
+      const allow = new Set(prios.length ? prios : ["P1", "P2", "P3"]);
+      const pool = [];
+      for (const ch of chs) {
+        for (const card of decks[ch] || []) {
+          if (allow.has(card.priority)) pool.push(card);
+        }
+      }
+      return pool;
+    }
+
+    function updateHint() {
+      const chs = selectedChapters();
+      const prios = selectedPriorities();
+      const n = poolFrom(chs, prios).length;
+      if (!chs.length) elHint.textContent = "Coche au moins un chapitre disponible.";
+      else if (!prios.length) elHint.textContent = "Active au moins une priorité.";
+      else elHint.textContent = n + " carte" + (n > 1 ? "s" : "") + " · " + prios.join(" + ") + ".";
+      document.getElementById("btn-start").disabled = !chs.length || !prios.length || n === 0;
+    }
+
+    function buildChapters() {
+      elChapterList.innerHTML = "";
+      const avail = availableChapters();
+      for (const ch of CHAPTER_ORDER) {
+        const n = (decks[ch] || []).length;
+        const label = document.createElement("label");
+        if (n) {
+          label.innerHTML =
+            '<input type="checkbox" value="' +
+            ch +
+            '" checked /> <span>' +
+            ch +
+            " — " +
+            CHAPTER_META[ch] +
+            ' <span class="note">(' +
+            n +
+            ")</span></span>";
+        } else {
+          label.innerHTML =
+            '<input type="checkbox" value="' +
+            ch +
+            '" disabled /> <span>' +
+            ch +
+            " — " +
+            CHAPTER_META[ch] +
+            ' <span class="note">(bientôt)</span></span>';
+        }
+        elChapterList.appendChild(label);
+      }
+      if (!avail.length) elHint.textContent = "Aucun deck pour l’instant.";
+      elChapterList.addEventListener("change", updateHint);
+      elPriorityList.querySelectorAll(".prio-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const on = btn.getAttribute("aria-pressed") !== "true";
+          btn.setAttribute("aria-pressed", on ? "true" : "false");
+          updateHint();
+        });
+      });
+      updateHint();
+    }
+
+    function show(view) {
+      elSetup.classList.toggle("hidden", view !== "setup");
+      elPlay.classList.toggle("hidden", view !== "play");
+    }
+
+    function renderCard() {
+      const card = session[index];
+      if (!card) return;
+      elCard.classList.remove("flipped");
+      elFront.textContent = card.front;
+      elBack.textContent = card.back;
+      elMeta.textContent = card.priority + " · ch." + card.chapter + " · touche pour retourner";
+      elProgress.textContent = index + 1 + " / " + session.length;
+      document.getElementById("btn-prev").disabled = index === 0;
+      document.getElementById("btn-next").disabled = index >= session.length - 1;
+    }
+
+    function flip() {
+      elCard.classList.toggle("flipped");
+    }
+
+    document.getElementById("btn-start").addEventListener("click", () => {
+      session = poolFrom(selectedChapters(), selectedPriorities());
+      index = 0;
+      show("play");
+      renderCard();
+    });
+    document.getElementById("btn-back").addEventListener("click", (e) => {
+      e.preventDefault();
+      show("setup");
+    });
+    document.getElementById("btn-flip").addEventListener("click", flip);
+    elCard.addEventListener("click", flip);
+    document.getElementById("btn-next").addEventListener("click", () => {
+      if (index < session.length - 1) {
+        index += 1;
+        renderCard();
+      }
+    });
+    document.getElementById("btn-prev").addEventListener("click", () => {
+      if (index > 0) {
+        index -= 1;
+        renderCard();
+      }
+    });
+
+    buildChapters();
+    show("setup");
+  </script>
 </body>
 </html>
