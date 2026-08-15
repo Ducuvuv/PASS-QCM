@@ -196,7 +196,7 @@
     <!-- SETUP -->
     <section id="setup">
       <h1>Test QCM — Anatomie</h1>
-      <p class="sub">Choisis un ou plusieurs chapitres, le nombre de questions, puis lance la session.</p>
+      <p class="sub">Choisis chapitres, priorités P1–P3, nombre de questions, puis lance la session.</p>
 
       <div class="card">
         <h2>Chapitres</h2>
@@ -205,6 +205,20 @@
           <button type="button" class="secondary" id="btn-none">Aucun</button>
         </div>
         <div class="chapters" id="chapter-list"></div>
+      </div>
+
+      <div class="card">
+        <h2>Priorité</h2>
+        <div class="toolbar">
+          <button type="button" class="secondary" id="btn-prio-all">P1–P3</button>
+          <button type="button" class="secondary" id="btn-prio-p1">P1 seul</button>
+        </div>
+        <div class="chapters" id="priority-list">
+          <label><input type="checkbox" value="P1" checked /> <span>P1 — priorité absolue</span></label>
+          <label><input type="checkbox" value="P2" checked /> <span>P2 — bien connaître</span></label>
+          <label><input type="checkbox" value="P3" checked /> <span>P3 — lecture attentive</span></label>
+        </div>
+        <p class="hint">Filtre selon les sections du polycopié (via le lien de cours de chaque QCM).</p>
       </div>
 
       <div class="card">
@@ -295,6 +309,7 @@
     const elQuiz = document.getElementById("quiz");
     const elResults = document.getElementById("results");
     const elChapterList = document.getElementById("chapter-list");
+    const elPriorityList = document.getElementById("priority-list");
     const elQcount = document.getElementById("qcount");
     const elMode = document.getElementById("mode");
     const elPoolHint = document.getElementById("pool-hint");
@@ -324,10 +339,30 @@
       );
     }
 
-    function poolFrom(chapters) {
+    function selectedPriorities() {
+      return [...elPriorityList.querySelectorAll('input[type="checkbox"]:checked')].map(
+        (i) => i.value
+      );
+    }
+
+    function itemPriority(item) {
+      const p = (item && item.priority) || "";
+      if (p === "P1" || p === "P2" || p === "P3") return p;
+      const tags = (item && item.tags) || [];
+      for (const t of tags) {
+        const u = String(t).toUpperCase();
+        if (u === "P1" || u === "P2" || u === "P3") return u;
+      }
+      return "P2";
+    }
+
+    function poolFrom(chapters, priorities) {
+      const allow = new Set(priorities && priorities.length ? priorities : ["P1", "P2", "P3"]);
       const pool = [];
       for (const ch of chapters) {
-        for (const item of lots[ch] || []) pool.push(item);
+        for (const item of lots[ch] || []) {
+          if (allow.has(itemPriority(item))) pool.push(item);
+        }
       }
       return pool;
     }
@@ -343,13 +378,18 @@
 
     function updatePoolHint() {
       const chs = selectedChapters();
-      const n = poolFrom(chs).length;
-      elPoolHint.textContent = chs.length
-        ? `${n} question${n > 1 ? "s" : ""} disponibles dans la sélection.`
-        : "Coche au moins un chapitre.";
+      const prios = selectedPriorities();
+      const n = poolFrom(chs, prios).length;
+      if (!chs.length) {
+        elPoolHint.textContent = "Coche au moins un chapitre.";
+      } else if (!prios.length) {
+        elPoolHint.textContent = "Coche au moins une priorité (P1 / P2 / P3).";
+      } else {
+        elPoolHint.textContent = `${n} question${n > 1 ? "s" : ""} · chapitres sélectionnés · ${prios.join(" + ")}.`;
+      }
       elQcount.max = Math.max(1, n || 1);
       if (Number(elQcount.value) > n && n > 0) elQcount.value = n;
-      document.getElementById("btn-start").disabled = !chs.length || n === 0;
+      document.getElementById("btn-start").disabled = !chs.length || !prios.length || n === 0;
     }
 
     function buildChapterList() {
@@ -360,6 +400,7 @@
         elChapterList.appendChild(label);
       }
       elChapterList.addEventListener("change", updatePoolHint);
+      elPriorityList.addEventListener("change", updatePoolHint);
       updatePoolHint();
     }
 
@@ -375,7 +416,7 @@
 
     function startSession(settings) {
       lastSettings = settings;
-      const pool = poolFrom(settings.chapters);
+      const pool = poolFrom(settings.chapters, settings.priorities);
       let picked =
         settings.mode === "order" ? [...pool] : shuffle(pool);
       const n = Math.min(settings.count, picked.length);
@@ -400,7 +441,7 @@
       elItemScore.textContent = "";
       btnValidate.disabled = false;
       btnNext.disabled = true;
-      elProgress.textContent = `${index + 1} / ${sessionItems.length} · ch.${item.chapter} · ${item.id}`;
+      elProgress.textContent = `${index + 1} / ${sessionItems.length} · ch.${item.chapter} · ${itemPriority(item)} · ${item.id}`;
       elStem.textContent = item.stem;
       elTags.textContent = (item.tags || []).map((t) => `#${t}`).join("  ");
 
@@ -469,7 +510,7 @@
       document.getElementById("final-label").textContent = `${pct} % de réussite`;
       document.getElementById("results-sub").textContent =
         lastSettings && lastSettings.chapters.length
-          ? `Chapitres : ${lastSettings.chapters.map((c) => c + " " + CHAPTER_META[c]).join(" · ")}`
+          ? `Chapitres : ${lastSettings.chapters.map((c) => c + " " + CHAPTER_META[c]).join(" · ")} · Priorité : ${(lastSettings.priorities || []).join(", ") || "—"}`
           : "";
 
       const feedback = document.getElementById("feedback-text");
@@ -559,12 +600,23 @@
       elChapterList.querySelectorAll("input").forEach((i) => (i.checked = false));
       updatePoolHint();
     });
+    document.getElementById("btn-prio-all").addEventListener("click", () => {
+      elPriorityList.querySelectorAll("input").forEach((i) => (i.checked = true));
+      updatePoolHint();
+    });
+    document.getElementById("btn-prio-p1").addEventListener("click", () => {
+      elPriorityList.querySelectorAll("input").forEach((i) => {
+        i.checked = i.value === "P1";
+      });
+      updatePoolHint();
+    });
     document.getElementById("btn-start").addEventListener("click", () => {
       const chapters = selectedChapters();
-      const poolN = poolFrom(chapters).length;
+      const priorities = selectedPriorities();
+      const poolN = poolFrom(chapters, priorities).length;
       const count = Math.min(Math.max(1, Number(elQcount.value) || 1), poolN);
       elQcount.value = count;
-      startSession({ chapters, count, mode: elMode.value });
+      startSession({ chapters, priorities, count, mode: elMode.value });
     });
     btnValidate.addEventListener("click", validate);
     btnNext.addEventListener("click", () => {
