@@ -19,9 +19,8 @@
     .fc-card .front { font-size: 1.05rem; font-weight: 600; }
     .fc-card .back { display: none; margin-top: 0.75rem; color: var(--muted); font-size: 0.98rem; }
     .fc-card.flipped .back { display: block; }
-    .fc-card.flipped .front { font-weight: 650; }
-    .prio-btns { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.35rem; }
-    .prio-btn {
+    .prio-btns, .kind-btns { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.35rem; }
+    .prio-btn, .kind-btn {
       min-width: 3.5rem;
       border: 1px solid var(--line);
       background: #fff;
@@ -32,10 +31,15 @@
       font-weight: 650;
       cursor: pointer;
     }
-    .prio-btn[aria-pressed="true"] {
+    .prio-btn[aria-pressed="true"],
+    .kind-btn[aria-pressed="true"] {
       border-color: var(--ink);
       background: var(--ink);
       color: #fff;
+    }
+    .kind-btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
     }
     .prio-help { list-style: none; margin: 0.75rem 0 0; padding: 0; font-size: 0.88rem; color: var(--muted); }
     .prio-help li { margin-bottom: 0.3rem; }
@@ -62,7 +66,7 @@
 
     <section id="setup">
       <h1 class="page-title">Flashcards</h1>
-      <p class="page-sub">Deck Anatomie — pour l’instant : chapitre 01. Les autres arrivent un par un.</p>
+      <p class="page-sub">1 fichier = 1 chapitre. Dispo : ch.01–02. Suite une par une.</p>
 
       <div class="panel">
         <h2>Chapitre</h2>
@@ -81,7 +85,16 @@
           <li><strong>P2</strong> — bien connaître</li>
           <li><strong>P3</strong> — lecture attentive</li>
         </ul>
-        <p class="note" id="pool-hint" style="margin-top:0.75rem">—</p>
+      </div>
+
+      <div class="panel">
+        <h2>Type</h2>
+        <div class="kind-btns" id="kind-list" role="group" aria-label="Types">
+          <button type="button" class="kind-btn" data-kind="text" aria-pressed="true">Texte</button>
+          <button type="button" class="kind-btn" data-kind="schema" aria-pressed="false" title="Bientôt : flashcards schémas">Schémas</button>
+        </div>
+        <p class="note" style="margin-top:0.75rem">Filtre « Schémas » prêt ; les cartes schéma arriveront plus tard.</p>
+        <p class="note" id="pool-hint">—</p>
         <div class="actions">
           <button type="button" class="btn" id="btn-start">Commencer</button>
         </div>
@@ -104,7 +117,9 @@
     </section>
   </div>
 
-  <script src="./data/flashcards.js?v=ch01"></script>
+  <!-- Decks : ajouter une ligne script par chapitre (limite les bugs) -->
+  <script src="./data/flash/ch01.js?v=2"></script>
+  <script src="./data/flash/ch02.js?v=1"></script>
   <script>
     const CHAPTER_ORDER = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"];
     const CHAPTER_META = {
@@ -120,11 +135,13 @@
       "10": "Membre supérieur",
       "11": "Membre inférieur",
     };
+
     const decks = window.PASS_FLASH || {};
     const elSetup = document.getElementById("setup");
     const elPlay = document.getElementById("play");
     const elChapterList = document.getElementById("chapter-list");
     const elPriorityList = document.getElementById("priority-list");
+    const elKindList = document.getElementById("kind-list");
     const elHint = document.getElementById("pool-hint");
     const elCard = document.getElementById("card");
     const elFront = document.getElementById("card-front");
@@ -135,26 +152,28 @@
     let session = [];
     let index = 0;
 
-    function availableChapters() {
-      return CHAPTER_ORDER.filter((ch) => (decks[ch] || []).length);
-    }
-
     function selectedChapters() {
       return [...elChapterList.querySelectorAll("input:checked")].map((i) => i.value);
     }
-
     function selectedPriorities() {
-      return [...elPriorityList.querySelectorAll(".prio-btn[aria-pressed='true']")].map(
-        (b) => b.getAttribute("data-prio")
+      return [...elPriorityList.querySelectorAll(".prio-btn[aria-pressed='true']")].map((b) =>
+        b.getAttribute("data-prio")
+      );
+    }
+    function selectedKinds() {
+      return [...elKindList.querySelectorAll(".kind-btn[aria-pressed='true']")].map((b) =>
+        b.getAttribute("data-kind")
       );
     }
 
-    function poolFrom(chs, prios) {
-      const allow = new Set(prios.length ? prios : ["P1", "P2", "P3"]);
+    function poolFrom(chs, prios, kinds) {
+      const allowP = new Set(prios.length ? prios : ["P1", "P2", "P3"]);
+      const allowK = new Set(kinds.length ? kinds : ["text"]);
       const pool = [];
       for (const ch of chs) {
         for (const card of decks[ch] || []) {
-          if (allow.has(card.priority)) pool.push(card);
+          const kind = card.kind || "text";
+          if (allowP.has(card.priority) && allowK.has(kind)) pool.push(card);
         }
       }
       return pool;
@@ -163,51 +182,45 @@
     function updateHint() {
       const chs = selectedChapters();
       const prios = selectedPriorities();
-      const n = poolFrom(chs, prios).length;
+      const kinds = selectedKinds();
+      const n = poolFrom(chs, prios, kinds).length;
       if (!chs.length) elHint.textContent = "Coche au moins un chapitre disponible.";
       else if (!prios.length) elHint.textContent = "Active au moins une priorité.";
-      else elHint.textContent = n + " carte" + (n > 1 ? "s" : "") + " · " + prios.join(" + ") + ".";
-      document.getElementById("btn-start").disabled = !chs.length || !prios.length || n === 0;
+      else if (!kinds.length) elHint.textContent = "Active Texte et/ou Schémas.";
+      else elHint.textContent = n + " carte" + (n > 1 ? "s" : "") + " · " + prios.join("+") + " · " + kinds.join("+") + ".";
+      document.getElementById("btn-start").disabled = !chs.length || !prios.length || !kinds.length || n === 0;
     }
 
-    function buildChapters() {
-      elChapterList.innerHTML = "";
-      const avail = availableChapters();
-      for (const ch of CHAPTER_ORDER) {
-        const n = (decks[ch] || []).length;
-        const label = document.createElement("label");
-        if (n) {
-          label.innerHTML =
-            '<input type="checkbox" value="' +
-            ch +
-            '" checked /> <span>' +
-            ch +
-            " — " +
-            CHAPTER_META[ch] +
-            ' <span class="note">(' +
-            n +
-            ")</span></span>";
-        } else {
-          label.innerHTML =
-            '<input type="checkbox" value="' +
-            ch +
-            '" disabled /> <span>' +
-            ch +
-            " — " +
-            CHAPTER_META[ch] +
-            ' <span class="note">(bientôt)</span></span>';
-        }
-        elChapterList.appendChild(label);
-      }
-      if (!avail.length) elHint.textContent = "Aucun deck pour l’instant.";
-      elChapterList.addEventListener("change", updateHint);
-      elPriorityList.querySelectorAll(".prio-btn").forEach((btn) => {
+    function wireToggleGroup(root, sel) {
+      root.querySelectorAll(sel).forEach((btn) => {
         btn.addEventListener("click", () => {
+          if (btn.disabled) return;
           const on = btn.getAttribute("aria-pressed") !== "true";
           btn.setAttribute("aria-pressed", on ? "true" : "false");
           updateHint();
         });
       });
+    }
+
+    function buildChapters() {
+      elChapterList.innerHTML = "";
+      for (const ch of CHAPTER_ORDER) {
+        const n = (decks[ch] || []).length;
+        const label = document.createElement("label");
+        if (n) {
+          label.innerHTML =
+            '<input type="checkbox" value="' + ch + '" checked /> <span>' + ch + " — " + CHAPTER_META[ch] +
+            ' <span class="note">(' + n + ")</span></span>";
+        } else {
+          label.innerHTML =
+            '<input type="checkbox" value="' + ch + '" disabled /> <span>' + ch + " — " + CHAPTER_META[ch] +
+            ' <span class="note">(bientôt)</span></span>';
+        }
+        elChapterList.appendChild(label);
+      }
+      elChapterList.addEventListener("change", updateHint);
+      wireToggleGroup(elPriorityList, ".prio-btn");
+      wireToggleGroup(elKindList, ".kind-btn");
       updateHint();
     }
 
@@ -222,18 +235,16 @@
       elCard.classList.remove("flipped");
       elFront.textContent = card.front;
       elBack.textContent = card.back;
-      elMeta.textContent = card.priority + " · ch." + card.chapter + " · touche pour retourner";
+      elMeta.textContent = card.priority + " · " + (card.kind || "text") + " · ch." + card.chapter + " · touche pour retourner";
       elProgress.textContent = index + 1 + " / " + session.length;
       document.getElementById("btn-prev").disabled = index === 0;
       document.getElementById("btn-next").disabled = index >= session.length - 1;
     }
 
-    function flip() {
-      elCard.classList.toggle("flipped");
-    }
+    function flip() { elCard.classList.toggle("flipped"); }
 
     document.getElementById("btn-start").addEventListener("click", () => {
-      session = poolFrom(selectedChapters(), selectedPriorities());
+      session = poolFrom(selectedChapters(), selectedPriorities(), selectedKinds());
       index = 0;
       show("play");
       renderCard();
@@ -245,16 +256,10 @@
     document.getElementById("btn-flip").addEventListener("click", flip);
     elCard.addEventListener("click", flip);
     document.getElementById("btn-next").addEventListener("click", () => {
-      if (index < session.length - 1) {
-        index += 1;
-        renderCard();
-      }
+      if (index < session.length - 1) { index += 1; renderCard(); }
     });
     document.getElementById("btn-prev").addEventListener("click", () => {
-      if (index > 0) {
-        index -= 1;
-        renderCard();
-      }
+      if (index > 0) { index -= 1; renderCard(); }
     });
 
     buildChapters();

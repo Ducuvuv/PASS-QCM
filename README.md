@@ -12,7 +12,7 @@ Site minimal PASS Sorbonne + player QCM.
 | `flashcards.html` | Flashcards (placeholder decks) |
 | `suivi.html` | Suivi niveaux par chapitre (pastilles QCM) |
 | `planning.html` | Planning semaine + dernières activités |
-| `qcm-player.html` | Session QCM Anatomie |
+| `data/flash/chXX.js` | Flashcards par chapitre (1 fichier = 1 ch.) |
 | `competitions.html` | Compétitions (placeholder) |
 | `planning.html` | Planning (placeholder) |
 | `conseils.html` | Conseils / FAQ |
