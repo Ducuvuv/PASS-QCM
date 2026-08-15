@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Labo style — fiches (factice)</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="./fiche.css" />
+</head>
+<body>
+  <header class="fiche-hud">
+    <div>
+      <a class="site-nav" href="../matiere.html">← Matière</a>
+      <div class="title">Labo style · document factice</div>
+    </div>
+    <div class="hud-tools">
+      <div class="hud-chip"><span id="chrono">00:00</span> <button type="button" id="btn-chrono">Start</button></div>
+      <div class="hud-chip"><button type="button" id="btn-focus" aria-pressed="false">Focus</button></div>
+    </div>
+  </header>
+
+  <main class="wrap fiche-main">
+    <p class="lead">
+      Page <strong>factice</strong> pour peaufiner le look : typo, couleurs, cartes, callouts, trous, flashcards.
+      Le fond réel se change dans <code>fiche.css</code> (variables <code>:root</code>).
+    </p>
+
+    <div class="legend">
+      <span class="tag p1">P1</span>
+      <span class="tag p2">P2</span>
+      <span class="tag p3">P3</span>
+      <span class="tag">⭐ fréquence</span>
+    </div>
+
+    <nav class="toc fiche-aside" aria-label="Sommaire">
+      <a href="#bloc-a">A. Bloc dense <span class="tag p1">P1</span></a>
+      <a href="#bloc-b">B. Callouts + schéma <span class="tag p2">P2</span></a>
+      <a href="#bloc-c">C. Trous + flashcards <span class="tag p3">P3</span></a>
+    </nav>
+
+    <section class="point" id="bloc-a">
+      <h2>A. Titre de point majeur <span class="tag p1">P1</span></h2>
+      <p>
+        Lorem anatomica : le <strong>corpus fictivum</strong> repose sur l’observation, la dissection
+        virtuelle et l’imagerie. Phrase longue pour juger l’interligne, la largeur de colonne
+        et le contraste encre / fond.
+      </p>
+      <h3>Sous-titre avec étoiles <span class="tag">⭐⭐</span></h3>
+      <ul>
+        <li>Item court — <em>terminologia</em> inventée.</li>
+        <li>Item moyen avec notion mise en <strong>gras</strong> et une pastille <span class="tag">⭐</span>.</li>
+        <li>Item plus long : medial / lateral / proximal / distal — juste pour voir comment ça wrappe sur téléphone.</li>
+      </ul>
+    </section>
+
+    <section class="point" id="bloc-b">
+      <h2>B. Callouts et emplacement schéma <span class="tag p2">P2</span></h2>
+      <div class="callout hot">
+        <strong>Souvent tombé</strong>
+        Texte factice : cette zone doit sauter à l’œil sans crier trop fort.
+      </div>
+      <div class="callout trap">
+        <strong>Attention / piège</strong>
+        Ne pas confondre <em>alpha</em> et <em>bêta</em> — phrasing volontairement un peu long pour tester le wrap.
+      </div>
+      <div class="schema-slot">Schéma — emplacement réservé (labels plus tard)</div>
+      <p>Paragraphe de suite : couleurs de fond, filets, rayons des coins — tout se lit ici d’un coup.</p>
+    </section>
+
+    <section class="point" id="bloc-c">
+      <h2>C. Texte à trous et flashcards <span class="tag p3">P3</span></h2>
+      <h3>Texte à trous</h3>
+      <div class="cloze-block" data-cloze='[["factice"],["style"],["focus"]]'>
+        <div class="cloze-item">
+          <p>
+            Ce document est <input class="blank" /> : on peaufine le
+            <input class="blank" />. Le mode <input class="blank" /> masque la nav.
+          </p>
+          <div class="cloze-actions">
+            <button type="button" data-check>Vérifier</button>
+            <button type="button" class="secondary" data-reveal>Révéler</button>
+          </div>
+          <div class="cloze-feedback"></div>
+        </div>
+      </div>
+
+      <h3>Flashcards</h3>
+      <div class="flash">
+        <div class="flash-card" tabindex="0">
+          <div class="flash-meta">Clique pour retourner</div>
+          <div class="front">Où changer les couleurs globales ?</div>
+          <div class="back"><code>:root</code> dans <code>app/matiere/fiche.css</code> (et éventuellement <code>styles.css</code>).</div>
+        </div>
+        <div class="flash-card" tabindex="0">
+          <div class="flash-meta">Clique pour retourner</div>
+          <div class="front">À quoi sert cette page ?</div>
+          <div class="back">Sandbox visuelle — pas un vrai chapitre de cours.</div>
+        </div>
+      </div>
+    </section>
+
+    <p class="lead" style="margin-top:1.5rem">
+      Quand le style te plaît, on le fige puis on l’applique aux vraies fiches ch.01–11.
+    </p>
+  </main>
+
+  <script src="./fiche.js"></script>
+</body>
+</html>
