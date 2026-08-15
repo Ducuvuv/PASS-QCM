@@ -1,0 +1,52 @@
+/**
+ * Flashcards Anatomie — chapitre 04 (Appareil respiratoire)
+ * ~36 cartes. kind: "text" | "schema"
+ */
+(function (w) {
+  w.PASS_FLASH = w.PASS_FLASH || {};
+  w.PASS_FLASH_REGISTRY = w.PASS_FLASH_REGISTRY || [];
+
+  w.PASS_FLASH["04"] = [
+    { id: "FC-ANAT-04-001", chapter: "04", priority: "P1", kind: "text", front: "Nombre de segments pulmonaires droite / gauche ?", back: "10 à droite et 10 à gauche — même nombre des deux côtés (≠ lobes)." },
+    { id: "FC-ANAT-04-002", chapter: "04", priority: "P1", kind: "text", front: "Pour un segment : ventilation / artère / drainage veineux ?", back: "Bronche segmentaire ; artère bronchique segmentaire ; veine intersegmentaire (1 veine pour 2 segments)." },
+    { id: "FC-ANAT-04-003", chapter: "04", priority: "P1", kind: "text", front: "Subdivision du parenchyme (ordre) + unité terminale ?", back: "Lobes → segments → lobules → acini. Acinus = unité terminale (contient les sacs alvéolaires)." },
+    { id: "FC-ANAT-04-004", chapter: "04", priority: "P1", kind: "text", front: "Pédicule fonctionnel : contenu et rôle ?", back: "Petite circulation : bronche souche, artère pulmonaire, veines pulmonaires → hématose." },
+    { id: "FC-ANAT-04-005", chapter: "04", priority: "P1", kind: "text", front: "Pédicule nourricier : contenu et rôle ?", back: "Grande circulation : artères/veines bronchiques, nerfs, lymphonœuds → nourrit le parenchyme." },
+    { id: "FC-ANAT-04-006", chapter: "04", priority: "P1", kind: "text", front: "Ne pas confondre les 2 pédicules ?", back: "Fonctionnel = petite circulation / hématose. Nourricier = grande circulation / nutrition." },
+
+    { id: "FC-ANAT-04-007", chapter: "04", priority: "P2", kind: "text", front: "Asymétrie des poumons : lobes et scissures ?", back: "Droite : 3 lobes, 2 scissures (oblique + horizontale). Gauche : 2 lobes, 1 scissure oblique + empreinte cardiaque." },
+    { id: "FC-ANAT-04-008", chapter: "04", priority: "P2", kind: "text", front: "Poumons : intra-thoraciques mais… ?", back: "Extra-médiastinaux, de part et d'autre du médiastin. Exception : apex au-dessus de l'orifice supérieur du thorax." },
+    { id: "FC-ANAT-04-009", chapter: "04", priority: "P2", kind: "text", front: "Trachée : naissance et bifurcation (repères) ?", back: "Naît vers C6 (cartilage cricoïde) ; se divise vers T5 en 2 bronches souches." },
+    { id: "FC-ANAT-04-010", chapter: "04", priority: "P2", kind: "text", front: "Bronche souche droite : particularité + n° de bronches lobaires ?", back: "Plus verticale (~25–30°) ; 3 bronches lobaires (vs 2 à gauche)." },
+    { id: "FC-ANAT-04-011", chapter: "04", priority: "P2", kind: "text", front: "Hile pulmonaire : définition ?", back: "Point d'entrée/sortie du pédicule ; seule zone non recouverte de plèvre (ligne de réflexion)." },
+    { id: "FC-ANAT-04-012", chapter: "04", priority: "P2", kind: "text", front: "Plèvre : feuillet viscéral vs pariétal ?", back: "Viscéral au contact du poumon ; pariétal naît de la réflexion au hile." },
+    { id: "FC-ANAT-04-013", chapter: "04", priority: "P2", kind: "text", front: "Cavité pleurale normale vs pneumo / hémothorax ?", back: "Virtuelle à l'état normal. Air = pneumothorax. Sang = hémothorax." },
+    { id: "FC-ANAT-04-014", chapter: "04", priority: "P2", kind: "text", front: "Hématose : où et quoi ?", back: "Sac alvéolaire / capillaires pulmonaires : réoxygène le sang et récupère le CO₂." },
+    { id: "FC-ANAT-04-015", chapter: "04", priority: "P2", kind: "text", front: "Nasopharynx / oropharynx / laryngopharynx ?", back: "Naso = supérieur, derrière fosses nasales. Oro = moyen, carrefour aéro-digestif. Laryngo = voie digestive (pas voies aériennes)." },
+    { id: "FC-ANAT-04-016", chapter: "04", priority: "P2", kind: "text", front: "Artère bronchique vs veines bronchiques : drainage ?", back: "Artère bronchique naît de l'aorte. Veines bronchiques → azygos → VCS." },
+    { id: "FC-ANAT-04-017", chapter: "04", priority: "P2", kind: "text", front: "Voies aériennes supérieures : exemples ?", back: "Fosses nasales, pharynx (naso/oro), larynx (selon découpage du cours)." },
+    { id: "FC-ANAT-04-018", chapter: "04", priority: "P2", kind: "text", front: "Voies aériennes inférieures : enchaînement simple ?", back: "Trachée → bronches souches → lobaires → segmentaires → … → alvéoles." },
+    { id: "FC-ANAT-04-019", chapter: "04", priority: "P2", kind: "text", front: "Poumon : forme générale (faces) ?", back: "Cône à 3 faces (costale, médiastinale, diaphragmatique) + apex / base." },
+    { id: "FC-ANAT-04-020", chapter: "04", priority: "P2", kind: "text", front: "Vascularisation pulmonaire : 2 systèmes ?", back: "Fonctionnelle (pulmonaire / hématose) et nourricière (bronchique)." },
+
+    { id: "FC-ANAT-04-021", chapter: "04", priority: "P3", kind: "text", front: "Constituants de l'appareil respiratoire (idée) ?", back: "Voies aériennes + poumons (+ plèvre / muscles de la ventilation)." },
+    { id: "FC-ANAT-04-022", chapter: "04", priority: "P3", kind: "text", front: "Larynx : double fonction ?", back: "Respiration et phonation (cordes vocales)." },
+    { id: "FC-ANAT-04-023", chapter: "04", priority: "P3", kind: "text", front: "Inspiration vs expiration (mécanique de base) ?", back: "Inspiration active (diaphragme). Expiration surtout passifs ; les deux peuvent être forcées (accessoires)." },
+    { id: "FC-ANAT-04-024", chapter: "04", priority: "P3", kind: "text", front: "Capacité respiratoire totale (ordre de grandeur cours) ?", back: "Environ 5 litres d'air pour les 2 poumons." },
+    { id: "FC-ANAT-04-025", chapter: "04", priority: "P3", kind: "text", front: "Rapports / limites des poumons : idée ?", back: "Cage thoracique, médiastin, diaphragme ; apex cervical." },
+
+    { id: "FC-ANAT-04-026", chapter: "04", priority: "P1", kind: "text", front: "Pourquoi les segments > lobes au concours ?", back: "Notion la plus tombée ; nombre identique D/G ; trio bronche/artère/veine à maîtriser." },
+    { id: "FC-ANAT-04-027", chapter: "04", priority: "P2", kind: "text", front: "Objet inhalé dans la trachée : plutôt quelle bronche ?", back: "Bronche souche droite (plus verticale)." },
+    { id: "FC-ANAT-04-028", chapter: "04", priority: "P2", kind: "text", front: "Scissure unique à gauche : laquelle ?", back: "Scissure oblique seulement (pas d'horizontale)." },
+    { id: "FC-ANAT-04-029", chapter: "04", priority: "P1", kind: "text", front: "Acinus : que contient-il notamment ?", back: "Les sacs alvéolaires (unité terminale)." },
+    { id: "FC-ANAT-04-030", chapter: "04", priority: "P2", kind: "text", front: "Empreinte cardiaque : quel poumon ?", back: "Poumon gauche." },
+    { id: "FC-ANAT-04-031", chapter: "04", priority: "P2", kind: "text", front: "Petite circulation dans le pédicule : vaisseaux clés ?", back: "Artère pulmonaire + veines pulmonaires (+ bronche souche)." },
+    { id: "FC-ANAT-04-032", chapter: "04", priority: "P3", kind: "text", front: "Ventilation en 2 phases : noms ?", back: "Inspiration et expiration." },
+    { id: "FC-ANAT-04-033", chapter: "04", priority: "P2", kind: "text", front: "Plèvre : rôle de la réflexion hilaire ?", back: "Passe du feuillet viscéral au pariétal au niveau du hile." },
+    { id: "FC-ANAT-04-034", chapter: "04", priority: "P1", kind: "text", front: "Lobule vs segment : lequel est plus gros ?", back: "Segment > lobule > acinus (dans la cascade de subdivision)." },
+    { id: "FC-ANAT-04-035", chapter: "04", priority: "P2", kind: "text", front: "Azygos : lien avec le drainage bronchique ?", back: "Veines bronchiques → azygos → VCS." },
+    { id: "FC-ANAT-04-036", chapter: "04", priority: "P3", kind: "text", front: "Phonation : organe clé des VAS ?", back: "Larynx (cordes vocales)." }
+  ];
+
+  if (!w.PASS_FLASH_REGISTRY.includes("04")) w.PASS_FLASH_REGISTRY.push("04");
+})(window);
