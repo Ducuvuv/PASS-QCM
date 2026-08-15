@@ -1,0 +1,54 @@
+/**
+ * Flashcards Anatomie — chapitre 03 (Appareil cardio-circulatoire)
+ * ~38 cartes. kind: "text" | "schema"
+ */
+(function (w) {
+  w.PASS_FLASH = w.PASS_FLASH || {};
+  w.PASS_FLASH_REGISTRY = w.PASS_FLASH_REGISTRY || [];
+
+  w.PASS_FLASH["03"] = [
+    { id: "FC-ANAT-03-001", chapter: "03", priority: "P1", kind: "text", front: "Cœur droit vs cœur gauche : oxygénation + communication ?", back: "Droit = sang désoxygéné ; gauche = sang oxygéné. Normalement ils ne communiquent pas." },
+    { id: "FC-ANAT-03-002", chapter: "03", priority: "P1", kind: "text", front: "Petite circulation : artères / veines et oxygène + fonction ?", back: "Artère = sang pauvre en O₂ ; veines = sang riche (inverse de la grande). Fonction = hématose." },
+    { id: "FC-ANAT-03-003", chapter: "03", priority: "P1", kind: "text", front: "Vaisseaux de chaque cavité cardiaque ?", back: "AD ← veines caves ; VD → artère pulmonaire ; AG ← 4 veines pulmonaires ; VG → aorte." },
+    { id: "FC-ANAT-03-004", chapter: "03", priority: "P1", kind: "text", front: "3 hiatus du diaphragme : projections vertébrales ?", back: "Aortique T12 ; œsophagien T10 ; veine cave inférieure T9. (Plus c'est « rigide », plus c'est bas.)" },
+    { id: "FC-ANAT-03-005", chapter: "03", priority: "P1", kind: "text", front: "Contenu du hiatus aortique ?", back: "Aorte + conduit thoracique." },
+    { id: "FC-ANAT-03-006", chapter: "03", priority: "P1", kind: "text", front: "Contenu du hiatus œsophagien ?", back: "Œsophage + 2 nerfs vagues." },
+    { id: "FC-ANAT-03-007", chapter: "03", priority: "P1", kind: "text", front: "Contenu du hiatus de la VCI ?", back: "Veine cave inférieure + nerf phrénique droit." },
+    { id: "FC-ANAT-03-008", chapter: "03", priority: "P1", kind: "text", front: "Nerf phrénique gauche et hiatus ?", back: "Il ne traverse aucun hiatus." },
+    { id: "FC-ANAT-03-009", chapter: "03", priority: "P1", kind: "text", front: "Hiatus fibreux vs musculaire : extensibilité ?", back: "Aortique et VCI = fibreux, inextensibles. Œsophagien = musculaire, extensible (fronde anti-reflux)." },
+    { id: "FC-ANAT-03-010", chapter: "03", priority: "P1", kind: "text", front: "3 tuniques du cœur : dedans → dehors ?", back: "Endocarde, myocarde, péricarde." },
+    { id: "FC-ANAT-03-011", chapter: "03", priority: "P1", kind: "text", front: "Péricarde : 2 feuillets ?", back: "Feuillet viscéral (= épicarde) et feuillet pariétal." },
+    { id: "FC-ANAT-03-012", chapter: "03", priority: "P1", kind: "text", front: "Grande vs petite circulation : idée simple ?", back: "Grande = corps. Petite = poumons (hématose)." },
+
+    { id: "FC-ANAT-03-013", chapter: "03", priority: "P2", kind: "text", front: "Valve tricuspide vs mitrale ?", back: "Tricuspide à droite (3). Mitrale à gauche = bicuspide (2). Ne pas intervertir." },
+    { id: "FC-ANAT-03-014", chapter: "03", priority: "P2", kind: "text", front: "Projection vertébrale du cœur + médiastin ?", back: "T6 à T8 ; médiastin antérieur ; à gauche du bord droit du sternum." },
+    { id: "FC-ANAT-03-015", chapter: "03", priority: "P2", kind: "text", front: "Vue antérieure vs postérieure du cœur : quel côté domine ?", back: "Antérieure ≈ cœur droit. Postérieure ≈ cœur gauche." },
+    { id: "FC-ANAT-03-016", chapter: "03", priority: "P2", kind: "text", front: "Nœud sino-atrial : rôle et rythme ?", back: "Pacemaker ; ~60–70 / min." },
+    { id: "FC-ANAT-03-017", chapter: "03", priority: "P2", kind: "text", front: "Nœud atrio-ventriculaire : rythme ?", back: "~40–50 / min." },
+    { id: "FC-ANAT-03-018", chapter: "03", priority: "P2", kind: "text", front: "Côtes : vraies / fausses / flottantes ?", back: "1–7 vraies ; 8–10 fausses ; 11–12 flottantes." },
+    { id: "FC-ANAT-03-019", chapter: "03", priority: "P2", kind: "text", front: "Artères coronaires : origine et trajet ?", back: "1ères collatérales de l'aorte ; cheminent dans les sillons du cœur." },
+    { id: "FC-ANAT-03-020", chapter: "03", priority: "P2", kind: "text", front: "Situation générale du cœur dans le thorax ?", back: "Médiastin (antérieur), asymétrie à gauche du sternum." },
+    { id: "FC-ANAT-03-021", chapter: "03", priority: "P2", kind: "text", front: "Thorax osseux : éléments principaux ?", back: "Sternum, côtes, rachis thoracique (cage thoracique)." },
+    { id: "FC-ANAT-03-022", chapter: "03", priority: "P2", kind: "text", front: "Médiastin : définition simple ?", back: "Espace médian du thorax entre les deux poumons (contient cœur, gros vaisseaux, etc.)." },
+    { id: "FC-ANAT-03-023", chapter: "03", priority: "P2", kind: "text", front: "Morphologie externe : faces / base / apex (idée) ?", back: "Base plutôt postéro-supérieure ; apex en bas à gauche ; faces antérieure, inférieure, pulmonaires." },
+    { id: "FC-ANAT-03-024", chapter: "03", priority: "P2", kind: "text", front: "Grande circulation : artères / veines et O₂ ?", back: "Artères = sang riche en O₂ (sauf exceptions) ; veines = sang pauvre — inverse de la petite circulation pulmonaire." },
+    { id: "FC-ANAT-03-025", chapter: "03", priority: "P2", kind: "text", front: "Valves artérielles (sigmoïdes) : où ?", back: "À la sortie des ventricules : pulmonaire (VD) et aortique (VG)." },
+
+    { id: "FC-ANAT-03-026", chapter: "03", priority: "P3", kind: "text", front: "Systole vs diastole (valves) ?", back: "Systole = vidange (AV fermées, artérielles ouvertes). Diastole = remplissage (l'inverse)." },
+    { id: "FC-ANAT-03-027", chapter: "03", priority: "P3", kind: "text", front: "Système porte : particularité ?", back: "Intercalé entre 2 réseaux capillaires (≠ systèmes cave / azygos)." },
+    { id: "FC-ANAT-03-028", chapter: "03", priority: "P3", kind: "text", front: "Lymphatique : rôle général ?", back: "Drainage / retour de liquide et défense (ganglions, vaisseaux lymphatiques)." },
+    { id: "FC-ANAT-03-029", chapter: "03", priority: "P3", kind: "text", front: "Anatomie fonctionnelle du cœur : idée ?", back: "Lien morphologie ↔ fonction (pompe double, cycles systole/diastole)." },
+    { id: "FC-ANAT-03-030", chapter: "03", priority: "P3", kind: "text", front: "Rapports du cœur : notion simple ?", back: "Relations de voisinage (poumons, sternum, diaphragme, gros vaisseaux…)." },
+
+    { id: "FC-ANAT-03-031", chapter: "03", priority: "P1", kind: "text", front: "Appareil cardio-circulatoire : composantes majeures ?", back: "Cœur + vaisseaux (artères, veines, capillaires) ; grande et petite circulations." },
+    { id: "FC-ANAT-03-032", chapter: "03", priority: "P1", kind: "text", front: "Diaphragme : pourquoi section P1 majeure ?", back: "Très tombée : hiatus, contenus, projections vertébrales, nature fibreuse/musculaire." },
+    { id: "FC-ANAT-03-033", chapter: "03", priority: "P1", kind: "text", front: "Atrium vs ventricule : rôle simple ?", back: "Atriums = réception du sang. Ventricules = éjection." },
+    { id: "FC-ANAT-03-034", chapter: "03", priority: "P2", kind: "text", front: "Cardionecteur : enchaînement nodal simple ?", back: "Nœud sino-atrial → atriums → nœud atrio-ventriculaire → faisceau / réseau ventriculaire." },
+    { id: "FC-ANAT-03-035", chapter: "03", priority: "P2", kind: "text", front: "Vascularisation du myocarde : vaisseaux ?", back: "Artères coronaires (et retour veineux coronaire)." },
+    { id: "FC-ANAT-03-036", chapter: "03", priority: "P1", kind: "text", front: "Piège classique petite circulation ?", back: "Artère pulmonaire = sang désoxygéné ; veines pulmonaires = sang oxygéné." },
+    { id: "FC-ANAT-03-037", chapter: "03", priority: "P2", kind: "text", front: "Insertion costale : vraie vs fausse ?", back: "Vraie = cartilage direct sur sternum. Fausse = insertion indirecte via autre cartilage." },
+    { id: "FC-ANAT-03-038", chapter: "03", priority: "P1", kind: "text", front: "Endocarde : contact avec le sang ?", back: "Oui — tunique interne tapissant les cavités et valvules." }
+  ];
+
+  if (!w.PASS_FLASH_REGISTRY.includes("03")) w.PASS_FLASH_REGISTRY.push("03");
+})(window);
