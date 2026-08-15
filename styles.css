@@ -266,8 +266,14 @@ a { color: var(--accent); }
   font-weight: 600;
 }
 
-.suivi-table td:nth-child(2) {
+.suivi-table td:nth-child(2),
+.suivi-table td:nth-child(3) {
   text-align: center;
   width: 3.5rem;
+}
+
+.suivi-detail {
+  font-size: 0.82rem;
+  color: var(--muted);
 }
 

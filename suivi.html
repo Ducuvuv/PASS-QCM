@@ -22,17 +22,20 @@
     </nav>
 
     <h1 class="page-title">Suivi</h1>
-    <p class="page-sub">Niveau par chapitre selon tes sessions QCM (enregistré sur cet appareil).</p>
+    <p class="page-sub">Deux pastilles par chapitre : dernière session et cumul (cet appareil).</p>
 
     <div class="panel">
       <h2>Légende</h2>
       <ul class="suivi-legend">
-        <li><span class="pill pill-none" aria-hidden="true"></span> Pas assez de data (&lt; 10 Q sur le chapitre)</li>
+        <li><span class="pill pill-none" aria-hidden="true"></span> Pas assez de data (&lt; 10 Q)</li>
         <li><span class="pill pill-red" aria-hidden="true"></span> Rouge — &lt; 10/20 (&lt; 50 %)</li>
         <li><span class="pill pill-blue" aria-hidden="true"></span> Bleu — 10 à 15/20 (50–75 %)</li>
         <li><span class="pill pill-green" aria-hidden="true"></span> Vert — &gt; 15/20 (&gt; 75 %)</li>
       </ul>
-      <p class="note" style="margin-top:0.75rem">La pastille se met à jour dès que tu as répondu à au moins 10 questions sur ce chapitre (cumul des sessions).</p>
+      <ul class="prio-help" style="margin-top:0.75rem">
+        <li><strong>Dernière</strong> — score de la dernière session avec ≥ 10 Q sur ce chapitre.</li>
+        <li><strong>Cumul</strong> — moyenne de toutes les questions répondues sur ce chapitre (≥ 10 Q au total).</li>
+      </ul>
     </div>
 
     <div class="panel">
@@ -42,9 +45,9 @@
           <thead>
             <tr>
               <th>Chapitre</th>
-              <th>Niveau</th>
-              <th>Score</th>
-              <th>Q</th>
+              <th>Dernière</th>
+              <th>Cumul</th>
+              <th>Détail</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -62,30 +65,39 @@
     </div>
   </div>
 
-  <script src="./js/suivi-store.js"></script>
+  <script src="./js/suivi-store.js?v=2"></script>
   <script>
     const S = window.PASS_SUIVI;
     const tbody = document.querySelector("#suivi-table tbody");
+
+    function fmt(score20, pct, n, ready) {
+      if (ready) return `${score20}/20 (${pct} %) · ${n} Q`;
+      if (n) return `— (${n}/${S.MIN_Q} Q)`;
+      return "—";
+    }
 
     function render() {
       const data = S.getAnatomie();
       tbody.innerHTML = "";
       for (const [ch, title] of Object.entries(S.CHAPTERS)) {
         const row = data[ch];
-        const level = row ? row.level : "none";
-        const n = row ? row.n : 0;
-        const scoreLabel =
-          row && n >= S.MIN_Q
-            ? `${row.score20}/20 (${row.pct} %)`
-            : n
-              ? `— (${n}/${S.MIN_Q} Q)`
-              : "—";
+        const lastLevel = row ? row.lastLevel || "none" : "none";
+        const cumulLevel = row ? row.level || "none" : "none";
+        const lastN = row ? row.lastN || 0 : 0;
+        const n = row ? row.n || 0 : 0;
+        const lastReady = lastN >= S.MIN_Q;
+        const cumulReady = n >= S.MIN_Q;
+        const detail = [
+          "Dernière : " + fmt(row && row.lastScore20, row && row.lastPct, lastN, lastReady),
+          "Cumul : " + fmt(row && row.score20, row && row.pct, n, cumulReady),
+        ].join(" · ");
+
         const tr = document.createElement("tr");
         tr.innerHTML = `
           <td><strong>${ch}</strong> — ${title}</td>
-          <td><span class="pill pill-${level}" title="${level}"></span></td>
-          <td>${scoreLabel}</td>
-          <td>${n}</td>
+          <td><span class="pill pill-${lastLevel}" title="Dernière session"></span></td>
+          <td><span class="pill pill-${cumulLevel}" title="Cumul"></span></td>
+          <td class="suivi-detail">${detail}</td>
         `;
         tbody.appendChild(tr);
       }
