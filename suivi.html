@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=m2" />
+  <link rel="stylesheet" href="./styles.css?v=m3" />
 </head>
 <body>
   <div class="wrap">
@@ -31,86 +31,165 @@
     </header>
 
     <h1 class="page-title">Suivi</h1>
-    <p class="page-sub">Deux pastilles par chapitre : dernière session et cumul (cet appareil).</p>
+    <p class="page-sub">Pastilles par chapitre — dernière session et cumul (cet appareil).</p>
 
-    <div class="panel">
-      <h2>Légende</h2>
-      <ul class="suivi-legend">
+    <div id="review-box" class="review-box hidden">
+      <h2>À revoir en priorité</h2>
+      <div class="review-list" id="review-list"></div>
+    </div>
+
+    <div id="empty-state" class="empty-state hidden">
+      Aucune session encore.<br />
+      Lance au moins <strong>10 QCM</strong> sur un chapitre pour voir une pastille.
+      <div class="actions" style="justify-content:center;margin-top:0.75rem">
+        <a class="btn" href="./qcm-player.html">Lancer des QCM</a>
+      </div>
+    </div>
+
+    <details class="legend-fold">
+      <summary>Légende pastilles</summary>
+      <ul class="suivi-legend" style="margin-top:0.65rem">
         <li><span class="pill pill-none" aria-hidden="true"></span> Pas assez de data (&lt; 10 Q)</li>
-        <li><span class="pill pill-red" aria-hidden="true"></span> Rouge — &lt; 10/20 (&lt; 50 %)</li>
-        <li><span class="pill pill-blue" aria-hidden="true"></span> Bleu — 10 à 15/20 (50–75 %)</li>
-        <li><span class="pill pill-green" aria-hidden="true"></span> Vert — &gt; 15/20 (&gt; 75 %)</li>
+        <li><span class="pill pill-red" aria-hidden="true"></span> Rouge — &lt; 50 %</li>
+        <li><span class="pill pill-blue" aria-hidden="true"></span> Bleu — 50–75 %</li>
+        <li><span class="pill pill-green" aria-hidden="true"></span> Vert — &gt; 75 %</li>
       </ul>
-      <ul class="prio-help" style="margin-top:0.75rem">
-        <li><strong>Dernière</strong> — score de la dernière session avec ≥ 10 Q sur ce chapitre.</li>
-        <li><strong>Cumul</strong> — moyenne de toutes les questions répondues sur ce chapitre (≥ 10 Q au total).</li>
-      </ul>
+      <p class="hint" style="margin-top:0.5rem">
+        <strong>Dernière</strong> — session avec ≥ 10 Q sur ce chapitre.
+        <strong>Cumul</strong> — moyenne de toutes les questions (≥ 10 Q au total).
+      </p>
+    </details>
+
+    <div class="ch-cards" id="ch-cards"></div>
+
+    <div class="actions" style="margin-top:1.25rem">
+      <a class="btn" href="./qcm-player.html">Faire des QCM</a>
+      <button type="button" class="btn secondary" id="btn-reset">Réinitialiser Anatomie</button>
     </div>
 
-    <div class="panel">
-      <h2>Anatomie (UE5)</h2>
-      <div class="table-wrap">
-        <table class="suivi-table" id="suivi-table">
-          <thead>
-            <tr>
-              <th>Chapitre</th>
-              <th>Dernière</th>
-              <th>Cumul</th>
-              <th>Détail</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-      <div class="actions">
-        <a class="btn" href="./qcm-player.html">Faire des QCM</a>
-        <button type="button" class="btn secondary" id="btn-reset">Réinitialiser Anatomie</button>
-      </div>
-    </div>
-
-    <div class="panel">
-      <h2>Autres UE</h2>
-      <p>À brancher quand tu ajouteras d’autres matières.</p>
-    </div>
+    <p class="note">Maquette peaufinée : <a href="./suivi-planning-lab.html">Labo Suivi / Planning</a></p>
   </div>
 
-  <script src="./js/suivi-store.js?v=4"></script>
+  <script src="./js/suivi-store.js?v=5"></script>
   <script>
     const S = window.PASS_SUIVI;
-    const tbody = document.querySelector("#suivi-table tbody");
+    const elReview = document.getElementById("review-box");
+    const elReviewList = document.getElementById("review-list");
+    const elCards = document.getElementById("ch-cards");
+    const elEmpty = document.getElementById("empty-state");
 
-    function fmt(score20, pct, n, ready) {
-      if (ready) return `${score20}/20 (${pct} %) · ${n} Q`;
-      if (n) return `— (${n}/${S.MIN_Q} Q)`;
+    function fmtScore(score20, pct, n, ready) {
+      if (ready) return score20 + "/20 (" + pct + " %)";
+      if (n) return n + "/" + S.MIN_Q + " Q";
       return "—";
+    }
+
+    function relativeTime(iso) {
+      if (!iso) return null;
+      const t = new Date(iso).getTime();
+      if (!t) return null;
+      const days = Math.floor((Date.now() - t) / 86400000);
+      if (days <= 0) return "aujourd’hui";
+      if (days === 1) return "hier";
+      if (days < 7) return "il y a " + days + " j";
+      if (days < 30) return "il y a " + Math.floor(days / 7) + " sem.";
+      return "il y a " + Math.floor(days / 30) + " mois";
+    }
+
+    function worstLevel(row) {
+      const lastReady = (row.lastN || 0) >= S.MIN_Q;
+      const cumulReady = (row.n || 0) >= S.MIN_Q;
+      const last = lastReady ? row.lastLevel || "none" : "none";
+      const cumul = cumulReady ? row.level || "none" : "none";
+      if (last === "red" || cumul === "red") return "red";
+      if (last === "blue" || cumul === "blue") return "blue";
+      return "none";
+    }
+
+    function rankLevel(level) {
+      if (level === "red") return 0;
+      if (level === "blue") return 1;
+      return 9;
+    }
+
+    function actionsHtml(ch) {
+      return (
+        '<div class="ch-actions">' +
+        '<a class="btn tiny" href="./qcm-player.html?ch=' + ch + '">QCM</a>' +
+        '<a class="btn tiny secondary" href="./flashcards.html?ch=' + ch + '">Flash</a>' +
+        '<a class="btn tiny secondary" href="./matiere/anatomie/ch' + ch + '.html">Fiche</a>' +
+        "</div>"
+      );
     }
 
     function render() {
       const data = S.getAnatomie();
-      tbody.innerHTML = "";
+      elCards.innerHTML = "";
+      elReviewList.innerHTML = "";
+
+      let anyData = false;
+      const weak = [];
+
       for (const ch of S.CHAPTER_ORDER) {
         const title = S.CHAPTERS[ch];
-        const row = data[ch];
-        const lastLevel = row ? row.lastLevel || "none" : "none";
-        const cumulLevel = row ? row.level || "none" : "none";
-        const lastN = row ? row.lastN || 0 : 0;
-        const n = row ? row.n || 0 : 0;
+        const row = data[ch] || {};
+        const lastN = row.lastN || 0;
+        const n = row.n || 0;
         const lastReady = lastN >= S.MIN_Q;
         const cumulReady = n >= S.MIN_Q;
-        const detail = [
-          "Dernière : " + fmt(row && row.lastScore20, row && row.lastPct, lastN, lastReady),
-          "Cumul : " + fmt(row && row.score20, row && row.pct, n, cumulReady),
-        ].join(" · ");
+        const lastLevel = row.lastLevel || "none";
+        const cumulLevel = row.level || "none";
+        if (n > 0) anyData = true;
 
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-          <td><strong>${ch}</strong> — ${title}</td>
-          <td><span class="pill pill-${lastLevel}" title="Dernière session"></span></td>
-          <td><span class="pill pill-${cumulLevel}" title="Cumul"></span></td>
-          <td class="suivi-detail">${detail}</td>
-        `;
-        tbody.appendChild(tr);
+        const when = relativeTime(row.lastQcmAt || row.updatedAt);
+        const meta = when
+          ? "Dernière activité " + when
+          : n
+            ? "En cours de remplissage"
+            : "Pas encore de session";
+
+        const article = document.createElement("article");
+        article.className = "ch-card";
+        article.innerHTML =
+          '<div class="ch-card-top"><div>' +
+          "<h3>" + ch + " — " + title + "</h3>" +
+          '<p class="meta">' + meta + "</p></div></div>" +
+          '<div class="pills-row">' +
+          '<span><span class="pill pill-' + lastLevel + '"></span> Dernière ' +
+          fmtScore(row.lastScore20, row.lastPct, lastN, lastReady) + "</span>" +
+          '<span><span class="pill pill-' + cumulLevel + '"></span> Cumul ' +
+          fmtScore(row.score20, row.pct, n, cumulReady) + "</span>" +
+          "</div>" +
+          actionsHtml(ch);
+        elCards.appendChild(article);
+
+        const w = worstLevel(row);
+        if (w === "red" || w === "blue") {
+          weak.push({ ch, title, level: w, rank: rankLevel(w) });
+        }
       }
+
+      weak.sort((a, b) => a.rank - b.rank || a.ch.localeCompare(b.ch));
+      const top = weak.slice(0, 3);
+      if (top.length) {
+        elReview.classList.remove("hidden");
+        for (const w of top) {
+          const div = document.createElement("div");
+          div.className = "review-item";
+          div.innerHTML =
+            '<span class="name"><span class="pill pill-' + w.level + '"></span> ' +
+            w.ch + " — " + w.title + "</span>" +
+            "<span>" +
+            '<a class="btn tiny" href="./qcm-player.html?ch=' + w.ch + '">QCM</a> ' +
+            '<a class="btn tiny secondary" href="./flashcards.html?ch=' + w.ch + '">Flash</a>' +
+            "</span>";
+          elReviewList.appendChild(div);
+        }
+      } else {
+        elReview.classList.add("hidden");
+      }
+
+      elEmpty.classList.toggle("hidden", anyData);
     }
 
     document.getElementById("btn-reset").addEventListener("click", () => {

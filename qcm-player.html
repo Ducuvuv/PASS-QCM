@@ -439,9 +439,13 @@
 
     function buildChapterList() {
       elChapterList.innerHTML = "";
+      const params = new URLSearchParams(location.search);
+      const focusCh = (params.get("ch") || "").padStart(2, "0");
+      const focusOk = focusCh && CHAPTER_META[focusCh];
       for (const ch of availableChapters()) {
         const label = document.createElement("label");
-        label.innerHTML = `<input type="checkbox" value="${ch}" checked /> <span>${ch} — ${CHAPTER_META[ch]} <span class="meta">(${(lots[ch] || []).length})</span></span>`;
+        const checked = focusOk ? ch === focusCh : true;
+        label.innerHTML = `<input type="checkbox" value="${ch}" ${checked ? "checked" : ""} /> <span>${ch} — ${CHAPTER_META[ch]} <span class="meta">(${(lots[ch] || []).length})</span></span>`;
         elChapterList.appendChild(label);
       }
       elChapterList.addEventListener("change", updatePoolHint);

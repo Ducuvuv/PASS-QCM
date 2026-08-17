@@ -542,3 +542,106 @@ a { color: var(--accent); }
 }
 
 .hidden { display: none !important; }
+
+/* ——— Suivi (cartes) ——— */
+.review-box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid #dc2626;
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+}
+.review-box h2 {
+  margin: 0 0 0.55rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--deep);
+}
+.review-list { display: grid; gap: 0.45rem; }
+.review-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.65rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.review-item .name {
+  font-weight: 700;
+  color: var(--deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.legend-fold {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.65rem 0.9rem;
+  margin-bottom: 1rem;
+}
+.legend-fold summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--deep);
+  font-size: 0.9rem;
+}
+.ch-cards { display: grid; gap: 0.55rem; }
+.ch-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.85rem 0.95rem;
+}
+.ch-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: flex-start;
+  margin-bottom: 0.35rem;
+}
+.ch-card h3 {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--deep);
+}
+.ch-card .meta {
+  margin: 0.15rem 0 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 0.85rem;
+  align-items: center;
+  margin: 0.55rem 0 0.65rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.pills-row > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.ch-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.btn.tiny {
+  padding: 0.35rem 0.7rem;
+  font-size: 0.78rem;
+}
+.empty-state {
+  text-align: center;
+  padding: 1.25rem 1rem;
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
