@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=m2" />
+  <link rel="stylesheet" href="./styles.css?v=m4" />
 </head>
 <body>
   <div class="wrap">
@@ -31,27 +31,29 @@
     </header>
 
     <h1 class="page-title">Planning</h1>
-    <p class="page-sub">Place tes chapitres sur la semaine. Sur téléphone : choisis un chapitre, puis touche un jour.</p>
+    <p class="page-sub">Choisis un chapitre, puis touche un jour. Navigue semaine par semaine.</p>
 
-    <div class="panel">
-      <h2>Chapitres Anatomie</h2>
-      <p class="note" style="margin:0 0 0.75rem">Clique pour sélectionner, puis un jour pour placer. Ou glisse une case sur un jour (ordinateur).</p>
-      <div class="plan-bank" id="chapter-bank"></div>
-      <p class="hint" id="sel-hint">Aucun chapitre sélectionné.</p>
+    <div class="today-box" id="today-box">
+      <h2 id="today-title">Aujourd’hui</h2>
+      <div id="today-list"></div>
     </div>
 
-    <div class="panel">
-      <div class="plan-week-nav">
-        <button type="button" class="btn secondary" id="btn-prev">← Semaine</button>
-        <strong id="week-label">—</strong>
-        <button type="button" class="btn secondary" id="btn-next">Semaine →</button>
-      </div>
-      <div class="plan-week" id="week-grid"></div>
-    </div>
+    <div class="sel-bar" id="sel-bar" hidden>Chapitre sélectionné : —</div>
 
-    <div class="panel">
-      <h2>Dernières activités</h2>
-      <p class="note" style="margin:0 0 0.75rem">QCM · fiche ouverte · dernier jour placé au planning.</p>
+    <h2 class="plan-step">1. Choisis un chapitre</h2>
+    <div class="plan-bank" id="chapter-bank"></div>
+
+    <h2 class="plan-step">2. Place sur un jour</h2>
+    <div class="plan-week-nav">
+      <button type="button" class="btn secondary tiny" id="btn-prev">← Semaine</button>
+      <strong id="week-label">—</strong>
+      <button type="button" class="btn secondary tiny" id="btn-next">Semaine →</button>
+    </div>
+    <div class="plan-day-stack" id="week-grid"></div>
+
+    <details class="legend-fold" style="margin-top:1.25rem">
+      <summary>Dernières activités</summary>
+      <p class="hint">QCM · fiche ouverte · dernier jour placé</p>
       <div class="table-wrap">
         <table class="suivi-table" id="activity-table">
           <thead>
@@ -65,13 +67,14 @@
           <tbody></tbody>
         </table>
       </div>
-    </div>
+    </details>
   </div>
 
-  <script src="./js/suivi-store.js?v=4"></script>
-  <script src="./js/planning-store.js?v=2"></script>
+  <script src="./js/suivi-store.js?v=5"></script>
+  <script src="./js/planning-store.js?v=3"></script>
   <script>
     const P = window.PASS_PLANNING;
+    const S = window.PASS_SUIVI;
     const DAYS = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
     let weekOffset = 0;
     let selectedChapter = null;
@@ -81,7 +84,7 @@
     function startOfWeek(offsetWeeks) {
       const d = new Date();
       d.setHours(12, 0, 0, 0);
-      const day = (d.getDay() + 6) % 7; // Monday=0
+      const day = (d.getDay() + 6) % 7;
       d.setDate(d.getDate() - day + offsetWeeks * 7);
       return d;
     }
@@ -98,8 +101,8 @@
       const s = String(isoOrNull);
       const day = s.slice(0, 10);
       if (/^\d{4}-\d{2}-\d{2}$/.test(day)) {
-        const [y, m, d] = day.split("-");
-        return d + "/" + m;
+        const parts = day.split("-");
+        return parts[2] + "/" + parts[1];
       }
       return "—";
     }
@@ -111,6 +114,35 @@
         d.setDate(start.getDate() + i);
         return d;
       });
+    }
+
+    function chapterLevel(ch) {
+      if (!S) return "none";
+      const row = (S.getAnatomie() || {})[ch];
+      if (!row) return "none";
+      const lastReady = (row.lastN || 0) >= S.MIN_Q;
+      const cumulReady = (row.n || 0) >= S.MIN_Q;
+      const last = lastReady ? row.lastLevel || "none" : "none";
+      const cumul = cumulReady ? row.level || "none" : "none";
+      if (last === "red" || cumul === "red") return "red";
+      if (last === "blue" || cumul === "blue") return "blue";
+      if (last === "green" || cumul === "green") return "green";
+      return "none";
+    }
+
+    function updateSelBar() {
+      const bar = document.getElementById("sel-bar");
+      if (selectedChapter) {
+        bar.hidden = false;
+        bar.textContent =
+          "Chapitre sélectionné : " +
+          selectedChapter +
+          " · " +
+          (P.CHAPTERS[selectedChapter] || "") +
+          " — touche un jour";
+      } else {
+        bar.hidden = true;
+      }
     }
 
     function renderBank() {
@@ -126,9 +158,7 @@
         btn.dataset.chapter = ch;
         btn.addEventListener("click", () => {
           selectedChapter = selectedChapter === ch ? null : ch;
-          document.getElementById("sel-hint").textContent = selectedChapter
-            ? "Sélectionné : " + selectedChapter + " — touche un jour pour placer."
-            : "Aucun chapitre sélectionné.";
+          updateSelBar();
           renderBank();
         });
         btn.addEventListener("dragstart", (e) => {
@@ -141,83 +171,142 @@
       }
     }
 
+    function renderToday() {
+      const t = P.todayISO();
+      const d = new Date();
+      document.getElementById("today-title").textContent =
+        "Aujourd’hui — " + DAYS[(d.getDay() + 6) % 7] + " " + fmtShort(t);
+      const list = document.getElementById("today-list");
+      list.innerHTML = "";
+      const items = P.placementsOn(t);
+      if (!items.length) {
+        list.innerHTML =
+          '<p class="hint" style="margin:0">Rien de planifié aujourd’hui — place un chapitre ci-dessous.</p>';
+        return;
+      }
+      items.forEach((p) => {
+        const level = chapterLevel(p.chapter);
+        const div = document.createElement("div");
+        div.className = "today-item";
+        div.innerHTML =
+          '<span class="today-name"><span class="pill pill-' +
+          level +
+          '"></span> <strong>' +
+          p.chapter +
+          " · " +
+          (P.CHAPTERS[p.chapter] || "") +
+          "</strong></span>" +
+          "<span class=\"ch-actions\">" +
+          '<a class="btn tiny" href="./qcm-player.html?ch=' +
+          p.chapter +
+          '">QCM</a>' +
+          '<a class="btn tiny secondary" href="./flashcards.html?ch=' +
+          p.chapter +
+          '">Flash</a>' +
+          '<a class="btn tiny secondary" href="./matiere/anatomie/ch' +
+          p.chapter +
+          '.html">Fiche</a>' +
+          '<button type="button" class="btn tiny secondary plan-remove" data-id="' +
+          p.id +
+          '">Retirer</button>' +
+          "</span>";
+        div.querySelector(".plan-remove").addEventListener("click", () => {
+          P.removePlacement(p.id);
+          renderAll();
+        });
+        list.appendChild(div);
+      });
+    }
+
+    function bindDayDrop(col, dateStr) {
+      col.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        col.classList.add("drag-over");
+      });
+      col.addEventListener("dragleave", () => col.classList.remove("drag-over"));
+      col.addEventListener("drop", (e) => {
+        e.preventDefault();
+        col.classList.remove("drag-over");
+        if (dragPlacementId) P.movePlacement(dragPlacementId, dateStr);
+        else if (dragChapter || selectedChapter) P.placeChapter(dragChapter || selectedChapter, dateStr);
+        dragChapter = null;
+        dragPlacementId = null;
+        selectedChapter = null;
+        updateSelBar();
+        renderAll();
+      });
+    }
+
     function renderWeek() {
       const dates = weekDates();
-      const label = document.getElementById("week-label");
-      label.textContent =
-        fmtShort(iso(dates[0])) + " → " + fmtShort(iso(dates[6])) + " / " + dates[0].getFullYear();
+      document.getElementById("week-label").textContent =
+        fmtShort(iso(dates[0])) + " → " + fmtShort(iso(dates[6])) + " · " + dates[0].getFullYear();
 
       const grid = document.getElementById("week-grid");
       grid.innerHTML = "";
+      const today = P.todayISO();
+
       dates.forEach((d, i) => {
         const dateStr = iso(d);
         const col = document.createElement("div");
-        col.className = "plan-day";
+        col.className = "plan-day-row" + (dateStr === today ? " is-today" : "");
         col.dataset.date = dateStr;
+
         const head = document.createElement("div");
-        head.className = "plan-day-head";
-        head.innerHTML = "<strong>" + DAYS[i] + "</strong> <span>" + fmtShort(dateStr) + "</span>";
+        head.className = "day-head";
+        head.innerHTML =
+          "<span>" +
+          DAYS[i] +
+          " " +
+          fmtShort(dateStr) +
+          "</span><span>" +
+          (dateStr === today ? "Aujourd’hui" : "") +
+          "</span>";
         col.appendChild(head);
 
-        const list = document.createElement("div");
-        list.className = "plan-day-list";
+        const chips = document.createElement("div");
+        chips.className = "day-chips";
         P.placementsOn(dateStr).forEach((p) => {
+          const level = chapterLevel(p.chapter);
           const chip = document.createElement("div");
-          chip.className = "plan-item";
+          chip.className = "day-chip";
           chip.draggable = true;
           chip.innerHTML =
-            "<span>" +
+            '<span class="pill pill-' +
+            level +
+            '"></span> <span>' +
             p.chapter +
-            " " +
-            (P.CHAPTERS[p.chapter] || "") +
-            '</span><button type="button" class="plan-x" aria-label="Retirer">×</button>';
+            "</span>" +
+            '<button type="button" class="plan-x" aria-label="Retirer">×</button>';
           chip.querySelector(".plan-x").addEventListener("click", (e) => {
             e.stopPropagation();
             P.removePlacement(p.id);
-            renderWeek();
-            renderActivity();
+            renderAll();
           });
           chip.addEventListener("dragstart", (e) => {
+            e.stopPropagation();
             dragPlacementId = p.id;
             dragChapter = null;
             e.dataTransfer.setData("text/plain", p.id);
             e.dataTransfer.effectAllowed = "move";
           });
-          list.appendChild(chip);
+          chips.appendChild(chip);
         });
-        col.appendChild(list);
+        col.appendChild(chips);
 
         col.addEventListener("click", () => {
-          if (!selectedChapter) return;
+          if (!selectedChapter) {
+            const bar = document.getElementById("sel-bar");
+            bar.hidden = false;
+            bar.textContent = "Choisis d’abord un chapitre en haut";
+            return;
+          }
           P.placeChapter(selectedChapter, dateStr);
           selectedChapter = null;
-          document.getElementById("sel-hint").textContent = "Aucun chapitre sélectionné.";
-          renderBank();
-          renderWeek();
-          renderActivity();
+          updateSelBar();
+          renderAll();
         });
-        col.addEventListener("dragover", (e) => {
-          e.preventDefault();
-          col.classList.add("drag-over");
-        });
-        col.addEventListener("dragleave", () => col.classList.remove("drag-over"));
-        col.addEventListener("drop", (e) => {
-          e.preventDefault();
-          col.classList.remove("drag-over");
-          if (dragPlacementId) {
-            P.movePlacement(dragPlacementId, dateStr);
-          } else if (dragChapter || selectedChapter) {
-            P.placeChapter(dragChapter || selectedChapter, dateStr);
-          }
-          dragChapter = null;
-          dragPlacementId = null;
-          selectedChapter = null;
-          document.getElementById("sel-hint").textContent = "Aucun chapitre sélectionné.";
-          renderBank();
-          renderWeek();
-          renderActivity();
-        });
-
+        bindDayDrop(col, dateStr);
         grid.appendChild(col);
       });
     }
@@ -227,26 +316,29 @@
       tbody.innerHTML = "";
       const all = P.getAllActivity();
       for (const ch of P.CHAPTER_ORDER) {
-        const title = P.CHAPTERS[ch];
         const a = all[ch] || {};
         const tr = document.createElement("tr");
         tr.innerHTML =
           "<td><strong>" +
           ch +
           "</strong> — " +
-          title +
-          "</td>" +
-          "<td>" +
+          P.CHAPTERS[ch] +
+          "</td><td>" +
           fmtShort(a.lastQcmAt) +
-          "</td>" +
-          "<td>" +
+          "</td><td>" +
           fmtShort(a.lastFicheAt) +
-          "</td>" +
-          "<td>" +
+          "</td><td>" +
           fmtShort(a.lastPlanningAt) +
           "</td>";
         tbody.appendChild(tr);
       }
+    }
+
+    function renderAll() {
+      renderBank();
+      renderToday();
+      renderWeek();
+      renderActivity();
     }
 
     document.getElementById("btn-prev").addEventListener("click", () => {
@@ -258,9 +350,7 @@
       renderWeek();
     });
 
-    renderBank();
-    renderWeek();
-    renderActivity();
+    renderAll();
   </script>
 </body>
 </html>
