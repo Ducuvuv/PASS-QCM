@@ -1,0 +1,372 @@
+/**
+ * PASS Duel Arena — Cardio Night Lab
+ * Direction artistique dark cozy / productivity (expérimentale)
+ * Appliquée UNIQUEMENT via fiche-cardio.cozy-night.html
+ * Ne modifie pas template_ultime_sorbonne.html
+ */
+
+:root {
+  --bg: #080b10;
+  --bg-2: #0c1118;
+  --surface: #10161f;
+  --raised: #171e29;
+  --border: #2a3545;
+  --ink: #e8edf5;
+  --mist: #8b96a8;
+  --teal: #5eead4;
+  --rose: #fb7185;
+  --amber: #fbbf24;
+  --mint: #34d399;
+  --glow-teal: rgba(94, 234, 212, 0.18);
+  --glow-rose: rgba(251, 113, 133, 0.22);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a3545 transparent;
+}
+
+html.cozy-night body,
+body.cozy-night-body {
+  background-color: var(--bg) !important;
+  color: var(--ink) !important;
+  font-family: "IBM Plex Sans", system-ui, sans-serif !important;
+  background-image:
+    radial-gradient(ellipse 90% 55% at 12% -10%, rgba(94, 234, 212, 0.12), transparent 55%),
+    radial-gradient(ellipse 70% 45% at 92% 8%, rgba(251, 113, 133, 0.1), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 50% 100%, rgba(52, 211, 153, 0.06), transparent 55%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%) !important;
+  background-attachment: fixed !important;
+  min-height: 100vh;
+}
+
+.cozy-night .font-sketch {
+  font-family: "Syne", system-ui, sans-serif !important;
+  letter-spacing: -0.02em;
+}
+
+/* Remap néo-brutal pastel → glass dark */
+.cozy-night .shadow-brutal,
+.cozy-night .shadow-brutal-sm,
+.cozy-night .shadow-brutal-lg {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 12px 40px rgba(0, 0, 0, 0.45),
+    0 0 40px var(--glow-teal) !important;
+}
+
+.cozy-night .sketch-border {
+  border-radius: 1.25rem !important;
+}
+
+.cozy-night .bg-yellow-50,
+.cozy-night .bg-orange-50,
+.cozy-night .bg-cyan-50,
+.cozy-night .bg-cyan-100,
+.cozy-night .bg-blue-50,
+.cozy-night .bg-blue-100,
+.cozy-night .bg-green-50,
+.cozy-night .bg-green-100,
+.cozy-night .bg-purple-50,
+.cozy-night .bg-purple-100,
+.cozy-night .bg-red-50,
+.cozy-night .bg-red-100,
+.cozy-night .bg-white,
+.cozy-night .bg-indigo-100,
+.cozy-night .bg-indigo-200 {
+  background-color: var(--surface) !important;
+  background-image: linear-gradient(
+    145deg,
+    rgba(94, 234, 212, 0.05),
+    transparent 42%
+  ) !important;
+}
+
+.cozy-night .bg-red-400 {
+  background-color: #e11d48 !important;
+  box-shadow: 0 0 28px var(--glow-rose) !important;
+}
+
+.cozy-night .bg-red-300 {
+  background-color: rgba(251, 113, 133, 0.25) !important;
+  color: #fecaca !important;
+}
+
+.cozy-night .bg-yellow-300 {
+  background-color: rgba(251, 191, 36, 0.22) !important;
+  color: #fde68a !important;
+}
+
+.cozy-night .bg-green-300 {
+  background-color: rgba(52, 211, 153, 0.22) !important;
+  color: #a7f3d0 !important;
+}
+
+.cozy-night .bg-indigo-200,
+.cozy-night .bg-indigo-300,
+.cozy-night .hover\:bg-indigo-300:hover {
+  background-color: rgba(94, 234, 212, 0.2) !important;
+  color: var(--ink) !important;
+}
+
+.cozy-night .border-black,
+.cozy-night .border-2.border-black {
+  border-color: var(--border) !important;
+}
+
+.cozy-night .text-gray-900 {
+  color: var(--ink) !important;
+}
+
+.cozy-night .text-gray-600,
+.cozy-night .text-gray-500 {
+  color: var(--mist) !important;
+}
+
+.cozy-night .text-red-600,
+.cozy-night .text-red-500 {
+  color: var(--rose) !important;
+}
+
+.cozy-night .text-green-600,
+.cozy-night .text-green-500 {
+  color: var(--mint) !important;
+}
+
+.cozy-night .text-yellow-600,
+.cozy-night .text-yellow-500 {
+  color: var(--amber) !important;
+}
+
+.cozy-night main > section > h2,
+.cozy-night main header h1,
+.cozy-night main header h2 {
+  font-family: "Syne", system-ui, sans-serif !important;
+}
+
+.cozy-night main > section {
+  backdrop-filter: blur(8px);
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.45s ease,
+    filter 0.45s ease;
+}
+
+.cozy-night main > section:hover {
+  border-color: rgba(94, 234, 212, 0.35) !important;
+  box-shadow:
+    0 0 0 1px rgba(94, 234, 212, 0.1),
+    0 16px 48px rgba(0, 0, 0, 0.4) !important;
+}
+
+.cozy-night main header span.bg-white {
+  background: var(--raised) !important;
+  border-color: var(--border) !important;
+  color: var(--mist) !important;
+}
+
+/* Keep mascotte animations from original inline styles */
+.cozy-night .reveal-transition {
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Focus tunnel (doux, yeux au repos) */
+.cozy-night .focus-dim {
+  filter: none !important;
+}
+
+.cozy-night .focus-dim main > section:not(:hover) {
+  opacity: 0.52;
+  filter: saturate(0.7);
+}
+
+.cozy-night .focus-dim main > section:hover {
+  opacity: 1;
+  filter: none;
+}
+
+/* HUD */
+.night-hud {
+  background: rgba(12, 17, 24, 0.84);
+  backdrop-filter: blur(18px) saturate(1.15);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.4);
+}
+
+.hud-chip {
+  background: var(--raised);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hud-chip:hover {
+  border-color: rgba(94, 234, 212, 0.45);
+  box-shadow: 0 0 20px var(--glow-teal);
+}
+
+.hud-score {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-weight: 600;
+}
+
+.focus-toggle-track {
+  width: 2.5rem;
+  height: 1.35rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  position: relative;
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.focus-toggle-knob {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  background: var(--ink);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition:
+    left 0.2s ease,
+    background 0.2s ease;
+}
+
+.chrono-pill {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  background: #061016;
+  color: var(--teal);
+  border: 1px solid rgba(94, 234, 212, 0.35);
+  box-shadow: 0 0 24px var(--glow-teal);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+}
+
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(251, 113, 133, 0.14), rgba(94, 234, 212, 0.08)),
+    var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 1.5rem !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.03),
+    0 24px 64px rgba(0, 0, 0, 0.4) !important;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: -40% auto auto 60%;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, var(--glow-rose), transparent 70%);
+  pointer-events: none;
+  animation: orb-drift 8s ease-in-out infinite;
+}
+
+@keyframes orb-drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-30px, 20px);
+  }
+}
+
+.exp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: rgba(94, 234, 212, 0.1);
+  border: 1px solid rgba(94, 234, 212, 0.28);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+}
+
+.stats-panel {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 1.25rem !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35) !important;
+}
+
+.cozy-night .speech-bubble {
+  background: var(--raised) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.35),
+    0 0 24px var(--glow-rose) !important;
+}
+
+.cozy-night .speech-bubble::after {
+  border-color: var(--raised) transparent transparent transparent !important;
+  filter: none !important;
+  bottom: -10px !important;
+  left: 48% !important;
+  border-width: 10px 10px 0 10px !important;
+}
+
+.cozy-night main section svg path[stroke="#1f2937"] {
+  stroke: #5eead4 !important;
+  opacity: 0.45 !important;
+}
+
+.cozy-night button {
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.cozy-night button:active {
+  transform: scale(0.97);
+}
+
+.night-footer {
+  border-top: 1px solid var(--border);
+  color: var(--mist);
+  background: rgba(8, 11, 16, 0.65);
+}
+
+.cozy-night ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cozy-night ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cozy-night ::-webkit-scrollbar-thumb {
+  background: #2a3545;
+  border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-banner::before,
+  .cozy-night .animate-heartbeat,
+  .cozy-night .animate-heartbeat-slow,
+  .cozy-night .animate-jump,
+  .cozy-night .animate-wiggle {
+    animation: none !important;
+  }
+}

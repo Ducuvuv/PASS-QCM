@@ -43,13 +43,15 @@ window.PASS_ITEMS = [
     "tags": [
       "moelle_spinale",
       "L1_L2",
-      "foramen_magnum"
+      "foramen_magnum",
+      "P1"
     ],
     "course_ref": "02_Systeme_nerveux#2.2",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-02-000002",
@@ -95,13 +97,15 @@ window.PASS_ITEMS = [
     "tags": [
       "moelle_spinale",
       "substance_grise",
-      "substance_blanche"
+      "substance_blanche",
+      "P1"
     ],
     "course_ref": "02_Systeme_nerveux#2.1",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-02-000003",
@@ -147,13 +151,15 @@ window.PASS_ITEMS = [
     "tags": [
       "corne_ventrale",
       "corne_dorsale",
-      "ganglion_spinal"
+      "ganglion_spinal",
+      "P1"
     ],
     "course_ref": "02_Systeme_nerveux#2.7",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-02-000004",
@@ -199,13 +205,15 @@ window.PASS_ITEMS = [
     "tags": [
       "renflement_cervical",
       "nerfs_spinaux",
-      "C8"
+      "C8",
+      "P1"
     ],
     "course_ref": "02_Systeme_nerveux#2.3",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-02-000005",
@@ -251,13 +259,15 @@ window.PASS_ITEMS = [
       "tronc_cerebral",
       "mesencephale",
       "pont",
-      "moelle_allongee"
+      "moelle_allongee",
+      "P1"
     ],
     "course_ref": "02_Systeme_nerveux#3.2",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-02-000006",
@@ -304,13 +314,15 @@ window.PASS_ITEMS = [
       "meninges",
       "dure_mere",
       "arachnoid",
-      "pie_mere"
+      "pie_mere",
+      "P1"
     ],
     "course_ref": "02_Systeme_nerveux#7",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-02-000007",
@@ -356,13 +368,15 @@ window.PASS_ITEMS = [
     "tags": [
       "sillon_central",
       "sillon_parieto_occipital",
-      "insula"
+      "insula",
+      "P1"
     ],
     "course_ref": "02_Systeme_nerveux#8.4",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-02-000008",
@@ -408,13 +422,15 @@ window.PASS_ITEMS = [
     "tags": [
       "thalamus",
       "noyau_lenticulaire",
-      "putamen"
+      "putamen",
+      "P1"
     ],
     "course_ref": "02_Systeme_nerveux#8.2",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-02-000009",
@@ -459,13 +475,15 @@ window.PASS_ITEMS = [
     "tags": [
       "broca",
       "wernicke",
-      "langage"
+      "langage",
+      "P1"
     ],
     "course_ref": "02_Systeme_nerveux#8",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-02-000010",
@@ -511,13 +529,15 @@ window.PASS_ITEMS = [
     "tags": [
       "LCS",
       "ventricules",
-      "aqueduc"
+      "aqueduc",
+      "P3"
     ],
     "course_ref": "02_Systeme_nerveux#4",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P3"
   },
   {
     "id": "GEN-ANAT-02-000011",
@@ -563,13 +583,15 @@ window.PASS_ITEMS = [
     "tags": [
       "sympathique",
       "parasympathique",
-      "autonome"
+      "autonome",
+      "P3"
     ],
     "course_ref": "02_Systeme_nerveux#9",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P3"
   },
   {
     "id": "GEN-ANAT-02-000012",
@@ -614,13 +636,15 @@ window.PASS_ITEMS = [
     "tags": [
       "diencephale",
       "thalamus",
-      "V3"
+      "V3",
+      "P3"
     ],
     "course_ref": "02_Systeme_nerveux#6",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P3"
   },
   {
     "id": "GEN-ANAT-02-000013",
@@ -664,13 +688,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "cervelet",
-      "pedoncules"
+      "pedoncules",
+      "P3"
     ],
     "course_ref": "02_Systeme_nerveux#5",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P3"
   },
   {
     "id": "GEN-ANAT-02-000014",
@@ -716,13 +742,15 @@ window.PASS_ITEMS = [
     "tags": [
       "SNC",
       "SNP",
-      "autonome"
+      "autonome",
+      "P3"
     ],
     "course_ref": "02_Systeme_nerveux#1",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P3"
   },
   {
     "id": "GEN-ANAT-02-000015",
@@ -767,13 +795,15 @@ window.PASS_ITEMS = [
     "tags": [
       "face_mediale",
       "sillon_cingulaire",
-      "sillon_parieto_occipital"
+      "sillon_parieto_occipital",
+      "P1"
     ],
     "course_ref": "02_Systeme_nerveux#8.5",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-02-000016",
@@ -819,13 +849,15 @@ window.PASS_ITEMS = [
     "tags": [
       "tronc_cerebral",
       "reticulee",
-      "pedoncules"
+      "pedoncules",
+      "P1"
     ],
     "course_ref": "02_Systeme_nerveux#3",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-02-000017",
@@ -871,13 +903,15 @@ window.PASS_ITEMS = [
     "tags": [
       "queue_de_cheval",
       "cone_terminal",
-      "L1_L2"
+      "L1_L2",
+      "P1"
     ],
     "course_ref": "02_Systeme_nerveux#2.4",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-02-000018",
@@ -922,13 +956,15 @@ window.PASS_ITEMS = [
     "tags": [
       "putamen",
       "noyau_lenticulaire",
-      "ganglions_base"
+      "ganglions_base",
+      "P1"
     ],
     "course_ref": "02_Systeme_nerveux#8.2",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-02-000019",
@@ -972,13 +1008,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "meninges",
-      "SLYM"
+      "SLYM",
+      "P1"
     ],
     "course_ref": "02_Systeme_nerveux#7.4",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-02-000020",
@@ -1024,12 +1062,2977 @@ window.PASS_ITEMS = [
       "sillon_lateral",
       "temporal",
       "insula",
-      "sillon_central"
+      "sillon_central",
+      "P1"
     ],
     "course_ref": "02_Systeme_nerveux#8.4",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000021",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le système nerveux central (névraxe), laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l’encéphale comprend hémisphères cérébraux, tronc cérébral et cervelet",
+      "B": "la moelle spinale fait partie du névraxe",
+      "C": "la moelle spinale appartient au système nerveux périphérique",
+      "D": "le névraxe comprend encéphale et moelle spinale",
+      "E": "le cervelet n’appartient pas à l’encéphale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "encéphale = 3 composants"
+      },
+      "B": {
+        "correct": true,
+        "why": "moelle = névraxe"
+      },
+      "C": {
+        "correct": false,
+        "why": "moelle = SNC"
+      },
+      "D": {
+        "correct": true,
+        "why": "névraxe = encéphale + moelle"
+      },
+      "E": {
+        "correct": false,
+        "why": "cervelet = encéphale"
+      }
+    },
+    "tags": [
+      "SNC",
+      "nevraxe",
+      "encephale",
+      "P3"
+    ],
+    "course_ref": "02_Systeme_nerveux#1.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-02-000022",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos des nerfs crâniens I et II, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le nerf olfactif (I) est une expansion du système nerveux central",
+      "B": "le nerf optique (II) est une expansion du système nerveux central",
+      "C": "les nerfs III à XII naissent de noyaux du tronc cérébral",
+      "D": "les nerfs I et II appartiennent au système nerveux périphérique classique",
+      "E": "les nerfs III à XII appartiennent au système nerveux périphérique"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "I = expansion SNC"
+      },
+      "B": {
+        "correct": true,
+        "why": "II = expansion SNC"
+      },
+      "C": {
+        "correct": true,
+        "why": "III–XII : noyaux tronc"
+      },
+      "D": {
+        "correct": false,
+        "why": "I et II = expansions SNC"
+      },
+      "E": {
+        "correct": true,
+        "why": "III–XII = SNP"
+      }
+    },
+    "tags": [
+      "nerfs_craniens",
+      "olfactif",
+      "optique",
+      "P3"
+    ],
+    "course_ref": "02_Systeme_nerveux#1.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-02-000023",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le système nerveux autonome (végétatif), laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il ne nécessite aucune commande volontaire",
+      "B": "il est mixte entre systèmes nerveux central et périphérique",
+      "C": "il contient des centres au niveau du SNC",
+      "D": "il ne comporte aucune voie périphérique",
+      "E": "il est entièrement périphérique sans centre central"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "pas de commande volontaire"
+      },
+      "B": {
+        "correct": true,
+        "why": "mixte SNC + SNP"
+      },
+      "C": {
+        "correct": true,
+        "why": "centres dans le SNC"
+      },
+      "D": {
+        "correct": false,
+        "why": "voies périphériques présentes"
+      },
+      "E": {
+        "correct": false,
+        "why": "centres + voies périphériques"
+      }
+    },
+    "tags": [
+      "autonome",
+      "vegetatif",
+      "P3"
+    ],
+    "course_ref": "02_Systeme_nerveux#1.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-02-000024",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le canal central de la moelle spinale, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est aussi appelé canal épendymaire",
+      "B": "il se situe au milieu de la substance grise",
+      "C": "il est décrit comme quasi virtuel (très petit)",
+      "D": "il se situe en périphérie de la substance blanche",
+      "E": "il occupe la fissure médiane ventrale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "canal central = épendymaire"
+      },
+      "B": {
+        "correct": true,
+        "why": "centre de la substance grise"
+      },
+      "C": {
+        "correct": true,
+        "why": "quasi virtuel"
+      },
+      "D": {
+        "correct": false,
+        "why": "central, pas périphérique"
+      },
+      "E": {
+        "correct": false,
+        "why": "fissure ventrale ≠ canal central"
+      }
+    },
+    "tags": [
+      "canal_central",
+      "ependyme",
+      "moelle",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#2.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000025",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos de l’organisation des racines nerveuses, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "des radicelles naissent de la moelle et forment racines ventrale et dorsale",
+      "B": "racine ventrale et dorsale forment le nerf spinal",
+      "C": "le nerf spinal sort par le foramen intervertébral",
+      "D": "le nerf spinal ne se divise jamais après sa formation",
+      "E": "des branches ventrales peuvent participer à un plexus nerveux"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "radicelles → racines V/D"
+      },
+      "B": {
+        "correct": true,
+        "why": "racines → nerf spinal"
+      },
+      "C": {
+        "correct": true,
+        "why": "sortie par foramen intervertébral"
+      },
+      "D": {
+        "correct": false,
+        "why": "nerf se redivise en branches V/D"
+      },
+      "E": {
+        "correct": true,
+        "why": "branches ventrales → plexus"
+      }
+    },
+    "tags": [
+      "racines",
+      "nerf_spinal",
+      "plexus",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#2.5.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000026",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant les 31 paires de nerfs spinaux, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il y a 8 nerfs cervicaux",
+      "B": "il y a 12 nerfs thoraciques",
+      "C": "il y a 5 lombaires, 5 sacrés et 1 coccygien",
+      "D": "il y a 7 nerfs cervicaux comme 7 vertèbres cervicales",
+      "E": "le total est de 31 paires"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "8 cervicaux"
+      },
+      "B": {
+        "correct": true,
+        "why": "12 thoraciques"
+      },
+      "C": {
+        "correct": true,
+        "why": "5 + 5 + 1"
+      },
+      "D": {
+        "correct": false,
+        "why": "8 nerfs cervicaux pour 7 vertèbres"
+      },
+      "E": {
+        "correct": true,
+        "why": "8+12+5+5+1 = 31"
+      }
+    },
+    "tags": [
+      "nerfs_spinaux",
+      "31_paires",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#2.5.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000027",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Parmi les propositions suivantes sur la sortie des nerfs spinaux, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "à l’étage cervical, le nerf sort au-dessus de la vertèbre correspondante",
+      "B": "le 8e nerf cervical sort en dessous de C7",
+      "C": "aux autres étages, le nerf sort en dessous de la vertèbre correspondante",
+      "D": "le 1er nerf cervical sort au-dessus de C1",
+      "E": "tous les nerfs sortent toujours en dessous de leur vertèbre"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "cervical : au-dessus"
+      },
+      "B": {
+        "correct": true,
+        "why": "C8 sous C7"
+      },
+      "C": {
+        "correct": true,
+        "why": "autres étages : en dessous"
+      },
+      "D": {
+        "correct": true,
+        "why": "C1 au-dessus de C1"
+      },
+      "E": {
+        "correct": false,
+        "why": "règle différente au cervical"
+      }
+    },
+    "tags": [
+      "foramen",
+      "cervical",
+      "C8",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#2.5.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000028",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant les sillons de la substance blanche médullaire, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la fissure médiane ventrale est en avant et très profonde",
+      "B": "le sillon médian dorsal est en arrière et moins prononcé",
+      "C": "il existe des sillons ventral et dorsal latéraux",
+      "D": "la fissure ventrale est moins profonde que le sillon dorsal",
+      "E": "il n’existe aucun sillon latéral"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "fissure ventrale antérieure profonde"
+      },
+      "B": {
+        "correct": true,
+        "why": "sillon dorsal moins prononcé"
+      },
+      "C": {
+        "correct": true,
+        "why": "sillons latéraux V et D"
+      },
+      "D": {
+        "correct": false,
+        "why": "ventrale plus profonde"
+      },
+      "E": {
+        "correct": false,
+        "why": "2 sillons latéraux"
+      }
+    },
+    "tags": [
+      "sillons",
+      "substance_blanche",
+      "moelle",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#2.6",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000029",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos de la corne latérale de la moelle, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "elle est située au niveau thoracique",
+      "B": "elle se trouve entre corne ventrale et corne dorsale",
+      "C": "c’est un point de départ du système nerveux autonome",
+      "D": "elle est motrice comme la corne ventrale",
+      "E": "elle est absente à tous les étages médullaires"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "niveau thoracique"
+      },
+      "B": {
+        "correct": true,
+        "why": "entre ventrale et dorsale"
+      },
+      "C": {
+        "correct": true,
+        "why": "départ SN autonome"
+      },
+      "D": {
+        "correct": false,
+        "why": "ventrale = motrice"
+      },
+      "E": {
+        "correct": false,
+        "why": "présente au thoracique"
+      }
+    },
+    "tags": [
+      "corne_laterale",
+      "autonome",
+      "thoracique",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#2.7.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000030",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant la situation du tronc cérébral, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est dans la fosse cérébrale postérieure",
+      "B": "il est en infra-tentoriel / sous-tentoriel",
+      "C": "il est relié au cervelet par 3 paires de pédoncules cérébelleux",
+      "D": "il est en supra-tentoriel exclusivement",
+      "E": "il prolonge la moelle spinale cervicale au foramen magnum"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "fosse postérieure"
+      },
+      "B": {
+        "correct": true,
+        "why": "infra-tentoriel"
+      },
+      "C": {
+        "correct": true,
+        "why": "3 paires de pédoncules"
+      },
+      "D": {
+        "correct": false,
+        "why": "infra-tentoriel"
+      },
+      "E": {
+        "correct": true,
+        "why": "prolongement moelle au foramen magnum"
+      }
+    },
+    "tags": [
+      "tronc_cerebral",
+      "pedoncules",
+      "infra_tentoriel",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#3.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000031",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Parmi les propositions suivantes sur le liquide cérébro-spinal, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est sécrété par les plexus choroïdes",
+      "B": "il est résorbé par les granulations arachnoïdiennes",
+      "C": "il circule dans les ventricules recouverts d’épendyme",
+      "D": "il n’a aucun rôle de protection en cas de choc",
+      "E": "son renouvellement est constant"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "sécrétion plexus choroïdes"
+      },
+      "B": {
+        "correct": true,
+        "why": "résorption granulations arachnoïdiennes"
+      },
+      "C": {
+        "correct": true,
+        "why": "ventricules + épendyme"
+      },
+      "D": {
+        "correct": false,
+        "why": "rôle tampon protecteur"
+      },
+      "E": {
+        "correct": true,
+        "why": "renouvellement constant"
+      }
+    },
+    "tags": [
+      "LCS",
+      "plexus_choroides",
+      "P3"
+    ],
+    "course_ref": "02_Systeme_nerveux#4.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-02-000032",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant les ventricules cérébraux, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les ventricules latéraux sont dans les hémisphères",
+      "B": "ils communiquent avec le V3 par les foramens interventriculaires",
+      "C": "le V3 est impair et médian, dans le diencéphale",
+      "D": "le V4 est en arrière du pont et de la moelle allongée",
+      "E": "le V3 est situé dans le cervelet"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "VL dans hémisphères"
+      },
+      "B": {
+        "correct": true,
+        "why": "foramens interventriculaires → V3"
+      },
+      "C": {
+        "correct": true,
+        "why": "V3 médian, diencéphale"
+      },
+      "D": {
+        "correct": true,
+        "why": "V4 postérieur pont + moelle allongée"
+      },
+      "E": {
+        "correct": false,
+        "why": "V3 = diencéphale"
+      }
+    },
+    "tags": [
+      "ventricules",
+      "V3",
+      "V4",
+      "P3"
+    ],
+    "course_ref": "02_Systeme_nerveux#4.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-02-000033",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos du diencéphale, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il est situé entre les deux hémisphères cérébraux",
+      "B": "il comprend thalamus, hypothalamus, épithalamus et noyau sub-thalamique",
+      "C": "l’hypothalamus rétro-contrôle le système nerveux autonome",
+      "D": "l’épithalamus comprend l’épiphyse (mélatonine, sommeil)",
+      "E": "il est centré par le ventricule latéral"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "entre les hémisphères"
+      },
+      "B": {
+        "correct": true,
+        "why": "4 sous-régions"
+      },
+      "C": {
+        "correct": true,
+        "why": "hypothalamus → autonome"
+      },
+      "D": {
+        "correct": true,
+        "why": "épiphyse / mélatonine"
+      },
+      "E": {
+        "correct": false,
+        "why": "centré par V3"
+      }
+    },
+    "tags": [
+      "diencephale",
+      "thalamus",
+      "hypothalamus",
+      "P3"
+    ],
+    "course_ref": "02_Systeme_nerveux#6",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-02-000034",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant les espaces méningés, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l’espace extra-dural est entre os et dure-mère",
+      "B": "l’espace sous-dural est entre dure-mère et arachnoïde",
+      "C": "l’espace sous-arachnoïdien est entre arachnoïde et pie-mère",
+      "D": "l’espace sous-arachnoïdien contient notamment le LCS",
+      "E": "l’espace extra-dural est entre arachnoïde et pie-mère"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "extra-dural = os / dure-mère"
+      },
+      "B": {
+        "correct": true,
+        "why": "sous-dural = dure / arachnoïde"
+      },
+      "C": {
+        "correct": true,
+        "why": "sous-arachnoïdien = arachnoïde / pie-mère"
+      },
+      "D": {
+        "correct": true,
+        "why": "LCS dans espace sub-arachnoïdien"
+      },
+      "E": {
+        "correct": false,
+        "why": "extra-dural ≠ sub-arachnoïdien"
+      }
+    },
+    "tags": [
+      "meninges",
+      "espaces",
+      "LCS",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#7.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000035",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Parmi les propositions suivantes sur les expansions de dure-mère, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la faux du cerveau sépare les hémisphères droit et gauche",
+      "B": "la tente du cervelet sépare hémisphères cérébraux et cervelet",
+      "C": "la tente délimite étages supra- et infra-tentoriels",
+      "D": "la faux du cerveau sépare le cervelet du tronc",
+      "E": "ces expansions appartiennent à la dure-mère"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "faux = séparation D/G"
+      },
+      "B": {
+        "correct": true,
+        "why": "tente = cérébraux / cervelet"
+      },
+      "C": {
+        "correct": true,
+        "why": "supra vs infra-tentoriel"
+      },
+      "D": {
+        "correct": false,
+        "why": "faux = hémisphères, pas cervelet"
+      },
+      "E": {
+        "correct": true,
+        "why": "expansions de dure-mère"
+      }
+    },
+    "tags": [
+      "faux_cerveau",
+      "tente_cervelet",
+      "dure_mere",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#7.5",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000036",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant les hémisphères cérébraux (configuration externe), laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "ils sont séparés par la fissure longitudinale sur la ligne médiane",
+      "B": "ils possèdent faces latérale, médiale et inférieure (basale)",
+      "C": "les pôles frontal, temporal et occipital sont décrits",
+      "D": "le corps calleux est une commissure inter-hémisphérique",
+      "E": "le corps calleux est un nerf périphérique"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "fissure longitudinale"
+      },
+      "B": {
+        "correct": true,
+        "why": "3 faces"
+      },
+      "C": {
+        "correct": true,
+        "why": "3 pôles"
+      },
+      "D": {
+        "correct": true,
+        "why": "corps calleux = commissure"
+      },
+      "E": {
+        "correct": false,
+        "why": "faisceau de substance blanche"
+      }
+    },
+    "tags": [
+      "hemispheres",
+      "corps_calleux",
+      "faces",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000037",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos de la face inférieure des hémisphères, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "on y voit les lobes frontal, temporal et occipital",
+      "B": "le lobe pariétal n’est pas visible sur cette face",
+      "C": "le sillon olfactif est visible dans le lobe frontal",
+      "D": "le sillon en H délimite le gyrus orbitaire",
+      "E": "le lobe de l’insula est bien visible en surface sur cette face"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "frontal, temporal, occipital visibles"
+      },
+      "B": {
+        "correct": true,
+        "why": "pas de pariétal en face inférieure"
+      },
+      "C": {
+        "correct": true,
+        "why": "sillon olfactif"
+      },
+      "D": {
+        "correct": true,
+        "why": "sillon en H / gyrus orbitaire"
+      },
+      "E": {
+        "correct": false,
+        "why": "insula non visible"
+      }
+    },
+    "tags": [
+      "face_inferieure",
+      "sillon_olfactif",
+      "insula",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.6",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000038",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant la classification de Brodmann, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "c’est une parcellisation cytoarchitectonique",
+      "B": "elle classe selon taille du corps cellulaire et composition cellulaire",
+      "C": "elle repose sur les lobes cérébraux uniquement",
+      "D": "chaque région porte un numéro",
+      "E": "une aire a souvent un rôle fonctionnel associé"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "cytoarchitectonique"
+      },
+      "B": {
+        "correct": true,
+        "why": "critères cellulaires"
+      },
+      "C": {
+        "correct": false,
+        "why": "non basée sur les lobes"
+      },
+      "D": {
+        "correct": true,
+        "why": "numérotation des aires"
+      },
+      "E": {
+        "correct": true,
+        "why": "intérêt fonctionnel"
+      }
+    },
+    "tags": [
+      "brodmann",
+      "cytoarchitectonique",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000039",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant la corne ventrale de la moelle, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "elle est motrice",
+      "B": "elle contient les motoneurones",
+      "C": "ses axones sortent par la racine ventrale",
+      "D": "elle met en jeu les muscles striés squelettiques",
+      "E": "elle reçoit le corps cellulaire du 1er neurone sensitif"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "corne ventrale = motrice"
+      },
+      "B": {
+        "correct": true,
+        "why": "corps des motoneurones"
+      },
+      "C": {
+        "correct": true,
+        "why": "axones → racine ventrale"
+      },
+      "D": {
+        "correct": true,
+        "why": "muscles striés squelettiques 🆕"
+      },
+      "E": {
+        "correct": false,
+        "why": "1er neurone sensitif = ganglion spinal"
+      }
+    },
+    "tags": [
+      "corne_ventrale",
+      "motoneurone",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#2.7.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000040",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos de la croissance moelle / canal vertébral, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le canal vertébral croît plus vite que la moelle",
+      "B": "in fine la moelle n’occupe que les 2/3 du canal",
+      "C": "la portion basse du canal contient la queue de cheval",
+      "D": "la moelle remplit tout le canal jusqu’au coccyx chez l’adulte",
+      "E": "les racines basses ont un trajet de plus en plus vertical"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "croissance différentielle"
+      },
+      "B": {
+        "correct": true,
+        "why": "2/3 du canal"
+      },
+      "C": {
+        "correct": true,
+        "why": "queue de cheval en bas"
+      },
+      "D": {
+        "correct": false,
+        "why": "terminaison L1/L2"
+      },
+      "E": {
+        "correct": true,
+        "why": "racines basses plus verticales"
+      }
+    },
+    "tags": [
+      "queue_de_cheval",
+      "croissance",
+      "canal_vertebral",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#2.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000041",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant la corne dorsale de la moelle spinale, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "elle est sensitive (tact, douleur, proprioception, température)",
+      "B": "elle contient le corps cellulaire du 1er neurone sensitif",
+      "C": "le 1er neurone sensitif est dans le ganglion spinal ou rachidien",
+      "D": "elle peut filtrer les informations sensitives",
+      "E": "elle est motrice comme la corne ventrale"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "corne dorsale = sensitive"
+      },
+      "B": {
+        "correct": false,
+        "why": "1er neurone = ganglion spinal"
+      },
+      "C": {
+        "correct": true,
+        "why": "ganglion spinal / rachidien"
+      },
+      "D": {
+        "correct": true,
+        "why": "rôle de filtrage possible"
+      },
+      "E": {
+        "correct": false,
+        "why": "motrice = corne ventrale"
+      }
+    },
+    "tags": [
+      "corne_dorsale",
+      "sensitive",
+      "ganglion_spinal",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#2.7.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000042",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos de la configuration externe de la moelle, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le renflement cervical correspond à la naissance de plexus pour les membres supérieurs",
+      "B": "la moelle thoracique est plutôt grêle",
+      "C": "le renflement lombaire correspond aux membres inférieurs",
+      "D": "le cône terminal est situé au niveau L1-L2",
+      "E": "le cône terminal donne naissance directement aux 31 paires de nerfs spinaux"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "renflement cervical → MS"
+      },
+      "B": {
+        "correct": true,
+        "why": "thoracique grêle"
+      },
+      "C": {
+        "correct": true,
+        "why": "renflement lombaire → MI"
+      },
+      "D": {
+        "correct": true,
+        "why": "cône terminal L1-L2"
+      },
+      "E": {
+        "correct": false,
+        "why": "racines → queue de cheval en dessous"
+      }
+    },
+    "tags": [
+      "renflement_cervical",
+      "renflement_lombaire",
+      "cone_terminal",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#2.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000043",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant les plexus nerveux issus des nerfs spinaux, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "plexus cervical : C1-C4",
+      "B": "plexus brachial : C5-T1",
+      "C": "plexus lombal : L1-L4",
+      "D": "plexus sacral : L4-S3",
+      "E": "plexus pudendal : S2-S4"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "cervical C1-C4"
+      },
+      "B": {
+        "correct": true,
+        "why": "brachial C5-T1"
+      },
+      "C": {
+        "correct": true,
+        "why": "lombal L1-L4"
+      },
+      "D": {
+        "correct": true,
+        "why": "sacral L4-S3"
+      },
+      "E": {
+        "correct": true,
+        "why": "pudendal S2-S4"
+      }
+    },
+    "tags": [
+      "plexus",
+      "brachial",
+      "sacral",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#2.5.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000044",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant les aspects fonctionnels du tronc cérébral, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est un lieu de passage des voies motrices descendantes",
+      "B": "il est un lieu de passage des voies sensitives ascendantes",
+      "C": "il contient la formation réticulée sur ses 3 étages",
+      "D": "la formation réticulée intervient dans le cycle éveil-sommeil",
+      "E": "la formation réticulée n’existe que dans le mésencéphale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "voies motrices descendantes"
+      },
+      "B": {
+        "correct": true,
+        "why": "voies sensitives ascendantes"
+      },
+      "C": {
+        "correct": true,
+        "why": "réticulée sur 3 étages"
+      },
+      "D": {
+        "correct": true,
+        "why": "régulation éveil-sommeil"
+      },
+      "E": {
+        "correct": false,
+        "why": "sur toute la longueur du tronc"
+      }
+    },
+    "tags": [
+      "tronc_cerebral",
+      "formation_reticulee",
+      "voies",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#3.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000045",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos du trajet du liquide cérébro-spinal (LCS), indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "les ventricules latéraux communiquent avec le V3 par les foramens interventriculaires",
+      "B": "l’aqueduc du mésencéphale relie le V3 au V4",
+      "C": "le foramen de Magendie permet la sortie du LCS vers l’espace sub-arachnoïdien",
+      "D": "le LCS est aussi appelé liquide céphalo-rachidien",
+      "E": "le V4 est situé en avant du pont uniquement, sans relation avec la moelle allongée"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "VL → foramens → V3"
+      },
+      "B": {
+        "correct": true,
+        "why": "aqueduc V3-V4"
+      },
+      "C": {
+        "correct": true,
+        "why": "Magendie → sub-arachnoïdien"
+      },
+      "D": {
+        "correct": true,
+        "why": "synonyme céphalo-rachidien"
+      },
+      "E": {
+        "correct": false,
+        "why": "V4 en arrière pont + moelle allongée"
+      }
+    },
+    "tags": [
+      "LCS",
+      "aqueduc",
+      "foramen_magendie",
+      "P3"
+    ],
+    "course_ref": "02_Systeme_nerveux#4.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-02-000046",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le cervelet, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est relié en arrière au tronc cérébral",
+      "B": "il contient 50 % des neurones de l’encéphale",
+      "C": "il contrôle mouvement, posture, tonus, équilibre et oculomotricité",
+      "D": "il n’a aucun rôle cognitif ou émotionnel",
+      "E": "il intervient sur la voie descendante de la motricité"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "relié au tronc en arrière"
+      },
+      "B": {
+        "correct": true,
+        "why": "50 % neurones encéphale"
+      },
+      "C": {
+        "correct": true,
+        "why": "motricité + posture + équilibre"
+      },
+      "D": {
+        "correct": false,
+        "why": "fonction cognitive et émotionnelle aussi"
+      },
+      "E": {
+        "correct": true,
+        "why": "contrôle voie descendante"
+      }
+    },
+    "tags": [
+      "cervelet",
+      "motricite",
+      "equilibre",
+      "P3"
+    ],
+    "course_ref": "02_Systeme_nerveux#5",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-02-000047",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos du thalamus et de l’hypothalamus, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le thalamus est un large noyau ovoïde de substance grise",
+      "B": "le thalamus est un relais vers le cortex cérébral",
+      "C": "le thalamus filtre et traite informations sensitives et motrices",
+      "D": "l’hypothalamus rétro-contrôle le système nerveux autonome",
+      "E": "l’hypothalamus ne sécrète aucune hormone"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "noyau ovoïde substance grise"
+      },
+      "B": {
+        "correct": true,
+        "why": "relai vers cortex"
+      },
+      "C": {
+        "correct": true,
+        "why": "transmission + traitement + filtration"
+      },
+      "D": {
+        "correct": true,
+        "why": "rétro-contrôle autonome"
+      },
+      "E": {
+        "correct": false,
+        "why": "hypothalamus sécrète des hormones"
+      }
+    },
+    "tags": [
+      "thalamus",
+      "hypothalamus",
+      "diencephale",
+      "P3"
+    ],
+    "course_ref": "02_Systeme_nerveux#6.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-02-000048",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant les méninges (feuillets), laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "dure-mère : feuillet externe, épais",
+      "B": "arachnoïde : feuillet intermédiaire, très fine",
+      "C": "pie-mère : feuillet interne, au contact du système nerveux",
+      "D": "pie-mère est porte-vaisseaux et très vascularisée",
+      "E": "l’ordre de l’extérieur vers l’intérieur est pie-mère, arachnoïde, dure-mère"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "dure-mère externe épaisse"
+      },
+      "B": {
+        "correct": true,
+        "why": "arachnoïde intermédiaire fine"
+      },
+      "C": {
+        "correct": true,
+        "why": "pie-mère interne, contact SNC"
+      },
+      "D": {
+        "correct": true,
+        "why": "pie-mère porte-vaisseaux"
+      },
+      "E": {
+        "correct": false,
+        "why": "ordre : dure → arachnoïde → pie-mère"
+      }
+    },
+    "tags": [
+      "meninges",
+      "dure_mere",
+      "pie_mere",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#7.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000049",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Sur une coupe frontale des hémisphères cérébraux, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "on repère le noyau lenticulaire (putamen et pallidum)",
+      "B": "on repère le thalamus",
+      "C": "on repère le ventricule latéral",
+      "D": "le cortex est en profondeur et la substance blanche en périphérie",
+      "E": "les noyaux gris centraux participent au contrôle des mouvements"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "noyau lenticulaire ⭐⭐⭐"
+      },
+      "B": {
+        "correct": true,
+        "why": "thalamus ⭐⭐⭐"
+      },
+      "C": {
+        "correct": true,
+        "why": "ventricule latéral central"
+      },
+      "D": {
+        "correct": false,
+        "why": "cortex périphérique, blanche profonde"
+      },
+      "E": {
+        "correct": true,
+        "why": "ganglions de la base → mouvements"
+      }
+    },
+    "tags": [
+      "coupe_frontale",
+      "noyau_lenticulaire",
+      "thalamus",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000050",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant la face latérale de l’hémisphère cérébral, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "on y voit les lobes frontal, pariétal, temporal et occipital",
+      "B": "le lobe de l’insula est visible en surface sur cette face",
+      "C": "le sillon latéral sépare le lobe temporal (bas) du frontal et pariétal (haut)",
+      "D": "le sillon central sépare le lobe frontal (avant) du pariétal (arrière)",
+      "E": "un grand sillon sépare toujours clairement temporal et occipital"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "4 lobes visibles latéralement"
+      },
+      "B": {
+        "correct": false,
+        "why": "insula enfouie dans sillon latéral"
+      },
+      "C": {
+        "correct": true,
+        "why": "sillon latéral"
+      },
+      "D": {
+        "correct": true,
+        "why": "sillon central frontal/pariétal"
+      },
+      "E": {
+        "correct": false,
+        "why": "pas de grand sillon temporal-occipital"
+      }
+    },
+    "tags": [
+      "face_laterale",
+      "sillon_latéral",
+      "sillon_central",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000051",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos de la face médiale de l’hémisphère, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le sillon cingulaire est situé dans les lobes frontal et pariétal",
+      "B": "le sillon cingulaire délimite avec le corps calleux le gyrus cingulaire",
+      "C": "le sillon pariéto-occipital sépare en partie pariétal et occipital",
+      "D": "le sillon central est visible sur cette face",
+      "E": "le lobe de l’insula est bien visible sur la face médiale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "sillon cingulaire ⭐⭐⭐"
+      },
+      "B": {
+        "correct": true,
+        "why": "gyrus cingulaire / corps calleux"
+      },
+      "C": {
+        "correct": true,
+        "why": "sillon pariéto-occipital ⭐⭐⭐"
+      },
+      "D": {
+        "correct": true,
+        "why": "sillon central ⭐⭐ médial aussi"
+      },
+      "E": {
+        "correct": false,
+        "why": "insula non visible"
+      }
+    },
+    "tags": [
+      "face_mediale",
+      "sillon_cingulaire",
+      "parieto_occipital",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.5",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000052",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le lobe frontal (régions et gyrus), laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la région motrice primaire correspond au gyrus précentral",
+      "B": "la région prémotrice est en avant du sillon précentral",
+      "C": "F3 (gyrus frontal inférieur) contient la région de Broca (langage, hémisphère dominant)",
+      "D": "F2 est entre les sillons frontaux supérieur et inférieur",
+      "E": "Broca est dans le lobe temporal et Wernicke dans le frontal"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "gyrus précentral = motrice primaire"
+      },
+      "B": {
+        "correct": true,
+        "why": "prémotrice avant sillon précentral"
+      },
+      "C": {
+        "correct": true,
+        "why": "Broca en F3, hémisphère dominant"
+      },
+      "D": {
+        "correct": true,
+        "why": "F2 entre sillons supérieur et inférieur"
+      },
+      "E": {
+        "correct": false,
+        "why": "Broca frontal, Wernicke temporal"
+      }
+    },
+    "tags": [
+      "lobe_frontal",
+      "broca",
+      "F2",
+      "F3",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.7",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000053",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le lobe pariétal, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le gyrus post-central est la région de la sensibilité",
+      "B": "le sillon post-central est parallèle en arrière au sillon central",
+      "C": "le gyrus angulaire fait partie du lobule pariétal inférieur",
+      "D": "le lobe pariétal projette la position dans l’espace",
+      "E": "le gyrus post-central est en avant du sillon central"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "post-central = sensibilité"
+      },
+      "B": {
+        "correct": true,
+        "why": "sillon post-central ⭐"
+      },
+      "C": {
+        "correct": true,
+        "why": "angulaire ⭐⭐ lobule inférieur"
+      },
+      "D": {
+        "correct": true,
+        "why": "fonction pariétale"
+      },
+      "E": {
+        "correct": false,
+        "why": "post-central en arrière du central"
+      }
+    },
+    "tags": [
+      "lobe_parietal",
+      "gyrus_post_central",
+      "angulaire",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.8",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000054",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos du lobe temporal, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "T1 contient le gyrus de Heschl pour l’audition",
+      "B": "l’aire de Wernicke (langage) est en T1, uniquement à gauche",
+      "C": "l’hippocampe est une structure clé de la mémoire épisodique",
+      "D": "T4 fusionne avec O4 pour former le gyrus fusiforme",
+      "E": "Wernicke se situe dans le lobe frontal droit"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Heschl = audition"
+      },
+      "B": {
+        "correct": true,
+        "why": "Wernicke T1 gauche"
+      },
+      "C": {
+        "correct": true,
+        "why": "hippocampe ⭐ mémoire"
+      },
+      "D": {
+        "correct": true,
+        "why": "T4 + O4 = fusiforme"
+      },
+      "E": {
+        "correct": false,
+        "why": "Wernicke = temporal gauche"
+      }
+    },
+    "tags": [
+      "lobe_temporal",
+      "wernicke",
+      "heschl",
+      "hippocampe",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.9",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000055",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le lobe occipital, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le sillon calcarin projette les voies visuelles à la face interne",
+      "B": "le cortex visuel primaire entoure le sillon calcarin",
+      "C": "O5 correspond au gyrus lingual (inférieur et médial)",
+      "D": "O6 correspond au cunéus (médial, en arrière du pré-cunéus)",
+      "E": "le lobe occipital n’intervient pas dans l’intégration de la vision"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "calcarin = voies visuelles"
+      },
+      "B": {
+        "correct": true,
+        "why": "cortex visuel primaire autour"
+      },
+      "C": {
+        "correct": true,
+        "why": "O5 = lingual"
+      },
+      "D": {
+        "correct": true,
+        "why": "O6 = cunéus"
+      },
+      "E": {
+        "correct": false,
+        "why": "intégration visuelle occipitale"
+      }
+    },
+    "tags": [
+      "lobe_occipital",
+      "calcarin",
+      "vision",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.10",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000056",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le lobe de l’insula et le système limbique, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l’insula comporte une partie antérieure et postérieure",
+      "B": "l’insula intervient dans les réactions émotionnelles au toucher et à la douleur",
+      "C": "l’insula contient le cortex gustatif primaire",
+      "D": "le système limbique inclut hippocampe, amygdale et gyrus cingulaire",
+      "E": "le système limbique est exclusivement occipital"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "insula antérieure / postérieure"
+      },
+      "B": {
+        "correct": true,
+        "why": "émotions toucher/douleur"
+      },
+      "C": {
+        "correct": true,
+        "why": "cortex gustatif primaire"
+      },
+      "D": {
+        "correct": true,
+        "why": "limbique multi-lobes + diencéphale"
+      },
+      "E": {
+        "correct": false,
+        "why": "face médiale, plusieurs lobes"
+      }
+    },
+    "tags": [
+      "insula",
+      "systeme_limbique",
+      "hippocampe",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.11",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000057",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos de l’homonculus de Penfield et de l’hippocampe, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "l’homonculus illustre la disproportion corticale motrice vs taille réelle des régions",
+      "B": "il témoigne de la somatotopie sur le gyrus pré-central",
+      "C": "l’hippocampe est enroulé à la face médiale du lobe temporal",
+      "D": "l’hippocampe participe à la mémoire",
+      "E": "l’homonculus concerne exclusivement la sensibilité du gyrus post-central"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "disproportion surface corticale"
+      },
+      "B": {
+        "correct": true,
+        "why": "somatotopie gyrus pré-central"
+      },
+      "C": {
+        "correct": true,
+        "why": "hippocampe médial temporal"
+      },
+      "D": {
+        "correct": true,
+        "why": "rôle mémoire"
+      },
+      "E": {
+        "correct": false,
+        "why": "homonculus moteur (Penfield)"
+      }
+    },
+    "tags": [
+      "homonculus",
+      "penfield",
+      "hippocampe",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.13",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000058",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le système nerveux végétatif (organisation générale), laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les centres appartiennent au système nerveux central",
+      "B": "les voies périphériques appartiennent au système nerveux périphérique",
+      "C": "la commande se fait à 2 neurones (pré- et post-ganglionnaire)",
+      "D": "l’hypothalamus et la formation réticulée sont des systèmes régulateurs",
+      "E": "le neurone post-ganglionnaire naît directement dans le système nerveux central"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "centres = SNC"
+      },
+      "B": {
+        "correct": true,
+        "why": "voies = SNP"
+      },
+      "C": {
+        "correct": true,
+        "why": "2 neurones avec relais ganglionnaire"
+      },
+      "D": {
+        "correct": true,
+        "why": "régulateurs cités dans le cours"
+      },
+      "E": {
+        "correct": false,
+        "why": "post-ganglionnaire = ganglion de relais"
+      }
+    },
+    "tags": [
+      "SN_vegetatif",
+      "deux_neurones",
+      "P3"
+    ],
+    "course_ref": "02_Systeme_nerveux#9.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-02-000059",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le système nerveux sympathique (ergotrope), laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "ses centres sont en moelle thoracique et haute lombaire (T1-L3)",
+      "B": "ils siègent dans le noyau intermédiolatéral de la corne latérale",
+      "C": "les ganglions sont à distance de l’organe (latéro- ou pré-vertébraux)",
+      "D": "il favorise tachycardie, mydriase et vasoconstriction",
+      "E": "il correspond au système trophotrope d’économie"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "centres T1-L3"
+      },
+      "B": {
+        "correct": true,
+        "why": "corne latérale intermédiolatéral"
+      },
+      "C": {
+        "correct": true,
+        "why": "ganglions éloignés"
+      },
+      "D": {
+        "correct": true,
+        "why": "ergotrope = éveil danger"
+      },
+      "E": {
+        "correct": false,
+        "why": "trophotrope = parasympathique"
+      }
+    },
+    "tags": [
+      "sympathique",
+      "ergotrope",
+      "T1_L3",
+      "P3"
+    ],
+    "course_ref": "02_Systeme_nerveux#9.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-02-000060",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le système nerveux parasympathique (trophotrope), laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "une partie de ses centres est dans le tronc cérébral (plancher du 4e ventricule)",
+      "B": "une partie de ses centres est dans la moelle spinale sacrée",
+      "C": "ses ganglions sont à proximité de l’organe cible",
+      "D": "il favorise bradycardie, myosis et vasodilatation",
+      "E": "il favorise tachycardie et mydriase"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "noyaux tronc / 4e ventricule"
+      },
+      "B": {
+        "correct": true,
+        "why": "centres sacrés"
+      },
+      "C": {
+        "correct": true,
+        "why": "ganglions proches organe"
+      },
+      "D": {
+        "correct": true,
+        "why": "trophotrope = économie"
+      },
+      "E": {
+        "correct": false,
+        "why": "tachycardie/mydriase = sympathique"
+      }
+    },
+    "tags": [
+      "parasympathique",
+      "trophotrope",
+      "P3"
+    ],
+    "course_ref": "02_Systeme_nerveux#9.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-02-000061",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant la substance grise et blanche de la moelle vs des hémisphères, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "à la moelle : substance grise centrale, blanche périphérique",
+      "B": "aux hémisphères : cortex (grise) en périphérie, blanche en profondeur",
+      "C": "la substance grise médullaire forme un papillon avec des cornes",
+      "D": "la substance blanche médullaire forme des cordons",
+      "E": "moelle et hémisphères ont la même disposition grise/blanche"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "moelle : grise centrale"
+      },
+      "B": {
+        "correct": true,
+        "why": "hémisphères : inverse"
+      },
+      "C": {
+        "correct": true,
+        "why": "papillon + cornes"
+      },
+      "D": {
+        "correct": true,
+        "why": "cordons blancs"
+      },
+      "E": {
+        "correct": false,
+        "why": "disposition inverse (piège classique)"
+      }
+    },
+    "tags": [
+      "substance_grise",
+      "substance_blanche",
+      "moelle",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#2.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000062",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos de la situation de la moelle dans le canal vertébral, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le canal est formé par 7 vertèbres cervicales",
+      "B": "il comprend 12 vertèbres thoraciques et 5 lombaires",
+      "C": "il comprend 5 vertèbres sacrées et 1 coccygienne",
+      "D": "la limite supérieure médullaire est au-dessus de C1 / foramen magnum",
+      "E": "la moelle occupe tout le canal jusqu’à la vertèbre coccygienne chez l’adulte"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "7 cervicales"
+      },
+      "B": {
+        "correct": true,
+        "why": "12 thoraciques + 5 lombaires"
+      },
+      "C": {
+        "correct": true,
+        "why": "5 sacrées + 1 coccygienne"
+      },
+      "D": {
+        "correct": true,
+        "why": "limite sup = foramen magnum"
+      },
+      "E": {
+        "correct": false,
+        "why": "terminaison L1/L2"
+      }
+    },
+    "tags": [
+      "canal_vertebral",
+      "vertèbres",
+      "moelle",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#2.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000063",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant les trois étages du tronc cérébral, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "étage supérieur : mésencéphale",
+      "B": "étage moyen : pont (protubérance annulaire)",
+      "C": "étage inférieur : moelle allongée (bulbe rachidien)",
+      "D": "l’ordre crânio-caudal est mésencéphale → pont → moelle allongée",
+      "E": "le pont est l’étage inférieur du tronc"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "supérieur = mésencéphale ⭐⭐"
+      },
+      "B": {
+        "correct": true,
+        "why": "moyen = pont ⭐⭐"
+      },
+      "C": {
+        "correct": true,
+        "why": "inférieur = moelle allongée ⭐⭐"
+      },
+      "D": {
+        "correct": true,
+        "why": "ordre de haut en bas"
+      },
+      "E": {
+        "correct": false,
+        "why": "pont = étage moyen"
+      }
+    },
+    "tags": [
+      "tronc_cerebral",
+      "mesencephale",
+      "pont",
+      "bulbe",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#3.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000064",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le SLYM (4e feuillet méningé), laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "SLYM = subarachnoid lymphatic like membrane",
+      "B": "c’est une membrane sous-arachnoïdienne de type lymphatique",
+      "C": "il est situé entre la pie-mère et l’arachnoïde",
+      "D": "c’est le feuillet méningé le plus épais",
+      "E": "c’est une nouveauté 🆕 décrite récemment dans le cours"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "sigle SLYM"
+      },
+      "B": {
+        "correct": true,
+        "why": "type lymphatique"
+      },
+      "C": {
+        "correct": true,
+        "why": "entre pie-mère et arachnoïde"
+      },
+      "D": {
+        "correct": false,
+        "why": "feuillet très fin"
+      },
+      "E": {
+        "correct": true,
+        "why": "🆕 découvert il y a 2 ans (cours)"
+      }
+    },
+    "tags": [
+      "SLYM",
+      "meninges",
+      "nouveau",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#7.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000065",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos des commissures inter-hémisphériques, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "ce sont des faisceaux de substance blanche",
+      "B": "elles interconnectent les deux hémisphères en profondeur",
+      "C": "le corps calleux est une commissure médiane",
+      "D": "on cite aussi commissure antérieure et postérieure",
+      "E": "le corps calleux est un nerf crânien périphérique"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "faisceaux substance blanche"
+      },
+      "B": {
+        "correct": true,
+        "why": "interconnexion profonde D/G"
+      },
+      "C": {
+        "correct": true,
+        "why": "corps calleux médian"
+      },
+      "D": {
+        "correct": true,
+        "why": "3 principales commissures"
+      },
+      "E": {
+        "correct": false,
+        "why": "commissure, pas nerf crânien"
+      }
+    },
+    "tags": [
+      "commissures",
+      "corps_calleux",
+      "hemispheres",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.1.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000066",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant les gyrus basaux et médiaux du lobe frontal, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le gyrus orbitaire est un gyrus basal",
+      "B": "le gyrus droit (rectus) est un gyrus basal",
+      "C": "le gyrus paracentral antérieur fait partie du lobule paracentral en face interne",
+      "D": "le gyrus cingulaire antérieur est un gyrus médial frontal",
+      "E": "le gyrus orbitaire n’est visible que sur la face latérale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "orbitaire ⭐⭐ basal"
+      },
+      "B": {
+        "correct": true,
+        "why": "rectus basal"
+      },
+      "C": {
+        "correct": true,
+        "why": "lobule paracentral interne"
+      },
+      "D": {
+        "correct": true,
+        "why": "cingulaire antérieur médial"
+      },
+      "E": {
+        "correct": false,
+        "why": "orbitaire = face inférieure"
+      }
+    },
+    "tags": [
+      "gyrus_orbitaire",
+      "gyrus_cingulaire",
+      "lobe_frontal",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.7.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000067",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant les régions médiales du lobe pariétal, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le lobule para-central postérieur est en arrière du sillon central",
+      "B": "le pré-cunéus est en arrière du lobule para-central postérieur",
+      "C": "le gyrus cingulaire postérieur appartient au pariétal médial",
+      "D": "le pré-cunéus appartient au lobe occipital latéral exclusivement",
+      "E": "ces structures sont visibles sur la face médiale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "para-central postérieur"
+      },
+      "B": {
+        "correct": true,
+        "why": "pré-cunéus ⭐ en arrière"
+      },
+      "C": {
+        "correct": true,
+        "why": "cingulaire postérieur ⭐"
+      },
+      "D": {
+        "correct": false,
+        "why": "pré-cunéus pariétal médial"
+      },
+      "E": {
+        "correct": true,
+        "why": "face médiale"
+      }
+    },
+    "tags": [
+      "precuneus",
+      "lobe_parietal",
+      "face_mediale",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.8.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000068",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos des sillons du lobe temporal, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "sillons temporaux supérieur et inférieur : face latérale, parallèles au sillon latéral",
+      "B": "sillon collatéral : face inférieure",
+      "C": "le sillon collatéral sépare T4 de T5",
+      "D": "T1 est entre le sillon latéral et le sillon temporal supérieur",
+      "E": "T2 est entre les sillons temporaux supérieur et inférieur"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "sillons latéraux parallèles"
+      },
+      "B": {
+        "correct": true,
+        "why": "collatéral inférieur"
+      },
+      "C": {
+        "correct": true,
+        "why": "sépare T4 / T5"
+      },
+      "D": {
+        "correct": true,
+        "why": "T1 entre latéral et supérieur"
+      },
+      "E": {
+        "correct": true,
+        "why": "T2 entre supérieur et inférieur"
+      }
+    },
+    "tags": [
+      "lobe_temporal",
+      "sillons",
+      "T1",
+      "T2",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.9.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000069",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant l’épithalamus et le noyau sub-thalamique, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l’épithalamus comprend l’épiphyse",
+      "B": "l’épiphyse sécrète la mélatonine pour gérer le sommeil",
+      "C": "le noyau sub-thalamique intervient dans la motricité extra-pyramidale",
+      "D": "le diencéphale est centré par le ventricule latéral",
+      "E": "le thalamus n’a aucun rôle de filtrage"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "épithalamus → épiphyse"
+      },
+      "B": {
+        "correct": true,
+        "why": "mélatonine / sommeil"
+      },
+      "C": {
+        "correct": true,
+        "why": "sub-thalamique extra-pyramidal"
+      },
+      "D": {
+        "correct": false,
+        "why": "diencéphale centré par V3"
+      },
+      "E": {
+        "correct": false,
+        "why": "thalamus filtre et traite"
+      }
+    },
+    "tags": [
+      "epithalamus",
+      "epiphyse",
+      "sub_thalamique",
+      "P3"
+    ],
+    "course_ref": "02_Systeme_nerveux#6.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-02-000070",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant les nerfs spinaux et le SN périphérique, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les nerfs spinaux naissent de la moelle spinale",
+      "B": "ils peuvent se regrouper en ganglions ou plexus",
+      "C": "ils innervent les muscles du corps",
+      "D": "les nerfs I et II naissent de noyaux du tronc comme les autres nerfs crâniens",
+      "E": "les nerfs III à XII appartiennent au SNP"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "origine moelle"
+      },
+      "B": {
+        "correct": true,
+        "why": "ganglions / plexus"
+      },
+      "C": {
+        "correct": true,
+        "why": "innervation musculaire"
+      },
+      "D": {
+        "correct": false,
+        "why": "I et II = expansions SNC"
+      },
+      "E": {
+        "correct": true,
+        "why": "III–XII = SNP (sans détail annexe)"
+      }
+    },
+    "tags": [
+      "nerfs_spinaux",
+      "SNP",
+      "plexus",
+      "P3"
+    ],
+    "course_ref": "02_Systeme_nerveux#1.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-02-000071",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos des cordons de substance blanche médullaire, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "ils contiennent des voies ascendantes sensitives",
+      "B": "ils contiennent des voies descendantes motrices",
+      "C": "ils contiennent des voies associatives inter-hémisphériques ou inter-segmentaires",
+      "D": "ils sont constitués par les axones des neurones",
+      "E": "ils sont formés par les corps cellulaires des motoneurones"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "voies ascendantes sensitives"
+      },
+      "B": {
+        "correct": true,
+        "why": "voies descendantes motrices"
+      },
+      "C": {
+        "correct": true,
+        "why": "voies associatives"
+      },
+      "D": {
+        "correct": true,
+        "why": "substance blanche = axones"
+      },
+      "E": {
+        "correct": false,
+        "why": "corps cellulaires = substance grise"
+      }
+    },
+    "tags": [
+      "substance_blanche",
+      "cordons",
+      "voies",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#2.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000072",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le système limbique, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est situé sur la face médiale",
+      "B": "il comprend hippocampe et amygdale du lobe temporal",
+      "C": "il comprend le gyrus cingulaire (frontal et pariétal)",
+      "D": "il comprend corps mamillaires et noyaux antérieurs du thalamus",
+      "E": "ses rôles incluent mémoire et émotions"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "face médiale"
+      },
+      "B": {
+        "correct": true,
+        "why": "hippocampe + amygdale"
+      },
+      "C": {
+        "correct": true,
+        "why": "gyrus cingulaire"
+      },
+      "D": {
+        "correct": true,
+        "why": "corps mamillaires + thalamus antérieur"
+      },
+      "E": {
+        "correct": true,
+        "why": "mémoire + émotions"
+      }
+    },
+    "tags": [
+      "systeme_limbique",
+      "amygdale",
+      "memoire",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.12",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000073",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le sillon intra-pariétal et le gyrus supra-marginal, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le sillon intra-pariétal sépare lobule pariétal supérieur et inférieur",
+      "B": "le gyrus supra-marginal fait partie du lobule pariétal inférieur",
+      "C": "le sillon intra-pariétal est visible en vue latérale",
+      "D": "le gyrus angulaire est voisin du supra-marginal dans le lobule inférieur",
+      "E": "le sillon intra-pariétal sépare frontal et temporal"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "sillon intra-pariétal ⭐"
+      },
+      "B": {
+        "correct": true,
+        "why": "supra-marginal ⭐ lobule inférieur"
+      },
+      "C": {
+        "correct": true,
+        "why": "latéral"
+      },
+      "D": {
+        "correct": true,
+        "why": "angulaire ⭐⭐ même lobule"
+      },
+      "E": {
+        "correct": false,
+        "why": "sépare lobules pariétaux"
+      }
+    },
+    "tags": [
+      "sillon_intra_parietal",
+      "supra_marginal",
+      "angulaire",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.8.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000074",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos des sillons du lobe frontal en vue latérale, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le sillon précentral est parallèle et en avant du sillon central",
+      "B": "les sillons frontaux supérieur et inférieur partent du sillon précentral vers l’avant",
+      "C": "F1 est au-dessus du sillon frontal supérieur",
+      "D": "F3 est en dessous du sillon frontal inférieur",
+      "E": "le sillon précentral n’est jamais visible en vue latérale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "précentral avant du central"
+      },
+      "B": {
+        "correct": true,
+        "why": "sillons frontaux latéraux ⭐"
+      },
+      "C": {
+        "correct": true,
+        "why": "F1 ⭐ au-dessus sillon supérieur"
+      },
+      "D": {
+        "correct": true,
+        "why": "F3 ⭐ sous sillon inférieur"
+      },
+      "E": {
+        "correct": false,
+        "why": "précentral visible latéralement ⭐"
+      }
+    },
+    "tags": [
+      "sillon_precentral",
+      "F1",
+      "F3",
+      "lobe_frontal",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#8.7.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000075",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le liquide cérébro-spinal (protection et sécrétion), laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il circule dans des cavités épendymaires (ventricules)",
+      "B": "il est sécrété par les plexus choroïdes",
+      "C": "il sert de tampon protecteur en cas de choc",
+      "D": "il est résorbé par les granulations arachnoïdiennes",
+      "E": "son renouvellement est intermittent et très lent"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "ventricules + épendyme"
+      },
+      "B": {
+        "correct": true,
+        "why": "sécrétion plexus choroïdes"
+      },
+      "C": {
+        "correct": true,
+        "why": "rôle tampon"
+      },
+      "D": {
+        "correct": true,
+        "why": "résorption granulations arachnoïdiennes"
+      },
+      "E": {
+        "correct": false,
+        "why": "renouvellement constant"
+      }
+    },
+    "tags": [
+      "LCS",
+      "plexus_choroides",
+      "protection",
+      "P3"
+    ],
+    "course_ref": "02_Systeme_nerveux#4.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
   }
 ];

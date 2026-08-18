@@ -42,13 +42,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "segments",
-      "parenchyme"
+      "parenchyme",
+      "P1"
     ],
     "course_ref": "04_Appareil_respiratoire#10.2",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-04-000002",
@@ -94,13 +96,15 @@ window.PASS_ITEMS = [
     "tags": [
       "segments",
       "bronche_segmentaire",
-      "veine_intersegmentaire"
+      "veine_intersegmentaire",
+      "P1"
     ],
     "course_ref": "04_Appareil_respiratoire#10.2",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-04-000003",
@@ -146,13 +150,15 @@ window.PASS_ITEMS = [
     "tags": [
       "parenchyme",
       "acinus",
-      "lobules"
+      "lobules",
+      "P1"
     ],
     "course_ref": "04_Appareil_respiratoire#10",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-04-000004",
@@ -198,13 +204,15 @@ window.PASS_ITEMS = [
     "tags": [
       "pedicule_fonctionnel",
       "pedicule_nourricier",
-      "hile"
+      "hile",
+      "P1"
     ],
     "course_ref": "04_Appareil_respiratoire#9",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-04-000005",
@@ -250,13 +258,15 @@ window.PASS_ITEMS = [
     "tags": [
       "lobes",
       "scissures",
-      "asymetrie"
+      "asymetrie",
+      "P2"
     ],
     "course_ref": "04_Appareil_respiratoire#7",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-04-000006",
@@ -302,13 +312,15 @@ window.PASS_ITEMS = [
     "tags": [
       "intra_thoracique",
       "extra_mediastinal",
-      "apex"
+      "apex",
+      "P2"
     ],
     "course_ref": "04_Appareil_respiratoire#6",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-04-000007",
@@ -354,13 +366,15 @@ window.PASS_ITEMS = [
     "tags": [
       "trachee",
       "C6",
-      "T5"
+      "T5",
+      "P2"
     ],
     "course_ref": "04_Appareil_respiratoire#3.3",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-04-000008",
@@ -405,13 +419,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "bronche_souche",
-      "lobaires"
+      "lobaires",
+      "P2"
     ],
     "course_ref": "04_Appareil_respiratoire#3.4",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-04-000009",
@@ -456,13 +472,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "hile",
-      "plevre"
+      "plevre",
+      "P2"
     ],
     "course_ref": "04_Appareil_respiratoire#8.3",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-04-000010",
@@ -509,13 +527,15 @@ window.PASS_ITEMS = [
     "tags": [
       "plevre",
       "pneumothorax",
-      "hemothorax"
+      "hemothorax",
+      "P2"
     ],
     "course_ref": "04_Appareil_respiratoire#11",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-04-000011",
@@ -560,13 +580,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "hematose",
-      "sac_alveolaire"
+      "sac_alveolaire",
+      "P2"
     ],
     "course_ref": "04_Appareil_respiratoire#4",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-04-000012",
@@ -612,13 +634,15 @@ window.PASS_ITEMS = [
     "tags": [
       "nasopharynx",
       "oropharynx",
-      "laryngopharynx"
+      "laryngopharynx",
+      "P2"
     ],
     "course_ref": "04_Appareil_respiratoire#2",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-04-000013",
@@ -663,13 +687,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "artere_bronchique",
-      "azygos"
+      "azygos",
+      "P2"
     ],
     "course_ref": "04_Appareil_respiratoire#12",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-04-000014",
@@ -714,13 +740,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "larynx",
-      "phonation"
+      "phonation",
+      "P2"
     ],
     "course_ref": "04_Appareil_respiratoire#3.2",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-04-000015",
@@ -766,13 +794,15 @@ window.PASS_ITEMS = [
     "tags": [
       "ventilation",
       "inspiration",
-      "expiration"
+      "expiration",
+      "P3"
     ],
     "course_ref": "04_Appareil_respiratoire#14",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P3"
   },
   {
     "id": "GEN-ANAT-04-000016",
@@ -817,13 +847,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "bronches_lobaires",
-      "lobes"
+      "lobes",
+      "P1"
     ],
     "course_ref": "04_Appareil_respiratoire#10.1",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-04-000017",
@@ -869,13 +901,15 @@ window.PASS_ITEMS = [
     "tags": [
       "faces",
       "hile",
-      "diaphragme"
+      "diaphragme",
+      "P2"
     ],
     "course_ref": "04_Appareil_respiratoire#8",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-04-000018",
@@ -921,13 +955,15 @@ window.PASS_ITEMS = [
     "tags": [
       "voies_aeriennes",
       "alveoles",
-      "capacite"
+      "capacite",
+      "P3"
     ],
     "course_ref": "04_Appareil_respiratoire#1",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P3"
   },
   {
     "id": "GEN-ANAT-04-000019",
@@ -972,13 +1008,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "rapports",
-      "limites"
+      "limites",
+      "P3"
     ],
     "course_ref": "04_Appareil_respiratoire#13",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P3"
   },
   {
     "id": "GEN-ANAT-04-000020",
@@ -1023,12 +1061,2149 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "fosses_nasales",
-      "oropharynx"
+      "oropharynx",
+      "P2"
     ],
     "course_ref": "04_Appareil_respiratoire#2",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000021",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant le nasopharynx (rhinopharynx), laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "c’est la partie supérieure du pharynx",
+      "B": "il est situé en arrière des fosses nasales",
+      "C": "il correspond à la partie moyenne du pharynx",
+      "D": "il est situé en arrière de la cavité buccale",
+      "E": "il fait partie des voies aériennes supérieures"
+    },
+    "answer": [
+      "A",
+      "B",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "partie supérieure du pharynx"
+      },
+      "B": {
+        "correct": true,
+        "why": "en arrière des fosses nasales"
+      },
+      "C": {
+        "correct": false,
+        "why": "partie moyenne = oropharynx"
+      },
+      "D": {
+        "correct": false,
+        "why": "en arrière de la cavité buccale = oropharynx"
+      },
+      "E": {
+        "correct": true,
+        "why": "voie aérienne supérieure"
+      }
+    },
+    "tags": [
+      "nasopharynx",
+      "rhinopharynx",
+      "voies_aeriennes_superieures",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#2.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000022",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "À propos de la cavité buccale, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "elle est située entre les maxillaires et la mandibule",
+      "B": "elle s’étend de l’orifice buccal en avant à l’oropharynx en arrière",
+      "C": "elle correspond à la partie supérieure du pharynx",
+      "D": "elle est creusée dans le massif osseux de la face",
+      "E": "l’oropharynx est situé en arrière de la cavité buccale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "entre maxillaires et mandibule"
+      },
+      "B": {
+        "correct": true,
+        "why": "orifice buccal → oropharynx"
+      },
+      "C": {
+        "correct": false,
+        "why": "partie supérieure du pharynx = nasopharynx"
+      },
+      "D": {
+        "correct": false,
+        "why": "creusées dans le massif facial = fosses nasales"
+      },
+      "E": {
+        "correct": true,
+        "why": "oropharynx en arrière de la bouche"
+      }
+    },
+    "tags": [
+      "cavite_buccale",
+      "oropharynx",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#2.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000023",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant l’oropharynx, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "c’est la partie moyenne du pharynx",
+      "B": "il est situé entre le nasopharynx en haut et le laryngopharynx en bas",
+      "C": "c’est un carrefour entre voies respiratoires et voies digestives",
+      "D": "un clapet oriente les aliments en arrière et l’air en avant",
+      "E": "il appartient exclusivement à la voie digestive et non aux voies aériennes"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "partie moyenne du pharynx"
+      },
+      "B": {
+        "correct": true,
+        "why": "entre nasopharynx et laryngopharynx"
+      },
+      "C": {
+        "correct": true,
+        "why": "carrefour aéro-digestif"
+      },
+      "D": {
+        "correct": true,
+        "why": "clapet : aliments en arrière, air en avant"
+      },
+      "E": {
+        "correct": false,
+        "why": "carrefour respiratoire + digestif ; laryngopharynx = voie digestive seule"
+      }
+    },
+    "tags": [
+      "oropharynx",
+      "carrefour",
+      "voies_aeriennes",
+      "voie_digestive",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#2.5",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000024",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "À propos du laryngopharynx, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il est situé entre l’oropharynx et le larynx",
+      "B": "il n’appartient pas aux voies aériennes",
+      "C": "il appartient à la voie digestive",
+      "D": "c’est la partie supérieure du pharynx",
+      "E": "il assure le transport de l’air vers la trachée"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "entre oropharynx et larynx"
+      },
+      "B": {
+        "correct": true,
+        "why": "🆕 : pas une voie aérienne"
+      },
+      "C": {
+        "correct": true,
+        "why": "🆕 : voie digestive"
+      },
+      "D": {
+        "correct": false,
+        "why": "partie supérieure = nasopharynx"
+      },
+      "E": {
+        "correct": false,
+        "why": "transport aérien = larynx / trachée en aval"
+      }
+    },
+    "tags": [
+      "laryngopharynx",
+      "voie_digestive",
+      "nouveaute",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#2.6",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000025",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant le schéma larynx–trachée–bronches (en dessous du cartilage cricoïde), laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la trachée naît sous le cartilage cricoïde du larynx",
+      "B": "la bronche souche droite donne 3 bronches lobaires : supérieure, moyenne et inférieure",
+      "C": "la bronche souche gauche donne 2 bronches lobaires : supérieure et inférieure",
+      "D": "la bronche souche gauche donne 3 bronches lobaires comme à droite",
+      "E": "les voies aériennes inférieures commencent en dessous du cartilage cricoïde"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "repère cricoïde → trachée"
+      },
+      "B": {
+        "correct": true,
+        "why": "3 bronches lobaires à droite"
+      },
+      "C": {
+        "correct": true,
+        "why": "2 bronches lobaires à gauche"
+      },
+      "D": {
+        "correct": false,
+        "why": "pas de bronche lobaire moyenne à gauche"
+      },
+      "E": {
+        "correct": true,
+        "why": "limite supérieure des voies inférieures"
+      }
+    },
+    "tags": [
+      "larynx",
+      "trachee",
+      "bronches_souches",
+      "voies_aeriennes_inferieures",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#3.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000026",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant la ramification des bronches jusqu’au sac alvéolaire, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les bronches lobaires se divisent en 10 bronches segmentaires par poumon",
+      "B": "les bronches segmentaires se divisent en bronches sub-segmentaires",
+      "C": "les bronchioles sont de fins conduits dépourvus de cartilage",
+      "D": "les bronchioles se terminent par une petite dilatation appelée sac alvéolaire",
+      "E": "les bronches segmentaires conservent une paroi cartilagineuse complète"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "10 bronches segmentaires / poumon"
+      },
+      "B": {
+        "correct": true,
+        "why": "segmentaires → sub-segmentaires"
+      },
+      "C": {
+        "correct": true,
+        "why": "bronchioles sans cartilage"
+      },
+      "D": {
+        "correct": true,
+        "why": "terminaison = sac alvéolaire"
+      },
+      "E": {
+        "correct": false,
+        "why": "cartilage absent au niveau des bronchioles"
+      }
+    },
+    "tags": [
+      "ramification",
+      "bronches_segmentaires",
+      "bronchioles",
+      "sac_alveolaire",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#4.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000027",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "À propos du sac alvéolaire terminal, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il se gonfle d’air à l’inspiration et se vide à l’expiration",
+      "B": "il est formé d’alvéoles pulmonaires correspondant aux reliefs de sa paroi",
+      "C": "il est entouré de capillaires issus des artérioles et veinules pulmonaires",
+      "D": "il permet la réoxygénation du sang et la récupération du CO₂ (hématose)",
+      "E": "il correspond à la terminaison des voies aériennes supérieures"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "variation volumique inspiration/expiration"
+      },
+      "B": {
+        "correct": true,
+        "why": "paroi = reliefs alvéolaires"
+      },
+      "C": {
+        "correct": true,
+        "why": "réseau capillaire pulmonaire"
+      },
+      "D": {
+        "correct": true,
+        "why": "hématose O₂/CO₂"
+      },
+      "E": {
+        "correct": false,
+        "why": "terminaison des voies aériennes inférieures"
+      }
+    },
+    "tags": [
+      "sac_alveolaire",
+      "hematose",
+      "capillaires",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#4.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000028",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant l’aspect macroscopique des poumons, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "chez le non-fumeur, ils sont lisses, brillants et rosés",
+      "B": "chez le fumeur, ils deviennent grisâtres",
+      "C": "ils contiennent la partie terminale des voies aériennes inférieures (arbre bronchique)",
+      "D": "leur aspect rosé chez le non-fumeur traduit une absence totale de vascularisation",
+      "E": "la capacité respiratoire totale des deux poumons est d’environ 5 litres d’air"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "aspect normal non-fumeur"
+      },
+      "B": {
+        "correct": true,
+        "why": "aspect fumeur = grisâtre"
+      },
+      "C": {
+        "correct": true,
+        "why": "organes contenant l’arbre bronchique"
+      },
+      "D": {
+        "correct": false,
+        "why": "rosé ≠ absence de vascularisation"
+      },
+      "E": {
+        "correct": false,
+        "why": "5 L = capacité (§5.3), pas définition de l’aspect"
+      }
+    },
+    "tags": [
+      "aspect_poumon",
+      "fumeur",
+      "non_fumeur",
+      "P3"
+    ],
+    "course_ref": "04_Appareil_respiratoire#5.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-04-000029",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "À propos de la capacité respiratoire des poumons, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "les deux poumons contiennent au total environ 5 litres d’air",
+      "B": "cette capacité concerne l’ensemble des deux poumons",
+      "C": "chaque poumon isolé contient systématiquement 5 litres d’air",
+      "D": "les poumons sont les organes de la respiration",
+      "E": "la capacité respiratoire se mesure au niveau des bronches souches"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "5 L au total"
+      },
+      "B": {
+        "correct": true,
+        "why": "capacité globale des 2 poumons"
+      },
+      "C": {
+        "correct": false,
+        "why": "5 L = total des 2 poumons"
+      },
+      "D": {
+        "correct": true,
+        "why": "organes de la respiration"
+      },
+      "E": {
+        "correct": false,
+        "why": "échanges au sac alvéolaire, pas aux bronches souches"
+      }
+    },
+    "tags": [
+      "capacite_respiratoire",
+      "poumons",
+      "P3"
+    ],
+    "course_ref": "04_Appareil_respiratoire#5.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-04-000030",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant la situation extra-médiastinale des poumons, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les poumons sont situés de part et d’autre du médiastin",
+      "B": "ils sont intra-thoraciques mais extra-médiastinaux",
+      "C": "le médiastin est occupé notamment par le cœur entre les deux poumons",
+      "D": "les poumons sont contenus à l’intérieur du médiastin",
+      "E": "extra-médiastinal signifie qu’ils sont entièrement extra-thoraciques"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "de part et d’autre du médiastin"
+      },
+      "B": {
+        "correct": true,
+        "why": "intra-thoraciques + extra-médiastinaux"
+      },
+      "C": {
+        "correct": true,
+        "why": "médiastin = cœur entre les poumons"
+      },
+      "D": {
+        "correct": false,
+        "why": "extra-médiastinaux, pas intra-médiastinaux"
+      },
+      "E": {
+        "correct": false,
+        "why": "intra-thoraciques ; seul l’apex déborde en haut"
+      }
+    },
+    "tags": [
+      "extra_mediastinal",
+      "mediastin",
+      "intra_thoracique",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#6.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000031",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "À propos des empreintes costales sur les poumons, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "les poumons sont moulés sur le grill costal",
+      "B": "leur surface est marquée par les empreintes des côtes",
+      "C": "cette marque correspond surtout à la face costale latérale",
+      "D": "les poumons sont totalement lisses et sans empreinte osseuse",
+      "E": "les empreintes des côtes se voient uniquement sur la face diaphragmatique"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "moulés sur le grill costal"
+      },
+      "B": {
+        "correct": true,
+        "why": "empreintes des côtes"
+      },
+      "C": {
+        "correct": true,
+        "why": "face costale en rapport avec la paroi thoracique"
+      },
+      "D": {
+        "correct": false,
+        "why": "empreintes costales présentes"
+      },
+      "E": {
+        "correct": false,
+        "why": "face diaphragmatique = diaphragme, pas côtes"
+      }
+    },
+    "tags": [
+      "empreintes_cotes",
+      "grill_costal",
+      "face_costale",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#6.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000032",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant l’apex pulmonaire, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "c’est le sommet du poumon",
+      "B": "il fait saillie au-dessus de l’orifice supérieur du thorax",
+      "C": "il est présent dans la région cervicale subclavière",
+      "D": "il est marqué en bas par le sillon de la 1re côte",
+      "E": "il est recouvert de plèvre"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "sommet / apex"
+      },
+      "B": {
+        "correct": true,
+        "why": "déborde l’orifice supérieur thoracique"
+      },
+      "C": {
+        "correct": true,
+        "why": "région cervicale subclavière"
+      },
+      "D": {
+        "correct": true,
+        "why": "sillon de la 1re côte en bas"
+      },
+      "E": {
+        "correct": true,
+        "why": "apex recouvert de plèvre"
+      }
+    },
+    "tags": [
+      "apex",
+      "orifice_superieur_thorax",
+      "region_subclaviere",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#6.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000033",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant le poumon droit et ses scissures, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le poumon droit possède 3 lobes : supérieur, moyen et inférieur",
+      "B": "il comporte 2 scissures : horizontale et oblique",
+      "C": "la scissure horizontale sépare le lobe supérieur du lobe moyen",
+      "D": "le poumon droit ne possède qu’une seule scissure oblique",
+      "E": "le poumon droit possède 2 lobes comme le poumon gauche"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "3 lobes à droite"
+      },
+      "B": {
+        "correct": true,
+        "why": "scissure horizontale + oblique"
+      },
+      "C": {
+        "correct": true,
+        "why": "horizontale = supérieur / moyen"
+      },
+      "D": {
+        "correct": false,
+        "why": "2 scissures à droite, pas une seule"
+      },
+      "E": {
+        "correct": false,
+        "why": "gauche = 2 lobes ; droite = 3"
+      }
+    },
+    "tags": [
+      "poumon_droit",
+      "scissure_horizontale",
+      "scissure_oblique",
+      "lobes",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#7.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000034",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "À propos du poumon gauche, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il possède 2 lobes : supérieur et inférieur",
+      "B": "il comporte une seule scissure oblique",
+      "C": "il présente une empreinte cardiaque correspondant au relief du cœur",
+      "D": "il possède 3 lobes comme le poumon droit",
+      "E": "il comporte une scissure horizontale en plus de la scissure oblique"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "2 lobes à gauche"
+      },
+      "B": {
+        "correct": true,
+        "why": "1 scissure oblique"
+      },
+      "C": {
+        "correct": true,
+        "why": "empreinte cardiaque = relief du cœur"
+      },
+      "D": {
+        "correct": false,
+        "why": "3 lobes = poumon droit"
+      },
+      "E": {
+        "correct": false,
+        "why": "pas de scissure horizontale à gauche"
+      }
+    },
+    "tags": [
+      "poumon_gauche",
+      "empreinte_cardiaque",
+      "scissure_oblique",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#7.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000035",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant la face costale (latérale) du poumon, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "elle est lisse et convexe",
+      "B": "elle répond à la concavité du grill costal",
+      "C": "elle est moulée sur la paroi thoracique",
+      "D": "elle est recouverte par la plèvre costale",
+      "E": "elle est concave pour épouser la convexité du diaphragme"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "face costale lisse et convexe"
+      },
+      "B": {
+        "correct": true,
+        "why": "convexité pulmonaire / concavité costale"
+      },
+      "C": {
+        "correct": true,
+        "why": "moulée sur paroi thoracique"
+      },
+      "D": {
+        "correct": true,
+        "why": "plèvre costale"
+      },
+      "E": {
+        "correct": false,
+        "why": "concave pour diaphragme = face diaphragmatique"
+      }
+    },
+    "tags": [
+      "face_costale",
+      "plevre_costale",
+      "grill_costal",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#8.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000036",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "À propos de la face diaphragmatique (base) du poumon, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "c’est la base du poumon",
+      "B": "elle est concave pour répondre à la convexité des coupoles du diaphragme",
+      "C": "elle est moulée sur le diaphragme",
+      "D": "elle est séparée du diaphragme par la plèvre diaphragmatique",
+      "E": "elle porte le hile pulmonaire et la ligne de réflexion pleurale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "face diaphragmatique = base"
+      },
+      "B": {
+        "correct": true,
+        "why": "concavité pulmonaire / convexité diaphragmatique"
+      },
+      "C": {
+        "correct": true,
+        "why": "moulée sur le diaphragme"
+      },
+      "D": {
+        "correct": true,
+        "why": "plèvre diaphragmatique interposée"
+      },
+      "E": {
+        "correct": false,
+        "why": "hile = face médiale interne"
+      }
+    },
+    "tags": [
+      "face_diaphragmatique",
+      "base_poumon",
+      "plevre_diaphragmatique",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#8.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000037",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant le pédicule pulmonaire fonctionnel, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est chargé de l’hématose",
+      "B": "il contient des éléments de la petite circulation",
+      "C": "il contient la bronche souche, l’artère pulmonaire et les veines pulmonaires",
+      "D": "il contient les artères bronchiques et les veines bronchiques",
+      "E": "il entre et sort du poumon par le hile"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "rôle = hématose"
+      },
+      "B": {
+        "correct": true,
+        "why": "petite circulation"
+      },
+      "C": {
+        "correct": true,
+        "why": "contenu fonctionnel du tableau"
+      },
+      "D": {
+        "correct": false,
+        "why": "artères/veines bronchiques = pédicule nourricier"
+      },
+      "E": {
+        "correct": true,
+        "why": "pédicule via le hile"
+      }
+    },
+    "tags": [
+      "pedicule_fonctionnel",
+      "hematose",
+      "petite_circulation",
+      "P1"
+    ],
+    "course_ref": "04_Appareil_respiratoire#9",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000038",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant le pédicule pulmonaire nourricier, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il permet la nutrition et l’oxygénation du parenchyme pulmonaire",
+      "B": "il relève de la grande circulation",
+      "C": "il contient les artères bronchiques, veines bronchiques, nerfs bronchiques et lymphonœuds bronchiques",
+      "D": "il contient l’artère pulmonaire et les veines pulmonaires",
+      "E": "les veines bronchiques sont antérieures et postérieures"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "nutrition du parenchyme"
+      },
+      "B": {
+        "correct": true,
+        "why": "grande circulation"
+      },
+      "C": {
+        "correct": true,
+        "why": "contenu nourricier du tableau"
+      },
+      "D": {
+        "correct": false,
+        "why": "AP + VP = pédicule fonctionnel"
+      },
+      "E": {
+        "correct": true,
+        "why": "veines bronchiques ant. et post."
+      }
+    },
+    "tags": [
+      "pedicule_nourricier",
+      "grande_circulation",
+      "arteres_bronchiques",
+      "P1"
+    ],
+    "course_ref": "04_Appareil_respiratoire#9",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000039",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "À propos des lobules pulmonaires, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "ils contiennent les bronchioles",
+      "B": "ils sont prédominants à la périphérie du poumon",
+      "C": "ils correspondent à l’unité terminale du parenchyme pulmonaire",
+      "D": "ils contiennent directement les sacs alvéolaires",
+      "E": "la subdivision du parenchyme suit la division bronchique : lobes → segments → lobules → acini"
+    },
+    "answer": [
+      "A",
+      "B",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "lobules = bronchioles"
+      },
+      "B": {
+        "correct": true,
+        "why": "prédominants en périphérie"
+      },
+      "C": {
+        "correct": false,
+        "why": "unité terminale = acinus"
+      },
+      "D": {
+        "correct": false,
+        "why": "sacs alvéolaires dans les acini"
+      },
+      "E": {
+        "correct": true,
+        "why": "chaîne lobes → segments → lobules → acini"
+      }
+    },
+    "tags": [
+      "lobules",
+      "bronchioles",
+      "parenchyme",
+      "P1"
+    ],
+    "course_ref": "04_Appareil_respiratoire#10.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000040",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant les acini pulmonaires, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "ils correspondent à l’unité terminale du parenchyme pulmonaire",
+      "B": "ils contiennent les sacs alvéolaires",
+      "C": "ils contiennent les bronchioles",
+      "D": "ils sont ventilés chacun par une bronche segmentaire",
+      "E": "ils sont prédominants uniquement au centre du poumon"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "unité terminale du parenchyme"
+      },
+      "B": {
+        "correct": true,
+        "why": "acini = sacs alvéolaires"
+      },
+      "C": {
+        "correct": false,
+        "why": "bronchioles dans les lobules"
+      },
+      "D": {
+        "correct": false,
+        "why": "1 bronche segmentaire = 1 segment"
+      },
+      "E": {
+        "correct": false,
+        "why": "lobules prédominants en périphérie, pas acini au centre seul"
+      }
+    },
+    "tags": [
+      "acini",
+      "sacs_alveolaires",
+      "unite_terminale",
+      "P1"
+    ],
+    "course_ref": "04_Appareil_respiratoire#10.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000041",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant le drainage veineux des segments pulmonaires, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "chaque segment possède sa propre veine bronchique segmentaire exclusive",
+      "B": "en principe, une veine bronchique intersegmentaire draine deux segments",
+      "C": "le drainage se fait par des veines pulmonaires intersegmentaires",
+      "D": "la veine bronchique intersegmentaire fait partie du trio segmentaire avec la bronche et l’artère bronchique segmentaire",
+      "E": "il existe dix veines intersegmentaires par poumon, une par segment"
+    },
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "drainage intersegmentaire partagé, pas 1 veine/segment"
+      },
+      "B": {
+        "correct": true,
+        "why": "1 veine pour 2 segments"
+      },
+      "C": {
+        "correct": false,
+        "why": "veines bronchiques intersegmentaires, pas pulmonaires"
+      },
+      "D": {
+        "correct": true,
+        "why": "trio : bronche segmentaire + artère bronchique segmentaire + veine intersegmentaire"
+      },
+      "E": {
+        "correct": false,
+        "why": "ratio 1 veine / 2 segments, donc moins de 10 veines"
+      }
+    },
+    "tags": [
+      "veine_intersegmentaire",
+      "segments",
+      "P1"
+    ],
+    "course_ref": "04_Appareil_respiratoire#10.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000042",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Pour un segment pulmonaire donné, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est ventilé par une bronche segmentaire",
+      "B": "il est vascularisé par une artère pulmonaire segmentaire",
+      "C": "il est vascularisé par une artère bronchique segmentaire",
+      "D": "il est drainé par une veine pulmonaire intersegmentaire",
+      "E": "il est drainé par une veine bronchique intersegmentaire"
+    },
+    "answer": [
+      "A",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "1 bronche segmentaire par segment"
+      },
+      "B": {
+        "correct": false,
+        "why": "vascularisation segmentaire = artère bronchique, pas pulmonaire"
+      },
+      "C": {
+        "correct": true,
+        "why": "artère bronchique segmentaire"
+      },
+      "D": {
+        "correct": false,
+        "why": "drainage = veine bronchique intersegmentaire"
+      },
+      "E": {
+        "correct": true,
+        "why": "veine bronchique intersegmentaire"
+      }
+    },
+    "tags": [
+      "bronche_segmentaire",
+      "artere_bronchique_segmentaire",
+      "P1"
+    ],
+    "course_ref": "04_Appareil_respiratoire#10.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000043",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant les lobules et les acini pulmonaires, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "les lobules contiennent les bronchioles",
+      "B": "les lobules sont surtout périphériques dans le poumon",
+      "C": "l’acinus est l’unité terminale du parenchyme pulmonaire",
+      "D": "les acini contiennent les sacs alvéolaires",
+      "E": "les lobules correspondent à l’unité terminale du parenchyme pulmonaire"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "lobules = bronchioles"
+      },
+      "B": {
+        "correct": true,
+        "why": "prédominants à la périphérie"
+      },
+      "C": {
+        "correct": true,
+        "why": "acinus = unité terminale"
+      },
+      "D": {
+        "correct": true,
+        "why": "sacs alvéolaires dans les acini"
+      },
+      "E": {
+        "correct": false,
+        "why": "unité terminale = acinus, pas lobule"
+      }
+    },
+    "tags": [
+      "lobules",
+      "acinus",
+      "parenchyme",
+      "P1"
+    ],
+    "course_ref": "04_Appareil_respiratoire#10.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000044",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "À propos de la subdivision bronchique du parenchyme pulmonaire, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "elle suit la division bronchique",
+      "B": "du plus grand au plus petit : lobes → segments → lobules → acini",
+      "C": "les lobules viennent après les segments dans cette hiérarchie",
+      "D": "les acini contiennent les sacs alvéolaires",
+      "E": "les segments précèdent les lobes dans cette subdivision"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "subdivision = division bronchique"
+      },
+      "B": {
+        "correct": true,
+        "why": "ordre lobes → segments → lobules → acini"
+      },
+      "C": {
+        "correct": true,
+        "why": "lobules après segments"
+      },
+      "D": {
+        "correct": true,
+        "why": "acini = sacs alvéolaires"
+      },
+      "E": {
+        "correct": false,
+        "why": "lobes avant segments"
+      }
+    },
+    "tags": [
+      "parenchyme",
+      "subdivision",
+      "acinus",
+      "P1"
+    ],
+    "course_ref": "04_Appareil_respiratoire#10",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000045",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant le pédicule fonctionnel pulmonaire, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il est chargé de l’hématose",
+      "B": "il relève de la petite circulation",
+      "C": "il contient la bronche souche, l’artère pulmonaire et les veines pulmonaires",
+      "D": "il contient les artères bronchiques",
+      "E": "il entre et sort du poumon par le hile"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "rôle = hématose"
+      },
+      "B": {
+        "correct": true,
+        "why": "petite circulation"
+      },
+      "C": {
+        "correct": true,
+        "why": "bronche souche + AP + VP"
+      },
+      "D": {
+        "correct": false,
+        "why": "artères bronchiques = pédicule nourricier"
+      },
+      "E": {
+        "correct": true,
+        "why": "passage par le hile"
+      }
+    },
+    "tags": [
+      "pedicule_fonctionnel",
+      "hile",
+      "petite_circulation",
+      "P1"
+    ],
+    "course_ref": "04_Appareil_respiratoire#9",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000046",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "À propos du pédicule nourricier, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il permet la nutrition et l’oxygénation du parenchyme pulmonaire",
+      "B": "il relève de la grande circulation",
+      "C": "il contient des veines bronchiques antérieures et postérieures",
+      "D": "il contient des nerfs et lymphonœuds bronchiques",
+      "E": "il contient l’artère pulmonaire"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "nutrition du parenchyme"
+      },
+      "B": {
+        "correct": true,
+        "why": "grande circulation"
+      },
+      "C": {
+        "correct": true,
+        "why": "2 veines bronchiques / poumon"
+      },
+      "D": {
+        "correct": true,
+        "why": "nerfs + lymphonœuds bronchiques"
+      },
+      "E": {
+        "correct": false,
+        "why": "AP = pédicule fonctionnel"
+      }
+    },
+    "tags": [
+      "pedicule_nourricier",
+      "grande_circulation",
+      "P1"
+    ],
+    "course_ref": "04_Appareil_respiratoire#9",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000047",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant la cavité pleurale en pathologie, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "un pneumothorax correspond à un remplissage de la cavité par de l’air",
+      "B": "un hémothorax correspond à un remplissage par du sang",
+      "C": "ces épanchements nécessitent souvent d’être drainés pour permettre au poumon de fonctionner",
+      "D": "un pneumothorax correspond à un remplissage par du liquide pleural uniquement",
+      "E": "en conditions normales, la cavité pleurale est remplie d’un grand volume d’air"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "air = pneumothorax"
+      },
+      "B": {
+        "correct": true,
+        "why": "sang = hémothorax"
+      },
+      "C": {
+        "correct": true,
+        "why": "drainage nécessaire pour la fonction pulmonaire"
+      },
+      "D": {
+        "correct": false,
+        "why": "pneumothorax = air, pas liquide seul"
+      },
+      "E": {
+        "correct": false,
+        "why": "cavité presque virtuelle en conditions normales"
+      }
+    },
+    "tags": [
+      "pneumothorax",
+      "hemothorax",
+      "plevre",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#11.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000048",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "À propos des fonctions et de l’organisation de la plèvre, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la plèvre assure une fonction de protection des poumons",
+      "B": "elle permet le glissement entre ses feuillets",
+      "C": "le feuillet viscéral est au contact direct du poumon",
+      "D": "le feuillet pariétal naît de la réflexion du viscéral au niveau du hile",
+      "E": "la cavité pleurale contient normalement un peu de liquide facilitant le glissement"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "fonction protectrice"
+      },
+      "B": {
+        "correct": true,
+        "why": "fonction de glissement"
+      },
+      "C": {
+        "correct": true,
+        "why": "viscéral = contact poumon"
+      },
+      "D": {
+        "correct": true,
+        "why": "réflexion au hile → pariétal"
+      },
+      "E": {
+        "correct": true,
+        "why": "peu de liquide en conditions normales"
+      }
+    },
+    "tags": [
+      "plevre",
+      "feuillets",
+      "cavite_pleurale",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#11",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000049",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant le drainage veineux bronchique, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "chaque poumon possède deux veines bronchiques : antérieure et postérieure",
+      "B": "les veines bronchiques se jettent directement dans l’atrium droit",
+      "C": "les veines bronchiques se jettent dans le système azygos",
+      "D": "le système azygos est drainé par la veine cave supérieure",
+      "E": "l’artère bronchique naît de l’aorte"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "2 veines / poumon (ant + post)"
+      },
+      "B": {
+        "correct": false,
+        "why": "drainage via azygos, pas direct AD"
+      },
+      "C": {
+        "correct": true,
+        "why": "veines bronchiques → azygos"
+      },
+      "D": {
+        "correct": true,
+        "why": "azygos → VCS"
+      },
+      "E": {
+        "correct": true,
+        "why": "AB naît de l’aorte (grande circulation)"
+      }
+    },
+    "tags": [
+      "veines_bronchiques",
+      "azygos",
+      "VCS",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#12",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000050",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant la vascularisation des poumons, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l’artère bronchique appartient à la grande circulation et naît de l’aorte",
+      "B": "l’artère pulmonaire appartient au pédicule fonctionnel",
+      "C": "les veines bronchiques appartiennent au pédicule nourricier",
+      "D": "l’artère bronchique naît de l’artère pulmonaire",
+      "E": "les veines pulmonaires se drainent via le système azygos"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "AB = aorte / grande circulation"
+      },
+      "B": {
+        "correct": true,
+        "why": "AP = pédicule fonctionnel / petite circulation"
+      },
+      "C": {
+        "correct": true,
+        "why": "veines bronchiques = pédicule nourricier"
+      },
+      "D": {
+        "correct": false,
+        "why": "AB naît de l’aorte, pas de l’AP"
+      },
+      "E": {
+        "correct": false,
+        "why": "VP → cœur gauche ; azygos = veines bronchiques"
+      }
+    },
+    "tags": [
+      "vascularisation",
+      "artere_bronchique",
+      "pedicules",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#12",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000051",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant la structure de la trachée, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "c’est un conduit élastique formé d’anneaux superposés en forme de U",
+      "B": "les anneaux sont fermés en arrière par le muscle trachéal",
+      "C": "elle naît en regard de C6, au niveau du cartilage cricoïde",
+      "D": "elle se divise en regard de T5 en deux bronches souches",
+      "E": "ses anneaux forment des cercles complets fermés en arrière"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "anneaux en U"
+      },
+      "B": {
+        "correct": true,
+        "why": "fermeture postérieure = muscle trachéal"
+      },
+      "C": {
+        "correct": true,
+        "why": "naissance C6 / cricoïde"
+      },
+      "D": {
+        "correct": true,
+        "why": "division T5"
+      },
+      "E": {
+        "correct": false,
+        "why": "anneaux ouverts en U, pas cercles complets"
+      }
+    },
+    "tags": [
+      "trachee",
+      "anneaux",
+      "muscle_tracheal",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#3.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000052",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "À propos des repères vertébraux de la trachée, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "sa naissance est en regard de C6, au cartilage cricoïde",
+      "B": "sa division se fait en regard de T5 en deux bronches souches",
+      "C": "sa division se fait en regard de T4",
+      "D": "elle naît en regard de T1",
+      "E": "elle appartient aux voies aériennes supérieures"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "C6 / cricoïde"
+      },
+      "B": {
+        "correct": true,
+        "why": "bifurcation T5"
+      },
+      "C": {
+        "correct": false,
+        "why": "division en T5, pas T4"
+      },
+      "D": {
+        "correct": false,
+        "why": "naissance C6, pas T1"
+      },
+      "E": {
+        "correct": false,
+        "why": "trachée = voies aériennes inférieures"
+      }
+    },
+    "tags": [
+      "trachee",
+      "C6",
+      "T5",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#3.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000053",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant les bronches souches et leur pénétration pulmonaire, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "elles pénètrent dans les poumons au niveau des pédicules pulmonaires",
+      "B": "la bronche souche droite forme un angle d’environ 25–30° avec la ligne médiane",
+      "C": "la bronche souche droite donne trois bronches lobaires : supérieure, moyenne et inférieure",
+      "D": "la bronche souche gauche donne trois bronches lobaires",
+      "E": "les bronches souches sont symétriques et également verticales"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "entrée par le pédicule / hile"
+      },
+      "B": {
+        "correct": true,
+        "why": "BSD plus verticale : 25–30°"
+      },
+      "C": {
+        "correct": true,
+        "why": "3 bronches lobaires à droite"
+      },
+      "D": {
+        "correct": false,
+        "why": "2 bronches lobaires à gauche"
+      },
+      "E": {
+        "correct": false,
+        "why": "asymétrie : droite plus verticale"
+      }
+    },
+    "tags": [
+      "bronche_souche",
+      "pedicule",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#3.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000054",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "À propos de la ramification lobaire des bronches souches, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "à droite : bronches lobaires supérieure, moyenne et inférieure",
+      "B": "à gauche : bronches lobaires supérieure et inférieure",
+      "C": "la bronche souche droite est plus verticale que la gauche",
+      "D": "à gauche existe une bronche lobaire moyenne",
+      "E": "à droite il n’existe que deux bronches lobaires"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "3 lobaires à droite"
+      },
+      "B": {
+        "correct": true,
+        "why": "2 lobaires à gauche"
+      },
+      "C": {
+        "correct": true,
+        "why": "BSD plus verticale"
+      },
+      "D": {
+        "correct": false,
+        "why": "pas de lobaire moyenne à gauche"
+      },
+      "E": {
+        "correct": false,
+        "why": "3 lobaires à droite"
+      }
+    },
+    "tags": [
+      "bronches_lobaires",
+      "asymetrie",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#3.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000055",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant la face médiale du poumon et le hile, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la face médiale comporte une partie vertébrale en rapport avec le rachis thoracique",
+      "B": "la partie médiastinale porte le hile pulmonaire",
+      "C": "le hile est non recouvert de plèvre car il porte la ligne de réflexion pleurale",
+      "D": "cette absence de plèvre au hile facilite le passage du pédicule vasculo-nerveux",
+      "E": "le hile se situe sur la face costale latérale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "partie vertébrale = rachis thoracique"
+      },
+      "B": {
+        "correct": true,
+        "why": "hile sur face médiastinale"
+      },
+      "C": {
+        "correct": true,
+        "why": "seule zone sans plèvre / ligne de réflexion"
+      },
+      "D": {
+        "correct": true,
+        "why": "passage du pédicule vasculo-nerveux"
+      },
+      "E": {
+        "correct": false,
+        "why": "hile = face médiale, pas costale"
+      }
+    },
+    "tags": [
+      "hile",
+      "face_mediale",
+      "plevre",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#8.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000056",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant la phase inspiratoire, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l’inspiration est une expansion active de la cavité thoracique",
+      "B": "le muscle diaphragme intervient principalement",
+      "C": "l’inspiration véhicule de l’air riche en O₂ jusqu’aux alvéoles pulmonaires",
+      "D": "en inspiration forcée, des muscles inspiratoires accessoires peuvent être sollicités",
+      "E": "l’inspiration calme correspond à un relâchement passif des muscles"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "inspiration = expansion active"
+      },
+      "B": {
+        "correct": true,
+        "why": "diaphragme = muscle principal"
+      },
+      "C": {
+        "correct": true,
+        "why": "air riche en O₂ vers alvéoles"
+      },
+      "D": {
+        "correct": true,
+        "why": "accessoires en inspiration forcée"
+      },
+      "E": {
+        "correct": false,
+        "why": "relâchement passif = expiration calme"
+      }
+    },
+    "tags": [
+      "inspiration",
+      "diaphragme",
+      "ventilation",
+      "P3"
+    ],
+    "course_ref": "04_Appareil_respiratoire#14.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-04-000057",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "À propos de l’expiration, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "l’expiration calme correspond à un relâchement passif des muscles inspiratoires",
+      "B": "l’air expulsé est pauvre en O₂ et riche en CO₂",
+      "C": "en expiration forcée, des muscles expiratoires accessoires peuvent intervenir",
+      "D": "l’expiration calme nécessite toujours une contraction active du diaphragme",
+      "E": "les muscles intercostaux internes et intimes peuvent participer à une expiration forcée"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "expiration calme = passive"
+      },
+      "B": {
+        "correct": true,
+        "why": "air expulsé pauvre en O₂, riche en CO₂"
+      },
+      "C": {
+        "correct": true,
+        "why": "expiration forcée = muscles accessoires"
+      },
+      "D": {
+        "correct": false,
+        "why": "expiration calme passive, pas contraction diaphragme"
+      },
+      "E": {
+        "correct": true,
+        "why": "intercostaux internes/intimes en expiration forcée"
+      }
+    },
+    "tags": [
+      "expiration",
+      "muscles_accessoires",
+      "ventilation",
+      "P3"
+    ],
+    "course_ref": "04_Appareil_respiratoire#14.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-04-000058",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant les voies aériennes et les échanges pulmonaires, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les voies aériennes respiratoires assurent le transport de l’air",
+      "B": "elles sont situées dans la région de la face, du cou et du thorax",
+      "C": "les échanges entre l’air et le sang se font au niveau des alvéoles pulmonaires",
+      "D": "les échanges gazeux ont lieu principalement dans la trachée",
+      "E": "le laryngopharynx appartient aux voies aériennes respiratoires"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "voies = transport d’air"
+      },
+      "B": {
+        "correct": true,
+        "why": "face / cou / thorax"
+      },
+      "C": {
+        "correct": true,
+        "why": "échanges alvéolaires"
+      },
+      "D": {
+        "correct": false,
+        "why": "échanges = alvéoles, pas trachée"
+      },
+      "E": {
+        "correct": false,
+        "why": "laryngopharynx = voie digestive"
+      }
+    },
+    "tags": [
+      "voies_aeriennes",
+      "alveoles",
+      "P3"
+    ],
+    "course_ref": "04_Appareil_respiratoire#1.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-04-000059",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant les limites des poumons dans le thorax, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "en haut : l’orifice supérieur du thorax",
+      "B": "en bas : le diaphragme",
+      "C": "en dedans : le médiastin",
+      "D": "en dehors : la paroi thoracique latérale avec le grill costal",
+      "E": "en dedans : le rachis lombaire"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "limite supérieure"
+      },
+      "B": {
+        "correct": true,
+        "why": "limite inférieure = diaphragme"
+      },
+      "C": {
+        "correct": true,
+        "why": "médial = médiastin"
+      },
+      "D": {
+        "correct": true,
+        "why": "latéral = paroi / grill costal"
+      },
+      "E": {
+        "correct": false,
+        "why": "rachis lombaire hors thorax"
+      }
+    },
+    "tags": [
+      "rapports",
+      "limites",
+      "P3"
+    ],
+    "course_ref": "04_Appareil_respiratoire#13",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-04-000060",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant le larynx, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il comprend notamment les cartilages cricoïde, thyroïde et épiglottique",
+      "B": "il comprend aussi les cartilages aryténoïde et corniculé",
+      "C": "ses cartilages sont reliés par des membranes et des ligaments",
+      "D": "il est actionné par des muscles",
+      "E": "il ne participe qu’à la phonation, sans rôle respiratoire"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "cartilages cricoïde, thyroïde, épiglottique"
+      },
+      "B": {
+        "correct": true,
+        "why": "aryténoïde + corniculé"
+      },
+      "C": {
+        "correct": true,
+        "why": "membranes et ligaments"
+      },
+      "D": {
+        "correct": true,
+        "why": "action musculaire"
+      },
+      "E": {
+        "correct": false,
+        "why": "double rôle respiration + phonation"
+      }
+    },
+    "tags": [
+      "larynx",
+      "cartilages",
+      "phonation",
+      "P2"
+    ],
+    "course_ref": "04_Appareil_respiratoire#3.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
   }
 ];

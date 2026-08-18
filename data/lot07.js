@@ -43,13 +43,15 @@ window.PASS_ITEMS = [
     "tags": [
       "cage_thoracique",
       "sternum",
-      "angle_Louis"
+      "angle_Louis",
+      "P3"
     ],
     "course_ref": "07_Parois_du_tronc#1",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P3"
   },
   {
     "id": "GEN-ANAT-07-000002",
@@ -96,13 +98,15 @@ window.PASS_ITEMS = [
       "cotes",
       "vraies",
       "fausses",
-      "flottantes"
+      "flottantes",
+      "P2"
     ],
     "course_ref": "07_Parois_du_tronc#3",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-07-000003",
@@ -147,13 +151,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "pedicule_intercostal",
-      "ponction"
+      "ponction",
+      "P2"
     ],
     "course_ref": "07_Parois_du_tronc#4",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-07-000004",
@@ -199,13 +205,15 @@ window.PASS_ITEMS = [
     "tags": [
       "SCM",
       "rotation",
-      "inspiration"
+      "inspiration",
+      "P3"
     ],
     "course_ref": "07_Parois_du_tronc#5",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P3"
   },
   {
     "id": "GEN-ANAT-07-000005",
@@ -250,13 +258,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "trapeze",
-      "faisceaux"
+      "faisceaux",
+      "P3"
     ],
     "course_ref": "07_Parois_du_tronc#8",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P3"
   },
   {
     "id": "GEN-ANAT-07-000006",
@@ -302,13 +312,15 @@ window.PASS_ITEMS = [
     "tags": [
       "grand_dorsal",
       "adduction",
-      "L4"
+      "L4",
+      "P2"
     ],
     "course_ref": "07_Parois_du_tronc#10",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-07-000007",
@@ -353,13 +365,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "petit_pectoral",
-      "moignon_epaule"
+      "moignon_epaule",
+      "P2"
     ],
     "course_ref": "07_Parois_du_tronc#12",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-07-000008",
@@ -404,13 +418,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "dentele_anterieur",
-      "scapula"
+      "scapula",
+      "P2"
     ],
     "course_ref": "07_Parois_du_tronc#9",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-07-000009",
@@ -455,13 +471,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "rhomboides",
-      "adducteurs"
+      "adducteurs",
+      "P2"
     ],
     "course_ref": "07_Parois_du_tronc#7",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-07-000010",
@@ -507,13 +525,15 @@ window.PASS_ITEMS = [
     "tags": [
       "transverse",
       "grand_droit",
-      "oblique_externe"
+      "oblique_externe",
+      "P2"
     ],
     "course_ref": "07_Parois_du_tronc#15",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-07-000011",
@@ -558,13 +578,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "canal_inguinal",
-      "tendon_conjoint"
+      "tendon_conjoint",
+      "P2"
     ],
     "course_ref": "07_Parois_du_tronc#18",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-07-000012",
@@ -609,13 +631,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "oblique_externe",
-      "anneau_inguinal"
+      "anneau_inguinal",
+      "P2"
     ],
     "course_ref": "07_Parois_du_tronc#17",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-07-000013",
@@ -661,13 +685,15 @@ window.PASS_ITEMS = [
     "tags": [
       "ilio_psoas",
       "petit_trochanter",
-      "flexion_hanche"
+      "flexion_hanche",
+      "P1"
     ],
     "course_ref": "07_Parois_du_tronc#20",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-07-000014",
@@ -712,13 +738,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "carre_des_lombes",
-      "crete_iliaque"
+      "crete_iliaque",
+      "P2"
     ],
     "course_ref": "07_Parois_du_tronc#19",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-07-000015",
@@ -764,13 +792,15 @@ window.PASS_ITEMS = [
     "tags": [
       "diaphragme",
       "coupoles",
-      "inspiration"
+      "inspiration",
+      "P3"
     ],
     "course_ref": "07_Parois_du_tronc#21",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P3"
   },
   {
     "id": "GEN-ANAT-07-000016",
@@ -815,13 +845,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "grand_pectoral",
-      "faisceaux"
+      "faisceaux",
+      "P3"
     ],
     "course_ref": "07_Parois_du_tronc#13",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P3"
   },
   {
     "id": "GEN-ANAT-07-000017",
@@ -866,13 +898,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "canal_inguinal",
-      "cordon"
+      "cordon",
+      "P2"
     ],
     "course_ref": "07_Parois_du_tronc#18",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-07-000018",
@@ -918,13 +952,15 @@ window.PASS_ITEMS = [
     "tags": [
       "ilio_psoas",
       "chef_iliaque",
-      "ligament_inguinal"
+      "ligament_inguinal",
+      "P1"
     ],
     "course_ref": "07_Parois_du_tronc#20",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-07-000019",
@@ -970,13 +1006,15 @@ window.PASS_ITEMS = [
     "tags": [
       "cotes",
       "manubrium",
-      "cartilage"
+      "cartilage",
+      "P2"
     ],
     "course_ref": "07_Parois_du_tronc#3",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-07-000020",
@@ -1021,12 +1059,3238 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "paroi_abdominale",
-      "plans_musculaires"
+      "plans_musculaires",
+      "P2"
     ],
     "course_ref": "07_Parois_du_tronc#18",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000021",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant le manubrium sternal, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "c’est la partie supérieure du sternum",
+      "B": "il s’articule de chaque côté avec la clavicule",
+      "C": "il s’articule de chaque côté avec la 1ère côte",
+      "D": "il s’articule avec la moitié de la 2ème côte à la jonction manubrio-sternale",
+      "E": "c’est l’extrémité inférieure du sternum"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "manubrium = partie supérieure"
+      },
+      "B": {
+        "correct": true,
+        "why": "articulation avec la clavicule"
+      },
+      "C": {
+        "correct": true,
+        "why": "articulation avec la 1ère côte"
+      },
+      "D": {
+        "correct": true,
+        "why": "moitié de la 2ème côte à la jonction manubrio-sternale"
+      },
+      "E": {
+        "correct": false,
+        "why": "extrémité inférieure = processus xyphoïde"
+      }
+    },
+    "tags": [
+      "sternum",
+      "manubrium",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#2.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000022",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos de l’angle de Louis et du bord supérieur du manubrium, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la jonction manubrium–corps du sternum correspond à l’angle du sternum = angle de Louis",
+      "B": "le bord supérieur du manubrium présente l’incisure claviculaire",
+      "C": "le manubrium s’articule de chaque côté avec la clavicule",
+      "D": "l’angle de Louis correspond à la jonction du corps du sternum avec le processus xyphoïde",
+      "E": "l’incisure claviculaire est située sur le processus xyphoïde"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "angle de Louis = jonction manubrio-sternale"
+      },
+      "B": {
+        "correct": true,
+        "why": "bord supérieur = incisure claviculaire"
+      },
+      "C": {
+        "correct": true,
+        "why": "manubrium ↔ clavicule de chaque côté"
+      },
+      "D": {
+        "correct": false,
+        "why": "Louis = manubrium/corps, pas corps/xyphoïde"
+      },
+      "E": {
+        "correct": false,
+        "why": "incisure claviculaire = bord supérieur du manubrium"
+      }
+    },
+    "tags": [
+      "sternum",
+      "angle_Louis",
+      "incisure_claviculaire",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#2.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000023",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant le corps du sternum, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "c’est la partie intermédiaire du sternum",
+      "B": "il s’articule avec la 2ème moitié de la 2ème côte",
+      "C": "il s’articule avec les côtes 3 à 10",
+      "D": "il s’articule uniquement avec les côtes 1 et 2",
+      "E": "le manubrium s’articule avec la moitié de la 2ème côte à la jonction manubrio-sternale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "corps = partie intermédiaire"
+      },
+      "B": {
+        "correct": true,
+        "why": "2ème moitié de la 2ème côte"
+      },
+      "C": {
+        "correct": true,
+        "why": "articulations avec les côtes 3 à 10"
+      },
+      "D": {
+        "correct": false,
+        "why": "1ère côte et moitié de la 2ème = manubrium ; corps = 2ème moitié de la 2ème + côtes 3–10"
+      },
+      "E": {
+        "correct": true,
+        "why": "moitié de la 2ème côte à la jonction manubrio-sternale"
+      }
+    },
+    "tags": [
+      "sternum",
+      "corps",
+      "cotes",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#2.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000024",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos du processus xyphoïde et de la forme du sternum, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le processus xyphoïde est l’extrémité inférieure du sternum",
+      "B": "c’est une partie cartilagineuse qui commence son ossification autour de 40 ans",
+      "C": "le processus xyphoïde est déjà entièrement ossifié dès la naissance",
+      "D": "le sternum est concave en arrière",
+      "E": "le processus xyphoïde est la partie supérieure du sternum"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "xyphoïde = extrémité inférieure"
+      },
+      "B": {
+        "correct": true,
+        "why": "cartilage ; ossification vers 40 ans"
+      },
+      "C": {
+        "correct": false,
+        "why": "ossification autour de 40 ans, pas dès la naissance"
+      },
+      "D": {
+        "correct": true,
+        "why": "sternum concave en arrière"
+      },
+      "E": {
+        "correct": false,
+        "why": "partie supérieure = manubrium"
+      }
+    },
+    "tags": [
+      "sternum",
+      "processus_xyphoide",
+      "ossification",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#2.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000025",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant les trois parties du sternum, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le sternum est concave en arrière",
+      "B": "le sternum est concave en avant",
+      "C": "le manubrium est la partie supérieure",
+      "D": "le corps est la partie intermédiaire",
+      "E": "le processus xyphoïde est l’extrémité inférieure"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "concave en arrière"
+      },
+      "B": {
+        "correct": false,
+        "why": "concave en arrière, pas en avant"
+      },
+      "C": {
+        "correct": true,
+        "why": "manubrium = partie supérieure"
+      },
+      "D": {
+        "correct": true,
+        "why": "corps = partie intermédiaire"
+      },
+      "E": {
+        "correct": true,
+        "why": "xyphoïde = extrémité inférieure"
+      }
+    },
+    "tags": [
+      "sternum",
+      "manubrium",
+      "corps",
+      "processus_xyphoide",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000026",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos des rôles de la cage thoracique et du sternum, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la cage thoracique protège les organes vitaux thoraciques",
+      "B": "elle permet les mouvements respiratoires",
+      "C": "le sternum est un os plat",
+      "D": "le sternum est un os long",
+      "E": "les 12 paires de côtes forment latéralement la cage thoracique"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "rôle de protection des organes vitaux thoraciques"
+      },
+      "B": {
+        "correct": true,
+        "why": "rôle : mouvements respiratoires"
+      },
+      "C": {
+        "correct": true,
+        "why": "sternum = os plat"
+      },
+      "D": {
+        "correct": false,
+        "why": "sternum = os plat, pas os long"
+      },
+      "E": {
+        "correct": true,
+        "why": "12 paires de côtes latéralement"
+      }
+    },
+    "tags": [
+      "cage_thoracique",
+      "roles",
+      "sternum",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#1.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000027",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant la constitution de la cage thoracique et l’angle xyphoïdien, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l’angle xyphoïdien est l’angle d’ouverture entre les cartilages costaux inférieurs",
+      "B": "la cage thoracique est constituée du rachis thoracique en arrière, du sternum en avant et de 12 paires de côtes latéralement",
+      "C": "elle est mobile grâce aux articulations entre côtes et vertèbres thoraciques en arrière",
+      "D": "l’angle xyphoïdien correspond à l’angle de Louis (jonction manubrio-sternale)",
+      "E": "elle est mobile grâce aux articulations entre cartilage costal et sternum en avant"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "ouverture entre les cartilages costaux inférieurs"
+      },
+      "B": {
+        "correct": true,
+        "why": "rachis thoracique + sternum + 12 paires de côtes"
+      },
+      "C": {
+        "correct": true,
+        "why": "articulations côtes–vertèbres thoraciques en arrière"
+      },
+      "D": {
+        "correct": false,
+        "why": "angle de Louis = jonction manubrium/corps, pas l’angle xyphoïdien"
+      },
+      "E": {
+        "correct": true,
+        "why": "articulations cartilage costal–sternum en avant"
+      }
+    },
+    "tags": [
+      "cage_thoracique",
+      "angle_xyphoidien",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#1.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000028",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos de la taille des côtes, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les côtes sont de taille croissante",
+      "B": "elles sont petites en haut et longues en bas",
+      "C": "cette disposition s’explique par la forme d’entonnoir du thorax",
+      "D": "elles sont longues en haut et petites en bas",
+      "E": "une côte comporte un tubercule, un col et une tête"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "taille croissante"
+      },
+      "B": {
+        "correct": true,
+        "why": "petites en haut, longues en bas"
+      },
+      "C": {
+        "correct": true,
+        "why": "thorax en forme d’entonnoir"
+      },
+      "D": {
+        "correct": false,
+        "why": "c’est l’inverse : petites en haut, longues en bas"
+      },
+      "E": {
+        "correct": true,
+        "why": "tubercule, col et tête font partie de la côte"
+      }
+    },
+    "tags": [
+      "cotes",
+      "taille_croissante",
+      "entonnoir",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#3.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000029",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant la constitution d’une côte, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "elle comporte un segment antérieur",
+      "B": "elle comporte un segment latéral",
+      "C": "elle comporte un angle postérieur",
+      "D": "elle comporte un tubercule, un col et une tête",
+      "E": "la tête s’articule avec 2 corps vertébraux et 1 disque intervertébral"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "segment antérieur"
+      },
+      "B": {
+        "correct": true,
+        "why": "segment latéral"
+      },
+      "C": {
+        "correct": true,
+        "why": "angle postérieur"
+      },
+      "D": {
+        "correct": true,
+        "why": "tubercule, col, tête"
+      },
+      "E": {
+        "correct": true,
+        "why": "tête = 2 corps + 1 disque"
+      }
+    },
+    "tags": [
+      "cotes",
+      "constitution",
+      "tete",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#3.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000030",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos de l’articulation de la tête de la côte, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la tête s’articule avec 2 corps vertébraux",
+      "B": "la tête s’articule avec 1 disque intervertébral",
+      "C": "la tête s’articule avec le processus transverse vertébral",
+      "D": "le tubercule costal s’articule avec le processus transverse vertébral",
+      "E": "la tête s’articule avec un seul corps vertébral"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "tête ↔ 2 corps vertébraux"
+      },
+      "B": {
+        "correct": true,
+        "why": "tête ↔ 1 disque intervertébral"
+      },
+      "C": {
+        "correct": false,
+        "why": "processus transverse = tubercule costal, pas la tête"
+      },
+      "D": {
+        "correct": true,
+        "why": "tubercule ↔ processus transverse"
+      },
+      "E": {
+        "correct": false,
+        "why": "2 corps vertébraux, pas un seul"
+      }
+    },
+    "tags": [
+      "cotes",
+      "tete",
+      "articulation",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#3.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000031",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant le tubercule costal et les articulations costo-vertébrales, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le tubercule costal s’articule avec le processus transverse vertébral",
+      "B": "la tête s’articule avec 2 corps vertébraux et 1 disque intervertébral",
+      "C": "le tubercule costal s’articule avec 2 corps vertébraux",
+      "D": "le col fait partie des constituants de la côte",
+      "E": "les côtes sont de taille croissante, petites en haut et longues en bas"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "tubercule ↔ processus transverse"
+      },
+      "B": {
+        "correct": true,
+        "why": "tête = 2 corps + 1 disque"
+      },
+      "C": {
+        "correct": false,
+        "why": "2 corps + 1 disque = tête, pas le tubercule"
+      },
+      "D": {
+        "correct": true,
+        "why": "tubercule, col et tête constituent la côte"
+      },
+      "E": {
+        "correct": true,
+        "why": "taille croissante (thorax en entonnoir)"
+      }
+    },
+    "tags": [
+      "cotes",
+      "tubercule_costal",
+      "processus_transverse",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#3.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000032",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos du pédicule vasculo-nerveux intercostal, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est constitué d’une veine, d’une artère et d’un nerf intercostaux",
+      "B": "il passe à la face inférieure de la côte",
+      "C": "cette face est marquée par une gouttière concave vers le bas",
+      "D": "il chemine à la face supérieure de la côte",
+      "E": "il suit le trajet oblique des côtes"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "VAN : veine, artère, nerf"
+      },
+      "B": {
+        "correct": true,
+        "why": "face inférieure de la côte"
+      },
+      "C": {
+        "correct": true,
+        "why": "gouttière concave vers le bas"
+      },
+      "D": {
+        "correct": false,
+        "why": "face inférieure, pas supérieure"
+      },
+      "E": {
+        "correct": true,
+        "why": "trajet oblique des côtes"
+      }
+    },
+    "tags": [
+      "espaces_intercostaux",
+      "pedicule_intercostal",
+      "VAN",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#4.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000033",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant l’artère intercostale et les ponctions pleurales, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l’artère intercostale est issue de l’aorte",
+      "B": "elle s’anastomose en avant avec l’artère thoracique interne",
+      "C": "les ponctions pleurales sont réalisées en rasant le pôle supérieur d’une côte",
+      "D": "les ponctions pleurales sont réalisées en rasant le pôle inférieur d’une côte",
+      "E": "l’artère intercostale naît de l’artère thoracique interne et n’a pas de rapport avec l’aorte"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "artère intercostale issue de l’aorte"
+      },
+      "B": {
+        "correct": true,
+        "why": "anastomose antérieure avec la thoracique interne"
+      },
+      "C": {
+        "correct": true,
+        "why": "ponction = raser le pôle supérieur (éviter le pédicule)"
+      },
+      "D": {
+        "correct": false,
+        "why": "pôle supérieur, pas inférieur (pédicule à la face inférieure)"
+      },
+      "E": {
+        "correct": false,
+        "why": "naît de l’aorte et s’anastomose avec la thoracique interne"
+      }
+    },
+    "tags": [
+      "pedicule_intercostal",
+      "artere_intercostale",
+      "ponction_pleurale",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#4.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000034",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos des trois muscles intercostaux, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "on distingue un muscle intercostal externe, un interne et un intime",
+      "B": "le muscle intercostal externe s’étend des processus transverses des vertèbres jusqu’au milieu du thorax",
+      "C": "le muscle intercostal interne s’étend du sternum jusqu’au milieu du thorax",
+      "D": "ces muscles sont continus de l’avant à l’arrière de l’espace intercostal",
+      "E": "ils relient les côtes entre elles"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "externe, interne et intime"
+      },
+      "B": {
+        "correct": true,
+        "why": "externe : processus transverses → milieu du thorax"
+      },
+      "C": {
+        "correct": true,
+        "why": "interne : sternum → milieu du thorax"
+      },
+      "D": {
+        "correct": false,
+        "why": "pas continus de l’avant à l’arrière"
+      },
+      "E": {
+        "correct": true,
+        "why": "relient les côtes entre elles"
+      }
+    },
+    "tags": [
+      "muscles_intercostaux",
+      "intercostal_externe",
+      "intercostal_interne",
+      "intercostal_intime",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#4.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000035",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant le muscle levator scapulae, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il s’origine des processus transverses de C1 à C4",
+      "B": "son trajet est en bas et en dehors",
+      "C": "c’est un muscle latéral et profond du cou",
+      "D": "il se termine sur l’angle supérieur de la scapula",
+      "E": "il est élévateur de la scapula"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "origine : transverses C1–C4"
+      },
+      "B": {
+        "correct": true,
+        "why": "trajet en bas et en dehors"
+      },
+      "C": {
+        "correct": true,
+        "why": "muscle latéral et profond du cou"
+      },
+      "D": {
+        "correct": true,
+        "why": "terminaison : angle supérieur de la scapula"
+      },
+      "E": {
+        "correct": true,
+        "why": "élévateur de la scapula"
+      }
+    },
+    "tags": [
+      "levator_scapulae",
+      "C1_C4",
+      "angle_superieur_scapula",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#6.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000036",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos de la terminaison et des actions du levator scapulae, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est élévateur de la scapula",
+      "B": "il bascule la scapula",
+      "C": "il se termine sur l’angle inférieur de la scapula",
+      "D": "il s’origine des processus transverses de T1 à T4",
+      "E": "il se termine sur l’angle supérieur de la scapula"
+    },
+    "answer": [
+      "A",
+      "B",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "élévateur de la scapula"
+      },
+      "B": {
+        "correct": true,
+        "why": "bascule la scapula"
+      },
+      "C": {
+        "correct": false,
+        "why": "terminaison = angle supérieur, pas inférieur"
+      },
+      "D": {
+        "correct": false,
+        "why": "origine = transverses C1–C4, pas T1–T4"
+      },
+      "E": {
+        "correct": true,
+        "why": "angle supérieur de la scapula"
+      }
+    },
+    "tags": [
+      "levator_scapulae",
+      "scapula",
+      "elevation",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#6.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000037",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant l’origine du chef psoas de l’ilio-psoas, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le plan antérieur s’insère sur les faces latérales des disques intervertébraux et des corps de T12 à L5",
+      "B": "le plan postérieur s’insère sur les processus transverses de L1 à L5",
+      "C": "le tendon commun se termine sur le petit trochanter du fémur",
+      "D": "le plan postérieur s’insère sur les processus épineux de L1 à L5",
+      "E": "le chef psoas s’origine des 2/3 supérieurs de la fosse iliaque"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "plan antérieur : disques et corps T12–L5"
+      },
+      "B": {
+        "correct": true,
+        "why": "plan postérieur : transverses L1–L5"
+      },
+      "C": {
+        "correct": true,
+        "why": "tendon commun → petit trochanter"
+      },
+      "D": {
+        "correct": false,
+        "why": "processus transverses, pas épineux"
+      },
+      "E": {
+        "correct": false,
+        "why": "2/3 de la fosse iliaque = chef iliaque"
+      }
+    },
+    "tags": [
+      "ilio_psoas",
+      "chef_psoas",
+      "T12_L5",
+      "P1"
+    ],
+    "course_ref": "07_Parois_du_tronc#20.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000038",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos du chef iliaque et de la terminaison de l’ilio-psoas, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le chef iliaque s’origine des 2/3 supérieurs de la fosse iliaque",
+      "B": "le muscle passe sous le ligament inguinal",
+      "C": "le ligament inguinal est tendu entre l’épine iliaque antéro-supérieure et le pubis",
+      "D": "le tendon commun se termine sur le grand trochanter",
+      "E": "le tendon commun se termine sur le petit trochanter du fémur"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "2/3 supérieurs de la fosse iliaque"
+      },
+      "B": {
+        "correct": true,
+        "why": "passage sous le ligament inguinal"
+      },
+      "C": {
+        "correct": true,
+        "why": "EIAS → pubis"
+      },
+      "D": {
+        "correct": false,
+        "why": "petit trochanter, pas grand trochanter"
+      },
+      "E": {
+        "correct": true,
+        "why": "tendon commun sur le petit trochanter"
+      }
+    },
+    "tags": [
+      "ilio_psoas",
+      "chef_iliaque",
+      "petit_trochanter",
+      "P1"
+    ],
+    "course_ref": "07_Parois_du_tronc#20.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000039",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant les actions de l’ilio-psoas à point fixe rachis et bassin, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est fléchisseur de la hanche",
+      "B": "il est rotateur externe",
+      "C": "il est extenseur de la hanche",
+      "D": "le tendon commun se termine sur le petit trochanter",
+      "E": "il se termine sur le grand trochanter"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "point fixe rachis/bassin : fléchisseur de hanche"
+      },
+      "B": {
+        "correct": true,
+        "why": "rotateur externe"
+      },
+      "C": {
+        "correct": false,
+        "why": "fléchisseur de hanche, pas extenseur"
+      },
+      "D": {
+        "correct": true,
+        "why": "petit trochanter"
+      },
+      "E": {
+        "correct": false,
+        "why": "petit trochanter, pas grand"
+      }
+    },
+    "tags": [
+      "ilio_psoas",
+      "flexion_hanche",
+      "rotateur_externe",
+      "P1"
+    ],
+    "course_ref": "07_Parois_du_tronc#20.6",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000040",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos des actions de l’ilio-psoas à point fixe fémur, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il incline le rachis et le bassin en avant",
+      "B": "il accentue la lordose lombaire",
+      "C": "il incline le rachis et le bassin en arrière",
+      "D": "à point fixe rachis et bassin, il est fléchisseur de la hanche",
+      "E": "il peut causer des lombalgies"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "point fixe fémur : inclinaison du rachis et du bassin en avant"
+      },
+      "B": {
+        "correct": true,
+        "why": "accentue la lordose lombaire"
+      },
+      "C": {
+        "correct": false,
+        "why": "inclinaison en avant, pas en arrière"
+      },
+      "D": {
+        "correct": true,
+        "why": "point fixe rachis/bassin : fléchisseur de hanche"
+      },
+      "E": {
+        "correct": true,
+        "why": "peut causer des lombalgies (ilio-psoas)"
+      }
+    },
+    "tags": [
+      "ilio_psoas",
+      "inclinaison_rachis",
+      "lordose_lombaire",
+      "P1"
+    ],
+    "course_ref": "07_Parois_du_tronc#20.6",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000041",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant les chefs d'origine du muscle sterno-cléido-mastoïdien, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le chef sternal s'insère sur le manubrium",
+      "B": "le chef claviculaire s'insère sur l'extrémité proximale de la clavicule",
+      "C": "il présente un chef sternal et un chef claviculaire",
+      "D": "le chef sternal s'insère sur le processus xyphoïde",
+      "E": "le chef claviculaire s'insère sur l'extrémité distale de la clavicule"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "chef sternal : manubrium"
+      },
+      "B": {
+        "correct": true,
+        "why": "chef claviculaire : extrémité proximale de la clavicule"
+      },
+      "C": {
+        "correct": true,
+        "why": "deux chefs : sternal et claviculaire"
+      },
+      "D": {
+        "correct": false,
+        "why": "xyphoïde = extrémité inférieure du sternum, pas d'origine du SCM"
+      },
+      "E": {
+        "correct": false,
+        "why": "extrémité proximale, pas distale"
+      }
+    },
+    "tags": [
+      "SCM",
+      "chefs",
+      "manubrium",
+      "clavicule",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#5.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000042",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos du trajet et de la terminaison du muscle sterno-cléido-mastoïdien, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il se termine sur le processus xyphoïde",
+      "B": "son trajet se fait en haut, en dehors et en arrière",
+      "C": "il se termine sur l'apophyse mastoïde de l'os temporal",
+      "D": "son trajet se fait en bas et en dedans",
+      "E": "la terminaison mastoïdienne appartient à l'os temporal"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "terminaison = apophyse mastoïde, pas xyphoïde"
+      },
+      "B": {
+        "correct": true,
+        "why": "trajet : haut, dehors, arrière"
+      },
+      "C": {
+        "correct": true,
+        "why": "terminaison : apophyse mastoïde"
+      },
+      "D": {
+        "correct": false,
+        "why": "pas en bas et en dedans"
+      },
+      "E": {
+        "correct": true,
+        "why": "mastoïde = os temporal"
+      }
+    },
+    "tags": [
+      "SCM",
+      "mastoide",
+      "trajet",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#5.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000043",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant les actions du muscle sterno-cléido-mastoïdien, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "en contraction unilatérale, il est rotateur de la tête du côté opposé",
+      "B": "en contraction unilatérale, il incline la tête du côté de la contraction",
+      "C": "en contraction bilatérale, il est abaisseur de la tête",
+      "D": "en contraction bilatérale, il est inspirateur accessoire",
+      "E": "en contraction unilatérale, il tourne la tête du même côté que la contraction"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "rotation controlatérale"
+      },
+      "B": {
+        "correct": true,
+        "why": "inclinaison homolatérale"
+      },
+      "C": {
+        "correct": true,
+        "why": "bilatéral : abaisseur de la tête"
+      },
+      "D": {
+        "correct": true,
+        "why": "bilatéral : inspirateur accessoire"
+      },
+      "E": {
+        "correct": false,
+        "why": "rotation = côté opposé, pas le même côté"
+      }
+    },
+    "tags": [
+      "SCM",
+      "rotation",
+      "inclinaison",
+      "inspiration",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#5.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000044",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos de l'origine et du trajet des muscles petit et grand rhomboïdes, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "ils s'originent sur le bord spinal ou médial de la scapula",
+      "B": "leur trajet se fait en haut et en dedans",
+      "C": "ce sont des muscles profonds et aplatis",
+      "D": "ils s'originent sur le bord latéral de la scapula",
+      "E": "ce sont des muscles postérieurs superficiels comme le trapèze"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "origine : bord spinal/médial de la scapula ⭐"
+      },
+      "B": {
+        "correct": true,
+        "why": "trajet : haut et dedans"
+      },
+      "C": {
+        "correct": true,
+        "why": "🆕 profonds et aplatis"
+      },
+      "D": {
+        "correct": false,
+        "why": "bord médial, pas latéral"
+      },
+      "E": {
+        "correct": false,
+        "why": "rhomboïdes = profonds ; trapèze = superficiel"
+      }
+    },
+    "tags": [
+      "rhomboides",
+      "bord_medial",
+      "scapula",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#7.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000045",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant les terminaisons des muscles rhomboïdes, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le petit rhomboïde se termine sur les processus épineux de C6 et C7",
+      "B": "le grand rhomboïde se termine sur les processus épineux de T1 à T4",
+      "C": "le petit rhomboïde se termine sur T1 à T4",
+      "D": "le grand rhomboïde se termine sur C6 et C7",
+      "E": "les deux se terminent sur des processus épineux"
+    },
+    "answer": [
+      "A",
+      "B",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "petit rhomboïde : C6 et C7 ⭐"
+      },
+      "B": {
+        "correct": true,
+        "why": "grand rhomboïde : T1 à T4 ⭐"
+      },
+      "C": {
+        "correct": false,
+        "why": "T1–T4 = grand rhomboïde"
+      },
+      "D": {
+        "correct": false,
+        "why": "C6–C7 = petit rhomboïde"
+      },
+      "E": {
+        "correct": true,
+        "why": "terminaisons épineuses pour les deux"
+      }
+    },
+    "tags": [
+      "rhomboides",
+      "C6",
+      "C7",
+      "T1",
+      "T4",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#7.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000046",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos des actions des muscles rhomboïdes, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "ils sont élévateurs de la scapula",
+      "B": "ils sont adducteurs de la scapula",
+      "C": "ils rapprochent la scapula de la ligne médiane",
+      "D": "ils attirent la scapula en avant et en dehors",
+      "E": "ils sont abducteurs de la scapula"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "élévateurs de la scapula"
+      },
+      "B": {
+        "correct": true,
+        "why": "adducteurs ⭐⭐"
+      },
+      "C": {
+        "correct": true,
+        "why": "rapprochement de la ligne médiane"
+      },
+      "D": {
+        "correct": false,
+        "why": "avant et dehors = dentelé antérieur"
+      },
+      "E": {
+        "correct": false,
+        "why": "adducteurs, pas abducteurs"
+      }
+    },
+    "tags": [
+      "rhomboides",
+      "adducteurs",
+      "scapula",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#7.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000047",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant les origines des trois faisceaux du muscle trapèze, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le faisceau supérieur naît de l'os occipital et des processus épineux de C1 à C5",
+      "B": "le faisceau moyen naît des processus épineux de C7 à T3",
+      "C": "le faisceau inférieur naît des processus épineux de T2/T3 à T12",
+      "D": "le faisceau supérieur naît des processus épineux de T7 à L5",
+      "E": "le muscle comporte trois faisceaux : supérieur, moyen et inférieur"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "supérieur : occipital + C1–C5"
+      },
+      "B": {
+        "correct": true,
+        "why": "moyen : C7 à T3"
+      },
+      "C": {
+        "correct": true,
+        "why": "inférieur : T2/T3 à T12"
+      },
+      "D": {
+        "correct": false,
+        "why": "T7–L5 = grand dorsal, pas le faisceau supérieur du trapèze"
+      },
+      "E": {
+        "correct": true,
+        "why": "3 faisceaux"
+      }
+    },
+    "tags": [
+      "trapeze",
+      "faisceaux",
+      "origines",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#8.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000048",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos du trajet et des terminaisons du muscle trapèze, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "c'est un muscle postérieur et superficiel",
+      "B": "le faisceau supérieur se termine sur le 1/3 externe de la clavicule",
+      "C": "le faisceau moyen se termine sur l'acromion et la scapula",
+      "D": "le faisceau inférieur se termine sur la scapula",
+      "E": "le faisceau supérieur se termine sur le 1/3 interne de la clavicule"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "🆕 muscle postérieur et superficiel"
+      },
+      "B": {
+        "correct": true,
+        "why": "supérieur → 1/3 externe de la clavicule"
+      },
+      "C": {
+        "correct": true,
+        "why": "moyen → acromion et scapula"
+      },
+      "D": {
+        "correct": true,
+        "why": "inférieur → scapula"
+      },
+      "E": {
+        "correct": false,
+        "why": "1/3 externe, pas interne"
+      }
+    },
+    "tags": [
+      "trapeze",
+      "terminaisons",
+      "superficiel",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#8.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000049",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant les actions du muscle trapèze, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il est stabilisateur de la scapula",
+      "B": "le faisceau supérieur est élévateur du moignon de l'épaule ou incline latéralement la tête",
+      "C": "en contraction bilatérale, le faisceau supérieur étend la tête",
+      "D": "en contraction bilatérale, le faisceau inférieur élève les scapulas",
+      "E": "en contraction bilatérale, le faisceau moyen rapproche les scapulas et l'inférieur les abaisse"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "stabilisateur de la scapula"
+      },
+      "B": {
+        "correct": true,
+        "why": "supérieur : élévateur du moignon ou inclinaison latérale de la tête"
+      },
+      "C": {
+        "correct": true,
+        "why": "bilatéral supérieur : extension de la tête"
+      },
+      "D": {
+        "correct": false,
+        "why": "inférieur abaisse les scapulas, ne les élève pas"
+      },
+      "E": {
+        "correct": true,
+        "why": "bilatéral : moyen rapproche, inférieur abaisse"
+      }
+    },
+    "tags": [
+      "trapeze",
+      "actions",
+      "bilateral",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#8.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000050",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos de l'origine et du trajet du muscle dentelé antérieur, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il naît des côtes 11 et 12 uniquement",
+      "B": "il naît des côtes 1 à 9",
+      "C": "il se dirige vers le dehors puis contourne le grill costal",
+      "D": "il se dirige vers le dedans en passant sous la scapula",
+      "E": "il naît des côtes 3, 4 et 5 uniquement"
+    },
+    "answer": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "côtes 11–12 = flottantes, pas l'origine du dentelé"
+      },
+      "B": {
+        "correct": true,
+        "why": "origine : côtes 1 à 9"
+      },
+      "C": {
+        "correct": true,
+        "why": "dehors puis contourne le grill costal"
+      },
+      "D": {
+        "correct": true,
+        "why": "puis dedans sous la scapula"
+      },
+      "E": {
+        "correct": false,
+        "why": "côtes 3–4–5 = petit pectoral"
+      }
+    },
+    "tags": [
+      "dentele_anterieur",
+      "cotes",
+      "trajet",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#9.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000051",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant la terminaison et les actions du muscle dentelé antérieur, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il se termine en 3 faisceaux : angle supérieur, bord spinal et pointe distale de la scapula",
+      "B": "il fixe la scapula contre le thorax",
+      "C": "sa paralysie entraîne un décollement de la scapula",
+      "D": "il rapproche la scapula de la ligne médiane comme les rhomboïdes",
+      "E": "il attire la scapula en avant et en dehors"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "3 faisceaux scapulaires"
+      },
+      "B": {
+        "correct": true,
+        "why": "fixe la scapula contre le thorax ⭐"
+      },
+      "C": {
+        "correct": true,
+        "why": "paralysie → décollement"
+      },
+      "D": {
+        "correct": false,
+        "why": "adducteurs / ligne médiane = rhomboïdes"
+      },
+      "E": {
+        "correct": true,
+        "why": "attire en avant et en dehors ⭐⭐⭐"
+      }
+    },
+    "tags": [
+      "dentele_anterieur",
+      "scapula",
+      "faisceaux",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#9.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000052",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos des origines du muscle grand dorsal, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il s'origine sur la crête iliaque, en regard de L4",
+      "B": "il s'origine sur les 4 dernières côtes",
+      "C": "il s'origine sur les processus épineux de T7 à L5",
+      "D": "il peut aussi s'insérer sur l'angle inférieur de la scapula",
+      "E": "il s'origine exclusivement sur les processus épineux de C6 et C7"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "crête iliaque ⭐ en regard de L4 ⭐"
+      },
+      "B": {
+        "correct": true,
+        "why": "4 dernières côtes"
+      },
+      "C": {
+        "correct": true,
+        "why": "épineux T7 à L5"
+      },
+      "D": {
+        "correct": true,
+        "why": "parfois angle inférieur de la scapula"
+      },
+      "E": {
+        "correct": false,
+        "why": "C6–C7 = petit rhomboïde, pas le grand dorsal"
+      }
+    },
+    "tags": [
+      "grand_dorsal",
+      "crete_iliaque",
+      "L4",
+      "T7",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#10.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000053",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant le trajet, la terminaison et les actions du muscle grand dorsal, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "son trajet est oblique vers le haut et le dehors",
+      "B": "il se vrille dans le creux axillaire",
+      "C": "il se termine sur la lèvre externe de la gouttière bicipitale",
+      "D": "point fixe thorax : il est adducteur du bras",
+      "E": "point fixe thorax : il est aussi extenseur et rotateur interne du bras"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "oblique haut et dehors"
+      },
+      "B": {
+        "correct": true,
+        "why": "vrille dans le creux axillaire"
+      },
+      "C": {
+        "correct": false,
+        "why": "lèvre externe = grand pectoral ; grand dorsal → coulisse bicipitale"
+      },
+      "D": {
+        "correct": true,
+        "why": "adducteur du bras ⭐⭐⭐"
+      },
+      "E": {
+        "correct": true,
+        "why": "extenseur + rotateur interne (point fixe thorax)"
+      }
+    },
+    "tags": [
+      "grand_dorsal",
+      "coulisse_bicipitale",
+      "adducteur",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#10.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000054",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos des insertions du muscle sous-clavier, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il naît de la face supérieure de la 1ère côte et de son cartilage costal",
+      "B": "son trajet se fait en arrière, en dehors et en haut",
+      "C": "il se termine dans la gouttière sous-clavière, à la face inférieure de la clavicule",
+      "D": "il naît de la face latérale des côtes 3, 4 et 5",
+      "E": "il relie la 1ère côte à la clavicule"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "origine : 1ère côte + cartilage costal"
+      },
+      "B": {
+        "correct": true,
+        "why": "trajet : arrière, dehors, haut"
+      },
+      "C": {
+        "correct": true,
+        "why": "terminaison : gouttière sous-clavière"
+      },
+      "D": {
+        "correct": false,
+        "why": "côtes 3–4–5 = petit pectoral"
+      },
+      "E": {
+        "correct": true,
+        "why": "1ère côte → clavicule"
+      }
+    },
+    "tags": [
+      "sous_clavier",
+      "1ere_cote",
+      "gouttiere_sous_claviere",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#11.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000055",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant les actions du muscle sous-clavier, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il est stabilisateur de la clavicule",
+      "B": "point fixe thorax : il abaisse le moignon de l'épaule",
+      "C": "point fixe épaule : il est inspirateur",
+      "D": "point fixe thorax : il élève le moignon de l'épaule",
+      "E": "il se termine sur le processus coracoïde"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "stabilisateur de la clavicule"
+      },
+      "B": {
+        "correct": true,
+        "why": "abaisse le moignon (point fixe thorax)"
+      },
+      "C": {
+        "correct": true,
+        "why": "inspirateur (point fixe épaule)"
+      },
+      "D": {
+        "correct": false,
+        "why": "abaisse, n'élève pas"
+      },
+      "E": {
+        "correct": false,
+        "why": "coracoïde = petit pectoral ; sous-clavier → gouttière sous-clavière"
+      }
+    },
+    "tags": [
+      "sous_clavier",
+      "moignon_epaule",
+      "inspiration",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#11.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000056",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos de la morphologie et des insertions du muscle petit pectoral, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il naît de la face latérale des côtes 3, 4 et 5",
+      "B": "son trajet se fait en haut, en arrière et en dehors",
+      "C": "c'est un muscle triangulaire à sommet supérieur, entre scapula et côtes",
+      "D": "il se termine sur le processus coracoïde de la scapula",
+      "E": "il naît des côtes 1 à 9"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "origine : côtes 3, 4 et 5"
+      },
+      "B": {
+        "correct": true,
+        "why": "trajet : haut, arrière, dehors"
+      },
+      "C": {
+        "correct": true,
+        "why": "🆕 triangulaire à sommet supérieur"
+      },
+      "D": {
+        "correct": true,
+        "why": "terminaison : processus coracoïde"
+      },
+      "E": {
+        "correct": false,
+        "why": "côtes 1–9 = dentelé antérieur"
+      }
+    },
+    "tags": [
+      "petit_pectoral",
+      "cotes_3_4_5",
+      "coracoide",
+      "triangulaire",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#12.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000057",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant les actions du muscle petit pectoral, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "point fixe thorax : il élève le moignon de l'épaule",
+      "B": "point fixe thorax : il abaisse le moignon de l'épaule",
+      "C": "point fixe épaule : il est inspirateur",
+      "D": "c'est un muscle triangulaire à sommet supérieur",
+      "E": "point fixe épaule : il est expirateur"
+    },
+    "answer": [
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "abaisse le moignon, ne l'élève pas"
+      },
+      "B": {
+        "correct": true,
+        "why": "abaisse le moignon ⭐⭐⭐ (point fixe thorax)"
+      },
+      "C": {
+        "correct": true,
+        "why": "inspirateur (point fixe épaule)"
+      },
+      "D": {
+        "correct": true,
+        "why": "🆕 triangulaire à sommet supérieur"
+      },
+      "E": {
+        "correct": false,
+        "why": "inspirateur, pas expirateur"
+      }
+    },
+    "tags": [
+      "petit_pectoral",
+      "moignon_epaule",
+      "inspiration",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#12.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000058",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos des quatre faisceaux d'origine du muscle grand pectoral, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "un faisceau naît du bord antérieur de la clavicule",
+      "B": "un faisceau naît du manubrium",
+      "C": "un faisceau naît des côtes 2 à 6 et de leur cartilage costal",
+      "D": "un faisceau naît de la gaine aponévrotique du muscle grand droit de l'abdomen",
+      "E": "il n'a que trois faisceaux d'origine, comme le trapèze"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "faisceau claviculaire"
+      },
+      "B": {
+        "correct": true,
+        "why": "faisceau manubrium"
+      },
+      "C": {
+        "correct": true,
+        "why": "faisceau côtes 2–6 + cartilage"
+      },
+      "D": {
+        "correct": true,
+        "why": "faisceau gaine du grand droit"
+      },
+      "E": {
+        "correct": false,
+        "why": "4 faisceaux d'origine, pas 3"
+      }
+    },
+    "tags": [
+      "grand_pectoral",
+      "faisceaux",
+      "clavicule",
+      "manubrium",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#13.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000059",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant le trajet et la terminaison du muscle grand pectoral, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "ses 4 faisceaux convergent vers l'humérus",
+      "B": "il est superficiel par rapport au petit pectoral",
+      "C": "il a une forme d'éventail",
+      "D": "il se termine sur la lèvre interne de la gouttière bicipitale",
+      "E": "il se termine sur la lèvre externe de la gouttière bicipitale de l'humérus"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "convergence des 4 faisceaux vers l'humérus"
+      },
+      "B": {
+        "correct": true,
+        "why": "superficiel au petit pectoral"
+      },
+      "C": {
+        "correct": true,
+        "why": "🆕 forme d'éventail"
+      },
+      "D": {
+        "correct": false,
+        "why": "lèvre externe, pas interne"
+      },
+      "E": {
+        "correct": true,
+        "why": "lèvre externe de la gouttière bicipitale"
+      }
+    },
+    "tags": [
+      "grand_pectoral",
+      "gouttiere_bicipitale",
+      "eventail",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#13.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000060",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos des actions du grand pectoral et des terminaisons voisines, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "point fixe thorax : le grand pectoral est adducteur du bras",
+      "B": "point fixe humérus : le grand pectoral est inspirateur",
+      "C": "le grand dorsal se termine dans la coulisse bicipitale",
+      "D": "le petit pectoral se termine sur le processus coracoïde",
+      "E": "point fixe thorax : le grand pectoral est abducteur du bras"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "adducteur du bras (point fixe thorax)"
+      },
+      "B": {
+        "correct": true,
+        "why": "inspirateur (point fixe humérus)"
+      },
+      "C": {
+        "correct": true,
+        "why": "grand dorsal → coulisse bicipitale"
+      },
+      "D": {
+        "correct": true,
+        "why": "petit pectoral → coracoïde"
+      },
+      "E": {
+        "correct": false,
+        "why": "adducteur, pas abducteur"
+      }
+    },
+    "tags": [
+      "grand_pectoral",
+      "adducteur",
+      "coulisse_bicipitale",
+      "coracoide",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#13.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000061",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant l’origine et le corps du muscle grand droit de l’abdomen, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il s’origine sur la face externe des cartilages costaux 5 à 7",
+      "B": "il s’origine sur les cartilages costaux 1 à 4",
+      "C": "il s’insère aussi sur le processus (appendice) xiphoïde",
+      "D": "son corps musculaire est plus large en haut qu’en bas",
+      "E": "il s’origine sur les côtes 11 et 12"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "cartilages costaux 5–7"
+      },
+      "B": {
+        "correct": false,
+        "why": "origine = cartilages 5–7, pas 1–4"
+      },
+      "C": {
+        "correct": true,
+        "why": "processus/appendice xiphoïde"
+      },
+      "D": {
+        "correct": true,
+        "why": "plus large en haut qu’en bas"
+      },
+      "E": {
+        "correct": false,
+        "why": "côtes 11–12 = transverse"
+      }
+    },
+    "tags": [
+      "grand_droit",
+      "cartilages_costaux",
+      "xiphoide",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#14.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000062",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos des intersections tendineuses, de la gaine et de la terminaison du grand droit, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le corps musculaire est coupé de 3 intersections tendineuses",
+      "B": "ces intersections sont à l’origine des « tablettes de chocolat »",
+      "C": "le muscle est situé dans une gaine aponévrotique formée par le transverse et les obliques",
+      "D": "il présente 5 intersections tendineuses",
+      "E": "il se termine sur la face antérieure et le bord supérieur du pubis"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "3 intersections tendineuses"
+      },
+      "B": {
+        "correct": true,
+        "why": "tablettes de chocolat"
+      },
+      "C": {
+        "correct": true,
+        "why": "gaine = transverse + obliques"
+      },
+      "D": {
+        "correct": false,
+        "why": "3 intersections, pas 5"
+      },
+      "E": {
+        "correct": true,
+        "why": "terminaison pubis"
+      }
+    },
+    "tags": [
+      "grand_droit",
+      "intersections_tendineuses",
+      "gaine",
+      "pubis",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#14.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000063",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant les actions du grand droit et la ligne blanche, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "point fixe = bassin : fléchisseur du thorax sur le bassin",
+      "B": "c’est l’inspirateur principal de la cage thoracique",
+      "C": "il se termine sur le petit trochanter",
+      "D": "la ligne blanche est une aponévrose médiane séparant le muscle droit du muscle gauche",
+      "E": "quelques fibres de terminaison croisent la ligne médiane"
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "fléchisseur du thorax ⭐"
+      },
+      "B": {
+        "correct": false,
+        "why": "fléchisseur + expirateur (viscères), pas inspirateur principal"
+      },
+      "C": {
+        "correct": false,
+        "why": "petit trochanter = ilio-psoas ; grand droit → pubis"
+      },
+      "D": {
+        "correct": true,
+        "why": "ligne blanche = aponévrose médiane"
+      },
+      "E": {
+        "correct": true,
+        "why": "quelques fibres croisent la ligne médiane"
+      }
+    },
+    "tags": [
+      "grand_droit",
+      "flechisseur_thorax",
+      "ligne_blanche",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#14.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000064",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos de l’origine et du corps du muscle transverse de l’abdomen, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il s’origine sur les 2/3 antérieurs de la crête iliaque",
+      "B": "il s’origine aussi sur le fascia iliaque et le fascia thoraco-lombaire",
+      "C": "il s’origine sur les 3/4 antérieurs de la crête iliaque",
+      "D": "il s’insère sur la face interne des cartilages costaux 7 à 10 ainsi que sur les côtes 11 et 12",
+      "E": "c’est un muscle plat à fibres transversales, profond, situé au-dessus du ligament inguinal"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "2/3 antérieurs de la crête iliaque"
+      },
+      "B": {
+        "correct": true,
+        "why": "fascia iliaque + fascia thoraco-lombaire"
+      },
+      "C": {
+        "correct": false,
+        "why": "3/4 antérieurs = oblique interne"
+      },
+      "D": {
+        "correct": true,
+        "why": "cartilages 7–10 + côtes 11–12"
+      },
+      "E": {
+        "correct": true,
+        "why": "profond ⭐, fibres transversales"
+      }
+    },
+    "tags": [
+      "transverse",
+      "crete_iliaque",
+      "profond",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#15.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000065",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant la terminaison et les actions du transverse de l’abdomen, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "c’est le muscle le plus superficiel de la paroi latérale",
+      "B": "il est inspirateur, synergique du diaphragme",
+      "C": "il est expirateur : il comprime les viscères qui poussent le diaphragme vers le haut",
+      "D": "il est antagoniste du diaphragme (inspirateur)",
+      "E": "ses fibres inférieures fusionnent avec celles de l’oblique interne pour former le tendon conjoint"
+    },
+    "answer": [
+      "C",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "superficiel = oblique externe ; transverse = profond ⭐"
+      },
+      "B": {
+        "correct": false,
+        "why": "expirateur ⭐, pas inspirateur"
+      },
+      "C": {
+        "correct": true,
+        "why": "expirateur ⭐"
+      },
+      "D": {
+        "correct": true,
+        "why": "antagoniste du diaphragme"
+      },
+      "E": {
+        "correct": true,
+        "why": "tendon conjoint = transverse + oblique interne"
+      }
+    },
+    "tags": [
+      "transverse",
+      "expirateur",
+      "tendon_conjoint",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#15.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000066",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos de l’origine et du corps du muscle oblique interne, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il s’origine sur le fascia thoraco-lombaire",
+      "B": "il s’origine sur les 3/4 antérieurs de la crête iliaque",
+      "C": "il s’origine aussi sur le ligament inguinal et le fascia iliaque",
+      "D": "son corps en éventail a des fibres obliques en haut et en avant",
+      "E": "ses fibres vont en bas, en avant et médialement"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "fascia thoraco-lombaire"
+      },
+      "B": {
+        "correct": true,
+        "why": "3/4 antérieurs de la crête iliaque"
+      },
+      "C": {
+        "correct": true,
+        "why": "ligament inguinal + fascia iliaque"
+      },
+      "D": {
+        "correct": true,
+        "why": "fibres en haut et en avant ; muscle intermédiaire"
+      },
+      "E": {
+        "correct": false,
+        "why": "bas-avant-médial = oblique externe ⭐⭐⭐"
+      }
+    },
+    "tags": [
+      "oblique_interne",
+      "crete_iliaque",
+      "fibres",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#16.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000067",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant la terminaison et les actions de l’oblique interne, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il s’origine sur la face externe des côtes 6 à 12",
+      "B": "il se termine notamment sur la face externe du 10ème cartilage costal et sur les côtes 10 à 12",
+      "C": "sa partie inférieure s’unit au transverse pour former le tendon conjoint",
+      "D": "il est rotateur contro-latéral du tronc",
+      "E": "il est rotateur latéral et fléchisseur latéral du tronc"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "côtes 6–12 = origine de l’oblique externe"
+      },
+      "B": {
+        "correct": true,
+        "why": "10ème cartilage + côtes 10–12"
+      },
+      "C": {
+        "correct": true,
+        "why": "tendon conjoint avec le transverse"
+      },
+      "D": {
+        "correct": false,
+        "why": "contro-latéral = oblique externe"
+      },
+      "E": {
+        "correct": true,
+        "why": "rotateur latéral + fléchisseur latéral"
+      }
+    },
+    "tags": [
+      "oblique_interne",
+      "tendon_conjoint",
+      "rotateur_lateral",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#16.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000068",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos de l’origine et de l’orientation des fibres de l’oblique externe, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il s’origine sur la face externe des côtes 6 à 12",
+      "B": "ses fibres sont obliques en bas, en avant et médialement",
+      "C": "c’est le muscle superficiel de la paroi latérale",
+      "D": "ses fibres sont obliques en haut et en avant",
+      "E": "il s’origine sur les 3/4 antérieurs de la crête iliaque"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "côtes 6–12"
+      },
+      "B": {
+        "correct": true,
+        "why": "bas, avant et médialement ⭐⭐⭐"
+      },
+      "C": {
+        "correct": true,
+        "why": "superficiel"
+      },
+      "D": {
+        "correct": false,
+        "why": "haut et avant = oblique interne"
+      },
+      "E": {
+        "correct": false,
+        "why": "3/4 crête iliaque = oblique interne"
+      }
+    },
+    "tags": [
+      "oblique_externe",
+      "cotes_6_12",
+      "fibres",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#17.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000069",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant les piliers de l’oblique externe et l’anneau inguinal externe, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l’oblique externe se termine notamment par 3 piliers",
+      "B": "il ne présente que 2 piliers",
+      "C": "les piliers latéral (ligament inguinal) et médial (symphyse pubienne) délimitent l’anneau inguinal externe",
+      "D": "le pilier croisé ou postérieur croise la ligne médiane",
+      "E": "ces piliers délimitent l’orifice inguinal profond"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "3 piliers"
+      },
+      "B": {
+        "correct": false,
+        "why": "3 piliers, pas 2"
+      },
+      "C": {
+        "correct": true,
+        "why": "anneau inguinal externe ⭐⭐⭐"
+      },
+      "D": {
+        "correct": true,
+        "why": "pilier croisé/postérieur"
+      },
+      "E": {
+        "correct": false,
+        "why": "profond = tendon conjoint ; piliers = superficiel"
+      }
+    },
+    "tags": [
+      "oblique_externe",
+      "piliers",
+      "anneau_inguinal_externe",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#17.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000070",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos des actions de l’oblique externe, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il est rotateur contro-latéral",
+      "B": "il est rotateur homolatéral du tronc",
+      "C": "il est fléchisseur antérieur du tronc",
+      "D": "il se termine uniquement sur le processus xyphoïde",
+      "E": "ses fibres se dirigent en haut et en arrière"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "rotateur contro-latéral"
+      },
+      "B": {
+        "correct": false,
+        "why": "contro-latéral, pas homolatéral"
+      },
+      "C": {
+        "correct": true,
+        "why": "fléchisseur antérieur"
+      },
+      "D": {
+        "correct": false,
+        "why": "crête iliaque + aponévrose + 3 piliers"
+      },
+      "E": {
+        "correct": false,
+        "why": "bas, avant et médialement ⭐⭐⭐"
+      }
+    },
+    "tags": [
+      "oblique_externe",
+      "rotateur_contro_lateral",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#17.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000071",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant la formation et le contenu du canal inguinal, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est formé par invagination du fascia transversalis",
+      "B": "il traverse le transverse (profond), l’oblique interne (intermédiaire) puis l’oblique externe (superficiel)",
+      "C": "il est situé en superficie du péritoine",
+      "D": "chez l’homme, il contient le cordon spermatique et le ligament de Cloquet, reliés au testicule",
+      "E": "il est formé par invagination du péritoine lui-même"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "invagination du fascia transversalis"
+      },
+      "B": {
+        "correct": true,
+        "why": "profond / intermédiaire / superficiel"
+      },
+      "C": {
+        "correct": true,
+        "why": "en superficie du péritoine"
+      },
+      "D": {
+        "correct": true,
+        "why": "cordon spermatique + ligament de Cloquet"
+      },
+      "E": {
+        "correct": false,
+        "why": "fascia transversalis, pas le péritoine"
+      }
+    },
+    "tags": [
+      "canal_inguinal",
+      "fascia_transversalis",
+      "cordon_spermatique",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#18.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000072",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos des orifices du canal inguinal, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "l’orifice profond est limité par les piliers de l’oblique externe",
+      "B": "l’orifice profond est limité par la faux inguinale (= tendon conjoint des muscles transverse et oblique interne)",
+      "C": "l’orifice superficiel est limité par les piliers latéral et médial de l’oblique externe",
+      "D": "l’orifice superficiel est limité par le tendon conjoint",
+      "E": "le tendon conjoint unit le transverse et l’oblique interne"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "piliers OE = orifice superficiel ⭐"
+      },
+      "B": {
+        "correct": true,
+        "why": "profond = tendon conjoint (transverse ⭐ + OI)"
+      },
+      "C": {
+        "correct": true,
+        "why": "superficiel = piliers OE ⭐"
+      },
+      "D": {
+        "correct": false,
+        "why": "tendon conjoint = orifice profond"
+      },
+      "E": {
+        "correct": true,
+        "why": "transverse + oblique interne"
+      }
+    },
+    "tags": [
+      "canal_inguinal",
+      "orifice_profond",
+      "orifice_superficiel",
+      "tendon_conjoint",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#18.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000073",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant le trajet du canal inguinal, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "son trajet est oblique vers le dedans et l’avant",
+      "B": "son trajet est oblique vers le dehors et l’arrière",
+      "C": "l’orifice inguinal superficiel est plus proche de la ligne médiane que l’orifice inguinal profond",
+      "D": "l’orifice inguinal profond est plus proche de la ligne médiane que le superficiel",
+      "E": "en coupe axiale, le canal s’oriente vers l’arrière et le médial"
+    },
+    "answer": [
+      "A",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "oblique dedans et avant"
+      },
+      "B": {
+        "correct": false,
+        "why": "dedans et avant, pas dehors/arrière"
+      },
+      "C": {
+        "correct": true,
+        "why": "superficiel plus médial ⭐"
+      },
+      "D": {
+        "correct": false,
+        "why": "c’est le superficiel qui est plus médial ⭐"
+      },
+      "E": {
+        "correct": true,
+        "why": "coupe axiale : arrière et médial"
+      }
+    },
+    "tags": [
+      "canal_inguinal",
+      "trajet",
+      "ligne_mediane",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#18.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000074",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos de l’origine et du trajet du muscle carré des lombes, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il s’origine sur la 12ème côte",
+      "B": "il s’origine sur les processus transverses de L1 à L3–L4",
+      "C": "son trajet se fait en bas et en dehors",
+      "D": "il s’origine sur les faces latérales des disques et corps de T12 à L5",
+      "E": "il s’origine sur les processus transverses de L1 à L5"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "12ème côte"
+      },
+      "B": {
+        "correct": true,
+        "why": "transverses L1 à L3–L4 ⭐"
+      },
+      "C": {
+        "correct": true,
+        "why": "en bas et en dehors"
+      },
+      "D": {
+        "correct": false,
+        "why": "T12–L5 = chef psoas (plan antérieur)"
+      },
+      "E": {
+        "correct": false,
+        "why": "L1–L5 = chef psoas (plan postérieur)"
+      }
+    },
+    "tags": [
+      "carre_des_lombes",
+      "12e_cote",
+      "transverses_lombaires",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#19.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000075",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant la terminaison et les actions du carré des lombes, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il se termine sur la crête iliaque",
+      "B": "point fixe = crête iliaque : inclinaison du rachis et du thorax du même côté",
+      "C": "point fixe = crête iliaque : inclinaison du thorax du côté opposé",
+      "D": "point fixe = crête iliaque : expirateur accessoire en abaissant la 12ème côte",
+      "E": "point fixe = rachis : inclinaison du bassin du même côté"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "crête iliaque ⭐⭐"
+      },
+      "B": {
+        "correct": true,
+        "why": "inclinaison homolatérale"
+      },
+      "C": {
+        "correct": false,
+        "why": "même côté, pas le côté opposé"
+      },
+      "D": {
+        "correct": true,
+        "why": "abaisse la 12ème côte"
+      },
+      "E": {
+        "correct": true,
+        "why": "inclinaison du bassin homolatérale"
+      }
+    },
+    "tags": [
+      "carre_des_lombes",
+      "crete_iliaque",
+      "inclinaison",
+      "P2"
+    ],
+    "course_ref": "07_Parois_du_tronc#19.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-07-000076",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos du passage de l’ilio-psoas sous le ligament inguinal, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le muscle passe sous le ligament inguinal",
+      "B": "le ligament inguinal est tendu entre l’épine iliaque antéro-supérieure et le pubis",
+      "C": "le muscle passe en avant de l’articulation de la hanche",
+      "D": "le muscle passe au-dessus du ligament inguinal",
+      "E": "les deux chefs se terminent par un tendon commun sur le petit trochanter"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "sous le ligament inguinal"
+      },
+      "B": {
+        "correct": true,
+        "why": "EIAS → pubis"
+      },
+      "C": {
+        "correct": true,
+        "why": "en avant de la hanche"
+      },
+      "D": {
+        "correct": false,
+        "why": "sous le ligament, pas au-dessus"
+      },
+      "E": {
+        "correct": true,
+        "why": "tendon commun → petit trochanter"
+      }
+    },
+    "tags": [
+      "ilio_psoas",
+      "ligament_inguinal",
+      "petit_trochanter",
+      "P1"
+    ],
+    "course_ref": "07_Parois_du_tronc#20.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000077",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant les actions de l’ilio-psoas à point fixe rachis et bassin, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est fléchisseur de la hanche",
+      "B": "il est rotateur externe",
+      "C": "il est rotateur interne de la hanche",
+      "D": "le chef iliaque s’origine des 2/3 supérieurs de la fosse iliaque",
+      "E": "le chef iliaque s’origine des 2/3 inférieurs de la fosse iliaque"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "fléchisseur de hanche ⭐"
+      },
+      "B": {
+        "correct": true,
+        "why": "rotateur externe"
+      },
+      "C": {
+        "correct": false,
+        "why": "rotateur externe, pas interne"
+      },
+      "D": {
+        "correct": true,
+        "why": "2/3 supérieurs de la fosse iliaque"
+      },
+      "E": {
+        "correct": false,
+        "why": "2/3 supérieurs, pas inférieurs"
+      }
+    },
+    "tags": [
+      "ilio_psoas",
+      "flechisseur_hanche",
+      "rotateur_externe",
+      "P1"
+    ],
+    "course_ref": "07_Parois_du_tronc#20.6",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000078",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos des actions de l’ilio-psoas à point fixe fémur, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il incline le rachis et le bassin en avant",
+      "B": "il accentue la lordose lombaire",
+      "C": "il diminue la lordose lombaire",
+      "D": "point fixe = rachis et bassin : il est aussi rotateur externe",
+      "E": "point fixe = fémur : il est extenseur de la hanche"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "inclinaison antérieure ⭐⭐"
+      },
+      "B": {
+        "correct": true,
+        "why": "accentue la lordose lombaire"
+      },
+      "C": {
+        "correct": false,
+        "why": "accentue la lordose, ne la diminue pas"
+      },
+      "D": {
+        "correct": true,
+        "why": "rotateur externe (PF rachis/bassin)"
+      },
+      "E": {
+        "correct": false,
+        "why": "fléchisseur de hanche, pas extenseur"
+      }
+    },
+    "tags": [
+      "ilio_psoas",
+      "lordose",
+      "point_fixe_femur",
+      "P1"
+    ],
+    "course_ref": "07_Parois_du_tronc#20.6",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000079",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant les coupoles du diaphragme, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la coupole droite se situe au niveau du 4ème espace intercostal",
+      "B": "la coupole gauche se situe au niveau du 5ème espace intercostal",
+      "C": "la coupole gauche se situe au 4ème espace intercostal",
+      "D": "la coupole droite est plus haute que la coupole gauche",
+      "E": "les deux coupoles se projettent au même espace intercostal"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "droite = 4ème EIC"
+      },
+      "B": {
+        "correct": true,
+        "why": "gauche = 5ème EIC"
+      },
+      "C": {
+        "correct": false,
+        "why": "gauche = 5ème EIC"
+      },
+      "D": {
+        "correct": true,
+        "why": "4ème EIC plus haut que 5ème"
+      },
+      "E": {
+        "correct": false,
+        "why": "4ème à droite vs 5ème à gauche"
+      }
+    },
+    "tags": [
+      "diaphragme",
+      "coupoles",
+      "EIC",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#21.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000080",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "À propos des origines, du trajet et de l’action du diaphragme, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "les fibres costales naissent de la face interne des 6 dernières côtes",
+      "B": "les fibres sternales naissent de la face postérieure du processus xyphoïde",
+      "C": "les fibres vertébrales naissent des vertèbres lombaires via des piliers",
+      "D": "les fibres convergent vers le centre tendineux (centre phrénique)",
+      "E": "inspirateur : il abaisse le centre phrénique et écarte les côtes"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "6 dernières côtes"
+      },
+      "B": {
+        "correct": true,
+        "why": "face postérieure du xyphoïde"
+      },
+      "C": {
+        "correct": true,
+        "why": "piliers lombaires"
+      },
+      "D": {
+        "correct": true,
+        "why": "centre phrénique"
+      },
+      "E": {
+        "correct": true,
+        "why": "inspirateur (abaisse + écarte)"
+      }
+    },
+    "tags": [
+      "diaphragme",
+      "fibres",
+      "centre_phrenique",
+      "inspirateur",
+      "P3"
+    ],
+    "course_ref": "07_Parois_du_tronc#21.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
   }
 ];

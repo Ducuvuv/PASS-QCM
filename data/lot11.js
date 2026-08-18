@@ -42,13 +42,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "femur",
-      "anteversion"
+      "anteversion",
+      "P2"
     ],
     "course_ref": "11_Membre_inferieur#8",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-11-000002",
@@ -94,13 +96,15 @@ window.PASS_ITEMS = [
     "tags": [
       "os_coxal",
       "sacro_epineux",
-      "foramen_obture"
+      "foramen_obture",
+      "P2"
     ],
     "course_ref": "11_Membre_inferieur#2",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-11-000003",
@@ -146,13 +150,15 @@ window.PASS_ITEMS = [
     "tags": [
       "pied",
       "hallux",
-      "tarse"
+      "tarse",
+      "P1"
     ],
     "course_ref": "11_Membre_inferieur#12",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-11-000004",
@@ -197,13 +203,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "cuboide",
-      "tarse_anterieur"
+      "tarse_anterieur",
+      "P1"
     ],
     "course_ref": "11_Membre_inferieur#12.4",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-11-000005",
@@ -248,13 +256,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "ilio_psoas",
-      "flexion_hanche"
+      "flexion_hanche",
+      "P2"
     ],
     "course_ref": "11_Membre_inferieur#14",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-11-000006",
@@ -299,13 +309,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "gluteaux",
-      "abduction"
+      "abduction",
+      "P1"
     ],
     "course_ref": "11_Membre_inferieur#15",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-11-000007",
@@ -350,13 +362,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "piriforme",
-      "pelvi_trochanteriens"
+      "pelvi_trochanteriens",
+      "P1"
     ],
     "course_ref": "11_Membre_inferieur#16",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-11-000008",
@@ -402,13 +416,15 @@ window.PASS_ITEMS = [
     "tags": [
       "adducteurs",
       "gracile",
-      "tubercule_adducteur"
+      "tubercule_adducteur",
+      "P1"
     ],
     "course_ref": "11_Membre_inferieur#17",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-11-000009",
@@ -453,13 +469,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "menisques",
-      "genou"
+      "genou",
+      "P3"
     ],
     "course_ref": "11_Membre_inferieur#18.3",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P3"
   },
   {
     "id": "GEN-ANAT-11-000010",
@@ -505,13 +523,15 @@ window.PASS_ITEMS = [
     "tags": [
       "LCA",
       "LCP",
-      "croises"
+      "croises",
+      "P2"
     ],
     "course_ref": "11_Membre_inferieur#19",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-11-000011",
@@ -556,13 +576,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "collateraux",
-      "fibulaire"
+      "fibulaire",
+      "P2"
     ],
     "course_ref": "11_Membre_inferieur#20",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-11-000012",
@@ -607,13 +629,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "quadriceps",
-      "nerf_femoral"
+      "nerf_femoral",
+      "P1"
     ],
     "course_ref": "11_Membre_inferieur#21",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-11-000013",
@@ -658,13 +682,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "ischio_jambiers",
-      "patte_doie"
+      "patte_doie",
+      "P1"
     ],
     "course_ref": "11_Membre_inferieur#23",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-11-000014",
@@ -708,13 +734,15 @@ window.PASS_ITEMS = [
       }
     },
     "tags": [
-      "patte_doie"
+      "patte_doie",
+      "P3"
     ],
     "course_ref": "11_Membre_inferieur#24",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P3"
   },
   {
     "id": "GEN-ANAT-11-000015",
@@ -759,13 +787,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "jambe_anterieure",
-      "fibulaire_profond"
+      "fibulaire_profond",
+      "P1"
     ],
     "course_ref": "11_Membre_inferieur#27",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-11-000016",
@@ -810,13 +840,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "posterieur_profond",
-      "tibial_posterieur"
+      "tibial_posterieur",
+      "P1"
     ],
     "course_ref": "11_Membre_inferieur#30",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P1"
   },
   {
     "id": "GEN-ANAT-11-000017",
@@ -861,13 +893,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "compartiment_lateral",
-      "eversion"
+      "eversion",
+      "P2"
     ],
     "course_ref": "11_Membre_inferieur#28",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-11-000018",
@@ -912,13 +946,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "arteres",
-      "pouls"
+      "pouls",
+      "P2"
     ],
     "course_ref": "11_Membre_inferieur#32",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-11-000019",
@@ -963,13 +999,15 @@ window.PASS_ITEMS = [
     },
     "tags": [
       "sciatique",
-      "infra_piriforme"
+      "infra_piriforme",
+      "P2"
     ],
     "course_ref": "11_Membre_inferieur#38",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
   },
   {
     "id": "GEN-ANAT-11-000020",
@@ -1015,12 +1053,4823 @@ window.PASS_ITEMS = [
     "tags": [
       "plexus_lombal",
       "femoral",
-      "obturateur"
+      "obturateur",
+      "P2"
     ],
     "course_ref": "11_Membre_inferieur#36",
     "image": null,
     "difficulty": null,
     "year_signal": null,
-    "pattern_id": null
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000021",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant la composition du membre inférieur, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la hanche comprend l'os coxal et l'extrémité proximale du fémur",
+      "B": "le genou comprend l'extrémité distale du fémur, l'extrémité proximale du tibia et la patella",
+      "C": "la cuisse est constituée du fémur ; la jambe comprend le tibia et la fibula",
+      "D": "la cheville comprend les extrémités distales du tibia et de la fibula, et le tarse",
+      "E": "le pied comprend le tarse et le métatarse, sans les phalanges"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "hanche = os coxal + extrémité proximale du fémur"
+      },
+      "B": {
+        "correct": true,
+        "why": "genou = extrémité distale du fémur + extrémité proximale du tibia + patella"
+      },
+      "C": {
+        "correct": true,
+        "why": "cuisse = fémur ; jambe = tibia + fibula"
+      },
+      "D": {
+        "correct": true,
+        "why": "cheville = extrémités distales tibia/fibula + tarse"
+      },
+      "E": {
+        "correct": false,
+        "why": "pied = tarse + métatarse + phalanges"
+      }
+    },
+    "tags": [
+      "composition",
+      "hanche",
+      "jambe",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#1.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000022",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les caractères généraux de l'os coxal, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'os coxal est un os plat en forme d'hélice",
+      "B": "l'os coxal est un os pair",
+      "C": "l'ilion forme les 2/3 supérieure de l'os coxal et s'articule avec le sacrum",
+      "D": "le pubis est situé en bas et en arrière",
+      "E": "l'ischion est situé en bas et en avant"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "os plat en hélice"
+      },
+      "B": {
+        "correct": true,
+        "why": "os pair (droit et gauche), appartient au bassin"
+      },
+      "C": {
+        "correct": true,
+        "why": "ilion = 2/3 supérieure, s'articule avec le sacrum"
+      },
+      "D": {
+        "correct": false,
+        "why": "pubis en bas et en avant"
+      },
+      "E": {
+        "correct": false,
+        "why": "ischion en bas et en arrière"
+      }
+    },
+    "tags": [
+      "coxal",
+      "ilion",
+      "pubis",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#2.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000023",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les faces de l'os coxal et la symphyse pubienne, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la face endopelvienne est tournée vers l'intérieur du bassin",
+      "B": "la face exopelvienne est tournée vers l'extérieur du bassin",
+      "C": "la symphyse pubienne est une structure tendineuse rigide contenant un fibrocartilage",
+      "D": "la symphyse soude le pubis droit et le pubis gauche en une articulation rigide",
+      "E": "la face endopelvienne est tournée vers l'extérieur du bassin"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "endopelvienne = intérieur du bassin"
+      },
+      "B": {
+        "correct": true,
+        "why": "exopelvienne = extérieur du bassin"
+      },
+      "C": {
+        "correct": true,
+        "why": "symphyse = tendineuse rigide + fibrocartilage"
+      },
+      "D": {
+        "correct": true,
+        "why": "soude les deux pubis, articulation rigide"
+      },
+      "E": {
+        "correct": false,
+        "why": "endopelvienne vers l'intérieur, pas l'extérieur"
+      }
+    },
+    "tags": [
+      "coxal",
+      "symphyse",
+      "faces",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000024",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant la crête iliaque, les épines iliaques et l'épine ischiatique, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la crête iliaque est le rebord supérieur de l'ilion qui s'est épaissi",
+      "B": "l'épine iliaque antéro-supérieure est un relief palpable en continuité de la crête iliaque",
+      "C": "l'épine ischiatique est située au-dessus de la grande incisure sciatique",
+      "D": "l'os coxal présente trois épines iliaques",
+      "E": "l'épine iliaque postéro-inférieure est au pôle inférieur de la grande échancrure"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "crête iliaque = rebord supérieur épaissi de l'ilion"
+      },
+      "B": {
+        "correct": true,
+        "why": "EIAS palpable, continuité de la crête"
+      },
+      "C": {
+        "correct": false,
+        "why": "épine ischiatique en dessous de la grande incisure, au-dessus de la petite"
+      },
+      "D": {
+        "correct": false,
+        "why": "quatre épines iliaques"
+      },
+      "E": {
+        "correct": false,
+        "why": "EIPI au pôle supérieur de la grande échancrure"
+      }
+    },
+    "tags": [
+      "crete_iliaque",
+      "epines",
+      "epine_ischiatique",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000025",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant la tubérosité ischiatique et les incisures ischiatiques, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la tubérosité ischiatique est la zone d'appui du bassin en position assise",
+      "B": "elle correspond à la partie distale de l'ischion, située sous les muscles glutéaux",
+      "C": "la grande incisure ischiatique part de l'épine iliaque postéro-inférieure et se termine sur l'épine ischiatique",
+      "D": "la grande incisure ischiatique part de l'épine iliaque antéro-supérieure et se termine sur la tubérosité ischiatique",
+      "E": "la petite incisure ischiatique part de l'épine ischiatique et se termine par la tubérosité ischiatique"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "tubérosité ischiatique = appui en position assise"
+      },
+      "B": {
+        "correct": true,
+        "why": "partie distale de l'ischion, sous les glutéaux"
+      },
+      "C": {
+        "correct": true,
+        "why": "grande incisure : EIPI → épine ischiatique"
+      },
+      "D": {
+        "correct": false,
+        "why": "grande incisure : EIPI → épine ischiatique, pas EIAS → tubérosité"
+      },
+      "E": {
+        "correct": true,
+        "why": "petite incisure : épine ischiatique → tubérosité ischiatique"
+      }
+    },
+    "tags": [
+      "tuberosite_ischiatique",
+      "incisures",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#3.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000026",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant la face exopelvienne de l'os coxal, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la fosse glutéale, face exopelvienne de l'ilion, est légèrement concave",
+      "B": "les trois lignes glutéales délimitent les surfaces d'insertion des trois muscles glutéaux",
+      "C": "l'éminence ilio-pectinée est située en avant de l'acétabulum, à la jonction entre l'ilion et le pubis",
+      "D": "le tubercule du pubis est le lieu d'insertion du ligament inguinal",
+      "E": "la fosse glutéale est fortement convexe"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "fosse glutéale légèrement concave"
+      },
+      "B": {
+        "correct": true,
+        "why": "3 lignes glutéales = insertions des 3 glutéaux"
+      },
+      "C": {
+        "correct": true,
+        "why": "éminence ilio-pectinée en avant de l'acétabulum, jonction ilion-pubis"
+      },
+      "D": {
+        "correct": true,
+        "why": "tubercule du pubis = ligament inguinal"
+      },
+      "E": {
+        "correct": false,
+        "why": "fosse glutéale concave, pas convexe"
+      }
+    },
+    "tags": [
+      "fosse_gluteale",
+      "eminence_ilio_pectinee",
+      "tubercule_pubis",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#4.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000027",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant l'acétabulum, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la surface semi-lunaire est une surface cartilagineuse en forme de croissant",
+      "B": "la surface semi-lunaire est reliée par le ligament transverse de l'acétabulum",
+      "C": "la fosse acétabulaire est une surface non cartilagineuse située au centre",
+      "D": "la fosse acétabulaire est recouverte de cartilage",
+      "E": "la surface semi-lunaire est à cheval entre l'ischion, l'ilion et le pubis"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "surface semi-lunaire = cartilage en croissant"
+      },
+      "B": {
+        "correct": true,
+        "why": "reliée par le ligament transverse de l'acétabulum"
+      },
+      "C": {
+        "correct": true,
+        "why": "fosse acétabulaire non cartilagineuse, au centre"
+      },
+      "D": {
+        "correct": false,
+        "why": "fosse acétabulaire non cartilagineuse"
+      },
+      "E": {
+        "correct": true,
+        "why": "à cheval entre ischion, ilion et pubis ; s'articule avec le fémur"
+      }
+    },
+    "tags": [
+      "acetabulum",
+      "surface_semi_lunaire",
+      "ligament_transverse",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#4.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000028",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant la face endopelvienne de l'os coxal, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la fosse iliaque est la face endopelvienne de l'ilion, zone d'insertion du muscle iliaque",
+      "B": "la surface auriculaire, située sur l'ilion, s'articule avec le sacrum (versant coxal de la sacro-iliaque)",
+      "C": "la ligne arquée correspond au plus petit diamètre osseux du bassin",
+      "D": "la ligne arquée limite l'ilion en dessous et l'ischion et le pubis au-dessus",
+      "E": "la surface quadrilatère correspond à la face exopelvienne de l'articulation coxo-fémorale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "fosse iliaque = insertion du muscle iliaque"
+      },
+      "B": {
+        "correct": true,
+        "why": "surface auriculaire ↔ sacrum (sacro-iliaque)"
+      },
+      "C": {
+        "correct": true,
+        "why": "ligne arquée = plus petit diamètre osseux du bassin"
+      },
+      "D": {
+        "correct": false,
+        "why": "ilion au-dessus ; ischion et pubis en dessous"
+      },
+      "E": {
+        "correct": false,
+        "why": "surface quadrilatère = face endopelvienne de la coxo-fémorale"
+      }
+    },
+    "tags": [
+      "fosse_iliaque",
+      "ligne_arquee",
+      "surface_quadrilatere",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#5",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000029",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant la constitution osseuse du bassin, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le bassin est constitué du sacrum en arrière et de deux os coxaux latéralement",
+      "B": "l'articulation sacro-iliaque réunit en arrière l'os coxal et le sacrum",
+      "C": "le bassin est formé du sacrum et des deux fémurs",
+      "D": "l'articulation sacro-iliaque réunit en avant l'os coxal et le sacrum",
+      "E": "le bassin ne comporte qu'un seul os coxal"
+    },
+    "answer": [
+      "A",
+      "B"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "sacrum en arrière + 2 os coxaux latéralement"
+      },
+      "B": {
+        "correct": true,
+        "why": "sacro-iliaque en arrière : coxal ↔ sacrum"
+      },
+      "C": {
+        "correct": false,
+        "why": "bassin = sacrum + 2 os coxaux, pas les fémurs"
+      },
+      "D": {
+        "correct": false,
+        "why": "sacro-iliaque en arrière, pas en avant"
+      },
+      "E": {
+        "correct": false,
+        "why": "deux os coxaux latéralement"
+      }
+    },
+    "tags": [
+      "bassin",
+      "sacrum",
+      "sacro_iliaque",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#6.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000030",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le dysmorphisme sexuel du bassin, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la distance entre les deux épines iliaques antéro-supérieures est plus importante chez les femmes que chez les hommes",
+      "B": "le diamètre latéral du bassin, distance entre les deux lignes arquées, est plus important chez les femmes que chez les hommes",
+      "C": "l'angle d'ouverture inférieure du pubis est plus fermé chez les hommes que chez les femmes",
+      "D": "les épines iliaques antéro-supérieures sont plus écartées chez les hommes",
+      "E": "l'angle d'ouverture inférieure du pubis est plus fermé chez les femmes que chez les hommes"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "EIAS plus écartées chez la femme (passage du fœtus)"
+      },
+      "B": {
+        "correct": true,
+        "why": "diamètre latéral (lignes arquées) plus grand chez la femme"
+      },
+      "C": {
+        "correct": true,
+        "why": "angle d'ouverture inférieure du pubis plus fermé chez l'homme"
+      },
+      "D": {
+        "correct": false,
+        "why": "EIAS plus écartées chez la femme, pas chez l'homme"
+      },
+      "E": {
+        "correct": false,
+        "why": "angle plus fermé chez l'homme, pas chez la femme"
+      }
+    },
+    "tags": [
+      "bassin",
+      "dysmorphisme",
+      "EIAS",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#6.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000031",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les caractères généraux du fémur, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le fémur est l'os unique de la cuisse ; c'est un os long",
+      "B": "son corps est triangulaire avec une pointe dirigée vers l'arrière",
+      "C": "il possède trois faces : antérieure, postéro-latérale et postéro-médiale",
+      "D": "la ligne âpre est le bord postérieur, plus large, avec une lèvre médiale et une lèvre latérale",
+      "E": "la pointe du corps triangulaire est dirigée vers l'avant"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "os unique de la cuisse, os long"
+      },
+      "B": {
+        "correct": true,
+        "why": "corps triangulaire, pointe vers l'arrière"
+      },
+      "C": {
+        "correct": true,
+        "why": "faces antérieure, postéro-latérale et postéro-médiale"
+      },
+      "D": {
+        "correct": true,
+        "why": "ligne âpre = bord postérieur, lèvres médiale et latérale"
+      },
+      "E": {
+        "correct": false,
+        "why": "pointe dirigée vers l'arrière, pas l'avant"
+      }
+    },
+    "tags": [
+      "femur",
+      "ligne_apre",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#7.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000032",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant la tête et le col du fémur, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la tête fémorale est une surface articulaire qui fait 2/3 d'une sphère",
+      "B": "le diamètre de la tête fémorale est de 40 à 50 mm",
+      "C": "le col fémoral, moins dense en travées osseuses, est une zone de fracture",
+      "D": "la tête fémorale fait 1/3 d'une sphère",
+      "E": "le col fémoral est la zone la plus dense en travées osseuses"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "tête = 2/3 d'une sphère"
+      },
+      "B": {
+        "correct": true,
+        "why": "diamètre 40 à 50 mm"
+      },
+      "C": {
+        "correct": true,
+        "why": "col moins dense en travées = zone de fracture"
+      },
+      "D": {
+        "correct": false,
+        "why": "2/3 d'une sphère, pas 1/3"
+      },
+      "E": {
+        "correct": false,
+        "why": "col moins dense en travées (zone de fracture)"
+      }
+    },
+    "tags": [
+      "tete_femorale",
+      "col_femoral",
+      "fracture",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#8.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000033",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les trochanters et l'ergot fémoral, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le grand trochanter est un relief osseux latéral, palpable à la partie haute de la cuisse",
+      "B": "le petit trochanter est postéro-médial",
+      "C": "le grand et le petit trochanter sont reliés par la ligne inter-trochantérique",
+      "D": "l'ergot fémoral (éperon de Merkel) est une zone dense en travées osseuses, située au niveau du petit trochanter",
+      "E": "le petit trochanter est un relief antéro-latéral"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "grand trochanter latéral, palpable"
+      },
+      "B": {
+        "correct": true,
+        "why": "petit trochanter postéro-médial"
+      },
+      "C": {
+        "correct": true,
+        "why": "ligne inter-trochantérique entre les deux trochanters"
+      },
+      "D": {
+        "correct": true,
+        "why": "ergot = éperon de Merkel, dense, au petit trochanter"
+      },
+      "E": {
+        "correct": false,
+        "why": "petit trochanter postéro-médial, pas antéro-latéral"
+      }
+    },
+    "tags": [
+      "trochanters",
+      "ergot_femoral",
+      "Merkel",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#8.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000034",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant l'extrémité distale du fémur, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le tubercule adducteur est situé à la partie supérieure de l'épicondyle médial",
+      "B": "le condyle latéral est plus volumineux que le condyle médial",
+      "C": "les condyles fusionnent à la partie antérieure du fémur pour former la surface patellaire",
+      "D": "la fosse intercondylaire est recouverte de cartilage",
+      "E": "le tubercule adducteur est situé à la partie supérieure de l'épicondyle latéral"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "tubercule adducteur = partie supérieure de l'épicondyle médial"
+      },
+      "B": {
+        "correct": true,
+        "why": "condyle latéral plus volumineux que le médial"
+      },
+      "C": {
+        "correct": true,
+        "why": "fusion antérieure = surface patellaire"
+      },
+      "D": {
+        "correct": false,
+        "why": "fosse intercondylaire dépourvue de cartilage"
+      },
+      "E": {
+        "correct": false,
+        "why": "tubercule adducteur sur l'épicondyle médial, pas latéral"
+      }
+    },
+    "tags": [
+      "condyles",
+      "tubercule_adducteur",
+      "fosse_intercondylaire",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#9",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000035",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant la patella, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la patella est un os sésamoïde engainé dans le tendon quadricipital ; on l'appelle aussi rotule",
+      "B": "sa base est inférieure et son apex est supérieur",
+      "C": "sa face antérieure est palpable et convexe",
+      "D": "sa face postérieure présente une grande facette latérale, une facette médiale plus petite, et une crête médiane qui se glisse entre les deux condyles fémoraux",
+      "E": "la grande facette articulaire est médiale et la facette latérale est plus petite"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "sésamoïde du tendon quadricipital = rotule"
+      },
+      "B": {
+        "correct": false,
+        "why": "base supérieure, apex inférieur"
+      },
+      "C": {
+        "correct": true,
+        "why": "face antérieure palpable et convexe"
+      },
+      "D": {
+        "correct": true,
+        "why": "grande facette latérale, facette médiale plus petite, crête médiane entre les condyles"
+      },
+      "E": {
+        "correct": false,
+        "why": "grande facette = latérale ; facette médiale plus petite"
+      }
+    },
+    "tags": [
+      "patella",
+      "sesamoide",
+      "facettes",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#10",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000036",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le tibia et la fibula, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le tibia et la fibula sont attachés entre eux par la membrane interosseuse",
+      "B": "le tibia, plus large des deux os, est médial (en dedans)",
+      "C": "la fibula est située en dehors",
+      "D": "le tibia est l'os latéral, plus fin que la fibula",
+      "E": "les extrémités distales du tibia et de la fibula s'articulent avec le talus"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "membrane interosseuse entre tibia et fibula"
+      },
+      "B": {
+        "correct": true,
+        "why": "tibia plus large, médial"
+      },
+      "C": {
+        "correct": true,
+        "why": "fibula en dehors"
+      },
+      "D": {
+        "correct": false,
+        "why": "tibia médial et plus large ; fibula latérale"
+      },
+      "E": {
+        "correct": true,
+        "why": "extrémités distales tibia et fibula ↔ talus"
+      }
+    },
+    "tags": [
+      "tibia",
+      "fibula",
+      "membrane_interosseuse",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#11.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000037",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les articulations et ligaments tibio-fibulaires, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'articulation tibio-fibulaire proximale unit la tête de la fibula à la face latérale du tibia",
+      "B": "elle n'autorise pas de mobilité vraie, seulement un rapprochement élastique des deux os",
+      "C": "les ligaments tibio-fibulaires antérieur et postérieur cravatent les extrémités inférieures des deux os",
+      "D": "les ligaments tibio-fibulaires antérieur et postérieur cravatent les extrémités supérieures des deux os",
+      "E": "l'articulation tibio-fibulaire proximale unit la tête de la fibula à la face médiale du tibia"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "tête de la fibula ↔ face latérale du tibia"
+      },
+      "B": {
+        "correct": true,
+        "why": "pas de mobilité vraie : rapprochement élastique"
+      },
+      "C": {
+        "correct": true,
+        "why": "ligaments tibio-fibulaires antérieur et postérieur aux extrémités inférieures"
+      },
+      "D": {
+        "correct": false,
+        "why": "extrémités inférieures, pas supérieures"
+      },
+      "E": {
+        "correct": false,
+        "why": "face latérale du tibia, pas médiale"
+      }
+    },
+    "tags": [
+      "tibio_fibulaire",
+      "ligaments",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#11.5",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000038",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le corps du tibia et la tubérosité tibiale antérieure, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la face médiale du tibia est dépourvue d'insertion musculaire",
+      "B": "la face postérieure est marquée par la crête du muscle soléaire",
+      "C": "la tubérosité tibiale antérieure est la zone d'insertion terminale du tendon quadricipital",
+      "D": "la face médiale du tibia est recouverte d'insertions musculaires",
+      "E": "la tubérosité tibiale antérieure est l'insertion de la membrane interosseuse"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "face médiale dépourvue d'insertion musculaire"
+      },
+      "B": {
+        "correct": true,
+        "why": "face postérieure = crête du muscle soléaire"
+      },
+      "C": {
+        "correct": true,
+        "why": "TTA = insertion terminale du tendon quadricipital"
+      },
+      "D": {
+        "correct": false,
+        "why": "c'est la face latérale qui est recouverte d'insertions ; la médiale en est dépourvue"
+      },
+      "E": {
+        "correct": false,
+        "why": "membrane interosseuse sur le bord latéral (interosseux), pas sur la TTA"
+      }
+    },
+    "tags": [
+      "tibia",
+      "TTA",
+      "soléaire",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#11.7",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000039",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le plateau tibial, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le plateau tibial porte les condyles tibiaux médial et latéral",
+      "B": "chaque condyle tibial porte un tubercule intercondylaire",
+      "C": "l'extrémité proximale du tibia est large",
+      "D": "le plateau tibial ne porte qu'un seul condyle",
+      "E": "les tubercules intercondylaires sont situés sur l'épiphyse tibiale distale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "plateau tibial = condyles tibiaux médial et latéral"
+      },
+      "B": {
+        "correct": true,
+        "why": "chaque condyle porte un tubercule intercondylaire"
+      },
+      "C": {
+        "correct": true,
+        "why": "extrémité proximale large"
+      },
+      "D": {
+        "correct": false,
+        "why": "deux condyles tibiaux, médial et latéral"
+      },
+      "E": {
+        "correct": false,
+        "why": "tubercules intercondylaires sur le plateau tibial (extrémité proximale)"
+      }
+    },
+    "tags": [
+      "plateau_tibial",
+      "condyles_tibiaux",
+      "tubercules_intercondylaires",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#11.7",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000040",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant la fibula, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la fibula est un os long et fin",
+      "B": "la tête fibulaire, palpable, s'articule avec la surface fibulaire du tibia",
+      "C": "la malléole latérale descend plus bas et est plus fine que la malléole médiale",
+      "D": "la malléole latérale est plus haute et plus épaisse que la malléole médiale",
+      "E": "le bord latéral de la fibula est le bord interosseux"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "fibula = os long et fin"
+      },
+      "B": {
+        "correct": true,
+        "why": "tête fibulaire palpable ↔ surface fibulaire du tibia"
+      },
+      "C": {
+        "correct": true,
+        "why": "malléole latérale plus basse et plus fine que la médiale"
+      },
+      "D": {
+        "correct": false,
+        "why": "malléole latérale plus basse et plus fine, pas plus haute et plus épaisse"
+      },
+      "E": {
+        "correct": false,
+        "why": "bord médial = bord interosseux (membrane interosseuse)"
+      }
+    },
+    "tags": [
+      "fibula",
+      "malleole_laterale",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#11.8",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000041",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le talus, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "sa tête est orientée en dedans",
+      "B": "sa tête s'articule avec l'os naviculaire par la surface naviculaire",
+      "C": "sa tête s'articule avec le calcanéus par la surface articulaire calcanéenne antérieure",
+      "D": "son col, zone rétrécie, est situé entre la trochlée et la tête",
+      "E": "sa tête est orientée en dehors et s'articule avec le cuboïde"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "tête du talus orientée en dedans"
+      },
+      "B": {
+        "correct": true,
+        "why": "tête ↔ naviculaire via la surface naviculaire"
+      },
+      "C": {
+        "correct": true,
+        "why": "tête ↔ calcanéus via la surface articulaire calcanéenne antérieure"
+      },
+      "D": {
+        "correct": true,
+        "why": "col = zone rétrécie entre trochlée et tête"
+      },
+      "E": {
+        "correct": false,
+        "why": "tête en dedans, articulée au naviculaire et au calcanéus, pas au cuboïde"
+      }
+    },
+    "tags": [
+      "talus",
+      "pied",
+      "tarse",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#12.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000042",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos de la trochlée du talus et de ses angles, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la largeur antérieure de la trochlée est supérieure à la largeur postérieure",
+      "B": "la trochlée possède un creux au milieu appelé la joue",
+      "C": "l'angle entre la tête et la trochlée fait 150° sur une vue supérieure",
+      "D": "l'angle entre la partie postérieure et la partie antérieure est de 110° sur une vue latérale",
+      "E": "la largeur postérieure de la trochlée est supérieure à la largeur antérieure"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "trochlée : largeur antérieure > largeur postérieure"
+      },
+      "B": {
+        "correct": true,
+        "why": "creux médian = joue de la trochlée"
+      },
+      "C": {
+        "correct": true,
+        "why": "angle tête–trochlée = 150° vue supérieure"
+      },
+      "D": {
+        "correct": true,
+        "why": "angle postérieur–antérieur = 110° vue latérale"
+      },
+      "E": {
+        "correct": false,
+        "why": "c'est la largeur antérieure qui est supérieure à la postérieure"
+      }
+    },
+    "tags": [
+      "talus",
+      "trochlee",
+      "pied",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#12.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000043",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le calcanéus, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est situé en dessous et en dehors du talus",
+      "B": "il présente trois surfaces articulaires talaires : antérieure, moyenne et postérieure",
+      "C": "la surface articulaire talaire postérieure est la plus grosse",
+      "D": "la surface articulaire cuboïdienne se trouve à sa face antérieure",
+      "E": "il est situé en dessus et en dedans du talus"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "calcanéus en dessous et en dehors du talus"
+      },
+      "B": {
+        "correct": true,
+        "why": "3 surfaces talaires : antérieure, moyenne, postérieure"
+      },
+      "C": {
+        "correct": true,
+        "why": "surface talaire postérieure = la plus grosse"
+      },
+      "D": {
+        "correct": true,
+        "why": "surface cuboïdienne à la face antérieure du calcanéus"
+      },
+      "E": {
+        "correct": false,
+        "why": "en dessous et en dehors du talus, pas en dessus et en dedans"
+      }
+    },
+    "tags": [
+      "calcaneus",
+      "pied",
+      "tarse",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#12.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000044",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos de la tubérosité calcanéenne et du sillon calcanéen, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la tubérosité calcanéenne correspond au talon",
+      "B": "la tubérosité calcanéenne est un gros relief postérieur",
+      "C": "le sillon calcanéen correspond au sinus du tarse",
+      "D": "le sillon calcanéen est creusé entre les surfaces talaires antérieure/moyenne et la surface postérieure",
+      "E": "le sillon calcanéen sépare uniquement les surfaces talaires antérieure et moyenne, sans rapport avec la surface postérieure"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "tubérosité calcanéenne = talon"
+      },
+      "B": {
+        "correct": true,
+        "why": "gros relief postérieur"
+      },
+      "C": {
+        "correct": true,
+        "why": "sillon calcanéen = sinus du tarse"
+      },
+      "D": {
+        "correct": true,
+        "why": "sillon entre surfaces talaires antérieure/moyenne et postérieure"
+      },
+      "E": {
+        "correct": false,
+        "why": "le sillon sépare antérieure/moyenne d'un côté et postérieure de l'autre"
+      }
+    },
+    "tags": [
+      "calcaneus",
+      "sinus_du_tarse",
+      "pied",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#12.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000045",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les os cunéiformes, les métatarsiens et les sésamoïdes du pied, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le cunéiforme médial s'articule avec le 1er et le 2e métatarsiens",
+      "B": "le cunéiforme intermédiaire s'articule avec le 2e métatarsien ; le cunéiforme latéral s'articule avec le 3e et le 4e métatarsien",
+      "C": "la tête des métatarsiens est la zone d'appui antérieur ; le 5e métatarsien est la zone d'appui latéral ; le 2e métatarsien est l'axe de rotation du pied",
+      "D": "deux os sésamoïdes inconstants se trouvent à la face plantaire de la tête du 1er métatarsien, dans les tendons des fléchisseurs",
+      "E": "le cunéiforme médial s'articule avec le 4e et le 5e métatarsiens, et le 1er métatarsien est l'axe de rotation du pied"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "cunéiforme médial ↔ M1 et M2"
+      },
+      "B": {
+        "correct": true,
+        "why": "intermédiaire ↔ M2 ; latéral ↔ M3 et M4"
+      },
+      "C": {
+        "correct": true,
+        "why": "têtes = appui antérieur ; M5 = appui latéral ; M2 = axe de rotation"
+      },
+      "D": {
+        "correct": true,
+        "why": "2 sésamoïdes inconstants, plantaires, tête du M1, tendons des fléchisseurs"
+      },
+      "E": {
+        "correct": false,
+        "why": "médial ↔ M1 et M2 ; l'axe de rotation est le 2e métatarsien, pas le 1er"
+      }
+    },
+    "tags": [
+      "cuneiformes",
+      "metatarsiens",
+      "sesamoides",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#12",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000046",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant l'articulation de la hanche et l'acétabulum, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "c'est une articulation sphéroïde avec 3 degrés de liberté",
+      "B": "l'acétabulum est une cavité sphéroïde de 50 mm de diamètre",
+      "C": "le ligament transverse de l'acétabulum est tendu entre les deux cornes acétabulaires latérale et médiale",
+      "D": "le labrum acétabulaire est un bourrelet de fibrocartilage",
+      "E": "c'est une articulation trochléenne à un seul degré de liberté"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "hanche = sphéroïde, 3 degrés de liberté"
+      },
+      "B": {
+        "correct": true,
+        "why": "acétabulum = cavité sphéroïde de 50 mm"
+      },
+      "C": {
+        "correct": true,
+        "why": "lig. transverse tendu entre les 2 cornes acétabulaires"
+      },
+      "D": {
+        "correct": true,
+        "why": "labrum = bourrelet de fibrocartilage"
+      },
+      "E": {
+        "correct": false,
+        "why": "sphéroïde à 3 degrés de liberté, pas trochléenne"
+      }
+    },
+    "tags": [
+      "hanche",
+      "acetabulum",
+      "labrum",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#13",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000047",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du labrum, de la fossette de la tête fémorale et du ligament de la tête fémorale, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le labrum acétabulaire s'insère sur l'acétabulum et sur le ligament transverse",
+      "B": "la fossette de la tête fémorale est un creux à la partie postéro-médiane de la tête",
+      "C": "le ligament de la tête fémorale s'insère sur la fossette et se termine sur la fosse acétabulaire",
+      "D": "ce ligament est intra-articulaire, à l'intérieur de la capsule, et puissant",
+      "E": "la fossette est antéro-latérale et le ligament de la tête fémorale est extra-articulaire"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "labrum inséré sur l'acétabulum et le lig. transverse"
+      },
+      "B": {
+        "correct": true,
+        "why": "fossette = partie postéro-médiane de la tête"
+      },
+      "C": {
+        "correct": true,
+        "why": "lig. de la tête : fossette → fosse acétabulaire"
+      },
+      "D": {
+        "correct": true,
+        "why": "ligament intra-articulaire puissant"
+      },
+      "E": {
+        "correct": false,
+        "why": "fossette postéro-médiane ; ligament intra-articulaire, pas extra-articulaire"
+      }
+    },
+    "tags": [
+      "hanche",
+      "fossette",
+      "ligament_tete_femorale",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#13",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000048",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le ligament ilio-fémoral, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il s'insère sur l'épine iliaque antéro-inférieure et sur le pourtour supérieur de l'acétabulum",
+      "B": "il se sépare en deux faisceaux",
+      "C": "le faisceau inférieur descend et recouvre le ligament pubo-fémoral",
+      "D": "le faisceau supérieur double la partie supérieure de la capsule articulaire",
+      "E": "il s'insère uniquement sur l'épine iliaque antéro-supérieure et ne possède qu'un seul faisceau"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "ilio-fémoral : EIAI + pourtour supérieur de l'acétabulum"
+      },
+      "B": {
+        "correct": true,
+        "why": "deux faisceaux (inférieur et supérieur)"
+      },
+      "C": {
+        "correct": true,
+        "why": "faisceau inférieur recouvre le lig. pubo-fémoral"
+      },
+      "D": {
+        "correct": true,
+        "why": "faisceau supérieur double la partie supérieure de la capsule"
+      },
+      "E": {
+        "correct": false,
+        "why": "insertion EIAI + pourtour supérieur ; deux faisceaux, pas un seul"
+      }
+    },
+    "tags": [
+      "hanche",
+      "ligament_ilio_femoral",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#13.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000049",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos des ligaments pubo-fémoral et ischio-fémoral, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le ligament pubo-fémoral est un ligament antérieur",
+      "B": "le ligament pubo-fémoral part de la branche supérieure du pubis et se termine à la partie médiane du col fémoral",
+      "C": "le ligament ischio-fémoral est un ligament postéro-inférieur",
+      "D": "le ligament ischio-fémoral s'insère sur la tubérosité ischiatique et double la capsule articulaire",
+      "E": "le ligament pubo-fémoral est postéro-inférieur et s'insère sur la tubérosité ischiatique"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "pubo-fémoral = ligament antérieur"
+      },
+      "B": {
+        "correct": true,
+        "why": "branche supérieure du pubis → partie médiane du col fémoral"
+      },
+      "C": {
+        "correct": true,
+        "why": "ischio-fémoral = postéro-inférieur"
+      },
+      "D": {
+        "correct": true,
+        "why": "insertion sur la tubérosité ischiatique ; double la capsule"
+      },
+      "E": {
+        "correct": false,
+        "why": "ces caractères sont ceux de l'ischio-fémoral, pas du pubo-fémoral"
+      }
+    },
+    "tags": [
+      "hanche",
+      "ligament_pubo_femoral",
+      "ligament_ischio_femoral",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#13.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000050",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les insertions de l'ilio-psoas et de l'iliaque, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le chef corporéal s'insère sur le corps des vertèbres T12 à L4",
+      "B": "le chef costiforme s'insère sur les processus costiformes des vertèbres L1 à L5",
+      "C": "les deux chefs fusionnent",
+      "D": "le muscle iliaque s'insère dans la fosse iliaque",
+      "E": "le chef corporéal s'insère sur T1 à T4 et le chef costiforme sur C1 à C7"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "chef corporéal : corps de T12 à L4"
+      },
+      "B": {
+        "correct": true,
+        "why": "chef costiforme : processus costiformes L1 à L5"
+      },
+      "C": {
+        "correct": true,
+        "why": "les deux chefs fusionnent"
+      },
+      "D": {
+        "correct": true,
+        "why": "iliaque : fosse iliaque"
+      },
+      "E": {
+        "correct": false,
+        "why": "corporéal T12–L4 ; costiforme L1–L5, pas T1–T4 ni C1–C7"
+      }
+    },
+    "tags": [
+      "ilio_psoas",
+      "insertions",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#14",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000051",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du trajet et des actions de l'ilio-psoas, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le muscle iliaque et l'ilio-psoas descendent verticalement et passent sous le ligament inguinal",
+      "B": "l'ilio-psoas réalise la flexion de la hanche",
+      "C": "il réalise aussi l'adduction de la hanche",
+      "D": "il réalise la rotation latérale de la hanche",
+      "E": "il passe au-dessus du ligament inguinal et réalise la rotation médiale de la hanche"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "descente verticale sous le ligament inguinal"
+      },
+      "B": {
+        "correct": true,
+        "why": "action : flexion de la hanche"
+      },
+      "C": {
+        "correct": true,
+        "why": "action : adduction"
+      },
+      "D": {
+        "correct": true,
+        "why": "action : rotation latérale de la hanche"
+      },
+      "E": {
+        "correct": false,
+        "why": "passage sous le ligament inguinal ; rotation latérale, pas médiale"
+      }
+    },
+    "tags": [
+      "ilio_psoas",
+      "actions",
+      "ligament_inguinal",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#14",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000052",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le muscle grand glutéal, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il s'insère sur l'ilion, le sacrum, le coccyx et le ligament sacro-tubéral",
+      "B": "il se termine sur la partie supérieure de la lèvre latérale de la ligne âpre du fémur",
+      "C": "il réalise l'extension de la cuisse",
+      "D": "il est superficiel, le plus volumineux, et forme le relief de la fesse",
+      "E": "il se termine sur la lèvre médiale de la ligne âpre et réalise la flexion de la cuisse"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "insertions : ilion, sacrum, coccyx, lig. sacro-tubéral"
+      },
+      "B": {
+        "correct": true,
+        "why": "terminaison : partie supérieure de la lèvre latérale de la ligne âpre"
+      },
+      "C": {
+        "correct": true,
+        "why": "action : extension de la cuisse"
+      },
+      "D": {
+        "correct": true,
+        "why": "superficiel, le plus volumineux, relief de la fesse"
+      },
+      "E": {
+        "correct": false,
+        "why": "lèvre latérale de la ligne âpre ; extension, pas flexion"
+      }
+    },
+    "tags": [
+      "grand_gluteal",
+      "extension_cuisse",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#15.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000053",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du muscle moyen glutéal, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il s'insère sur la face latérale de l'ilion, entre les lignes glutéales antérieure et postérieure",
+      "B": "il se termine à l'apex du grand trochanter",
+      "C": "il réalise l'abduction de la hanche",
+      "D": "il réalise aussi des rotations médiale et latérale",
+      "E": "il s'insère entre les lignes glutéales antérieure et inférieure"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "face latérale de l'ilion, entre lignes glutéales antérieure et postérieure"
+      },
+      "B": {
+        "correct": true,
+        "why": "terminaison : apex du grand trochanter"
+      },
+      "C": {
+        "correct": true,
+        "why": "action : abduction de la hanche"
+      },
+      "D": {
+        "correct": true,
+        "why": "rotations médiale et latérale"
+      },
+      "E": {
+        "correct": false,
+        "why": "entre antérieure et inférieure = petit glutéal, pas le moyen"
+      }
+    },
+    "tags": [
+      "moyen_gluteal",
+      "abduction",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#15.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000054",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le muscle petit glutéal, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est profond",
+      "B": "il s'insère sur la face latérale de l'ilion, entre les lignes glutéales antérieure et inférieure",
+      "C": "il se termine à l'apex du grand trochanter",
+      "D": "il réalise l'abduction de la hanche ainsi que des rotations médiale et latérale",
+      "E": "il s'insère entre les lignes glutéales antérieure et postérieure et se termine sur le petit trochanter"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "situation : profond"
+      },
+      "B": {
+        "correct": true,
+        "why": "face latérale de l'ilion, entre lignes glutéales antérieure et inférieure"
+      },
+      "C": {
+        "correct": true,
+        "why": "terminaison : apex du grand trochanter"
+      },
+      "D": {
+        "correct": true,
+        "why": "abduction + rotations médiale et latérale"
+      },
+      "E": {
+        "correct": false,
+        "why": "entre antérieure et postérieure = moyen glutéal ; terminaison = apex du grand trochanter"
+      }
+    },
+    "tags": [
+      "petit_gluteal",
+      "abduction",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#15.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000055",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du tenseur du fascia lata, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il s'insère sur l'épine iliaque antéro-supérieure",
+      "B": "il se termine sur le tractus ilio-tibial, qui se termine sur le tubercule infra-condylaire du tibia",
+      "C": "il est innervé par le nerf glutéal supérieur",
+      "D": "ses actions sont l'abduction, la rotation médiale de la hanche et l'extension du genou",
+      "E": "il s'insère sur l'épine iliaque antéro-inférieure et réalise la rotation latérale de la hanche"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "insertion : épine iliaque antéro-supérieure"
+      },
+      "B": {
+        "correct": true,
+        "why": "tractus ilio-tibial → tubercule infra-condylaire du tibia"
+      },
+      "C": {
+        "correct": true,
+        "why": "innervation : nerf glutéal supérieur"
+      },
+      "D": {
+        "correct": true,
+        "why": "abduction, rotation médiale de hanche, extension du genou"
+      },
+      "E": {
+        "correct": false,
+        "why": "insertion EIAS, pas EIAI ; rotation médiale, pas latérale"
+      }
+    },
+    "tags": [
+      "TFL",
+      "tractus_ilio_tibial",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#16.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000056",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le muscle piriforme, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il s'insère sur la face latérale du sacrum",
+      "B": "il passe dans la grande incisure ischiatique",
+      "C": "il se termine sur le bord médial du grand trochanter",
+      "D": "il réalise aussi l'abduction et l'extension de hanche",
+      "E": "il s'insère sur la face médiale du sacrum et se termine sur le petit trochanter"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "insertion : face latérale du sacrum"
+      },
+      "B": {
+        "correct": true,
+        "why": "passage dans la grande incisure ischiatique"
+      },
+      "C": {
+        "correct": true,
+        "why": "terminaison : bord médial du grand trochanter"
+      },
+      "D": {
+        "correct": true,
+        "why": "actions : abduction et extension de hanche (en plus de la rotation latérale)"
+      },
+      "E": {
+        "correct": false,
+        "why": "face latérale du sacrum → bord médial du grand trochanter, pas le petit"
+      }
+    },
+    "tags": [
+      "piriforme",
+      "pelvi_trochanteriens",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#16.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000057",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos des jumeaux, du carré fémoral et de l'obturateur externe, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le jumeau supérieur s'insère sur l'épine ischiatique",
+      "B": "le jumeau inférieur s'insère sur la tubérosité ischiatique",
+      "C": "le carré fémoral s'insère sur la face latérale de l'ischion, se termine sur la crête inter-trochantérienne, et réalise rotation latérale et adduction",
+      "D": "l'obturateur externe s'insère sur la face latérale de la membrane obturatrice et réalise notamment l'adduction de hanche",
+      "E": "l'obturateur externe s'insère sur la face médiale de la membrane obturatrice"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "jumeau supérieur : épine ischiatique"
+      },
+      "B": {
+        "correct": true,
+        "why": "jumeau inférieur : tubérosité ischiatique"
+      },
+      "C": {
+        "correct": true,
+        "why": "carré fémoral : face lat. ischion → crête inter-trochantérienne ; rot. lat. + adduction"
+      },
+      "D": {
+        "correct": true,
+        "why": "obturateur externe : face latérale de la membrane obturatrice ; adduction"
+      },
+      "E": {
+        "correct": false,
+        "why": "face médiale de la membrane = obturateur interne ; l'externe est latéral"
+      }
+    },
+    "tags": [
+      "jumeaux",
+      "carre_femoral",
+      "obturateur_externe",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#16.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000058",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant l'organisation des muscles adducteurs, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "ils sont au nombre de 5",
+      "B": "trois sont superficiels : pectiné, long adducteur et gracile",
+      "C": "deux sont profonds : court adducteur et grand adducteur",
+      "D": "le gracile est un muscle fin qui fait le galbe médian de la cuisse",
+      "E": "ils sont au nombre de 3, tous profonds"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "5 muscles adducteurs"
+      },
+      "B": {
+        "correct": true,
+        "why": "3 superficiels : pectiné, long adducteur, gracile"
+      },
+      "C": {
+        "correct": true,
+        "why": "2 profonds : court adducteur, grand adducteur"
+      },
+      "D": {
+        "correct": true,
+        "why": "gracile = muscle fin, galbe médian de la cuisse"
+      },
+      "E": {
+        "correct": false,
+        "why": "5 muscles, dont 3 superficiels et 2 profonds"
+      }
+    },
+    "tags": [
+      "adducteurs",
+      "pectine",
+      "gracile",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#17",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000059",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos des muscles pectiné et long adducteur, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le pectiné s'insère sur le pecten du pubis",
+      "B": "le pectiné se termine sur la ligne pectinée, à la partie supérieure entre les lèvres de la ligne âpre",
+      "C": "le pectiné est innervé par le nerf fémoral et est adducteur",
+      "D": "le long adducteur s'insère sur la face latérale du pubis, se termine sur la lèvre médiale de la ligne âpre (tiers moyen), et est innervé par le nerf obturateur",
+      "E": "le pectiné est innervé par le nerf obturateur et se termine sur le grand trochanter"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "pectiné : pecten du pubis"
+      },
+      "B": {
+        "correct": true,
+        "why": "terminaison : ligne pectinée, partie supérieure de la ligne âpre"
+      },
+      "C": {
+        "correct": true,
+        "why": "nerf fémoral ; action adducteur"
+      },
+      "D": {
+        "correct": true,
+        "why": "face latérale du pubis → lèvre médiale (tiers moyen) ; nerf obturateur"
+      },
+      "E": {
+        "correct": false,
+        "why": "pectiné = nerf fémoral, ligne pectinée ; pas nerf obturateur ni grand trochanter"
+      }
+    },
+    "tags": [
+      "pectine",
+      "long_adducteur",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#17",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000060",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les muscles court adducteur et grand adducteur, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le court adducteur s'insère sur la face latérale du pubis et la branche inférieure du pubis",
+      "B": "le court adducteur se divise en 2 faisceaux et passe en profondeur du pectiné et du long adducteur",
+      "C": "le court adducteur se termine sur le 1/3 supérieur de la lèvre médiale de la ligne âpre et est innervé par le nerf obturateur",
+      "D": "le chef oblique du grand adducteur se termine entre les lèvres de la ligne âpre et est innervé par le nerf obturateur ; le chef vertical est innervé par le nerf sciatique",
+      "E": "le court adducteur est innervé par le nerf fémoral et le chef vertical du grand adducteur par le nerf obturateur"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "court adducteur : face latérale du pubis + branche inférieure du pubis"
+      },
+      "B": {
+        "correct": true,
+        "why": "2 faisceaux ; profondeur du pectiné et du long adducteur"
+      },
+      "C": {
+        "correct": true,
+        "why": "1/3 supérieur de la lèvre médiale ; nerf obturateur"
+      },
+      "D": {
+        "correct": true,
+        "why": "chef oblique : entre les lèvres, nerf obturateur ; chef vertical : nerf sciatique"
+      },
+      "E": {
+        "correct": false,
+        "why": "court = nerf obturateur ; chef vertical = nerf sciatique, pas obturateur"
+      }
+    },
+    "tags": [
+      "court_adducteur",
+      "grand_adducteur",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#17.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000061",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant l'articulation du genou, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "elle concerne l'extrémité inférieure du fémur, la face postérieure de la patella et l'extrémité supérieure du tibia",
+      "B": "sa capsule articulaire est volumineuse",
+      "C": "l'articulation fémoro-tibiale est une articulation bicondylienne",
+      "D": "l'articulation fémoro-patellaire est une articulation ginglyme",
+      "E": "l'articulation du genou est très dépendante des surfaces articulaires"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "3 os : extrémité inf. fémur, face post. patella, extrémité sup. tibia"
+      },
+      "B": {
+        "correct": true,
+        "why": "capsule volumineuse"
+      },
+      "C": {
+        "correct": true,
+        "why": "fémoro-tibiale = bicondylienne"
+      },
+      "D": {
+        "correct": true,
+        "why": "fémoro-patellaire = ginglyme"
+      },
+      "E": {
+        "correct": false,
+        "why": "cours : genou très peu dépendant des surfaces articulaires"
+      }
+    },
+    "tags": [
+      "genou",
+      "capsule",
+      "femoro_tibiale",
+      "femoro_patellaire",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#18",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000062",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos des ménisques du genou, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "ils sont recouverts de cartilage à la face supérieure (fémur) et à la face inférieure (tibia)",
+      "B": "ils s'insèrent sur l'os tibial à leurs deux extrémités",
+      "C": "leur bord latéral est adhérent à la capsule articulaire du genou",
+      "D": "ils permettent les mouvements de flexion/extension du genou",
+      "E": "ils s'insèrent sur le fémur à leurs deux extrémités"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "cartilage sup. (fémur) et inf. (tibia)"
+      },
+      "B": {
+        "correct": true,
+        "why": "insertion tibiale aux 2 extrémités"
+      },
+      "C": {
+        "correct": true,
+        "why": "bord latéral adhérent à la capsule"
+      },
+      "D": {
+        "correct": true,
+        "why": "mouvements de flexion/extension"
+      },
+      "E": {
+        "correct": false,
+        "why": "cours : insérés sur le tibia, pas sur le fémur"
+      }
+    },
+    "tags": [
+      "menisques",
+      "genou",
+      "capsule",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#18.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000063",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les ligaments croisés du genou, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "ils sont intra-capsulaires",
+      "B": "ils sont extrasynoviaux",
+      "C": "le ligament croisé antérieur se termine sur l'aire intercondylaire antérieure du tibia",
+      "D": "le ligament croisé postérieur se termine sur l'aire intercondylaire postérieure du tibia",
+      "E": "le ligament croisé antérieur se termine sur l'aire intercondylaire postérieure du tibia"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "ligaments intra-capsulaires"
+      },
+      "B": {
+        "correct": true,
+        "why": "extrasynoviaux (tapissés de synoviale)"
+      },
+      "C": {
+        "correct": true,
+        "why": "LCA → aire intercondylaire antérieure du tibia"
+      },
+      "D": {
+        "correct": true,
+        "why": "LCP → aire intercondylaire postérieure du tibia"
+      },
+      "E": {
+        "correct": false,
+        "why": "l'aire postérieure est la terminaison du LCP, pas du LCA"
+      }
+    },
+    "tags": [
+      "LCA",
+      "LCP",
+      "croises",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#19",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000064",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos des rôles des ligaments croisés, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "genou en flexion : le ligament croisé antérieur est tendu",
+      "B": "genou en flexion : le ligament croisé postérieur est relâché",
+      "C": "genou en extension : le ligament croisé antérieur est relâché",
+      "D": "genou en extension : le ligament croisé postérieur est tendu",
+      "E": "genou en flexion : le ligament croisé antérieur est relâché et le ligament croisé postérieur est tendu"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "flexion : LCA tendu"
+      },
+      "B": {
+        "correct": true,
+        "why": "flexion : LCP relâché"
+      },
+      "C": {
+        "correct": true,
+        "why": "extension : LCA relâché"
+      },
+      "D": {
+        "correct": true,
+        "why": "extension : LCP tendu"
+      },
+      "E": {
+        "correct": false,
+        "why": "c'est l'inverse : flexion = LCA tendu / LCP relâché"
+      }
+    },
+    "tags": [
+      "LCA",
+      "LCP",
+      "croises",
+      "flexion",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#19.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000065",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les ligaments collatéraux du genou, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le ligament collatéral fibulaire s'insère sur l'épicondyle latéral et se termine sur la tête de la fibula",
+      "B": "le ligament collatéral fibulaire est un ligament relativement fin",
+      "C": "le ligament collatéral tibial s'insère sur l'épicondyle médial et est plus volumineux",
+      "D": "le collatéral tibial présente un faisceau vertical et un faisceau ménisco-tibial se rattachant au ménisque médial",
+      "E": "le ligament collatéral fibulaire est volumineux et se termine sur le tibia"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "épicondyle latéral → tête de la fibula"
+      },
+      "B": {
+        "correct": true,
+        "why": "ligament relativement fin"
+      },
+      "C": {
+        "correct": true,
+        "why": "épicondyle médial ; ligament plus volumineux"
+      },
+      "D": {
+        "correct": true,
+        "why": "faisceau vertical + faisceau ménisco-tibial vers le ménisque médial"
+      },
+      "E": {
+        "correct": false,
+        "why": "c'est le collatéral tibial qui est volumineux ; le fibulaire, fin, va à la tête de la fibula"
+      }
+    },
+    "tags": [
+      "collateraux",
+      "fibulaire",
+      "tibial",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#20.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000066",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du ligament patellaire et des moyens d'union du genou, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "en inclinaison latérale de la jambe, les ligaments collatéraux sont tendus",
+      "B": "le ligament patellaire relie la patella à la tubérosité tibiale antérieure",
+      "C": "les fibres du ligament patellaire sont en continuité avec celles du tendon du quadriceps",
+      "D": "quadriceps, biceps fémoral, semi-tendineux, poplité et muscles de la patte d'oie sont des moyens d'union actifs",
+      "E": "le ligament patellaire est un ligament peu solide"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "collatéraux tendus en inclinaison latérale"
+      },
+      "B": {
+        "correct": true,
+        "why": "patella → tubérosité tibiale antérieure"
+      },
+      "C": {
+        "correct": true,
+        "why": "continuité avec le tendon du quadriceps"
+      },
+      "D": {
+        "correct": true,
+        "why": "moyens d'union actifs listés dans le cours"
+      },
+      "E": {
+        "correct": false,
+        "why": "cours : ligament extrêmement solide"
+      }
+    },
+    "tags": [
+      "ligament_patellaire",
+      "collateraux",
+      "moyens_d_union",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#20",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000067",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les insertions des chefs du quadriceps, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le quadriceps est composé de 4 chefs musculaires",
+      "B": "le droit fémoral s'insère sur l'épine iliaque antéro-supérieure et le sillon supra-acétabulaire",
+      "C": "le vaste médial s'insère sur la lèvre médiale de la ligne âpre ; le vaste latéral sur le grand trochanter et la lèvre latérale de la ligne âpre",
+      "D": "le vaste médial descend plus bas que le vaste latéral",
+      "E": "le vaste latéral descend plus bas que le vaste médial"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "4 chefs musculaires"
+      },
+      "B": {
+        "correct": true,
+        "why": "EIAS + sillon supra-acétabulaire"
+      },
+      "C": {
+        "correct": true,
+        "why": "VM : lèvre médiale ; VL : grand trochanter + lèvre latérale"
+      },
+      "D": {
+        "correct": true,
+        "why": "vaste médial plus descendant que le vaste latéral"
+      },
+      "E": {
+        "correct": false,
+        "why": "cours : le vaste médial descend plus bas que le vaste latéral"
+      }
+    },
+    "tags": [
+      "quadriceps",
+      "droit_femoral",
+      "vastes",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#21",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000068",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du vaste intermédiaire, du tendon quadricipital et des actions du quadriceps, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le vaste intermédiaire s'insère sur les faces antérieure et latérale du fémur, en profondeur du droit fémoral",
+      "B": "le tendon quadricipital s'insère sur la base de la patella",
+      "C": "le quadriceps assure le blocage du genou en extension à la marche",
+      "D": "le quadriceps assure le maintien de la patella vers le dedans",
+      "E": "le tendon quadricipital s'insère sur l'apex de la patella"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "faces ant. et lat. du fémur, profond du droit fémoral"
+      },
+      "B": {
+        "correct": true,
+        "why": "tendon → base de la patella"
+      },
+      "C": {
+        "correct": true,
+        "why": "blocage du genou en extension à la marche"
+      },
+      "D": {
+        "correct": true,
+        "why": "maintien de la patella vers le dedans"
+      },
+      "E": {
+        "correct": false,
+        "why": "cours : insertion sur la base de la patella, pas l'apex"
+      }
+    },
+    "tags": [
+      "quadriceps",
+      "tendon_quadricipital",
+      "patella",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#21",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000069",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le muscle sartorius, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il s'insère sur l'épine iliaque antéro-supérieure par un tendon commun avec le droit fémoral",
+      "B": "il surcroise le quadriceps et se dirige en bas et en dedans",
+      "C": "il est innervé par le nerf fémoral",
+      "D": "il réalise la flexion, l'abduction et la rotation latérale de la hanche, ainsi que la flexion du genou",
+      "E": "il réalise une rotation médiale de la hanche"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "EIAS, tendon commun avec le droit fémoral"
+      },
+      "B": {
+        "correct": true,
+        "why": "surcroise le quadriceps, trajet bas et dedans"
+      },
+      "C": {
+        "correct": true,
+        "why": "nerf fémoral"
+      },
+      "D": {
+        "correct": true,
+        "why": "flexion + abduction + rot. lat. hanche ; flexion du genou"
+      },
+      "E": {
+        "correct": false,
+        "why": "cours : rotation latérale de la hanche, pas médiale"
+      }
+    },
+    "tags": [
+      "sartorius",
+      "nerf_femoral",
+      "hanche",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#22",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000070",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos des ischio-jambiers et du muscle semi-tendineux, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "ils s'insèrent ensemble par un tendon commun sur la face postérieure de la tubérosité ischiatique",
+      "B": "le semi-tendineux est un muscle superficiel et médial",
+      "C": "le semi-tendineux descend en arrière du semi-membraneux",
+      "D": "le semi-tendineux est innervé par le nerf ischiatique et réalise une rotation médiale de la hanche",
+      "E": "le semi-tendineux chemine en avant du semi-membraneux"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "tendon commun sur la tubérosité ischiatique"
+      },
+      "B": {
+        "correct": true,
+        "why": "superficiel et médial"
+      },
+      "C": {
+        "correct": true,
+        "why": "trajet en arrière du semi-membraneux"
+      },
+      "D": {
+        "correct": true,
+        "why": "nerf ischiatique ; rotation médiale de la hanche"
+      },
+      "E": {
+        "correct": false,
+        "why": "cours : le semi-tendineux descend en arrière du semi-membraneux"
+      }
+    },
+    "tags": [
+      "ischio_jambiers",
+      "semi_tendineux",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#23.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000071",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le muscle semi-membraneux, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "c'est un muscle médial et profond, situé en profondeur du semi-tendineux",
+      "B": "il se termine par 3 tendons : direct (face postérieure du tibia), réfléchi (condyle tibial médial) et récurrent (capsule)",
+      "C": "il fléchit le genou",
+      "D": "il étend la hanche et réalise une rotation médiale de la hanche",
+      "E": "il se termine par un tendon unique sur l'apex de la tête de la fibula"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "médial et profond, sous le semi-tendineux"
+      },
+      "B": {
+        "correct": true,
+        "why": "3 tendons : direct, réfléchi, récurrent"
+      },
+      "C": {
+        "correct": true,
+        "why": "flexion du genou"
+      },
+      "D": {
+        "correct": true,
+        "why": "extension et rotation médiale de la hanche"
+      },
+      "E": {
+        "correct": false,
+        "why": "3 tendons tibiaux/capsulaires ; l'apex fibulaire est la terminaison du biceps"
+      }
+    },
+    "tags": [
+      "semi_membraneux",
+      "ischio_jambiers",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#23.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000072",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du muscle biceps fémoral, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "c'est le muscle latéral des ischio-jambiers",
+      "B": "le chef court s'insère sur la lèvre latérale de la ligne âpre du fémur",
+      "C": "les deux chefs se terminent par un tendon commun sur l'apex de la tête de la fibula",
+      "D": "le nerf ischiatique passe entre les deux chefs ; le muscle réalise une rotation latérale de la hanche",
+      "E": "il réalise une rotation médiale de la hanche"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "muscle latéral"
+      },
+      "B": {
+        "correct": true,
+        "why": "chef court : lèvre latérale de la ligne âpre"
+      },
+      "C": {
+        "correct": true,
+        "why": "tendon commun sur l'apex de la tête de la fibula"
+      },
+      "D": {
+        "correct": true,
+        "why": "nerf ischiatique entre les 2 chefs ; rotation latérale de la hanche"
+      },
+      "E": {
+        "correct": false,
+        "why": "cours : rotation latérale de la hanche (la médiale est celle du ST et du SM)"
+      }
+    },
+    "tags": [
+      "biceps_femoral",
+      "ischio_jambiers",
+      "nerf_ischiatique",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#23.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000073",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le muscle poplité, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il s'insère par un tendon intra-articulaire sur le condyle fémoral médial",
+      "B": "son trajet se dirige en bas et en dedans",
+      "C": "il se termine sur la face poplitée de l'extrémité proximale du tibia",
+      "D": "il est un stabilisateur rotatoire du genou",
+      "E": "il s'insère sur le condyle fémoral latéral"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "tendon intra-articulaire sur le condyle fémoral médial"
+      },
+      "B": {
+        "correct": true,
+        "why": "trajet en bas et en dedans"
+      },
+      "C": {
+        "correct": true,
+        "why": "face poplitée du tibia proximal"
+      },
+      "D": {
+        "correct": true,
+        "why": "stabilisateur rotatoire du genou"
+      },
+      "E": {
+        "correct": false,
+        "why": "cours : condyle fémoral médial, pas latéral"
+      }
+    },
+    "tags": [
+      "poplite",
+      "genou",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#24.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000074",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos de la disposition et de l'action de la patte d'oie, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le gracile est le muscle médial de la patte d'oie",
+      "B": "le semi-tendineux est le muscle postérieur de la patte d'oie",
+      "C": "elle renforce le ligament collatéral tibial",
+      "D": "elle lutte contre les luxations médiales",
+      "E": "elle lutte contre les luxations latérales"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "gracile = muscle médial"
+      },
+      "B": {
+        "correct": true,
+        "why": "semi-tendineux = muscle postérieur"
+      },
+      "C": {
+        "correct": true,
+        "why": "renforce le ligament collatéral tibial"
+      },
+      "D": {
+        "correct": true,
+        "why": "lutte contre les luxations médiales"
+      },
+      "E": {
+        "correct": false,
+        "why": "cours : lutte contre les luxations médiales, pas latérales"
+      }
+    },
+    "tags": [
+      "patte_doie",
+      "gracile",
+      "semi_tendineux",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#24.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000075",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les surfaces articulaires de la cheville, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le tibia participe par sa face inférieure et la malléole médiale",
+      "B": "la fibula participe par la malléole latérale",
+      "C": "la troisième surface est la trochlée du talus",
+      "D": "la malléole médiale appartient à la fibula",
+      "E": "le calcanéus forme la troisième surface articulaire de la cheville"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "tibia : face inférieure + malléole médiale"
+      },
+      "B": {
+        "correct": true,
+        "why": "fibula : malléole latérale"
+      },
+      "C": {
+        "correct": true,
+        "why": "trochlée du talus"
+      },
+      "D": {
+        "correct": false,
+        "why": "malléole médiale = tibia ; malléole latérale = fibula"
+      },
+      "E": {
+        "correct": false,
+        "why": "3e surface = trochlée du talus, pas le calcanéus"
+      }
+    },
+    "tags": [
+      "cheville",
+      "talus",
+      "malleoles",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#25.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000076",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos de la pince tibio-fibulaire et de la trochlée du talus, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la pince est formée par les extrémités inférieures du tibia et de la fibula",
+      "B": "elle serre la trochlée du talus",
+      "C": "la pince est très rigide : seuls les mouvements de flexion-extension sont possibles",
+      "D": "la trochlée est plus large en avant et étroite en arrière",
+      "E": "la trochlée est plus large en arrière et étroite en avant"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "extrémités inférieures tibia + fibula"
+      },
+      "B": {
+        "correct": true,
+        "why": "serre la trochlée du talus"
+      },
+      "C": {
+        "correct": true,
+        "why": "pince rigide : flexion-extension seulement"
+      },
+      "D": {
+        "correct": true,
+        "why": "trochlée large en avant, étroite en arrière"
+      },
+      "E": {
+        "correct": false,
+        "why": "c'est l'inverse : large en avant, étroite en arrière"
+      }
+    },
+    "tags": [
+      "cheville",
+      "pince",
+      "trochlee",
+      "talus",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#25",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000077",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le ligament collatéral latéral de la cheville, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il correspond au ligament collatéral fibulaire",
+      "B": "il présente 3 faisceaux : talo-fibulaire antérieur, talo-fibulaire postérieur et calcanéo-fibulaire",
+      "C": "les faisceaux talo-fibulaires relient la malléole latérale au talus",
+      "D": "il n'est pas très solide ; les entorses de la cheville sont le plus souvent latérales",
+      "E": "il est plus solide que le ligament deltoïdien"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "collatéral latéral = collatéral fibulaire"
+      },
+      "B": {
+        "correct": true,
+        "why": "3 faisceaux : talo-fib. ant./post. + calcanéo-fibulaire"
+      },
+      "C": {
+        "correct": true,
+        "why": "malléole latérale → talus"
+      },
+      "D": {
+        "correct": true,
+        "why": "peu solide ; entorses le plus souvent latérales"
+      },
+      "E": {
+        "correct": false,
+        "why": "cours : le deltoïdien (LCM) est plus solide que le collatéral latéral"
+      }
+    },
+    "tags": [
+      "cheville",
+      "LCL",
+      "collatéral_fibulaire",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#26.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000078",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du ligament collatéral médial de la cheville, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il correspond au ligament deltoïdien",
+      "B": "il présente 4 faisceaux qui s'insèrent sur le tibia",
+      "C": "ses faisceaux sont tibio-talien antérieur, tibio-talien postérieur, tibio-calcanéen et tibio-naviculaire",
+      "D": "il est plus solide et plus rigide que le ligament collatéral latéral",
+      "E": "il présente 3 faisceaux, comme le ligament collatéral latéral"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "collatéral médial = ligament deltoïdien"
+      },
+      "B": {
+        "correct": true,
+        "why": "4 faisceaux s'insérant sur le tibia"
+      },
+      "C": {
+        "correct": true,
+        "why": "tibio-taliens ant./post., tibio-calcanéen, tibio-naviculaire"
+      },
+      "D": {
+        "correct": true,
+        "why": "plus solide et plus rigide que le LCL"
+      },
+      "E": {
+        "correct": false,
+        "why": "4 faisceaux (le LCL en a 3)"
+      }
+    },
+    "tags": [
+      "cheville",
+      "LCM",
+      "deltoidien",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#26.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000079",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant l'articulation sub-talienne et l'articulation cuboïde-naviculaire, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'articulation sub-talienne (talo-calcanéenne) est située entre le talus et le calcanéus",
+      "B": "l'articulation sub-talienne permet les mouvements d'inclinaison latérale du pied",
+      "C": "l'articulation cuboïde-naviculaire est une syndesmose",
+      "D": "cette syndesmose n'a aucun degré de liberté",
+      "E": "l'articulation cuboïde-naviculaire est une synoviale à plusieurs degrés de liberté"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "sub-talienne = talo-calcanéenne, entre talus et calcanéus"
+      },
+      "B": {
+        "correct": true,
+        "why": "inclinaison latérale du pied"
+      },
+      "C": {
+        "correct": true,
+        "why": "cuboïde-naviculaire = syndesmose"
+      },
+      "D": {
+        "correct": true,
+        "why": "aucun degré de liberté"
+      },
+      "E": {
+        "correct": false,
+        "why": "cours : syndesmose sans capsule synoviale, aucun ddl"
+      }
+    },
+    "tags": [
+      "sub_talienne",
+      "syndesmose",
+      "pied",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#26.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000080",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos des ligaments plantaires maintenant l'arche du pied, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le ligament plantaire court relie le calcanéus à l'os cuboïde",
+      "B": "le ligament plantaire long relie le calcanéus aux têtes des métatarsiens 2 à 4",
+      "C": "le ligament calcanéo-naviculaire plantaire participe au maintien de l'arche du pied",
+      "D": "ces ligaments sont situés sur la face plantaire",
+      "E": "le ligament plantaire court relie le calcanéus à l'os naviculaire"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "plantaire court : calcanéus – cuboïde"
+      },
+      "B": {
+        "correct": true,
+        "why": "plantaire long : calcanéus – têtes M2 à M4"
+      },
+      "C": {
+        "correct": true,
+        "why": "calcanéo-naviculaire plantaire cité pour l'arche"
+      },
+      "D": {
+        "correct": true,
+        "why": "face plantaire, maintien de l'arche"
+      },
+      "E": {
+        "correct": false,
+        "why": "le court va au cuboïde ; le naviculaire est relié par le calcanéo-naviculaire plantaire"
+      }
+    },
+    "tags": [
+      "ligaments_plantaires",
+      "arche_du_pied",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#26.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000081",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les insertions du compartiment antérieur de la jambe et le muscle tibial antérieur, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les insertions communes se font sur la face antéro-latérale du tibia, la membrane interosseuse et la face médiale de la fibula",
+      "B": "le tibial antérieur s'insère sur les 2/3 supérieur de la face antéro-latérale du tibia et sur la membrane interosseuse",
+      "C": "le tibial antérieur réalise une rotation médiale et une adduction du pied",
+      "D": "le tibial antérieur s'insère sur le 1/4 inférieur de la face médiale de la fibula",
+      "E": "les insertions communes se font sur la face postérieure du tibia et la face latérale de la fibula"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "insertions communes : face antéro-latérale du tibia, membrane interosseuse, face médiale de la fibula"
+      },
+      "B": {
+        "correct": true,
+        "why": "TA : 2/3 supérieur de la face antéro-latérale du tibia + membrane interosseuse"
+      },
+      "C": {
+        "correct": true,
+        "why": "TA : rotation médiale et adduction du pied"
+      },
+      "D": {
+        "correct": false,
+        "why": "1/4 inférieur de la face médiale de la fibula = 3e fibulaire, pas le TA"
+      },
+      "E": {
+        "correct": false,
+        "why": "communes = face antéro-latérale du tibia, membrane, face médiale de la fibula ; pas face postérieure du tibia ni face latérale de la fibula"
+      }
+    },
+    "tags": [
+      "compartiment_anterieur",
+      "tibial_anterieur",
+      "insertions",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#27.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000082",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du muscle long extenseur de l'hallux, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il s'insère sur la partie moyenne de la face médiale de la fibula et sur la membrane interosseuse",
+      "B": "il se termine par un tendon sur la face supérieure de la phalange distale de l'hallux",
+      "C": "il réalise l'extension de l'hallux, l'extension de la cheville, l'adduction et la rotation médiale de la cheville",
+      "D": "il se termine sur la phalange proximale de l'hallux et en réalise la flexion",
+      "E": "il s'insère sur la ½ supérieure de la face médiale de la fibula et sur le condyle tibial latéral"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "LEH : partie moyenne de la face médiale de la fibula + membrane interosseuse"
+      },
+      "B": {
+        "correct": true,
+        "why": "terminaison : face supérieure de la phalange distale de l'hallux"
+      },
+      "C": {
+        "correct": true,
+        "why": "extension de l'hallux et de la cheville ; adduction et rotation médiale de la cheville"
+      },
+      "D": {
+        "correct": false,
+        "why": "phalange distale (pas proximale) ; action = extension, pas flexion"
+      },
+      "E": {
+        "correct": false,
+        "why": "½ supérieure face médiale de la fibula + condyle tibial latéral = long extenseur des orteils"
+      }
+    },
+    "tags": [
+      "long_extenseur_hallux",
+      "compartiment_anterieur",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#27.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000083",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le long extenseur des orteils et le 3e fibulaire, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le long extenseur des orteils s'insère sur la ½ supérieure de la face médiale de la fibula et sur la face latérale du condyle tibial latéral",
+      "B": "son tendon se divise en 4 au dos du pied pour les orteils 2 à 5, avec une bandelette médiane sur la phalange intermédiaire",
+      "C": "le 3e fibulaire est inconstant, présent chez 20 % de la population, et s'insère sur le 1/4 inférieur de la face médiale de la fibula",
+      "D": "le 3e fibulaire se termine sur la face dorso-médiale du 5e métatarsien et réalise l'éversion du pied",
+      "E": "le 3e fibulaire est présent chez 80 % de la population et s'insère sur la ½ supérieure de la face médiale de la fibula"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "LEO : ½ supérieure face médiale de la fibula + face latérale du condyle tibial latéral"
+      },
+      "B": {
+        "correct": true,
+        "why": "tendon en 4 pour orteils 2–5 ; bandelette médiane sur la phalange intermédiaire"
+      },
+      "C": {
+        "correct": true,
+        "why": "3e fibulaire inconstant (20 %) ; insertion = 1/4 inférieur face médiale de la fibula"
+      },
+      "D": {
+        "correct": true,
+        "why": "terminaison dorso-médiale du M5 ; action = éversion (et extension de la cheville)"
+      },
+      "E": {
+        "correct": false,
+        "why": "présent chez 20 % (pas 80 %) ; ½ supérieure face médiale de la fibula = LEO, pas le 3e fibulaire"
+      }
+    },
+    "tags": [
+      "long_extenseur_orteils",
+      "3e_fibulaire",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#27.4",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000084",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du muscle long fibulaire, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "c'est le muscle supérieur et superficiel du compartiment latéral",
+      "B": "il s'insère sur la face latérale de la fibula, le septum intermusculaire latéral, sur la moitié supérieure de la jambe",
+      "C": "son tendon passe à la face plantaire du pied et se termine à la base du 1er et du 2e métatarsien et du cunéiforme médial",
+      "D": "il s'insère sur la portion moyenne de la face latérale de la fibula",
+      "E": "il se termine sur le tubercule du court fibulaire au bord latéral du 5e métatarsien"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "long fibulaire = muscle supérieur et superficiel du compartiment latéral"
+      },
+      "B": {
+        "correct": true,
+        "why": "face latérale de la fibula + septum intermusculaire latéral, moitié supérieure de la jambe"
+      },
+      "C": {
+        "correct": true,
+        "why": "tendon plantaire → base de M1, M2 et cunéiforme médial"
+      },
+      "D": {
+        "correct": false,
+        "why": "portion moyenne de la face latérale de la fibula = court fibulaire"
+      },
+      "E": {
+        "correct": false,
+        "why": "tubercule du court fibulaire / bord latéral du M5 = court fibulaire"
+      }
+    },
+    "tags": [
+      "long_fibulaire",
+      "compartiment_lateral",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#28.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000085",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le muscle court fibulaire, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il est situé en dessous du muscle long fibulaire",
+      "B": "il s'insère sur la portion moyenne de la face latérale de la fibula",
+      "C": "il se termine au bord latéral du 5e métatarsien, sur le tubercule du court fibulaire",
+      "D": "son tendon croise la face plantaire et se termine à la base du 1er et du 2e métatarsien et du cunéiforme médial",
+      "E": "il s'insère sur la moitié supérieure de la face latérale de la fibula"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "court fibulaire situé en dessous du long fibulaire"
+      },
+      "B": {
+        "correct": true,
+        "why": "insertion : portion moyenne de la face latérale de la fibula"
+      },
+      "C": {
+        "correct": true,
+        "why": "terminaison : bord latéral du M5, tubercule du court fibulaire"
+      },
+      "D": {
+        "correct": false,
+        "why": "trajet plantaire vers M1, M2 et cunéiforme médial = long fibulaire"
+      },
+      "E": {
+        "correct": false,
+        "why": "moitié supérieure de la face latérale de la fibula = long fibulaire"
+      }
+    },
+    "tags": [
+      "court_fibulaire",
+      "compartiment_lateral",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#28.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000086",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du triceps sural et des gastrocnémiens, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le triceps sural est composé de 3 chefs : gastrocnémien médial, gastrocnémien latéral et soléaire",
+      "B": "le gastrocnémien médial s'insère sur le tubercule supracondylaire et la coque condylienne médiale",
+      "C": "le gastrocnémien médial descend plus bas que le latéral et est plus volumineux",
+      "D": "le gastrocnémien latéral s'insère sur le tubercule supracondylaire et la coque condylienne latérale",
+      "E": "le gastrocnémien latéral est plus volumineux, descend plus bas, et s'insère sur la coque condylienne médiale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "triceps = 3 chefs : GM, GL, soléaire"
+      },
+      "B": {
+        "correct": true,
+        "why": "GM : tubercule supracondylaire + coque condylienne médiale"
+      },
+      "C": {
+        "correct": true,
+        "why": "GM plus volumineux et descend plus bas que le GL"
+      },
+      "D": {
+        "correct": true,
+        "why": "GL : tubercule supracondylaire + coque condylienne latérale"
+      },
+      "E": {
+        "correct": false,
+        "why": "c'est le GM qui est plus volumineux et descend plus bas ; la coque médiale est celle du GM, pas du GL"
+      }
+    },
+    "tags": [
+      "triceps_sural",
+      "gastrocnemien",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#29.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000087",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le soléaire, le tendon calcanéen et les actions du triceps sural, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le soléaire s'insère sur la fibula et sur la crête du soléaire à la face postérieure du tibia, et forme une arcade entre ses insertions",
+      "B": "le soléaire chemine en profondeur des muscles gastrocnémiens",
+      "C": "les 3 chefs se terminent par le tendon d'Achille (tendon calcanéen) sur la face postérieure du calcanéum",
+      "D": "les 3 chefs réalisent la flexion plantaire du pied ; les gastrocnémiens fléchissent aussi le genou",
+      "E": "le soléaire est superficiel par rapport aux gastrocnémiens et le tendon calcanéen se termine sur la face antérieure du calcanéum"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "soléaire : fibula + crête du soléaire (face postérieure du tibia) + arcade"
+      },
+      "B": {
+        "correct": true,
+        "why": "soléaire en profondeur des gastrocnémiens"
+      },
+      "C": {
+        "correct": true,
+        "why": "tendon d'Achille / calcanéen sur la face postérieure du calcanéum"
+      },
+      "D": {
+        "correct": true,
+        "why": "3 chefs : flexion plantaire ; gastrocnémiens : aussi flexion du genou"
+      },
+      "E": {
+        "correct": false,
+        "why": "soléaire en profondeur (pas superficiel) ; terminaison sur la face postérieure du calcanéum, pas antérieure"
+      }
+    },
+    "tags": [
+      "soleaire",
+      "tendon_calcanéen",
+      "triceps_sural",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#29.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000088",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du muscle plantaire, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "c'est un muscle inconstant, dont le corps musculaire très petit s'arrête au-dessus du genou",
+      "B": "il s'insère sur le tubercule supra-condylaire latéral",
+      "C": "il se termine sur le bord médial du tendon calcanéen",
+      "D": "il s'insère sur le tubercule supra-condylaire médial",
+      "E": "il se termine sur le bord latéral du tendon calcanéen"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "plantaire inconstant ; petit corps qui s'arrête au-dessus du genou"
+      },
+      "B": {
+        "correct": true,
+        "why": "insertion : tubercule supra-condylaire latéral"
+      },
+      "C": {
+        "correct": true,
+        "why": "terminaison : bord médial du tendon calcanéen"
+      },
+      "D": {
+        "correct": false,
+        "why": "tubercule supra-condylaire latéral, pas médial"
+      },
+      "E": {
+        "correct": false,
+        "why": "bord médial du tendon calcanéen, pas latéral"
+      }
+    },
+    "tags": [
+      "plantaire",
+      "triceps_sural",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#29.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000089",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le muscle long fléchisseur des orteils, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il s'insère sur la face postérieure du tibia, au versant médial de la loge profonde de jambe",
+      "B": "son tendon se divise en 4 pour les orteils 2 à 5",
+      "C": "il se termine à la base des phalanges distales",
+      "D": "il s'insère sur le versant latéral de la loge profonde et se termine sur les phalanges proximales des orteils 2 à 5",
+      "E": "son tendon se divise en 2 pour l'hallux et le 2e orteil uniquement"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "LFO : face postérieure du tibia, versant médial de la loge profonde"
+      },
+      "B": {
+        "correct": true,
+        "why": "tendon en 4 pour les orteils 2 à 5"
+      },
+      "C": {
+        "correct": true,
+        "why": "terminaison : base des phalanges distales"
+      },
+      "D": {
+        "correct": false,
+        "why": "versant médial (pas latéral) ; phalanges distales (pas proximales)"
+      },
+      "E": {
+        "correct": false,
+        "why": "4 tendons pour les orteils 2 à 5, pas 2 tendons limités à l'hallux et au 2e orteil"
+      }
+    },
+    "tags": [
+      "long_flechisseur_orteils",
+      "posterieur_profond",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#30.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000090",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du muscle tibial postérieur, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il s'insère sur la face postérieure du tibia, la fibula et la membrane interosseuse",
+      "B": "son tendon passe en arrière de la malléole médiale, sous le sustentaculum tali",
+      "C": "il se termine aussi sur le cunéiforme médial et d'autres os voisins du tarse",
+      "D": "il réalise la flexion plantaire du pied et le maintien de l'arche médiale de la plante",
+      "E": "son tendon passe en avant de la malléole latérale et n'a aucune action sur l'arche médiale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "TP : face postérieure du tibia + fibula + membrane interosseuse"
+      },
+      "B": {
+        "correct": true,
+        "why": "tendon en arrière de la malléole médiale, sous le sustentaculum tali"
+      },
+      "C": {
+        "correct": true,
+        "why": "terminaison aussi sur le cunéiforme médial et os voisins du tarse"
+      },
+      "D": {
+        "correct": true,
+        "why": "flexion plantaire + maintien de l'arche médiale"
+      },
+      "E": {
+        "correct": false,
+        "why": "en arrière de la malléole médiale (pas en avant de la latérale) ; il maintient l'arche médiale"
+      }
+    },
+    "tags": [
+      "tibial_posterieur",
+      "posterieur_profond",
+      "arche_mediale",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#30.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000091",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le muscle long fléchisseur de l'hallux, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "son tendon passe entre les tubercules postérieurs du talus",
+      "B": "son tendon descend en profondeur du tendon du long fléchisseur des orteils",
+      "C": "il se termine à la base de la phalange distale de l'hallux et fléchit l'hallux, en synergie avec le long fléchisseur des orteils",
+      "D": "son tendon passe en avant des tubercules du talus, au-dessus du tendon du long fléchisseur des orteils",
+      "E": "il se termine sur la phalange proximale de l'hallux et en réalise l'extension"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "tendon du LFH entre les tubercules postérieurs du talus"
+      },
+      "B": {
+        "correct": true,
+        "why": "descend en profondeur du tendon du LFO"
+      },
+      "C": {
+        "correct": true,
+        "why": "base de la phalange distale de l'hallux ; flexion de l'hallux, synergie avec le LFO"
+      },
+      "D": {
+        "correct": false,
+        "why": "entre les tubercules postérieurs (pas en avant) et en profondeur du LFO (pas au-dessus)"
+      },
+      "E": {
+        "correct": false,
+        "why": "phalange distale (pas proximale) ; flexion (pas extension)"
+      }
+    },
+    "tags": [
+      "long_flechisseur_hallux",
+      "posterieur_profond",
+      "P1"
+    ],
+    "course_ref": "11_Membre_inferieur#30.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000092",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos des muscles dorsaux du pied, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le court extenseur des orteils s'insère sur la face supéro-latérale du calcanéus",
+      "B": "le court extenseur des orteils se divise en 3 chefs pour les orteils 2, 3 et 4",
+      "C": "le tendon du court extenseur des orteils s'unit au bord latéral du tendon du long extenseur des orteils",
+      "D": "le court extenseur de l'hallux s'insère aussi sur la face supéro-latérale du calcanéus et s'unit au bord latéral du tendon du long extenseur de l'hallux",
+      "E": "le court extenseur des orteils se divise en 4 chefs pour les orteils 2 à 5 et s'insère sur le cuboïde"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "CEO : face supéro-latérale du calcanéus"
+      },
+      "B": {
+        "correct": true,
+        "why": "3 chefs pour les orteils 2, 3 et 4"
+      },
+      "C": {
+        "correct": true,
+        "why": "union au bord latéral du tendon du LEO"
+      },
+      "D": {
+        "correct": true,
+        "why": "CEH : même insertion calcanéenne ; union au bord latéral du tendon du LEH"
+      },
+      "E": {
+        "correct": false,
+        "why": "3 chefs pour 2–3–4 (pas 4 chefs pour 2–5) ; insertion calcanéus, pas cuboïde"
+      }
+    },
+    "tags": [
+      "court_extenseur_orteils",
+      "court_extenseur_hallux",
+      "pied_dorsal",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#31.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000093",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant la couche plantaire superficielle, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'abducteur du petit orteil s'insère sur le processus latéral de la tubérosité calcanéenne",
+      "B": "l'abducteur de l'hallux s'insère sur le processus médial de la tubérosité calcanéenne",
+      "C": "le court fléchisseur des orteils s'insère sur le processus médial de la tubérosité calcanéenne et se termine sur les phalanges intermédiaires des orteils 2 à 5",
+      "D": "l'abducteur du petit orteil s'insère sur le processus médial de la tubérosité calcanéenne",
+      "E": "le court fléchisseur des orteils se termine sur les phalanges distales des orteils 2 à 5"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "ABD petit orteil : processus latéral de la tubérosité calcanéenne"
+      },
+      "B": {
+        "correct": true,
+        "why": "ABD hallux : processus médial de la tubérosité calcanéenne"
+      },
+      "C": {
+        "correct": true,
+        "why": "court fléchisseur des orteils : processus médial → phalanges intermédiaires 2 à 5"
+      },
+      "D": {
+        "correct": false,
+        "why": "processus latéral pour l'ABD du petit orteil ; le processus médial est celui de l'ABD de l'hallux et du court fléchisseur des orteils"
+      },
+      "E": {
+        "correct": false,
+        "why": "phalanges intermédiaires (pas distales) des orteils 2 à 5"
+      }
+    },
+    "tags": [
+      "plantaire_superficiel",
+      "abducteur",
+      "court_flechisseur_orteils",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#31.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000094",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du carré plantaire, des lombricaux et des interosseux du pied, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le carré plantaire se termine sur le bord latéral du tendon du fléchisseur commun des orteils",
+      "B": "les 4 lombricaux s'insèrent sur le bord médial du tendon du fléchisseur commun des orteils",
+      "C": "les 3 interosseux plantaires s'insèrent sur les faces médiales des métatarsiens 3 à 5 et adductent vers l'axe du pied (= 2e orteil)",
+      "D": "les 4 interosseux dorsaux permettent l'abduction des articulations métatarso-phalangiennes (éloignent les orteils de l'axe du pied)",
+      "E": "les interosseux plantaires sont au nombre de 4, abductent les orteils, et l'axe du pied est le 5e orteil"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "carré plantaire → bord latéral du tendon du fléchisseur commun"
+      },
+      "B": {
+        "correct": true,
+        "why": "4 lombricaux sur le bord médial du même tendon"
+      },
+      "C": {
+        "correct": true,
+        "why": "3 interosseux plantaires : faces médiales de M3–5 ; adduction vers le 2e orteil"
+      },
+      "D": {
+        "correct": true,
+        "why": "4 interosseux dorsaux : abduction, éloignent de l'axe du pied"
+      },
+      "E": {
+        "correct": false,
+        "why": "plantaires = 3, adductent ; axe du pied = 2e orteil (pas le 5e) ; l'abduction est le rôle des dorsaux"
+      }
+    },
+    "tags": [
+      "carre_plantaire",
+      "lombricaux",
+      "interosseux",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#31.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000095",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant l'origine et le rôle de l'artère fémorale, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "c'est la branche terminale de l'artère iliaque externe, qui devient fémorale en passant sous le ligament inguinal",
+      "B": "le ligament inguinal est tendu entre l'épine iliaque antéro-supérieure et le tubercule pubien",
+      "C": "elle apporte la totalité de l'apport artériel au membre inférieur homolatéral",
+      "D": "elle naît de l'artère iliaque interne et n'apporte qu'une partie de l'apport artériel du membre inférieur",
+      "E": "le ligament inguinal unit l'épine iliaque antéro-inférieure à la tubérosité ischiatique"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "branche terminale de l'iliaque externe sous le ligament inguinal"
+      },
+      "B": {
+        "correct": true,
+        "why": "ligament inguinal : EIAS – tubercule pubien"
+      },
+      "C": {
+        "correct": true,
+        "why": "totalité de l'apport artériel du MI homolatéral"
+      },
+      "D": {
+        "correct": false,
+        "why": "iliaque externe (pas interne) ; totalité de l'apport (pas une partie)"
+      },
+      "E": {
+        "correct": false,
+        "why": "EIAS – tubercule pubien, pas EIAI – tubérosité ischiatique"
+      }
+    },
+    "tags": [
+      "artere_femorale",
+      "ligament_inguinal",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#32.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000096",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du canal inguinal et du triangle fémoral, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "l'espace latéral contient le muscle ilio-psoas et le nerf fémoral",
+      "B": "l'espace médial, vasculaire, contient l'artère fémorale, la veine fémorale et des lymphonœuds",
+      "C": "le triangle fémoral est délimité par le ligament inguinal, le sartorius et le long adducteur ; son plancher comprend l'ilio-psoas, le pectiné, le grand et le court adducteur",
+      "D": "de dehors en dedans : nerf fémoral, artère fémorale, veine fémorale (qui reçoit la crosse de la grande saphène)",
+      "E": "l'espace latéral contient l'artère et la veine fémorales ; de dehors en dedans on trouve veine, artère, puis nerf"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "espace latéral : ilio-psoas + nerf fémoral"
+      },
+      "B": {
+        "correct": true,
+        "why": "espace médial vasculaire : artère, veine, lymphonœuds"
+      },
+      "C": {
+        "correct": true,
+        "why": "limites : lig. inguinal / sartorius / long adducteur ; plancher : ilio-psoas, pectiné, grand et court adducteur"
+      },
+      "D": {
+        "correct": true,
+        "why": "dehors → dedans : n. fémoral, artère, veine (+ crosse de la grande saphène)"
+      },
+      "E": {
+        "correct": false,
+        "why": "vaisseaux = espace médial ; ordre NAV (nerf, artère, veine), pas veine-artère-nerf"
+      }
+    },
+    "tags": [
+      "canal_inguinal",
+      "triangle_femoral",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#32.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000097",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les collatérales de l'artère fémorale, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'artère épigastrique superficielle remonte au-dessus du ligament inguinal et vascularise la peau de la partie basse de l'abdomen",
+      "B": "l'artère circonflexe iliaque superficielle longe le ligament inguinal à son bord latéral",
+      "C": "les artères pudendales superficielle et profonde sont 2 branches en dedans, pour la face interne de la cuisse et les organes génitaux",
+      "D": "l'artère profonde de la cuisse est la plus grosse collatérale : elle part de la face postérieure de l'artère fémorale et longe le grand adducteur",
+      "E": "l'artère épigastrique superficielle est la plus grosse collatérale et naît de la face antérieure de l'artère fémorale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "épigastrique superficielle : au-dessus du lig. inguinal → peau de l'abdomen bas"
+      },
+      "B": {
+        "correct": true,
+        "why": "circonflexe iliaque superficielle : bord latéral du ligament inguinal"
+      },
+      "C": {
+        "correct": true,
+        "why": "2 pudendales en dedans : face interne de la cuisse et organes génitaux"
+      },
+      "D": {
+        "correct": true,
+        "why": "profonde de la cuisse = plus grosse ; face postérieure de la fémorale, le long du grand adducteur"
+      },
+      "E": {
+        "correct": false,
+        "why": "plus grosse collatérale = profonde de la cuisse, naissant de la face postérieure (pas l'épigastrique superficielle)"
+      }
+    },
+    "tags": [
+      "collaterales_femorales",
+      "profonde_cuisse",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#32.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000098",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos de l'artère poplitée et du creux poplité, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "elle se divise en deux au niveau de la crête du soléaire pour donner l'artère tibiale antérieure et l'artère tibiale postérieure",
+      "B": "elle donne 5 branches articulaires pour le genou : moyenne, supéro-latérale, supéro-médiale, inféro-latérale et inféro-médiale",
+      "C": "elle donne des artères musculaires pour les ischio-jambiers, le poplité, les gastrocnémiens et le soléaire",
+      "D": "le creux poplité, en losange, est délimité par le semi-membraneux en dedans, le biceps fémoral en dehors et les gastrocnémiens en dessous",
+      "E": "elle se divise au ligament inguinal en artères fémorales superficielle et profonde"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "division à la crête du soléaire → tibiale antérieure et tibiale postérieure"
+      },
+      "B": {
+        "correct": true,
+        "why": "5 branches articulaires du genou (moyenne + 4 périphériques)"
+      },
+      "C": {
+        "correct": true,
+        "why": "branches musculaires : ischio-jambiers, poplité, gastrocnémiens, soléaire"
+      },
+      "D": {
+        "correct": true,
+        "why": "losange : semi-membraneux (dedans), biceps fémoral (dehors), gastrocnémiens (dessous)"
+      },
+      "E": {
+        "correct": false,
+        "why": "division à la crête du soléaire en tibiales antérieure et postérieure, pas au ligament inguinal"
+      }
+    },
+    "tags": [
+      "artere_poplitee",
+      "creux_poplite",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#33.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000099",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant l'artère tibiale antérieure, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "elle naît du compartiment postérieur, traverse l'espace interosseux et passe au-dessus de la membrane interosseuse pour gagner le compartiment antérieur",
+      "B": "elle descend entre le tibial antérieur et le long extenseur des orteils, puis le long extenseur de l'hallux",
+      "C": "elle passe sous le rétinaculum des extenseurs et devient l'artère dorsale du pied",
+      "D": "elle donne des artères récurrentes tibiales, des branches musculaires du compartiment antérieur, et des artères malléolaires antéro-médiale et antéro-latérale",
+      "E": "elle naît du compartiment antérieur, passe sous la membrane interosseuse et devient l'artère plantaire médiale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "naissance postérieure ; passage au-dessus de la membrane interosseuse vers le compartiment antérieur"
+      },
+      "B": {
+        "correct": true,
+        "why": "descend entre TA et LEO, puis LEH"
+      },
+      "C": {
+        "correct": true,
+        "why": "sous le rétinaculum des extenseurs → artère dorsale du pied"
+      },
+      "D": {
+        "correct": true,
+        "why": "récurrentes tibiales, musculaires antérieures, malléolaires antéro-médiale et antéro-latérale"
+      },
+      "E": {
+        "correct": false,
+        "why": "naissance postérieure, au-dessus de la membrane ; devient dorsale du pied (pas plantaire médiale)"
+      }
+    },
+    "tags": [
+      "tibiale_anterieure",
+      "dorsale_du_pied",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#33.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000100",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos de l'artère tibiale postérieure et de l'artère fibulaire, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la tibiale postérieure descend verticalement en profondeur de l'arcade du soléaire, derrière la membrane interosseuse et le tibial postérieur",
+      "B": "elle se termine sous le pied, au niveau du rétinaculum des fléchisseurs, en se divisant en artères plantaires latérale et médiale",
+      "C": "l'artère fibulaire est la plus grosse branche de la tibiale postérieure, descend contre la face postérieure de la fibula et se termine à l'extrémité inférieure de la fibula",
+      "D": "ses collatérales comprennent l'artère circonflexe de la fibula, l'artère fibulaire, l'artère nourricière du tibia, l'artère malléolaire postéro-médiale et l'artère calcanéenne",
+      "E": "l'artère fibulaire est une branche de la tibiale antérieure et se termine sur le 1er métatarsien"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "descente verticale sous l'arcade du soléaire, derrière la membrane et le TP"
+      },
+      "B": {
+        "correct": true,
+        "why": "terminaison sous le pied au rétinaculum des fléchisseurs → plantaires latérale et médiale"
+      },
+      "C": {
+        "correct": true,
+        "why": "fibulaire = plus grosse branche de la tibiale postérieure ; face postérieure de la fibula → extrémité inférieure"
+      },
+      "D": {
+        "correct": true,
+        "why": "collatérales listées dans le cours (circonflexe de la fibula, fibulaire, nourricière du tibia, malléolaire postéro-médiale, calcanéenne)"
+      },
+      "E": {
+        "correct": false,
+        "why": "fibulaire = branche de la tibiale postérieure ; se termine à l'extrémité inférieure de la fibula, pas sur le M1"
+      }
+    },
+    "tags": [
+      "tibiale_posterieure",
+      "artere_fibulaire",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#33.3",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000101",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les artères et veines du pied, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'artère dorsale du pied est palpable entre le tendon de l'extenseur de l'hallux en dedans et le tendon de l'extenseur commun des orteils en dehors",
+      "B": "l'artère plantaire latérale forme l'arcade artérielle plantaire profonde, d'où naissent les 4 artères métatarsiennes plantaires",
+      "C": "l'arcade veineuse dorsale donne la veine marginale latérale (petite saphène) et la veine marginale médiale (grande saphène)",
+      "D": "la veine petite saphène commence en arrière de la malléole médiale et se jette en crosse dans la veine fémorale au triangle fémoral",
+      "E": "la semelle veineuse plantaire, comprimée par l'appui du pied, constitue la première étape de la pompe veineuse"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "pouls dorsal du pied : tendon extenseur de l'hallux en dedans, extenseur commun des orteils en dehors"
+      },
+      "B": {
+        "correct": true,
+        "why": "plantaire latérale → arcade plantaire profonde → 4 métatarsiennes plantaires"
+      },
+      "C": {
+        "correct": true,
+        "why": "arcade veineuse dorsale : marginale latérale = petite saphène ; marginale médiale = grande saphène"
+      },
+      "D": {
+        "correct": false,
+        "why": "petite saphène : derrière la malléole latérale, crosse dans la poplitée ; malléole médiale + crosse fémorale = grande saphène"
+      },
+      "E": {
+        "correct": true,
+        "why": "appui → compression de la semelle veineuse = 1re étape de la pompe veineuse"
+      }
+    },
+    "tags": [
+      "artere_dorsale_pied",
+      "arcade_plantaire",
+      "saphenes",
+      "semelle_veineuse",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#34",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000102",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du plexus lombal, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il est formé des racines de T12 à L5",
+      "B": "les nerfs qui en naissent émergent entre les deux chefs du muscle psoas",
+      "C": "le nerf fémoral est le plus volumineux des nerfs issus du plexus",
+      "D": "le tronc lombo-sacré naît des racines L2 et L3",
+      "E": "il est formé des racines de L4 à S3"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "plexus lombal = T12 à L5"
+      },
+      "B": {
+        "correct": true,
+        "why": "émergence entre les deux chefs du psoas"
+      },
+      "C": {
+        "correct": true,
+        "why": "fémoral = nerf le plus volumineux du plexus lombal"
+      },
+      "D": {
+        "correct": false,
+        "why": "tronc lombo-sacré = L4 et L5, pas L2–L3"
+      },
+      "E": {
+        "correct": false,
+        "why": "L4 à S3 = plexus sacral, pas le plexus lombal"
+      }
+    },
+    "tags": [
+      "plexus_lombal",
+      "psoas",
+      "tronc_lombo_sacre",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#35",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000103",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant les nerfs ilio-hypogastrique, ilio-inguinal et génito-fémoral, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le nerf ilio-hypogastrique est mixte, naît de T12–L1, chemine au-dessus du ligament inguinal et innerve le transverse, l'oblique interne et le grand droit",
+      "B": "le nerf ilio-inguinal est mixte, naît de L1, traverse le canal inguinal et innerve notamment le crémaster",
+      "C": "le nerf ilio-inguinal donne le nerf labial antérieur chez la femme et le nerf scrotal antérieur chez l'homme",
+      "D": "le nerf génito-fémoral est un nerf mixte moteur des adducteurs, né de L3–L4",
+      "E": "le nerf génito-fémoral est sensitif (L1–L2), se divise au-dessus du ligament inguinal en deux rameaux, le rameau fémoral passant par la lacune vasculaire latéralement à l'artère"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "ilio-hypogastrique mixte T12–L1, au-dessus du lig. inguinal ; transverse, OI, grand droit"
+      },
+      "B": {
+        "correct": true,
+        "why": "ilio-inguinal mixte L1 ; canal inguinal ; crémaster (avec transverse et OI)"
+      },
+      "C": {
+        "correct": true,
+        "why": "rameau antérieur : nerf labial antérieur (F) / nerf scrotal antérieur (H)"
+      },
+      "D": {
+        "correct": false,
+        "why": "génito-fémoral = sensitif L1–L2, pas mixte moteur des adducteurs (obturateur L2–L4)"
+      },
+      "E": {
+        "correct": true,
+        "why": "sensitif L1–L2 ; 2 rameaux au-dessus du lig. inguinal ; rameau fémoral = lacune vasculaire, latéral à l'artère"
+      }
+    },
+    "tags": [
+      "ilio_hypogastrique",
+      "ilio_inguinal",
+      "genito_femoral",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#36",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000104",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du nerf fémoral et de ses quatre rameaux terminaux, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "sous le ligament inguinal, dans le triangle fémoral, il se divise rapidement en 4 rameaux terminaux",
+      "B": "le nerf musculaire latéral donne des rameaux moteurs pour le sartorius",
+      "C": "le nerf musculaire médial donne des rameaux moteurs pour le pectiné et le long adducteur",
+      "D": "le nerf du quadriceps est mixte et innerve aussi le sartorius par une branche unique",
+      "E": "le nerf saphène est sensitif pur, entre dans le canal de l'adducteur et innerve le côté médial de la jambe"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "sous le lig. inguinal, triangle fémoral → 4 rameaux terminaux"
+      },
+      "B": {
+        "correct": true,
+        "why": "musculaire latéral : moteurs pour le sartorius"
+      },
+      "C": {
+        "correct": true,
+        "why": "musculaire médial : moteurs pour pectiné et long adducteur"
+      },
+      "D": {
+        "correct": false,
+        "why": "nerf du quadriceps = moteur pur, 4 branches (un chef chacune) ; sartorius = musculaire latéral"
+      },
+      "E": {
+        "correct": true,
+        "why": "saphène = sensitif pur ; canal de l'adducteur ; côté médial de la jambe"
+      }
+    },
+    "tags": [
+      "nerf_femoral",
+      "rameaux_terminaux",
+      "saphene",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#36.5",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000105",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le nerf cutané latéral de la cuisse et le nerf obturateur, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le nerf cutané latéral de la cuisse est sensitif, naît de L2 et L3, passe dans un dédoublement du ligament inguinal sous l'EIAS et innerve la face latérale de la cuisse",
+      "B": "le nerf obturateur est mixte (L2–L4) et traverse le foramen obturé à sa partie supéro-médiale",
+      "C": "le rameau antérieur de l'obturateur innerve le pectiné, le long adducteur et le court adducteur",
+      "D": "le rameau postérieur de l'obturateur est moteur pur et innerve le grand adducteur",
+      "E": "le nerf cutané latéral de la cuisse est mixte (L4–S1) et traverse le foramen obturé"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "cutané latéral : sensitif L2–L3 ; dédoublement du lig. inguinal sous l'EIAS ; face latérale de la cuisse"
+      },
+      "B": {
+        "correct": true,
+        "why": "obturateur mixte L2–L4 ; foramen obturé, partie supéro-médiale"
+      },
+      "C": {
+        "correct": true,
+        "why": "rameau antérieur : pectiné, long adducteur, court adducteur"
+      },
+      "D": {
+        "correct": true,
+        "why": "rameau postérieur = moteur pur du grand adducteur"
+      },
+      "E": {
+        "correct": false,
+        "why": "cutané latéral = sensitif L2–L3, dédoublement sous l'EIAS ; foramen obturé = obturateur"
+      }
+    },
+    "tags": [
+      "cutane_lateral_cuisse",
+      "obturateur",
+      "adducteurs",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#36",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000106",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du plexus sacral et des nerfs régionaux, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il est formé des racines de L4 à S3 et reçoit aussi S4, S5 et la racine coccygienne destinées aux organes génitaux",
+      "B": "le nerf glutéal supérieur (L4, L5, S1) traverse le foramen supra-piriforme et innerve le moyen glutéal, le petit glutéal et le TFL",
+      "C": "le nerf glutéal inférieur (L5, S1, S2) traverse le foramen infra-piriforme et innerve le grand glutéal",
+      "D": "le nerf cutané postérieur de la cuisse est moteur pur, traverse le foramen supra-piriforme et innerve le grand glutéal",
+      "E": "les cluniaux supérieurs naissent des rameaux postérieurs de L1–L3 et les cluniaux moyens de S1–S3"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "plexus sacral L4–S3 ; S4, S5 et coccygienne = organes génitaux"
+      },
+      "B": {
+        "correct": true,
+        "why": "glutéal sup. L4 L5 S1, supra-piriforme : moyen, petit glutéal, TFL"
+      },
+      "C": {
+        "correct": true,
+        "why": "glutéal inf. L5 S1 S2, infra-piriforme : grand glutéal"
+      },
+      "D": {
+        "correct": false,
+        "why": "cutané post. cuisse = sensitif pur, infra-piriforme, cluniaux inférieurs ; grand glutéal = glutéal inférieur"
+      },
+      "E": {
+        "correct": true,
+        "why": "cluniaux sup. = rameaux postérieurs L1–L3 ; cluniaux moyens = S1–S3"
+      }
+    },
+    "tags": [
+      "plexus_sacral",
+      "gluteal_superieur",
+      "gluteal_inferieur",
+      "cluniaux",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#37",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000107",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le nerf sciatique, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il naît des racines L4, L5, S1, S2 et S3",
+      "B": "il gagne la face postérieure de la cuisse en traversant le quadrant inféro-médial de la fesse",
+      "C": "il chemine entre les muscles ischio-jambiers et la diaphyse fémorale",
+      "D": "il innerve aussi la partie postérieure du grand adducteur",
+      "E": "il traverse le quadrant supéro-latéral de la fesse et innerve le tenseur du fascia lata"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "sciatique : L4, L5, S1, S2 et S3"
+      },
+      "B": {
+        "correct": true,
+        "why": "quadrant inféro-médial de la fesse"
+      },
+      "C": {
+        "correct": true,
+        "why": "trajet entre ischio-jambiers et diaphyse fémorale"
+      },
+      "D": {
+        "correct": true,
+        "why": "innerve aussi la partie postérieure du grand adducteur (en plus du biceps, ST, SM)"
+      },
+      "E": {
+        "correct": false,
+        "why": "quadrant inféro-médial, pas supéro-latéral ; TFL = glutéal supérieur, pas sciatique"
+      }
+    },
+    "tags": [
+      "sciatique",
+      "quadrant_infero_medial",
+      "grand_adducteur",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#38",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000108",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du nerf fibulaire commun et de ses branches, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "au creux poplité, il se dirige en bas et en dehors le long du tendon du biceps fémoral",
+      "B": "il donne le nerf cutané sural latéral (face supéro-latérale de la jambe) puis croise le col de la fibula, où il est superficiel, palpable et exposé à la compression",
+      "C": "le nerf fibulaire superficiel innerve le long et le court fibulaire, et le dos du pied sauf le 1er espace interosseux",
+      "D": "le nerf fibulaire profond gagne le compartiment antérieur, rejoint l'artère tibiale antérieure, innerve le 1er espace interosseux et passe sous le rétinaculum des fléchisseurs",
+      "E": "le nerf fibulaire superficiel innerve le 1er espace interosseux et accompagne l'artère tibiale antérieure"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "creux poplité : en bas et en dehors, le long du biceps fémoral"
+      },
+      "B": {
+        "correct": true,
+        "why": "cutané sural latéral = face supéro-latérale de la jambe ; col de la fibula superficiel / palpable / compression"
+      },
+      "C": {
+        "correct": true,
+        "why": "superficiel : long + court fibulaire ; dos du pied sauf le 1er espace interosseux"
+      },
+      "D": {
+        "correct": true,
+        "why": "profond : compartiment antérieur, artère tibiale antérieure, 1er espace ; passe sous le rétinaculum des fléchisseurs (libellé du cours)"
+      },
+      "E": {
+        "correct": false,
+        "why": "1er espace et artère tibiale antérieure = fibulaire profond, pas le superficiel"
+      }
+    },
+    "tags": [
+      "fibulaire_commun",
+      "fibulaire_superficiel",
+      "fibulaire_profond",
+      "P2"
+    ],
+    "course_ref": "11_Membre_inferieur#39",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-11-000109",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Concernant le nerf tibial et ses branches plantaires, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il innerve tous les muscles du compartiment postérieur de la jambe",
+      "B": "il passe dans le sillon rétro-malléolaire médial et donne des rameaux sensitifs pour le talon",
+      "C": "le nerf plantaire médial innerve l'abducteur de l'hallux et le court fléchisseur des orteils, et la plante jusqu'au 3e espace interosseux",
+      "D": "le nerf plantaire latéral innerve les interosseux, l'adducteur de l'hallux et les lombricaux, et le 4e espace plus le bord latéral du 5e orteil",
+      "E": "il passe dans le sillon rétro-malléolaire latéral et le plantaire médial innerve les interosseux et l'adducteur de l'hallux"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "tibial = tout le compartiment postérieur de la jambe"
+      },
+      "B": {
+        "correct": true,
+        "why": "sillon rétro-malléolaire médial ; rameaux sensitifs du talon"
+      },
+      "C": {
+        "correct": true,
+        "why": "plantaire médial : ABD hallux + court fléchisseur des orteils ; plante jusqu'au 3e espace"
+      },
+      "D": {
+        "correct": true,
+        "why": "plantaire latéral : interosseux, ADD hallux, lombricaux ; 4e espace + bord latéral du 5e"
+      },
+      "E": {
+        "correct": false,
+        "why": "sillon rétro-malléolaire médial (pas latéral) ; interosseux et ADD hallux = plantaire latéral, pas médial"
+      }
+    },
+    "tags": [
+      "nerf_tibial",
+      "plantaire_medial",
+      "plantaire_lateral",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#40.1",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000110",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "À propos du nerf sural, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "c'est un nerf sensitif pur",
+      "B": "il naît de l'union du nerf cutané sural médial (rameau du tibial) et du rameau communiquant du nerf cutané sural latéral, qui naît du nerf fibulaire profond",
+      "C": "il descend en accompagnant la veine petite saphène puis passe sous la malléole latérale",
+      "D": "il innerve la peau de la partie inféro-latérale de la jambe, la région malléolaire latérale et le bord latéral du pied",
+      "E": "le rameau communiquant naît du nerf fibulaire superficiel et le sural accompagne la grande saphène derrière la malléole médiale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "sural = nerf sensitif pur"
+      },
+      "B": {
+        "correct": true,
+        "why": "union cutané sural médial (tibial) + rameau communiquant du cutané sural latéral naissant du fibulaire profond (libellé du cours)"
+      },
+      "C": {
+        "correct": true,
+        "why": "accompagne la petite saphène ; passe sous la malléole latérale"
+      },
+      "D": {
+        "correct": true,
+        "why": "peau inféro-latérale de la jambe, malléole latérale, bord latéral du pied"
+      },
+      "E": {
+        "correct": false,
+        "why": "cours : rameau communiquant issu du fibulaire profond (pas superficiel) ; petite saphène et malléole latérale (pas grande saphène / malléole médiale)"
+      }
+    },
+    "tags": [
+      "nerf_sural",
+      "cutane_sural",
+      "fibulaire_profond",
+      "P3"
+    ],
+    "course_ref": "11_Membre_inferieur#40.2",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": null,
+    "priority": "P3"
   }
 ];
