@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Labo Suivi + Planning — PASS Sorbonne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=m3" />
+  <style>
+    /* ——— Lab only (modifie ici sans toucher suivi.html / planning.html) ——— */
+    .lab-banner {
+      background: #163528;
+      color: #eef3ee;
+      border-radius: 14px;
+      padding: 0.85rem 1rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.88rem;
+    }
+    .lab-banner a { color: #b8e0c8; }
+    .lab-banner strong { color: #fff; }
+    .lab-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.1rem;
+    }
+    .lab-tabs a {
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--muted);
+    }
+    .lab-tabs a.on {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .lab-section { scroll-margin-top: 1rem; margin-bottom: 2.5rem; }
+    .lab-note {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin: 0 0 0.85rem;
+    }
+
+    /* Suivi mock */
+    .review-box {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-left: 4px solid #dc2626;
+      border-radius: 14px;
+      padding: 0.9rem 1rem;
+      margin-bottom: 1rem;
+    }
+    .review-box h2 {
+      margin: 0 0 0.55rem;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      color: var(--deep);
+    }
+    .review-list { display: grid; gap: 0.45rem; }
+    .review-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.65rem;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.9rem;
+    }
+    .review-item .name { font-weight: 700; color: var(--deep); }
+    .ch-cards { display: grid; gap: 0.55rem; }
+    .ch-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.85rem 0.95rem;
+    }
+    .ch-card-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      align-items: flex-start;
+      margin-bottom: 0.35rem;
+    }
+    .ch-card h3 {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--deep);
+    }
+    .ch-card .meta {
+      margin: 0;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .pills-row {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      margin: 0.55rem 0 0.65rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .pills-row span { display: inline-flex; align-items: center; gap: 0.3rem; }
+    .ch-actions { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .btn.tiny {
+      padding: 0.35rem 0.7rem;
+      font-size: 0.78rem;
+    }
+    details.legend {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.65rem 0.9rem;
+      margin-bottom: 1rem;
+    }
+    details.legend summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--deep);
+      font-size: 0.9rem;
+    }
+    .empty {
+      text-align: center;
+      padding: 1.25rem 1rem;
+      border: 1px dashed var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Planning mock */
+    .today-box {
+      background: var(--accent-soft);
+      border: 1px solid #b7cfc3;
+      border-radius: 14px;
+      padding: 0.9rem 1rem;
+      margin-bottom: 1rem;
+    }
+    .today-box h2 {
+      margin: 0 0 0.35rem;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      color: var(--deep);
+    }
+    .today-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.55rem 0;
+      border-top: 1px solid #c5d9cd;
+    }
+    .today-item:first-of-type { border-top: 0; }
+    .sel-bar {
+      display: none;
+      background: var(--deep);
+      color: #fff;
+      border-radius: 12px;
+      padding: 0.65rem 0.85rem;
+      margin-bottom: 0.75rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+    .sel-bar.on { display: block; }
+    .day-list { display: grid; gap: 0.55rem; }
+    .day {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0.75rem 0.85rem;
+      min-height: 4.5rem;
+    }
+    .day.is-today { border-color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
+    .day-head {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.45rem;
+      font-weight: 700;
+    }
+    .day-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+    .day-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      background: var(--accent-soft);
+      border: 1px solid #b7cfc3;
+      border-radius: 999px;
+      padding: 0.3rem 0.55rem;
+      color: var(--deep);
+    }
+    .bank {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.75rem;
+    }
+    .bank button {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 0.4rem 0.7rem;
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .bank button.selected {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+    }
+    .edit-hint {
+      margin-top: 1.5rem;
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      background: #fff8e7;
+      border: 1px solid #e8d7a8;
+      font-size: 0.85rem;
+      color: #5a4a20;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <div class="site-top">
+        <a class="brand" href="./index.html">PASS Sorbonne</a>
+        <span class="site-pill">Labo</span>
+      </div>
+      <nav aria-label="Navigation">
+        <ul class="nav-chips">
+          <li><a href="./index.html">Accueil</a></li>
+          <li><a href="./suivi.html">Suivi live</a></li>
+          <li><a href="./planning.html">Planning live</a></li>
+          <li><a href="./skeleton-lab.html">Squelettes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="lab-banner">
+      <strong>Suivi + Planning intégrés au live.</strong>
+      Lab conservé pour peaufiner encore si besoin.
+      <a href="./suivi.html" style="color:#b8e0c8">Suivi</a> ·
+      <a href="./planning.html" style="color:#b8e0c8">Planning</a>
+    </div>
+
+    <div class="lab-tabs">
+      <a class="on" href="#suivi">A · Suivi</a>
+      <a href="#planning">B · Planning</a>
+    </div>
+
+    <!-- ========== SUIVI ========== -->
+    <section class="lab-section" id="suivi">
+      <h1 class="page-title">Suivi (maquette)</h1>
+      <p class="lab-note">Cartes chapitre · bloc « À revoir » · CTA directs. Données fictives.</p>
+
+      <div class="review-box">
+        <h2>À revoir en priorité</h2>
+        <div class="review-list">
+          <div class="review-item">
+            <span class="name"><span class="pill pill-red"></span> 03 — Cardio</span>
+            <span>
+              <a class="btn tiny" href="./qcm-player.html">QCM</a>
+              <a class="btn tiny secondary" href="./flashcards.html">Flash</a>
+            </span>
+          </div>
+          <div class="review-item">
+            <span class="name"><span class="pill pill-red"></span> 10 — Membre sup.</span>
+            <span>
+              <a class="btn tiny" href="./qcm-player.html">QCM</a>
+              <a class="btn tiny secondary" href="./flashcards.html">Flash</a>
+            </span>
+          </div>
+          <div class="review-item">
+            <span class="name"><span class="pill pill-blue"></span> 08 — Digestif</span>
+            <span>
+              <a class="btn tiny" href="./qcm-player.html">QCM</a>
+              <a class="btn tiny secondary" href="./matiere/anatomie/ch08.html">Fiche</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <details class="legend">
+        <summary>Légende pastilles</summary>
+        <ul class="suivi-legend" style="margin-top:0.65rem">
+          <li><span class="pill pill-none"></span> &lt; 10 Q</li>
+          <li><span class="pill pill-red"></span> &lt; 50 %</li>
+          <li><span class="pill pill-blue"></span> 50–75 %</li>
+          <li><span class="pill pill-green"></span> &gt; 75 %</li>
+        </ul>
+        <p class="meta" style="margin:0.5rem 0 0;font-size:0.8rem;color:var(--muted)">Dernière = dernière session ≥10 Q · Cumul = moyenne totale ≥10 Q</p>
+      </details>
+
+      <div class="ch-cards">
+        <article class="ch-card">
+          <div class="ch-card-top">
+            <div>
+              <h3>01 — Introduction</h3>
+              <p class="meta">Dernière session il y a 2 j</p>
+            </div>
+          </div>
+          <div class="pills-row">
+            <span><span class="pill pill-green"></span> Dernière 16/20</span>
+            <span><span class="pill pill-green"></span> Cumul 17/20</span>
+          </div>
+          <div class="ch-actions">
+            <a class="btn tiny" href="./qcm-player.html">QCM</a>
+            <a class="btn tiny secondary" href="./flashcards.html">Flash</a>
+            <a class="btn tiny secondary" href="./matiere/anatomie/ch01.html">Fiche</a>
+          </div>
+        </article>
+
+        <article class="ch-card">
+          <div class="ch-card-top">
+            <div>
+              <h3>03 — Cardio-circulatoire</h3>
+              <p class="meta">Dernière session hier</p>
+            </div>
+          </div>
+          <div class="pills-row">
+            <span><span class="pill pill-red"></span> Dernière 8/20</span>
+            <span><span class="pill pill-blue"></span> Cumul 11/20</span>
+          </div>
+          <div class="ch-actions">
+            <a class="btn tiny" href="./qcm-player.html">QCM</a>
+            <a class="btn tiny secondary" href="./flashcards.html">Flash</a>
+            <a class="btn tiny secondary" href="./matiere/anatomie/ch03.html">Fiche</a>
+          </div>
+        </article>
+
+        <article class="ch-card">
+          <div class="ch-card-top">
+            <div>
+              <h3>05 — Organes des sens</h3>
+              <p class="meta">Pas assez de data</p>
+            </div>
+          </div>
+          <div class="pills-row">
+            <span><span class="pill pill-none"></span> Dernière —</span>
+            <span><span class="pill pill-none"></span> Cumul 4/10 Q</span>
+          </div>
+          <div class="ch-actions">
+            <a class="btn tiny" href="./qcm-player.html">Faire 10 QCM</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="lab-note" style="margin-top:1rem">Variante empty state (si zéro data) :</p>
+      <div class="empty">
+        Aucune session encore.<br />
+        Lance au moins <strong>10 QCM</strong> sur un chapitre pour voir une pastille.
+        <div class="actions" style="justify-content:center;margin-top:0.75rem">
+          <a class="btn" href="./qcm-player.html">Lancer des QCM</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PLANNING ========== -->
+    <section class="lab-section" id="planning">
+      <h1 class="page-title">Planning (maquette)</h1>
+      <p class="lab-note">Bloc Aujourd’hui · sélection · jours en liste · <strong>navigation semaine ↔ semaine</strong> (toute l’année). Pas encore intégré au live.</p>
+
+      <div class="today-box" id="today-box">
+        <h2 id="today-title">Aujourd’hui</h2>
+        <div id="today-list"></div>
+      </div>
+
+      <div class="sel-bar" id="sel-bar">Chapitre sélectionné : — · touche un jour</div>
+
+      <h2 style="font-size:0.95rem;margin:0 0 0.5rem;color:var(--deep)">1. Choisis un chapitre</h2>
+      <div class="bank" id="bank">
+        <button type="button" data-ch="01" data-level="green">01 · Intro</button>
+        <button type="button" data-ch="03" data-level="red">03 · Cardio</button>
+        <button type="button" data-ch="08" data-level="blue">08 · Digestif</button>
+        <button type="button" data-ch="10" data-level="red">10 · Membre sup.</button>
+        <button type="button" data-ch="11" data-level="none">11 · Membre inf.</button>
+      </div>
+
+      <h2 style="font-size:0.95rem;margin:0.85rem 0 0.5rem;color:var(--deep)">2. Place sur un jour</h2>
+      <div class="plan-week-nav" style="margin-bottom:0.65rem">
+        <button type="button" class="btn secondary tiny" id="btn-prev">← Semaine</button>
+        <strong id="week-label">—</strong>
+        <button type="button" class="btn secondary tiny" id="btn-next">Semaine →</button>
+      </div>
+      <div class="day-list" id="day-list"></div>
+    </section>
+
+    <div class="edit-hint">
+      <strong>Attente validation :</strong> peaufine cette maquette Planning.
+      Quand tu dis OK, on l’intègre dans <code>planning.html</code> (Suivi est déjà live).
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const DAYS = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
+      const LEVELS = { "01": "green", "03": "red", "08": "blue", "10": "red", "11": "none" };
+      const bar = document.getElementById("sel-bar");
+      const bank = document.getElementById("bank");
+      const dayList = document.getElementById("day-list");
+      const weekLabel = document.getElementById("week-label");
+      let selected = null;
+      let selectedLabel = "";
+      let weekOffset = 0;
+      /** @type {Record<string, string[]>} */
+      const placements = {};
+
+      function startOfWeek(offsetWeeks) {
+        const d = new Date();
+        d.setHours(12, 0, 0, 0);
+        const day = (d.getDay() + 6) % 7;
+        d.setDate(d.getDate() - day + offsetWeeks * 7);
+        return d;
+      }
+      function iso(d) {
+        const y = d.getFullYear();
+        const m = String(d.getMonth() + 1).padStart(2, "0");
+        const day = String(d.getDate()).padStart(2, "0");
+        return y + "-" + m + "-" + day;
+      }
+      function fmtShort(dateStr) {
+        const [, m, d] = dateStr.split("-");
+        return d + "/" + m;
+      }
+      function todayISO() {
+        return iso(new Date());
+      }
+      function weekDates() {
+        const start = startOfWeek(weekOffset);
+        return Array.from({ length: 7 }, (_, i) => {
+          const d = new Date(start);
+          d.setDate(start.getDate() + i);
+          return d;
+        });
+      }
+
+      // seed demo placements on "real" today week
+      (function seed() {
+        const dates = weekDates();
+        placements[iso(dates[0])] = ["03", "01"];
+        placements[iso(dates[1])] = ["08"];
+      })();
+
+      function renderToday() {
+        const t = todayISO();
+        const title = document.getElementById("today-title");
+        const list = document.getElementById("today-list");
+        const d = new Date();
+        title.textContent =
+          "Aujourd’hui — " + DAYS[(d.getDay() + 6) % 7] + " " + d.getDate() + "/" + (d.getMonth() + 1);
+        const chs = placements[t] || [];
+        list.innerHTML = "";
+        if (!chs.length) {
+          list.innerHTML = '<p class="lab-note" style="margin:0">Rien de planifié aujourd’hui — place un chapitre ci-dessous.</p>';
+          return;
+        }
+        chs.forEach((ch) => {
+          const level = LEVELS[ch] || "none";
+          const div = document.createElement("div");
+          div.className = "today-item";
+          div.innerHTML =
+            '<span><span class="pill pill-' + level + '"></span> <strong>' + ch + "</strong></span>" +
+            "<span>" +
+            '<a class="btn tiny" href="./qcm-player.html?ch=' + ch + '">QCM</a> ' +
+            '<a class="btn tiny secondary" href="./flashcards.html?ch=' + ch + '">Flash</a>' +
+            "</span>";
+          list.appendChild(div);
+        });
+      }
+
+      function renderWeek() {
+        const dates = weekDates();
+        weekLabel.textContent =
+          fmtShort(iso(dates[0])) + " → " + fmtShort(iso(dates[6])) + " · " + dates[0].getFullYear();
+        dayList.innerHTML = "";
+        const t = todayISO();
+        dates.forEach((d, i) => {
+          const dateStr = iso(d);
+          const day = document.createElement("div");
+          day.className = "day" + (dateStr === t ? " is-today" : "");
+          day.dataset.date = dateStr;
+          const head = document.createElement("div");
+          head.className = "day-head";
+          head.innerHTML =
+            "<span>" + DAYS[i] + " " + fmtShort(dateStr) + "</span>" +
+            "<span>" + (dateStr === t ? "Aujourd’hui" : "") + "</span>";
+          const chips = document.createElement("div");
+          chips.className = "day-chips";
+          (placements[dateStr] || []).forEach((ch) => {
+            const level = LEVELS[ch] || "none";
+            const chip = document.createElement("span");
+            chip.className = "day-chip";
+            chip.innerHTML = '<span class="pill pill-' + level + '"></span> ' + ch;
+            chips.appendChild(chip);
+          });
+          day.appendChild(head);
+          day.appendChild(chips);
+          day.addEventListener("click", () => {
+            if (!selected) {
+              bar.textContent = "Choisis d’abord un chapitre en haut";
+              bar.classList.add("on");
+              return;
+            }
+            if (!placements[dateStr]) placements[dateStr] = [];
+            if (!placements[dateStr].includes(selected)) placements[dateStr].push(selected);
+            renderWeek();
+            renderToday();
+          });
+          dayList.appendChild(day);
+        });
+      }
+
+      bank.addEventListener("click", (e) => {
+        const btn = e.target.closest("button[data-ch]");
+        if (!btn) return;
+        bank.querySelectorAll("button").forEach((b) => b.classList.remove("selected"));
+        btn.classList.add("selected");
+        selected = btn.getAttribute("data-ch");
+        selectedLabel = btn.textContent;
+        bar.textContent = "Chapitre sélectionné : " + selectedLabel + " · touche un jour";
+        bar.classList.add("on");
+      });
+
+      document.getElementById("btn-prev").addEventListener("click", () => {
+        weekOffset -= 1;
+        renderWeek();
+      });
+      document.getElementById("btn-next").addEventListener("click", () => {
+        weekOffset += 1;
+        renderWeek();
+      });
+
+      renderToday();
+      renderWeek();
+    })();
+  </script>
+</body>
+</html>
