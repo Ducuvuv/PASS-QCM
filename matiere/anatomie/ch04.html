@@ -20,7 +20,7 @@
   </header>
 
   <main class="wrap fiche-main">
-    <p class="lead">Fiche brouillon — style aligné sur le player QCM. Contenu barré / annexe exclu. Schémas interactifs = plus tard.</p>
+    <p class="lead">Schéma → cours avec mots clés à placer → flash P1/P2/P3. Contenu barré exclu.</p>
 
     <div class="legend">
       <span class="tag p1">P1</span>
@@ -31,770 +31,445 @@
 
     <nav class="toc fiche-aside" aria-label="Sommaire">
       <a href="#p1">1. Constituants <span class="tag p3">P3</span></a>
-      <a href="#p2">2. Voies aériennes supérieures <span class="tag p2">P2</span></a>
-      <a href="#p3">3. Voies aériennes inférieures <span class="tag p2">P2</span></a>
+      <a href="#p2">2. Voies aériennes sup. <span class="tag p2">P2</span></a>
+      <a href="#p3">3. Voies aériennes inf. <span class="tag p2">P2</span></a>
       <a href="#p4">4. Sac alvéolaire <span class="tag p2">P2</span></a>
       <a href="#p5">5. Poumons : généralités <span class="tag p3">P3</span></a>
       <a href="#p6">6. Intra-thoraciques <span class="tag p2">P2</span></a>
-      <a href="#p7">7. Asymétrie des 2 poumons <span class="tag p2">P2</span></a>
-      <a href="#p8">8. Cônes à 3 faces <span class="tag p2">P2</span></a>
-      <a href="#p9">9. Pédicule pulmonaire <span class="tag p1">P1</span></a>
-      <a href="#p10">10. Subdivision du parenchyme <span class="tag p1">P1</span></a>
+      <a href="#p7">7. Asymétrie <span class="tag p2">P2</span></a>
+      <a href="#p8">8. Trois faces <span class="tag p2">P2</span></a>
+      <a href="#p9">9. Pédicule <span class="tag p1">P1</span></a>
+      <a href="#p10">10. Subdivision <span class="tag p1">P1</span></a>
       <a href="#p11">11. Plèvre <span class="tag p2">P2</span></a>
       <a href="#p12">12. Vascularisation <span class="tag p2">P2</span></a>
-      <a href="#p13">13. Rapports et limites <span class="tag p3">P3</span></a>
+      <a href="#p13">13. Rapports <span class="tag p3">P3</span></a>
       <a href="#p14">14. Ventilation <span class="tag p3">P3</span></a>
+      <a href="#flash">Flashcards P1 → P3</a>
     </nav>
 
     <!-- ========== 1 ========== -->
     <section class="point" id="p1">
-      <h2>1. Constituants de l’appareil respiratoire <span class="tag p3">P3</span></h2>
-
-      <h3>1.1. Voies aériennes respiratoires</h3>
-      <ul>
-        <li><strong>Assurent le transport de l’air.</strong></li>
-        <li>Subdivisées en voies aériennes.</li>
-        <li>Situées dans la région de la <strong>face</strong>, du <strong>cou</strong> et du <strong>thorax</strong>.</li>
-      </ul>
-
-      <h3>1.2. Poumons</h3>
-      <ul>
-        <li>Permettent les <strong>échanges entre l’air et le sang</strong> au niveau des <strong>alvéoles pulmonaires</strong>.</li>
-      </ul>
-
-      <div class="schema-slot">Schéma — appareil respiratoire (VAS / VAI / poumons) — plus tard</div>
-      <h3>Texte à trous</h3>
-      <div class="cloze-block" data-cloze='[["transport de lair","transport air"],["alveoles","alveoles pulmonaires"]]'>
-        <div class="cloze-item">
-          <p>Voies aériennes = <input class="blank" />. Situées face / cou / thorax. Échanges air–sang au niveau des <input class="blank" />.</p>
-          <div class="cloze-actions">
-            <button type="button" data-check>Vérifier</button>
-            <button type="button" class="secondary" data-reveal>Révéler</button>
-          </div>
-          <div class="cloze-feedback"></div>
+      <h2>1. Constituants <span class="tag p3">P3</span></h2>
+      <div class="label-quiz" data-labels='[["transport"],["alveoles","alveoles pulmonaires"]]'>
+        <div class="course-cloze">
+          <ul>
+            <li><strong>Voies aériennes</strong> : <span class="slot"><span class="drop"></span></span> de l’air (face, cou, thorax).</li>
+            <li><strong>Poumons</strong> : échanges air–sang au niveau des <span class="slot"><span class="drop"></span></span>.</li>
+          </ul>
         </div>
-      </div>
-      <h3>Flashcards</h3>
-      <div class="flash">
-        <div class="flash-card" tabindex="0">
-          <div class="front">Rôle des voies aériennes ?</div>
-          <div class="back">Transport de l’air (face, cou, thorax).</div>
+        <div class="label-bank">
+          <span class="label-chip" data-value="alvéoles">alvéoles</span>
+          <span class="label-chip" data-value="transport">transport</span>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Où se font les échanges air–sang ?</div>
-          <div class="back">Alvéoles pulmonaires.</div>
+        <div class="label-quiz-actions">
+          <button type="button" class="btn-mini" data-check>Vérifier</button>
+          <button type="button" class="btn-mini secondary" data-reveal>Révéler</button>
+          <button type="button" class="btn-mini secondary" data-reset>Reset</button>
         </div>
+        <div class="cloze-feedback"></div>
       </div>
     </section>
 
     <!-- ========== 2 ========== -->
     <section class="point" id="p2">
-      <h2>2. Les voies aériennes supérieures <span class="tag p2">P2</span></h2>
-      <div class="callout hot"><strong>Souvent tombé</strong> Nasopharynx = partie supérieure du pharynx, en arrière des fosses nasales.</div>
-
-      <h3>2.1. Entrée de l’air</h3>
-      <ul>
-        <li>Par la <strong>bouche</strong> ou par le <strong>nez</strong>.</li>
-        <li>Structures : fosses nasales, cavité buccale, larynx, <strong>nasopharynx</strong>, <strong>oropharynx</strong>, <strong>laryngopharynx</strong>.</li>
-      </ul>
-
-      <h3>2.2. Fosses nasales</h3>
-      <ul>
-        <li>Cavités creusées dans le <strong>massif osseux de la face</strong>.</li>
-        <li>Séparées par le <strong>septum nasal</strong>.</li>
-      </ul>
-
-      <h3>2.3. Nasopharynx (rhinopharynx)</h3>
-      <ul>
-        <li>Partie <strong>supérieure</strong> du pharynx <span class="tag">⭐</span>.</li>
-        <li>Situé <strong>en arrière des fosses nasales</strong> <span class="tag">⭐</span>.</li>
-      </ul>
-
-      <h3>2.4. Cavité buccale</h3>
-      <ul>
-        <li>Entre les <strong>maxillaires</strong> et la <strong>mandibule</strong>.</li>
-        <li>De l’<strong>orifice buccal</strong> (avant) à l’<strong>oropharynx</strong> (arrière).</li>
-      </ul>
-
-      <h3>2.5. Oropharynx</h3>
-      <ul>
-        <li>Partie <strong>moyenne</strong> du pharynx : entre nasopharynx (haut) et laryngopharynx (bas).</li>
-        <li>En arrière de la cavité buccale.</li>
-        <li><strong>Carrefour</strong> aéro-digestif avec un <strong>clapet</strong> :
+      <h2>2. Voies aériennes supérieures <span class="tag p2">P2</span></h2>
+      <figure class="schema">
+        <img src="./img/ch04/01_voies_aeriennes_sagittale.png" alt="Voies aériennes sagittales" />
+      </figure>
+      <div class="label-quiz" data-labels='[["nasopharynx","rhinopharynx"],["fosses nasales"],["oropharynx"],["digestive"],["voies aeriennes","aeriennes"]]'>
+        <div class="course-cloze">
           <ul>
-            <li>aliments <strong>en arrière</strong>,</li>
-            <li>air <strong>en avant</strong>.</li>
+            <li>Entrée : bouche ou nez → fosses nasales / cavité buccale / larynx + pharynx.</li>
+            <li><span class="slot"><span class="drop"></span></span> <span class="tag">⭐</span> = partie supérieure du pharynx, en arrière des <span class="slot"><span class="drop"></span></span> <span class="tag">⭐</span>.</li>
+            <li><span class="slot"><span class="drop"></span></span> = partie moyenne · carrefour aéro-digestif (clapet : aliments arrière / air avant).</li>
+            <li>🆕 Laryngopharynx : appartient à la voie <span class="slot"><span class="drop"></span></span> · <strong>pas</strong> aux <span class="slot"><span class="drop"></span></span>.</li>
           </ul>
-        </li>
-      </ul>
-
-      <h3>2.6. Laryngopharynx</h3>
-      <ul>
-        <li>Entre <strong>oropharynx</strong> et <strong>larynx</strong>.</li>
-        <li><strong>N’appartient pas aux voies aériennes</strong> : il appartient à la <strong>voie digestive</strong>.</li>
-      </ul>
-      <div class="callout trap"><strong>Attention / piège</strong> Le laryngopharynx est un étage du pharynx, mais ce n’est <em>pas</em> une voie aérienne — voie digestive uniquement.</div>
-
-      <div class="schema-slot">Schéma — vue médiale VAS (fosses, buccale, naso / oro / laryngopharynx) — plus tard</div>
-      <h3>Texte à trous</h3>
-      <div class="cloze-block" data-cloze='[["superieure"],["fosses nasales","en arriere des fosses nasales"],["moyenne","carrefour"],["digestive","voie digestive"],["pas aux voies aeriennes","nappartient pas aux voies aeriennes"]]'>
-        <div class="cloze-item">
-          <p>Nasopharynx = partie <input class="blank" />, derrière les <input class="blank" />. Oropharynx = partie <input class="blank" />. Laryngopharynx = voie <input class="blank" /> ; il n’appartient <input class="blank" />.</p>
-          <div class="cloze-actions">
-            <button type="button" data-check>Vérifier</button>
-            <button type="button" class="secondary" data-reveal>Révéler</button>
-          </div>
-          <div class="cloze-feedback"></div>
         </div>
-      </div>
-      <h3>Flashcards</h3>
-      <div class="flash">
-        <div class="flash-card" tabindex="0">
-          <div class="front">Nasopharynx : situation ?</div>
-          <div class="back">Partie supérieure du pharynx, en arrière des fosses nasales.</div>
+        <div class="label-bank">
+          <span class="label-chip" data-value="digestive">digestive</span>
+          <span class="label-chip" data-value="oropharynx">oropharynx</span>
+          <span class="label-chip" data-value="fosses nasales">fosses nasales</span>
+          <span class="label-chip" data-value="voies aériennes">voies aériennes</span>
+          <span class="label-chip" data-value="nasopharynx">nasopharynx</span>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Oropharynx : rôle ?</div>
-          <div class="back">Partie moyenne ; carrefour aéro-digestif (aliments arrière, air avant).</div>
+        <div class="label-quiz-actions">
+          <button type="button" class="btn-mini" data-check>Vérifier</button>
+          <button type="button" class="btn-mini secondary" data-reveal>Révéler</button>
+          <button type="button" class="btn-mini secondary" data-reset>Reset</button>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Laryngopharynx = voie aérienne ?</div>
-          <div class="back">Non — appartient à la voie digestive.</div>
-        </div>
+        <div class="cloze-feedback"></div>
       </div>
     </section>
 
     <!-- ========== 3 ========== -->
     <section class="point" id="p3">
-      <h2>3. Les voies aériennes inférieures <span class="tag p2">P2</span></h2>
-      <div class="callout hot"><strong>Souvent tombé</strong> Trachée se divise en T5 ; bronche souche droite plus verticale (25–30°).</div>
-
-      <h3>3.1. Limite supérieure</h3>
-      <ul>
-        <li>Commencent <strong>en dessous du cartilage cricoïde</strong> du larynx.</li>
-        <li>Chaîne : larynx → trachée → bronches souches → bronches lobaires.</li>
-      </ul>
-
-      <h3>3.2. Larynx</h3>
-      <ul>
-        <li>Cartilages : <strong>cricoïde</strong>, <strong>thyroïde</strong>, <strong>épiglottique</strong>, <strong>aryténoïde</strong>, <strong>corniculé</strong> — reliés par membranes / ligaments, actionnés par muscles.</li>
-        <li>Organe de la <strong>respiration</strong> et de la <strong>phonation</strong> (cordes vocales).</li>
-      </ul>
-
-      <h3>3.3. Trachée</h3>
-      <ul>
-        <li>Conduit élastique d’<strong>anneaux en U</strong> superposés, fermés en arrière par le <strong>muscle trachéal</strong>.</li>
-        <li>Naît en regard de <strong>C6</strong>, au niveau du <strong>cartilage cricoïde</strong> du larynx.</li>
-        <li>Se divise en regard de <strong>T5</strong> en <strong>2 bronches souches</strong> <span class="tag">⭐</span>.</li>
-      </ul>
-
-      <h3>3.4. Bronches souches</h3>
-      <ul>
-        <li><strong>Asymétriques</strong> : bronche souche <strong>droite plus verticale</strong> <span class="tag">⭐</span> — angle de <strong>25–30°</strong> avec la ligne médiane.</li>
-        <li>Pénètrent dans les poumons au niveau des <strong>pédicules pulmonaires</strong>.</li>
-        <li>Ramification :
+      <h2>3. Voies aériennes inférieures <span class="tag p2">P2</span></h2>
+      <div class="callout hot"><strong>Souvent tombé</strong> Trachée C6→T5 ; bronche souche droite plus verticale.</div>
+      <figure class="schema">
+        <img src="./img/ch04/02_larynx_trachee_bronches.png" alt="Larynx, trachée, bronches" />
+      </figure>
+      <div class="label-quiz" data-labels='[["cricoide"],["c6"],["t5"],["droite"],["3"],["2"]]'>
+        <div class="course-cloze">
           <ul>
-            <li><strong>Droite</strong> → <strong>3</strong> bronches lobaires (supérieure, moyenne, inférieure).</li>
-            <li><strong>Gauche</strong> → <strong>2</strong> bronches lobaires (supérieure, inférieure).</li>
+            <li>Sous le cartilage <span class="slot"><span class="drop"></span></span> : larynx → trachée → bronches souches.</li>
+            <li>Trachée : anneaux en U + muscle trachéal · naît en regard de <span class="slot"><span class="drop"></span></span> 🆕 · se divise en regard de <span class="slot"><span class="drop"></span></span> <span class="tag">⭐</span>.</li>
+            <li>Bronche souche <span class="slot"><span class="drop"></span></span> plus verticale <span class="tag">⭐</span> (25–30°) · donne <span class="slot"><span class="drop"></span></span> lobaires · gauche donne <span class="slot"><span class="drop"></span></span>.</li>
           </ul>
-        </li>
-      </ul>
-      <div class="callout trap"><strong>Attention / piège</strong> Naissance trachée = <strong>C6</strong> (cricoïde) ; bifurcation = <strong>T5</strong>. Ne pas inverser.</div>
-
-      <div class="schema-slot">Schéma — larynx / trachée / BSD–BSG et bronches lobaires — plus tard</div>
-      <h3>Texte à trous</h3>
-      <div class="cloze-block" data-cloze='[["c6"],["t5"],["droite","bsd"],["25-30","25 30","25 a 30"],["3","trois"],["2","deux"]]'>
-        <div class="cloze-item">
-          <p>Trachée naît en <input class="blank" />, se divise en <input class="blank" />. BSD plus <input class="blank" /> (angle <input class="blank" />°). Lobaires : D <input class="blank" /> / G <input class="blank" />.</p>
-          <div class="cloze-actions">
-            <button type="button" data-check>Vérifier</button>
-            <button type="button" class="secondary" data-reveal>Révéler</button>
-          </div>
-          <div class="cloze-feedback"></div>
+          <p>Larynx = respiration + phonation (cordes vocales).</p>
         </div>
-      </div>
-      <h3>Flashcards</h3>
-      <div class="flash">
-        <div class="flash-card" tabindex="0">
-          <div class="front">Repères vertébraux de la trachée ?</div>
-          <div class="back">Naissance C6 (cricoïde) ; bifurcation T5.</div>
+        <div class="label-bank">
+          <span class="label-chip" data-value="T5">T5</span>
+          <span class="label-chip" data-value="3">3</span>
+          <span class="label-chip" data-value="cricoïde">cricoïde</span>
+          <span class="label-chip" data-value="2">2</span>
+          <span class="label-chip" data-value="C6">C6</span>
+          <span class="label-chip" data-value="droite">droite</span>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Quelle bronche souche est plus verticale ?</div>
-          <div class="back">La droite (25–30° avec la ligne médiane).</div>
+        <div class="label-quiz-actions">
+          <button type="button" class="btn-mini" data-check>Vérifier</button>
+          <button type="button" class="btn-mini secondary" data-reveal>Révéler</button>
+          <button type="button" class="btn-mini secondary" data-reset>Reset</button>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Nombre de bronches lobaires D / G ?</div>
-          <div class="back">3 à droite ; 2 à gauche.</div>
-        </div>
+        <div class="cloze-feedback"></div>
       </div>
     </section>
 
     <!-- ========== 4 ========== -->
     <section class="point" id="p4">
-      <h2>4. Le sac alvéolaire <span class="tag p2">P2</span></h2>
-      <div class="callout hot"><strong>Souvent tombé</strong> Hématose : réoxygénation du sang dans les capillaires pulmonaires.</div>
-      <p>Terminaison des <strong>voies aériennes inférieures</strong>.</p>
-
-      <h3>4.1. Ramification jusqu’au sac</h3>
-      <ul>
-        <li>Bronches lobaires → <strong>10 bronches segmentaires</strong> par poumon.</li>
-        <li>Puis <strong>sub-segmentaires</strong> → <strong>bronchioles</strong> (fins conduits <strong>sans cartilage</strong>).</li>
-        <li>Bronchioles se terminent par une petite dilatation : le <strong>sac alvéolaire</strong>.</li>
-      </ul>
-
-      <h3>4.2. Sac alvéolaire</h3>
-      <ul>
-        <li>Se <strong>gonfle</strong> à l’inspiration et se <strong>vide</strong> à l’expiration.</li>
-        <li>Formé d’<strong>alvéoles</strong> (= reliefs de sa paroi).</li>
-        <li>Entouré de <strong>capillaires</strong> issus des artérioles et veinules pulmonaires.</li>
-        <li><strong>Hématose</strong> à travers la paroi :
+      <h2>4. Sac alvéolaire <span class="tag p2">P2</span></h2>
+      <div class="label-quiz" data-labels='[["segmentaires"],["bronchioles"],["capillaires"],["hematose"]]'>
+        <div class="course-cloze">
           <ul>
-            <li><strong>réoxygéner</strong> le sang des capillaires pulmonaires <span class="tag">⭐</span>,</li>
-            <li><strong>récupérer le CO<sub>2</sub></strong> depuis le sang.</li>
+            <li>Lobaires → 10 bronches <span class="slot"><span class="drop"></span></span> / poumon → sub-segmentaires → <span class="slot"><span class="drop"></span></span> (sans cartilage) → sac alvéolaire.</li>
+            <li>Sac = alvéoles + <span class="slot"><span class="drop"></span></span> (artérioles / veinules pulmonaires) → <span class="slot"><span class="drop"></span></span> <span class="tag">⭐</span> (O₂ in / CO₂ out).</li>
           </ul>
-        </li>
-      </ul>
-
-      <div class="schema-slot">Schéma — ramification → bronchioles → sac alvéolaire + capillaires — plus tard</div>
-      <h3>Texte à trous</h3>
-      <div class="cloze-block" data-cloze='[["10","dix"],["sans cartilage","depourvues de cartilage"],["sac alveolaire"],["hematose"],["reoxygene","reoxygenation"]]'>
-        <div class="cloze-item">
-          <p><input class="blank" /> bronches segmentaires / poumon. Bronchioles = <input class="blank" />. Terminaison = <input class="blank" />. Échanges = <input class="blank" /> qui <input class="blank" /> le sang.</p>
-          <div class="cloze-actions">
-            <button type="button" data-check>Vérifier</button>
-            <button type="button" class="secondary" data-reveal>Révéler</button>
-          </div>
-          <div class="cloze-feedback"></div>
         </div>
-      </div>
-      <h3>Flashcards</h3>
-      <div class="flash">
-        <div class="flash-card" tabindex="0">
-          <div class="front">Particularité des bronchioles ?</div>
-          <div class="back">Fins conduits dépourvus de cartilage ; se terminent en sac alvéolaire.</div>
+        <div class="label-bank">
+          <span class="label-chip" data-value="hématose">hématose</span>
+          <span class="label-chip" data-value="bronchioles">bronchioles</span>
+          <span class="label-chip" data-value="segmentaires">segmentaires</span>
+          <span class="label-chip" data-value="capillaires">capillaires</span>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Hématose : qu’est-ce qui se passe ?</div>
-          <div class="back">Réoxygénation du sang des capillaires pulmonaires + récupération du CO₂.</div>
+        <div class="label-quiz-actions">
+          <button type="button" class="btn-mini" data-check>Vérifier</button>
+          <button type="button" class="btn-mini secondary" data-reveal>Révéler</button>
+          <button type="button" class="btn-mini secondary" data-reset>Reset</button>
         </div>
+        <div class="cloze-feedback"></div>
       </div>
     </section>
 
     <!-- ========== 5 ========== -->
     <section class="point" id="p5">
-      <h2>5. Les poumons : généralités <span class="tag p3">P3</span></h2>
-
-      <h3>5.1. Organes de la respiration</h3>
-      <ul>
-        <li>Contiennent la partie terminale des VAI : l’<strong>arbre bronchique</strong>.</li>
-      </ul>
-
-      <h3>5.2. Aspect</h3>
-      <ul>
-        <li><strong>Lisse</strong>, <strong>brillant</strong> et <strong>rosé</strong> chez les non-fumeurs.</li>
-        <li><strong>Grisâtre</strong> chez les fumeurs.</li>
-      </ul>
-
-      <h3>5.3. Capacité</h3>
-      <ul>
-        <li><strong>5 litres d’air</strong> au total des 2 poumons.</li>
-      </ul>
-
-      <div class="schema-slot">Schéma — aspect / capacité pulmonaire — plus tard</div>
-      <h3>Texte à trous</h3>
-      <div class="cloze-block" data-cloze='[["arbre bronchique"],["rose","rose lisse brillant"],["5 litres","5 l","cinq litres"]]'>
-        <div class="cloze-item">
-          <p>Partie terminale VAI = <input class="blank" />. Non-fumeur : aspect <input class="blank" />. Capacité totale : <input class="blank" />.</p>
-          <div class="cloze-actions">
-            <button type="button" data-check>Vérifier</button>
-            <button type="button" class="secondary" data-reveal>Révéler</button>
-          </div>
-          <div class="cloze-feedback"></div>
+      <h2>5. Poumons : généralités <span class="tag p3">P3</span></h2>
+      <div class="label-quiz" data-labels='[["arbre bronchique"],["5 litres","5 l"]]'>
+        <div class="course-cloze">
+          <ul>
+            <li>Contiennent la terminaison des VAI = <span class="slot"><span class="drop"></span></span>.</li>
+            <li>Aspect lisse / rosé (non-fumeurs) · grisâtre (fumeurs) · capacité totale ≈ <span class="slot"><span class="drop"></span></span>.</li>
+          </ul>
         </div>
-      </div>
-      <h3>Flashcards</h3>
-      <div class="flash">
-        <div class="flash-card" tabindex="0">
-          <div class="front">Capacité respiratoire totale des 2 poumons ?</div>
-          <div class="back">5 litres d’air.</div>
+        <div class="label-bank">
+          <span class="label-chip" data-value="5 litres">5 litres</span>
+          <span class="label-chip" data-value="arbre bronchique">arbre bronchique</span>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Aspect poumon non-fumeur vs fumeur ?</div>
-          <div class="back">Rosé / lisse / brillant vs grisâtre.</div>
+        <div class="label-quiz-actions">
+          <button type="button" class="btn-mini" data-check>Vérifier</button>
+          <button type="button" class="btn-mini secondary" data-reveal>Révéler</button>
+          <button type="button" class="btn-mini secondary" data-reset>Reset</button>
         </div>
+        <div class="cloze-feedback"></div>
       </div>
     </section>
 
     <!-- ========== 6 ========== -->
     <section class="point" id="p6">
-      <h2>6. Les poumons sont intra-thoraciques <span class="tag p2">P2</span></h2>
-      <div class="callout hot"><strong>Souvent tombé</strong> Extra-médiastinaux ⭐⭐⭐ ; apex fait saillie au-dessus de l’orifice supérieur du thorax.</div>
-
-      <h3>6.1. Extra-médiastinaux <span class="tag">⭐⭐⭐</span></h3>
-      <ul>
-        <li>Situés <strong>de part et d’autre du médiastin</strong> (intra-thoraciques mais hors médiastin).</li>
-      </ul>
-
-      <h3>6.2. Moulés sur le grill costal</h3>
-      <ul>
-        <li>Marqués par les <strong>empreintes des côtes</strong>.</li>
-      </ul>
-
-      <h3>6.3. Exception : apex</h3>
-      <ul>
-        <li><strong>Fait saillie au-dessus de l’orifice supérieur du thorax</strong> <span class="tag">⭐</span>.</li>
-        <li>Présent dans la région <strong>cervicale subclavière</strong>.</li>
-        <li>Marqué en bas par le <strong>sillon de la 1<sup>re</sup> côte</strong>.</li>
-        <li><strong>Recouvert de plèvre</strong>.</li>
-      </ul>
-      <div class="callout trap"><strong>Attention / piège</strong> Intra-thoraciques ≠ dans le médiastin : les poumons sont <strong>extra-médiastinaux</strong>. Seul l’apex dépasse l’orifice supérieur du thorax.</div>
-
-      <div class="schema-slot">Schéma — poumons de part et d’autre du médiastin + apex cervical — plus tard</div>
-      <h3>Texte à trous</h3>
-      <div class="cloze-block" data-cloze='[["extra-mediastinaux","extra mediastinaux"],["mediastin"],["apex"],["orifice superieur","orifice superieur du thorax"],["plevre"]]'>
-        <div class="cloze-item">
-          <p>Poumons <input class="blank" />, de part et d’autre du <input class="blank" />. Exception : l’<input class="blank" /> fait saillie au-dessus de l’<input class="blank" />, recouvert de <input class="blank" />.</p>
-          <div class="cloze-actions">
-            <button type="button" data-check>Vérifier</button>
-            <button type="button" class="secondary" data-reveal>Révéler</button>
-          </div>
-          <div class="cloze-feedback"></div>
+      <h2>6. Intra-thoraciques <span class="tag p2">P2</span></h2>
+      <figure class="schema">
+        <img src="./img/ch04/03_poumons_thorax_apex.png" alt="Poumons dans le thorax et apex" />
+      </figure>
+      <div class="label-quiz" data-labels='[["extra mediastinaux","extra-mediastinaux"],["apex"],["1ere cote","1ere cote","premiere cote"]]'>
+        <div class="course-cloze">
+          <ul>
+            <li>Intra-thoraciques et <span class="slot"><span class="drop"></span></span> <span class="tag">⭐⭐⭐</span> (de part et d’autre du médiastin) · moulés sur le grill costal.</li>
+            <li>Exception : l’<span class="slot"><span class="drop"></span></span> <span class="tag">⭐</span> fait saillie au-dessus de l’orifice supérieur · sillon de la <span class="slot"><span class="drop"></span></span> · recouvert de plèvre.</li>
+          </ul>
         </div>
-      </div>
-      <h3>Flashcards</h3>
-      <div class="flash">
-        <div class="flash-card" tabindex="0">
-          <div class="front">Poumons et médiastin ?</div>
-          <div class="back">Intra-thoraciques mais extra-médiastinaux (de part et d’autre).</div>
+        <div class="label-bank">
+          <span class="label-chip" data-value="1ère côte">1ère côte</span>
+          <span class="label-chip" data-value="extra-médiastinaux">extra-médiastinaux</span>
+          <span class="label-chip" data-value="apex">apex</span>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Particularité de l’apex ?</div>
-          <div class="back">Saillie au-dessus de l’orifice supérieur du thorax ; région subclavière ; plèvre.</div>
+        <div class="label-quiz-actions">
+          <button type="button" class="btn-mini" data-check>Vérifier</button>
+          <button type="button" class="btn-mini secondary" data-reveal>Révéler</button>
+          <button type="button" class="btn-mini secondary" data-reset>Reset</button>
         </div>
+        <div class="cloze-feedback"></div>
       </div>
     </section>
 
     <!-- ========== 7 ========== -->
     <section class="point" id="p7">
-      <h2>7. Morphologie externe : asymétrie des 2 poumons <span class="tag p2">P2</span></h2>
-      <div class="callout hot"><strong>Souvent tombé</strong> Droit = 3 lobes ⭐⭐ ; gauche = 2 lobes ⭐⭐⭐.</div>
-
-      <h3>7.1. Poumon droit</h3>
-      <ul>
-        <li><strong>3 lobes</strong> <span class="tag">⭐⭐</span> : supérieur, moyen, inférieur.</li>
-        <li><strong>2 scissures</strong> : <strong>horizontale</strong> et <strong>oblique</strong>.</li>
-      </ul>
-
-      <h3>7.2. Poumon gauche</h3>
-      <ul>
-        <li><strong>2 lobes</strong> <span class="tag">⭐⭐⭐</span> : supérieur, inférieur.</li>
-        <li><strong>1 scissure oblique</strong> seulement.</li>
-        <li><strong>Empreinte cardiaque</strong> : relief du cœur.</li>
-      </ul>
-      <div class="callout trap"><strong>Attention / piège</strong> Lobes asymétriques (3 vs 2), mais les <strong>segments</strong> sont 10/10 des deux côtés (cf. §10).</div>
-
-      <div class="schema-slot">Schéma — poumon D 3 lobes / 2 scissures ; poumon G 2 lobes / empreinte cardiaque — plus tard</div>
-      <h3>Texte à trous</h3>
-      <div class="cloze-block" data-cloze='[["3","trois"],["2","deux"],["horizontale et oblique","horizontale oblique"],["2","deux"],["1","une","oblique"],["empreinte cardiaque"]]'>
-        <div class="cloze-item">
-          <p>Droit : <input class="blank" /> lobes, <input class="blank" /> scissures (<input class="blank" />). Gauche : <input class="blank" /> lobes, <input class="blank" /> scissure + <input class="blank" />.</p>
-          <div class="cloze-actions">
-            <button type="button" data-check>Vérifier</button>
-            <button type="button" class="secondary" data-reveal>Révéler</button>
-          </div>
-          <div class="cloze-feedback"></div>
+      <h2>7. Asymétrie des 2 poumons <span class="tag p2">P2</span></h2>
+      <figure class="schema">
+        <img src="./img/ch04/04_poumon_droit_3_lobes.png" alt="Poumon droit — 3 lobes" />
+      </figure>
+      <figure class="schema">
+        <img src="./img/ch04/05_poumon_gauche_2_lobes.png" alt="Poumon gauche — 2 lobes" />
+      </figure>
+      <div class="label-quiz" data-labels='[["3"],["horizontale"],["oblique"],["2"],["oblique"],["empreinte cardiaque"]]'>
+        <div class="course-cloze">
+          <ul>
+            <li><strong>Droit</strong> : <span class="slot"><span class="drop"></span></span> lobes <span class="tag">⭐⭐</span> · scissures <span class="slot"><span class="drop"></span></span> + <span class="slot"><span class="drop"></span></span>.</li>
+            <li><strong>Gauche</strong> : <span class="slot"><span class="drop"></span></span> lobes <span class="tag">⭐⭐⭐</span> · 1 scissure <span class="slot"><span class="drop"></span></span> · <span class="slot"><span class="drop"></span></span>.</li>
+          </ul>
         </div>
-      </div>
-      <h3>Flashcards</h3>
-      <div class="flash">
-        <div class="flash-card" tabindex="0">
-          <div class="front">Poumon droit : lobes et scissures ?</div>
-          <div class="back">3 lobes ; scissures horizontale + oblique.</div>
+        <div class="label-bank">
+          <span class="label-chip" data-value="empreinte cardiaque">empreinte cardiaque</span>
+          <span class="label-chip" data-value="3">3</span>
+          <span class="label-chip" data-value="oblique">oblique</span>
+          <span class="label-chip" data-value="2">2</span>
+          <span class="label-chip" data-value="horizontale">horizontale</span>
+          <span class="label-chip" data-value="oblique">oblique</span>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Poumon gauche : lobes et particularité ?</div>
-          <div class="back">2 lobes ; 1 scissure oblique ; empreinte cardiaque.</div>
+        <div class="label-quiz-actions">
+          <button type="button" class="btn-mini" data-check>Vérifier</button>
+          <button type="button" class="btn-mini secondary" data-reveal>Révéler</button>
+          <button type="button" class="btn-mini secondary" data-reset>Reset</button>
         </div>
+        <div class="cloze-feedback"></div>
       </div>
     </section>
 
     <!-- ========== 8 ========== -->
     <section class="point" id="p8">
-      <h2>8. Morphologie externe : des cônes à 3 faces <span class="tag p2">P2</span></h2>
-      <div class="callout hot"><strong>Souvent tombé</strong> Hile pulmonaire ⭐⭐ = entrée/sortie du pédicule ; seule zone non recouverte de plèvre.</div>
-
-      <h3>8.1. Face costale (latérale)</h3>
-      <ul>
-        <li><strong>Lisse</strong> et <strong>convexe</strong> → concavité du grill costal.</li>
-        <li>Moulée sur la paroi thoracique ; recouverte par la <strong>plèvre costale</strong>.</li>
-      </ul>
-
-      <h3>8.2. Face diaphragmatique (base)</h3>
-      <ul>
-        <li><strong>Concave</strong> → convexité des coupoles du diaphragme.</li>
-        <li>Séparée du diaphragme par la <strong>plèvre diaphragmatique</strong>.</li>
-      </ul>
-
-      <h3>8.3. Face médiale (interne)</h3>
-      <ul>
-        <li>Partie <strong>vertébrale</strong> : rapport avec le rachis thoracique.</li>
-        <li>Partie <strong>médiastinale</strong> : rapport avec le médiastin ; porte le <strong>hile pulmonaire</strong> <span class="tag">⭐⭐</span> :
+      <h2>8. Cônes à 3 faces <span class="tag p2">P2</span></h2>
+      <div class="label-quiz" data-labels='[["costale","laterale"],["diaphragmatique","base"],["hile","hile pulmonaire"],["plevre"]]'>
+        <div class="course-cloze">
           <ul>
-            <li>point d’<strong>entrée et de sortie</strong> du pédicule vasculo-nerveux,</li>
-            <li><strong>non recouvert de plèvre</strong> (ligne de réflexion de la plèvre) pour laisser passer le pédicule.</li>
+            <li>Face <span class="slot"><span class="drop"></span></span> : lisse, convexe (grill costal).</li>
+            <li>Face <span class="slot"><span class="drop"></span></span> : concave (coupoles).</li>
+            <li>Face médiale : vertébrale + médiastinale · porte le <span class="slot"><span class="drop"></span></span> <span class="tag">⭐⭐</span> (entrée/sortie du pédicule) · seule zone <strong>sans</strong> <span class="slot"><span class="drop"></span></span> (ligne de réflexion).</li>
           </ul>
-        </li>
-      </ul>
-      <div class="callout trap"><strong>Attention / piège</strong> Le hile est la <strong>seule</strong> zone pulmonaire sans plèvre — ligne de réflexion.</div>
-
-      <div class="schema-slot">Schéma — 3 faces (costale / diaphragmatique / médiale + hile) — plus tard</div>
-      <h3>Texte à trous</h3>
-      <div class="cloze-block" data-cloze='[["convexe"],["concave"],["hile","hile pulmonaire"],["pedicule","pedicule vasculo-nerveux"],["plevre","non recouvert de plevre"]]'>
-        <div class="cloze-item">
-          <p>Face costale <input class="blank" /> ; base <input class="blank" />. Face médiale : <input class="blank" /> = entrée/sortie du <input class="blank" />, zone sans <input class="blank" />.</p>
-          <div class="cloze-actions">
-            <button type="button" data-check>Vérifier</button>
-            <button type="button" class="secondary" data-reveal>Révéler</button>
-          </div>
-          <div class="cloze-feedback"></div>
         </div>
-      </div>
-      <h3>Flashcards</h3>
-      <div class="flash">
-        <div class="flash-card" tabindex="0">
-          <div class="front">Forme des 3 faces ?</div>
-          <div class="back">Costale convexe ; diaphragmatique concave ; médiale = vertébrale + médiastinale (hile).</div>
+        <div class="label-bank">
+          <span class="label-chip" data-value="hile">hile</span>
+          <span class="label-chip" data-value="diaphragmatique">diaphragmatique</span>
+          <span class="label-chip" data-value="plèvre">plèvre</span>
+          <span class="label-chip" data-value="costale">costale</span>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Hile pulmonaire : définition ?</div>
-          <div class="back">Entrée/sortie du pédicule ; non recouvert de plèvre (ligne de réflexion).</div>
+        <div class="label-quiz-actions">
+          <button type="button" class="btn-mini" data-check>Vérifier</button>
+          <button type="button" class="btn-mini secondary" data-reveal>Révéler</button>
+          <button type="button" class="btn-mini secondary" data-reset>Reset</button>
         </div>
+        <div class="cloze-feedback"></div>
       </div>
     </section>
 
     <!-- ========== 9 ========== -->
     <section class="point" id="p9">
-      <h2>9. Morphologie interne : le pédicule pulmonaire <span class="tag p1">P1</span></h2>
-      <div class="callout hot"><strong>Souvent tombé</strong> Ne pas confondre pédicule <strong>fonctionnel</strong> (petite circ. / hématose) et <strong>nourricier</strong> (grande circ. / nutrition du parenchyme).</div>
-
-      <p>Le pédicule entre et sort du poumon par le <strong>hile</strong>. Deux types selon le <strong>rôle</strong> et le <strong>contenu</strong> :</p>
-
-      <h3>9.1. Pédicule fonctionnel</h3>
-      <ul>
-        <li><strong>Rôle</strong> : <strong>hématose</strong> — éléments de la <strong>petite circulation</strong>.</li>
-        <li><strong>Contenu</strong> :
+      <h2>9. Pédicule pulmonaire <span class="tag p1">P1</span></h2>
+      <div class="callout hot"><strong>Souvent tombé</strong> Fonctionnel (petite circ.) vs nourricier (grande circ.).</div>
+      <div class="label-quiz" data-labels='[["hematose"],["petite"],["bronche souche"],["artere pulmonaire"],["veines pulmonaires"],["grande"],["arteres bronchiques"],["veines bronchiques"]]'>
+        <div class="course-cloze">
           <ul>
-            <li><strong>Bronche souche</strong> D ou G <span class="tag">⭐</span>,</li>
-            <li><strong>Artère pulmonaire</strong> D ou G <span class="tag">⭐</span>,</li>
-            <li><strong>Veines pulmonaires</strong> supérieures et inférieures D ou G <span class="tag">⭐</span>.</li>
+            <li>Entre/sort par le hile. <strong>Fonctionnel</strong> = <span class="slot"><span class="drop"></span></span> · <span class="slot"><span class="drop"></span></span> circulation : <span class="slot"><span class="drop"></span></span> <span class="tag">⭐</span> + <span class="slot"><span class="drop"></span></span> <span class="tag">⭐</span> + <span class="slot"><span class="drop"></span></span> <span class="tag">⭐</span>.</li>
+            <li><strong>Nourricier</strong> = nutrition du parenchyme · <span class="slot"><span class="drop"></span></span> circulation : <span class="slot"><span class="drop"></span></span> <span class="tag">⭐⭐</span> + <span class="slot"><span class="drop"></span></span> <span class="tag">⭐⭐</span> (+ nerfs / lymphonœuds bronchiques <span class="tag">⭐⭐</span>).</li>
           </ul>
-        </li>
-      </ul>
-
-      <h3>9.2. Pédicule nourricier</h3>
-      <ul>
-        <li><strong>Rôle</strong> : <strong>nutrition</strong> et oxygénation du <strong>parenchyme pulmonaire</strong> — éléments de la <strong>grande circulation</strong>.</li>
-        <li><strong>Contenu</strong> :
-          <ul>
-            <li><strong>Artères bronchiques</strong> <span class="tag">⭐⭐</span>,</li>
-            <li><strong>Veines bronchiques</strong> antérieures et postérieures <span class="tag">⭐⭐</span>,</li>
-            <li><strong>Nerfs bronchiques</strong> <span class="tag">⭐⭐</span>,</li>
-            <li><strong>Lymphonœuds bronchiques</strong> <span class="tag">⭐⭐</span>.</li>
-          </ul>
-        </li>
-      </ul>
-      <div class="callout trap"><strong>Attention / piège</strong> Artère <em>pulmonaire</em> = pédicule fonctionnel (petite circ.). Artères <em>bronchiques</em> = pédicule nourricier (grande circ., naissent de l’aorte — cf. §12).</div>
-
-      <div class="schema-slot">Schéma — hile : pédicule fonctionnel vs nourricier — plus tard</div>
-      <h3>Texte à trous</h3>
-      <div class="cloze-block" data-cloze='[["hematose","petite circulation"],["bronche souche"],["artere pulmonaire"],["veines pulmonaires"],["grande circulation","nutrition"],["arteres bronchiques"],["veines bronchiques"],["nerfs bronchiques"],["lymphonoeuds","lymphonoeuds bronchiques"]]'>
-        <div class="cloze-item">
-          <p>Fonctionnel = <input class="blank" /> : <input class="blank" /> + <input class="blank" /> + <input class="blank" />. Nourricier = <input class="blank" /> : <input class="blank" />, <input class="blank" />, <input class="blank" />, <input class="blank" />.</p>
-          <div class="cloze-actions">
-            <button type="button" data-check>Vérifier</button>
-            <button type="button" class="secondary" data-reveal>Révéler</button>
-          </div>
-          <div class="cloze-feedback"></div>
         </div>
-      </div>
-      <h3>Flashcards</h3>
-      <div class="flash">
-        <div class="flash-card" tabindex="0">
-          <div class="front">Pédicule fonctionnel : contenu ?</div>
-          <div class="back">Bronche souche + artère pulmonaire + veines pulmonaires (petite circ. / hématose).</div>
+        <div class="label-bank">
+          <span class="label-chip" data-value="artères bronchiques">artères bronchiques</span>
+          <span class="label-chip" data-value="petite">petite</span>
+          <span class="label-chip" data-value="veines pulmonaires">veines pulmonaires</span>
+          <span class="label-chip" data-value="hématose">hématose</span>
+          <span class="label-chip" data-value="grande">grande</span>
+          <span class="label-chip" data-value="bronche souche">bronche souche</span>
+          <span class="label-chip" data-value="veines bronchiques">veines bronchiques</span>
+          <span class="label-chip" data-value="artère pulmonaire">artère pulmonaire</span>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Pédicule nourricier : contenu ?</div>
-          <div class="back">Artères, veines, nerfs et lymphonœuds bronchiques (grande circ. / nutrition).</div>
+        <div class="label-quiz-actions">
+          <button type="button" class="btn-mini" data-check>Vérifier</button>
+          <button type="button" class="btn-mini secondary" data-reveal>Révéler</button>
+          <button type="button" class="btn-mini secondary" data-reset>Reset</button>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Petite vs grande circulation dans les pédicules ?</div>
-          <div class="back">Fonctionnel = petite ; nourricier = grande.</div>
-        </div>
+        <div class="cloze-feedback"></div>
       </div>
     </section>
 
     <!-- ========== 10 ========== -->
     <section class="point" id="p10">
-      <h2>10. Morphologie interne : subdivision du parenchyme pulmonaire <span class="tag p1">P1</span></h2>
-      <div class="callout hot"><strong>Souvent tombé</strong> 10 segments D ⭐⭐⭐ et 10 segments G ⭐⭐⭐ — même nombre des deux côtés. Chaîne : lobes → segments → lobules → acini.</div>
-
-      <p>La subdivision du parenchyme <strong>suit la division bronchique</strong>, du plus grand au plus petit : <strong>lobes → segments → lobules → acini</strong>.</p>
-
-      <h3>10.1. Lobes</h3>
-      <ul>
-        <li><strong>3 lobes à droite</strong> <span class="tag">⭐</span> ↔ <strong>3 bronches lobaires</strong> à droite.</li>
-        <li><strong>2 lobes à gauche</strong> <span class="tag">⭐</span> ↔ <strong>2 bronches lobaires</strong> à gauche.</li>
-      </ul>
-
-      <h3>10.2. Segments</h3>
-      <ul>
-        <li><strong>10 segments à droite</strong> <span class="tag">⭐⭐⭐</span>.</li>
-        <li><strong>10 segments à gauche</strong> <span class="tag">⭐⭐⭐</span>.</li>
-        <li>Chaque segment est :
+      <h2>10. Subdivision du parenchyme <span class="tag p1">P1</span></h2>
+      <div class="callout hot"><strong>Souvent tombé</strong> 10 segments D = 10 G ; trio segmentaire ; acinus = unité terminale.</div>
+      <div class="label-quiz" data-labels='[["lobes"],["segments"],["lobules"],["acini"],["10"],["10"],["bronche segmentaire"],["artere bronchique segmentaire"],["veine bronchique intersegmentaire"],["sacs alveolaires"]]'>
+        <div class="course-cloze">
           <ul>
-            <li><strong>ventilé</strong> par une <strong>bronche segmentaire</strong> <span class="tag">⭐⭐</span>,</li>
-            <li><strong>vascularisé</strong> par une <strong>artère bronchique segmentaire</strong> <span class="tag">⭐⭐</span>,</li>
-            <li><strong>drainé</strong> par une <strong>veine bronchique intersegmentaire</strong> <span class="tag">⭐⭐</span> — <strong>1 veine pour 2 segments</strong>.</li>
+            <li>Suit la division bronchique : <span class="slot"><span class="drop"></span></span> → <span class="slot"><span class="drop"></span></span> → <span class="slot"><span class="drop"></span></span> → <span class="slot"><span class="drop"></span></span>.</li>
+            <li>Lobes : 3 D / 2 G. Segments : <span class="slot"><span class="drop"></span></span> D <span class="tag">⭐⭐⭐</span> = <span class="slot"><span class="drop"></span></span> G <span class="tag">⭐⭐⭐</span>.</li>
+            <li>Chaque segment : ventilé par <span class="slot"><span class="drop"></span></span> <span class="tag">⭐⭐</span> · vascularisé par <span class="slot"><span class="drop"></span></span> <span class="tag">⭐⭐</span> · drainé par <span class="slot"><span class="drop"></span></span> <span class="tag">⭐⭐</span> (1 veine / 2 segments).</li>
+            <li>Acinus = unité terminale <span class="tag">⭐</span> · contient les <span class="slot"><span class="drop"></span></span> <span class="tag">⭐</span>.</li>
           </ul>
-        </li>
-      </ul>
-
-      <h3>10.3. Lobules</h3>
-      <ul>
-        <li>Contiennent les <strong>bronchioles</strong>.</li>
-        <li><strong>Prédominants à la périphérie</strong> du poumon.</li>
-      </ul>
-
-      <h3>10.4. Acini</h3>
-      <ul>
-        <li><strong>Unité terminale</strong> du parenchyme pulmonaire <span class="tag">⭐</span>.</li>
-        <li>Contiennent les <strong>sacs alvéolaires</strong> <span class="tag">⭐</span>.</li>
-      </ul>
-      <div class="callout trap"><strong>Attention / piège</strong> Lobes asymétriques (3/2) mais segments <strong>symétriques</strong> (10/10). Drainage veineux : 1 veine intersegmentaire pour <strong>2</strong> segments.</div>
-
-      <div class="schema-slot">Schéma — lobes → segments → lobules → acini (+ trio segmentaire) — plus tard</div>
-      <h3>Texte à trous</h3>
-      <div class="cloze-block" data-cloze='[["lobes"],["segments"],["lobules"],["acini"],["10","dix"],["10","dix"],["bronche segmentaire"],["artere bronchique segmentaire"],["veine bronchique intersegmentaire","1 veine pour 2 segments"],["unite terminale","sacs alveolaires"]]'>
-        <div class="cloze-item">
-          <p>Chaîne : <input class="blank" /> → <input class="blank" /> → <input class="blank" /> → <input class="blank" />. Segments : D <input class="blank" /> / G <input class="blank" />. Trio : ventilé par <input class="blank" />, vascularisé par <input class="blank" />, drainé par <input class="blank" />. Acinus = <input class="blank" />.</p>
-          <div class="cloze-actions">
-            <button type="button" data-check>Vérifier</button>
-            <button type="button" class="secondary" data-reveal>Révéler</button>
-          </div>
-          <div class="cloze-feedback"></div>
         </div>
-      </div>
-      <h3>Flashcards</h3>
-      <div class="flash">
-        <div class="flash-card" tabindex="0">
-          <div class="front">Subdivision du parenchyme ?</div>
-          <div class="back">Lobes → segments → lobules → acini (suit la division bronchique).</div>
+        <div class="label-bank">
+          <span class="label-chip" data-value="10">10</span>
+          <span class="label-chip" data-value="lobules">lobules</span>
+          <span class="label-chip" data-value="artère bronchique segmentaire">artère bronchique segmentaire</span>
+          <span class="label-chip" data-value="lobes">lobes</span>
+          <span class="label-chip" data-value="sacs alvéolaires">sacs alvéolaires</span>
+          <span class="label-chip" data-value="segments">segments</span>
+          <span class="label-chip" data-value="veine bronchique intersegmentaire">veine bronchique intersegmentaire</span>
+          <span class="label-chip" data-value="10">10</span>
+          <span class="label-chip" data-value="acini">acini</span>
+          <span class="label-chip" data-value="bronche segmentaire">bronche segmentaire</span>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Nombre de segments D / G ?</div>
-          <div class="back">10 à droite et 10 à gauche.</div>
+        <div class="label-quiz-actions">
+          <button type="button" class="btn-mini" data-check>Vérifier</button>
+          <button type="button" class="btn-mini secondary" data-reveal>Révéler</button>
+          <button type="button" class="btn-mini secondary" data-reset>Reset</button>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Trio vasculaire d’un segment ?</div>
-          <div class="back">Bronche segmentaire ; artère bronchique segmentaire ; veine intersegmentaire (1 pour 2 segments).</div>
-        </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Acinus = ?</div>
-          <div class="back">Unité terminale du parenchyme ; contient les sacs alvéolaires.</div>
-        </div>
+        <div class="cloze-feedback"></div>
       </div>
     </section>
 
     <!-- ========== 11 ========== -->
     <section class="point" id="p11">
       <h2>11. La plèvre <span class="tag p2">P2</span></h2>
-      <div class="callout hot"><strong>Souvent tombé</strong> Feuillet viscéral au contact du poumon ; cavité presque virtuelle.</div>
-
-      <h3>11.1. Membrane protectrice</h3>
-      <ul>
-        <li><strong>Recouvrant</strong> les poumons <span class="tag">⭐</span>.</li>
-      </ul>
-
-      <h3>11.2. Séreuse à 2 feuillets</h3>
-      <ul>
-        <li><strong>Feuillet viscéral</strong> : au contact du poumon <span class="tag">⭐</span>.</li>
-        <li><strong>Feuillet pariétal</strong> : réflexion du viscéral au niveau du <strong>hile</strong>.</li>
-        <li><strong>Cavité pleurale</strong> presque <strong>virtuelle</strong> en condition normale : un peu de liquide pour le <strong>glissement</strong> des 2 feuillets.</li>
-      </ul>
-
-      <h3>11.3. Remplissage pathologique</h3>
-      <ul>
-        <li>Air → <strong>pneumothorax</strong>.</li>
-        <li>Sang → <strong>hémothorax</strong>.</li>
-        <li>Nécessité de <strong>drainer</strong> pour que le poumon fonctionne.</li>
-      </ul>
-
-      <h3>11.4. Fonction</h3>
-      <ul>
-        <li><strong>Protection</strong> et <strong>glissement</strong>.</li>
-      </ul>
-
-      <div class="schema-slot">Schéma — feuillets viscéral / pariétal + cavité + réflexion hilaire — plus tard</div>
-      <h3>Texte à trous</h3>
-      <div class="cloze-block" data-cloze='[["visceral"],["parietal"],["hile"],["virtuelle"],["pneumothorax"],["hemothorax"]]'>
-        <div class="cloze-item">
-          <p>Feuillet <input class="blank" /> au contact du poumon ; <input class="blank" /> = réflexion au <input class="blank" />. Cavité normale = <input class="blank" />. Air = <input class="blank" /> ; sang = <input class="blank" />.</p>
-          <div class="cloze-actions">
-            <button type="button" data-check>Vérifier</button>
-            <button type="button" class="secondary" data-reveal>Révéler</button>
-          </div>
-          <div class="cloze-feedback"></div>
+      <div class="label-quiz" data-labels='[["visceral"],["parietal"],["pneumothorax"],["hemothorax"]]'>
+        <div class="course-cloze">
+          <ul>
+            <li>Membrane protectrice des poumons <span class="tag">⭐</span> · 2 feuillets : <span class="slot"><span class="drop"></span></span> <span class="tag">⭐</span> (contact poumon) · <span class="slot"><span class="drop"></span></span> (réflexion au hile).</li>
+            <li>Cavité pleurale virtuelle (+ liquide de glissement). Patho : air = <span class="slot"><span class="drop"></span></span> · sang = <span class="slot"><span class="drop"></span></span> → drain.</li>
+          </ul>
         </div>
-      </div>
-      <h3>Flashcards</h3>
-      <div class="flash">
-        <div class="flash-card" tabindex="0">
-          <div class="front">Deux feuillets de la plèvre ?</div>
-          <div class="back">Viscéral (contact poumon) ; pariétal (réflexion au hile).</div>
+        <div class="label-bank">
+          <span class="label-chip" data-value="hémothorax">hémothorax</span>
+          <span class="label-chip" data-value="viscéral">viscéral</span>
+          <span class="label-chip" data-value="pneumothorax">pneumothorax</span>
+          <span class="label-chip" data-value="pariétal">pariétal</span>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Pneumothorax vs hémothorax ?</div>
-          <div class="back">Air vs sang dans la cavité pleurale.</div>
+        <div class="label-quiz-actions">
+          <button type="button" class="btn-mini" data-check>Vérifier</button>
+          <button type="button" class="btn-mini secondary" data-reveal>Révéler</button>
+          <button type="button" class="btn-mini secondary" data-reset>Reset</button>
         </div>
+        <div class="cloze-feedback"></div>
       </div>
     </section>
 
     <!-- ========== 12 ========== -->
     <section class="point" id="p12">
-      <h2>12. Vascularisation des poumons <span class="tag p2">P2</span></h2>
-      <div class="callout hot"><strong>Souvent tombé</strong> Artère bronchique naît de l’aorte (grande circulation).</div>
-
-      <h3>12.1. Artère bronchique <span class="tag">⭐</span></h3>
-      <ul>
-        <li><strong>Naît de l’aorte</strong> (grande circulation — pédicule nourricier).</li>
-      </ul>
-
-      <h3>12.2. Veines bronchiques</h3>
-      <ul>
-        <li><strong>2 par poumon</strong> : antérieure et postérieure.</li>
-        <li>Se jettent dans le <strong>système azygos</strong>, drainé ensuite par la <strong>veine cave supérieure</strong>.</li>
-      </ul>
-      <div class="callout trap"><strong>Attention / piège</strong> Ne pas confondre artères/veines <em>pulmonaires</em> (hématose, pédicule fonctionnel) et artères/veines <em>bronchiques</em> (nutrition, aorte / azygos).</div>
-
-      <div class="schema-slot">Schéma — artère bronchique (aorte) + veines bronchiques → azygos → VCS — plus tard</div>
-      <h3>Texte à trous</h3>
-      <div class="cloze-block" data-cloze='[["aorte"],["2","deux"],["azygos","systeme azygos"],["veine cave superieure","vcs"]]'>
-        <div class="cloze-item">
-          <p>Artère bronchique naît de l’<input class="blank" />. Veines bronchiques : <input class="blank" /> / poumon → système <input class="blank" /> → <input class="blank" />.</p>
-          <div class="cloze-actions">
-            <button type="button" data-check>Vérifier</button>
-            <button type="button" class="secondary" data-reveal>Révéler</button>
-          </div>
-          <div class="cloze-feedback"></div>
+      <h2>12. Vascularisation <span class="tag p2">P2</span></h2>
+      <div class="label-quiz" data-labels='[["aorte"],["azygos"],["veine cave superieure","vcs"]]'>
+        <div class="course-cloze">
+          <ul>
+            <li>Artère bronchique <span class="tag">⭐</span> naît de l’<span class="slot"><span class="drop"></span></span>.</li>
+            <li>2 veines bronchiques / poumon (ant. + post.) → système <span class="slot"><span class="drop"></span></span> → <span class="slot"><span class="drop"></span></span>.</li>
+          </ul>
         </div>
-      </div>
-      <h3>Flashcards</h3>
-      <div class="flash">
-        <div class="flash-card" tabindex="0">
-          <div class="front">Origine de l’artère bronchique ?</div>
-          <div class="back">Aorte (grande circulation).</div>
+        <div class="label-bank">
+          <span class="label-chip" data-value="veine cave supérieure">veine cave supérieure</span>
+          <span class="label-chip" data-value="aorte">aorte</span>
+          <span class="label-chip" data-value="azygos">azygos</span>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Drainage des veines bronchiques ?</div>
-          <div class="back">Système azygos → veine cave supérieure (2 veines / poumon : ant. + post.).</div>
+        <div class="label-quiz-actions">
+          <button type="button" class="btn-mini" data-check>Vérifier</button>
+          <button type="button" class="btn-mini secondary" data-reveal>Révéler</button>
+          <button type="button" class="btn-mini secondary" data-reset>Reset</button>
         </div>
+        <div class="cloze-feedback"></div>
       </div>
     </section>
 
     <!-- ========== 13 ========== -->
     <section class="point" id="p13">
-      <h2>13. Rapports et limites des poumons <span class="tag p3">P3</span></h2>
-
-      <ul>
-        <li><strong>En haut</strong> : orifice supérieur du thorax.</li>
-        <li><strong>En bas</strong> : diaphragme.</li>
-        <li><strong>En dedans</strong> : médiastin.</li>
-        <li><strong>En dehors</strong> : paroi thoracique latérale (grill costal).</li>
-      </ul>
-
-      <div class="schema-slot">Schéma — limites (haut / bas / dedans / dehors) — plus tard</div>
-      <h3>Texte à trous</h3>
-      <div class="cloze-block" data-cloze='[["orifice superieur","orifice superieur du thorax"],["diaphragme"],["mediastin"],["grill costal","paroi thoracique"]]'>
-        <div class="cloze-item">
-          <p>Haut = <input class="blank" /> ; bas = <input class="blank" /> ; dedans = <input class="blank" /> ; dehors = <input class="blank" />.</p>
-          <div class="cloze-actions">
-            <button type="button" data-check>Vérifier</button>
-            <button type="button" class="secondary" data-reveal>Révéler</button>
-          </div>
-          <div class="cloze-feedback"></div>
+      <h2>13. Rapports et limites <span class="tag p3">P3</span></h2>
+      <div class="label-quiz" data-labels='[["orifice superieur"],["diaphragme"],["mediastin"],["grill costal","paroi thoracique"]]'>
+        <div class="course-cloze">
+          <ul>
+            <li>Haut : <span class="slot"><span class="drop"></span></span> · bas : <span class="slot"><span class="drop"></span></span> · dedans : <span class="slot"><span class="drop"></span></span> · dehors : <span class="slot"><span class="drop"></span></span>.</li>
+          </ul>
         </div>
-      </div>
-      <h3>Flashcards</h3>
-      <div class="flash">
-        <div class="flash-card" tabindex="0">
-          <div class="front">4 limites des poumons ?</div>
-          <div class="back">Haut : orifice supérieur ; bas : diaphragme ; dedans : médiastin ; dehors : grill costal.</div>
+        <div class="label-bank">
+          <span class="label-chip" data-value="médiastin">médiastin</span>
+          <span class="label-chip" data-value="grill costal">grill costal</span>
+          <span class="label-chip" data-value="orifice supérieur">orifice supérieur</span>
+          <span class="label-chip" data-value="diaphragme">diaphragme</span>
         </div>
+        <div class="label-quiz-actions">
+          <button type="button" class="btn-mini" data-check>Vérifier</button>
+          <button type="button" class="btn-mini secondary" data-reveal>Révéler</button>
+          <button type="button" class="btn-mini secondary" data-reset>Reset</button>
+        </div>
+        <div class="cloze-feedback"></div>
       </div>
     </section>
 
     <!-- ========== 14 ========== -->
     <section class="point" id="p14">
-      <h2>14. Anatomie fonctionnelle : la ventilation en 2 phases <span class="tag p3">P3</span></h2>
-
-      <h3>14.1. Inspiration</h3>
-      <ul>
-        <li>Véhicule l’air riche en <strong>O<sub>2</sub></strong> et en <strong>N<sub>2</sub></strong> jusqu’aux alvéoles.</li>
-        <li><strong>Expansion active</strong> de la cavité thoracique — surtout le <strong>diaphragme</strong>.</li>
-        <li>Inspiration forcée : muscles <strong>inspiratoires accessoires</strong> —
+      <h2>14. Ventilation en 2 phases <span class="tag p3">P3</span></h2>
+      <div class="label-quiz" data-labels='[["active"],["diaphragme"],["passive"],["accessoires"]]'>
+        <div class="course-cloze">
           <ul>
-            <li>intercostaux <strong>externes</strong>,</li>
-            <li>muscles de la <strong>ceinture scapulaire</strong> et de la <strong>paroi thoracique</strong>.</li>
+            <li><strong>Inspiration</strong> : O₂ (+ N₂) vers alvéoles · expansion <span class="slot"><span class="drop"></span></span> (surtout <span class="slot"><span class="drop"></span></span>) · forcée = intercostaux externes + ceinture scapulaire.</li>
+            <li><strong>Expiration</strong> : CO₂ out · relâchement <span class="slot"><span class="drop"></span></span> · forcée = muscles <span class="slot"><span class="drop"></span></span> (intercostaux int., paroi abdo…).</li>
           </ul>
-        </li>
-      </ul>
-
-      <h3>14.2. Expiration</h3>
-      <ul>
-        <li>Expulse l’air pauvre en O<sub>2</sub>, riche en <strong>N<sub>2</sub></strong> et <strong>CO<sub>2</sub></strong>.</li>
-        <li>Normalement : <strong>relâchement passif</strong> des muscles inspiratoires.</li>
-        <li>Expiration forcée : muscles <strong>expiratoires accessoires</strong> —
-          <ul>
-            <li>intercostaux <strong>internes et intimes</strong>,</li>
-            <li>muscles de la paroi thoracique,</li>
-            <li>muscles de la <strong>paroi abdominale</strong>.</li>
-          </ul>
-        </li>
-      </ul>
-      <div class="callout trap"><strong>Attention / piège</strong> Inspiration = <strong>active</strong> (diaphragme) ; expiration = <strong>passive</strong> au repos — les deux peuvent devenir forcées via accessoires.</div>
-
-      <div class="schema-slot">Schéma — inspiration active / expiration passive (+ accessoires) — plus tard</div>
-      <h3>Texte à trous</h3>
-      <div class="cloze-block" data-cloze='[["active","diaphragme"],["diaphragme"],["passif","relachement passif"],["externes"],["internes et intimes","internes"]]'>
-        <div class="cloze-item">
-          <p>Inspiration = expansion <input class="blank" /> (surtout <input class="blank" />). Expiration au repos = <input class="blank" />. Accessoires insp. : intercostaux <input class="blank" /> ; exp. : intercostaux <input class="blank" />.</p>
-          <div class="cloze-actions">
-            <button type="button" data-check>Vérifier</button>
-            <button type="button" class="secondary" data-reveal>Révéler</button>
-          </div>
-          <div class="cloze-feedback"></div>
         </div>
-      </div>
-      <h3>Flashcards</h3>
-      <div class="flash">
-        <div class="flash-card" tabindex="0">
-          <div class="front">Inspiration vs expiration au repos ?</div>
-          <div class="back">Inspiration active (diaphragme) ; expiration = relâchement passif.</div>
+        <div class="label-bank">
+          <span class="label-chip" data-value="accessoires">accessoires</span>
+          <span class="label-chip" data-value="diaphragme">diaphragme</span>
+          <span class="label-chip" data-value="active">active</span>
+          <span class="label-chip" data-value="passive">passive</span>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Muscles accessoires inspiration forcée ?</div>
-          <div class="back">Intercostaux externes ; ceinture scapulaire ; paroi thoracique.</div>
+        <div class="label-quiz-actions">
+          <button type="button" class="btn-mini" data-check>Vérifier</button>
+          <button type="button" class="btn-mini secondary" data-reveal>Révéler</button>
+          <button type="button" class="btn-mini secondary" data-reset>Reset</button>
         </div>
-        <div class="flash-card" tabindex="0">
-          <div class="front">Muscles accessoires expiration forcée ?</div>
-          <div class="back">Intercostaux internes et intimes ; paroi thoracique ; paroi abdominale.</div>
-        </div>
+        <div class="cloze-feedback"></div>
       </div>
     </section>
 
-    <p class="lead">Brouillon local — pas publié tant que ce n’est pas parfait. Annexe exclue (corps étranger BSD enfant ; note segmentectomie / autonomie fonctionnelle des segments).</p>
+    <!-- ========== FLASH ========== -->
+    <section class="point flash-end" id="flash">
+      <h2>Flashcards — fin de fiche</h2>
+      <p class="lead" style="margin-bottom:0.75rem">Classées par priorité.</p>
+
+      <details class="flash-fold" open>
+        <summary>P1 — à maîtriser en priorité</summary>
+        <div class="flash">
+          <div class="flash-card" tabindex="0"><div class="front">Combien de segments D / G ?</div><div class="back">10 et 10 ⭐⭐⭐ (même nombre des deux côtés).</div></div>
+          <div class="flash-card" tabindex="0"><div class="front">Trio d’un segment ?</div><div class="back">Bronche segmentaire · artère bronchique segmentaire · veine bronchique intersegmentaire (1/2 segments).</div></div>
+          <div class="flash-card" tabindex="0"><div class="front">Subdivision du parenchyme ?</div><div class="back">Lobes → segments → lobules → acini. Acinus = unité terminale (+ sacs alvéolaires).</div></div>
+          <div class="flash-card" tabindex="0"><div class="front">Pédicule fonctionnel vs nourricier ?</div><div class="back">Fonctionnel = hématose / petite circ. (BS, AP, VP). Nourricier = grande circ. (art./veines/nerfs/lympho bronchiques).</div></div>
+        </div>
+      </details>
+
+      <details class="flash-fold">
+        <summary>P2 — à bien connaître</summary>
+        <div class="flash">
+          <div class="flash-card" tabindex="0"><div class="front">Lobes D vs G ?</div><div class="back">D : 3 lobes + 2 scissures · G : 2 lobes + 1 oblique + empreinte cardiaque.</div></div>
+          <div class="flash-card" tabindex="0"><div class="front">Extra-médiastinaux + apex ?</div><div class="back">De part et d’autre du médiastin ⭐⭐⭐ · apex au-dessus de l’orifice supérieur ⭐.</div></div>
+          <div class="flash-card" tabindex="0"><div class="front">Trachée : naissance / bifurcation ?</div><div class="back">C6 (cricoïde) 🆕 → T5 ⭐.</div></div>
+          <div class="flash-card" tabindex="0"><div class="front">Bronche souche droite ?</div><div class="back">Plus verticale ⭐ (25–30°) · 3 lobaires (G = 2).</div></div>
+          <div class="flash-card" tabindex="0"><div class="front">Hile pulmonaire ?</div><div class="back">Entrée/sortie du pédicule ⭐⭐ · seule zone sans plèvre (réflexion).</div></div>
+          <div class="flash-card" tabindex="0"><div class="front">Plèvre : feuillets + patho ?</div><div class="back">Viscéral (poumon) / pariétal · pneumo = air · hémo = sang.</div></div>
+          <div class="flash-card" tabindex="0"><div class="front">Laryngopharynx 🆕 ?</div><div class="back">Voie digestive — pas aux voies aériennes.</div></div>
+          <div class="flash-card" tabindex="0"><div class="front">Artère bronchique naît de ?</div><div class="back">L’aorte ⭐ · veines → azygos → VCS.</div></div>
+        </div>
+      </details>
+
+      <details class="flash-fold">
+        <summary>P3 — lecture attentive</summary>
+        <div class="flash">
+          <div class="flash-card" tabindex="0"><div class="front">Inspiration vs expiration ?</div><div class="back">Inspi active (diaphragme) · expi passive (relâchement) · forcée = accessoires.</div></div>
+          <div class="flash-card" tabindex="0"><div class="front">Capacité totale des 2 poumons ?</div><div class="back">≈ 5 litres.</div></div>
+          <div class="flash-card" tabindex="0"><div class="front">Larynx : 2 rôles ?</div><div class="back">Respiration + phonation (cordes vocales).</div></div>
+        </div>
+      </details>
+    </section>
+
+    <p class="lead">Modèle figé — dis « publie » pour le téléphone.</p>
   </main>
   <script src="../fiche.js"></script>
 </body>
