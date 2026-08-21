@@ -20,10 +20,22 @@
     }
     .fc-card .meta { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.5rem; }
     .fc-card .front { font-size: 1.05rem; font-weight: 600; }
-    .fc-card .back { display: none; margin-top: 0.75rem; color: var(--muted); font-size: 0.98rem; }
+    .fc-card .back { display: none; margin-top: 0.75rem; color: var(--muted); font-size: 0.98rem; line-height: 1.45; }
     .fc-card.flipped .back { display: block; }
-    .prio-btns, .kind-btns { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.35rem; }
-    .prio-btn, .kind-btn {
+    .fc-card img.fc-schema {
+      display: block;
+      width: 100%;
+      max-height: min(58vh, 420px);
+      object-fit: contain;
+      margin: 0.55rem 0 0;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+    .fc-card .fc-prompt { font-size: 0.92rem; font-weight: 650; margin: 0; }
+    .fc-card .fc-caption { margin-top: 0.45rem; font-size: 0.9rem; color: var(--muted); }
+    .prio-btns, .kind-btns, .mode-btns { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.35rem; }
+    .prio-btn, .kind-btn, .mode-btn {
       min-width: 3.5rem;
       border: 1px solid var(--line);
       background: var(--surface);
@@ -35,14 +47,11 @@
       cursor: pointer;
     }
     .prio-btn[aria-pressed="true"],
-    .kind-btn[aria-pressed="true"] {
+    .kind-btn[aria-pressed="true"],
+    .mode-btn[aria-pressed="true"] {
       border-color: var(--accent);
       background: var(--accent);
       color: #fff;
-    }
-    .kind-btn:disabled {
-      opacity: 0.45;
-      cursor: not-allowed;
     }
     .prio-help { list-style: none; margin: 0.75rem 0 0; padding: 0; font-size: 0.88rem; color: var(--muted); }
     .prio-help li { margin-bottom: 0.3rem; }
@@ -50,6 +59,17 @@
     .chapters { display: grid; gap: 0.35rem; }
     .chapters label { display: flex; gap: 0.5rem; align-items: flex-start; cursor: pointer; font-size: 0.92rem; }
     @media (min-width: 520px) { .chapters { grid-template-columns: 1fr 1fr; } }
+    .rate-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.35rem; }
+    .rate-row .btn { width: 100%; }
+    .end-box {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.15rem;
+      margin: 0.75rem 0;
+    }
+    .end-box h2 { margin: 0 0 0.5rem; font-size: 1.15rem; }
+    .check-row { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.65rem; font-size: 0.92rem; }
   </style>
 </head>
 <body>
@@ -75,7 +95,7 @@
 
     <section id="setup">
       <h1 class="page-title">Flashcards</h1>
-      <p class="page-sub">1 fichier = 1 chapitre. Anatomie complète : ch.01–11.</p>
+      <p class="page-sub">Texte + schémas (sans légende → retourne) · session locale.</p>
 
       <div class="panel">
         <h2>Chapitre</h2>
@@ -98,14 +118,29 @@
 
       <div class="panel">
         <h2>Type</h2>
-        <div class="kind-btns" id="kind-list" role="group" aria-label="Types">
-          <button type="button" class="kind-btn" data-kind="text" aria-pressed="true">Texte</button>
-          <button type="button" class="kind-btn" data-kind="schema" aria-pressed="false" title="Bientôt : flashcards schémas">Schémas</button>
+        <div class="kind-btns" id="kind-list" role="group" aria-label="Type de cartes">
+          <button type="button" class="kind-btn" data-kind="all" aria-pressed="true">Tout</button>
+          <button type="button" class="kind-btn" data-kind="text" aria-pressed="false">Texte</button>
+          <button type="button" class="kind-btn" data-kind="schema" aria-pressed="false">Schémas</button>
         </div>
-        <p class="note" style="margin-top:0.75rem">Filtre « Schémas » prêt ; les cartes schéma arriveront plus tard.</p>
-        <p class="note" id="pool-hint">—</p>
+        <p class="note" style="margin-top:0.65rem">Schémas : face sans légende → retourne pour la version complète.</p>
+      </div>
+
+      <div class="panel">
+        <h2>Session</h2>
+        <div class="mode-btns" id="mode-list" role="group" aria-label="Mode">
+          <button type="button" class="mode-btn" data-mode="all" aria-pressed="true">Tout le pool</button>
+          <button type="button" class="mode-btn" data-mode="review" aria-pressed="false">À revoir seulement</button>
+        </div>
+        <label class="check-row">
+          <input type="checkbox" id="opt-shuffle" checked />
+          Mélanger les cartes
+        </label>
+        <p class="note" style="margin-top:0.75rem" id="pool-hint">—</p>
+        <p class="note" id="review-hint">—</p>
         <div class="actions">
           <button type="button" class="btn" id="btn-start">Commencer</button>
+          <button type="button" class="btn secondary" id="btn-clear-review">Reset « À revoir »</button>
         </div>
       </div>
     </section>
@@ -123,21 +158,35 @@
         <button type="button" class="btn" id="btn-flip">Retourner</button>
         <button type="button" class="btn secondary" id="btn-next">Suivant</button>
       </div>
+      <div class="rate-row">
+        <button type="button" class="btn secondary" id="btn-know">Je sais</button>
+        <button type="button" class="btn" id="btn-review">À revoir</button>
+      </div>
+    </section>
+
+    <section id="end" class="hidden">
+      <div class="end-box">
+        <h2>Session terminée</h2>
+        <p class="note" id="end-stats">—</p>
+        <div class="actions">
+          <button type="button" class="btn" id="btn-again-review">Relancer les « À revoir »</button>
+          <button type="button" class="btn secondary" id="btn-end-setup">Retour réglages</button>
+        </div>
+      </div>
     </section>
   </div>
 
-  <!-- Decks : ajouter une ligne script par chapitre (limite les bugs) -->
-  <script src="./data/flash/ch01.js?v=3"></script>
-  <script src="./data/flash/ch02.js?v=1"></script>
-  <script src="./data/flash/ch03.js?v=1"></script>
-  <script src="./data/flash/ch04.js?v=1"></script>
-  <script src="./data/flash/ch05.js?v=1"></script>
-  <script src="./data/flash/ch06.js?v=1"></script>
-  <script src="./data/flash/ch07.js?v=1"></script>
-  <script src="./data/flash/ch08.js?v=1"></script>
-  <script src="./data/flash/ch09.js?v=1"></script>
-  <script src="./data/flash/ch10.js?v=1"></script>
-  <script src="./data/flash/ch11.js?v=1"></script>
+  <script src="./data/flash/ch01.js?v=5"></script>
+  <script src="./data/flash/ch02.js?v=5"></script>
+  <script src="./data/flash/ch03.js?v=5"></script>
+  <script src="./data/flash/ch04.js?v=5"></script>
+  <script src="./data/flash/ch05.js?v=5"></script>
+  <script src="./data/flash/ch06.js?v=5"></script>
+  <script src="./data/flash/ch07.js?v=5"></script>
+  <script src="./data/flash/ch08.js?v=5"></script>
+  <script src="./data/flash/ch09.js?v=5"></script>
+  <script src="./data/flash/ch10.js?v=5"></script>
+  <script src="./data/flash/ch11.js?v=5"></script>
   <script>
     const CHAPTER_ORDER = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"];
     const CHAPTER_META = {
@@ -153,22 +202,46 @@
       "10": "Membre supérieur",
       "11": "Membre inférieur",
     };
+    const LS_KEY = "pass-flash-review-v1";
 
     const decks = window.PASS_FLASH || {};
     const elSetup = document.getElementById("setup");
     const elPlay = document.getElementById("play");
+    const elEnd = document.getElementById("end");
     const elChapterList = document.getElementById("chapter-list");
     const elPriorityList = document.getElementById("priority-list");
     const elKindList = document.getElementById("kind-list");
+    const elModeList = document.getElementById("mode-list");
     const elHint = document.getElementById("pool-hint");
+    const elReviewHint = document.getElementById("review-hint");
     const elCard = document.getElementById("card");
     const elFront = document.getElementById("card-front");
     const elBack = document.getElementById("card-back");
     const elMeta = document.getElementById("card-meta");
     const elProgress = document.getElementById("progress");
+    const elShuffle = document.getElementById("opt-shuffle");
 
     let session = [];
     let index = 0;
+    let stats = { know: 0, review: 0 };
+
+    function loadReview() {
+      try { return JSON.parse(localStorage.getItem(LS_KEY) || "{}") || {}; }
+      catch { return {}; }
+    }
+    function saveReview(map) {
+      localStorage.setItem(LS_KEY, JSON.stringify(map));
+    }
+    function reviewIds() {
+      const m = loadReview();
+      return new Set(Object.keys(m).filter((id) => m[id] === "review"));
+    }
+    function markCard(id, state) {
+      const m = loadReview();
+      if (state === "know") delete m[id];
+      else m[id] = "review";
+      saveReview(m);
+    }
 
     function selectedChapters() {
       return [...elChapterList.querySelectorAll("input:checked")].map((i) => i.value);
@@ -178,43 +251,67 @@
         b.getAttribute("data-prio")
       );
     }
-    function selectedKinds() {
-      return [...elKindList.querySelectorAll(".kind-btn[aria-pressed='true']")].map((b) =>
-        b.getAttribute("data-kind")
-      );
+    function selectedKind() {
+      const btn = elKindList.querySelector(".kind-btn[aria-pressed='true']");
+      return (btn && btn.getAttribute("data-kind")) || "all";
+    }
+    function selectedMode() {
+      const btn = elModeList.querySelector(".mode-btn[aria-pressed='true']");
+      return (btn && btn.getAttribute("data-mode")) || "all";
     }
 
-    function poolFrom(chs, prios, kinds) {
+    function poolFrom(chs, prios, mode, kind) {
       const allowP = new Set(prios.length ? prios : ["P1", "P2", "P3"]);
-      const allowK = new Set(kinds.length ? kinds : ["text"]);
+      const needReview = mode === "review";
+      const rev = reviewIds();
       const pool = [];
       for (const ch of chs) {
         for (const card of decks[ch] || []) {
-          const kind = card.kind || "text";
-          if (allowP.has(card.priority) && allowK.has(kind)) pool.push(card);
+          if (!allowP.has(card.priority)) continue;
+          const k = card.kind || "text";
+          if (kind === "text" && k !== "text") continue;
+          if (kind === "schema" && k !== "schema") continue;
+          if (needReview && !rev.has(card.id)) continue;
+          pool.push(card);
         }
       }
       return pool;
     }
 
+    function shuffle(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
     function updateHint() {
       const chs = selectedChapters();
       const prios = selectedPriorities();
-      const kinds = selectedKinds();
-      const n = poolFrom(chs, prios, kinds).length;
-      if (!chs.length) elHint.textContent = "Coche au moins un chapitre disponible.";
+      const mode = selectedMode();
+      const kind = selectedKind();
+      const n = poolFrom(chs, prios, mode, kind).length;
+      const nRev = reviewIds().size;
+      const kindLabel = kind === "all" ? "" : " · " + kind;
+      if (!chs.length) elHint.textContent = "Coche au moins un chapitre.";
       else if (!prios.length) elHint.textContent = "Active au moins une priorité.";
-      else if (!kinds.length) elHint.textContent = "Active Texte et/ou Schémas.";
-      else elHint.textContent = n + " carte" + (n > 1 ? "s" : "") + " · " + prios.join("+") + " · " + kinds.join("+") + ".";
-      document.getElementById("btn-start").disabled = !chs.length || !prios.length || !kinds.length || n === 0;
+      else elHint.textContent = n + " carte" + (n > 1 ? "s" : "") + " · " + prios.join("+") + kindLabel + (mode === "review" ? " · à revoir" : "") + ".";
+      elReviewHint.textContent = nRev ? nRev + " carte(s) marquées « À revoir » (local)." : "Aucune carte « À revoir » pour l’instant.";
+      document.getElementById("btn-start").disabled = !chs.length || !prios.length || n === 0;
     }
 
-    function wireToggleGroup(root, sel) {
+    function wireToggleGroup(root, sel, exclusive) {
       root.querySelectorAll(sel).forEach((btn) => {
         btn.addEventListener("click", () => {
-          if (btn.disabled) return;
-          const on = btn.getAttribute("aria-pressed") !== "true";
-          btn.setAttribute("aria-pressed", on ? "true" : "false");
+          if (exclusive) {
+            root.querySelectorAll(sel).forEach((b) => b.setAttribute("aria-pressed", "false"));
+            btn.setAttribute("aria-pressed", "true");
+          } else {
+            const on = btn.getAttribute("aria-pressed") !== "true";
+            btn.setAttribute("aria-pressed", on ? "true" : "false");
+          }
           updateHint();
         });
       });
@@ -226,13 +323,16 @@
       const focusCh = (params.get("ch") || "").padStart(2, "0");
       const focusOk = focusCh && CHAPTER_META[focusCh];
       for (const ch of CHAPTER_ORDER) {
-        const n = (decks[ch] || []).length;
+        const list = decks[ch] || [];
+        const n = list.length;
+        const nSchema = list.filter((c) => c.kind === "schema").length;
         const label = document.createElement("label");
         if (n) {
           const checked = focusOk ? ch === focusCh : true;
+          const extra = nSchema ? " · " + nSchema + " sch." : "";
           label.innerHTML =
             '<input type="checkbox" value="' + ch + '"' + (checked ? " checked" : "") + ' /> <span>' + ch + " — " + CHAPTER_META[ch] +
-            ' <span class="note">(' + n + ")</span></span>";
+            ' <span class="note">(' + n + extra + ")</span></span>";
         } else {
           label.innerHTML =
             '<input type="checkbox" value="' + ch + '" disabled /> <span>' + ch + " — " + CHAPTER_META[ch] +
@@ -241,23 +341,46 @@
         elChapterList.appendChild(label);
       }
       elChapterList.addEventListener("change", updateHint);
-      wireToggleGroup(elPriorityList, ".prio-btn");
-      wireToggleGroup(elKindList, ".kind-btn");
+      wireToggleGroup(elPriorityList, ".prio-btn", false);
+      wireToggleGroup(elKindList, ".kind-btn", true);
+      wireToggleGroup(elModeList, ".mode-btn", true);
       updateHint();
     }
 
     function show(view) {
       elSetup.classList.toggle("hidden", view !== "setup");
       elPlay.classList.toggle("hidden", view !== "play");
+      elEnd.classList.toggle("hidden", view !== "end");
+    }
+
+    function fillSide(el, text, imgSrc, isBack) {
+      el.innerHTML = "";
+      if (imgSrc) {
+        if (text) {
+          const p = document.createElement("p");
+          p.className = isBack ? "fc-caption" : "fc-prompt";
+          p.textContent = isBack ? text : "Nomme les légendes";
+          el.appendChild(p);
+        }
+        const img = document.createElement("img");
+        img.className = "fc-schema";
+        img.src = "./" + imgSrc;
+        img.alt = text || (isBack ? "Schéma légendé" : "Schéma sans légende");
+        el.appendChild(img);
+      } else {
+        el.textContent = text || "";
+      }
     }
 
     function renderCard() {
       const card = session[index];
       if (!card) return;
       elCard.classList.remove("flipped");
-      elFront.textContent = card.front;
-      elBack.textContent = card.back;
-      elMeta.textContent = card.priority + " · " + (card.kind || "text") + " · ch." + card.chapter + " · touche pour retourner";
+      const isSchema = (card.kind || "text") === "schema";
+      fillSide(elFront, card.front, isSchema ? card.frontImg : null, false);
+      fillSide(elBack, card.back, isSchema ? card.backImg : null, true);
+      elMeta.textContent =
+        card.priority + " · ch." + card.chapter + (isSchema ? " · schéma" : "") + " · touche pour retourner";
       elProgress.textContent = index + 1 + " / " + session.length;
       document.getElementById("btn-prev").disabled = index === 0;
       document.getElementById("btn-next").disabled = index >= session.length - 1;
@@ -265,23 +388,86 @@
 
     function flip() { elCard.classList.toggle("flipped"); }
 
-    document.getElementById("btn-start").addEventListener("click", () => {
-      session = poolFrom(selectedChapters(), selectedPriorities(), selectedKinds());
+    function finishSession() {
+      const left = reviewIds().size;
+      document.getElementById("end-stats").textContent =
+        "Je sais : " + stats.know + " · À revoir (cette session) : " + stats.review +
+        " · Encore marquées « À revoir » : " + left + ".";
+      document.getElementById("btn-again-review").disabled = left === 0;
+      show("end");
+      updateHint();
+    }
+
+    function goNextOrEnd() {
+      if (index < session.length - 1) {
+        index += 1;
+        renderCard();
+      } else {
+        finishSession();
+      }
+    }
+
+    function startSession(modeOverride) {
+      const chs = selectedChapters();
+      const prios = selectedPriorities();
+      const mode = modeOverride || selectedMode();
+      const kind = selectedKind();
+      let pool = poolFrom(chs, prios, mode, kind);
+      if (elShuffle.checked) pool = shuffle(pool);
+      session = pool;
       index = 0;
+      stats = { know: 0, review: 0 };
+      if (!session.length) {
+        updateHint();
+        return;
+      }
       show("play");
       renderCard();
-    });
+    }
+
+    document.getElementById("btn-start").addEventListener("click", () => startSession());
     document.getElementById("btn-back").addEventListener("click", (e) => {
       e.preventDefault();
       show("setup");
+      updateHint();
     });
     document.getElementById("btn-flip").addEventListener("click", flip);
     elCard.addEventListener("click", flip);
     document.getElementById("btn-next").addEventListener("click", () => {
       if (index < session.length - 1) { index += 1; renderCard(); }
+      else finishSession();
     });
     document.getElementById("btn-prev").addEventListener("click", () => {
       if (index > 0) { index -= 1; renderCard(); }
+    });
+    document.getElementById("btn-know").addEventListener("click", () => {
+      const card = session[index];
+      if (!card) return;
+      markCard(card.id, "know");
+      stats.know += 1;
+      goNextOrEnd();
+    });
+    document.getElementById("btn-review").addEventListener("click", () => {
+      const card = session[index];
+      if (!card) return;
+      markCard(card.id, "review");
+      stats.review += 1;
+      goNextOrEnd();
+    });
+    document.getElementById("btn-clear-review").addEventListener("click", () => {
+      if (!confirm("Effacer toutes les cartes « À revoir » ?")) return;
+      saveReview({});
+      updateHint();
+    });
+    document.getElementById("btn-again-review").addEventListener("click", () => {
+      elModeList.querySelectorAll(".mode-btn").forEach((b) => {
+        b.setAttribute("aria-pressed", b.getAttribute("data-mode") === "review" ? "true" : "false");
+      });
+      startSession("review");
+    });
+    document.getElementById("btn-end-setup").addEventListener("click", () => {
+      show("setup");
+      updateHint();
     });
 
     buildChapters();
