@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sujet complet — PASS Sorbonne</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f3efe6; --card: #faf7f0; --ink: #1a2a22; --muted: #5a6a60;
+      --line: #cfc6b4; --ok: #166534; --ok-bg: #dcfce7; --bad: #991b1b;
+      --bad-bg: #fee2e2; --accent: #1f5c45;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: "Manrope", system-ui, sans-serif; color: var(--ink); line-height: 1.45;
+      background: radial-gradient(90% 60% at 100% 0%, #e5ecdf, transparent 50%), var(--bg);
+    }
+    main { max-width: 42rem; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
+    h1 { font-size: 1.25rem; margin: 0 0 0.35rem; }
+    .sub, .meta { color: var(--muted); font-size: 0.95rem; }
+    .sub { margin: 0 0 1.25rem; }
+    a.meta-link { color: inherit; }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+      padding: 1.1rem 1.15rem; margin-bottom: 1rem;
+    }
+    .quiz-bar {
+      display: flex; flex-wrap: wrap; justify-content: space-between;
+      gap: 0.75rem; align-items: center; margin-bottom: 1rem;
+    }
+    .stem { font-size: 1.05rem; margin: 0 0 1rem; }
+    .choice {
+      display: flex; gap: 0.65rem; align-items: flex-start;
+      padding: 0.65rem 0.7rem; border: 1px solid var(--line); border-radius: 10px;
+      margin-bottom: 0.5rem; cursor: pointer; background: var(--card);
+    }
+    .choice:has(input:checked) { border-color: var(--accent); background: #e3efe8; }
+    .choice.ok { border-color: #86efac; background: var(--ok-bg); }
+    .choice.bad { border-color: #fca5a5; background: var(--bad-bg); }
+    .why { display: none; margin-top: 0.35rem; font-size: 0.88rem; color: var(--muted); }
+    .revealed .why { display: block; }
+    .mark { font-weight: 700; }
+    .mark.ok { color: var(--ok); }
+    .mark.bad { color: var(--bad); }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    button, .btn-link {
+      border: 1px solid var(--accent); background: var(--accent); color: #fff;
+      border-radius: 999px; padding: 0.55rem 1rem; font: inherit; font-weight: 650;
+      cursor: pointer; text-decoration: none; display: inline-block;
+    }
+    button.secondary, a.secondary {
+      background: var(--card); color: var(--ink); border-color: var(--line);
+    }
+    button:disabled { opacity: 0.45; cursor: not-allowed; }
+    .score-box {
+      margin-top: 0.85rem; padding: 0.7rem 0.8rem; border-radius: 10px;
+      background: #ebe6dc; display: none;
+    }
+    .score-box.show { display: block; }
+    .tags { margin-top: 0.75rem; font-size: 0.8rem; color: var(--muted); }
+    .hidden { display: none !important; }
+    .big-score { font-size: 2.4rem; font-weight: 700; margin: 0.25rem 0 0.5rem; }
+    .chip {
+      display: inline-block; font-size: 0.75rem; padding: 0.15rem 0.45rem;
+      border-radius: 6px; background: #e5ecdf; color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="meta" style="margin:0 0 0.75rem">
+      <a class="meta-link" href="./sujets-complets.html">← Sujets complets</a>
+      · <a class="meta-link" href="./entrainement.html">Entraînement</a>
+    </p>
+
+    <section id="boot">
+      <h1>Chargement du sujet…</h1>
+      <p class="sub" id="boot-msg">Un instant.</p>
+    </section>
+
+    <section id="quiz" class="hidden">
+      <header class="quiz-bar">
+        <h1 id="sujet-title">Sujet</h1>
+        <div class="meta" id="progress">—</div>
+      </header>
+      <div class="card revealed-host" id="panel">
+        <p class="meta" id="ch-line" style="margin:0 0 0.5rem"></p>
+        <p class="stem" id="stem"></p>
+        <div id="choices"></div>
+        <div class="score-box" id="item-score"></div>
+        <div class="actions">
+          <button type="button" id="btn-validate">Valider / Corrigé</button>
+          <button type="button" class="secondary" id="btn-next" disabled>Suivant</button>
+          <button type="button" class="secondary" id="btn-abort">Abandonner</button>
+        </div>
+        <div class="tags" id="tags"></div>
+      </div>
+    </section>
+
+    <section id="results" class="hidden">
+      <h1>Fin du sujet</h1>
+      <p class="sub" id="results-sub">—</p>
+      <div class="card">
+        <div class="meta">Score</div>
+        <div class="big-score" id="final-score">—</div>
+        <p id="final-label"></p>
+        <p id="feedback-text"></p>
+        <div class="actions">
+          <button type="button" id="btn-retry">Rejouer ce sujet</button>
+          <a class="secondary btn-link" href="./sujets-complets.html">Autres sujets</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./data/sujets/catalog.js"></script>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const sujetId = (params.get("id") || "SC01").toUpperCase();
+    const catalog = window.PASS_SUJET_CATALOG || [];
+    const entry = catalog.find((s) => String(s.id).toUpperCase() === sujetId);
+
+    const elBoot = document.getElementById("boot");
+    const elBootMsg = document.getElementById("boot-msg");
+    const elQuiz = document.getElementById("quiz");
+    const elResults = document.getElementById("results");
+    const elTitle = document.getElementById("sujet-title");
+    const elProgress = document.getElementById("progress");
+    const elChLine = document.getElementById("ch-line");
+    const elStem = document.getElementById("stem");
+    const elChoices = document.getElementById("choices");
+    const elItemScore = document.getElementById("item-score");
+    const elTags = document.getElementById("tags");
+    const panel = document.getElementById("panel");
+    const btnValidate = document.getElementById("btn-validate");
+    const btnNext = document.getElementById("btn-next");
+    const btnAbort = document.getElementById("btn-abort");
+    const btnRetry = document.getElementById("btn-retry");
+
+    let items = [];
+    let index = 0;
+    let revealed = false;
+    let correctCount = 0;
+    let meta = {};
+
+    function show(view) {
+      elBoot.classList.toggle("hidden", view !== "boot");
+      elQuiz.classList.toggle("hidden", view !== "quiz");
+      elResults.classList.toggle("hidden", view !== "results");
+    }
+
+    function norm(arr) {
+      return [...arr].map(String).sort().join(",");
+    }
+
+    function loadScript(src) {
+      return new Promise((resolve, reject) => {
+        const s = document.createElement("script");
+        s.src = src;
+        s.onload = resolve;
+        s.onerror = () => reject(new Error("Impossible de charger " + src));
+        document.head.appendChild(s);
+      });
+    }
+
+    async function boot() {
+      if (!entry) {
+        elBootMsg.textContent = "Sujet introuvable dans le catalogue : " + sujetId;
+        return;
+      }
+      try {
+        await loadScript("./data/sujets/" + entry.file);
+        const pack = (window.PASS_SUJETS || {})[entry.id] || (window.PASS_SUJETS || {})[sujetId];
+        if (!pack || !pack.items || !pack.items.length) {
+          throw new Error("Pack vide pour " + sujetId);
+        }
+        meta = pack.meta || {};
+        items = pack.items;
+        elTitle.textContent = meta.title || entry.title || sujetId;
+        start();
+      } catch (e) {
+        elBootMsg.textContent = String(e.message || e);
+      }
+    }
+
+    function start() {
+      index = 0;
+      revealed = false;
+      correctCount = 0;
+      show("quiz");
+      render();
+    }
+
+    function render() {
+      const item = items[index];
+      if (!item) {
+        finish();
+        return;
+      }
+      revealed = false;
+      panel.classList.remove("revealed");
+      elItemScore.classList.remove("show");
+      elItemScore.textContent = "";
+      btnValidate.disabled = false;
+      btnNext.disabled = true;
+      elProgress.textContent = index + 1 + " / " + items.length;
+      elChLine.innerHTML = '<span class="chip">ch.' + item.chapter + "</span> · " + item.id;
+      elStem.textContent = item.stem;
+      elTags.textContent = (item.tags || []).map((t) => "#" + t).join("  ");
+      elChoices.innerHTML = "";
+      for (const letter of ["A", "B", "C", "D", "E"]) {
+        const label = document.createElement("label");
+        label.className = "choice";
+        label.dataset.letter = letter;
+        label.innerHTML =
+          '<input type="checkbox" name="choice" value="' + letter + '" />' +
+          "<span><strong>" + letter + ".</strong> " + item.choices[letter] +
+          '<div class="why"></div></span>';
+        elChoices.appendChild(label);
+      }
+    }
+
+    function validate() {
+      const item = items[index];
+      if (!item || revealed) return;
+      const selected = [...elChoices.querySelectorAll('input[type="checkbox"]:checked')].map(
+        (i) => i.value
+      );
+      const ok = norm(selected) === norm(item.answer);
+      revealed = true;
+      panel.classList.add("revealed");
+      btnNext.disabled = false;
+      btnValidate.disabled = true;
+      if (ok) correctCount += 1;
+
+      for (const letter of ["A", "B", "C", "D", "E"]) {
+        const row = elChoices.querySelector('[data-letter="' + letter + '"]');
+        const exp = (item.explanations || {})[letter] || {};
+        const why = row.querySelector(".why");
+        const isCorrect = !!exp.correct;
+        row.classList.add(isCorrect ? "ok" : "bad");
+        row.querySelector("input").disabled = true;
+        why.innerHTML =
+          '<span class="mark ' + (isCorrect ? "ok" : "bad") + '">' +
+          (isCorrect ? "Vrai" : "Faux") +
+          "</span> — " + (exp.why || "");
+      }
+      elItemScore.classList.add("show");
+      elItemScore.innerHTML = ok
+        ? "<strong>OK</strong> — " + item.answer.join(", ")
+        : "<strong>À revoir</strong> — tu : " +
+          (selected.length ? selected.join(", ") : "(rien)") +
+          " · corrigé : " + item.answer.join(", ");
+    }
+
+    function finish() {
+      const total = items.length;
+      const pct = total ? Math.round((correctCount / total) * 100) : 0;
+      document.getElementById("final-score").textContent = correctCount + " / " + total;
+      document.getElementById("final-label").textContent = pct + " % de réussite";
+      document.getElementById("results-sub").textContent = meta.title || sujetId;
+      const fb = document.getElementById("feedback-text");
+      if (pct >= 85) fb.textContent = "Excellent blanc — tu tiens le rythme concours.";
+      else if (pct >= 65) fb.textContent = "Bon niveau : revois les items ratés puis refais le sujet dans 48 h.";
+      else if (pct >= 40) fb.textContent = "Base encore fragile en transversal — cible les chapitres faibles, puis reviens.";
+      else fb.textContent = "Priorise le cours sur les chapitres les plus ratés avant un nouveau blanc.";
+      show("results");
+    }
+
+    btnValidate.addEventListener("click", validate);
+    btnNext.addEventListener("click", () => {
+      if (!revealed) return;
+      index += 1;
+      if (index >= items.length) finish();
+      else render();
+    });
+    btnAbort.addEventListener("click", () => {
+      if (confirm("Abandonner ce sujet ?")) location.href = "./sujets-complets.html";
+    });
+    btnRetry.addEventListener("click", start);
+
+    boot();
+  </script>
+</body>
+</html>
