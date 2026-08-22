@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=m2" />
+  <link rel="stylesheet" href="./styles.css?v=sc01b" />
 </head>
 <body>
   <div class="wrap">
@@ -32,41 +32,21 @@
 
     <p class="page-sub" style="margin-bottom:0.35rem"><a href="./entrainement.html">← Entraînement</a></p>
     <h1 class="page-title">Sujets complets</h1>
-    <p class="page-sub">Blancs transversaux (chapitres 01–11), style concours. Un sujet = un fichier. Objectif : 10 blancs.</p>
+    <p class="page-sub">Blancs transversaux (36 Q), style concours. Un sujet = un fichier. Objectif : 10 blancs.</p>
 
-    <section class="rubric-panel" id="sujet-list" aria-label="Sujets disponibles"></section>
+    <section class="rubric-panel" aria-label="Sujets disponibles">
+      <!-- Lien statique : visible même si le JS catalogue échoue -->
+      <a class="rubric-row" href="./qcm-sujet.html?id=SC01">
+        <h2>Blanc SC01 — UE5 Anatomie</h2>
+        <span class="badge">Dispo</span>
+        <p>36 QCM · mix chapitres 01–11 · ordre fixe.</p>
+      </a>
+      <div class="rubric-row" style="cursor:default">
+        <h2>Blanc SC02 → SC10</h2>
+        <span class="badge soon">Bientôt</span>
+        <p>Emplacements réservés — série de 10 sujets complets.</p>
+      </div>
+    </section>
   </div>
-
-  <script src="./data/sujets/catalog.js"></script>
-  <script>
-    const list = document.getElementById("sujet-list");
-    const catalog = window.PASS_SUJET_CATALOG || [];
-    list.innerHTML = "";
-
-    for (const s of catalog) {
-      const ready = s.status === "ready";
-      const el = document.createElement(ready ? "a" : "div");
-      el.className = "rubric-row";
-      if (ready) el.href = "./qcm-sujet.html?id=" + encodeURIComponent(s.id);
-      else el.style.cursor = "default";
-      el.innerHTML =
-        "<h2>" + s.title + "</h2>" +
-        '<span class="badge' + (ready ? "" : " soon") + '">' + (ready ? "Dispo" : "Bientôt") + "</span>" +
-        "<p>" + (s.n || 36) + " QCM · mix chapitres · ordre fixe.</p>";
-      list.appendChild(el);
-    }
-
-    for (let i = catalog.length + 1; i <= 10; i++) {
-      const d = document.createElement("div");
-      d.className = "rubric-row";
-      d.style.cursor = "default";
-      const num = String(i).padStart(2, "0");
-      d.innerHTML =
-        "<h2>Blanc SC" + num + "</h2>" +
-        '<span class="badge soon">Bientôt</span>' +
-        "<p>Emplacement réservé — série de 10 sujets complets.</p>";
-      list.appendChild(d);
-    }
-  </script>
 </body>
 </html>

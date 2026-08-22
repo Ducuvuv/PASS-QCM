@@ -7,3 +7,5 @@ window.PASS_SUJET_CATALOG = [
     status: "ready"
   }
 ];
+// alias de secours
+window.PASS_SUJETS_CATALOG = window.PASS_SUJET_CATALOG;

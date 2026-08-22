@@ -19,15 +19,16 @@
       background: radial-gradient(90% 60% at 100% 0%, #e5ecdf, transparent 50%), var(--bg);
     }
     main { max-width: 42rem; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
-    h1 { font-size: 1.25rem; margin: 0 0 0.35rem; }
-    .sub, .meta { color: var(--muted); font-size: 0.95rem; }
-    .sub { margin: 0 0 1.25rem; }
-    a.meta-link { color: inherit; }
+    h1 { font-size: 1.2rem; margin: 0 0 0.35rem; }
+    .meta, .sub { color: var(--muted); font-size: 0.95rem; }
+    .sub { margin: 0 0 1rem; }
+    a { color: inherit; }
+    .hidden { display: none !important; }
     .card {
       background: var(--card); border: 1px solid var(--line); border-radius: 12px;
       padding: 1.1rem 1.15rem; margin-bottom: 1rem;
     }
-    .quiz-bar {
+    .bar {
       display: flex; flex-wrap: wrap; justify-content: space-between;
       gap: 0.75rem; align-items: center; margin-bottom: 1rem;
     }
@@ -46,7 +47,7 @@
     .mark.ok { color: var(--ok); }
     .mark.bad { color: var(--bad); }
     .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-    button, .btn-link {
+    button, .btn {
       border: 1px solid var(--accent); background: var(--accent); color: #fff;
       border-radius: 999px; padding: 0.55rem 1rem; font: inherit; font-weight: 650;
       cursor: pointer; text-decoration: none; display: inline-block;
@@ -55,14 +56,13 @@
       background: var(--card); color: var(--ink); border-color: var(--line);
     }
     button:disabled { opacity: 0.45; cursor: not-allowed; }
-    .score-box {
+    .score {
       margin-top: 0.85rem; padding: 0.7rem 0.8rem; border-radius: 10px;
       background: #ebe6dc; display: none;
     }
-    .score-box.show { display: block; }
+    .score.on { display: block; }
     .tags { margin-top: 0.75rem; font-size: 0.8rem; color: var(--muted); }
-    .hidden { display: none !important; }
-    .big-score { font-size: 2.4rem; font-weight: 700; margin: 0.25rem 0 0.5rem; }
+    .big { font-size: 2.2rem; font-weight: 700; margin: 0.25rem 0 0.5rem; }
     .chip {
       display: inline-block; font-size: 0.75rem; padding: 0.15rem 0.45rem;
       border-radius: 6px; background: #e5ecdf; color: var(--accent);
@@ -72,217 +72,244 @@
 <body>
   <main>
     <p class="meta" style="margin:0 0 0.75rem">
-      <a class="meta-link" href="./sujets-complets.html">← Sujets complets</a>
-      · <a class="meta-link" href="./entrainement.html">Entraînement</a>
+      <a href="./sujets-complets.html">← Sujets complets</a>
+      · <a href="./entrainement.html">Entraînement</a>
     </p>
 
     <section id="boot">
       <h1>Chargement du sujet…</h1>
-      <p class="sub" id="boot-msg">Un instant.</p>
+      <p class="sub" id="bootMsg">Un instant.</p>
     </section>
 
     <section id="quiz" class="hidden">
-      <header class="quiz-bar">
-        <h1 id="sujet-title">Sujet</h1>
+      <div class="bar">
+        <h1 id="title">Sujet</h1>
         <div class="meta" id="progress">—</div>
-      </header>
-      <div class="card revealed-host" id="panel">
-        <p class="meta" id="ch-line" style="margin:0 0 0.5rem"></p>
+      </div>
+      <div class="card" id="panel">
+        <p class="meta" id="chLine" style="margin:0 0 0.5rem"></p>
         <p class="stem" id="stem"></p>
         <div id="choices"></div>
-        <div class="score-box" id="item-score"></div>
+        <div class="score" id="itemScore"></div>
         <div class="actions">
-          <button type="button" id="btn-validate">Valider / Corrigé</button>
-          <button type="button" class="secondary" id="btn-next" disabled>Suivant</button>
-          <button type="button" class="secondary" id="btn-abort">Abandonner</button>
+          <button type="button" id="btnOk">Valider / Corrigé</button>
+          <button type="button" class="secondary" id="btnNext" disabled>Suivant</button>
+          <button type="button" class="secondary" id="btnQuit">Abandonner</button>
         </div>
         <div class="tags" id="tags"></div>
       </div>
     </section>
 
-    <section id="results" class="hidden">
+    <section id="end" class="hidden">
       <h1>Fin du sujet</h1>
-      <p class="sub" id="results-sub">—</p>
+      <p class="sub" id="endSub">—</p>
       <div class="card">
         <div class="meta">Score</div>
-        <div class="big-score" id="final-score">—</div>
-        <p id="final-label"></p>
-        <p id="feedback-text"></p>
+        <div class="big" id="endScore">—</div>
+        <p id="endLabel"></p>
+        <p id="endFb"></p>
         <div class="actions">
-          <button type="button" id="btn-retry">Rejouer ce sujet</button>
-          <a class="secondary btn-link" href="./sujets-complets.html">Autres sujets</a>
+          <button type="button" id="btnAgain">Rejouer</button>
+          <a class="secondary btn" href="./sujets-complets.html">Autres sujets</a>
         </div>
       </div>
     </section>
   </main>
 
-  <script src="./data/sujets/catalog.js"></script>
+  <script src="./data/sujets/catalog.js?v=sc01b"></script>
   <script>
-    const params = new URLSearchParams(location.search);
-    const sujetId = (params.get("id") || "SC01").toUpperCase();
-    const catalog = window.PASS_SUJET_CATALOG || [];
-    const entry = catalog.find((s) => String(s.id).toUpperCase() === sujetId);
-
-    const elBoot = document.getElementById("boot");
-    const elBootMsg = document.getElementById("boot-msg");
-    const elQuiz = document.getElementById("quiz");
-    const elResults = document.getElementById("results");
-    const elTitle = document.getElementById("sujet-title");
-    const elProgress = document.getElementById("progress");
-    const elChLine = document.getElementById("ch-line");
-    const elStem = document.getElementById("stem");
-    const elChoices = document.getElementById("choices");
-    const elItemScore = document.getElementById("item-score");
-    const elTags = document.getElementById("tags");
-    const panel = document.getElementById("panel");
-    const btnValidate = document.getElementById("btn-validate");
-    const btnNext = document.getElementById("btn-next");
-    const btnAbort = document.getElementById("btn-abort");
-    const btnRetry = document.getElementById("btn-retry");
-
-    let items = [];
-    let index = 0;
-    let revealed = false;
-    let correctCount = 0;
-    let meta = {};
-
-    function show(view) {
-      elBoot.classList.toggle("hidden", view !== "boot");
-      elQuiz.classList.toggle("hidden", view !== "quiz");
-      elResults.classList.toggle("hidden", view !== "results");
-    }
-
-    function norm(arr) {
-      return [...arr].map(String).sort().join(",");
-    }
-
-    function loadScript(src) {
-      return new Promise((resolve, reject) => {
-        const s = document.createElement("script");
-        s.src = src;
-        s.onload = resolve;
-        s.onerror = () => reject(new Error("Impossible de charger " + src));
-        document.head.appendChild(s);
-      });
-    }
-
-    async function boot() {
-      if (!entry) {
-        elBootMsg.textContent = "Sujet introuvable dans le catalogue : " + sujetId;
-        return;
-      }
-      try {
-        await loadScript("./data/sujets/" + entry.file);
-        const pack = (window.PASS_SUJETS || {})[entry.id] || (window.PASS_SUJETS || {})[sujetId];
-        if (!pack || !pack.items || !pack.items.length) {
-          throw new Error("Pack vide pour " + sujetId);
+    (function () {
+      var sujetId = (new URLSearchParams(location.search).get("id") || "SC01").toUpperCase();
+      var catalog = window.PASS_SUJET_CATALOG || [];
+      var entry = null;
+      for (var i = 0; i < catalog.length; i++) {
+        if (String(catalog[i].id).toUpperCase() === sujetId) {
+          entry = catalog[i];
+          break;
         }
-        meta = pack.meta || {};
-        items = pack.items;
-        elTitle.textContent = meta.title || entry.title || sujetId;
-        start();
-      } catch (e) {
-        elBootMsg.textContent = String(e.message || e);
       }
-    }
-
-    function start() {
-      index = 0;
-      revealed = false;
-      correctCount = 0;
-      show("quiz");
-      render();
-    }
-
-    function render() {
-      const item = items[index];
-      if (!item) {
-        finish();
-        return;
+      if (!entry) {
+        entry = { id: "SC01", title: "Blanc SC01", file: "sc01.js" };
       }
-      revealed = false;
-      panel.classList.remove("revealed");
-      elItemScore.classList.remove("show");
-      elItemScore.textContent = "";
-      btnValidate.disabled = false;
-      btnNext.disabled = true;
-      elProgress.textContent = index + 1 + " / " + items.length;
-      elChLine.innerHTML = '<span class="chip">ch.' + item.chapter + "</span> · " + item.id;
-      elStem.textContent = item.stem;
-      elTags.textContent = (item.tags || []).map((t) => "#" + t).join("  ");
-      elChoices.innerHTML = "";
-      for (const letter of ["A", "B", "C", "D", "E"]) {
-        const label = document.createElement("label");
-        label.className = "choice";
-        label.dataset.letter = letter;
-        label.innerHTML =
-          '<input type="checkbox" name="choice" value="' + letter + '" />' +
-          "<span><strong>" + letter + ".</strong> " + item.choices[letter] +
-          '<div class="why"></div></span>';
-        elChoices.appendChild(label);
+
+      var boot = document.getElementById("boot");
+      var bootMsg = document.getElementById("bootMsg");
+      var quiz = document.getElementById("quiz");
+      var end = document.getElementById("end");
+      var titleEl = document.getElementById("title");
+      var progress = document.getElementById("progress");
+      var chLine = document.getElementById("chLine");
+      var stem = document.getElementById("stem");
+      var choices = document.getElementById("choices");
+      var itemScore = document.getElementById("itemScore");
+      var tags = document.getElementById("tags");
+      var panel = document.getElementById("panel");
+      var btnOk = document.getElementById("btnOk");
+      var btnNext = document.getElementById("btnNext");
+      var btnQuit = document.getElementById("btnQuit");
+      var btnAgain = document.getElementById("btnAgain");
+
+      var items = [];
+      var meta = {};
+      var index = 0;
+      var revealed = false;
+      var correctCount = 0;
+
+      function show(which) {
+        boot.classList.toggle("hidden", which !== "boot");
+        quiz.classList.toggle("hidden", which !== "quiz");
+        end.classList.toggle("hidden", which !== "end");
       }
-    }
 
-    function validate() {
-      const item = items[index];
-      if (!item || revealed) return;
-      const selected = [...elChoices.querySelectorAll('input[type="checkbox"]:checked')].map(
-        (i) => i.value
-      );
-      const ok = norm(selected) === norm(item.answer);
-      revealed = true;
-      panel.classList.add("revealed");
-      btnNext.disabled = false;
-      btnValidate.disabled = true;
-      if (ok) correctCount += 1;
-
-      for (const letter of ["A", "B", "C", "D", "E"]) {
-        const row = elChoices.querySelector('[data-letter="' + letter + '"]');
-        const exp = (item.explanations || {})[letter] || {};
-        const why = row.querySelector(".why");
-        const isCorrect = !!exp.correct;
-        row.classList.add(isCorrect ? "ok" : "bad");
-        row.querySelector("input").disabled = true;
-        why.innerHTML =
-          '<span class="mark ' + (isCorrect ? "ok" : "bad") + '">' +
-          (isCorrect ? "Vrai" : "Faux") +
-          "</span> — " + (exp.why || "");
+      function norm(arr) {
+        return arr.slice().map(String).sort().join(",");
       }
-      elItemScore.classList.add("show");
-      elItemScore.innerHTML = ok
-        ? "<strong>OK</strong> — " + item.answer.join(", ")
-        : "<strong>À revoir</strong> — tu : " +
-          (selected.length ? selected.join(", ") : "(rien)") +
-          " · corrigé : " + item.answer.join(", ");
-    }
 
-    function finish() {
-      const total = items.length;
-      const pct = total ? Math.round((correctCount / total) * 100) : 0;
-      document.getElementById("final-score").textContent = correctCount + " / " + total;
-      document.getElementById("final-label").textContent = pct + " % de réussite";
-      document.getElementById("results-sub").textContent = meta.title || sujetId;
-      const fb = document.getElementById("feedback-text");
-      if (pct >= 85) fb.textContent = "Excellent blanc — tu tiens le rythme concours.";
-      else if (pct >= 65) fb.textContent = "Bon niveau : revois les items ratés puis refais le sujet dans 48 h.";
-      else if (pct >= 40) fb.textContent = "Base encore fragile en transversal — cible les chapitres faibles, puis reviens.";
-      else fb.textContent = "Priorise le cours sur les chapitres les plus ratés avant un nouveau blanc.";
-      show("results");
-    }
+      function loadScript(src) {
+        return new Promise(function (resolve, reject) {
+          var s = document.createElement("script");
+          s.src = src;
+          s.onload = resolve;
+          s.onerror = function () {
+            reject(new Error("Impossible de charger " + src));
+          };
+          document.head.appendChild(s);
+        });
+      }
 
-    btnValidate.addEventListener("click", validate);
-    btnNext.addEventListener("click", () => {
-      if (!revealed) return;
-      index += 1;
-      if (index >= items.length) finish();
-      else render();
-    });
-    btnAbort.addEventListener("click", () => {
-      if (confirm("Abandonner ce sujet ?")) location.href = "./sujets-complets.html";
-    });
-    btnRetry.addEventListener("click", start);
+      function start() {
+        index = 0;
+        revealed = false;
+        correctCount = 0;
+        show("quiz");
+        render();
+      }
 
-    boot();
+      function render() {
+        var item = items[index];
+        if (!item) {
+          finish();
+          return;
+        }
+        revealed = false;
+        panel.classList.remove("revealed");
+        itemScore.classList.remove("on");
+        itemScore.textContent = "";
+        btnOk.disabled = false;
+        btnNext.disabled = true;
+        progress.textContent = index + 1 + " / " + items.length;
+        chLine.innerHTML = '<span class="chip">ch.' + item.chapter + "</span> · " + item.id;
+        stem.textContent = item.stem;
+        tags.textContent = (item.tags || [])
+          .map(function (t) {
+            return "#" + t;
+          })
+          .join("  ");
+        choices.innerHTML = "";
+        ["A", "B", "C", "D", "E"].forEach(function (letter) {
+          var label = document.createElement("label");
+          label.className = "choice";
+          label.setAttribute("data-letter", letter);
+          label.innerHTML =
+            '<input type="checkbox" value="' +
+            letter +
+            '" />' +
+            "<span><strong>" +
+            letter +
+            ".</strong> " +
+            (item.choices[letter] || "") +
+            '<div class="why"></div></span>';
+          choices.appendChild(label);
+        });
+      }
+
+      function validate() {
+        var item = items[index];
+        if (!item || revealed) return;
+        var selected = [];
+        choices.querySelectorAll("input:checked").forEach(function (el) {
+          selected.push(el.value);
+        });
+        var ok = norm(selected) === norm(item.answer || []);
+        revealed = true;
+        panel.classList.add("revealed");
+        btnNext.disabled = false;
+        btnOk.disabled = true;
+        if (ok) correctCount += 1;
+
+        ["A", "B", "C", "D", "E"].forEach(function (letter) {
+          var row = choices.querySelector('[data-letter="' + letter + '"]');
+          var exp = (item.explanations || {})[letter] || {};
+          var isCorrect = !!exp.correct;
+          row.classList.add(isCorrect ? "ok" : "bad");
+          row.querySelector("input").disabled = true;
+          row.querySelector(".why").innerHTML =
+            '<span class="mark ' +
+            (isCorrect ? "ok" : "bad") +
+            '">' +
+            (isCorrect ? "Vrai" : "Faux") +
+            "</span> — " +
+            (exp.why || "");
+        });
+
+        itemScore.classList.add("on");
+        itemScore.innerHTML = ok
+          ? "<strong>OK</strong> — " + item.answer.join(", ")
+          : "<strong>À revoir</strong> — tu : " +
+            (selected.length ? selected.join(", ") : "(rien)") +
+            " · corrigé : " +
+            item.answer.join(", ");
+      }
+
+      function finish() {
+        var total = items.length;
+        var pct = total ? Math.round((correctCount / total) * 100) : 0;
+        document.getElementById("endScore").textContent = correctCount + " / " + total;
+        document.getElementById("endLabel").textContent = pct + " % de réussite";
+        document.getElementById("endSub").textContent = meta.title || entry.title || sujetId;
+        var fb = document.getElementById("endFb");
+        if (pct >= 85) fb.textContent = "Excellent blanc — tu tiens le rythme concours.";
+        else if (pct >= 65)
+          fb.textContent = "Bon niveau : revois les items ratés puis refais le sujet dans 48 h.";
+        else if (pct >= 40)
+          fb.textContent = "Base encore fragile en transversal — cible les chapitres faibles, puis reviens.";
+        else fb.textContent = "Priorise le cours sur les chapitres les plus ratés avant un nouveau blanc.";
+        show("end");
+      }
+
+      function boot() {
+        var file = entry.file || "sc01.js";
+        loadScript("./data/sujets/" + file + "?v=sc01b")
+          .then(function () {
+            var pack =
+              (window.PASS_SUJETS || {})[entry.id] || (window.PASS_SUJETS || {})[sujetId];
+            if (!pack || !pack.items || !pack.items.length) {
+              throw new Error("Pack vide pour " + sujetId);
+            }
+            meta = pack.meta || {};
+            items = pack.items;
+            titleEl.textContent = meta.title || entry.title || sujetId;
+            start();
+          })
+          .catch(function (e) {
+            bootMsg.textContent = String(e.message || e);
+          });
+      }
+
+      btnOk.addEventListener("click", validate);
+      btnNext.addEventListener("click", function () {
+        if (!revealed) return;
+        index += 1;
+        if (index >= items.length) finish();
+        else render();
+      });
+      btnQuit.addEventListener("click", function () {
+        if (confirm("Abandonner ce sujet ?")) location.href = "./sujets-complets.html";
+      });
+      btnAgain.addEventListener("click", start);
+
+      boot();
+    })();
   </script>
 </body>
 </html>
