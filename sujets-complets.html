@@ -43,8 +43,14 @@
         <p>36 QCM · 45 min · mix chapitres 01–11.</p>
         <p class="score-line empty" id="scoreSC01">Pas encore passé</p>
       </a>
+      <a class="rubric-row" href="./blanc-sc02.html?v=sc02a">
+        <h2>Blanc SC02 — UE5 Anatomie</h2>
+        <span class="badge">Dispo</span>
+        <p>36 QCM · 45 min · autre mix (sujets différents de SC01).</p>
+        <p class="score-line empty" id="scoreSC02">Pas encore passé</p>
+      </a>
       <div class="rubric-row" style="cursor:default">
-        <h2>Blanc SC02 → SC10</h2>
+        <h2>Blanc SC03 → SC10</h2>
         <span class="badge soon">Bientôt</span>
         <p>Emplacements réservés.</p>
       </div>
@@ -53,17 +59,22 @@
   <script>
   (function () {
     var KEY = "pass_sujets_scores_v1";
-    var el = document.getElementById("scoreSC01");
-    try {
-      var data = JSON.parse(localStorage.getItem(KEY) || "{}");
-      var row = data.SC01;
-      if (!row) return;
-      var m = Math.floor((row.elapsedSec || 0) / 60);
-      var s = (row.elapsedSec || 0) % 60;
-      var t = (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
-      el.classList.remove("empty");
-      el.textContent = "Dernier score : " + row.ok + " / " + row.n + " (" + row.pct + " %) · temps " + t;
-    } catch (e) {}
+    function fill(id, elId) {
+      var el = document.getElementById(elId);
+      if (!el) return;
+      try {
+        var data = JSON.parse(localStorage.getItem(KEY) || "{}");
+        var row = data[id];
+        if (!row) return;
+        var m = Math.floor((row.elapsedSec || 0) / 60);
+        var s = (row.elapsedSec || 0) % 60;
+        var t = (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+        el.classList.remove("empty");
+        el.textContent = "Dernier score : " + row.ok + " / " + row.n + " (" + row.pct + " %) · temps " + t;
+      } catch (e) {}
+    }
+    fill("SC01", "scoreSC01");
+    fill("SC02", "scoreSC02");
   })();
   </script>
 </body>
