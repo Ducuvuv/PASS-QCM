@@ -32,9 +32,7 @@
     .choice.bad{border-color:#fca5a5;background:var(--bad-bg)}
     .choice.user-miss{outline:2px dashed #f87171}
     .why{margin-top:.35rem;font-size:.88rem;color:var(--muted)}
-    .mark{font-weight:700}
-    .mark.ok{color:var(--ok)}
-    .mark.bad{color:var(--bad)}
+    .mark{font-weight:700}.mark.ok{color:var(--ok)}.mark.bad{color:var(--bad)}
     .actions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
     button,.btn{border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:999px;padding:.55rem 1rem;font:inherit;font-weight:650;cursor:pointer;text-decoration:none;display:inline-block}
     button.secondary,a.secondary{background:var(--card);color:var(--ink);border-color:var(--line)}
@@ -58,18 +56,14 @@
       · <a href="./entrainement.html">Entraînement</a>
     </p>
 
-    <section id="boot">
-      <h1>Chargement…</h1>
-      <p class="sub" id="bootMsg">Préparation du blanc.</p>
-    </section>
-
-    <section id="intro" class="hidden">
-      <h1 id="introTitle">Blanc</h1>
-      <p class="sub" id="introSub">36 questions · 45 minutes · corrigé à la fin.</p>
+    <section id="intro">
+      <h1 id="introTitle">Blanc SC01</h1>
+      <p class="sub" id="introSub">Chargement des questions…</p>
       <div class="card">
-        <p>Mode concours : pas de correction pendant l’épreuve. À la fin du temps ou des questions → score + corrigé complet.</p>
+        <p>Mode concours : 45 min, pas de corrigé pendant l’épreuve. À la fin → score + corrigé complet.</p>
+        <p id="loadStatus" class="sub">Préparation…</p>
         <div class="actions">
-          <button type="button" id="btnStart">Commencer le blanc (45 min)</button>
+          <button type="button" id="btnStart" disabled>Commencer le blanc (45 min)</button>
           <a class="secondary btn" href="./sujets-complets.html">Retour</a>
         </div>
       </div>
@@ -115,44 +109,17 @@
     </section>
   </main>
 
-  <!-- Store inline : plus de 404 possible -->
-  <script>
-  window.PASS_SujetsStore = {
-    KEY: "pass_sujets_scores_v1",
-    load: function () {
-      try {
-        var raw = localStorage.getItem(this.KEY);
-        return raw ? JSON.parse(raw) : {};
-      } catch (e) { return {}; }
-    },
-    saveScore: function (sujetId, p) {
-      var id = String(sujetId || "").toUpperCase();
-      var data = this.load();
-      data[id] = {
-        ok: p.ok || 0, n: p.n || 0, pct: p.pct || 0,
-        elapsedSec: p.elapsedSec || 0, timedOut: !!p.timedOut,
-        title: p.title || id, at: new Date().toISOString()
-      };
-      localStorage.setItem(this.KEY, JSON.stringify(data));
-      return data[id];
-    },
-    getScore: function (sujetId) {
-      return this.load()[String(sujetId || "").toUpperCase()] || null;
-    }
-  };
-  </script>
-  <!-- Données SC01 en dur (fiable) -->
-  <script src="./data/sujets/sc01.js?v=sc01d"></script>
   <script>
   (function () {
     var DURATION = 45 * 60;
+    var SCORE_KEY = "pass_sujets_scores_v1";
     var sujetId = (new URLSearchParams(location.search).get("id") || "SC01").toUpperCase();
 
-    var boot = document.getElementById("boot");
-    var bootMsg = document.getElementById("bootMsg");
     var intro = document.getElementById("intro");
     var quiz = document.getElementById("quiz");
     var end = document.getElementById("end");
+    var loadStatus = document.getElementById("loadStatus");
+    var btnStart = document.getElementById("btnStart");
     var titleEl = document.getElementById("title");
     var progress = document.getElementById("progress");
     var chLine = document.getElementById("chLine");
@@ -168,17 +135,28 @@
     var remaining = DURATION;
     var tickId = null;
     var finished = false;
+    var ready = false;
 
     function show(name) {
-      boot.classList.toggle("hidden", name !== "boot");
       intro.classList.toggle("hidden", name !== "intro");
       quiz.classList.toggle("hidden", name !== "quiz");
       end.classList.toggle("hidden", name !== "end");
     }
 
-    function fail(msg) {
-      bootMsg.innerHTML = '<span class="err">' + msg + '</span>';
-      show("boot");
+    function saveScore(payload) {
+      try {
+        var data = JSON.parse(localStorage.getItem(SCORE_KEY) || "{}");
+        data[sujetId] = {
+          ok: payload.ok || 0,
+          n: payload.n || 0,
+          pct: payload.pct || 0,
+          elapsedSec: payload.elapsedSec || 0,
+          timedOut: !!payload.timedOut,
+          title: payload.title || sujetId,
+          at: new Date().toISOString()
+        };
+        localStorage.setItem(SCORE_KEY, JSON.stringify(data));
+      } catch (e) {}
     }
 
     function norm(arr) {
@@ -316,14 +294,14 @@
       var pct = scored.n ? Math.round((scored.ok / scored.n) * 100) : 0;
       var elapsed = Math.max(0, DURATION - remaining);
 
-      window.PASS_SujetsStore.saveScore(sujetId, {
+      saveScore({
         ok: scored.ok, n: scored.n, pct: pct,
         elapsedSec: elapsed, timedOut: !!fromTimer,
         title: meta.title || sujetId
       });
 
       document.getElementById("endScore").textContent = scored.ok + " / " + scored.n;
-      document.getElementById("endLabel").textContent = pct + " % de reussite";
+      document.getElementById("endLabel").textContent = pct + " %";
       document.getElementById("endSub").textContent = meta.title || sujetId;
       document.getElementById("endTime").textContent = fromTimer
         ? "Temps ecoule (45:00)."
@@ -340,6 +318,7 @@
     }
 
     function startExam() {
+      if (!ready) return;
       finished = false;
       answers = {};
       index = 0;
@@ -349,25 +328,49 @@
       render();
     }
 
-    function boot() {
-      try {
-        var pack = (window.PASS_SUJETS || {})[sujetId] || (window.PASS_SUJETS || {}).SC01;
-        if (!pack || !pack.items || !pack.items.length) {
-          fail("Donnees du sujet introuvables (sc01.js). Recharge la page.");
-          return;
-        }
-        meta = pack.meta || {};
-        items = pack.items;
-        document.getElementById("introTitle").textContent = meta.title || sujetId;
-        document.getElementById("introSub").textContent =
-          items.length + " questions · 45 minutes · corrige a la fin.";
-        show("intro");
-      } catch (e) {
-        fail(String(e.message || e));
+    function onLoaded(pack) {
+      meta = pack.meta || {};
+      items = pack.items || [];
+      if (!items.length) {
+        loadStatus.innerHTML = '<span class="err">Sujet vide.</span>';
+        return;
       }
+      ready = true;
+      document.getElementById("introTitle").textContent = meta.title || sujetId;
+      document.getElementById("introSub").textContent =
+        items.length + " questions · 45 minutes · corrige a la fin.";
+      loadStatus.textContent = "Pret — " + items.length + " questions chargees.";
+      btnStart.disabled = false;
     }
 
-    document.getElementById("btnStart").onclick = startExam;
+    // Fetch JSON (fiable sur telephone) — fallback script.js
+    var urlJson = "./data/sujets/sc01.json?v=sc01e";
+    loadStatus.textContent = "Telechargement des questions…";
+    fetch(urlJson)
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
+      .then(onLoaded)
+      .catch(function (err1) {
+        loadStatus.textContent = "JSON KO, essai script… (" + err1.message + ")";
+        var s = document.createElement("script");
+        s.src = "./data/sujets/sc01.js?v=sc01e";
+        s.onload = function () {
+          var pack = (window.PASS_SUJETS || {})[sujetId] || (window.PASS_SUJETS || {}).SC01;
+          if (!pack) {
+            loadStatus.innerHTML = '<span class="err">Impossible de charger le sujet. Refresh.</span>';
+            return;
+          }
+          onLoaded(pack);
+        };
+        s.onerror = function () {
+          loadStatus.innerHTML = '<span class="err">Echec chargement sc01. Verifie le reseau.</span>';
+        };
+        document.head.appendChild(s);
+      });
+
+    btnStart.onclick = startExam;
     document.getElementById("btnPrev").onclick = function () {
       saveAnswers();
       if (index > 0) { index -= 1; render(); }
@@ -386,23 +389,6 @@
       if (confirm("Terminer et voir score + corrige ?")) finish(false);
     };
     document.getElementById("btnAgain").onclick = function () { show("intro"); };
-
-    // Si sc01.js n'a pas encore fini (rare), on retente
-    if ((window.PASS_SUJETS || {}).SC01) boot();
-    else {
-      bootMsg.textContent = "Chargement des questions…";
-      var tries = 0;
-      var wait = setInterval(function () {
-        tries += 1;
-        if ((window.PASS_SUJETS || {}).SC01) {
-          clearInterval(wait);
-          boot();
-        } else if (tries > 40) {
-          clearInterval(wait);
-          fail("Impossible de charger sc01.js. Verifie le reseau / refresh.");
-        }
-      }, 100);
-    }
   })();
   </script>
 </body>
