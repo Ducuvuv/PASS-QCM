@@ -4,115 +4,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sujet complet — PASS Sorbonne</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #f3efe6; --card: #faf7f0; --ink: #1a2a22; --muted: #5a6a60;
-      --line: #cfc6b4; --ok: #166534; --ok-bg: #dcfce7; --bad: #991b1b;
-      --bad-bg: #fee2e2; --accent: #1f5c45; --warn: #b45309;
+      --bg:#f3efe6; --card:#faf7f0; --ink:#1a2a22; --muted:#5a6a60;
+      --line:#cfc6b4; --ok:#166534; --ok-bg:#dcfce7; --bad:#991b1b;
+      --bad-bg:#fee2e2; --accent:#1f5c45; --warn:#b45309;
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0; font-family: "Manrope", system-ui, sans-serif; color: var(--ink); line-height: 1.45;
-      background: radial-gradient(90% 60% at 100% 0%, #e5ecdf, transparent 50%), var(--bg);
-    }
-    main { max-width: 42rem; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
-    h1 { font-size: 1.2rem; margin: 0 0 0.35rem; }
-    h2 { font-size: 1.05rem; margin: 0 0 0.5rem; }
-    .meta, .sub { color: var(--muted); font-size: 0.95rem; }
-    .sub { margin: 0 0 1rem; }
-    a { color: inherit; }
-    .hidden { display: none !important; }
-    .card {
-      background: var(--card); border: 1px solid var(--line); border-radius: 12px;
-      padding: 1.1rem 1.15rem; margin-bottom: 1rem;
-    }
-    .bar {
-      display: flex; flex-wrap: wrap; justify-content: space-between;
-      gap: 0.75rem; align-items: center; margin-bottom: 1rem;
-      position: sticky; top: 0; z-index: 5;
-      background: color-mix(in srgb, var(--bg) 92%, transparent);
-      backdrop-filter: blur(6px);
-      padding: 0.55rem 0;
-    }
-    .timer {
-      font-variant-numeric: tabular-nums; font-weight: 800; font-size: 1.15rem;
-      padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid var(--line);
-      background: var(--card); min-width: 5.5rem; text-align: center;
-    }
-    .timer.warn { color: var(--warn); border-color: #f59e0b; }
-    .timer.danger { color: var(--bad); border-color: #f87171; animation: pulse 1s infinite; }
-    @keyframes pulse { 50% { opacity: 0.65; } }
-    .stem { font-size: 1.05rem; margin: 0 0 1rem; }
-    .choice {
-      display: flex; gap: 0.65rem; align-items: flex-start;
-      padding: 0.65rem 0.7rem; border: 1px solid var(--line); border-radius: 10px;
-      margin-bottom: 0.5rem; cursor: pointer; background: var(--card);
-    }
-    .choice:has(input:checked) { border-color: var(--accent); background: #e3efe8; }
-    .choice.ok { border-color: #86efac; background: var(--ok-bg); }
-    .choice.bad { border-color: #fca5a5; background: var(--bad-bg); }
-    .choice.user-miss { outline: 2px dashed #f87171; }
-    .why { margin-top: 0.35rem; font-size: 0.88rem; color: var(--muted); }
-    .mark { font-weight: 700; }
-    .mark.ok { color: var(--ok); }
-    .mark.bad { color: var(--bad); }
-    .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-    button, .btn {
-      border: 1px solid var(--accent); background: var(--accent); color: #fff;
-      border-radius: 999px; padding: 0.55rem 1rem; font: inherit; font-weight: 650;
-      cursor: pointer; text-decoration: none; display: inline-block;
-    }
-    button.secondary, a.secondary {
-      background: var(--card); color: var(--ink); border-color: var(--line);
-    }
-    button:disabled { opacity: 0.45; cursor: not-allowed; }
-    .chip {
-      display: inline-block; font-size: 0.75rem; padding: 0.15rem 0.45rem;
-      border-radius: 6px; background: #e5ecdf; color: var(--accent);
-    }
-    .big { font-size: 2.2rem; font-weight: 700; margin: 0.25rem 0 0.5rem; }
-    .nav-dots {
-      display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.75rem 0 0;
-    }
-    .nav-dots button {
-      min-width: 2rem; padding: 0.25rem 0.4rem; border-radius: 8px;
-      font-size: 0.8rem; font-weight: 700;
-      background: var(--card); color: var(--ink); border: 1px solid var(--line);
-    }
-    .nav-dots button.on { border-color: var(--accent); background: #e3efe8; }
-    .nav-dots button.filled { background: #dbe7df; }
-    .corrige-item { margin-bottom: 1.25rem; }
-    .corrige-item h3 { font-size: 0.95rem; margin: 0 0 0.5rem; }
-    .user-ans { font-size: 0.9rem; color: var(--muted); margin: 0.35rem 0 0.5rem; }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Manrope,system-ui,sans-serif;color:var(--ink);line-height:1.45;background:radial-gradient(90% 60% at 100% 0%,#e5ecdf,transparent 50%),var(--bg)}
+    main{max-width:42rem;margin:0 auto;padding:1.25rem 1rem 3rem}
+    h1{font-size:1.2rem;margin:0 0 .35rem}
+    h2{font-size:1.05rem;margin:0 0 .5rem}
+    .meta,.sub{color:var(--muted);font-size:.95rem}
+    .sub{margin:0 0 1rem}
+    a{color:inherit}
+    .hidden{display:none!important}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1.15rem;margin-bottom:1rem}
+    .bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem;align-items:center;margin-bottom:1rem;position:sticky;top:0;z-index:5;background:rgba(243,239,230,.94);padding:.55rem 0}
+    .timer{font-variant-numeric:tabular-nums;font-weight:800;font-size:1.15rem;padding:.3rem .7rem;border-radius:999px;border:1px solid var(--line);background:var(--card);min-width:5.5rem;text-align:center}
+    .timer.warn{color:var(--warn);border-color:#f59e0b}
+    .timer.danger{color:var(--bad);border-color:#f87171}
+    .stem{font-size:1.05rem;margin:0 0 1rem}
+    .choice{display:flex;gap:.65rem;align-items:flex-start;padding:.65rem .7rem;border:1px solid var(--line);border-radius:10px;margin-bottom:.5rem;cursor:pointer;background:var(--card)}
+    .choice:has(input:checked){border-color:var(--accent);background:#e3efe8}
+    .choice.ok{border-color:#86efac;background:var(--ok-bg)}
+    .choice.bad{border-color:#fca5a5;background:var(--bad-bg)}
+    .choice.user-miss{outline:2px dashed #f87171}
+    .why{margin-top:.35rem;font-size:.88rem;color:var(--muted)}
+    .mark{font-weight:700}
+    .mark.ok{color:var(--ok)}
+    .mark.bad{color:var(--bad)}
+    .actions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+    button,.btn{border:1px solid var(--accent);background:var(--accent);color:#fff;border-radius:999px;padding:.55rem 1rem;font:inherit;font-weight:650;cursor:pointer;text-decoration:none;display:inline-block}
+    button.secondary,a.secondary{background:var(--card);color:var(--ink);border-color:var(--line)}
+    button:disabled{opacity:.45;cursor:not-allowed}
+    .chip{display:inline-block;font-size:.75rem;padding:.15rem .45rem;border-radius:6px;background:#e5ecdf;color:var(--accent)}
+    .big{font-size:2.2rem;font-weight:700;margin:.25rem 0 .5rem}
+    .nav-dots{display:flex;flex-wrap:wrap;gap:.3rem;margin:.75rem 0 0}
+    .nav-dots button{min-width:2rem;padding:.25rem .4rem;border-radius:8px;font-size:.8rem;font-weight:700;background:var(--card);color:var(--ink);border:1px solid var(--line)}
+    .nav-dots button.on{border-color:var(--accent);background:#e3efe8}
+    .nav-dots button.filled{background:#dbe7df}
+    .corrige-item{margin-bottom:1.25rem}
+    .corrige-item h3{font-size:.95rem;margin:0 0 .5rem}
+    .user-ans{font-size:.9rem;color:var(--muted);margin:.35rem 0 .5rem}
+    .err{color:var(--bad);font-weight:650}
   </style>
 </head>
 <body>
   <main>
-    <p class="meta" style="margin:0 0 0.75rem">
+    <p class="meta" style="margin:0 0 .75rem">
       <a href="./sujets-complets.html">← Sujets complets</a>
       · <a href="./entrainement.html">Entraînement</a>
     </p>
 
     <section id="boot">
       <h1>Chargement…</h1>
-      <p class="sub" id="bootMsg">Un instant.</p>
+      <p class="sub" id="bootMsg">Préparation du blanc.</p>
     </section>
 
     <section id="intro" class="hidden">
       <h1 id="introTitle">Blanc</h1>
-      <p class="sub" id="introSub">36 questions · 45 minutes · corrigé à la fin seulement.</p>
+      <p class="sub" id="introSub">36 questions · 45 minutes · corrigé à la fin.</p>
       <div class="card">
-        <p style="margin:0 0 0.75rem">Mode concours : pas de correction pendant l’épreuve. À la fin du temps ou après la dernière question, tu obtiens le score + le corrigé complet.</p>
-        <ul class="sub" style="margin:0 0 1rem; padding-left:1.1rem">
-          <li>Chrono : <strong>45:00</strong></li>
-          <li>Questions : multi-correct A–E</li>
-          <li>Score enregistré sur le menu Sujets complets</li>
-        </ul>
+        <p>Mode concours : pas de correction pendant l’épreuve. À la fin du temps ou des questions → score + corrigé complet.</p>
         <div class="actions">
-          <button type="button" id="btnStart">Commencer le blanc</button>
+          <button type="button" id="btnStart">Commencer le blanc (45 min)</button>
           <a class="secondary btn" href="./sujets-complets.html">Retour</a>
         </div>
       </div>
@@ -124,13 +81,13 @@
           <h1 id="title" style="margin:0">Sujet</h1>
           <div class="meta" id="progress">—</div>
         </div>
-        <div class="timer" id="timer" aria-live="polite">45:00</div>
+        <div class="timer" id="timer">45:00</div>
       </div>
-      <div class="card" id="panel">
-        <p class="meta" id="chLine" style="margin:0 0 0.5rem"></p>
+      <div class="card">
+        <p class="meta" id="chLine" style="margin:0 0 .5rem"></p>
         <p class="stem" id="stem"></p>
         <div id="choices"></div>
-        <div class="nav-dots" id="dots" aria-label="Navigation questions"></div>
+        <div class="nav-dots" id="dots"></div>
         <div class="actions">
           <button type="button" class="secondary" id="btnPrev">Précédent</button>
           <button type="button" id="btnNext">Suivant</button>
@@ -154,333 +111,299 @@
         </div>
       </div>
       <h2 style="margin-top:1.5rem">Corrigé complet</h2>
-      <p class="sub">Ta réponse vs corrigé, question par question.</p>
       <div id="corrige"></div>
     </section>
   </main>
 
-  <script src="./data/sujets/catalog.js?v=sc01c"></script>
-  <script src="./js/sujets-store.js?v=sc01c"></script>
+  <!-- Store inline : plus de 404 possible -->
   <script>
-    (function () {
-      var DURATION_SEC = 45 * 60;
-      var sujetId = (new URLSearchParams(location.search).get("id") || "SC01").toUpperCase();
-      var catalog = window.PASS_SUJET_CATALOG || [];
-      var entry = null;
-      for (var i = 0; i < catalog.length; i++) {
-        if (String(catalog[i].id).toUpperCase() === sujetId) {
-          entry = catalog[i];
-          break;
-        }
-      }
-      if (!entry) entry = { id: "SC01", title: "Blanc SC01", file: "sc01.js", n: 36 };
+  window.PASS_SujetsStore = {
+    KEY: "pass_sujets_scores_v1",
+    load: function () {
+      try {
+        var raw = localStorage.getItem(this.KEY);
+        return raw ? JSON.parse(raw) : {};
+      } catch (e) { return {}; }
+    },
+    saveScore: function (sujetId, p) {
+      var id = String(sujetId || "").toUpperCase();
+      var data = this.load();
+      data[id] = {
+        ok: p.ok || 0, n: p.n || 0, pct: p.pct || 0,
+        elapsedSec: p.elapsedSec || 0, timedOut: !!p.timedOut,
+        title: p.title || id, at: new Date().toISOString()
+      };
+      localStorage.setItem(this.KEY, JSON.stringify(data));
+      return data[id];
+    },
+    getScore: function (sujetId) {
+      return this.load()[String(sujetId || "").toUpperCase()] || null;
+    }
+  };
+  </script>
+  <!-- Données SC01 en dur (fiable) -->
+  <script src="./data/sujets/sc01.js?v=sc01d"></script>
+  <script>
+  (function () {
+    var DURATION = 45 * 60;
+    var sujetId = (new URLSearchParams(location.search).get("id") || "SC01").toUpperCase();
 
-      var boot = document.getElementById("boot");
-      var bootMsg = document.getElementById("bootMsg");
-      var intro = document.getElementById("intro");
-      var quiz = document.getElementById("quiz");
-      var end = document.getElementById("end");
-      var titleEl = document.getElementById("title");
-      var progress = document.getElementById("progress");
-      var chLine = document.getElementById("chLine");
-      var stem = document.getElementById("stem");
-      var choices = document.getElementById("choices");
-      var dots = document.getElementById("dots");
-      var timerEl = document.getElementById("timer");
-      var btnStart = document.getElementById("btnStart");
-      var btnPrev = document.getElementById("btnPrev");
-      var btnNext = document.getElementById("btnNext");
-      var btnFinish = document.getElementById("btnFinish");
-      var btnAgain = document.getElementById("btnAgain");
+    var boot = document.getElementById("boot");
+    var bootMsg = document.getElementById("bootMsg");
+    var intro = document.getElementById("intro");
+    var quiz = document.getElementById("quiz");
+    var end = document.getElementById("end");
+    var titleEl = document.getElementById("title");
+    var progress = document.getElementById("progress");
+    var chLine = document.getElementById("chLine");
+    var stem = document.getElementById("stem");
+    var choices = document.getElementById("choices");
+    var dots = document.getElementById("dots");
+    var timerEl = document.getElementById("timer");
 
-      var items = [];
-      var meta = {};
-      var index = 0;
-      var answers = {}; // qIndex -> ["A","C"]
-      var remaining = DURATION_SEC;
-      var tickId = null;
-      var finished = false;
-      var startedAt = 0;
+    var items = [];
+    var meta = {};
+    var index = 0;
+    var answers = {};
+    var remaining = DURATION;
+    var tickId = null;
+    var finished = false;
 
-      function show(which) {
-        boot.classList.toggle("hidden", which !== "boot");
-        intro.classList.toggle("hidden", which !== "intro");
-        quiz.classList.toggle("hidden", which !== "quiz");
-        end.classList.toggle("hidden", which !== "end");
-      }
+    function show(name) {
+      boot.classList.toggle("hidden", name !== "boot");
+      intro.classList.toggle("hidden", name !== "intro");
+      quiz.classList.toggle("hidden", name !== "quiz");
+      end.classList.toggle("hidden", name !== "end");
+    }
 
-      function norm(arr) {
-        return (arr || []).slice().map(String).sort().join(",");
-      }
+    function fail(msg) {
+      bootMsg.innerHTML = '<span class="err">' + msg + '</span>';
+      show("boot");
+    }
 
-      function loadScript(src) {
-        return new Promise(function (resolve, reject) {
-          var s = document.createElement("script");
-          s.src = src;
-          s.onload = resolve;
-          s.onerror = function () {
-            reject(new Error("Impossible de charger " + src));
-          };
-          document.head.appendChild(s);
-        });
-      }
+    function norm(arr) {
+      return (arr || []).slice().map(String).sort().join(",");
+    }
 
-      function formatTime(sec) {
-        var m = Math.floor(sec / 60);
-        var s = sec % 60;
-        return String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
-      }
+    function fmt(sec) {
+      var m = Math.floor(sec / 60), s = sec % 60;
+      return (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+    }
 
-      function updateTimerUi() {
-        timerEl.textContent = formatTime(remaining);
-        timerEl.classList.toggle("warn", remaining <= 5 * 60 && remaining > 60);
-        timerEl.classList.toggle("danger", remaining <= 60);
-      }
+    function updateTimer() {
+      timerEl.textContent = fmt(remaining);
+      timerEl.className = "timer" + (remaining <= 60 ? " danger" : remaining <= 300 ? " warn" : "");
+    }
 
-      function stopTimer() {
-        if (tickId) {
-          clearInterval(tickId);
-          tickId = null;
-        }
-      }
+    function stopTimer() {
+      if (tickId) { clearInterval(tickId); tickId = null; }
+    }
 
-      function startTimer() {
-        stopTimer();
-        remaining = DURATION_SEC;
-        updateTimerUi();
-        tickId = setInterval(function () {
-          remaining -= 1;
-          if (remaining <= 0) {
-            remaining = 0;
-            updateTimerUi();
-            stopTimer();
-            finish(true);
-            return;
-          }
-          updateTimerUi();
-        }, 1000);
-      }
-
-      function saveCurrentAnswers() {
-        var selected = [];
-        choices.querySelectorAll("input:checked").forEach(function (el) {
-          selected.push(el.value);
-        });
-        answers[index] = selected;
-      }
-
-      function buildDots() {
-        dots.innerHTML = "";
-        for (var i = 0; i < items.length; i++) {
-          (function (qi) {
-            var b = document.createElement("button");
-            b.type = "button";
-            b.textContent = String(qi + 1);
-            if (qi === index) b.classList.add("on");
-            if ((answers[qi] || []).length) b.classList.add("filled");
-            b.addEventListener("click", function () {
-              saveCurrentAnswers();
-              index = qi;
-              render();
-            });
-            dots.appendChild(b);
-          })(i);
-        }
-      }
-
-      function render() {
-        var item = items[index];
-        if (!item) return;
-        progress.textContent = index + 1 + " / " + items.length;
-        chLine.innerHTML = '<span class="chip">ch.' + item.chapter + "</span>";
-        stem.textContent = item.stem;
-        choices.innerHTML = "";
-        var selected = answers[index] || [];
-        ["A", "B", "C", "D", "E"].forEach(function (letter) {
-          var label = document.createElement("label");
-          label.className = "choice";
-          var checked = selected.indexOf(letter) >= 0 ? " checked" : "";
-          label.innerHTML =
-            '<input type="checkbox" value="' +
-            letter +
-            '"' +
-            checked +
-            " />" +
-            "<span><strong>" +
-            letter +
-            ".</strong> " +
-            (item.choices[letter] || "") +
-            "</span>";
-          choices.appendChild(label);
-        });
-        btnPrev.disabled = index === 0;
-        btnNext.textContent = index === items.length - 1 ? "Terminer" : "Suivant";
-        buildDots();
-      }
-
-      function scoreAll() {
-        var ok = 0;
-        var detail = [];
-        for (var i = 0; i < items.length; i++) {
-          var item = items[i];
-          var user = answers[i] || [];
-          var good = norm(user) === norm(item.answer || []);
-          if (good) ok += 1;
-          detail.push({ i: i, item: item, user: user, ok: good });
-        }
-        return { ok: ok, n: items.length, detail: detail };
-      }
-
-      function renderCorrige(detail) {
-        var root = document.getElementById("corrige");
-        root.innerHTML = "";
-        detail.forEach(function (d) {
-          var item = d.item;
-          var box = document.createElement("div");
-          box.className = "card corrige-item";
-          var head =
-            "<h3>Q" +
-            (d.i + 1) +
-            " · ch." +
-            item.chapter +
-            ' · <span class="mark ' +
-            (d.ok ? "ok" : "bad") +
-            '">' +
-            (d.ok ? "OK" : "À revoir") +
-            "</span></h3>";
-          var stemHtml = "<p class=\"stem\">" + item.stem + "</p>";
-          var userHtml =
-            '<p class="user-ans">Ta réponse : <strong>' +
-            (d.user.length ? d.user.join(", ") : "(rien)") +
-            "</strong> · Corrigé : <strong>" +
-            (item.answer || []).join(", ") +
-            "</strong></p>";
-          var choicesHtml = "";
-          ["A", "B", "C", "D", "E"].forEach(function (letter) {
-            var exp = (item.explanations || {})[letter] || {};
-            var isCorrect = !!exp.correct;
-            var userPicked = d.user.indexOf(letter) >= 0;
-            var cls = "choice " + (isCorrect ? "ok" : "bad");
-            if (userPicked && !isCorrect) cls += " user-miss";
-            choicesHtml +=
-              '<div class="' +
-              cls +
-              '"><span><strong>' +
-              letter +
-              ".</strong> " +
-              (item.choices[letter] || "") +
-              '<div class="why"><span class="mark ' +
-              (isCorrect ? "ok" : "bad") +
-              '">' +
-              (isCorrect ? "Vrai" : "Faux") +
-              "</span> — " +
-              (exp.why || "") +
-              (userPicked ? " · <em>tu as coché</em>" : "") +
-              "</div></span></div>";
-          });
-          box.innerHTML = head + stemHtml + userHtml + choicesHtml;
-          root.appendChild(box);
-        });
-      }
-
-      function finish(fromTimer) {
-        if (finished) return;
-        finished = true;
-        saveCurrentAnswers();
-        stopTimer();
-
-        var scored = scoreAll();
-        var pct = scored.n ? Math.round((scored.ok / scored.n) * 100) : 0;
-        var elapsed = Math.max(0, DURATION_SEC - remaining);
-
-        if (window.PASS_SujetsStore) {
-          window.PASS_SujetsStore.saveScore(sujetId, {
-            ok: scored.ok,
-            n: scored.n,
-            pct: pct,
-            elapsedSec: elapsed,
-            timedOut: !!fromTimer,
-            title: meta.title || entry.title || sujetId,
-          });
-        }
-
-        document.getElementById("endScore").textContent = scored.ok + " / " + scored.n;
-        document.getElementById("endLabel").textContent = pct + " % de réussite";
-        document.getElementById("endSub").textContent = meta.title || entry.title || sujetId;
-        document.getElementById("endTime").textContent = fromTimer
-          ? "Temps écoulé (45:00)."
-          : "Temps utilisé : " + formatTime(elapsed) + " / 45:00";
-        var fb = document.getElementById("endFb");
-        if (pct >= 85) fb.textContent = "Excellent blanc — rythme concours tenu.";
-        else if (pct >= 65) fb.textContent = "Bon niveau : revois surtout les Q ratées du corrigé ci-dessous.";
-        else if (pct >= 40) fb.textContent = "Base encore fragile en transversal — cible les chapitres faibles.";
-        else fb.textContent = "Priorise le cours avant de retenter ce blanc.";
-
-        renderCorrige(scored.detail);
-        show("end");
-        window.scrollTo(0, 0);
-      }
-
-      function startExam() {
-        finished = false;
-        answers = {};
-        index = 0;
-        startedAt = Date.now();
-        titleEl.textContent = meta.title || entry.title || sujetId;
-        show("quiz");
-        startTimer();
-        render();
-      }
-
-      function boot() {
-        var file = entry.file || "sc01.js";
-        loadScript("./data/sujets/" + file + "?v=sc01c")
-          .then(function () {
-            var pack =
-              (window.PASS_SUJETS || {})[entry.id] || (window.PASS_SUJETS || {})[sujetId];
-            if (!pack || !pack.items || !pack.items.length) {
-              throw new Error("Pack vide pour " + sujetId);
-            }
-            meta = pack.meta || {};
-            items = pack.items;
-            document.getElementById("introTitle").textContent =
-              meta.title || entry.title || sujetId;
-            document.getElementById("introSub").textContent =
-              items.length + " questions · 45 minutes · corrigé à la fin seulement.";
-            show("intro");
-          })
-          .catch(function (e) {
-            bootMsg.textContent = String(e.message || e);
-          });
-      }
-
-      btnStart.addEventListener("click", startExam);
-      btnPrev.addEventListener("click", function () {
-        saveCurrentAnswers();
-        if (index > 0) {
-          index -= 1;
-          render();
-        }
-      });
-      btnNext.addEventListener("click", function () {
-        saveCurrentAnswers();
-        if (index >= items.length - 1) {
-          if (confirm("Terminer le blanc et voir le score + corrigé ?")) finish(false);
+    function startTimer() {
+      stopTimer();
+      remaining = DURATION;
+      updateTimer();
+      tickId = setInterval(function () {
+        remaining -= 1;
+        if (remaining <= 0) {
+          remaining = 0;
+          updateTimer();
+          stopTimer();
+          finish(true);
           return;
         }
-        index += 1;
-        render();
+        updateTimer();
+      }, 1000);
+    }
+
+    function saveAnswers() {
+      var sel = [];
+      choices.querySelectorAll("input:checked").forEach(function (el) { sel.push(el.value); });
+      answers[index] = sel;
+    }
+
+    function buildDots() {
+      dots.innerHTML = "";
+      for (var i = 0; i < items.length; i++) {
+        (function (qi) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.textContent = String(qi + 1);
+          if (qi === index) b.classList.add("on");
+          if ((answers[qi] || []).length) b.classList.add("filled");
+          b.onclick = function () { saveAnswers(); index = qi; render(); };
+          dots.appendChild(b);
+        })(i);
+      }
+    }
+
+    function render() {
+      var item = items[index];
+      if (!item) return;
+      progress.textContent = (index + 1) + " / " + items.length;
+      chLine.innerHTML = '<span class="chip">ch.' + item.chapter + "</span>";
+      stem.textContent = item.stem;
+      choices.innerHTML = "";
+      var selected = answers[index] || [];
+      ["A", "B", "C", "D", "E"].forEach(function (letter) {
+        var label = document.createElement("label");
+        label.className = "choice";
+        var checked = selected.indexOf(letter) >= 0 ? " checked" : "";
+        label.innerHTML =
+          '<input type="checkbox" value="' + letter + '"' + checked + " />" +
+          "<span><strong>" + letter + ".</strong> " + (item.choices[letter] || "") + "</span>";
+        choices.appendChild(label);
       });
-      btnFinish.addEventListener("click", function () {
-        saveCurrentAnswers();
-        if (confirm("Terminer le blanc et voir le score + corrigé ?")) finish(false);
+      document.getElementById("btnPrev").disabled = index === 0;
+      document.getElementById("btnNext").textContent =
+        index === items.length - 1 ? "Terminer" : "Suivant";
+      buildDots();
+    }
+
+    function scoreAll() {
+      var ok = 0, detail = [];
+      for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+        var user = answers[i] || [];
+        var good = norm(user) === norm(item.answer || []);
+        if (good) ok += 1;
+        detail.push({ i: i, item: item, user: user, ok: good });
+      }
+      return { ok: ok, n: items.length, detail: detail };
+    }
+
+    function renderCorrige(detail) {
+      var root = document.getElementById("corrige");
+      root.innerHTML = "";
+      detail.forEach(function (d) {
+        var item = d.item;
+        var box = document.createElement("div");
+        box.className = "card corrige-item";
+        var html =
+          "<h3>Q" + (d.i + 1) + " · ch." + item.chapter +
+          ' · <span class="mark ' + (d.ok ? "ok" : "bad") + '">' +
+          (d.ok ? "OK" : "A revoir") + "</span></h3>" +
+          '<p class="stem">' + item.stem + "</p>" +
+          '<p class="user-ans">Ta reponse : <strong>' +
+          (d.user.length ? d.user.join(", ") : "(rien)") +
+          "</strong> · Corrige : <strong>" + (item.answer || []).join(", ") +
+          "</strong></p>";
+        ["A", "B", "C", "D", "E"].forEach(function (letter) {
+          var exp = (item.explanations || {})[letter] || {};
+          var isCorrect = !!exp.correct;
+          var userPicked = d.user.indexOf(letter) >= 0;
+          var cls = "choice " + (isCorrect ? "ok" : "bad");
+          if (userPicked && !isCorrect) cls += " user-miss";
+          html +=
+            '<div class="' + cls + '"><span><strong>' + letter + ".</strong> " +
+            (item.choices[letter] || "") +
+            '<div class="why"><span class="mark ' + (isCorrect ? "ok" : "bad") + '">' +
+            (isCorrect ? "Vrai" : "Faux") + "</span> — " + (exp.why || "") +
+            (userPicked ? " · (tu as coche)" : "") +
+            "</div></span></div>";
+        });
+        box.innerHTML = html;
+        root.appendChild(box);
       });
-      btnAgain.addEventListener("click", function () {
-        show("intro");
+    }
+
+    function finish(fromTimer) {
+      if (finished) return;
+      finished = true;
+      saveAnswers();
+      stopTimer();
+      var scored = scoreAll();
+      var pct = scored.n ? Math.round((scored.ok / scored.n) * 100) : 0;
+      var elapsed = Math.max(0, DURATION - remaining);
+
+      window.PASS_SujetsStore.saveScore(sujetId, {
+        ok: scored.ok, n: scored.n, pct: pct,
+        elapsedSec: elapsed, timedOut: !!fromTimer,
+        title: meta.title || sujetId
       });
 
-      boot();
-    })();
+      document.getElementById("endScore").textContent = scored.ok + " / " + scored.n;
+      document.getElementById("endLabel").textContent = pct + " % de reussite";
+      document.getElementById("endSub").textContent = meta.title || sujetId;
+      document.getElementById("endTime").textContent = fromTimer
+        ? "Temps ecoule (45:00)."
+        : "Temps utilise : " + fmt(elapsed) + " / 45:00";
+      document.getElementById("endFb").textContent =
+        pct >= 85 ? "Excellent blanc." :
+        pct >= 65 ? "Bon niveau — revois les Q ratees ci-dessous." :
+        pct >= 40 ? "Base fragile en transversal." :
+        "Priorise le cours avant de retenter.";
+
+      renderCorrige(scored.detail);
+      show("end");
+      window.scrollTo(0, 0);
+    }
+
+    function startExam() {
+      finished = false;
+      answers = {};
+      index = 0;
+      titleEl.textContent = meta.title || sujetId;
+      show("quiz");
+      startTimer();
+      render();
+    }
+
+    function boot() {
+      try {
+        var pack = (window.PASS_SUJETS || {})[sujetId] || (window.PASS_SUJETS || {}).SC01;
+        if (!pack || !pack.items || !pack.items.length) {
+          fail("Donnees du sujet introuvables (sc01.js). Recharge la page.");
+          return;
+        }
+        meta = pack.meta || {};
+        items = pack.items;
+        document.getElementById("introTitle").textContent = meta.title || sujetId;
+        document.getElementById("introSub").textContent =
+          items.length + " questions · 45 minutes · corrige a la fin.";
+        show("intro");
+      } catch (e) {
+        fail(String(e.message || e));
+      }
+    }
+
+    document.getElementById("btnStart").onclick = startExam;
+    document.getElementById("btnPrev").onclick = function () {
+      saveAnswers();
+      if (index > 0) { index -= 1; render(); }
+    };
+    document.getElementById("btnNext").onclick = function () {
+      saveAnswers();
+      if (index >= items.length - 1) {
+        if (confirm("Terminer et voir score + corrige ?")) finish(false);
+        return;
+      }
+      index += 1;
+      render();
+    };
+    document.getElementById("btnFinish").onclick = function () {
+      saveAnswers();
+      if (confirm("Terminer et voir score + corrige ?")) finish(false);
+    };
+    document.getElementById("btnAgain").onclick = function () { show("intro"); };
+
+    // Si sc01.js n'a pas encore fini (rare), on retente
+    if ((window.PASS_SUJETS || {}).SC01) boot();
+    else {
+      bootMsg.textContent = "Chargement des questions…";
+      var tries = 0;
+      var wait = setInterval(function () {
+        tries += 1;
+        if ((window.PASS_SUJETS || {}).SC01) {
+          clearInterval(wait);
+          boot();
+        } else if (tries > 40) {
+          clearInterval(wait);
+          fail("Impossible de charger sc01.js. Verifie le reseau / refresh.");
+        }
+      }, 100);
+    }
+  })();
   </script>
 </body>
 </html>

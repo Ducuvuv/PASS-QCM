@@ -1,25 +1,19 @@
-/* Scores des sujets complets — localStorage, pas de serveur */
-(function (global) {
+/* Scores sujets complets — localStorage */
+window.PASS_SujetsStore = (function () {
   var KEY = "pass_sujets_scores_v1";
-
   function load() {
     try {
       var raw = localStorage.getItem(KEY);
       if (!raw) return {};
       var data = JSON.parse(raw);
       return data && typeof data === "object" ? data : {};
-    } catch (_) {
+    } catch (e) {
       return {};
     }
   }
-
-  function saveAll(data) {
-    localStorage.setItem(KEY, JSON.stringify(data));
-  }
-
   function saveScore(sujetId, payload) {
     var id = String(sujetId || "").toUpperCase();
-    if (!id) return load();
+    if (!id) return null;
     var data = load();
     data[id] = {
       ok: payload.ok || 0,
@@ -28,20 +22,13 @@
       elapsedSec: payload.elapsedSec || 0,
       timedOut: !!payload.timedOut,
       title: payload.title || id,
-      at: new Date().toISOString(),
+      at: new Date().toISOString()
     };
-    saveAll(data);
+    localStorage.setItem(KEY, JSON.stringify(data));
     return data[id];
   }
-
   function getScore(sujetId) {
-    var id = String(sujetId || "").toUpperCase();
-    return load()[id] || null;
+    return load()[String(sujetId || "").toUpperCase()] || null;
   }
-
-  global.PASS_SujetsStore = {
-    load: load,
-    saveScore: saveScore,
-    getScore: getScore,
-  };
-})(window);
+  return { load: load, saveScore: saveScore, getScore: getScore };
+})();
