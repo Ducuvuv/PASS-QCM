@@ -2873,7 +2873,6 @@ window.PASS_ITEMS = [
       "E": "la cavite pleurale contient directement le coeur"
     },
     "answer": [
-      "B",
       "D"
     ],
     "explanations": {
@@ -2882,8 +2881,8 @@ window.PASS_ITEMS = [
         "why": "Inexact pour cavites"
       },
       "B": {
-        "correct": true,
-        "why": "Conforme au cours sur cavites"
+        "correct": false,
+        "why": "Le diaphragme separe les cavites thoracique et abdominale ; l'abdomen n'est pas le prolongement de la cavite thoracique."
       },
       "C": {
         "correct": false,
@@ -3482,8 +3481,7 @@ window.PASS_ITEMS = [
     },
     "answer": [
       "B",
-      "C",
-      "E"
+      "C"
     ],
     "explanations": {
       "A": {
@@ -3503,8 +3501,8 @@ window.PASS_ITEMS = [
         "why": "Inexact pour cavites"
       },
       "E": {
-        "correct": true,
-        "why": "Conforme au cours sur cavites"
+        "correct": false,
+        "why": "Le diaphragme separe les cavites thoracique et abdominale ; l'abdomen n'est pas le prolongement de la cavite thoracique."
       }
     },
     "tags": [
@@ -3887,8 +3885,7 @@ window.PASS_ITEMS = [
       "E": "le mediastin est un segment de l'intestin grele"
     },
     "answer": [
-      "B",
-      "D"
+      "B"
     ],
     "explanations": {
       "A": {
@@ -3904,8 +3901,8 @@ window.PASS_ITEMS = [
         "why": "Inexact pour cavites"
       },
       "D": {
-        "correct": true,
-        "why": "Conforme au cours sur cavites"
+        "correct": false,
+        "why": "Le diaphragme separe les cavites thoracique et abdominale ; l'abdomen n'est pas le prolongement de la cavite thoracique."
       },
       "E": {
         "correct": false,
@@ -4293,7 +4290,6 @@ window.PASS_ITEMS = [
       "E": "le mediastin est entre les deux cavites pleurales"
     },
     "answer": [
-      "B",
       "D",
       "E"
     ],
@@ -4303,8 +4299,8 @@ window.PASS_ITEMS = [
         "why": "Inexact pour cavites"
       },
       "B": {
-        "correct": true,
-        "why": "Conforme au cours sur cavites"
+        "correct": false,
+        "why": "Le diaphragme separe les cavites thoracique et abdominale ; l'abdomen n'est pas le prolongement de la cavite thoracique."
       },
       "C": {
         "correct": false,
