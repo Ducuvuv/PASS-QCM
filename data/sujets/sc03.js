@@ -1,0 +1,1970 @@
+window.PASS_SUJETS = window.PASS_SUJETS || {};
+window.PASS_SUJETS['SC03'] = {
+  "meta": {
+    "id": "SC03",
+    "title": "Blanc UE5 Anatomie — Sujet généré 03",
+    "subject": "anatomie",
+    "source": "generated",
+    "style_ref": "UE5_Anatomie_Session_2025-2026",
+    "n_questions": 36,
+    "notes": "Troisième blanc transversal original (différent de SC01 et SC02). Calibré sur le style session 2025-2026 + notions ⭐/P1 des cours."
+  },
+  "items": [
+    {
+      "id": "GEN-ANAT-SC03-001",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "01",
+      "stem": "Parmi les propositions suivantes concernant les mouvements, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "la flexion diminue en général l’angle entre deux segments",
+        "B": "l’extension augmente en général cet angle",
+        "C": "l’abduction éloigne un membre du plan médian",
+        "D": "l’adduction rapproche un membre du plan médian",
+        "E": "la pronation est un mouvement exclusif de la hanche"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "flexion = ↓ angle"
+        },
+        "B": {
+          "correct": true,
+          "why": "extension = ↑ angle"
+        },
+        "C": {
+          "correct": true,
+          "why": "abduction = éloignement du plan médian"
+        },
+        "D": {
+          "correct": true,
+          "why": "adduction = rapprochement"
+        },
+        "E": {
+          "correct": false,
+          "why": "pronation / supination = avant-bras (et pied)"
+        }
+      },
+      "tags": [
+        "mouvements",
+        "abduction",
+        "P1"
+      ],
+      "course_ref": "01_Introduction_anatomie_generale#mouvements",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q01",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 1
+    },
+    {
+      "id": "GEN-ANAT-SC03-002",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "01",
+      "stem": "Parmi les propositions suivantes concernant organe, système et appareil, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "un organe est une association de tissus concourant à une fonction",
+        "B": "un système regroupe des organes de même nature tissulaire dominante",
+        "C": "un appareil regroupe des systèmes concourant à une même fonction",
+        "D": "le système nerveux est un exemple de système",
+        "E": "région anatomique et appareil sont strictement synonymes"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "définition d’organe"
+        },
+        "B": {
+          "correct": true,
+          "why": "système = même « type » (ex. nerveux)"
+        },
+        "C": {
+          "correct": true,
+          "why": "appareil = fonction commune"
+        },
+        "D": {
+          "correct": true,
+          "why": "SNC/SNP = système nerveux"
+        },
+        "E": {
+          "correct": false,
+          "why": "région ≠ appareil"
+        }
+      },
+      "tags": [
+        "organe",
+        "systeme",
+        "appareil",
+        "P1"
+      ],
+      "course_ref": "01_Introduction_anatomie_generale#organisation",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q02",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 2
+    },
+    {
+      "id": "GEN-ANAT-SC03-003",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "01",
+      "stem": "Parmi les propositions suivantes concernant les parties du corps, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "le tronc comprend thorax, abdomen et pelvis",
+        "B": "le cou relie la tête au tronc",
+        "C": "les membres sont attachés au tronc par des ceintures",
+        "D": "la tête fait partie du tronc",
+        "E": "le membre supérieur comporte bras, avant-bras et main"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "tronc = thorax + abdomen + pelvis"
+        },
+        "B": {
+          "correct": true,
+          "why": "cou = tête ↔ tronc"
+        },
+        "C": {
+          "correct": true,
+          "why": "ceintures scapulaire / pelvienne"
+        },
+        "D": {
+          "correct": false,
+          "why": "tête ≠ tronc"
+        },
+        "E": {
+          "correct": true,
+          "why": "segmentation classique du MS"
+        }
+      },
+      "tags": [
+        "parties_corps",
+        "P1"
+      ],
+      "course_ref": "01_Introduction_anatomie_generale#parties",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q03",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 3
+    },
+    {
+      "id": "GEN-ANAT-SC03-004",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "02",
+      "stem": "Parmi les propositions suivantes concernant le système ventriculaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il existe deux ventricules latéraux",
+        "B": "le troisième ventricule est médian, dans le diencéphale",
+        "C": "l’aqueduc du mésencéphale relie V3 à V4",
+        "D": "le quatrième ventricule est situé entre cervelet et tronc cérébral",
+        "E": "les ventricules latéraux communiquent directement avec le canal central de la moelle sans relais"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "2 ventricules latéraux"
+        },
+        "B": {
+          "correct": true,
+          "why": "V3 = diencéphale"
+        },
+        "C": {
+          "correct": true,
+          "why": "aqueduc = V3 → V4"
+        },
+        "D": {
+          "correct": true,
+          "why": "V4 = fosse rhomboïde"
+        },
+        "E": {
+          "correct": false,
+          "why": "trajet : latéraux → V3 → aqueduc → V4 → canal central"
+        }
+      },
+      "tags": [
+        "ventricules",
+        "aqueduc",
+        "P1"
+      ],
+      "course_ref": "02_Systeme_nerveux#ventricules",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q04",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 4
+    },
+    {
+      "id": "GEN-ANAT-SC03-005",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "02",
+      "stem": "Parmi les propositions suivantes concernant les nerfs crâniens, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il existe douze paires de nerfs crâniens",
+        "B": "le nerf optique est le II",
+        "C": "le nerf vague est le X",
+        "D": "tous les nerfs crâniens sont purement moteurs",
+        "E": "le nerf olfactif est le I"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "12 paires"
+        },
+        "B": {
+          "correct": true,
+          "why": "II = optique"
+        },
+        "C": {
+          "correct": true,
+          "why": "X = vague"
+        },
+        "D": {
+          "correct": false,
+          "why": "certains sensoriels, moteurs ou mixtes"
+        },
+        "E": {
+          "correct": true,
+          "why": "I = olfactif"
+        }
+      },
+      "tags": [
+        "nerfs_craniens",
+        "P1"
+      ],
+      "course_ref": "02_Systeme_nerveux#nerfs_craniens",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q05",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 5
+    },
+    {
+      "id": "GEN-ANAT-SC03-006",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "02",
+      "stem": "Parmi les propositions suivantes concernant substance grise et blanche, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "la substance grise contient surtout les corps cellulaires neuronaux",
+        "B": "la substance blanche est riche en fibres myélinisées",
+        "C": "dans la moelle, la substance grise a une disposition en « H »",
+        "D": "le cortex cérébral est de la substance blanche",
+        "E": "les noyaux gris centraux sont des amas de substance grise"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "grise = corps cellulaires"
+        },
+        "B": {
+          "correct": true,
+          "why": "blanche = fibres myélinisées"
+        },
+        "C": {
+          "correct": true,
+          "why": "cornes médullaires en H"
+        },
+        "D": {
+          "correct": false,
+          "why": "cortex = substance grise"
+        },
+        "E": {
+          "correct": true,
+          "why": "noyaux = grise profonde"
+        }
+      },
+      "tags": [
+        "substance_grise",
+        "substance_blanche",
+        "P1"
+      ],
+      "course_ref": "02_Systeme_nerveux#substances",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q06",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 6
+    },
+    {
+      "id": "GEN-ANAT-SC03-007",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "03",
+      "stem": "Parmi les propositions suivantes concernant l’aorte, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "l’aorte ascendante naît du ventricule gauche",
+        "B": "la crosse aortique donne le tronc brachio-céphalique, la carotide commune gauche et la subclavière gauche",
+        "C": "l’aorte thoracique descendante chemine dans le médiastin postérieur",
+        "D": "l’aorte naît du ventricule droit",
+        "E": "l’aorte abdominale fait suite à l’aorte thoracique après le hiatus aortique"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "VG → aorte"
+        },
+        "B": {
+          "correct": true,
+          "why": "3 branches classiques de la crosse"
+        },
+        "C": {
+          "correct": true,
+          "why": "thoracique descendante = médiastin post."
+        },
+        "D": {
+          "correct": false,
+          "why": "VD → tronc pulmonaire"
+        },
+        "E": {
+          "correct": true,
+          "why": "passage diaphragmatique → aorte abdominale"
+        }
+      },
+      "tags": [
+        "aorte",
+        "crosse",
+        "P1"
+      ],
+      "course_ref": "03_Appareil_cardio_circulatoire#aorte",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q07",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 7
+    },
+    {
+      "id": "GEN-ANAT-SC03-008",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "03",
+      "stem": "Parmi les propositions suivantes concernant le retour veineux systémique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "la veine cave supérieure draine la partie supérieure du corps",
+        "B": "la veine cave inférieure draine notamment les membres inférieurs et l’abdomen",
+        "C": "les deux veines caves s’abouchent dans l’atrium droit",
+        "D": "la veine cave supérieure s’ouvre dans l’atrium gauche",
+        "E": "le sinus coronaire s’ouvre aussi dans l’atrium droit"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "VCS = tête / MS / thorax haut"
+        },
+        "B": {
+          "correct": true,
+          "why": "VCI = MI + abdomen + pelvis"
+        },
+        "C": {
+          "correct": true,
+          "why": "VCS + VCI → AD"
+        },
+        "D": {
+          "correct": false,
+          "why": "pas l’atrium gauche"
+        },
+        "E": {
+          "correct": true,
+          "why": "sinus coronaire → AD"
+        }
+      },
+      "tags": [
+        "veines_caves",
+        "P1"
+      ],
+      "course_ref": "03_Appareil_cardio_circulatoire#veines_caves",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q08",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 8
+    },
+    {
+      "id": "GEN-ANAT-SC03-009",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "03",
+      "stem": "Parmi les propositions suivantes concernant le sternum, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il comporte manubrium, corps et processus xiphoïde",
+        "B": "l’angle sternal (Louis) marque la jonction manubrium–corps",
+        "C": "il s’articule avec les cartilages des vraies côtes",
+        "D": "le manubrium est la partie la plus inférieure",
+        "E": "l’angle de Louis correspond environ au niveau de T4/T5"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "3 pièces sternales"
+        },
+        "B": {
+          "correct": true,
+          "why": "angle de Louis = manubrium/corps"
+        },
+        "C": {
+          "correct": true,
+          "why": "articulations chondro-sternales"
+        },
+        "D": {
+          "correct": false,
+          "why": "manubrium = supérieur ; xiphoïde = inférieur"
+        },
+        "E": {
+          "correct": true,
+          "why": "repère T4/T5 classique"
+        }
+      },
+      "tags": [
+        "sternum",
+        "angle_Louis",
+        "P1"
+      ],
+      "course_ref": "03_Appareil_cardio_circulatoire#sternum",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q09",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 9
+    },
+    {
+      "id": "GEN-ANAT-SC03-010",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "04",
+      "stem": "Parmi les propositions suivantes concernant les fosses nasales, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "elles sont séparées par le septum nasal",
+        "B": "elles communiquent en arrière avec le nasopharynx",
+        "C": "elles comportent des cornets (supérieur, moyen, inférieur)",
+        "D": "elles appartiennent aux voies aériennes supérieures",
+        "E": "elles se jettent directement dans le larynx sans pharynx"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "septum médian"
+        },
+        "B": {
+          "correct": true,
+          "why": "choanes → nasopharynx"
+        },
+        "C": {
+          "correct": true,
+          "why": "3 cornets classiques"
+        },
+        "D": {
+          "correct": true,
+          "why": "VAS"
+        },
+        "E": {
+          "correct": false,
+          "why": "passage par le pharynx"
+        }
+      },
+      "tags": [
+        "fosses_nasales",
+        "P1"
+      ],
+      "course_ref": "04_Appareil_respiratoire#fosses_nasales",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q10",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 10
+    },
+    {
+      "id": "GEN-ANAT-SC03-011",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "04",
+      "stem": "Parmi les propositions suivantes concernant le larynx, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il appartient aux voies aériennes",
+        "B": "il contient les cordes vocales (plis vocaux)",
+        "C": "il fait suite au pharynx et précède la trachée",
+        "D": "il est un organe exclusivement digestif",
+        "E": "l’épiglotte participe à la protection des voies aériennes à la déglutition"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "larynx = voie aérienne"
+        },
+        "B": {
+          "correct": true,
+          "why": "plis vocaux"
+        },
+        "C": {
+          "correct": true,
+          "why": "pharynx → larynx → trachée"
+        },
+        "D": {
+          "correct": false,
+          "why": "pas digestif (carrefour / protection)"
+        },
+        "E": {
+          "correct": true,
+          "why": "rôle de l’épiglotte"
+        }
+      },
+      "tags": [
+        "larynx",
+        "P1"
+      ],
+      "course_ref": "04_Appareil_respiratoire#larynx",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q11",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 11
+    },
+    {
+      "id": "GEN-ANAT-SC03-012",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "04",
+      "stem": "Parmi les propositions suivantes concernant la vascularisation pulmonaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "les artères pulmonaires portent un sang pauvre en oxygène",
+        "B": "les veines pulmonaires portent un sang riche en oxygène",
+        "C": "les artères bronchiques assurent surtout la nutrition du parenchyme",
+        "D": "les artères pulmonaires naissent de l’aorte ascendante",
+        "E": "le tronc pulmonaire naît du ventricule droit"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "AP = sang veineux systémique"
+        },
+        "B": {
+          "correct": true,
+          "why": "VP = sang artérialisé"
+        },
+        "C": {
+          "correct": true,
+          "why": "bronchiques = nutritives"
+        },
+        "D": {
+          "correct": false,
+          "why": "AP ← tronc pulmonaire ← VD"
+        },
+        "E": {
+          "correct": true,
+          "why": "tronc pulmonaire ← VD"
+        }
+      },
+      "tags": [
+        "vascularisation_pulmonaire",
+        "P2"
+      ],
+      "course_ref": "04_Appareil_respiratoire#vaisseaux",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q12",
+      "priority": "P2",
+      "sujet_id": "SC03",
+      "q_index": 12
+    },
+    {
+      "id": "GEN-ANAT-SC03-013",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "05",
+      "stem": "Parmi les propositions suivantes concernant les voies visuelles, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "le nerf optique est formé d’axones des cellules ganglionnaires rétiniennes",
+        "B": "au chiasma, les fibres nasales décussent",
+        "C": "le tractus optique se dirige vers le corps géniculé latéral",
+        "D": "le cortex visuel primaire siège au lobe occipital",
+        "E": "le nerf optique est le nerf crânien III"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "II = axones ganglionnaires"
+        },
+        "B": {
+          "correct": true,
+          "why": "hémidécussation nasale"
+        },
+        "C": {
+          "correct": true,
+          "why": "CGL = relais thalamique"
+        },
+        "D": {
+          "correct": true,
+          "why": "V1 = occipital (scissure calcarine)"
+        },
+        "E": {
+          "correct": false,
+          "why": "III = oculomoteur ; II = optique"
+        }
+      },
+      "tags": [
+        "vision",
+        "chiasma",
+        "P1"
+      ],
+      "course_ref": "05_Organes_des_sens#vision",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q13",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 13
+    },
+    {
+      "id": "GEN-ANAT-SC03-014",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "05",
+      "stem": "Parmi les propositions suivantes concernant la peau et le toucher, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "la peau est un organe sensoriel étendu",
+        "B": "les mécanorécepteurs cutanés codent notamment le toucher et la pression",
+        "C": "la sensibilité cutanée du visage est véhiculée surtout par le trijumeau (V)",
+        "D": "la peau n’a aucune innervation sensitive",
+        "E": "les thermorécepteurs participent à la sensibilité cutanée"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "peau = grand organe sensitif"
+        },
+        "B": {
+          "correct": true,
+          "why": "mécanorécepteurs"
+        },
+        "C": {
+          "correct": true,
+          "why": "V = face"
+        },
+        "D": {
+          "correct": false,
+          "why": "riche innervation"
+        },
+        "E": {
+          "correct": true,
+          "why": "thermo + douleur aussi"
+        }
+      },
+      "tags": [
+        "peau",
+        "toucher",
+        "P1"
+      ],
+      "course_ref": "05_Organes_des_sens#peau",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q14",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 14
+    },
+    {
+      "id": "GEN-ANAT-SC03-015",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "05",
+      "stem": "Parmi les propositions suivantes concernant la langue, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "elle porte des papilles dont certaines sont gustatives",
+        "B": "la motricité linguale est surtout assurée par le nerf hypoglosse (XII)",
+        "C": "elle appartient au carrefour aéro-digestif buccal",
+        "D": "elle est dépourvue de muqueuse",
+        "E": "le goût des 2/3 antérieurs passe notamment par le VII (corde du tympan)"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "papilles (dont caliciformes…)"
+        },
+        "B": {
+          "correct": true,
+          "why": "XII = moteur langue"
+        },
+        "C": {
+          "correct": true,
+          "why": "organe buccal"
+        },
+        "D": {
+          "correct": false,
+          "why": "muqueuse présente"
+        },
+        "E": {
+          "correct": true,
+          "why": "goût 2/3 ant. = VII"
+        }
+      },
+      "tags": [
+        "langue",
+        "XII",
+        "P1"
+      ],
+      "course_ref": "05_Organes_des_sens#langue",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q15",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 15
+    },
+    {
+      "id": "GEN-ANAT-SC03-016",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "06",
+      "stem": "Parmi les propositions suivantes concernant le disque intervertébral, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il unit deux corps vertébraux adjacents",
+        "B": "il comporte un nucleus pulposus central",
+        "C": "il comporte un annulus fibrosus périphérique",
+        "D": "il n’existe aucun disque entre C1 et C2",
+        "E": "il est une articulation synoviale typique"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "symphyse intersomatique"
+        },
+        "B": {
+          "correct": true,
+          "why": "nucleus"
+        },
+        "C": {
+          "correct": true,
+          "why": "annulus"
+        },
+        "D": {
+          "correct": true,
+          "why": "pas de disque atlas–axis"
+        },
+        "E": {
+          "correct": false,
+          "why": "symphyse / fibrocartilage ≠ synoviale typique"
+        }
+      },
+      "tags": [
+        "disque",
+        "nucleus",
+        "P1"
+      ],
+      "course_ref": "06_Rachis#disque",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q16",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 16
+    },
+    {
+      "id": "GEN-ANAT-SC03-017",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "06",
+      "stem": "Parmi les propositions suivantes concernant le sacrum, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il résulte de la fusion de cinq vertèbres sacrées",
+        "B": "il s’articule avec les os coxaux (sacro-iliaques)",
+        "C": "le canal sacré prolonge le canal vertébral",
+        "D": "il s’articule avec le coccyx",
+        "E": "il comporte habituellement douze foramens sacrés antérieurs de chaque côté"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "5 S fusionnées"
+        },
+        "B": {
+          "correct": true,
+          "why": "sacro-iliaques"
+        },
+        "C": {
+          "correct": true,
+          "why": "canal sacré"
+        },
+        "D": {
+          "correct": true,
+          "why": "sacrum–coccyx"
+        },
+        "E": {
+          "correct": false,
+          "why": "4 paires de foramens ant. (et post.) classiques"
+        }
+      },
+      "tags": [
+        "sacrum",
+        "P2"
+      ],
+      "course_ref": "06_Rachis#sacrum",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q17",
+      "priority": "P2",
+      "sujet_id": "SC03",
+      "q_index": 17
+    },
+    {
+      "id": "GEN-ANAT-SC03-018",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "07",
+      "stem": "Parmi les propositions suivantes concernant le grand pectoral, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il s’insère notamment sur la clavicule et le sternum",
+        "B": "il s’insère distalement sur la lèvre latérale du sillon intertuberculaire",
+        "C": "il est adducteur et rotateur médial du bras",
+        "D": "il est innervé par les nerfs pectoraux",
+        "E": "il s’insère sur le processus coracoïde uniquement"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "origines claviculaire + sterno-costale"
+        },
+        "B": {
+          "correct": true,
+          "why": "crête du tubercule majeur"
+        },
+        "C": {
+          "correct": true,
+          "why": "adduction + RM"
+        },
+        "D": {
+          "correct": true,
+          "why": "nerfs pectoraux"
+        },
+        "E": {
+          "correct": false,
+          "why": "coracoïde = plutôt petit pectoral / coracobiceps"
+        }
+      },
+      "tags": [
+        "grand_pectoral",
+        "P1"
+      ],
+      "course_ref": "07_Parois_du_tronc#pectoral",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q18",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 18
+    },
+    {
+      "id": "GEN-ANAT-SC03-019",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "07",
+      "stem": "Parmi les propositions suivantes concernant la paroi abdominale antérieure, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "le droit de l’abdomen chemine dans une gaine",
+        "B": "les obliques externe et interne participent à la paroi",
+        "C": "le transverse de l’abdomen est le plus profond des larges",
+        "D": "la ligne blanche unit les deux droits",
+        "E": "il n’existe aucun muscle large de l’abdomen"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "gaine des droits"
+        },
+        "B": {
+          "correct": true,
+          "why": "obliques"
+        },
+        "C": {
+          "correct": true,
+          "why": "transverse = profond"
+        },
+        "D": {
+          "correct": true,
+          "why": "linea alba"
+        },
+        "E": {
+          "correct": false,
+          "why": "3 larges + droit"
+        }
+      },
+      "tags": [
+        "paroi_abdominale",
+        "P1"
+      ],
+      "course_ref": "07_Parois_du_tronc#abdomen",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q19",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 19
+    },
+    {
+      "id": "GEN-ANAT-SC03-020",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "08",
+      "stem": "Parmi les propositions suivantes concernant le péritoine, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "c’est une séreuse de la cavité abdominale",
+        "B": "il comporte un feuillet pariétal et un feuillet viscéral",
+        "C": "certains organes sont rétropéritonéaux",
+        "D": "tous les organes abdominaux sont strictement intrapéritonéaux",
+        "E": "le mésentère est un méso reliant l’intestin grêle à la paroi"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "séreuse abdominale"
+        },
+        "B": {
+          "correct": true,
+          "why": "pariétal + viscéral"
+        },
+        "C": {
+          "correct": true,
+          "why": "ex. reins, duodénum en partie"
+        },
+        "D": {
+          "correct": false,
+          "why": "rétropéritoine existe"
+        },
+        "E": {
+          "correct": true,
+          "why": "mésentère = méso du grêle"
+        }
+      },
+      "tags": [
+        "peritoine",
+        "P1"
+      ],
+      "course_ref": "08_Appareil_digestif#peritoine",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q20",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 20
+    },
+    {
+      "id": "GEN-ANAT-SC03-021",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "08",
+      "stem": "Parmi les propositions suivantes concernant les voies biliaires, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "la vésicule biliaire stocke et concentre la bile",
+        "B": "le canal cystique unit la vésicule au cholédoque / voie principale",
+        "C": "le cholédoque s’ouvre typiquement dans le duodénum",
+        "D": "la bile est produite par la rate",
+        "E": "les canaux hépatiques droit et gauche forment le canal hépatique commun"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "rôle vésicule"
+        },
+        "B": {
+          "correct": true,
+          "why": "cystique"
+        },
+        "C": {
+          "correct": true,
+          "why": "papille duodénale"
+        },
+        "D": {
+          "correct": false,
+          "why": "bile = foie"
+        },
+        "E": {
+          "correct": true,
+          "why": "hépatique commun"
+        }
+      },
+      "tags": [
+        "voies_biliaires",
+        "vesicule",
+        "P1"
+      ],
+      "course_ref": "08_Appareil_digestif#bile",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q21",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 21
+    },
+    {
+      "id": "GEN-ANAT-SC03-022",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "08",
+      "stem": "Parmi les propositions suivantes concernant la cavité buccale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "elle constitue le début du tube digestif",
+        "B": "elle contient la langue et les dents",
+        "C": "les glandes salivaires principales y déversent leur sécrétion",
+        "D": "elle communique en arrière avec l’oropharynx",
+        "E": "elle se poursuit directement par le jéjunum"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "entrée digestive"
+        },
+        "B": {
+          "correct": true,
+          "why": "langue + dents"
+        },
+        "C": {
+          "correct": true,
+          "why": "parotide, submandibulaire, sublinguale"
+        },
+        "D": {
+          "correct": true,
+          "why": "→ oropharynx"
+        },
+        "E": {
+          "correct": false,
+          "why": "suite = pharynx / œsophage…"
+        }
+      },
+      "tags": [
+        "bouche",
+        "P1"
+      ],
+      "course_ref": "08_Appareil_digestif#bouche",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q22",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 22
+    },
+    {
+      "id": "GEN-ANAT-SC03-023",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "09",
+      "stem": "Parmi les propositions suivantes concernant la vessie, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "c’est un réservoir musculeux d’urine",
+        "B": "elle appartient au bas appareil urinaire",
+        "C": "le trigone est une région de la face interne",
+        "D": "elle reçoit les deux uretères",
+        "E": "elle produit l’urine"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "réservoir"
+        },
+        "B": {
+          "correct": true,
+          "why": "bas appareil"
+        },
+        "C": {
+          "correct": true,
+          "why": "trigone vésical"
+        },
+        "D": {
+          "correct": true,
+          "why": "2 ostiums urétéraux"
+        },
+        "E": {
+          "correct": false,
+          "why": "urine = rein"
+        }
+      },
+      "tags": [
+        "vessie",
+        "P1"
+      ],
+      "course_ref": "09_Appareil_genito_urinaire#vessie",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q23",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 23
+    },
+    {
+      "id": "GEN-ANAT-SC03-024",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "09",
+      "stem": "Parmi les propositions suivantes concernant l’urètre, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il conduit l’urine de la vessie vers l’extérieur",
+        "B": "chez l’homme, il traverse la prostate",
+        "C": "il est plus court chez la femme que chez l’homme",
+        "D": "il appartient au haut appareil urinaire",
+        "E": "chez l’homme, il a aussi un rôle dans l’éjaculation"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "évacuation"
+        },
+        "B": {
+          "correct": true,
+          "why": "urètre prostatique"
+        },
+        "C": {
+          "correct": true,
+          "why": "urètre féminin court"
+        },
+        "D": {
+          "correct": false,
+          "why": "bas appareil"
+        },
+        "E": {
+          "correct": true,
+          "why": "voie commune urine / sperme (homme)"
+        }
+      },
+      "tags": [
+        "uretre",
+        "P2"
+      ],
+      "course_ref": "09_Appareil_genito_urinaire#uretre",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q24",
+      "priority": "P2",
+      "sujet_id": "SC03",
+      "q_index": 24
+    },
+    {
+      "id": "GEN-ANAT-SC03-025",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "10",
+      "stem": "Parmi les propositions suivantes concernant la scapula, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "elle présente une cavité glénoïde pour la tête humérale",
+        "B": "l’acromion est un prolongement de l’épine scapulaire",
+        "C": "le processus coracoïde est un repère antérieur",
+        "D": "elle s’articule directement avec le sternum",
+        "E": "la fosse infra-épineuse est sous l’épine"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "glène ↔ tête humérale"
+        },
+        "B": {
+          "correct": true,
+          "why": "acromion ← épine"
+        },
+        "C": {
+          "correct": true,
+          "why": "coracoïde antérieur"
+        },
+        "D": {
+          "correct": false,
+          "why": "pas d’articulation scapulo-sternale directe (via clavicule)"
+        },
+        "E": {
+          "correct": true,
+          "why": "infra-épineuse sous l’épine"
+        }
+      },
+      "tags": [
+        "scapula",
+        "P1"
+      ],
+      "course_ref": "10_Membre_superieur#scapula",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q25",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 25
+    },
+    {
+      "id": "GEN-ANAT-SC03-026",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "10",
+      "stem": "Parmi les propositions suivantes concernant le biceps brachial, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il a deux chefs : long et court",
+        "B": "le chef long traverse la coulisse bicipitale",
+        "C": "il s’insère distalement sur la tubérosité radiale",
+        "D": "il est innervé par le nerf musculocutané",
+        "E": "il est innervé par le nerf radial"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "bi-ceps"
+        },
+        "B": {
+          "correct": true,
+          "why": "long chef dans le sillon intertuberculaire"
+        },
+        "C": {
+          "correct": true,
+          "why": "tubérosité radiale (+ aponévrose)"
+        },
+        "D": {
+          "correct": true,
+          "why": "musculocutané"
+        },
+        "E": {
+          "correct": false,
+          "why": "radial ≠ biceps"
+        }
+      },
+      "tags": [
+        "biceps",
+        "P1"
+      ],
+      "course_ref": "10_Membre_superieur#biceps",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q26",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 26
+    },
+    {
+      "id": "GEN-ANAT-SC03-027",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "10",
+      "stem": "Parmi les muscles suivants, lequel (lesquels) est (sont) innervé(s) par le nerf radial ?",
+      "choices": {
+        "A": "le triceps brachial",
+        "B": "le brachio-radial",
+        "C": "l’extenseur des doigts",
+        "D": "le fléchisseur ulnaire du carpe",
+        "E": "le supinator (court supinateur)"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "triceps = radial"
+        },
+        "B": {
+          "correct": true,
+          "why": "brachio-radial = radial"
+        },
+        "C": {
+          "correct": true,
+          "why": "extenseurs = radial"
+        },
+        "D": {
+          "correct": false,
+          "why": "FCU = ulnaire"
+        },
+        "E": {
+          "correct": true,
+          "why": "supinator = radial"
+        }
+      },
+      "tags": [
+        "nerf_radial",
+        "P1"
+      ],
+      "course_ref": "10_Membre_superieur#nerf_radial",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q27",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 27
+    },
+    {
+      "id": "GEN-ANAT-SC03-028",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "10",
+      "stem": "Parmi les propositions suivantes concernant la loge antérieure de l’avant-bras, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "elle contient surtout des fléchisseurs et pronateurs",
+        "B": "le fléchisseur superficiel des doigts y appartient",
+        "C": "le pronator teres (rond pronateur) y appartient",
+        "D": "elle est innervée principalement par le nerf radial",
+        "E": "le médian innerve la majorité de ses muscles"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "loge ant. = fléchisseurs/pronateurs"
+        },
+        "B": {
+          "correct": true,
+          "why": "FDS"
+        },
+        "C": {
+          "correct": true,
+          "why": "pronator teres"
+        },
+        "D": {
+          "correct": false,
+          "why": "radial = surtout postérieure"
+        },
+        "E": {
+          "correct": true,
+          "why": "médian dominant (+ ulnaire pour FCU/FDP médial)"
+        }
+      },
+      "tags": [
+        "avant_bras_ant",
+        "P1"
+      ],
+      "course_ref": "10_Membre_superieur#loge_ant",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q28",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 28
+    },
+    {
+      "id": "GEN-ANAT-SC03-029",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "10",
+      "stem": "Parmi les propositions suivantes concernant la main osseuse, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "chaque doigt long a trois phalanges",
+        "B": "le pouce a deux phalanges",
+        "C": "il existe cinq métacarpiens",
+        "D": "les articulations métacarpo-phalangiennes unissent métacarpien et phalange proximale",
+        "E": "le carpe compte cinq os seulement"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "P1–P2–P3 pour II–V"
+        },
+        "B": {
+          "correct": true,
+          "why": "pouce = 2 phalanges"
+        },
+        "C": {
+          "correct": true,
+          "why": "5 métacarpiens"
+        },
+        "D": {
+          "correct": true,
+          "why": "MCP"
+        },
+        "E": {
+          "correct": false,
+          "why": "8 os du carpe"
+        }
+      },
+      "tags": [
+        "main",
+        "phalanges",
+        "P2"
+      ],
+      "course_ref": "10_Membre_superieur#main",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q29",
+      "priority": "P2",
+      "sujet_id": "SC03",
+      "q_index": 29
+    },
+    {
+      "id": "GEN-ANAT-SC03-030",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "11",
+      "stem": "Parmi les propositions suivantes concernant l’articulation coxo-fémorale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "c’est une énarthrose (sphéroïde)",
+        "B": "la tête fémorale s’articule avec l’acétabulum",
+        "C": "le ligament de la tête du fémur relie tête et acétabulum",
+        "D": "elle n’autorise aucun mouvement de rotation",
+        "E": "le labrum acétabulaire agrandit la surface articulaire"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "énarthrose"
+        },
+        "B": {
+          "correct": true,
+          "why": "tête ↔ cotyle"
+        },
+        "C": {
+          "correct": true,
+          "why": "lig. rond / de la tête"
+        },
+        "D": {
+          "correct": false,
+          "why": "rotations possibles"
+        },
+        "E": {
+          "correct": true,
+          "why": "labrum"
+        }
+      },
+      "tags": [
+        "hanche",
+        "P1"
+      ],
+      "course_ref": "11_Membre_inferieur#hanche",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q30",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 30
+    },
+    {
+      "id": "GEN-ANAT-SC03-031",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "11",
+      "stem": "Parmi les muscles suivants, lequel (lesquels) appartient (appartiennent) aux ischio-jambiers ?",
+      "choices": {
+        "A": "le biceps fémoral",
+        "B": "le semi-tendineux",
+        "C": "le semi-membraneux",
+        "D": "le droit fémoral",
+        "E": "le sartorius"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "biceps fémoral = ischio-jambier"
+        },
+        "B": {
+          "correct": true,
+          "why": "semi-tendineux"
+        },
+        "C": {
+          "correct": true,
+          "why": "semi-membraneux"
+        },
+        "D": {
+          "correct": false,
+          "why": "droit fémoral = quadriceps"
+        },
+        "E": {
+          "correct": false,
+          "why": "sartorius ≠ ischio-jambier (loge ant.)"
+        }
+      },
+      "tags": [
+        "ischio_jambiers",
+        "P1"
+      ],
+      "course_ref": "11_Membre_inferieur#ischio_jambiers",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q31",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 31
+    },
+    {
+      "id": "GEN-ANAT-SC03-032",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "11",
+      "stem": "Parmi les propositions suivantes concernant le nerf obturateur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il traverse le canal obturateur",
+        "B": "il innerve notamment les adducteurs",
+        "C": "il innerve le gracile",
+        "D": "il innerve le quadriceps",
+        "E": "il naît du plexus lombal"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "canal obturateur"
+        },
+        "B": {
+          "correct": true,
+          "why": "loge médiale / adducteurs"
+        },
+        "C": {
+          "correct": true,
+          "why": "gracile = obturateur"
+        },
+        "D": {
+          "correct": false,
+          "why": "quadriceps = fémoral"
+        },
+        "E": {
+          "correct": true,
+          "why": "plexus lombal (L2–L4)"
+        }
+      },
+      "tags": [
+        "nerf_obturateur",
+        "P1"
+      ],
+      "course_ref": "11_Membre_inferieur#obturateur",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q32",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 32
+    },
+    {
+      "id": "GEN-ANAT-SC03-033",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "11",
+      "stem": "Parmi les propositions suivantes concernant le compartiment latéral de la jambe, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il contient le long fibulaire",
+        "B": "il contient le court fibulaire",
+        "C": "ces muscles sont éverseurs du pied",
+        "D": "il contient le tibial antérieur",
+        "E": "il est innervé par le nerf fibulaire superficiel"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "long fibulaire"
+        },
+        "B": {
+          "correct": true,
+          "why": "court fibulaire"
+        },
+        "C": {
+          "correct": true,
+          "why": "éversion"
+        },
+        "D": {
+          "correct": false,
+          "why": "tibial ant. = antérieur"
+        },
+        "E": {
+          "correct": true,
+          "why": "fibulaire superficiel"
+        }
+      },
+      "tags": [
+        "jambe_laterale",
+        "P1"
+      ],
+      "course_ref": "11_Membre_inferieur#jambe_lat",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q33",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 33
+    },
+    {
+      "id": "GEN-ANAT-SC03-034",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "11",
+      "stem": "Parmi les propositions suivantes concernant les ligaments latéraux de la cheville, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "le plan latéral s’oppose à l’inversion excessive",
+        "B": "il comporte notamment un faisceau talo-fibulaire antérieur",
+        "C": "le ligament deltoïdien est le plan médial",
+        "D": "le deltoïdien est le principal ligament latéral",
+        "E": "le calcanéo-fibulaire appartient au plan latéral"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "LLL = anti-inversion"
+        },
+        "B": {
+          "correct": true,
+          "why": "LTFA classique"
+        },
+        "C": {
+          "correct": true,
+          "why": "deltoïdien = médial"
+        },
+        "D": {
+          "correct": false,
+          "why": "deltoïdien ≠ latéral"
+        },
+        "E": {
+          "correct": true,
+          "why": "LCF = latéral"
+        }
+      },
+      "tags": [
+        "cheville_ligaments",
+        "P1"
+      ],
+      "course_ref": "11_Membre_inferieur#lig_cheville",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q34",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 34
+    },
+    {
+      "id": "GEN-ANAT-SC03-035",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "11",
+      "stem": "Parmi les propositions suivantes concernant le bassin osseux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il est formé des deux os coxaux, du sacrum et du coccyx",
+        "B": "le détroit supérieur sépare grand et petit bassin",
+        "C": "la symphyse pubienne unit les deux pubis",
+        "D": "le sacrum n’appartient pas au bassin",
+        "E": "les articulations sacro-iliaques font partie du girdle pelvien"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "coxaux + sacrum + coccyx"
+        },
+        "B": {
+          "correct": true,
+          "why": "détroit supérieur"
+        },
+        "C": {
+          "correct": true,
+          "why": "symphyse"
+        },
+        "D": {
+          "correct": false,
+          "why": "sacrum = clé postérieure du bassin"
+        },
+        "E": {
+          "correct": true,
+          "why": "sacro-iliaques"
+        }
+      },
+      "tags": [
+        "bassin",
+        "P1"
+      ],
+      "course_ref": "11_Membre_inferieur#bassin",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q35",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 35
+    },
+    {
+      "id": "GEN-ANAT-SC03-036",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "11",
+      "stem": "Parmi les propositions suivantes concernant la voûte plantaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "elle comporte une arche médiale",
+        "B": "elle comporte une arche latérale",
+        "C": "elle comporte une arche antérieure transversale",
+        "D": "le calcanéus et les têtes métatarsiennes sont des points d’appui majeurs",
+        "E": "le pied normal repose à plat sur toute la face plantaire sans arche"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "arche médiale"
+        },
+        "B": {
+          "correct": true,
+          "why": "arche latérale"
+        },
+        "C": {
+          "correct": true,
+          "why": "arche transversale"
+        },
+        "D": {
+          "correct": true,
+          "why": "appuis trépied classique"
+        },
+        "E": {
+          "correct": false,
+          "why": "voûte présente (sinon pied plat)"
+        }
+      },
+      "tags": [
+        "voute_plantaire",
+        "P1"
+      ],
+      "course_ref": "11_Membre_inferieur#voute",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc03_q36",
+      "priority": "P1",
+      "sujet_id": "SC03",
+      "q_index": 36
+    }
+  ]
+};
