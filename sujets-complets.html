@@ -7,7 +7,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=sc01b" />
+  <link rel="stylesheet" href="./styles.css?v=sc01c" />
+  <style>
+    .score-line {
+      margin: 0.35rem 0 0;
+      font-size: 0.92rem;
+      color: #1f5c45;
+      font-weight: 650;
+    }
+    .score-line.empty { color: #5a6a60; font-weight: 500; }
+  </style>
 </head>
 <body>
   <div class="wrap">
@@ -32,14 +41,14 @@
 
     <p class="page-sub" style="margin-bottom:0.35rem"><a href="./entrainement.html">← Entraînement</a></p>
     <h1 class="page-title">Sujets complets</h1>
-    <p class="page-sub">Blancs transversaux (36 Q), style concours. Un sujet = un fichier. Objectif : 10 blancs.</p>
+    <p class="page-sub">Blancs 45 min · corrigé à la fin · score enregistré ici après chaque tentative.</p>
 
-    <section class="rubric-panel" aria-label="Sujets disponibles">
-      <!-- Lien statique : visible même si le JS catalogue échoue -->
-      <a class="rubric-row" href="./qcm-sujet.html?id=SC01">
+    <section class="rubric-panel" aria-label="Sujets disponibles" id="sujetList">
+      <a class="rubric-row" href="./qcm-sujet.html?id=SC01&v=sc01c" data-sujet="SC01">
         <h2>Blanc SC01 — UE5 Anatomie</h2>
         <span class="badge">Dispo</span>
-        <p>36 QCM · mix chapitres 01–11 · ordre fixe.</p>
+        <p>36 QCM · 45 min · mix chapitres 01–11.</p>
+        <p class="score-line empty" data-score-for="SC01">Pas encore passé</p>
       </a>
       <div class="rubric-row" style="cursor:default">
         <h2>Blanc SC02 → SC10</h2>
@@ -48,5 +57,41 @@
       </div>
     </section>
   </div>
+
+  <script src="./js/sujets-store.js?v=sc01c"></script>
+  <script>
+    (function () {
+      function formatElapsed(sec) {
+        var m = Math.floor((sec || 0) / 60);
+        var s = (sec || 0) % 60;
+        return String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
+      }
+      function fillScores() {
+        if (!window.PASS_SujetsStore) return;
+        document.querySelectorAll("[data-score-for]").forEach(function (el) {
+          var id = el.getAttribute("data-score-for");
+          var row = window.PASS_SujetsStore.getScore(id);
+          if (!row) {
+            el.textContent = "Pas encore passé";
+            el.classList.add("empty");
+            return;
+          }
+          el.classList.remove("empty");
+          var when = row.at ? new Date(row.at).toLocaleString("fr-FR") : "";
+          el.textContent =
+            "Dernier score : " +
+            row.ok +
+            " / " +
+            row.n +
+            " (" +
+            row.pct +
+            " %) · temps " +
+            formatElapsed(row.elapsedSec) +
+            (when ? " · " + when : "");
+        });
+      }
+      fillScores();
+    })();
+  </script>
 </body>
 </html>

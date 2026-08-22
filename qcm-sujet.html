@@ -11,7 +11,7 @@
     :root {
       --bg: #f3efe6; --card: #faf7f0; --ink: #1a2a22; --muted: #5a6a60;
       --line: #cfc6b4; --ok: #166534; --ok-bg: #dcfce7; --bad: #991b1b;
-      --bad-bg: #fee2e2; --accent: #1f5c45;
+      --bad-bg: #fee2e2; --accent: #1f5c45; --warn: #b45309;
     }
     * { box-sizing: border-box; }
     body {
@@ -20,6 +20,7 @@
     }
     main { max-width: 42rem; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
     h1 { font-size: 1.2rem; margin: 0 0 0.35rem; }
+    h2 { font-size: 1.05rem; margin: 0 0 0.5rem; }
     .meta, .sub { color: var(--muted); font-size: 0.95rem; }
     .sub { margin: 0 0 1rem; }
     a { color: inherit; }
@@ -31,7 +32,19 @@
     .bar {
       display: flex; flex-wrap: wrap; justify-content: space-between;
       gap: 0.75rem; align-items: center; margin-bottom: 1rem;
+      position: sticky; top: 0; z-index: 5;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(6px);
+      padding: 0.55rem 0;
     }
+    .timer {
+      font-variant-numeric: tabular-nums; font-weight: 800; font-size: 1.15rem;
+      padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid var(--line);
+      background: var(--card); min-width: 5.5rem; text-align: center;
+    }
+    .timer.warn { color: var(--warn); border-color: #f59e0b; }
+    .timer.danger { color: var(--bad); border-color: #f87171; animation: pulse 1s infinite; }
+    @keyframes pulse { 50% { opacity: 0.65; } }
     .stem { font-size: 1.05rem; margin: 0 0 1rem; }
     .choice {
       display: flex; gap: 0.65rem; align-items: flex-start;
@@ -41,8 +54,8 @@
     .choice:has(input:checked) { border-color: var(--accent); background: #e3efe8; }
     .choice.ok { border-color: #86efac; background: var(--ok-bg); }
     .choice.bad { border-color: #fca5a5; background: var(--bad-bg); }
-    .why { display: none; margin-top: 0.35rem; font-size: 0.88rem; color: var(--muted); }
-    .revealed .why { display: block; }
+    .choice.user-miss { outline: 2px dashed #f87171; }
+    .why { margin-top: 0.35rem; font-size: 0.88rem; color: var(--muted); }
     .mark { font-weight: 700; }
     .mark.ok { color: var(--ok); }
     .mark.bad { color: var(--bad); }
@@ -56,17 +69,24 @@
       background: var(--card); color: var(--ink); border-color: var(--line);
     }
     button:disabled { opacity: 0.45; cursor: not-allowed; }
-    .score {
-      margin-top: 0.85rem; padding: 0.7rem 0.8rem; border-radius: 10px;
-      background: #ebe6dc; display: none;
-    }
-    .score.on { display: block; }
-    .tags { margin-top: 0.75rem; font-size: 0.8rem; color: var(--muted); }
-    .big { font-size: 2.2rem; font-weight: 700; margin: 0.25rem 0 0.5rem; }
     .chip {
       display: inline-block; font-size: 0.75rem; padding: 0.15rem 0.45rem;
       border-radius: 6px; background: #e5ecdf; color: var(--accent);
     }
+    .big { font-size: 2.2rem; font-weight: 700; margin: 0.25rem 0 0.5rem; }
+    .nav-dots {
+      display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.75rem 0 0;
+    }
+    .nav-dots button {
+      min-width: 2rem; padding: 0.25rem 0.4rem; border-radius: 8px;
+      font-size: 0.8rem; font-weight: 700;
+      background: var(--card); color: var(--ink); border: 1px solid var(--line);
+    }
+    .nav-dots button.on { border-color: var(--accent); background: #e3efe8; }
+    .nav-dots button.filled { background: #dbe7df; }
+    .corrige-item { margin-bottom: 1.25rem; }
+    .corrige-item h3 { font-size: 0.95rem; margin: 0 0 0.5rem; }
+    .user-ans { font-size: 0.9rem; color: var(--muted); margin: 0.35rem 0 0.5rem; }
   </style>
 </head>
 <body>
@@ -77,48 +97,73 @@
     </p>
 
     <section id="boot">
-      <h1>Chargement du sujet…</h1>
+      <h1>Chargement…</h1>
       <p class="sub" id="bootMsg">Un instant.</p>
+    </section>
+
+    <section id="intro" class="hidden">
+      <h1 id="introTitle">Blanc</h1>
+      <p class="sub" id="introSub">36 questions · 45 minutes · corrigé à la fin seulement.</p>
+      <div class="card">
+        <p style="margin:0 0 0.75rem">Mode concours : pas de correction pendant l’épreuve. À la fin du temps ou après la dernière question, tu obtiens le score + le corrigé complet.</p>
+        <ul class="sub" style="margin:0 0 1rem; padding-left:1.1rem">
+          <li>Chrono : <strong>45:00</strong></li>
+          <li>Questions : multi-correct A–E</li>
+          <li>Score enregistré sur le menu Sujets complets</li>
+        </ul>
+        <div class="actions">
+          <button type="button" id="btnStart">Commencer le blanc</button>
+          <a class="secondary btn" href="./sujets-complets.html">Retour</a>
+        </div>
+      </div>
     </section>
 
     <section id="quiz" class="hidden">
       <div class="bar">
-        <h1 id="title">Sujet</h1>
-        <div class="meta" id="progress">—</div>
+        <div>
+          <h1 id="title" style="margin:0">Sujet</h1>
+          <div class="meta" id="progress">—</div>
+        </div>
+        <div class="timer" id="timer" aria-live="polite">45:00</div>
       </div>
       <div class="card" id="panel">
         <p class="meta" id="chLine" style="margin:0 0 0.5rem"></p>
         <p class="stem" id="stem"></p>
         <div id="choices"></div>
-        <div class="score" id="itemScore"></div>
+        <div class="nav-dots" id="dots" aria-label="Navigation questions"></div>
         <div class="actions">
-          <button type="button" id="btnOk">Valider / Corrigé</button>
-          <button type="button" class="secondary" id="btnNext" disabled>Suivant</button>
-          <button type="button" class="secondary" id="btnQuit">Abandonner</button>
+          <button type="button" class="secondary" id="btnPrev">Précédent</button>
+          <button type="button" id="btnNext">Suivant</button>
+          <button type="button" class="secondary" id="btnFinish">Terminer</button>
         </div>
-        <div class="tags" id="tags"></div>
       </div>
     </section>
 
     <section id="end" class="hidden">
-      <h1>Fin du sujet</h1>
+      <h1>Fin du blanc</h1>
       <p class="sub" id="endSub">—</p>
       <div class="card">
         <div class="meta">Score</div>
         <div class="big" id="endScore">—</div>
         <p id="endLabel"></p>
+        <p id="endTime" class="meta"></p>
         <p id="endFb"></p>
         <div class="actions">
-          <button type="button" id="btnAgain">Rejouer</button>
-          <a class="secondary btn" href="./sujets-complets.html">Autres sujets</a>
+          <button type="button" id="btnAgain">Refaire</button>
+          <a class="secondary btn" href="./sujets-complets.html">Menu sujets</a>
         </div>
       </div>
+      <h2 style="margin-top:1.5rem">Corrigé complet</h2>
+      <p class="sub">Ta réponse vs corrigé, question par question.</p>
+      <div id="corrige"></div>
     </section>
   </main>
 
-  <script src="./data/sujets/catalog.js?v=sc01b"></script>
+  <script src="./data/sujets/catalog.js?v=sc01c"></script>
+  <script src="./js/sujets-store.js?v=sc01c"></script>
   <script>
     (function () {
+      var DURATION_SEC = 45 * 60;
       var sujetId = (new URLSearchParams(location.search).get("id") || "SC01").toUpperCase();
       var catalog = window.PASS_SUJET_CATALOG || [];
       var entry = null;
@@ -128,12 +173,11 @@
           break;
         }
       }
-      if (!entry) {
-        entry = { id: "SC01", title: "Blanc SC01", file: "sc01.js" };
-      }
+      if (!entry) entry = { id: "SC01", title: "Blanc SC01", file: "sc01.js", n: 36 };
 
       var boot = document.getElementById("boot");
       var bootMsg = document.getElementById("bootMsg");
+      var intro = document.getElementById("intro");
       var quiz = document.getElementById("quiz");
       var end = document.getElementById("end");
       var titleEl = document.getElementById("title");
@@ -141,28 +185,32 @@
       var chLine = document.getElementById("chLine");
       var stem = document.getElementById("stem");
       var choices = document.getElementById("choices");
-      var itemScore = document.getElementById("itemScore");
-      var tags = document.getElementById("tags");
-      var panel = document.getElementById("panel");
-      var btnOk = document.getElementById("btnOk");
+      var dots = document.getElementById("dots");
+      var timerEl = document.getElementById("timer");
+      var btnStart = document.getElementById("btnStart");
+      var btnPrev = document.getElementById("btnPrev");
       var btnNext = document.getElementById("btnNext");
-      var btnQuit = document.getElementById("btnQuit");
+      var btnFinish = document.getElementById("btnFinish");
       var btnAgain = document.getElementById("btnAgain");
 
       var items = [];
       var meta = {};
       var index = 0;
-      var revealed = false;
-      var correctCount = 0;
+      var answers = {}; // qIndex -> ["A","C"]
+      var remaining = DURATION_SEC;
+      var tickId = null;
+      var finished = false;
+      var startedAt = 0;
 
       function show(which) {
         boot.classList.toggle("hidden", which !== "boot");
+        intro.classList.toggle("hidden", which !== "intro");
         quiz.classList.toggle("hidden", which !== "quiz");
         end.classList.toggle("hidden", which !== "end");
       }
 
       function norm(arr) {
-        return arr.slice().map(String).sort().join(",");
+        return (arr || []).slice().map(String).sort().join(",");
       }
 
       function loadScript(src) {
@@ -177,109 +225,216 @@
         });
       }
 
-      function start() {
-        index = 0;
-        revealed = false;
-        correctCount = 0;
-        show("quiz");
-        render();
+      function formatTime(sec) {
+        var m = Math.floor(sec / 60);
+        var s = sec % 60;
+        return String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
       }
 
-      function render() {
-        var item = items[index];
-        if (!item) {
-          finish();
-          return;
+      function updateTimerUi() {
+        timerEl.textContent = formatTime(remaining);
+        timerEl.classList.toggle("warn", remaining <= 5 * 60 && remaining > 60);
+        timerEl.classList.toggle("danger", remaining <= 60);
+      }
+
+      function stopTimer() {
+        if (tickId) {
+          clearInterval(tickId);
+          tickId = null;
         }
-        revealed = false;
-        panel.classList.remove("revealed");
-        itemScore.classList.remove("on");
-        itemScore.textContent = "";
-        btnOk.disabled = false;
-        btnNext.disabled = true;
-        progress.textContent = index + 1 + " / " + items.length;
-        chLine.innerHTML = '<span class="chip">ch.' + item.chapter + "</span> · " + item.id;
-        stem.textContent = item.stem;
-        tags.textContent = (item.tags || [])
-          .map(function (t) {
-            return "#" + t;
-          })
-          .join("  ");
-        choices.innerHTML = "";
-        ["A", "B", "C", "D", "E"].forEach(function (letter) {
-          var label = document.createElement("label");
-          label.className = "choice";
-          label.setAttribute("data-letter", letter);
-          label.innerHTML =
-            '<input type="checkbox" value="' +
-            letter +
-            '" />' +
-            "<span><strong>" +
-            letter +
-            ".</strong> " +
-            (item.choices[letter] || "") +
-            '<div class="why"></div></span>';
-          choices.appendChild(label);
-        });
       }
 
-      function validate() {
-        var item = items[index];
-        if (!item || revealed) return;
+      function startTimer() {
+        stopTimer();
+        remaining = DURATION_SEC;
+        updateTimerUi();
+        tickId = setInterval(function () {
+          remaining -= 1;
+          if (remaining <= 0) {
+            remaining = 0;
+            updateTimerUi();
+            stopTimer();
+            finish(true);
+            return;
+          }
+          updateTimerUi();
+        }, 1000);
+      }
+
+      function saveCurrentAnswers() {
         var selected = [];
         choices.querySelectorAll("input:checked").forEach(function (el) {
           selected.push(el.value);
         });
-        var ok = norm(selected) === norm(item.answer || []);
-        revealed = true;
-        panel.classList.add("revealed");
-        btnNext.disabled = false;
-        btnOk.disabled = true;
-        if (ok) correctCount += 1;
-
-        ["A", "B", "C", "D", "E"].forEach(function (letter) {
-          var row = choices.querySelector('[data-letter="' + letter + '"]');
-          var exp = (item.explanations || {})[letter] || {};
-          var isCorrect = !!exp.correct;
-          row.classList.add(isCorrect ? "ok" : "bad");
-          row.querySelector("input").disabled = true;
-          row.querySelector(".why").innerHTML =
-            '<span class="mark ' +
-            (isCorrect ? "ok" : "bad") +
-            '">' +
-            (isCorrect ? "Vrai" : "Faux") +
-            "</span> — " +
-            (exp.why || "");
-        });
-
-        itemScore.classList.add("on");
-        itemScore.innerHTML = ok
-          ? "<strong>OK</strong> — " + item.answer.join(", ")
-          : "<strong>À revoir</strong> — tu : " +
-            (selected.length ? selected.join(", ") : "(rien)") +
-            " · corrigé : " +
-            item.answer.join(", ");
+        answers[index] = selected;
       }
 
-      function finish() {
-        var total = items.length;
-        var pct = total ? Math.round((correctCount / total) * 100) : 0;
-        document.getElementById("endScore").textContent = correctCount + " / " + total;
+      function buildDots() {
+        dots.innerHTML = "";
+        for (var i = 0; i < items.length; i++) {
+          (function (qi) {
+            var b = document.createElement("button");
+            b.type = "button";
+            b.textContent = String(qi + 1);
+            if (qi === index) b.classList.add("on");
+            if ((answers[qi] || []).length) b.classList.add("filled");
+            b.addEventListener("click", function () {
+              saveCurrentAnswers();
+              index = qi;
+              render();
+            });
+            dots.appendChild(b);
+          })(i);
+        }
+      }
+
+      function render() {
+        var item = items[index];
+        if (!item) return;
+        progress.textContent = index + 1 + " / " + items.length;
+        chLine.innerHTML = '<span class="chip">ch.' + item.chapter + "</span>";
+        stem.textContent = item.stem;
+        choices.innerHTML = "";
+        var selected = answers[index] || [];
+        ["A", "B", "C", "D", "E"].forEach(function (letter) {
+          var label = document.createElement("label");
+          label.className = "choice";
+          var checked = selected.indexOf(letter) >= 0 ? " checked" : "";
+          label.innerHTML =
+            '<input type="checkbox" value="' +
+            letter +
+            '"' +
+            checked +
+            " />" +
+            "<span><strong>" +
+            letter +
+            ".</strong> " +
+            (item.choices[letter] || "") +
+            "</span>";
+          choices.appendChild(label);
+        });
+        btnPrev.disabled = index === 0;
+        btnNext.textContent = index === items.length - 1 ? "Terminer" : "Suivant";
+        buildDots();
+      }
+
+      function scoreAll() {
+        var ok = 0;
+        var detail = [];
+        for (var i = 0; i < items.length; i++) {
+          var item = items[i];
+          var user = answers[i] || [];
+          var good = norm(user) === norm(item.answer || []);
+          if (good) ok += 1;
+          detail.push({ i: i, item: item, user: user, ok: good });
+        }
+        return { ok: ok, n: items.length, detail: detail };
+      }
+
+      function renderCorrige(detail) {
+        var root = document.getElementById("corrige");
+        root.innerHTML = "";
+        detail.forEach(function (d) {
+          var item = d.item;
+          var box = document.createElement("div");
+          box.className = "card corrige-item";
+          var head =
+            "<h3>Q" +
+            (d.i + 1) +
+            " · ch." +
+            item.chapter +
+            ' · <span class="mark ' +
+            (d.ok ? "ok" : "bad") +
+            '">' +
+            (d.ok ? "OK" : "À revoir") +
+            "</span></h3>";
+          var stemHtml = "<p class=\"stem\">" + item.stem + "</p>";
+          var userHtml =
+            '<p class="user-ans">Ta réponse : <strong>' +
+            (d.user.length ? d.user.join(", ") : "(rien)") +
+            "</strong> · Corrigé : <strong>" +
+            (item.answer || []).join(", ") +
+            "</strong></p>";
+          var choicesHtml = "";
+          ["A", "B", "C", "D", "E"].forEach(function (letter) {
+            var exp = (item.explanations || {})[letter] || {};
+            var isCorrect = !!exp.correct;
+            var userPicked = d.user.indexOf(letter) >= 0;
+            var cls = "choice " + (isCorrect ? "ok" : "bad");
+            if (userPicked && !isCorrect) cls += " user-miss";
+            choicesHtml +=
+              '<div class="' +
+              cls +
+              '"><span><strong>' +
+              letter +
+              ".</strong> " +
+              (item.choices[letter] || "") +
+              '<div class="why"><span class="mark ' +
+              (isCorrect ? "ok" : "bad") +
+              '">' +
+              (isCorrect ? "Vrai" : "Faux") +
+              "</span> — " +
+              (exp.why || "") +
+              (userPicked ? " · <em>tu as coché</em>" : "") +
+              "</div></span></div>";
+          });
+          box.innerHTML = head + stemHtml + userHtml + choicesHtml;
+          root.appendChild(box);
+        });
+      }
+
+      function finish(fromTimer) {
+        if (finished) return;
+        finished = true;
+        saveCurrentAnswers();
+        stopTimer();
+
+        var scored = scoreAll();
+        var pct = scored.n ? Math.round((scored.ok / scored.n) * 100) : 0;
+        var elapsed = Math.max(0, DURATION_SEC - remaining);
+
+        if (window.PASS_SujetsStore) {
+          window.PASS_SujetsStore.saveScore(sujetId, {
+            ok: scored.ok,
+            n: scored.n,
+            pct: pct,
+            elapsedSec: elapsed,
+            timedOut: !!fromTimer,
+            title: meta.title || entry.title || sujetId,
+          });
+        }
+
+        document.getElementById("endScore").textContent = scored.ok + " / " + scored.n;
         document.getElementById("endLabel").textContent = pct + " % de réussite";
         document.getElementById("endSub").textContent = meta.title || entry.title || sujetId;
+        document.getElementById("endTime").textContent = fromTimer
+          ? "Temps écoulé (45:00)."
+          : "Temps utilisé : " + formatTime(elapsed) + " / 45:00";
         var fb = document.getElementById("endFb");
-        if (pct >= 85) fb.textContent = "Excellent blanc — tu tiens le rythme concours.";
-        else if (pct >= 65)
-          fb.textContent = "Bon niveau : revois les items ratés puis refais le sujet dans 48 h.";
-        else if (pct >= 40)
-          fb.textContent = "Base encore fragile en transversal — cible les chapitres faibles, puis reviens.";
-        else fb.textContent = "Priorise le cours sur les chapitres les plus ratés avant un nouveau blanc.";
+        if (pct >= 85) fb.textContent = "Excellent blanc — rythme concours tenu.";
+        else if (pct >= 65) fb.textContent = "Bon niveau : revois surtout les Q ratées du corrigé ci-dessous.";
+        else if (pct >= 40) fb.textContent = "Base encore fragile en transversal — cible les chapitres faibles.";
+        else fb.textContent = "Priorise le cours avant de retenter ce blanc.";
+
+        renderCorrige(scored.detail);
         show("end");
+        window.scrollTo(0, 0);
+      }
+
+      function startExam() {
+        finished = false;
+        answers = {};
+        index = 0;
+        startedAt = Date.now();
+        titleEl.textContent = meta.title || entry.title || sujetId;
+        show("quiz");
+        startTimer();
+        render();
       }
 
       function boot() {
         var file = entry.file || "sc01.js";
-        loadScript("./data/sujets/" + file + "?v=sc01b")
+        loadScript("./data/sujets/" + file + "?v=sc01c")
           .then(function () {
             var pack =
               (window.PASS_SUJETS || {})[entry.id] || (window.PASS_SUJETS || {})[sujetId];
@@ -288,25 +443,41 @@
             }
             meta = pack.meta || {};
             items = pack.items;
-            titleEl.textContent = meta.title || entry.title || sujetId;
-            start();
+            document.getElementById("introTitle").textContent =
+              meta.title || entry.title || sujetId;
+            document.getElementById("introSub").textContent =
+              items.length + " questions · 45 minutes · corrigé à la fin seulement.";
+            show("intro");
           })
           .catch(function (e) {
             bootMsg.textContent = String(e.message || e);
           });
       }
 
-      btnOk.addEventListener("click", validate);
+      btnStart.addEventListener("click", startExam);
+      btnPrev.addEventListener("click", function () {
+        saveCurrentAnswers();
+        if (index > 0) {
+          index -= 1;
+          render();
+        }
+      });
       btnNext.addEventListener("click", function () {
-        if (!revealed) return;
+        saveCurrentAnswers();
+        if (index >= items.length - 1) {
+          if (confirm("Terminer le blanc et voir le score + corrigé ?")) finish(false);
+          return;
+        }
         index += 1;
-        if (index >= items.length) finish();
-        else render();
+        render();
       });
-      btnQuit.addEventListener("click", function () {
-        if (confirm("Abandonner ce sujet ?")) location.href = "./sujets-complets.html";
+      btnFinish.addEventListener("click", function () {
+        saveCurrentAnswers();
+        if (confirm("Terminer le blanc et voir le score + corrigé ?")) finish(false);
       });
-      btnAgain.addEventListener("click", start);
+      btnAgain.addEventListener("click", function () {
+        show("intro");
+      });
 
       boot();
     })();
