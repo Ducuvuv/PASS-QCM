@@ -1,0 +1,1958 @@
+window.PASS_SUJETS = window.PASS_SUJETS || {};
+window.PASS_SUJETS['SC08'] = {
+  "meta": {
+    "id": "SC08",
+    "title": "Blanc UE5 Anatomie — Sujet généré 08",
+    "subject": "anatomie",
+    "source": "generated",
+    "style_ref": "UE5_Anatomie_Session_2025-2026",
+    "n_questions": 36,
+    "notes": "Huitième blanc transversal original (différent de SC01–SC07)."
+  },
+  "items": [
+    {
+      "id": "GEN-ANAT-SC08-001",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "01",
+      "stem": "Parmi les propositions suivantes concernant l’inversion et l’éversion du pied, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "l’inversion oriente la plante vers le plan médian",
+        "B": "l’éversion oriente la plante vers le dehors",
+        "C": "elles mettent en jeu notamment les articulations du tarse",
+        "D": "elles sont synonymes stricts de flexion/extension du genou",
+        "E": "les fibulaires participent surtout à l’éversion"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "inversion = plante médiale"
+        },
+        "B": {
+          "correct": true,
+          "why": "éversion = dehors"
+        },
+        "C": {
+          "correct": true,
+          "why": "tarse"
+        },
+        "D": {
+          "correct": false,
+          "why": "≠ genou"
+        },
+        "E": {
+          "correct": true,
+          "why": "fibulaires = éverseurs"
+        }
+      },
+      "tags": [
+        "inversion_eversion",
+        "P1"
+      ],
+      "course_ref": "01_Introduction_anatomie_generale#inv_ev",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q01",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 1
+    },
+    {
+      "id": "GEN-ANAT-SC08-002",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "01",
+      "stem": "Parmi les propositions suivantes concernant les termes ipsilateral et controlateral, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "ipsilatéral = même côté",
+        "B": "controlatéral = côté opposé",
+        "C": "homolatéral est synonyme d’ipsilatéral",
+        "D": "bilatéral signifie un seul côté",
+        "E": "une lésion motrice corticale peut donner un déficit controlatéral"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "ipsi"
+        },
+        "B": {
+          "correct": true,
+          "why": "contro"
+        },
+        "C": {
+          "correct": true,
+          "why": "homo = ipsi"
+        },
+        "D": {
+          "correct": false,
+          "why": "bilatéral = 2 côtés"
+        },
+        "E": {
+          "correct": true,
+          "why": "voie pyramidale croisée"
+        }
+      },
+      "tags": [
+        "ipsi_contro",
+        "P1"
+      ],
+      "course_ref": "01_Introduction_anatomie_generale#ipsi",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q02",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 2
+    },
+    {
+      "id": "GEN-ANAT-SC08-003",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "01",
+      "stem": "Parmi les propositions suivantes concernant la région axillaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "c’est la région de l’aisselle",
+        "B": "elle communique avec le cou et le bras",
+        "C": "elle contient des vaisseaux et nerfs du membre supérieur",
+        "D": "elle correspond au creux poplité",
+        "E": "elle contient des nœuds lymphatiques"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "aisselle"
+        },
+        "B": {
+          "correct": true,
+          "why": "communications"
+        },
+        "C": {
+          "correct": true,
+          "why": "pédicule"
+        },
+        "D": {
+          "correct": false,
+          "why": "poplité = genou"
+        },
+        "E": {
+          "correct": true,
+          "why": "lymphoïdes"
+        }
+      },
+      "tags": [
+        "region_axillaire",
+        "P1"
+      ],
+      "course_ref": "01_Introduction_anatomie_generale#aisselle_intro",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q03",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 3
+    },
+    {
+      "id": "GEN-ANAT-SC08-004",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "02",
+      "stem": "Parmi les propositions suivantes concernant le mésencéphale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "c’est l’étage supérieur du tronc cérébral",
+        "B": "il est traversé par l’aqueduc",
+        "C": "il présente les colliculi (tubercules quadrijumeaux)",
+        "D": "il correspond à la moelle allongée",
+        "E": "les pédoncules cérébraux y sont visibles"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "étage haut"
+        },
+        "B": {
+          "correct": true,
+          "why": "aqueduc"
+        },
+        "C": {
+          "correct": true,
+          "why": "colliculi"
+        },
+        "D": {
+          "correct": false,
+          "why": "bulbe = bas"
+        },
+        "E": {
+          "correct": true,
+          "why": "pédoncules"
+        }
+      },
+      "tags": [
+        "mesencephale",
+        "P1"
+      ],
+      "course_ref": "02_Systeme_nerveux#mesencephale",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q04",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 4
+    },
+    {
+      "id": "GEN-ANAT-SC08-005",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "02",
+      "stem": "Parmi les propositions suivantes concernant le nerf hypoglosse (XII), laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il est moteur pour la langue",
+        "B": "sa lésion dévie la langue du côté atteint à la protrusion",
+        "C": "c’est un nerf crânien",
+        "D": "il véhicule la vision",
+        "E": "il émerge de la moelle allongée"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "moteur langue"
+        },
+        "B": {
+          "correct": true,
+          "why": "déviation homolatérale"
+        },
+        "C": {
+          "correct": true,
+          "why": "XII"
+        },
+        "D": {
+          "correct": false,
+          "why": "vision = II"
+        },
+        "E": {
+          "correct": true,
+          "why": "bulbe"
+        }
+      },
+      "tags": [
+        "XII",
+        "P1"
+      ],
+      "course_ref": "02_Systeme_nerveux#XII",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q05",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 5
+    },
+    {
+      "id": "GEN-ANAT-SC08-006",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "02",
+      "stem": "Parmi les propositions suivantes concernant le liquide cérébrospinal — circulation, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "des ventricules latéraux il passe vers le 3e via les foramens interventriculaires",
+        "B": "du 3e il passe à l’aqueduc puis au 4e",
+        "C": "du 4e il gagne l’espace sous-arachnoïdien",
+        "D": "il reste enfermé sans sortie hors des ventricules",
+        "E": "une obstruction peut provoquer une hydrocéphalie"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "Monro"
+        },
+        "B": {
+          "correct": true,
+          "why": "aqueduc"
+        },
+        "C": {
+          "correct": true,
+          "why": "ouvertures du V4"
+        },
+        "D": {
+          "correct": false,
+          "why": "sorties existent"
+        },
+        "E": {
+          "correct": true,
+          "why": "hydrocéphalie"
+        }
+      },
+      "tags": [
+        "LCS_circulation",
+        "P1"
+      ],
+      "course_ref": "02_Systeme_nerveux#LCS_circ",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q06",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 6
+    },
+    {
+      "id": "GEN-ANAT-SC08-007",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "03",
+      "stem": "Parmi les propositions suivantes concernant le fascicule de His et le système cardionecteur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "le nœud sinusal initie habituellement le rythme",
+        "B": "le nœud AV retarde la conduction atrio-ventriculaire",
+        "C": "le fascicule de His se divise en branches droite et gauche",
+        "D": "le rythme naît exclusivement dans le ventricule gauche",
+        "E": "les fibres de Purkinje distribuent l’excitation ventriculaire"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "NSA"
+        },
+        "B": {
+          "correct": true,
+          "why": "NAV"
+        },
+        "C": {
+          "correct": true,
+          "why": "His"
+        },
+        "D": {
+          "correct": false,
+          "why": "NSA atrial"
+        },
+        "E": {
+          "correct": true,
+          "why": "Purkinje"
+        }
+      },
+      "tags": [
+        "cardionecteur",
+        "P1"
+      ],
+      "course_ref": "03_Appareil_cardio_circulatoire#cardionecteur",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q07",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 7
+    },
+    {
+      "id": "GEN-ANAT-SC08-008",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "03",
+      "stem": "Parmi les propositions suivantes concernant l’artère subclavière, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "à droite elle naît du tronc brachio-céphalique",
+        "B": "à gauche elle naît de la crosse aortique",
+        "C": "elle devient artère axillaire au bord de la 1re côte / clavicule",
+        "D": "elle naît du ventricule droit",
+        "E": "elle donne notamment l’artère vertébrale"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "TBC à droite"
+        },
+        "B": {
+          "correct": true,
+          "why": "crosse à gauche"
+        },
+        "C": {
+          "correct": true,
+          "why": "→ axillaire"
+        },
+        "D": {
+          "correct": false,
+          "why": "pas VD"
+        },
+        "E": {
+          "correct": true,
+          "why": "vertébrale"
+        }
+      },
+      "tags": [
+        "subclaviere",
+        "P1"
+      ],
+      "course_ref": "03_Appareil_cardio_circulatoire#subclaviere",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q08",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 8
+    },
+    {
+      "id": "GEN-ANAT-SC08-009",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "03",
+      "stem": "Parmi les propositions suivantes concernant le péricarde séreux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "le feuillet viscéral est l’épicarde",
+        "B": "une cavité péricardique virtuelle sépare les feuillets",
+        "C": "un épanchement peut compresser le cœur (tamponnade)",
+        "D": "il est rempli d’air en physiologie",
+        "E": "le feuillet pariétal tapisse le sac fibreux"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "épicarde"
+        },
+        "B": {
+          "correct": true,
+          "why": "cavité"
+        },
+        "C": {
+          "correct": true,
+          "why": "tamponnade"
+        },
+        "D": {
+          "correct": false,
+          "why": "liquide"
+        },
+        "E": {
+          "correct": true,
+          "why": "pariétal"
+        }
+      },
+      "tags": [
+        "pericarde_sereux",
+        "P1"
+      ],
+      "course_ref": "03_Appareil_cardio_circulatoire#pericarde_sereux",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q09",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 9
+    },
+    {
+      "id": "GEN-ANAT-SC08-010",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "04",
+      "stem": "Parmi les propositions suivantes concernant la scissure oblique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "elle existe au poumon droit et au poumon gauche",
+        "B": "au droit elle sépare lobe inférieur des lobes supérieur/moyen",
+        "C": "au gauche elle sépare lobe supérieur et inférieur",
+        "D": "elle n’existe qu’au poumon gauche",
+        "E": "c’est un repère de subdivision lobaire"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "bilatérale"
+        },
+        "B": {
+          "correct": true,
+          "why": "droit"
+        },
+        "C": {
+          "correct": true,
+          "why": "gauche"
+        },
+        "D": {
+          "correct": false,
+          "why": "aussi à droite"
+        },
+        "E": {
+          "correct": true,
+          "why": "repère"
+        }
+      },
+      "tags": [
+        "scissure_oblique",
+        "P1"
+      ],
+      "course_ref": "04_Appareil_respiratoire#scissure",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q10",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 10
+    },
+    {
+      "id": "GEN-ANAT-SC08-011",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "04",
+      "stem": "Parmi les propositions suivantes concernant le mediastin et les plèvres, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "chaque cavité pleurale est latérale au médiastin",
+        "B": "le médiastin sépare les deux plèvres",
+        "C": "une communication anormale peut bilatéraliser un pneumothorax",
+        "D": "les poumons sont des organes médiastinaux",
+        "E": "le cœur siège dans le médiastin"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "plèvres latérales"
+        },
+        "B": {
+          "correct": true,
+          "why": "médiastin médian"
+        },
+        "C": {
+          "correct": true,
+          "why": "pneumothorax"
+        },
+        "D": {
+          "correct": false,
+          "why": "poumons hors médiastin"
+        },
+        "E": {
+          "correct": true,
+          "why": "cœur médiastinal"
+        }
+      },
+      "tags": [
+        "plevre_mediastin",
+        "P1"
+      ],
+      "course_ref": "04_Appareil_respiratoire#plevre_med",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q11",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 11
+    },
+    {
+      "id": "GEN-ANAT-SC08-012",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "04",
+      "stem": "Parmi les propositions suivantes concernant les cartilages du larynx, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "le cartilage thyroïde est le plus volumineux",
+        "B": "le cartilage cricoïde forme un anneau complet",
+        "C": "l’épiglotte est un cartilage laryngé",
+        "D": "le larynx n’a aucun cartilage",
+        "E": "les aryténoïdes participent à la mobilité des plis vocaux"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "thyroïde"
+        },
+        "B": {
+          "correct": true,
+          "why": "cricoïde"
+        },
+        "C": {
+          "correct": true,
+          "why": "épiglotte"
+        },
+        "D": {
+          "correct": false,
+          "why": "cartilages présents"
+        },
+        "E": {
+          "correct": true,
+          "why": "aryténoïdes"
+        }
+      },
+      "tags": [
+        "cartilages_larynx",
+        "P2"
+      ],
+      "course_ref": "04_Appareil_respiratoire#cart_larynx",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q12",
+      "priority": "P2",
+      "sujet_id": "SC08",
+      "q_index": 12
+    },
+    {
+      "id": "GEN-ANAT-SC08-013",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "05",
+      "stem": "Parmi les propositions suivantes concernant le corps ciliaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il appartient à l’uvée",
+        "B": "il sécrète l’humeur aqueuse",
+        "C": "il permet l’accommodation via le muscle ciliaire",
+        "D": "il appartient à la sclère",
+        "E": "il est situé entre iris et choroïde"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "uvée"
+        },
+        "B": {
+          "correct": true,
+          "why": "aqueux"
+        },
+        "C": {
+          "correct": true,
+          "why": "accommodation"
+        },
+        "D": {
+          "correct": false,
+          "why": "pas sclère"
+        },
+        "E": {
+          "correct": true,
+          "why": "continuité uvée"
+        }
+      },
+      "tags": [
+        "corps_ciliaire",
+        "P1"
+      ],
+      "course_ref": "05_Organes_des_sens#ciliaire",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q13",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 13
+    },
+    {
+      "id": "GEN-ANAT-SC08-014",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "05",
+      "stem": "Parmi les propositions suivantes concernant le nerf vestibulo-cochléaire (VIII), laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il a une partie cochléaire (audition)",
+        "B": "il a une partie vestibulaire (équilibre)",
+        "C": "il est un nerf crânien sensitif spécial",
+        "D": "il innerve les muscles de la mimique",
+        "E": "il chemine dans le méat acoustique interne"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "cochléaire"
+        },
+        "B": {
+          "correct": true,
+          "why": "vestibulaire"
+        },
+        "C": {
+          "correct": true,
+          "why": "sensitif spécial"
+        },
+        "D": {
+          "correct": false,
+          "why": "mimique = VII"
+        },
+        "E": {
+          "correct": true,
+          "why": "MAI"
+        }
+      },
+      "tags": [
+        "VIII",
+        "P1"
+      ],
+      "course_ref": "05_Organes_des_sens#VIII",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q14",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 14
+    },
+    {
+      "id": "GEN-ANAT-SC08-015",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "05",
+      "stem": "Parmi les propositions suivantes concernant la trompe auditive, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "elle relie la caisse du tympan au nasopharynx",
+        "B": "elle équilibre les pressions de part et d’autre du tympan",
+        "C": "elle s’ouvre lors de la déglutition / bâillement",
+        "D": "elle relie l’oreille interne au larynx",
+        "E": "son obstruction favorise otites moyennes"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "OM ↔ nasopharynx"
+        },
+        "B": {
+          "correct": true,
+          "why": "pression"
+        },
+        "C": {
+          "correct": true,
+          "why": "ouverture"
+        },
+        "D": {
+          "correct": false,
+          "why": "pas larynx/OI"
+        },
+        "E": {
+          "correct": true,
+          "why": "otites"
+        }
+      },
+      "tags": [
+        "trompe",
+        "P1"
+      ],
+      "course_ref": "05_Organes_des_sens#trompe",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q15",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 15
+    },
+    {
+      "id": "GEN-ANAT-SC08-016",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "06",
+      "stem": "Parmi les propositions suivantes concernant les zygapophyses, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "ce sont les articulations entre processus articulaires",
+        "B": "elles guident et limitent les mouvements du rachis",
+        "C": "elles sont des articulations synoviales",
+        "D": "elles unissent les corps vertébraux via le disque",
+        "E": "leur orientation varie selon l’étage cervical/thoracique/lombaire"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "processus articulaires"
+        },
+        "B": {
+          "correct": true,
+          "why": "guidage"
+        },
+        "C": {
+          "correct": true,
+          "why": "synoviales"
+        },
+        "D": {
+          "correct": false,
+          "why": "disque = corps"
+        },
+        "E": {
+          "correct": true,
+          "why": "orientation variable"
+        }
+      },
+      "tags": [
+        "zygapophyses",
+        "P1"
+      ],
+      "course_ref": "06_Rachis#zygapophyses",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q16",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 16
+    },
+    {
+      "id": "GEN-ANAT-SC08-017",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "06",
+      "stem": "Parmi les propositions suivantes concernant le ligament longitudinal postérieur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il chemine sur la face postérieure des corps vertébraux",
+        "B": "il est dans le canal vertébral",
+        "C": "il limite l’hyperflexion",
+        "D": "il est situé sur la face antérieure des corps",
+        "E": "il est plus étroit que le ligament longitudinal antérieur"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "face post. corps"
+        },
+        "B": {
+          "correct": true,
+          "why": "dans le canal"
+        },
+        "C": {
+          "correct": true,
+          "why": "anti-flexion"
+        },
+        "D": {
+          "correct": false,
+          "why": "antérieur = LLA"
+        },
+        "E": {
+          "correct": true,
+          "why": "plus étroit"
+        }
+      },
+      "tags": [
+        "LLP",
+        "P2"
+      ],
+      "course_ref": "06_Rachis#LLP",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q17",
+      "priority": "P2",
+      "sujet_id": "SC08",
+      "q_index": 17
+    },
+    {
+      "id": "GEN-ANAT-SC08-018",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "07",
+      "stem": "Parmi les propositions suivantes concernant le muscle oblique interne, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il est intermédiaire entre oblique externe et transverse",
+        "B": "il participe à la rotation et flexion du tronc",
+        "C": "il contribue à la paroi du canal inguinal",
+        "D": "il est le plus superficiel des larges",
+        "E": "ses fibres ont une orientation différente de l’oblique externe"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "couche moyenne"
+        },
+        "B": {
+          "correct": true,
+          "why": "actions"
+        },
+        "C": {
+          "correct": true,
+          "why": "inguinal"
+        },
+        "D": {
+          "correct": false,
+          "why": "OE = superficiel"
+        },
+        "E": {
+          "correct": true,
+          "why": "orientation croisée"
+        }
+      },
+      "tags": [
+        "oblique_interne",
+        "P1"
+      ],
+      "course_ref": "07_Parois_du_tronc#OI",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q18",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 18
+    },
+    {
+      "id": "GEN-ANAT-SC08-019",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "07",
+      "stem": "Parmi les propositions suivantes concernant le muscle carré des lombes, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il unit la crête iliaque aux côtes/ lombaires",
+        "B": "il incline le tronc homolatéralement",
+        "C": "il fixe la 12e côte à l’inspiration",
+        "D": "il s’insère sur le processus coracoïde",
+        "E": "il appartient à la paroi postérieure de l’abdomen"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "iliaque–L/côtes"
+        },
+        "B": {
+          "correct": true,
+          "why": "inclinaison"
+        },
+        "C": {
+          "correct": true,
+          "why": "12e côte"
+        },
+        "D": {
+          "correct": false,
+          "why": "pas coracoïde"
+        },
+        "E": {
+          "correct": true,
+          "why": "paroi post."
+        }
+      },
+      "tags": [
+        "carre_lombes",
+        "P1"
+      ],
+      "course_ref": "07_Parois_du_tronc#carre",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q19",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 19
+    },
+    {
+      "id": "GEN-ANAT-SC08-020",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "08",
+      "stem": "Parmi les propositions suivantes concernant le fundus gastrique, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "c’est la portion supérieure au-dessus du cardia",
+        "B": "il est souvent rempli d’air (poche à air)",
+        "C": "il est en rapport avec le diaphragme et la rate",
+        "D": "c’est l’orifice pylorique",
+        "E": "il fait partie de l’estomac"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "au-dessus cardia"
+        },
+        "B": {
+          "correct": true,
+          "why": "air"
+        },
+        "C": {
+          "correct": true,
+          "why": "rapports"
+        },
+        "D": {
+          "correct": false,
+          "why": "pylore ≠ fundus"
+        },
+        "E": {
+          "correct": true,
+          "why": "estomac"
+        }
+      },
+      "tags": [
+        "fundus",
+        "P1"
+      ],
+      "course_ref": "08_Appareil_digestif#fundus",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q20",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 20
+    },
+    {
+      "id": "GEN-ANAT-SC08-021",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "08",
+      "stem": "Parmi les propositions suivantes concernant le canal hépatique commun, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il naît de la réunion des canaux hépatiques droit et gauche",
+        "B": "il se unit au cystique pour former le cholédoque",
+        "C": "il draine la bile hépatique",
+        "D": "il naît de la veine porte",
+        "E": "il appartient aux voies biliaires extra-hépatiques"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "D+G"
+        },
+        "B": {
+          "correct": true,
+          "why": "+ cystique → cholédoque"
+        },
+        "C": {
+          "correct": true,
+          "why": "bile"
+        },
+        "D": {
+          "correct": false,
+          "why": "pas veine"
+        },
+        "E": {
+          "correct": true,
+          "why": "extra-hépatique"
+        }
+      },
+      "tags": [
+        "hepatique_commun",
+        "P1"
+      ],
+      "course_ref": "08_Appareil_digestif#CHC",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q21",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 21
+    },
+    {
+      "id": "GEN-ANAT-SC08-022",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "08",
+      "stem": "Parmi les propositions suivantes concernant le duodénum — portions, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il comporte typiquement quatre portions",
+        "B": "la D2 (descendante) reçoit les voies biliopancréatiques",
+        "D": "il fait suite au jéjunum",
+        "C": "il encadre la tête du pancréas",
+        "E": "il commence après le pylore"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "4 portions"
+        },
+        "B": {
+          "correct": true,
+          "why": "D2 = papille"
+        },
+        "C": {
+          "correct": true,
+          "why": "tête pancréas"
+        },
+        "D": {
+          "correct": false,
+          "why": "suite au pylore, avant jéjunum"
+        },
+        "E": {
+          "correct": true,
+          "why": "après pylore"
+        }
+      },
+      "tags": [
+        "duodenum_portions",
+        "P1"
+      ],
+      "course_ref": "08_Appareil_digestif#D_portions",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q22",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 22
+    },
+    {
+      "id": "GEN-ANAT-SC08-023",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "09",
+      "stem": "Parmi les propositions suivantes concernant les calices rénaux, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "les calices mineurs recueillent l’urine des papilles",
+        "B": "ils se réunissent en calices majeurs",
+        "C": "ils se jettent dans le bassinet",
+        "D": "ils appartiennent au bas appareil",
+        "E": "ils font partie des voies excrétrices intrarénales"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "papilles → mineurs"
+        },
+        "B": {
+          "correct": true,
+          "why": "majeurs"
+        },
+        "C": {
+          "correct": true,
+          "why": "→ bassinet"
+        },
+        "D": {
+          "correct": false,
+          "why": "haut appareil"
+        },
+        "E": {
+          "correct": true,
+          "why": "intrarénales"
+        }
+      },
+      "tags": [
+        "calices",
+        "P1"
+      ],
+      "course_ref": "09_Appareil_genito_urinaire#calices",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q23",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 23
+    },
+    {
+      "id": "GEN-ANAT-SC08-024",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "09",
+      "stem": "Parmi les propositions suivantes concernant l’utérus, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il comporte un corps et un col",
+        "B": "il siège dans le petit bassin",
+        "C": "les trompes s’y abouchent",
+        "D": "il produit les spermatozoïdes",
+        "E": "le col s’ouvre dans le vagin"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "corps/col"
+        },
+        "B": {
+          "correct": true,
+          "why": "pelvis"
+        },
+        "C": {
+          "correct": true,
+          "why": "trompes"
+        },
+        "D": {
+          "correct": false,
+          "why": "spermato = testicule"
+        },
+        "E": {
+          "correct": true,
+          "why": "col → vagin"
+        }
+      },
+      "tags": [
+        "uterus",
+        "P2"
+      ],
+      "course_ref": "09_Appareil_genito_urinaire#uterus",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q24",
+      "priority": "P2",
+      "sujet_id": "SC08",
+      "q_index": 24
+    },
+    {
+      "id": "GEN-ANAT-SC08-025",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "10",
+      "stem": "Parmi les propositions suivantes concernant le muscle petit rond, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il appartient à la coiffe",
+        "B": "il s’insère sur le tubercule majeur",
+        "C": "il est rotateur latéral",
+        "D": "il est innervé par le nerf axillaire",
+        "E": "il s’insère sur le tubercule mineur"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "coiffe"
+        },
+        "B": {
+          "correct": true,
+          "why": "facette inférieure"
+        },
+        "C": {
+          "correct": true,
+          "why": "RL"
+        },
+        "D": {
+          "correct": true,
+          "why": "axillaire"
+        },
+        "E": {
+          "correct": false,
+          "why": "mineur = subscapulaire"
+        }
+      },
+      "tags": [
+        "petit_rond",
+        "P1"
+      ],
+      "course_ref": "10_Membre_superieur#petit_rond",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q25",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 25
+    },
+    {
+      "id": "GEN-ANAT-SC08-026",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "10",
+      "stem": "Parmi les propositions suivantes concernant le muscle long extenseur des doigts, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il appartient à la loge postérieure de l’avant-bras",
+        "B": "il étend les doigts longs",
+        "C": "il est innervé par le nerf radial (branche profonde / PIN)",
+        "D": "il est innervé par le nerf ulnaire",
+        "E": "ses tendons passent sous le rétinaculum des extenseurs"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "postérieure"
+        },
+        "B": {
+          "correct": true,
+          "why": "extension"
+        },
+        "C": {
+          "correct": true,
+          "why": "radial/PIN"
+        },
+        "D": {
+          "correct": false,
+          "why": "pas ulnaire"
+        },
+        "E": {
+          "correct": true,
+          "why": "rétinaculum"
+        }
+      },
+      "tags": [
+        "EDC",
+        "P1"
+      ],
+      "course_ref": "10_Membre_superieur#EDC",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q26",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 26
+    },
+    {
+      "id": "GEN-ANAT-SC08-027",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "10",
+      "stem": "Parmi les propositions suivantes concernant l’os scaphoïde, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il appartient à la rangée proximale du carpe",
+        "B": "il s’articule avec le radius",
+        "C": "sa fracture est fréquente après chute sur la main",
+        "D": "il appartient au métacarpe",
+        "E": "il est le plus latéral de la rangée proximale"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "proximale"
+        },
+        "B": {
+          "correct": true,
+          "why": "radius"
+        },
+        "C": {
+          "correct": true,
+          "why": "fracture"
+        },
+        "D": {
+          "correct": false,
+          "why": "carpe"
+        },
+        "E": {
+          "correct": true,
+          "why": "latéral"
+        }
+      },
+      "tags": [
+        "scaphoide",
+        "P1"
+      ],
+      "course_ref": "10_Membre_superieur#scaphoide",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q27",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 27
+    },
+    {
+      "id": "GEN-ANAT-SC08-028",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "10",
+      "stem": "Parmi les propositions suivantes concernant le muscle opposant du pouce, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il appartient à l’éminence thénar",
+        "B": "il oppose le pouce",
+        "C": "il est innervé par le nerf médian",
+        "D": "il appartient à l’hypothénar",
+        "E": "il agit sur le 1er métacarpien"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "thénar"
+        },
+        "B": {
+          "correct": true,
+          "why": "opposition"
+        },
+        "C": {
+          "correct": true,
+          "why": "médian"
+        },
+        "D": {
+          "correct": false,
+          "why": "pas hypothénar"
+        },
+        "E": {
+          "correct": true,
+          "why": "M1"
+        }
+      },
+      "tags": [
+        "opposant",
+        "P1"
+      ],
+      "course_ref": "10_Membre_superieur#opposant",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q28",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 28
+    },
+    {
+      "id": "GEN-ANAT-SC08-029",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "10",
+      "stem": "Parmi les propositions suivantes concernant l’artère radiale, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "elle naît de la bifurcation de l’artère brachiale",
+        "B": "elle chemine sur le bord latéral de l’avant-bras",
+        "C": "on y prend souvent le pouls au poignet",
+        "D": "elle naît de l’artère ulnaire",
+        "E": "elle participe à l’arcade palmaire profonde"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "← brachiale"
+        },
+        "B": {
+          "correct": true,
+          "why": "latéral"
+        },
+        "C": {
+          "correct": true,
+          "why": "pouls radial"
+        },
+        "D": {
+          "correct": false,
+          "why": "pas de l’ulnaire"
+        },
+        "E": {
+          "correct": true,
+          "why": "arcade profonde"
+        }
+      },
+      "tags": [
+        "artere_radiale",
+        "P2"
+      ],
+      "course_ref": "10_Membre_superieur#radiale",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q29",
+      "priority": "P2",
+      "sujet_id": "SC08",
+      "q_index": 29
+    },
+    {
+      "id": "GEN-ANAT-SC08-030",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "11",
+      "stem": "Parmi les propositions suivantes concernant le ligament croisé postérieur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il s’oppose au tiroir postérieur du tibia",
+        "B": "il est intra-articulaire",
+        "C": "il relie fémur et tibia",
+        "D": "il s’oppose surtout au tiroir antérieur",
+        "E": "il est plus épais / résistant que le LCA en général"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "anti-tiroir post."
+        },
+        "B": {
+          "correct": true,
+          "why": "intra"
+        },
+        "C": {
+          "correct": true,
+          "why": "fémoro-tibial"
+        },
+        "D": {
+          "correct": false,
+          "why": "antérieur = LCA"
+        },
+        "E": {
+          "correct": true,
+          "why": "plus robuste"
+        }
+      },
+      "tags": [
+        "LCP",
+        "P1"
+      ],
+      "course_ref": "11_Membre_inferieur#LCP",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q30",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 30
+    },
+    {
+      "id": "GEN-ANAT-SC08-031",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "11",
+      "stem": "Parmi les propositions suivantes concernant le muscle grand adducteur, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il appartient à la loge médiale de la cuisse",
+        "B": "il adduit la cuisse",
+        "C": "il a un hiatus pour les vaisseaux fémoraux (hiatus de l’adducteur)",
+        "D": "il est innervé uniquement par le nerf sciatique",
+        "E": "il s’insère sur la ligne âpre / tubercule de l’adducteur"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "médiale"
+        },
+        "B": {
+          "correct": true,
+          "why": "adduction"
+        },
+        "C": {
+          "correct": true,
+          "why": "hiatus"
+        },
+        "D": {
+          "correct": false,
+          "why": "obturateur + sciatique (faisceau)"
+        },
+        "E": {
+          "correct": true,
+          "why": "insertions"
+        }
+      },
+      "tags": [
+        "grand_adducteur",
+        "P1"
+      ],
+      "course_ref": "11_Membre_inferieur#grand_add",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q31",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 31
+    },
+    {
+      "id": "GEN-ANAT-SC08-032",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "11",
+      "stem": "Parmi les propositions suivantes concernant le plexus sacral, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il donne le nerf ischiatique",
+        "B": "il donne le nerf glutéal supérieur",
+        "C": "il donne le nerf pudendal",
+        "D": "il donne le nerf fémoral",
+        "E": "il est formé surtout par L4–S3/S4"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "sciatique"
+        },
+        "B": {
+          "correct": true,
+          "why": "glutéal sup."
+        },
+        "C": {
+          "correct": true,
+          "why": "pudendal"
+        },
+        "D": {
+          "correct": false,
+          "why": "fémoral = lombal"
+        },
+        "E": {
+          "correct": true,
+          "why": "racines"
+        }
+      },
+      "tags": [
+        "plexus_sacral",
+        "P1"
+      ],
+      "course_ref": "11_Membre_inferieur#plexus_sacral",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q32",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 32
+    },
+    {
+      "id": "GEN-ANAT-SC08-033",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "11",
+      "stem": "Parmi les propositions suivantes concernant le muscle court fibulaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il appartient au compartiment latéral",
+        "B": "il s’insère sur la base du 5e métatarsien",
+        "C": "il est éverseur",
+        "D": "il s’insère sur le calcanéus via l’Achille",
+        "E": "il est innervé par le fibulaire superficiel"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "latéral"
+        },
+        "B": {
+          "correct": true,
+          "why": "base M5"
+        },
+        "C": {
+          "correct": true,
+          "why": "éversion"
+        },
+        "D": {
+          "correct": false,
+          "why": "Achille = triceps"
+        },
+        "E": {
+          "correct": true,
+          "why": "superficiel"
+        }
+      },
+      "tags": [
+        "court_fibulaire",
+        "P1"
+      ],
+      "course_ref": "11_Membre_inferieur#court_fib",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q33",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 33
+    },
+    {
+      "id": "GEN-ANAT-SC08-034",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "11",
+      "stem": "Parmi les propositions suivantes concernant le naviculaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il est médial dans le tarse",
+        "B": "il s’articule avec la tête du talus",
+        "C": "il s’articule avec les cunéiformes",
+        "D": "c’est un os du métatarse",
+        "E": "il participe à l’arche médiale"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "médial"
+        },
+        "B": {
+          "correct": true,
+          "why": "talonaviculaire"
+        },
+        "C": {
+          "correct": true,
+          "why": "cunéiformes"
+        },
+        "D": {
+          "correct": false,
+          "why": "tarse"
+        },
+        "E": {
+          "correct": true,
+          "why": "arche"
+        }
+      },
+      "tags": [
+        "naviculaire",
+        "P1"
+      ],
+      "course_ref": "11_Membre_inferieur#naviculaire",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q34",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 34
+    },
+    {
+      "id": "GEN-ANAT-SC08-035",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "11",
+      "stem": "Parmi les propositions suivantes concernant le muscle biceps fémoral, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "il a deux chefs (long et court)",
+        "B": "il est ischio-jambier (surtout le long chef)",
+        "C": "il fléchit le genou et oriente latéralement la jambe",
+        "D": "il s’insère sur la tête de la fibula",
+        "E": "il appartient à la patte d’oie"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "2 chefs"
+        },
+        "B": {
+          "correct": true,
+          "why": "IJ"
+        },
+        "C": {
+          "correct": true,
+          "why": "flexion + RL jambe"
+        },
+        "D": {
+          "correct": true,
+          "why": "tête fibula"
+        },
+        "E": {
+          "correct": false,
+          "why": "pas patte d’oie"
+        }
+      },
+      "tags": [
+        "biceps_femoral",
+        "P1"
+      ],
+      "course_ref": "11_Membre_inferieur#biceps_fem",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q35",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 35
+    },
+    {
+      "id": "GEN-ANAT-SC08-036",
+      "source": "generated",
+      "subject": "anatomie",
+      "chapter": "11",
+      "stem": "Parmi les propositions suivantes concernant l’artère fibulaire, laquelle (lesquelles) est (sont) exacte(s) ?",
+      "choices": {
+        "A": "elle naît souvent de l’artère tibiale postérieure",
+        "B": "elle chemine le long de la fibula",
+        "C": "elle vascularise notamment les muscles latéraux / postérieurs profonds",
+        "D": "elle naît de l’artère axillaire",
+        "E": "elle appartient à la jambe"
+      },
+      "answer": [
+        "A",
+        "B",
+        "C",
+        "E"
+      ],
+      "explanations": {
+        "A": {
+          "correct": true,
+          "why": "← TP"
+        },
+        "B": {
+          "correct": true,
+          "why": "le long fibula"
+        },
+        "C": {
+          "correct": true,
+          "why": "territoire"
+        },
+        "D": {
+          "correct": false,
+          "why": "pas axillaire"
+        },
+        "E": {
+          "correct": true,
+          "why": "jambe"
+        }
+      },
+      "tags": [
+        "artere_fibulaire",
+        "P1"
+      ],
+      "course_ref": "11_Membre_inferieur#art_fib",
+      "image": null,
+      "difficulty": null,
+      "year_signal": null,
+      "pattern_id": "sc08_q36",
+      "priority": "P1",
+      "sujet_id": "SC08",
+      "q_index": 36
+    }
+  ]
+};
