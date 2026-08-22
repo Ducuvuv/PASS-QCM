@@ -19,6 +19,13 @@ window.PASS_SUJET_CATALOG = [
     "n": 36,
     "file": "sc03.js",
     "status": "ready"
+  },
+  {
+    "id": "SC04",
+    "title": "Blanc UE5 Anatomie — Sujet généré 04",
+    "n": 36,
+    "file": "sc04.js",
+    "status": "ready"
   }
 ];
 window.PASS_SUJETS_CATALOG = window.PASS_SUJET_CATALOG;
