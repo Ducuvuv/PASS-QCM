@@ -4034,5 +4034,790 @@ window.PASS_ITEMS = [
     "year_signal": null,
     "pattern_id": null,
     "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-02-000076",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Sur le schéma ci-dessous (étages du tronc cérébral), laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le mésencéphale est l’étage le plus rostral du tronc cérébral",
+      "B": "le bulbe (moelle allongée) est caudal par rapport au pont",
+      "C": "le cervelet fait partie des trois étages du tronc cérébral",
+      "D": "le pont est intercalé entre mésencéphale et bulbe",
+      "E": "le diencéphale est un étage du tronc cérébral"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "mésencéphale = étage supérieur / rostral"
+      },
+      "B": {
+        "correct": true,
+        "why": "ordre : mésencéphale → pont → bulbe"
+      },
+      "C": {
+        "correct": false,
+        "why": "cervelet = annexe dorsale, pas un étage du tronc"
+      },
+      "D": {
+        "correct": true,
+        "why": "pont entre mésencéphale et bulbe"
+      },
+      "E": {
+        "correct": false,
+        "why": "diencéphale = prosencéphale, hors tronc"
+      }
+    },
+    "tags": [
+      "tronc_cerebral",
+      "schema",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#tronc",
+    "image": "./matiere/anatomie/img/ch02/blank/11_tronc_etages.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch02_neuro_76",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000077",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Sur le schéma ci-dessous (système ventriculaire), laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les ventricules latéraux sont situés dans les hémisphères cérébraux",
+      "B": "le 3e ventricule est une cavité diencéphalique médiane",
+      "C": "l’aqueduc du mésencéphale relie 3e et 4e ventricules",
+      "D": "le 4e ventricule est situé entre cervelet et tronc cérébral",
+      "E": "il n’existe qu’un seul ventricule cérébral"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "ventricules latéraux = hémisphères"
+      },
+      "B": {
+        "correct": true,
+        "why": "V3 = diencéphale"
+      },
+      "C": {
+        "correct": true,
+        "why": "aqueduc de Sylvius = V3 → V4"
+      },
+      "D": {
+        "correct": true,
+        "why": "V4 entre cervelet et tronc"
+      },
+      "E": {
+        "correct": false,
+        "why": "quatre ventricules classiques"
+      }
+    },
+    "tags": [
+      "ventricules",
+      "schema",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#ventricules",
+    "image": "./matiere/anatomie/img/ch02/blank/12_ventricules.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch02_neuro_77",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000078",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant la moelle spinale, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "elle présente des renflements cervical et lombosacré",
+      "B": "sa substance grise est périphérique, en « papillon »",
+      "C": "les cornes antérieures sont essentiellement motrices",
+      "D": "elle se termine classiquement en regard de L1-L2",
+      "E": "les racines rachidiennes naissent de la moelle"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "renflements cervical et lombosacré"
+      },
+      "B": {
+        "correct": false,
+        "why": "substance grise centrale (papillon), blanche périphérique"
+      },
+      "C": {
+        "correct": true,
+        "why": "cornes antérieures = motoneurones"
+      },
+      "D": {
+        "correct": true,
+        "why": "cône médullaire ≈ L1-L2"
+      },
+      "E": {
+        "correct": true,
+        "why": "racines dorsales et ventrales"
+      }
+    },
+    "tags": [
+      "moelle",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#moelle",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch02_neuro_78",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000079",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos des méninges et des espaces méningés, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la dure-mère est la méninge la plus externe",
+      "B": "l’espace sous-arachnoïdien contient le LCR",
+      "C": "la pie-mère adhère intimement au névraxe",
+      "D": "l’arachnoïde est située entre dure-mère et pie-mère",
+      "E": "le LCR circule uniquement dans le sang veineux"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "ordre : dure → arachnoïde → pie"
+      },
+      "B": {
+        "correct": true,
+        "why": "LCR dans l’espace sous-arachnoïdien"
+      },
+      "C": {
+        "correct": true,
+        "why": "pie-mère appliquée sur le névraxe"
+      },
+      "D": {
+        "correct": true,
+        "why": "arachnoïde intermédiaire"
+      },
+      "E": {
+        "correct": false,
+        "why": "LCR aussi dans ventricules / espaces méningés"
+      }
+    },
+    "tags": [
+      "meninges",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#meninges",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch02_neuro_79",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000080",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Parmi les affirmations suivantes sur le tronc cérébral, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il contient de nombreux noyaux de nerfs crâniens",
+      "B": "il relie la moelle spinale au diencéphale / télencéphale",
+      "C": "le pédoncule cérébelleux moyen appartient au pont",
+      "D": "il est situé dans la fosse crânienne postérieure",
+      "E": "il ne contient aucune voie longue ascendante ou descendante"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "noyaux NC III à XII (selon étages)"
+      },
+      "B": {
+        "correct": true,
+        "why": "carrefour moelle ↔ encéphale"
+      },
+      "C": {
+        "correct": true,
+        "why": "PCM = pont ↔ cervelet"
+      },
+      "D": {
+        "correct": true,
+        "why": "loge postérieure avec cervelet"
+      },
+      "E": {
+        "correct": false,
+        "why": "voies longues présentes (pyramidales, lemniscales…)"
+      }
+    },
+    "tags": [
+      "tronc_cerebral",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#tronc",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch02_neuro_80",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000081",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le cervelet, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il occupe la fosse crânienne postérieure",
+      "B": "il est relié au tronc par trois paires de pédoncules",
+      "C": "il intervient dans la coordination motrice et l’équilibre",
+      "D": "il est situé ventralement au tronc cérébral",
+      "E": "le vermis est la portion médiane"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "fosse postérieure"
+      },
+      "B": {
+        "correct": true,
+        "why": "PCS, PCM, PCI"
+      },
+      "C": {
+        "correct": true,
+        "why": "rôle coordinateur / équilibre"
+      },
+      "D": {
+        "correct": false,
+        "why": "dorsal par rapport au tronc"
+      },
+      "E": {
+        "correct": true,
+        "why": "vermis = médian"
+      }
+    },
+    "tags": [
+      "cervelet",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#cervelet",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch02_neuro_81",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000082",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Pour les nerfs spinaux et les racines, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il existe classiquement 31 paires de nerfs spinaux",
+      "B": "la racine dorsale est sensitive",
+      "C": "la racine ventrale est motrice",
+      "D": "le ganglion spinal est sur la racine ventrale",
+      "E": "un nerf spinal mixte se forme distalement à la réunion des racines"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "8C + 12T + 5L + 5S + 1Co"
+      },
+      "B": {
+        "correct": true,
+        "why": "racine dorsale = sensitive"
+      },
+      "C": {
+        "correct": true,
+        "why": "racine ventrale = motrice"
+      },
+      "D": {
+        "correct": false,
+        "why": "ganglion spinal = racine dorsale"
+      },
+      "E": {
+        "correct": true,
+        "why": "nerf spinal = réunion des racines"
+      }
+    },
+    "tags": [
+      "nerfs_spinaux",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#nerfs_spinaux",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch02_neuro_82",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000083",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos du cortex cérébral et des lobes, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le sillon central sépare frontal et pariétal",
+      "B": "le lobe occipital est surtout lié à la vision",
+      "C": "le lobe temporal est exclusivement moteur",
+      "D": "le lobe frontal contient l’aire motrice primaire",
+      "E": "la scissure latérale (Sylvius) sépare temporal et frontal/pariétal"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "sillon central = Roland"
+      },
+      "B": {
+        "correct": true,
+        "why": "occipital = vision"
+      },
+      "C": {
+        "correct": false,
+        "why": "temporal = audition, langage, mémoire…"
+      },
+      "D": {
+        "correct": true,
+        "why": "aire 4 / gyrus précentral"
+      },
+      "E": {
+        "correct": true,
+        "why": "scissure de Sylvius"
+      }
+    },
+    "tags": [
+      "cortex",
+      "lobes",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#cortex",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch02_neuro_83",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000084",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le liquide cérébrospinal (LCR), retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il est produit principalement par les plexus choroïdes",
+      "B": "il circule dans les ventricules puis l’espace sous-arachnoïdien",
+      "C": "il amortit mécaniquement le névraxe",
+      "D": "il est entièrement résorbé dans le parenchyme hépatique",
+      "E": "une obstruction ventriculaire peut entraîner une hydrocéphalie"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "plexus choroïdes"
+      },
+      "B": {
+        "correct": true,
+        "why": "ventricules → espaces sous-arachnoïdiens"
+      },
+      "C": {
+        "correct": true,
+        "why": "rôle de protection / amortissement"
+      },
+      "D": {
+        "correct": false,
+        "why": "résorption surtout villosités arachnoïdiennes / sinus"
+      },
+      "E": {
+        "correct": true,
+        "why": "hydrocéphalie si obstacle"
+      }
+    },
+    "tags": [
+      "lcr",
+      "ventricules",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#lcr",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch02_neuro_84",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000085",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Parmi les affirmations suivantes sur la substance blanche et grise médullaires, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la substance blanche contient surtout des fibres myélinisées",
+      "B": "les cordons postérieurs véhiculent notamment la sensibilité discriminative",
+      "C": "la corne latérale existe à tous les niveaux médullaires de façon identique",
+      "D": "la substance grise contient les corps cellulaires des neurones",
+      "E": "les cordons latéraux et antérieurs contiennent des voies motrices et sensitives"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "SB = faisceaux myélinisés"
+      },
+      "B": {
+        "correct": true,
+        "why": "cordons postérieurs = proprioception / fine"
+      },
+      "C": {
+        "correct": false,
+        "why": "corne latérale surtout thoracolombaire (végétatif)"
+      },
+      "D": {
+        "correct": true,
+        "why": "SG = soma neuronaux"
+      },
+      "E": {
+        "correct": true,
+        "why": "cordons antéro-latéraux = voies mixtes"
+      }
+    },
+    "tags": [
+      "moelle",
+      "substance_blanche",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#moelle_coupe",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch02_neuro_85",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000086",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "À propos des nerfs crâniens (vue d’ensemble), indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il existe 12 paires de nerfs crâniens",
+      "B": "le nerf olfactif (I) est purement sensitif",
+      "C": "le nerf vague (X) innerve notamment des viscères",
+      "D": "tous les nerfs crâniens naissent de la moelle cervicale",
+      "E": "le nerf optique (II) transporte l’information visuelle"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "NC I à XII"
+      },
+      "B": {
+        "correct": true,
+        "why": "I = olfaction (sensoriel)"
+      },
+      "C": {
+        "correct": true,
+        "why": "X = parasympathique viscéral majeur"
+      },
+      "D": {
+        "correct": false,
+        "why": "naissance au niveau de l’encéphale / tronc"
+      },
+      "E": {
+        "correct": true,
+        "why": "II = vision"
+      }
+    },
+    "tags": [
+      "nerfs_craniens",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#nc",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch02_neuro_86",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000087",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant le diencéphale, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le thalamus est un relais sensitif majeur",
+      "B": "l’hypothalamus intervient dans les régulations végétatives et endocrines",
+      "C": "le 3e ventricule sépare les deux thalamus",
+      "D": "le diencéphale est caudal au bulbe",
+      "E": "l’épiphyse (pinéale) est une structure diencéphalique"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "thalamus = relais"
+      },
+      "B": {
+        "correct": true,
+        "why": "hypothalamus = régulation"
+      },
+      "C": {
+        "correct": true,
+        "why": "V3 entre thalamus"
+      },
+      "D": {
+        "correct": false,
+        "why": "diencéphale rostral au tronc"
+      },
+      "E": {
+        "correct": true,
+        "why": "épiphyse = diencéphale"
+      }
+    },
+    "tags": [
+      "diencephale",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#diencephale",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch02_neuro_87",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000088",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Pour le système nerveux végétatif, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "il comporte des composantes orthosympathique et parasympathique",
+      "B": "le parasympathique crânien emprunte notamment des nerfs crâniens",
+      "C": "la chaîne sympathique paravertébrale est un relais classique",
+      "D": "il n’innerve jamais les viscères",
+      "E": "il module notamment la fréquence cardiaque et la digestion"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "ortho + para"
+      },
+      "B": {
+        "correct": true,
+        "why": "NC III, VII, IX, X notamment"
+      },
+      "C": {
+        "correct": true,
+        "why": "chaîne sympathique"
+      },
+      "D": {
+        "correct": false,
+        "why": "innervation viscérale majeure"
+      },
+      "E": {
+        "correct": true,
+        "why": "effets cardiaques / digestifs"
+      }
+    },
+    "tags": [
+      "vegetatif",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#vegetatif",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch02_neuro_88",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000089",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Parmi les affirmations suivantes sur les voies pyramidales, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "elles assurent surtout la motricité volontaire",
+      "B": "le faisceau corticospinal décusse en grande partie au bulbe",
+      "C": "elles naissent notamment du cortex moteur",
+      "D": "une lésion pyramidale peut entraîner une paralysie",
+      "E": "elles ne descendent jamais dans la moelle"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "motricité volontaire"
+      },
+      "B": {
+        "correct": true,
+        "why": "décussation pyramidale bulbaire"
+      },
+      "C": {
+        "correct": true,
+        "why": "origine corticale"
+      },
+      "D": {
+        "correct": true,
+        "why": "paralysie / déficit moteur"
+      },
+      "E": {
+        "correct": false,
+        "why": "continuent dans la moelle"
+      }
+    },
+    "tags": [
+      "voies_pyramidales",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#pyramidales",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch02_neuro_89",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-02-000090",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "02",
+    "stem": "Concernant les espaces et expansions de la dure-mère, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la faux du cerveau sépare les deux hémisphères",
+      "B": "la tente du cervelet sépare occipitaux et cervelet",
+      "C": "les sinus veineux duraux sont situés entre feuillets de dure-mère",
+      "D": "la dure-mère crânienne est absente au niveau de la tente",
+      "E": "la faux du cervelet est une expansion médiane de la fosse postérieure"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "falx cerebri"
+      },
+      "B": {
+        "correct": true,
+        "why": "tentorium cerebelli"
+      },
+      "C": {
+        "correct": true,
+        "why": "sinus duraux"
+      },
+      "D": {
+        "correct": false,
+        "why": "tente = expansion de dure-mère"
+      },
+      "E": {
+        "correct": true,
+        "why": "falx cerebelli"
+      }
+    },
+    "tags": [
+      "dure_mere",
+      "expansions",
+      "P1"
+    ],
+    "course_ref": "02_Systeme_nerveux#dure_mere",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch02_neuro_90",
+    "priority": "P1"
   }
 ];

@@ -3476,5 +3476,1275 @@ window.PASS_ITEMS = [
     "year_signal": null,
     "pattern_id": null,
     "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-03-000066",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Sur le schema ci-dessous, a propos des valves cardiaques classiquement representees, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la valve tricuspide est entre oreillette droite et ventricule droit",
+      "B": "la valve aortique est a la sortie du ventricule droit",
+      "C": "la valve mitrale est entre oreillette gauche et ventricule gauche",
+      "D": "la valve pulmonaire est a la sortie du ventricule droit",
+      "E": "la valve mitrale possede trois cuspides regulieres"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "E": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      }
+    },
+    "tags": [
+      "valves_schema",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#valves",
+    "image": "./matiere/anatomie/img/ch03/blank/13_valves.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q1",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000067",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Sur le schema ci-dessous, a propos de l'aorte classiquement montree, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'aorte ascendante nait du ventricule gauche",
+      "B": "la crosse se prolonge par l'aorte thoracique descendante",
+      "C": "l'aorte abdominale commence apres le hiatus aortique",
+      "D": "la crosse n'emet aucune branche destinee a la tete ou au membre superieur",
+      "E": "l'aorte se termine par une bifurcation iliaque commune"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "E": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      }
+    },
+    "tags": [
+      "aorte_schema",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#aorte",
+    "image": "./matiere/anatomie/img/ch03/blank/16_aorte.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q2",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000068",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "A propos de les valves cardiaques, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la valve pulmonaire est a la sortie du ventricule droit",
+      "B": "les valves semi-lunaires ne possedent pas de cordages tendineux",
+      "C": "les valves auriculo-ventriculaires sont reliees a des muscles papillaires",
+      "D": "la valve aortique est a la sortie du ventricule droit",
+      "E": "la valve mitrale est entre l'oreillette gauche et le ventricule gauche"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      }
+    },
+    "tags": [
+      "valves",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#valves",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q3",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000069",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Au sujet de l'aorte et ses segments, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'aorte abdominale traverse le hiatus oesophagien",
+      "B": "l'aorte se bifurque en arteres iliaques communes",
+      "C": "la crosse aortique se continue par l'aorte thoracique descendante",
+      "D": "l'aorte thoracique descendante est incluse dans le poumon gauche",
+      "E": "l'aorte se bifurque en arteres femorales communes dans le thorax"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      }
+    },
+    "tags": [
+      "aorte",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#aorte",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q4",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000070",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Pour la circulation coronaire, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la coronaire droite participe souvent a la vascularisation de la face inferieure du coeur",
+      "B": "une occlusion coronaire reste sans consequence sur le myocarde",
+      "C": "les arteres coronaires naissent des sinus aortiques",
+      "D": "les arteres coronaires irriguent le myocarde",
+      "E": "la coronaire droite n'atteint jamais la face inferieure du coeur"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      }
+    },
+    "tags": [
+      "coronaires",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#coronaires",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q5",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000071",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Au sujet de les valves cardiaques, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la valve aortique est a la sortie du ventricule droit",
+      "B": "la valve mitrale est entre l'oreillette gauche et le ventricule gauche",
+      "C": "la valve mitrale possede trois cuspides physiologiques",
+      "D": "la valve tricuspide est entre l'oreillette droite et le ventricule droit",
+      "E": "la valve aortique est a la sortie du ventricule gauche"
+    },
+    "answer": [
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      }
+    },
+    "tags": [
+      "valves",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#valves",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q6",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000072",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "A propos de l'aorte et ses segments, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la crosse de l'aorte donne classiquement trois grosses branches",
+      "B": "l'aorte abdominale traverse le hiatus oesophagien",
+      "C": "l'aorte thoracique descendante est situee dans le mediastin posterieur",
+      "D": "l'aorte thoracique descendante est incluse dans le poumon gauche",
+      "E": "l'aorte se bifurque en arteres femorales communes dans le thorax"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      }
+    },
+    "tags": [
+      "aorte",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#aorte",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q7",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000073",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Concernant la circulation coronaire, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "une occlusion coronaire reste sans consequence sur le myocarde",
+      "B": "le tronc coronaire gauche se divise en interventriculaire anterieure et circonflexe",
+      "C": "la coronaire droite n'atteint jamais la face inferieure du coeur",
+      "D": "le sinus coronaire se draine dans l'oreillette droite",
+      "E": "les arteres coronaires naissent du tronc pulmonaire"
+    },
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      }
+    },
+    "tags": [
+      "coronaires",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#coronaires",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q8",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000074",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "A propos de les valves cardiaques, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la valve pulmonaire est a la sortie du ventricule droit",
+      "B": "la valve aortique est a la sortie du ventricule droit",
+      "C": "la valve mitrale possede trois cuspides physiologiques",
+      "D": "les valves semi-lunaires ne possedent pas de cordages tendineux",
+      "E": "les valves auriculo-ventriculaires sont reliees a des muscles papillaires"
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      }
+    },
+    "tags": [
+      "valves",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#valves",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q9",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000075",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Au sujet de l'aorte et ses segments, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'aorte abdominale traverse le hiatus oesophagien",
+      "B": "l'aorte se bifurque en arteres iliaques communes",
+      "C": "la crosse aortique se continue par l'aorte thoracique descendante",
+      "D": "l'aorte thoracique descendante est incluse dans le poumon gauche",
+      "E": "l'aorte ascendante debute au ventricule gauche"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      }
+    },
+    "tags": [
+      "aorte",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#aorte",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q10",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000076",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Pour la circulation coronaire, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la coronaire droite participe souvent a la vascularisation de la face inferieure du coeur",
+      "B": "les arteres coronaires naissent des sinus aortiques",
+      "C": "une occlusion coronaire reste sans consequence sur le myocarde",
+      "D": "les arteres coronaires irriguent le myocarde",
+      "E": "la coronaire droite n'atteint jamais la face inferieure du coeur"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      }
+    },
+    "tags": [
+      "coronaires",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#coronaires",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q11",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000077",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Au sujet de les valves cardiaques, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la valve aortique est a la sortie du ventricule droit",
+      "B": "la valve mitrale possede trois cuspides physiologiques",
+      "C": "la valve mitrale est entre l'oreillette gauche et le ventricule gauche",
+      "D": "la valve tricuspide est entre l'oreillette droite et le ventricule droit",
+      "E": "la valve tricuspide est entre l'oreillette gauche et le ventricule gauche"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      }
+    },
+    "tags": [
+      "valves",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#valves",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q12",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000078",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "A propos de l'aorte et ses segments, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la crosse de l'aorte donne classiquement trois grosses branches",
+      "B": "l'aorte thoracique descendante est situee dans le mediastin posterieur",
+      "C": "l'aorte abdominale commence apres le hiatus aortique",
+      "D": "l'aorte abdominale traverse le hiatus oesophagien",
+      "E": "l'aorte se bifurque en arteres iliaques communes"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      }
+    },
+    "tags": [
+      "aorte",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#aorte",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q13",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000079",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Concernant la circulation coronaire, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "une occlusion coronaire reste sans consequence sur le myocarde",
+      "B": "le tronc coronaire gauche se divise en interventriculaire anterieure et circonflexe",
+      "C": "le sinus coronaire se draine dans l'oreillette droite",
+      "D": "la coronaire droite n'atteint jamais la face inferieure du coeur",
+      "E": "les arteres coronaires naissent du tronc pulmonaire"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      }
+    },
+    "tags": [
+      "coronaires",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#coronaires",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q14",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000080",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "A propos de les valves cardiaques, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la valve pulmonaire est a la sortie du ventricule droit",
+      "B": "la valve aortique est a la sortie du ventricule droit",
+      "C": "les valves semi-lunaires ne possedent pas de cordages tendineux",
+      "D": "les valves auriculo-ventriculaires sont reliees a des muscles papillaires",
+      "E": "la valve mitrale possede trois cuspides physiologiques"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      }
+    },
+    "tags": [
+      "valves",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#valves",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q15",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000081",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Au sujet de l'aorte et ses segments, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'aorte abdominale traverse le hiatus oesophagien",
+      "B": "l'aorte se bifurque en arteres iliaques communes",
+      "C": "l'aorte thoracique descendante est incluse dans le poumon gauche",
+      "D": "la crosse aortique se continue par l'aorte thoracique descendante",
+      "E": "l'aorte ascendante debute au ventricule gauche"
+    },
+    "answer": [
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      }
+    },
+    "tags": [
+      "aorte",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#aorte",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q16",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000082",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Pour la circulation coronaire, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la coronaire droite participe souvent a la vascularisation de la face inferieure du coeur",
+      "B": "une occlusion coronaire reste sans consequence sur le myocarde",
+      "C": "les arteres coronaires naissent des sinus aortiques",
+      "D": "la coronaire droite n'atteint jamais la face inferieure du coeur",
+      "E": "les arteres coronaires naissent du tronc pulmonaire"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      }
+    },
+    "tags": [
+      "coronaires",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#coronaires",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q17",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000083",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Au sujet de les valves cardiaques, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la valve aortique est a la sortie du ventricule droit",
+      "B": "la valve mitrale est entre l'oreillette gauche et le ventricule gauche",
+      "C": "la valve mitrale possede trois cuspides physiologiques",
+      "D": "la valve tricuspide est entre l'oreillette droite et le ventricule droit",
+      "E": "la valve tricuspide est entre l'oreillette gauche et le ventricule gauche"
+    },
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      }
+    },
+    "tags": [
+      "valves",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#valves",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q18",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000084",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "A propos de l'aorte et ses segments, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la crosse de l'aorte donne classiquement trois grosses branches",
+      "B": "l'aorte abdominale traverse le hiatus oesophagien",
+      "C": "l'aorte thoracique descendante est incluse dans le poumon gauche",
+      "D": "l'aorte thoracique descendante est situee dans le mediastin posterieur",
+      "E": "l'aorte abdominale commence apres le hiatus aortique"
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      }
+    },
+    "tags": [
+      "aorte",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#aorte",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q19",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000085",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Concernant la circulation coronaire, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "une occlusion coronaire reste sans consequence sur le myocarde",
+      "B": "le tronc coronaire gauche se divise en interventriculaire anterieure et circonflexe",
+      "C": "le sinus coronaire se draine dans l'oreillette droite",
+      "D": "la coronaire droite n'atteint jamais la face inferieure du coeur",
+      "E": "une occlusion coronaire peut provoquer une ischemie myocardique"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      }
+    },
+    "tags": [
+      "coronaires",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#coronaires",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q20",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000086",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "A propos de les valves cardiaques, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la valve pulmonaire est a la sortie du ventricule droit",
+      "B": "les valves semi-lunaires ne possedent pas de cordages tendineux",
+      "C": "la valve aortique est a la sortie du ventricule droit",
+      "D": "les valves auriculo-ventriculaires sont reliees a des muscles papillaires",
+      "E": "la valve mitrale possede trois cuspides physiologiques"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      }
+    },
+    "tags": [
+      "valves",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#valves",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q21",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000087",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Au sujet de l'aorte et ses segments, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'aorte abdominale traverse le hiatus oesophagien",
+      "B": "l'aorte thoracique descendante est incluse dans le poumon gauche",
+      "C": "l'aorte se bifurque en arteres iliaques communes",
+      "D": "la crosse aortique se continue par l'aorte thoracique descendante",
+      "E": "l'aorte se bifurque en arteres femorales communes dans le thorax"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      }
+    },
+    "tags": [
+      "aorte",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#aorte",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q22",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000088",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Pour la circulation coronaire, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la coronaire droite participe souvent a la vascularisation de la face inferieure du coeur",
+      "B": "les arteres coronaires naissent des sinus aortiques",
+      "C": "les arteres coronaires irriguent le myocarde",
+      "D": "une occlusion coronaire reste sans consequence sur le myocarde",
+      "E": "le tronc coronaire gauche se divise en interventriculaire anterieure et circonflexe"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour coronaires"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur coronaires"
+      }
+    },
+    "tags": [
+      "coronaires",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#coronaires",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q23",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000089",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "Au sujet de les valves cardiaques, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la valve aortique est a la sortie du ventricule droit",
+      "B": "la valve mitrale est entre l'oreillette gauche et le ventricule gauche",
+      "C": "la valve tricuspide est entre l'oreillette droite et le ventricule droit",
+      "D": "la valve mitrale possede trois cuspides physiologiques",
+      "E": "la valve tricuspide est entre l'oreillette gauche et le ventricule gauche"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur valves"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour valves"
+      }
+    },
+    "tags": [
+      "valves",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#valves",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q24",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-03-000090",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "03",
+    "stem": "A propos de l'aorte et ses segments, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la crosse de l'aorte donne classiquement trois grosses branches",
+      "B": "l'aorte abdominale traverse le hiatus oesophagien",
+      "C": "l'aorte thoracique descendante est situee dans le mediastin posterieur",
+      "D": "l'aorte abdominale commence apres le hiatus aortique",
+      "E": "l'aorte thoracique descendante est incluse dans le poumon gauche"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur aorte"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour aorte"
+      }
+    },
+    "tags": [
+      "aorte",
+      "P1"
+    ],
+    "course_ref": "03_Chapter#aorte",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch03_q25",
+    "priority": "P1"
   }
 ];

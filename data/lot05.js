@@ -5122,5 +5122,109 @@ window.PASS_ITEMS = [
     "year_signal": null,
     "pattern_id": null,
     "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-05-000096",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "05",
+    "stem": "Sur le schema ci-dessous, a propos des trois parties de l'oreille classiquement reperees, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le pavillon appartient a l'oreille externe",
+      "B": "la caisse du tympan appartient a l'oreille moyenne",
+      "C": "la cochlée appartient a l'oreille interne",
+      "D": "les osselets sont dans l'oreille externe",
+      "E": "les canaux semi-circulaires participent a l'equilibre"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "E": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      }
+    },
+    "tags": [
+      "oreille_schema",
+      "P1"
+    ],
+    "course_ref": "05_Chapter#oreille",
+    "image": "./matiere/anatomie/img/ch05/blank/23_oreille_3_parties.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch05_q1",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-05-000097",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "05",
+    "stem": "Sur le schema ci-dessous, a propos du fond d'oeil classiquement montre, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la papille correspond a la sortie du nerf optique",
+      "B": "la macula est impliquee dans la vision centrale fine",
+      "C": "la fovea est situee dans la region maculaire",
+      "D": "la papille est la zone de meilleure acuite visuelle",
+      "E": "des vaisseaux retiniens emergent de la papille"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "E": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      }
+    },
+    "tags": [
+      "fond_oeil_schema",
+      "P1"
+    ],
+    "course_ref": "05_Chapter#fond_oeil",
+    "image": "./matiere/anatomie/img/ch05/blank/08_fond_oeil.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch05_q2",
+    "priority": "P1"
   }
 ];

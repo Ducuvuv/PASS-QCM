@@ -4292,5 +4292,514 @@ window.PASS_ITEMS = [
     "year_signal": null,
     "pattern_id": null,
     "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-07-000081",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Sur le schema ci-dessous, a propos de la cage thoracique classiquement representee, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le sternum est en avant",
+      "B": "les cotes s'articulent en arriere avec les vertebres thoraciques",
+      "C": "il existe douze paires de cotes",
+      "D": "les cotes flottantes s'articulent directement avec le sternum",
+      "E": "la cage thoracique contribue a la protection des organes intrathoraciques"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "E": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      }
+    },
+    "tags": [
+      "cage_schema",
+      "P1"
+    ],
+    "course_ref": "07_Chapter#cage",
+    "image": "./matiere/anatomie/img/ch07/blank/01_cage_thoracique.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch07_q1",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000082",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Sur le schema ci-dessous, a propos du canal inguinal classiquement represente en coupe, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il s'agit d'un trajet oblique de la paroi abdominale anterieure",
+      "B": "son orifice superficiel est dans l'aponevrose de l'oblique externe",
+      "C": "il livre passage au cordon spermatique chez l'homme",
+      "D": "il est situe dans le mediastin posterieur",
+      "E": "il se projette au-dessus de la moitie mediale du ligament inguinal"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "E": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      }
+    },
+    "tags": [
+      "canal_inguinal_schema",
+      "P1"
+    ],
+    "course_ref": "07_Chapter#canal_inguinal",
+    "image": "./matiere/anatomie/img/ch07/blank/20_canal_inguinal_axial.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch07_q2",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000083",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Au sujet de la cage thoracique, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les cotes 1 a 7 sont dites vraies",
+      "B": "la cage thoracique comporte dix paires de cotes",
+      "C": "les cotes 11 et 12 sont dites flottantes",
+      "D": "le sternum ferme la paroi posterieure du thorax",
+      "E": "les cotes 1 a 7 sont toutes flottantes"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur cage"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour cage"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur cage"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour cage"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour cage"
+      }
+    },
+    "tags": [
+      "cage",
+      "P1"
+    ],
+    "course_ref": "07_Chapter#cage",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch07_q3",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000084",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Au sujet de le canal inguinal, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'orifice superficiel s'ouvre dans le mediastin",
+      "B": "le canal contient le ligament rond de l'uterus chez la femme",
+      "C": "le canal contient l'aorte abdominale chez l'homme",
+      "D": "le canal est situe au-dessus de la moitie mediale du ligament inguinal",
+      "E": "le canal est uniquement posterieur a la colonne lombaire"
+    },
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour canal_inguinal"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur canal_inguinal"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour canal_inguinal"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur canal_inguinal"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour canal_inguinal"
+      }
+    },
+    "tags": [
+      "canal_inguinal",
+      "P1"
+    ],
+    "course_ref": "07_Chapter#canal_inguinal",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch07_q4",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000085",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Pour le diaphragme et la paroi abdominale, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la contraction diaphragmatique abaisse les coupoles",
+      "B": "la contraction diaphragmatique remonte les coupoles",
+      "C": "le centre tendineux est le point d'insertion du tendon d'Achille",
+      "D": "le diaphragme est le principal muscle inspiratoire",
+      "E": "le centre tendineux est non contractile"
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur diaphragme"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour diaphragme"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour diaphragme"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur diaphragme"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur diaphragme"
+      }
+    },
+    "tags": [
+      "diaphragme",
+      "P1"
+    ],
+    "course_ref": "07_Chapter#diaphragme",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch07_q5",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000086",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "A propos de la cage thoracique, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la cage thoracique comporte dix paires de cotes",
+      "B": "la cage thoracique comporte douze paires de cotes",
+      "C": "les cotes s'articulent en arriere avec les vertebres thoraciques",
+      "D": "le sternum ferme la paroi posterieure du thorax",
+      "E": "le sternum comprend manubrium, corps et processus xiphoide"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour cage"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur cage"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur cage"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour cage"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur cage"
+      }
+    },
+    "tags": [
+      "cage",
+      "P1"
+    ],
+    "course_ref": "07_Chapter#cage",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch07_q6",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000087",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "A propos de le canal inguinal, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'orifice profond depend du fascia transversalis",
+      "B": "l'orifice superficiel est dans l'aponevrose de l'oblique externe",
+      "C": "l'orifice superficiel s'ouvre dans le mediastin",
+      "D": "le canal contient le cordon spermatique chez l'homme",
+      "E": "le canal contient l'aorte abdominale chez l'homme"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur canal_inguinal"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur canal_inguinal"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour canal_inguinal"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur canal_inguinal"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour canal_inguinal"
+      }
+    },
+    "tags": [
+      "canal_inguinal",
+      "P1"
+    ],
+    "course_ref": "07_Chapter#canal_inguinal",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch07_q7",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000088",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Concernant le diaphragme et la paroi abdominale, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la contraction diaphragmatique remonte les coupoles",
+      "B": "le centre tendineux est le point d'insertion du tendon d'Achille",
+      "C": "le hiatus aortique est plus posterieur que le foramen cave",
+      "D": "le hiatus oesophagien traverse une portion musculaire",
+      "E": "le diaphragme est un muscle de l'expiration forcee uniquement"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour diaphragme"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour diaphragme"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur diaphragme"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur diaphragme"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour diaphragme"
+      }
+    },
+    "tags": [
+      "diaphragme",
+      "P1"
+    ],
+    "course_ref": "07_Chapter#diaphragme",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch07_q8",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000089",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Au sujet de la cage thoracique, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les cotes 1 a 7 sont dites vraies",
+      "B": "les cotes 11 et 12 sont dites flottantes",
+      "C": "les espaces intercostaux contiennent muscles, vaisseaux et nerfs",
+      "D": "la cage thoracique comporte dix paires de cotes",
+      "E": "la cage thoracique comporte douze paires de cotes"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur cage"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur cage"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur cage"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour cage"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur cage"
+      }
+    },
+    "tags": [
+      "cage",
+      "P1"
+    ],
+    "course_ref": "07_Chapter#cage",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch07_q9",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-07-000090",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "07",
+    "stem": "Au sujet de le canal inguinal, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'orifice superficiel s'ouvre dans le mediastin",
+      "B": "le canal contient le ligament rond de l'uterus chez la femme",
+      "C": "le canal est situe au-dessus de la moitie mediale du ligament inguinal",
+      "D": "le canal contient l'aorte abdominale chez l'homme",
+      "E": "le canal est uniquement posterieur a la colonne lombaire"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour canal_inguinal"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur canal_inguinal"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur canal_inguinal"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour canal_inguinal"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour canal_inguinal"
+      }
+    },
+    "tags": [
+      "canal_inguinal",
+      "P1"
+    ],
+    "course_ref": "07_Chapter#canal_inguinal",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch07_q10",
+    "priority": "P1"
   }
 ];

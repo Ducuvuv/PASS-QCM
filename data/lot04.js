@@ -3205,5 +3205,1528 @@ window.PASS_ITEMS = [
     "year_signal": null,
     "pattern_id": null,
     "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-04-000061",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Sur le schema ci-dessous, a propos du larynx, de la trachee et des bronches classiquement montres, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la trachee fait suite au larynx",
+      "B": "les bronches principales naissent de la trachee",
+      "C": "la bronche principale droite est souvent plus verticale",
+      "D": "l'oesophage est la structure qui ventile directement les poumons",
+      "E": "la carene correspond a la bifurcation tracheale"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "E": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      }
+    },
+    "tags": [
+      "airways_schema",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#larynx",
+    "image": "./matiere/anatomie/img/ch04/blank/02_larynx_trachee_bronches.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q1",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000062",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Sur le schema ci-dessous, a propos du poumon gauche classiquement represente, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il comporte deux lobes",
+      "B": "la lingula appartient au lobe superieur",
+      "C": "il possede une scissure horizontale constante",
+      "D": "il presente une empreinte cardiaque plus marquee que le poumon droit",
+      "E": "il appartient a la cavite pleurale gauche"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "D": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "E": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      }
+    },
+    "tags": [
+      "left_lung_schema",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#poumons",
+    "image": "./matiere/anatomie/img/ch04/blank/05_poumon_gauche_2_lobes.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q2",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000063",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant le larynx et la trachee, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le larynx appartient a l'appareil urinaire",
+      "B": "la bifurcation tracheale correspond a la carene",
+      "C": "les bronches principales naissent de la trachee",
+      "D": "la trachee est posterieure a l'oesophage dans le cou",
+      "E": "la bronche principale droite est plus longue et plus horizontale que la gauche"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      }
+    },
+    "tags": [
+      "larynx",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#larynx",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q3",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000064",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Dans le cadre de l'arbre bronchique, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le hile pulmonaire transmet bronches et vaisseaux",
+      "B": "les echanges gazeux se font surtout dans le larynx",
+      "C": "la bronche souche droite favorise les inhalations accidentelles",
+      "D": "les bronches lobaires ventilent les lobes pulmonaires",
+      "E": "le hile pulmonaire est sur la face cutanee du thorax"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      }
+    },
+    "tags": [
+      "bronches",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#bronches",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q4",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000065",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Parmi les affirmations suivantes sur les poumons et les plèvres, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le recessus costo-diaphragmatique est un element cardiaque",
+      "B": "le recessus costo-diaphragmatique est un cul-de-sac pleural",
+      "C": "les deux poumons sont separés par le foie",
+      "D": "le poumon droit comporte trois lobes",
+      "E": "le poumon gauche comporte deux lobes"
+    },
+    "answer": [
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      }
+    },
+    "tags": [
+      "poumons",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#poumons",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q5",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000066",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Pour le larynx et la trachee, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le larynx est interpose entre le pharynx et la trachee",
+      "B": "le larynx appartient a l'appareil urinaire",
+      "C": "l'epiglotte contribue a proteger les voies aeriennes pendant la deglutition",
+      "D": "la trachee est posterieure a l'oesophage dans le cou",
+      "E": "la bronche principale droite est plus longue et plus horizontale que la gauche"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      }
+    },
+    "tags": [
+      "larynx",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#larynx",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q6",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000067",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Parmi les affirmations suivantes sur l'arbre bronchique, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les echanges gazeux se font surtout dans le larynx",
+      "B": "les bronches segmentaires ventilent les segments broncho-pulmonaires",
+      "C": "le hile pulmonaire est sur la face cutanee du thorax",
+      "D": "les bronchioles terminales precedent les bronchioles respiratoires",
+      "E": "la bronche souche gauche est la plus verticale"
+    },
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      }
+    },
+    "tags": [
+      "bronches",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#bronches",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q7",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000068",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Dans le cadre de les poumons et les plèvres, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la lingula appartient au poumon gauche",
+      "B": "le recessus costo-diaphragmatique est un element cardiaque",
+      "C": "les deux poumons sont separés par le foie",
+      "D": "la plèvre viscerale recouvre le poumon",
+      "E": "la plèvre parietale tapisse la paroi thoracique"
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      }
+    },
+    "tags": [
+      "poumons",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#poumons",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q8",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000069",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant le larynx et la trachee, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le larynx appartient a l'appareil urinaire",
+      "B": "la bifurcation tracheale correspond a la carene",
+      "C": "les bronches principales naissent de la trachee",
+      "D": "la trachee est posterieure a l'oesophage dans le cou",
+      "E": "la bronche principale droite est plus courte et plus verticale que la gauche"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      }
+    },
+    "tags": [
+      "larynx",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#larynx",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q9",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000070",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Dans le cadre de l'arbre bronchique, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le hile pulmonaire transmet bronches et vaisseaux",
+      "B": "la bronche souche droite favorise les inhalations accidentelles",
+      "C": "les echanges gazeux se font surtout dans le larynx",
+      "D": "les bronches lobaires ventilent les lobes pulmonaires",
+      "E": "le hile pulmonaire est sur la face cutanee du thorax"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      }
+    },
+    "tags": [
+      "bronches",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#bronches",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q10",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000071",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Parmi les affirmations suivantes sur les poumons et les plèvres, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le recessus costo-diaphragmatique est un element cardiaque",
+      "B": "les deux poumons sont separés par le foie",
+      "C": "le recessus costo-diaphragmatique est un cul-de-sac pleural",
+      "D": "le poumon droit comporte trois lobes",
+      "E": "le poumon gauche comporte trois lobes anatomiques"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      }
+    },
+    "tags": [
+      "poumons",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#poumons",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q11",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000072",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Pour le larynx et la trachee, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le larynx est interpose entre le pharynx et la trachee",
+      "B": "l'epiglotte contribue a proteger les voies aeriennes pendant la deglutition",
+      "C": "la trachee est anterieure a l'oesophage dans le cou",
+      "D": "le larynx appartient a l'appareil urinaire",
+      "E": "la bifurcation tracheale correspond a la carene"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      }
+    },
+    "tags": [
+      "larynx",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#larynx",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q12",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000073",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Parmi les affirmations suivantes sur l'arbre bronchique, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les echanges gazeux se font surtout dans le larynx",
+      "B": "les bronches segmentaires ventilent les segments broncho-pulmonaires",
+      "C": "les bronchioles terminales precedent les bronchioles respiratoires",
+      "D": "le hile pulmonaire est sur la face cutanee du thorax",
+      "E": "la bronche souche gauche est la plus verticale"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      }
+    },
+    "tags": [
+      "bronches",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#bronches",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q13",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000074",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Dans le cadre de les poumons et les plèvres, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la lingula appartient au poumon gauche",
+      "B": "le recessus costo-diaphragmatique est un element cardiaque",
+      "C": "la plèvre viscerale recouvre le poumon",
+      "D": "la plèvre parietale tapisse la paroi thoracique",
+      "E": "les deux poumons sont separés par le foie"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      }
+    },
+    "tags": [
+      "poumons",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#poumons",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q14",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000075",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant le larynx et la trachee, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le larynx appartient a l'appareil urinaire",
+      "B": "la bifurcation tracheale correspond a la carene",
+      "C": "la trachee est posterieure a l'oesophage dans le cou",
+      "D": "les bronches principales naissent de la trachee",
+      "E": "la bronche principale droite est plus courte et plus verticale que la gauche"
+    },
+    "answer": [
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      }
+    },
+    "tags": [
+      "larynx",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#larynx",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q15",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000076",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Dans le cadre de l'arbre bronchique, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le hile pulmonaire transmet bronches et vaisseaux",
+      "B": "les echanges gazeux se font surtout dans le larynx",
+      "C": "la bronche souche droite favorise les inhalations accidentelles",
+      "D": "le hile pulmonaire est sur la face cutanee du thorax",
+      "E": "la bronche souche gauche est la plus verticale"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      }
+    },
+    "tags": [
+      "bronches",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#bronches",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q16",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000077",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Parmi les affirmations suivantes sur les poumons et les plèvres, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le recessus costo-diaphragmatique est un element cardiaque",
+      "B": "le recessus costo-diaphragmatique est un cul-de-sac pleural",
+      "C": "les deux poumons sont separés par le foie",
+      "D": "le poumon droit comporte trois lobes",
+      "E": "le poumon gauche comporte trois lobes anatomiques"
+    },
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      }
+    },
+    "tags": [
+      "poumons",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#poumons",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q17",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000078",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Pour le larynx et la trachee, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le larynx est interpose entre le pharynx et la trachee",
+      "B": "le larynx appartient a l'appareil urinaire",
+      "C": "la trachee est posterieure a l'oesophage dans le cou",
+      "D": "l'epiglotte contribue a proteger les voies aeriennes pendant la deglutition",
+      "E": "la trachee est anterieure a l'oesophage dans le cou"
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      }
+    },
+    "tags": [
+      "larynx",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#larynx",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q18",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000079",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Parmi les affirmations suivantes sur l'arbre bronchique, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les echanges gazeux se font surtout dans le larynx",
+      "B": "les bronches segmentaires ventilent les segments broncho-pulmonaires",
+      "C": "les bronchioles terminales precedent les bronchioles respiratoires",
+      "D": "le hile pulmonaire est sur la face cutanee du thorax",
+      "E": "les echanges gazeux se font surtout au niveau alveolaire"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      }
+    },
+    "tags": [
+      "bronches",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#bronches",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q19",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000080",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Dans le cadre de les poumons et les plèvres, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la lingula appartient au poumon gauche",
+      "B": "la plèvre viscerale recouvre le poumon",
+      "C": "le recessus costo-diaphragmatique est un element cardiaque",
+      "D": "la plèvre parietale tapisse la paroi thoracique",
+      "E": "les deux poumons sont separés par le foie"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      }
+    },
+    "tags": [
+      "poumons",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#poumons",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q20",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000081",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant le larynx et la trachee, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le larynx appartient a l'appareil urinaire",
+      "B": "la trachee est posterieure a l'oesophage dans le cou",
+      "C": "la bifurcation tracheale correspond a la carene",
+      "D": "les bronches principales naissent de la trachee",
+      "E": "la bronche principale droite est plus longue et plus horizontale que la gauche"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      }
+    },
+    "tags": [
+      "larynx",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#larynx",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q21",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000082",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Dans le cadre de l'arbre bronchique, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le hile pulmonaire transmet bronches et vaisseaux",
+      "B": "la bronche souche droite favorise les inhalations accidentelles",
+      "C": "les bronches lobaires ventilent les lobes pulmonaires",
+      "D": "les echanges gazeux se font surtout dans le larynx",
+      "E": "les bronches segmentaires ventilent les segments broncho-pulmonaires"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      }
+    },
+    "tags": [
+      "bronches",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#bronches",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q22",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000083",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Parmi les affirmations suivantes sur les poumons et les plèvres, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le recessus costo-diaphragmatique est un element cardiaque",
+      "B": "le recessus costo-diaphragmatique est un cul-de-sac pleural",
+      "C": "le poumon droit comporte trois lobes",
+      "D": "les deux poumons sont separés par le foie",
+      "E": "le poumon gauche comporte trois lobes anatomiques"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      }
+    },
+    "tags": [
+      "poumons",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#poumons",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q23",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000084",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Pour le larynx et la trachee, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le larynx est interpose entre le pharynx et la trachee",
+      "B": "le larynx appartient a l'appareil urinaire",
+      "C": "l'epiglotte contribue a proteger les voies aeriennes pendant la deglutition",
+      "D": "la trachee est anterieure a l'oesophage dans le cou",
+      "E": "la trachee est posterieure a l'oesophage dans le cou"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      }
+    },
+    "tags": [
+      "larynx",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#larynx",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q24",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000085",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Parmi les affirmations suivantes sur l'arbre bronchique, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les echanges gazeux se font surtout dans le larynx",
+      "B": "les bronches segmentaires ventilent les segments broncho-pulmonaires",
+      "C": "le hile pulmonaire est sur la face cutanee du thorax",
+      "D": "les bronchioles terminales precedent les bronchioles respiratoires",
+      "E": "les echanges gazeux se font surtout au niveau alveolaire"
+    },
+    "answer": [
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      }
+    },
+    "tags": [
+      "bronches",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#bronches",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q25",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000086",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Dans le cadre de les poumons et les plèvres, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la lingula appartient au poumon gauche",
+      "B": "le recessus costo-diaphragmatique est un element cardiaque",
+      "C": "la plèvre viscerale recouvre le poumon",
+      "D": "les deux poumons sont separés par le foie",
+      "E": "le poumon gauche comporte trois lobes anatomiques"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      }
+    },
+    "tags": [
+      "poumons",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#poumons",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q26",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000087",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Concernant le larynx et la trachee, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le larynx appartient a l'appareil urinaire",
+      "B": "la bifurcation tracheale correspond a la carene",
+      "C": "la trachee est posterieure a l'oesophage dans le cou",
+      "D": "les bronches principales naissent de la trachee",
+      "E": "la bronche principale droite est plus longue et plus horizontale que la gauche"
+    },
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      }
+    },
+    "tags": [
+      "larynx",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#larynx",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q27",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000088",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Dans le cadre de l'arbre bronchique, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le hile pulmonaire transmet bronches et vaisseaux",
+      "B": "les echanges gazeux se font surtout dans le larynx",
+      "C": "le hile pulmonaire est sur la face cutanee du thorax",
+      "D": "la bronche souche droite favorise les inhalations accidentelles",
+      "E": "les bronches lobaires ventilent les lobes pulmonaires"
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour bronches"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur bronches"
+      }
+    },
+    "tags": [
+      "bronches",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#bronches",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q28",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000089",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Parmi les affirmations suivantes sur les poumons et les plèvres, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le recessus costo-diaphragmatique est un element cardiaque",
+      "B": "le recessus costo-diaphragmatique est un cul-de-sac pleural",
+      "C": "le poumon droit comporte trois lobes",
+      "D": "les deux poumons sont separés par le foie",
+      "E": "le poumon gauche comporte deux lobes"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour poumons"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur poumons"
+      }
+    },
+    "tags": [
+      "poumons",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#poumons",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q29",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-04-000090",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "04",
+    "stem": "Pour le larynx et la trachee, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le larynx est interpose entre le pharynx et la trachee",
+      "B": "l'epiglotte contribue a proteger les voies aeriennes pendant la deglutition",
+      "C": "le larynx appartient a l'appareil urinaire",
+      "D": "la trachee est anterieure a l'oesophage dans le cou",
+      "E": "la trachee est posterieure a l'oesophage dans le cou"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur larynx"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour larynx"
+      }
+    },
+    "tags": [
+      "larynx",
+      "P1"
+    ],
+    "course_ref": "04_Chapter#larynx",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch04_q30",
+    "priority": "P1"
   }
 ];

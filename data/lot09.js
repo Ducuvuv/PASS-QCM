@@ -3756,5 +3756,1023 @@ window.PASS_ITEMS = [
     "year_signal": null,
     "pattern_id": null,
     "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-09-000071",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Sur le schema ci-dessous, a propos de la vessie classiquement representee, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la vessie est un reservoir musculaire",
+      "B": "elle est situee en arriere de la symphyse pubienne",
+      "C": "les ureteres s'y abouchent",
+      "D": "son trigone correspond a une zone lisse",
+      "E": "elle appartient a l'etage thoracique du tronc"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "E": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      }
+    },
+    "tags": [
+      "vessie_schema",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#vessie",
+    "image": "./matiere/anatomie/img/ch09/blank/08_vessie.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q1",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000072",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Sur le schema ci-dessous, a propos de l'uretre masculin classiquement represente, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "il comporte un segment prostatique",
+      "B": "il comporte un segment membraneux",
+      "C": "il comporte un segment spongieux",
+      "D": "il traverse le corps spongieux sur une partie de son trajet",
+      "E": "il ne conduit jamais l'urine"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "E": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      }
+    },
+    "tags": [
+      "uretre_schema",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#uretre_masculin",
+    "image": "./matiere/anatomie/img/ch09/blank/09_uretre_masculin.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q2",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000073",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Dans le cadre de les reins et les ureteres, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'uretere fait suite au pelvis renal",
+      "B": "les reins sont intraperitoneaux comme la rate",
+      "C": "le rein droit est toujours plus haut que le gauche",
+      "D": "l'uretere descend vers la vessie",
+      "E": "le rein participe a la formation de l'urine"
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur rein"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour rein"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour rein"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur rein"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur rein"
+      }
+    },
+    "tags": [
+      "rein",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#rein",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q3",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000074",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Parmi les affirmations suivantes sur la vessie, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les ureteres s'abouchent au sommet du foie",
+      "B": "les ureteres s'abouchent aux angles posterieurs du trigone",
+      "C": "l'orifice uretral interne est a l'angle inferieur du trigone",
+      "D": "la vessie vide est surtout thoracique",
+      "E": "la vessie est un reservoir musculaire"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour vessie"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour vessie"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      }
+    },
+    "tags": [
+      "vessie",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#vessie",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q4",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000075",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Dans le cadre de l'uretre masculin, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'uretre masculin peut conduire urine et sperme",
+      "B": "l'uretre masculin comporte un segment prostatique",
+      "C": "l'uretre masculin ne conduit jamais l'urine",
+      "D": "il comporte un segment membraneux",
+      "E": "le meatus urinaire s'ouvre sur la patella"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour uretre_masculin"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour uretre_masculin"
+      }
+    },
+    "tags": [
+      "uretre_masculin",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#uretre_masculin",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q5",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000076",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Parmi les affirmations suivantes sur les reins et les ureteres, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les reins sont intraperitoneaux comme la rate",
+      "B": "le rein droit est toujours plus haut que le gauche",
+      "C": "les reins sont retroperitoneaux",
+      "D": "le rein droit est souvent un peu plus bas que le gauche",
+      "E": "le hile renal est situe sur le pole superieur"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour rein"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour rein"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur rein"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur rein"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour rein"
+      }
+    },
+    "tags": [
+      "rein",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#rein",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q6",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000077",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Dans le cadre de la vessie, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "elle est en arriere de la symphyse pubienne",
+      "B": "une vessie vide est essentiellement pelvienne",
+      "C": "le trigone vesical est une zone lisse",
+      "D": "les ureteres s'abouchent au sommet du foie",
+      "E": "les ureteres s'abouchent aux angles posterieurs du trigone"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour vessie"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      }
+    },
+    "tags": [
+      "vessie",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#vessie",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q7",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000078",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Parmi les affirmations suivantes sur l'uretre masculin, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'uretre masculin ne conduit jamais l'urine",
+      "B": "il comporte un segment spongieux",
+      "C": "l'uretre prostatique traverse la prostate",
+      "D": "le meatus urinaire s'ouvre sur la patella",
+      "E": "l'uretre masculin ne comporte que deux segments"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour uretre_masculin"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour uretre_masculin"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour uretre_masculin"
+      }
+    },
+    "tags": [
+      "uretre_masculin",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#uretre_masculin",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q8",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000079",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Dans le cadre de les reins et les ureteres, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'uretere fait suite au pelvis renal",
+      "B": "les reins sont intraperitoneaux comme la rate",
+      "C": "l'uretere descend vers la vessie",
+      "D": "le rein participe a la formation de l'urine",
+      "E": "le rein droit est toujours plus haut que le gauche"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur rein"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour rein"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur rein"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur rein"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour rein"
+      }
+    },
+    "tags": [
+      "rein",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#rein",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q9",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000080",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Parmi les affirmations suivantes sur la vessie, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les ureteres s'abouchent au sommet du foie",
+      "B": "les ureteres s'abouchent aux angles posterieurs du trigone",
+      "C": "la vessie vide est surtout thoracique",
+      "D": "l'orifice uretral interne est a l'angle inferieur du trigone",
+      "E": "la vessie est un reservoir musculaire"
+    },
+    "answer": [
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour vessie"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour vessie"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      }
+    },
+    "tags": [
+      "vessie",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#vessie",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q10",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000081",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Dans le cadre de l'uretre masculin, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'uretre masculin peut conduire urine et sperme",
+      "B": "l'uretre masculin ne conduit jamais l'urine",
+      "C": "l'uretre masculin comporte un segment prostatique",
+      "D": "le meatus urinaire s'ouvre sur la patella",
+      "E": "l'uretre masculin ne comporte que deux segments"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour uretre_masculin"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour uretre_masculin"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour uretre_masculin"
+      }
+    },
+    "tags": [
+      "uretre_masculin",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#uretre_masculin",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q11",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000082",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Parmi les affirmations suivantes sur les reins et les ureteres, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les reins sont intraperitoneaux comme la rate",
+      "B": "les reins sont retroperitoneaux",
+      "C": "le rein droit est toujours plus haut que le gauche",
+      "D": "le rein droit est souvent un peu plus bas que le gauche",
+      "E": "le hile renal est situe sur le pole superieur"
+    },
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour rein"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur rein"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour rein"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur rein"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour rein"
+      }
+    },
+    "tags": [
+      "rein",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#rein",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q12",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000083",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Dans le cadre de la vessie, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "elle est en arriere de la symphyse pubienne",
+      "B": "les ureteres s'abouchent au sommet du foie",
+      "C": "la vessie vide est surtout thoracique",
+      "D": "une vessie vide est essentiellement pelvienne",
+      "E": "le trigone vesical est une zone lisse"
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour vessie"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour vessie"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      }
+    },
+    "tags": [
+      "vessie",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#vessie",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q13",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000084",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Parmi les affirmations suivantes sur l'uretre masculin, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'uretre masculin ne conduit jamais l'urine",
+      "B": "il comporte un segment spongieux",
+      "C": "l'uretre prostatique traverse la prostate",
+      "D": "le meatus urinaire s'ouvre sur la patella",
+      "E": "l'uretre spongieux chemine dans le corps spongieux"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour uretre_masculin"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour uretre_masculin"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      }
+    },
+    "tags": [
+      "uretre_masculin",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#uretre_masculin",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q14",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000085",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Dans le cadre de les reins et les ureteres, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'uretere fait suite au pelvis renal",
+      "B": "l'uretere descend vers la vessie",
+      "C": "les reins sont intraperitoneaux comme la rate",
+      "D": "le rein participe a la formation de l'urine",
+      "E": "le rein droit est toujours plus haut que le gauche"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur rein"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur rein"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour rein"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur rein"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour rein"
+      }
+    },
+    "tags": [
+      "rein",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#rein",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q15",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000086",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Parmi les affirmations suivantes sur la vessie, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les ureteres s'abouchent au sommet du foie",
+      "B": "la vessie vide est surtout thoracique",
+      "C": "les ureteres s'abouchent aux angles posterieurs du trigone",
+      "D": "l'orifice uretral interne est a l'angle inferieur du trigone",
+      "E": "l'orifice uretral interne est dans l'orbite"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour vessie"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour vessie"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour vessie"
+      }
+    },
+    "tags": [
+      "vessie",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#vessie",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q16",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000087",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Dans le cadre de l'uretre masculin, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'uretre masculin peut conduire urine et sperme",
+      "B": "l'uretre masculin comporte un segment prostatique",
+      "C": "il comporte un segment membraneux",
+      "D": "l'uretre masculin ne conduit jamais l'urine",
+      "E": "il comporte un segment spongieux"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour uretre_masculin"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      }
+    },
+    "tags": [
+      "uretre_masculin",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#uretre_masculin",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q17",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000088",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Parmi les affirmations suivantes sur les reins et les ureteres, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les reins sont intraperitoneaux comme la rate",
+      "B": "les reins sont retroperitoneaux",
+      "C": "le rein droit est souvent un peu plus bas que le gauche",
+      "D": "le rein droit est toujours plus haut que le gauche",
+      "E": "le hile renal est situe sur le pole superieur"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour rein"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur rein"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur rein"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour rein"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour rein"
+      }
+    },
+    "tags": [
+      "rein",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#rein",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q18",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000089",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Dans le cadre de la vessie, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "elle est en arriere de la symphyse pubienne",
+      "B": "les ureteres s'abouchent au sommet du foie",
+      "C": "une vessie vide est essentiellement pelvienne",
+      "D": "le trigone vesical est une zone lisse",
+      "E": "la vessie vide est surtout thoracique"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour vessie"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur vessie"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour vessie"
+      }
+    },
+    "tags": [
+      "vessie",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#vessie",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q19",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-09-000090",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "09",
+    "stem": "Parmi les affirmations suivantes sur l'uretre masculin, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'uretre masculin ne conduit jamais l'urine",
+      "B": "il comporte un segment spongieux",
+      "C": "le meatus urinaire s'ouvre sur la patella",
+      "D": "l'uretre prostatique traverse la prostate",
+      "E": "l'uretre spongieux chemine dans le corps spongieux"
+    },
+    "answer": [
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour uretre_masculin"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour uretre_masculin"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur uretre_masculin"
+      }
+    },
+    "tags": [
+      "uretre_masculin",
+      "P1"
+    ],
+    "course_ref": "09_Chapter#uretre_masculin",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch09_q20",
+    "priority": "P1"
   }
 ];

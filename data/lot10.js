@@ -5937,5 +5937,109 @@ window.PASS_ITEMS = [
     "year_signal": null,
     "pattern_id": null,
     "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-10-000111",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "10",
+    "stem": "Sur le schema ci-dessous, a propos de l'humerus classiquement represente, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la tete humerale est proximale",
+      "B": "le col chirurgical est situe sous les tubercules",
+      "C": "la trochlee est mediale au capitulum",
+      "D": "la fosse olecranienne est distale et posterieure",
+      "E": "la tete humerale s'articule avec l'acetabulum"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "E": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      }
+    },
+    "tags": [
+      "humerus_schema",
+      "P1"
+    ],
+    "course_ref": "10_Chapter#humerus",
+    "image": "./matiere/anatomie/img/ch10/blank/07_humerus_cols_dist.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch10_q1",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-10-000112",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "10",
+    "stem": "Sur le schema ci-dessous, a propos du carpe classiquement represente, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le carpe comprend huit os",
+      "B": "le scaphoide appartient a la rangee proximale",
+      "C": "le capitatum est un os du carpe",
+      "D": "le hamatum appartient a la rangee distale",
+      "E": "le carpe appartient au membre inferieur"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "E": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      }
+    },
+    "tags": [
+      "carpe_schema",
+      "P1"
+    ],
+    "course_ref": "10_Chapter#carpe",
+    "image": "./matiere/anatomie/img/ch10/blank/12_carpe.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch10_q2",
+    "priority": "P1"
   }
 ];

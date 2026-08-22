@@ -2401,5 +2401,2288 @@ window.PASS_ITEMS = [
     "year_signal": null,
     "pattern_id": null,
     "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-01-000046",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Sur le schema ci-dessous, a propos des trois plans anatomiques classiquement representes, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le plan sagittal separe le corps en parties droite et gauche",
+      "B": "le plan frontal est le plan horizontal",
+      "C": "le plan axial separe les etages superieur et inferieur",
+      "D": "le plan sagittal est parallele au front",
+      "E": "le plan frontal separe une partie anterieure et une partie posterieure"
+    },
+    "answer": [
+      "A",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "E": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      }
+    },
+    "tags": [
+      "plans_schema",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#plans",
+    "image": "./matiere/anatomie/img/ch01/blank/08_trois_plans.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q1",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000047",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Sur le schema ci-dessous, a propos de la position anatomique classique, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les paumes des mains sont tournees vers l'avant",
+      "B": "les pouces regardent medialement",
+      "C": "le regard est oriente vers l'avant",
+      "D": "les membres superieurs longent le tronc",
+      "E": "les avant-bras sont obligatoirement en pronation"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "E": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      }
+    },
+    "tags": [
+      "position_schema",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#position",
+    "image": "./matiere/anatomie/img/ch01/blank/01_position_anatomique.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q2",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000048",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Concernant la position anatomique de reference, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "les paumes sont tournees vers l'avant",
+      "B": "les pouces regardent en dehors",
+      "C": "les membres inferieurs sont en flexion de repos",
+      "D": "les membres inferieurs sont en extension",
+      "E": "les paumes sont tournees vers l'arriere"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour position"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour position"
+      }
+    },
+    "tags": [
+      "position",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#position",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q3",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000049",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Parmi les affirmations suivantes sur les plans anatomiques, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le plan axial partage le corps en droite et gauche",
+      "B": "le plan sagittal est parallele au front",
+      "C": "un plan frontal est un plan vertical",
+      "D": "le plan axial est aussi appele plan transversal",
+      "E": "le plan median separe avant et arriere"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      }
+    },
+    "tags": [
+      "plans",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#plans",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q4",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000050",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Pour les termes directionnels, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "profond signifie eloigne de la surface",
+      "B": "ipsilateral signifie du meme cote",
+      "C": "medial signifie proche du plan median",
+      "D": "controlateral signifie du meme cote",
+      "E": "lateral signifie eloigne du plan median"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      }
+    },
+    "tags": [
+      "direction",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#direction",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q5",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000051",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Concernant les cavites du corps, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la cavite pelvienne est au-dessus du thorax",
+      "B": "certaines cavites sont tapissees de sereuses",
+      "C": "la cavite cranienne contient l'encephale",
+      "D": "le mediastin est un segment de l'intestin grele",
+      "E": "les membres possedent une grande cavite sereuse propre"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      }
+    },
+    "tags": [
+      "cavites",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#cavites",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q6",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000052",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "A propos de la position anatomique de reference, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le sujet est decrit debout",
+      "B": "les paumes sont tournees vers l'arriere",
+      "C": "le regard est dirige vers l'avant",
+      "D": "les membres superieurs longent le tronc",
+      "E": "les pouces sont diriges vers la ligne mediane"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour position"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour position"
+      }
+    },
+    "tags": [
+      "position",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#position",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q7",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000053",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Pour les plans anatomiques, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le plan sagittal est parallele au front",
+      "B": "le plan frontal separe avant et arriere",
+      "C": "le plan median separe avant et arriere",
+      "D": "le plan axial separe superieur et inferieur",
+      "E": "le plan sagittal median passe par la ligne mediane"
+    },
+    "answer": [
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      }
+    },
+    "tags": [
+      "plans",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#plans",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q8",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000054",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Au sujet de les termes directionnels, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "proximal signifie proche de la racine du membre",
+      "B": "superficiel signifie proche du centre du corps",
+      "C": "distal signifie eloigne de la racine du membre",
+      "D": "cranial est synonyme de caudal",
+      "E": "ventral est synonyme de dorsal"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      }
+    },
+    "tags": [
+      "direction",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#direction",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q9",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000055",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "A propos de les cavites du corps, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le mediastin est un segment de l'intestin grele",
+      "B": "la cavite abdominale prolonge la cavite thoracique vers le bas",
+      "C": "les membres possedent une grande cavite sereuse propre",
+      "D": "la cavite pelvienne est sous la cavite abdominale",
+      "E": "la cavite pleurale contient directement le coeur"
+    },
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      }
+    },
+    "tags": [
+      "cavites",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#cavites",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q10",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000056",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Dans le cadre de la position anatomique de reference, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les pouces regardent en dehors",
+      "B": "les pouces sont diriges vers la ligne mediane",
+      "C": "le sujet est decrit en decubitus dorsal",
+      "D": "les membres inferieurs sont en extension",
+      "E": "les pieds sont orientes vers l'avant"
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour position"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour position"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      }
+    },
+    "tags": [
+      "position",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#position",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q11",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000057",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Au sujet de les plans anatomiques, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le plan median separe avant et arriere",
+      "B": "le plan axial est aussi appele plan transversal",
+      "C": "un plan paramedian reste parallele au plan median",
+      "D": "le plan axial est un plan vertical",
+      "E": "le plan sagittal separe droite et gauche"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      }
+    },
+    "tags": [
+      "plans",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#plans",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q12",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000058",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Parmi les affirmations suivantes sur les termes directionnels, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "ipsilateral signifie du meme cote",
+      "B": "medial signifie proche du plan median",
+      "C": "cranial est synonyme de caudal",
+      "D": "lateral signifie eloigne du plan median",
+      "E": "ventral est synonyme de dorsal"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      }
+    },
+    "tags": [
+      "direction",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#direction",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q13",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000059",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Dans le cadre de les cavites du corps, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les membres possedent une grande cavite sereuse propre",
+      "B": "la cavite pleurale contient directement le coeur",
+      "C": "la cavite cranienne contient l'encephale",
+      "D": "le canal vertebral contient la moelle spinale",
+      "E": "la cavite abdominale est situee au-dessus de la cavite cranienne"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      }
+    },
+    "tags": [
+      "cavites",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#cavites",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q14",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000060",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Concernant la position anatomique de reference, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le regard est dirige vers l'avant",
+      "B": "les membres superieurs longent le tronc",
+      "C": "les paumes sont tournees vers l'avant",
+      "D": "le sujet est decrit en decubitus dorsal",
+      "E": "les pouces regardent en dehors"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour position"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      }
+    },
+    "tags": [
+      "position",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#position",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q15",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000061",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Parmi les affirmations suivantes sur les plans anatomiques, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le plan axial est un plan vertical",
+      "B": "le plan axial separe superieur et inferieur",
+      "C": "le plan sagittal median passe par la ligne mediane",
+      "D": "un plan paramedian est confondu avec le plan median",
+      "E": "le plan coronal est synonyme de plan axial"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      }
+    },
+    "tags": [
+      "plans",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#plans",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q16",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000062",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Pour les termes directionnels, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "distal signifie eloigne de la racine du membre",
+      "B": "ventral est synonyme de dorsal",
+      "C": "superficiel signifie proche de la surface",
+      "D": "profond signifie eloigne de la surface",
+      "E": "medial signifie le plus externe"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      }
+    },
+    "tags": [
+      "direction",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#direction",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q17",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000063",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Concernant les cavites du corps, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la cavite pleurale contient directement le coeur",
+      "B": "la cavite pelvienne est sous la cavite abdominale",
+      "C": "la cavite abdominale est situee au-dessus de la cavite cranienne",
+      "D": "le mediastin est entre les deux cavites pleurales",
+      "E": "certaines cavites sont tapissees de sereuses"
+    },
+    "answer": [
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      }
+    },
+    "tags": [
+      "cavites",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#cavites",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q18",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000064",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "A propos de la position anatomique de reference, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les membres inferieurs sont en extension",
+      "B": "les avant-bras sont imposes en pronation",
+      "C": "les pieds sont orientes vers l'avant",
+      "D": "le regard est dirige vers le bas",
+      "E": "les coudes sont flechis par definition"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour position"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour position"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour position"
+      }
+    },
+    "tags": [
+      "position",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#position",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q19",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000065",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Pour les plans anatomiques, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "un plan paramedian est confondu avec le plan median",
+      "B": "un plan paramedian reste parallele au plan median",
+      "C": "le plan coronal est synonyme de plan axial",
+      "D": "le plan sagittal separe droite et gauche",
+      "E": "le plan frontal est un plan horizontal"
+    },
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      }
+    },
+    "tags": [
+      "plans",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#plans",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q20",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000066",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Au sujet de les termes directionnels, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "medial signifie proche du plan median",
+      "B": "medial signifie le plus externe",
+      "C": "proximal signifie situe vers l'extremite libre",
+      "D": "lateral signifie eloigne du plan median",
+      "E": "proximal signifie proche de la racine du membre"
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      }
+    },
+    "tags": [
+      "direction",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#direction",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q21",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000067",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "A propos de les cavites du corps, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la cavite abdominale est situee au-dessus de la cavite cranienne",
+      "B": "le canal vertebral contient la moelle spinale",
+      "C": "la cavite thoracique est situee au-dessus du diaphragme",
+      "D": "le canal vertebral appartient au membre inferieur",
+      "E": "la cavite abdominale prolonge la cavite thoracique vers le bas"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      }
+    },
+    "tags": [
+      "cavites",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#cavites",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q22",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000068",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Dans le cadre de la position anatomique de reference, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les membres superieurs longent le tronc",
+      "B": "les paumes sont tournees vers l'avant",
+      "C": "le regard est dirige vers le bas",
+      "D": "les pouces regardent en dehors",
+      "E": "les coudes sont flechis par definition"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour position"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour position"
+      }
+    },
+    "tags": [
+      "position",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#position",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q23",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000069",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Au sujet de les plans anatomiques, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le plan coronal est synonyme de plan axial",
+      "B": "le plan frontal est un plan horizontal",
+      "C": "le plan sagittal median passe par la ligne mediane",
+      "D": "un plan frontal est un plan vertical",
+      "E": "le plan axial partage le corps en droite et gauche"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      }
+    },
+    "tags": [
+      "plans",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#plans",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q24",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000070",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Parmi les affirmations suivantes sur les termes directionnels, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "superficiel signifie proche de la surface",
+      "B": "profond signifie eloigne de la surface",
+      "C": "ipsilateral signifie du meme cote",
+      "D": "proximal signifie situe vers l'extremite libre",
+      "E": "medial signifie proche du plan median"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      }
+    },
+    "tags": [
+      "direction",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#direction",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q25",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000071",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Dans le cadre de les cavites du corps, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le canal vertebral appartient au membre inferieur",
+      "B": "le mediastin est entre les deux cavites pleurales",
+      "C": "certaines cavites sont tapissees de sereuses",
+      "D": "le pericarde appartient a l'appareil urinaire",
+      "E": "la cavite pelvienne est au-dessus du thorax"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      }
+    },
+    "tags": [
+      "cavites",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#cavites",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q26",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000072",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Concernant la position anatomique de reference, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "les pieds sont orientes vers l'avant",
+      "B": "les coudes sont flechis par definition",
+      "C": "le sujet est decrit debout",
+      "D": "le regard est dirige vers l'avant",
+      "E": "les membres inferieurs sont en flexion de repos"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour position"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour position"
+      }
+    },
+    "tags": [
+      "position",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#position",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q27",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000073",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Parmi les affirmations suivantes sur les plans anatomiques, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le plan frontal est un plan horizontal",
+      "B": "le plan sagittal separe droite et gauche",
+      "C": "le plan axial partage le corps en droite et gauche",
+      "D": "le plan frontal separe avant et arriere",
+      "E": "le plan axial separe superieur et inferieur"
+    },
+    "answer": [
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      }
+    },
+    "tags": [
+      "plans",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#plans",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q28",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000074",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Pour les termes directionnels, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "lateral signifie eloigne du plan median",
+      "B": "distal signifie proche de l'origine du membre",
+      "C": "proximal signifie proche de la racine du membre",
+      "D": "controlateral signifie du meme cote",
+      "E": "superficiel signifie proche du centre du corps"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      }
+    },
+    "tags": [
+      "direction",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#direction",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q29",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000075",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Concernant les cavites du corps, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le pericarde appartient a l'appareil urinaire",
+      "B": "la cavite thoracique est situee au-dessus du diaphragme",
+      "C": "la cavite pelvienne est au-dessus du thorax",
+      "D": "la cavite abdominale prolonge la cavite thoracique vers le bas",
+      "E": "le mediastin est un segment de l'intestin grele"
+    },
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      }
+    },
+    "tags": [
+      "cavites",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#cavites",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q30",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000076",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "A propos de la position anatomique de reference, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les paumes sont tournees vers l'avant",
+      "B": "les membres inferieurs sont en flexion de repos",
+      "C": "les paumes sont tournees vers l'arriere",
+      "D": "les pouces regardent en dehors",
+      "E": "les membres inferieurs sont en extension"
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour position"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour position"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      }
+    },
+    "tags": [
+      "position",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#position",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q31",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000077",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Pour les plans anatomiques, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le plan axial partage le corps en droite et gauche",
+      "B": "un plan frontal est un plan vertical",
+      "C": "le plan axial est aussi appele plan transversal",
+      "D": "le plan sagittal est parallele au front",
+      "E": "un plan paramedian reste parallele au plan median"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      }
+    },
+    "tags": [
+      "plans",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#plans",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q32",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000078",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Au sujet de les termes directionnels, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "profond signifie eloigne de la surface",
+      "B": "ipsilateral signifie du meme cote",
+      "C": "controlateral signifie du meme cote",
+      "D": "medial signifie proche du plan median",
+      "E": "superficiel signifie proche du centre du corps"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      }
+    },
+    "tags": [
+      "direction",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#direction",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q33",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000079",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "A propos de les cavites du corps, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la cavite pelvienne est au-dessus du thorax",
+      "B": "le mediastin est un segment de l'intestin grele",
+      "C": "certaines cavites sont tapissees de sereuses",
+      "D": "la cavite cranienne contient l'encephale",
+      "E": "les membres possedent une grande cavite sereuse propre"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      }
+    },
+    "tags": [
+      "cavites",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#cavites",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q34",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000080",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Dans le cadre de la position anatomique de reference, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le sujet est decrit debout",
+      "B": "le regard est dirige vers l'avant",
+      "C": "les membres superieurs longent le tronc",
+      "D": "les paumes sont tournees vers l'arriere",
+      "E": "les paumes sont tournees vers l'avant"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour position"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      }
+    },
+    "tags": [
+      "position",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#position",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q35",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000081",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Au sujet de les plans anatomiques, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le plan sagittal est parallele au front",
+      "B": "le plan frontal separe avant et arriere",
+      "C": "le plan axial separe superieur et inferieur",
+      "D": "le plan median separe avant et arriere",
+      "E": "le plan axial est un plan vertical"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      }
+    },
+    "tags": [
+      "plans",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#plans",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q36",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000082",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Parmi les affirmations suivantes sur les termes directionnels, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "proximal signifie proche de la racine du membre",
+      "B": "superficiel signifie proche du centre du corps",
+      "C": "distal signifie eloigne de la racine du membre",
+      "D": "superficiel signifie proche de la surface",
+      "E": "cranial est synonyme de caudal"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      }
+    },
+    "tags": [
+      "direction",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#direction",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q37",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000083",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Dans le cadre de les cavites du corps, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le mediastin est un segment de l'intestin grele",
+      "B": "la cavite abdominale prolonge la cavite thoracique vers le bas",
+      "C": "les membres possedent une grande cavite sereuse propre",
+      "D": "la cavite pelvienne est sous la cavite abdominale",
+      "E": "le mediastin est entre les deux cavites pleurales"
+    },
+    "answer": [
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      }
+    },
+    "tags": [
+      "cavites",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#cavites",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q38",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000084",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Concernant la position anatomique de reference, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "les pouces regardent en dehors",
+      "B": "les pouces sont diriges vers la ligne mediane",
+      "C": "les membres inferieurs sont en extension",
+      "D": "le sujet est decrit en decubitus dorsal",
+      "E": "les avant-bras sont imposes en pronation"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour position"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour position"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour position"
+      }
+    },
+    "tags": [
+      "position",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#position",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q39",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000085",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Parmi les affirmations suivantes sur les plans anatomiques, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le plan median separe avant et arriere",
+      "B": "le plan axial est aussi appele plan transversal",
+      "C": "le plan axial est un plan vertical",
+      "D": "un plan paramedian reste parallele au plan median",
+      "E": "un plan paramedian est confondu avec le plan median"
+    },
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      }
+    },
+    "tags": [
+      "plans",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#plans",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q40",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000086",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Pour les termes directionnels, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "ipsilateral signifie du meme cote",
+      "B": "cranial est synonyme de caudal",
+      "C": "ventral est synonyme de dorsal",
+      "D": "medial signifie proche du plan median",
+      "E": "lateral signifie eloigne du plan median"
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      }
+    },
+    "tags": [
+      "direction",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#direction",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q41",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000087",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Concernant les cavites du corps, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "les membres possedent une grande cavite sereuse propre",
+      "B": "la cavite cranienne contient l'encephale",
+      "C": "le canal vertebral contient la moelle spinale",
+      "D": "la cavite pleurale contient directement le coeur",
+      "E": "la cavite thoracique est situee au-dessus du diaphragme"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour cavites"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur cavites"
+      }
+    },
+    "tags": [
+      "cavites",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#cavites",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q42",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000088",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "A propos de la position anatomique de reference, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le regard est dirige vers l'avant",
+      "B": "les membres superieurs longent le tronc",
+      "C": "le sujet est decrit en decubitus dorsal",
+      "D": "les paumes sont tournees vers l'avant",
+      "E": "les avant-bras sont imposes en pronation"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour position"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur position"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour position"
+      }
+    },
+    "tags": [
+      "position",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#position",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q43",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000089",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Pour les plans anatomiques, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "le plan axial est un plan vertical",
+      "B": "un plan paramedian est confondu avec le plan median",
+      "C": "le plan axial separe superieur et inferieur",
+      "D": "le plan sagittal median passe par la ligne mediane",
+      "E": "le plan coronal est synonyme de plan axial"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur plans"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour plans"
+      }
+    },
+    "tags": [
+      "plans",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#plans",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q44",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-01-000090",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "01",
+    "stem": "Au sujet de les termes directionnels, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "distal signifie eloigne de la racine du membre",
+      "B": "superficiel signifie proche de la surface",
+      "C": "profond signifie eloigne de la surface",
+      "D": "ventral est synonyme de dorsal",
+      "E": "ipsilateral signifie du meme cote"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour direction"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur direction"
+      }
+    },
+    "tags": [
+      "direction",
+      "P1"
+    ],
+    "course_ref": "01_Chapter#direction",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch01_q45",
+    "priority": "P1"
   }
 ];

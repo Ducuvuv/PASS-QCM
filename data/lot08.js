@@ -4845,5 +4845,109 @@ window.PASS_ITEMS = [
     "year_signal": null,
     "pattern_id": null,
     "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-08-000091",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "08",
+    "stem": "Sur le schema ci-dessous, a propos de l'estomac classiquement identifie, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la petite courbure est concave",
+      "B": "la grande courbure est convexe",
+      "C": "le pylore communique avec le duodenum",
+      "D": "le fundus est la portion terminale du rectum",
+      "E": "l'estomac possede une face anterieure et une face posterieure"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "E": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      }
+    },
+    "tags": [
+      "estomac_schema",
+      "P1"
+    ],
+    "course_ref": "08_Chapter#estomac",
+    "image": "./matiere/anatomie/img/ch08/blank/07_estomac.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch08_q1",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-08-000092",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "08",
+    "stem": "Sur le schema ci-dessous, a propos du tube digestif classiquement represente, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'oesophage precede l'estomac",
+      "B": "l'intestin grele suit l'estomac",
+      "C": "le cecum appartient au gros intestin",
+      "D": "le rectum fait partie de l'intestin grele",
+      "E": "le gros intestin se poursuit par le rectum"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "E": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      }
+    },
+    "tags": [
+      "tube_digestif_schema",
+      "P1"
+    ],
+    "course_ref": "08_Chapter#tube_digestif",
+    "image": "./matiere/anatomie/img/ch08/blank/01_tube_digestif.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch08_q2",
+    "priority": "P1"
   }
 ];

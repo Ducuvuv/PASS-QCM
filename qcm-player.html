@@ -105,6 +105,14 @@
       margin-bottom: 1rem;
     }
     .stem { font-size: 1.05rem; margin: 0 0 1rem; }
+    .q-img-wrap { margin: 0 0 1rem; text-align: center; }
+    .q-img-wrap img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
     .choice {
       display: flex;
       gap: 0.65rem;
@@ -288,6 +296,7 @@
       </header>
       <div class="card revealed-host" id="panel">
         <p class="stem" id="stem"></p>
+        <div class="q-img-wrap hidden" id="q-img-wrap"><img id="q-img" alt="Schéma de la question" /></div>
         <div id="choices"></div>
         <div class="score-box" id="item-score"></div>
         <div class="actions">
@@ -327,7 +336,7 @@
   </main>
 
   <script src="./js/suivi-store.js?v=4"></script>
-  <script src="./data/lots.js?v=ch11"></script>
+  <script src="./data/lots.js?v=quota90"></script>
   <script>
     const CHAPTER_META = {
       "01": "Introduction",
@@ -354,6 +363,8 @@
     const elPoolHint = document.getElementById("pool-hint");
     const elProgress = document.getElementById("progress");
     const elStem = document.getElementById("stem");
+    const elImgWrap = document.getElementById("q-img-wrap");
+    const elImg = document.getElementById("q-img");
     const elChoices = document.getElementById("choices");
     const elItemScore = document.getElementById("item-score");
     const elTags = document.getElementById("tags");
@@ -498,6 +509,13 @@
       btnNext.disabled = true;
       elProgress.textContent = `${index + 1} / ${sessionItems.length} · ch.${item.chapter} · ${itemPriority(item) || "?"} · ${item.id}`;
       elStem.textContent = item.stem;
+      if (item.image) {
+        elImg.src = item.image;
+        elImgWrap.classList.remove("hidden");
+      } else {
+        elImg.removeAttribute("src");
+        elImgWrap.classList.add("hidden");
+      }
       elTags.textContent = (item.tags || []).map((t) => `#${t}`).join("  ");
 
       elChoices.innerHTML = "";

@@ -3775,5 +3775,1021 @@ window.PASS_ITEMS = [
     "year_signal": null,
     "pattern_id": null,
     "priority": "P2"
+  },
+  {
+    "id": "GEN-ANAT-06-000071",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Sur le schema ci-dessous, a propos de l'atlas classiquement represente, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'atlas ne possede pas de corps vertebral typique",
+      "B": "il comporte un arc anterieur et un arc posterieur",
+      "C": "il porte directement la dent de l'axis",
+      "D": "il participe a l'articulation atlanto-occipitale",
+      "E": "il appartient au rachis cervical"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "D": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "E": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      }
+    },
+    "tags": [
+      "atlas_schema",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#atlas_axis",
+    "image": "./matiere/anatomie/img/ch06/blank/13_atlas.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q1",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000072",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Sur le schema ci-dessous, a propos des courbures vertebrales classiquement montrees, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la courbure cervicale physiologique est une lordose",
+      "B": "la courbure thoracique physiologique est une cyphose",
+      "C": "la courbure lombaire physiologique est une cyphose",
+      "D": "la courbure sacree physiologique est une cyphose",
+      "E": "les courbures physiologiques sont depourvues d'interet mecanique"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "D": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "E": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      }
+    },
+    "tags": [
+      "courbures_schema",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#courbures",
+    "image": "./matiere/anatomie/img/ch06/blank/01_courbures.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q2",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000073",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Concernant les courbures du rachis, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la cyphose cervicale est la courbure physiologique normale",
+      "B": "la cyphose sacree est physiologique",
+      "C": "la lordose thoracique est la courbure normale du thorax",
+      "D": "la lordose cervicale se met en place avec le port de tete",
+      "E": "la lordose lombaire se renforce avec la station debout"
+    },
+    "answer": [
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour courbures"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour courbures"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      }
+    },
+    "tags": [
+      "courbures",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#courbures",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q3",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000074",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Au sujet de l'atlas et l'axis, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'atlas est forme notamment d'un arc anterieur et d'un arc posterieur",
+      "B": "l'articulation atlanto-occipitale est la principale articulation de pronation",
+      "C": "la dent de l'axis se projette vers le haut",
+      "D": "l'atlas possede un disque intervertebral avec l'occiput",
+      "E": "la dent de l'axis se projette vers le bas"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour atlas_axis"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour atlas_axis"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour atlas_axis"
+      }
+    },
+    "tags": [
+      "atlas_axis",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#atlas_axis",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q4",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000075",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Parmi les affirmations suivantes sur la vertebre type et le disque intervertebral, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les vertebres lombaires ont les plus petits corps",
+      "B": "les vertebres lombaires ont des corps volumineux",
+      "C": "une vertebre est depourvue d'arc vertebral",
+      "D": "une vertebre comporte un corps vertebral et un arc vertebral",
+      "E": "le disque intervertebral unit deux apophyses epineuses"
+    },
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour vertebre"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour vertebre"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour vertebre"
+      }
+    },
+    "tags": [
+      "vertebre",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#vertebre",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q5",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000076",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Pour les courbures du rachis, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la lordose cervicale est physiologique",
+      "B": "la cyphose cervicale est la courbure physiologique normale",
+      "C": "la lordose thoracique est la courbure normale du thorax",
+      "D": "la cyphose thoracique est physiologique",
+      "E": "la lordose lombaire est physiologique"
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour courbures"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour courbures"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      }
+    },
+    "tags": [
+      "courbures",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#courbures",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q6",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000077",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "A propos de l'atlas et l'axis, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'articulation atlanto-occipitale est la principale articulation de pronation",
+      "B": "l'axis porte la dent de l'axis",
+      "C": "l'articulation atlanto-occipitale autorise surtout flexion et extension",
+      "D": "l'atlas possede un disque intervertebral avec l'occiput",
+      "E": "l'articulation atlanto-axiale intervient dans la rotation de la tete"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour atlas_axis"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour atlas_axis"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      }
+    },
+    "tags": [
+      "atlas_axis",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#atlas_axis",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q7",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000078",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Dans le cadre de la vertebre type et le disque intervertebral, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le disque intervertebral est place entre deux corps vertebraux",
+      "B": "le nucleus pulposus occupe la partie centrale du disque",
+      "C": "les vertebres lombaires ont les plus petits corps",
+      "D": "l'annulus fibrosus est peripherique",
+      "E": "une vertebre est depourvue d'arc vertebral"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour vertebre"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour vertebre"
+      }
+    },
+    "tags": [
+      "vertebre",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#vertebre",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q8",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000079",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Concernant les courbures du rachis, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la cyphose cervicale est la courbure physiologique normale",
+      "B": "la lordose thoracique est la courbure normale du thorax",
+      "C": "la cyphose sacree est physiologique",
+      "D": "la lordose cervicale se met en place avec le port de tete",
+      "E": "la cyphose lombaire est physiologique chez l'adulte sain"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour courbures"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour courbures"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour courbures"
+      }
+    },
+    "tags": [
+      "courbures",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#courbures",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q9",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000080",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Au sujet de l'atlas et l'axis, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'atlas est forme notamment d'un arc anterieur et d'un arc posterieur",
+      "B": "la dent de l'axis se projette vers le haut",
+      "C": "l'atlas ne possede pas de corps vertebral classique",
+      "D": "l'articulation atlanto-occipitale est la principale articulation de pronation",
+      "E": "l'axis porte la dent de l'axis"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour atlas_axis"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      }
+    },
+    "tags": [
+      "atlas_axis",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#atlas_axis",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q10",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000081",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Parmi les affirmations suivantes sur la vertebre type et le disque intervertebral, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les vertebres lombaires ont les plus petits corps",
+      "B": "les vertebres lombaires ont des corps volumineux",
+      "C": "une vertebre comporte un corps vertebral et un arc vertebral",
+      "D": "une vertebre est depourvue d'arc vertebral",
+      "E": "le disque intervertebral unit deux apophyses epineuses"
+    },
+    "answer": [
+      "B",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour vertebre"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour vertebre"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour vertebre"
+      }
+    },
+    "tags": [
+      "vertebre",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#vertebre",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q11",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000082",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Pour les courbures du rachis, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la lordose cervicale est physiologique",
+      "B": "la cyphose cervicale est la courbure physiologique normale",
+      "C": "la cyphose thoracique est physiologique",
+      "D": "la lordose lombaire est physiologique",
+      "E": "la lordose thoracique est la courbure normale du thorax"
+    },
+    "answer": [
+      "A",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour courbures"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour courbures"
+      }
+    },
+    "tags": [
+      "courbures",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#courbures",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q12",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000083",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "A propos de l'atlas et l'axis, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'articulation atlanto-occipitale est la principale articulation de pronation",
+      "B": "l'axis porte la dent de l'axis",
+      "C": "l'atlas possede un disque intervertebral avec l'occiput",
+      "D": "l'articulation atlanto-occipitale autorise surtout flexion et extension",
+      "E": "l'articulation atlanto-axiale intervient dans la rotation de la tete"
+    },
+    "answer": [
+      "B",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour atlas_axis"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour atlas_axis"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      }
+    },
+    "tags": [
+      "atlas_axis",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#atlas_axis",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q13",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000084",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Dans le cadre de la vertebre type et le disque intervertebral, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le disque intervertebral est place entre deux corps vertebraux",
+      "B": "les vertebres lombaires ont les plus petits corps",
+      "C": "le nucleus pulposus occupe la partie centrale du disque",
+      "D": "une vertebre est depourvue d'arc vertebral",
+      "E": "le disque intervertebral unit deux apophyses epineuses"
+    },
+    "answer": [
+      "A",
+      "C"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour vertebre"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour vertebre"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour vertebre"
+      }
+    },
+    "tags": [
+      "vertebre",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#vertebre",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q14",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000085",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Concernant les courbures du rachis, retenez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la cyphose cervicale est la courbure physiologique normale",
+      "B": "la cyphose sacree est physiologique",
+      "C": "la lordose thoracique est la courbure normale du thorax",
+      "D": "la lordose cervicale se met en place avec le port de tete",
+      "E": "la cyphose lombaire est physiologique chez l'adulte sain"
+    },
+    "answer": [
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour courbures"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour courbures"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour courbures"
+      }
+    },
+    "tags": [
+      "courbures",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#courbures",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q15",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000086",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Au sujet de l'atlas et l'axis, quelle(s) proposition(s) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'atlas est forme notamment d'un arc anterieur et d'un arc posterieur",
+      "B": "l'articulation atlanto-occipitale est la principale articulation de pronation",
+      "C": "l'atlas possede un disque intervertebral avec l'occiput",
+      "D": "la dent de l'axis se projette vers le haut",
+      "E": "l'atlas ne possede pas de corps vertebral classique"
+    },
+    "answer": [
+      "A",
+      "D",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour atlas_axis"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour atlas_axis"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      }
+    },
+    "tags": [
+      "atlas_axis",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#atlas_axis",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q16",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000087",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Parmi les affirmations suivantes sur la vertebre type et le disque intervertebral, laquelle (lesquelles) est (sont) exacte(s) ?",
+    "choices": {
+      "A": "les vertebres lombaires ont les plus petits corps",
+      "B": "les vertebres lombaires ont des corps volumineux",
+      "C": "une vertebre comporte un corps vertebral et un arc vertebral",
+      "D": "une vertebre est depourvue d'arc vertebral",
+      "E": "le foramen vertebral participe au canal vertebral"
+    },
+    "answer": [
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour vertebre"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour vertebre"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      }
+    },
+    "tags": [
+      "vertebre",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#vertebre",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q17",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000088",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Pour les courbures du rachis, indiquez la (les) proposition(s) exacte(s).",
+    "choices": {
+      "A": "la lordose cervicale est physiologique",
+      "B": "la cyphose thoracique est physiologique",
+      "C": "la cyphose cervicale est la courbure physiologique normale",
+      "D": "la lordose lombaire est physiologique",
+      "E": "la lordose thoracique est la courbure normale du thorax"
+    },
+    "answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      },
+      "C": {
+        "correct": false,
+        "why": "Inexact pour courbures"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur courbures"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour courbures"
+      }
+    },
+    "tags": [
+      "courbures",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#courbures",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q18",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000089",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "A propos de l'atlas et l'axis, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "l'articulation atlanto-occipitale est la principale articulation de pronation",
+      "B": "l'atlas possede un disque intervertebral avec l'occiput",
+      "C": "l'axis porte la dent de l'axis",
+      "D": "l'articulation atlanto-occipitale autorise surtout flexion et extension",
+      "E": "la dent de l'axis se projette vers le bas"
+    },
+    "answer": [
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": false,
+        "why": "Inexact pour atlas_axis"
+      },
+      "B": {
+        "correct": false,
+        "why": "Inexact pour atlas_axis"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      },
+      "D": {
+        "correct": true,
+        "why": "Conforme au cours sur atlas_axis"
+      },
+      "E": {
+        "correct": false,
+        "why": "Inexact pour atlas_axis"
+      }
+    },
+    "tags": [
+      "atlas_axis",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#atlas_axis",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q19",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-06-000090",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "06",
+    "stem": "Dans le cadre de la vertebre type et le disque intervertebral, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "le disque intervertebral est place entre deux corps vertebraux",
+      "B": "le nucleus pulposus occupe la partie centrale du disque",
+      "C": "l'annulus fibrosus est peripherique",
+      "D": "les vertebres lombaires ont les plus petits corps",
+      "E": "les vertebres lombaires ont des corps volumineux"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      },
+      "B": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      },
+      "C": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      },
+      "D": {
+        "correct": false,
+        "why": "Inexact pour vertebre"
+      },
+      "E": {
+        "correct": true,
+        "why": "Conforme au cours sur vertebre"
+      }
+    },
+    "tags": [
+      "vertebre",
+      "P1"
+    ],
+    "course_ref": "06_Chapter#vertebre",
+    "image": null,
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch06_q20",
+    "priority": "P1"
   }
 ];

@@ -5871,5 +5871,109 @@ window.PASS_ITEMS = [
     "year_signal": null,
     "pattern_id": null,
     "priority": "P3"
+  },
+  {
+    "id": "GEN-ANAT-11-000111",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Sur le schema ci-dessous, a propos de l'extremite proximale du femur classiquement representee, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la tete femorale porte une fovea",
+      "B": "le col relie la tete a la diaphyse",
+      "C": "le grand trochanter est lateral",
+      "D": "le petit trochanter appartient a la patella",
+      "E": "il s'agit d'un segment du membre inferieur"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      },
+      "E": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      }
+    },
+    "tags": [
+      "femur_schema",
+      "P1"
+    ],
+    "course_ref": "11_Chapter#femur",
+    "image": "./matiere/anatomie/img/ch11/blank/08_femur_prox.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch11_q1",
+    "priority": "P1"
+  },
+  {
+    "id": "GEN-ANAT-11-000112",
+    "source": "generated",
+    "subject": "anatomie",
+    "chapter": "11",
+    "stem": "Sur le schema ci-dessous, a propos de la patella classiquement representee, laquelle (lesquelles) des propositions suivantes est (sont) exacte(s) ?",
+    "choices": {
+      "A": "la patella est un os sesamoide",
+      "B": "sa base est situee en haut",
+      "C": "son apex est dirige vers le bas",
+      "D": "elle s'articule avec la trochlee femorale",
+      "E": "elle appartient a la ceinture scapulaire"
+    },
+    "answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "explanations": {
+      "A": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "B": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "C": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "D": {
+        "correct": true,
+        "why": "Lecture anatomique correcte"
+      },
+      "E": {
+        "correct": false,
+        "why": "Repere anatomique incorrect"
+      }
+    },
+    "tags": [
+      "patella_schema",
+      "P1"
+    ],
+    "course_ref": "11_Chapter#patella",
+    "image": "./matiere/anatomie/img/ch11/blank/10_patella.png",
+    "difficulty": null,
+    "year_signal": null,
+    "pattern_id": "topup_ch11_q2",
+    "priority": "P1"
   }
 ];
