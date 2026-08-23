@@ -264,15 +264,36 @@
       background: var(--accent);
       color: #fff;
     }
-    .prio-help {
-      margin: 0.75rem 0 0;
+    .prio-legend {
+      display: grid;
+      gap: 0.25rem;
+      margin: 0.65rem 0 0;
       padding: 0;
       list-style: none;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: var(--muted);
     }
-    .prio-help li { margin-bottom: 0.35rem; }
-    .prio-help strong { color: var(--ink); }
+    .prio-legend strong { color: var(--ink); font-weight: 700; }
+    .pool-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin: 0.85rem 0 0.25rem;
+    }
+    .pool-stat {
+      font-size: 0.82rem;
+      font-weight: 650;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+    }
+    .pool-stat.total {
+      border-color: var(--accent);
+      background: #e3efe8;
+    }
+    .pool-stat.warn { color: var(--muted); border-style: dashed; }
   </style>
 </head>
 <body>
@@ -281,7 +302,6 @@
     <!-- SETUP -->
     <section id="setup">
       <h1>Test QCM — Anatomie</h1>
-      <p class="sub">Choisis chapitres, priorités P1–P3, nombre de questions, puis lance la session.</p>
 
       <div class="card">
         <h2>Chapitres</h2>
@@ -299,6 +319,11 @@
           <button type="button" class="prio-btn" data-prio="P2" aria-pressed="true">P2</button>
           <button type="button" class="prio-btn" data-prio="P3" aria-pressed="true">P3</button>
         </div>
+        <ul class="prio-legend">
+          <li><strong>P1</strong> — essentiel</li>
+          <li><strong>P2</strong> — important</li>
+          <li><strong>P3</strong> — complémentaire</li>
+        </ul>
       </div>
 
       <div class="card">
@@ -316,7 +341,7 @@
             </div>
           </div>
         </div>
-        <p class="hint" id="pool-hint">—</p>
+        <div class="pool-stats" id="pool-hint" aria-live="polite"></div>
         <div class="actions">
           <button type="button" id="btn-start">Commencer</button>
         </div>
@@ -471,17 +496,23 @@
     function updatePoolHint() {
       const chs = selectedChapters();
       const prios = selectedPriorities();
-      const n = poolFrom(chs, prios).length;
+      const pool = poolFrom(chs, prios);
+      const n = pool.length;
+      const c1 = pool.filter((i) => itemPriority(i) === "P1").length;
+      const c2 = pool.filter((i) => itemPriority(i) === "P2").length;
+      const c3 = pool.filter((i) => itemPriority(i) === "P3").length;
+
+      elPoolHint.innerHTML = "";
       if (!chs.length) {
-        elPoolHint.textContent = "Choisis au moins un chapitre.";
+        elPoolHint.innerHTML = '<span class="pool-stat warn">Aucun chapitre</span>';
       } else if (!prios.length) {
-        elPoolHint.textContent = "Active au moins une priorité (P1 / P2 / P3).";
+        elPoolHint.innerHTML = '<span class="pool-stat warn">Aucune priorité</span>';
       } else {
-        const allPool = poolFrom(chs, ["P1", "P2", "P3"]);
-        const c1 = allPool.filter((i) => itemPriority(i) === "P1").length;
-        const c2 = allPool.filter((i) => itemPriority(i) === "P2").length;
-        const c3 = allPool.filter((i) => itemPriority(i) === "P3").length;
-        elPoolHint.textContent = `${n} question${n > 1 ? "s" : ""} sélectionnée${n > 1 ? "s" : ""} (${prios.join(" + ")}) · dispo dans ces chapitres : P1 ${c1} · P2 ${c2} · P3 ${c3}.`;
+        elPoolHint.innerHTML =
+          '<span class="pool-stat total">' + n + " Q</span>" +
+          '<span class="pool-stat">P1 · ' + c1 + "</span>" +
+          '<span class="pool-stat">P2 · ' + c2 + "</span>" +
+          '<span class="pool-stat">P3 · ' + c3 + "</span>";
       }
       elQcount.max = Math.max(1, n || 1);
       if (Number(elQcount.value) > n && n > 0) elQcount.value = n;
