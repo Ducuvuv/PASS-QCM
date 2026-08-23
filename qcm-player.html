@@ -488,7 +488,7 @@
   <script src="./js/shell-tabbar.js?v=3"></script>
 
   <script src="./js/suivi-store.js?v=4"></script>
-  <script src="./data/lots.js?v=quota90"></script>
+  <script src="./data/lots-index.js?v=1"></script>
   <script>
     const CHAPTER_META = {
       "01": "Introduction",
@@ -503,8 +503,43 @@
       "10": "Membre supérieur",
       "11": "Membre inférieur",
     };
+    const LOTS_FILE_V = "1";
+    window.PASS_LOTS = window.PASS_LOTS || {};
+    const lots = window.PASS_LOTS;
+    const lotsIndex = window.PASS_LOTS_INDEX || {};
+    const lotLoadState = {}; // ch -> Promise
 
-    const lots = window.PASS_LOTS || {};
+    function chapterCount(ch) {
+      if ((lots[ch] || []).length) return lots[ch].length;
+      return Number(lotsIndex[ch] || 0);
+    }
+
+    function loadChapterLot(ch) {
+      const key = String(ch).padStart(2, "0");
+      if ((lots[key] || []).length) return Promise.resolve(key);
+      if (lotLoadState[key]) return lotLoadState[key];
+      lotLoadState[key] = new Promise((resolve, reject) => {
+        const s = document.createElement("script");
+        s.src = "./data/lots/ch" + key + ".js?v=" + LOTS_FILE_V;
+        s.async = true;
+        s.onload = () => {
+          if (!(lots[key] || []).length) {
+            reject(new Error("empty lot " + key));
+            return;
+          }
+          resolve(key);
+        };
+        s.onerror = () => reject(new Error("failed lot " + key));
+        document.head.appendChild(s);
+      });
+      return lotLoadState[key];
+    }
+
+    function loadChapterLots(chs) {
+      const uniq = [...new Set((chs || []).map((c) => String(c).padStart(2, "0")))];
+      return Promise.all(uniq.map(loadChapterLot));
+    }
+
     const elSetup = document.getElementById("setup");
     const elQuiz = document.getElementById("quiz");
     const elResults = document.getElementById("results");
@@ -534,7 +569,7 @@
 
     function availableChapters() {
       return Object.keys(CHAPTER_META)
-        .filter((ch) => (lots[ch] || []).length)
+        .filter((ch) => chapterCount(ch) > 0)
         .sort((a, b) => Number(a) - Number(b));
     }
 
@@ -609,6 +644,18 @@
     function updatePoolHint() {
       const chs = selectedChapters();
       const prios = selectedPriorities();
+      const missing = chs.filter((ch) => !(lots[ch] || []).length);
+      if (chs.length && missing.length) {
+        elPoolHint.innerHTML = '<span class="pool-stat">Chargement…</span>';
+        document.getElementById("btn-start").disabled = true;
+        loadChapterLots(chs)
+          .then(() => updatePoolHint())
+          .catch((e) => {
+            console.error(e);
+            elPoolHint.innerHTML = '<span class="pool-stat warn">Erreur chargement QCM</span>';
+          });
+        return;
+      }
       const pool = poolFrom(chs, prios);
       const n = pool.length;
       const c1 = pool.filter((i) => itemPriority(i) === "P1").length;
@@ -644,7 +691,7 @@
         btn.setAttribute("data-ch", ch);
         const on = focusOk ? ch === focusCh : true;
         btn.setAttribute("aria-pressed", on ? "true" : "false");
-        const n = (lots[ch] || []).length;
+        const n = chapterCount(ch);
         btn.innerHTML =
           '<span class="ch-id">' + ch + '</span>' +
           '<span class="ch-name">' + CHAPTER_META[ch] + " · " + n + "</span>";
@@ -682,26 +729,43 @@
     }
 
     function startSession(settings) {
-      const fixed =
-        settings.fixedItems && settings.fixedItems.length
-          ? settings.fixedItems
-          : null;
-      if (!fixed) lastSettings = settings;
-      let picked;
-      if (fixed) {
-        picked = settings.mode === "order" ? [...fixed] : shuffle(fixed);
-      } else {
-        const pool = poolFrom(settings.chapters, settings.priorities);
-        picked = settings.mode === "order" ? [...pool] : shuffle(pool);
+      const begin = () => {
+        const fixed =
+          settings.fixedItems && settings.fixedItems.length
+            ? settings.fixedItems
+            : null;
+        if (!fixed) lastSettings = settings;
+        let picked;
+        if (fixed) {
+          picked = settings.mode === "order" ? [...fixed] : shuffle(fixed);
+        } else {
+          const pool = poolFrom(settings.chapters, settings.priorities);
+          picked = settings.mode === "order" ? [...pool] : shuffle(pool);
+        }
+        const n = Math.min(settings.count || picked.length, picked.length);
+        sessionItems = picked.slice(0, n);
+        index = 0;
+        revealed = false;
+        correctCount = 0;
+        history = [];
+        show("quiz");
+        renderQuestion();
+      };
+      if (settings.fixedItems && settings.fixedItems.length) {
+        begin();
+        return;
       }
-      const n = Math.min(settings.count || picked.length, picked.length);
-      sessionItems = picked.slice(0, n);
-      index = 0;
-      revealed = false;
-      correctCount = 0;
-      history = [];
-      show("quiz");
-      renderQuestion();
+      const btnStart = document.getElementById("btn-start");
+      if (btnStart) btnStart.disabled = true;
+      loadChapterLots(settings.chapters || [])
+        .then(begin)
+        .catch((e) => {
+          console.error(e);
+          alert("Impossible de charger les QCM de ce chapitre.");
+          if (btnStart) btnStart.disabled = false;
+          show("setup");
+          updatePoolHint();
+        });
     }
 
     function renderQuestion() {
