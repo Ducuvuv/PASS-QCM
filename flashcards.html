@@ -177,6 +177,21 @@
       font-size: 0.82rem;
       padding: 0.4rem 0.85rem;
     }
+    .play-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem 0.75rem;
+      margin: 0 0 0.65rem;
+    }
+    .play-top .note { margin: 0; }
+    .btn-exit {
+      font-size: 0.78rem;
+      font-weight: 650;
+      padding: 0.32rem 0.7rem;
+      border-radius: 999px;
+    }
     .rate-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.35rem; }
     .rate-row .btn { width: 100%; }
     .end-box {
@@ -272,8 +287,10 @@
     </section>
 
     <section id="play" class="hidden">
-      <p class="note" style="margin-top:0"><a href="#" id="btn-back">← Réglages</a></p>
-      <p class="note" id="progress">—</p>
+      <div class="play-top">
+        <p class="note" id="progress">—</p>
+        <button type="button" class="btn secondary btn-exit" id="btn-exit">Sortir</button>
+      </div>
       <div class="fc-card" id="card" tabindex="0">
         <div class="meta" id="card-meta">Touche pour retourner</div>
         <div class="front" id="card-front"></div>
@@ -296,7 +313,7 @@
         <p class="note" id="end-stats">—</p>
         <div class="actions">
           <button type="button" class="btn" id="btn-again-review">Relancer les « À revoir »</button>
-          <button type="button" class="btn secondary" id="btn-end-setup">Retour réglages</button>
+          <button type="button" class="btn secondary" id="btn-end-setup">Sortir</button>
         </div>
       </div>
     </section>
@@ -585,11 +602,12 @@
     }
 
     document.getElementById("btn-start").addEventListener("click", () => startSession());
-    document.getElementById("btn-back").addEventListener("click", (e) => {
-      e.preventDefault();
+    function exitToSetup() {
       show("setup");
       updateHint();
-    });
+      window.scrollTo(0, 0);
+    }
+    document.getElementById("btn-exit").addEventListener("click", exitToSetup);
     document.getElementById("btn-flip").addEventListener("click", flip);
     elCard.addEventListener("click", flip);
     document.getElementById("btn-next").addEventListener("click", () => {
@@ -624,10 +642,7 @@
       });
       startSession("review");
     });
-    document.getElementById("btn-end-setup").addEventListener("click", () => {
-      show("setup");
-      updateHint();
-    });
+    document.getElementById("btn-end-setup").addEventListener("click", exitToSetup);
 
     buildChapters();
     show("setup");
