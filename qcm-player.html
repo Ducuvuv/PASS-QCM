@@ -53,31 +53,42 @@
       color: var(--muted);
     }
     .chapters {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.5rem;
-    }
-    @media (max-width: 520px) {
-      .chapters { grid-template-columns: 1fr; }
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
     }
     .ch-chip {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.12rem;
-      width: 100%;
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.35rem;
+      width: auto;
+      max-width: 100%;
       text-align: left;
       border: 1px solid var(--line);
       background: var(--card);
       color: var(--ink);
-      border-radius: 12px;
-      padding: 0.7rem 0.8rem;
+      border-radius: 999px;
+      padding: 0.42rem 0.72rem;
       font: inherit;
       cursor: pointer;
       transition: border-color 0.12s ease, background 0.12s ease;
     }
-    .ch-chip .ch-id { font-weight: 800; font-size: 0.95rem; letter-spacing: 0.01em; }
-    .ch-chip .ch-name { font-size: 0.8rem; color: var(--muted); font-weight: 550; line-height: 1.25; }
+    .ch-chip .ch-id {
+      font-weight: 800;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      flex: 0 0 auto;
+    }
+    .ch-chip .ch-name {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 550;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     .ch-chip[aria-pressed="true"] {
       border-color: var(--accent);
       background: #e3efe8;
@@ -536,7 +547,7 @@
         const n = (lots[ch] || []).length;
         btn.innerHTML =
           '<span class="ch-id">' + ch + '</span>' +
-          '<span class="ch-name">' + CHAPTER_META[ch] + " · " + n + " Q</span>";
+          '<span class="ch-name">' + CHAPTER_META[ch] + " · " + n + "</span>";
         btn.addEventListener("click", () => {
           const pressed = btn.getAttribute("aria-pressed") === "true";
           btn.setAttribute("aria-pressed", pressed ? "false" : "true");
