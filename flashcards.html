@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=m3" />
+  <link rel="stylesheet" href="./styles.css?v=m6" />
   <style>
     .fc-card {
       background: var(--surface);
@@ -56,9 +56,34 @@
     .prio-help { list-style: none; margin: 0.75rem 0 0; padding: 0; font-size: 0.88rem; color: var(--muted); }
     .prio-help li { margin-bottom: 0.3rem; }
     .prio-help strong { color: var(--ink); }
-    .chapters { display: grid; gap: 0.35rem; }
-    .chapters label { display: flex; gap: 0.5rem; align-items: flex-start; cursor: pointer; font-size: 0.92rem; }
-    @media (min-width: 520px) { .chapters { grid-template-columns: 1fr 1fr; } }
+    .chapters { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+    @media (max-width: 520px) { .chapters { grid-template-columns: 1fr; } }
+    .ch-chip {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.12rem;
+      width: 100%;
+      text-align: left;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      border-radius: 12px;
+      padding: 0.7rem 0.8rem;
+      font: inherit;
+      cursor: pointer;
+    }
+    .ch-chip .ch-id { font-weight: 800; font-size: 0.95rem; }
+    .ch-chip .ch-name { font-size: 0.8rem; color: var(--muted); font-weight: 550; line-height: 1.25; }
+    .ch-chip[aria-pressed="true"] {
+      border-color: var(--accent);
+      background: #e3efe8;
+      box-shadow: inset 0 0 0 1px var(--accent);
+    }
+    .ch-chip[aria-pressed="true"] .ch-name { color: #1f4d3a; }
+    .ch-chip:disabled { opacity: 0.42; cursor: not-allowed; }
+    .ch-toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.65rem; }
+    .ch-toolbar .btn { padding: 0.4rem 0.85rem; font-size: 0.88rem; }
     .rate-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.35rem; }
     .rate-row .btn { width: 100%; }
     .end-box {
@@ -97,6 +122,10 @@
 
       <div class="panel">
         <h2>Chapitre</h2>
+        <div class="ch-toolbar">
+          <button type="button" class="btn secondary" id="btn-ch-all">Tout</button>
+          <button type="button" class="btn secondary" id="btn-ch-none">Aucun</button>
+        </div>
         <div class="chapters" id="chapter-list"></div>
       </div>
 
@@ -124,10 +153,7 @@
           <button type="button" class="mode-btn" data-mode="all" aria-pressed="true">Tout le pool</button>
           <button type="button" class="mode-btn" data-mode="review" aria-pressed="false">À revoir seulement</button>
         </div>
-        <label class="check-row">
-          <input type="checkbox" id="opt-shuffle" checked />
-          Mélanger les cartes
-        </label>
+        <button type="button" class="mode-btn" id="opt-shuffle" aria-pressed="true" style="margin-top:0.65rem">Mélanger les cartes</button>
         <p class="note" style="margin-top:0.75rem" id="pool-hint">—</p>
         <p class="note" id="review-hint">—</p>
         <div class="actions">
@@ -236,7 +262,9 @@
     }
 
     function selectedChapters() {
-      return [...elChapterList.querySelectorAll("input:checked")].map((i) => i.value);
+      return [...elChapterList.querySelectorAll(".ch-chip[aria-pressed='true']")].map((b) =>
+        b.getAttribute("data-ch")
+      );
     }
     function selectedPriorities() {
       return [...elPriorityList.querySelectorAll(".prio-btn[aria-pressed='true']")].map((b) =>
@@ -287,7 +315,7 @@
       const n = poolFrom(chs, prios, mode, kind).length;
       const nRev = reviewIds().size;
       const kindLabel = kind === "all" ? "" : " · " + kind;
-      if (!chs.length) elHint.textContent = "Coche au moins un chapitre.";
+      if (!chs.length) elHint.textContent = "Choisis au moins un chapitre.";
       else if (!prios.length) elHint.textContent = "Active au moins une priorité.";
       else elHint.textContent = n + " carte" + (n > 1 ? "s" : "") + " · " + prios.join("+") + kindLabel + (mode === "review" ? " · à revoir" : "") + ".";
       elReviewHint.textContent = nRev ? nRev + " carte(s) marquées « À revoir » (local)." : "Aucune carte « À revoir » pour l’instant.";
@@ -318,24 +346,52 @@
         const list = decks[ch] || [];
         const n = list.length;
         const nSchema = list.filter((c) => c.kind === "schema").length;
-        const label = document.createElement("label");
-        if (n) {
-          const checked = focusOk ? ch === focusCh : true;
-          const extra = nSchema ? " · " + nSchema + " sch." : "";
-          label.innerHTML =
-            '<input type="checkbox" value="' + ch + '"' + (checked ? " checked" : "") + ' /> <span>' + ch + " — " + CHAPTER_META[ch] +
-            ' <span class="note">(' + n + extra + ")</span></span>";
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "ch-chip";
+        btn.setAttribute("data-ch", ch);
+        if (!n) {
+          btn.disabled = true;
+          btn.setAttribute("aria-pressed", "false");
+          btn.innerHTML =
+            '<span class="ch-id">' + ch + '</span><span class="ch-name">' + CHAPTER_META[ch] + " · bientôt</span>";
         } else {
-          label.innerHTML =
-            '<input type="checkbox" value="' + ch + '" disabled /> <span>' + ch + " — " + CHAPTER_META[ch] +
-            ' <span class="note">(bientôt)</span></span>';
+          const on = focusOk ? ch === focusCh : true;
+          btn.setAttribute("aria-pressed", on ? "true" : "false");
+          const extra = nSchema ? " · " + nSchema + " sch." : "";
+          btn.innerHTML =
+            '<span class="ch-id">' + ch + '</span><span class="ch-name">' + CHAPTER_META[ch] + " · " + n + extra + "</span>";
+          btn.addEventListener("click", () => {
+            const pressed = btn.getAttribute("aria-pressed") === "true";
+            btn.setAttribute("aria-pressed", pressed ? "false" : "true");
+            updateHint();
+          });
         }
-        elChapterList.appendChild(label);
+        elChapterList.appendChild(btn);
       }
-      elChapterList.addEventListener("change", updateHint);
       wireToggleGroup(elPriorityList, ".prio-btn", false);
       wireToggleGroup(elKindList, ".kind-btn", true);
       wireToggleGroup(elModeList, ".mode-btn", true);
+      if (elShuffle) {
+        elShuffle.addEventListener("click", () => {
+          const on = elShuffle.getAttribute("aria-pressed") !== "true";
+          elShuffle.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+      }
+      const btnAll = document.getElementById("btn-ch-all");
+      const btnNone = document.getElementById("btn-ch-none");
+      if (btnAll) {
+        btnAll.addEventListener("click", () => {
+          elChapterList.querySelectorAll(".ch-chip:not(:disabled)").forEach((b) => b.setAttribute("aria-pressed", "true"));
+          updateHint();
+        });
+      }
+      if (btnNone) {
+        btnNone.addEventListener("click", () => {
+          elChapterList.querySelectorAll(".ch-chip").forEach((b) => b.setAttribute("aria-pressed", "false"));
+          updateHint();
+        });
+      }
       updateHint();
     }
 
@@ -405,7 +461,7 @@
       const mode = modeOverride || selectedMode();
       const kind = selectedKind();
       let pool = poolFrom(chs, prios, mode, kind);
-      if (elShuffle.checked) pool = shuffle(pool);
+      if (elShuffle && elShuffle.getAttribute("aria-pressed") === "true") pool = shuffle(pool);
       session = pool;
       index = 0;
       stats = { know: 0, review: 0 };
