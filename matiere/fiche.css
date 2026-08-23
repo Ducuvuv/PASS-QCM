@@ -30,12 +30,22 @@
 }
 
 * { box-sizing: border-box; }
+/* styles.css sets overflow-x:hidden on html/body — that kills position:sticky on iOS */
+html,
+body {
+  overflow-x: visible;
+}
 body {
   margin: 0;
   font-family: var(--font);
   color: var(--ink);
   background: var(--bg);
   line-height: 1.45;
+}
+.point,
+.label-quiz,
+.course-cloze {
+  overflow: visible;
 }
 body.lecture-on .fiche-aside {
   display: none !important;
@@ -424,8 +434,8 @@ body.lecture-on .practice-bar { display: inline-flex !important; }
 .slot.bad { border-color: #dc2626; background: #fee2e2; }
 .label-bank {
   position: sticky;
-  bottom: 0.35rem;
-  z-index: 6;
+  bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+  z-index: 15;
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
@@ -433,9 +443,10 @@ body.lecture-on .practice-bar { display: inline-flex !important; }
   padding: 0.65rem 0.7rem;
   border: 1px solid var(--line);
   border-radius: 12px;
-  background: rgba(250, 248, 244, 0.96);
-  box-shadow: 0 8px 24px rgba(26, 23, 20, 0.08);
-  backdrop-filter: blur(8px);
+  background: rgba(250, 248, 244, 0.97);
+  box-shadow: 0 8px 24px rgba(26, 23, 20, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .label-chip {
   border: 1px solid var(--ink);
