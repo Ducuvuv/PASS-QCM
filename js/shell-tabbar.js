@@ -5,7 +5,7 @@
       id: "home",
       href: "./index.html",
       label: "Accueil",
-      icon: '<path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5z"/>',
+      icon: '<path d="M3.5 11 12 3.5 20.5 11"/><path d="M6 10.5V19.5h4.5v-5.5h3V19.5H18V10.5"/>',
     },
     {
       id: "matiere",

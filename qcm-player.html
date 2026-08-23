@@ -874,7 +874,7 @@
           const padFlash = String(sessionCh).padStart(2, "0");
           const aSrs = document.createElement("a");
           aSrs.href = "./flashcards.html?ch=" + padFlash + "&mode=due";
-          aSrs.textContent = "Flash SRS " + padFlash;
+          aSrs.textContent = "Flash ch." + padFlash;
           nextEl.appendChild(aSrs);
         }
         const topCh = weakCh.slice(0, 2).map(([c]) => c);

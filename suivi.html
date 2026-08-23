@@ -1,13 +1,13 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Suivi â€” PASS Sorbonne</title>
+  <title>Suivi — PASS Sorbonne</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=da2" />
+  <link rel="stylesheet" href="./styles.css?v=da3" />
 </head>
 <body class="has-tabbar" data-tab="suivi">
   <div class="wrap">
@@ -21,7 +21,7 @@
 
     <section class="continue-card" id="today-session" hidden>
       <p class="continue-kicker">Session du jour</p>
-      <h2 class="continue-title" id="today-session-title">â€”</h2>
+      <h2 class="continue-title" id="today-session-title">—</h2>
       <p class="continue-meta" id="today-session-meta"></p>
       <div class="continue-actions">
         <a class="btn" id="today-session-qcm" href="./qcm-player.html">QCM</a>
@@ -31,23 +31,23 @@
     </section>
 
     <div id="review-box" class="review-box hidden">
-      <h2>Ã€ revoir</h2>
+      <h2>À revoir</h2>
       <div class="review-list" id="review-list"></div>
     </div>
 
     <div id="empty-state" class="empty-state hidden">
-      Pas assez de data â€” fais â‰¥ 10 QCM sur un chapitre.
+      Pas assez de data — fais = 10 QCM sur un chapitre.
       <div class="actions" style="justify-content:center;margin-top:0.75rem">
         <a class="btn" href="./qcm-player.html">QCM</a>
       </div>
     </div>
 
     <details class="legend-fold">
-      <summary>LÃ©gende</summary>
+      <summary>Légende</summary>
       <ul class="suivi-legend" style="margin-top:0.65rem">
         <li><span class="pill pill-none" aria-hidden="true"></span> &lt; 10 Q</li>
         <li><span class="pill pill-red" aria-hidden="true"></span> &lt; 50 %</li>
-        <li><span class="pill pill-blue" aria-hidden="true"></span> 50â€“75 %</li>
+        <li><span class="pill pill-blue" aria-hidden="true"></span> 50–75 %</li>
         <li><span class="pill pill-green" aria-hidden="true"></span> &gt; 75 %</li>
       </ul>
     </details>
@@ -80,10 +80,10 @@
       }
       const links = T.hrefsFor(target.ch);
       document.getElementById("today-session-title").textContent =
-        target.ch + " â€” " + (S.CHAPTERS[target.ch] || "");
+        target.ch + " — " + (S.CHAPTERS[target.ch] || "");
       const meta = document.getElementById("today-session-meta");
       if (target.reason === "review") {
-        meta.textContent = target.level === "red" ? "PrioritÃ© faible" : "Ã€ consolider";
+        meta.textContent = target.level === "red" ? "Priorité faible" : "À consolider";
       } else if (target.reason === "start") {
         meta.textContent = "Premier chapitre";
       } else {
@@ -98,7 +98,7 @@
     function fmtScore(score20, pct, n, ready) {
       if (ready) return score20 + "/20 (" + pct + " %)";
       if (n) return n + "/" + S.MIN_Q + " Q";
-      return "â€”";
+      return "—";
     }
 
     function relativeTime(iso) {
@@ -106,7 +106,7 @@
       const t = new Date(iso).getTime();
       if (!t) return null;
       const days = Math.floor((Date.now() - t) / 86400000);
-      if (days <= 0) return "aujourdâ€™hui";
+      if (days <= 0) return "aujourd’hui";
       if (days === 1) return "hier";
       if (days < 7) return "il y a " + days + " j";
       if (days < 30) return "il y a " + Math.floor(days / 7) + " sem.";
@@ -161,19 +161,19 @@
 
         const when = relativeTime(row.lastQcmAt || row.updatedAt);
         const meta = when
-          ? "DerniÃ¨re activitÃ© " + when
+          ? "Dernière activité " + when
           : n
             ? "En cours de remplissage"
-            : "â€”";
+            : "—";
 
         const article = document.createElement("article");
         article.className = "ch-card";
         article.innerHTML =
           '<div class="ch-card-top"><div>' +
-          "<h3>" + ch + " â€” " + title + "</h3>" +
+          "<h3>" + ch + " — " + title + "</h3>" +
           '<p class="meta">' + meta + "</p></div></div>" +
           '<div class="pills-row">' +
-          '<span><span class="pill pill-' + lastLevel + '"></span> DerniÃ¨re ' +
+          '<span><span class="pill pill-' + lastLevel + '"></span> Dernière ' +
           fmtScore(row.lastScore20, row.lastPct, lastN, lastReady) + "</span>" +
           '<span><span class="pill pill-' + cumulLevel + '"></span> Cumul ' +
           fmtScore(row.score20, row.pct, n, cumulReady) + "</span>" +
@@ -196,7 +196,7 @@
           div.className = "review-item";
           div.innerHTML =
             '<span class="name"><span class="pill pill-' + w.level + '"></span> ' +
-            w.ch + " â€” " + w.title + "</span>" +
+            w.ch + " — " + w.title + "</span>" +
             "<span>" +
             '<a class="btn tiny" href="./qcm-player.html?ch=' + w.ch + '">QCM</a> ' +
             '<a class="btn tiny secondary" href="./flashcards.html?ch=' + w.ch + '&mode=due">Flash</a>' +
@@ -219,6 +219,6 @@
 
     render();
   </script><nav class="tabbar" aria-label="Navigation"><div class="tabbar-inner"></div></nav>
-<script src="./js/shell-tabbar.js?v=1"></script>
+<script src="./js/shell-tabbar.js?v=2"></script>
 </body>
 </html>

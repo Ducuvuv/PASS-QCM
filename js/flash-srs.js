@@ -156,8 +156,8 @@
   function formatDays(n) {
     n = Math.max(0, Number(n) || 0);
     if (n === 0) return "aujourd’hui";
-    if (n === 1) return "1 j";
-    return n + " j";
+    if (n === 1) return "demain";
+    return "dans " + n + " jours";
   }
 
   /** dues = jamais vue OU due ≤ today */

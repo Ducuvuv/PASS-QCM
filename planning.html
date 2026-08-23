@@ -1,13 +1,13 @@
-Ôªø<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Planning ‚Äî PASS Sorbonne</title>
+  <title>Planning ó PASS Sorbonne</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=da2" />
+  <link rel="stylesheet" href="./styles.css?v=da3" />
 </head>
 <body class="has-tabbar" data-tab="plus">
   <div class="wrap">
@@ -20,25 +20,25 @@
     <h1 class="page-title">Planning</h1>
 
     <div class="today-box" id="today-box">
-      <h2 id="today-title">Aujourd‚Äôhui</h2>
+      <h2 id="today-title">Aujourdíhui</h2>
       <div id="today-list"></div>
     </div>
 
-    <div class="sel-bar" id="sel-bar" hidden>Chapitre : ‚Äî</div>
+    <div class="sel-bar" id="sel-bar" hidden>Chapitre : ó</div>
 
     <h2 class="plan-step">1. Chapitre</h2>
     <div class="plan-bank" id="chapter-bank"></div>
 
     <h2 class="plan-step">2. Jour</h2>
     <div class="plan-week-nav">
-      <button type="button" class="btn secondary tiny" id="btn-prev">‚Üê Semaine</button>
-      <strong id="week-label">‚Äî</strong>
-      <button type="button" class="btn secondary tiny" id="btn-next">Semaine ‚Üí</button>
+      <button type="button" class="btn secondary tiny" id="btn-prev">? Semaine</button>
+      <strong id="week-label">ó</strong>
+      <button type="button" class="btn secondary tiny" id="btn-next">Semaine ?</button>
     </div>
     <div class="plan-day-stack" id="week-grid"></div>
 
     <details class="legend-fold" style="margin-top:1.25rem">
-      <summary>Activit√©</summary>
+      <summary>ActivitÈ</summary>
       <div class="table-wrap">
         <table class="suivi-table" id="activity-table">
           <thead>
@@ -84,14 +84,14 @@
     }
 
     function fmtShort(isoOrNull) {
-      if (!isoOrNull) return "‚Äî";
+      if (!isoOrNull) return "ó";
       const s = String(isoOrNull);
       const day = s.slice(0, 10);
       if (/^\d{4}-\d{2}-\d{2}$/.test(day)) {
         const parts = day.split("-");
         return parts[2] + "/" + parts[1];
       }
-      return "‚Äî";
+      return "ó";
     }
 
     function weekDates() {
@@ -122,11 +122,11 @@
       if (selectedChapter) {
         bar.hidden = false;
         bar.textContent =
-          "Chapitre s√©lectionn√© : " +
+          "Chapitre sÈlectionnÈ : " +
           selectedChapter +
-          " ¬∑ " +
+          " ∑ " +
           (P.CHAPTERS[selectedChapter] || "") +
-          " ‚Äî touche un jour";
+          " ó touche un jour";
       } else {
         bar.hidden = true;
       }
@@ -141,7 +141,7 @@
         btn.type = "button";
         btn.className = "plan-chip" + (selectedChapter === ch ? " selected" : "");
         btn.draggable = true;
-        btn.textContent = ch + " ¬∑ " + title;
+        btn.textContent = ch + " ∑ " + title;
         btn.dataset.chapter = ch;
         btn.addEventListener("click", () => {
           selectedChapter = selectedChapter === ch ? null : ch;
@@ -161,9 +161,9 @@
     function targetMeta(target) {
       if (!target) return "";
       if (target.reason === "review") {
-        return target.level === "red" ? "Priorit√©" : "Consolider";
+        return target.level === "red" ? "PrioritÈ" : "Consolider";
       }
-      if (target.reason === "start") return "D√©marrer";
+      if (target.reason === "start") return "DÈmarrer";
       return "Reprise";
     }
 
@@ -179,7 +179,7 @@
         level +
         '"></span> <strong>' +
         ch +
-        " ¬∑ " +
+        " ∑ " +
         (P.CHAPTERS[ch] || "") +
         "</strong>" +
         badge +
@@ -214,7 +214,7 @@
       const t = P.todayISO();
       const d = new Date();
       document.getElementById("today-title").textContent =
-        "Aujourd‚Äôhui ‚Äî " + DAYS[(d.getDay() + 6) % 7] + " " + fmtShort(t);
+        "Aujourdíhui ó " + DAYS[(d.getDay() + 6) % 7] + " " + fmtShort(t);
       const list = document.getElementById("today-list");
       list.innerHTML = "";
       const shown = new Set();
@@ -236,7 +236,7 @@
 
       if (!list.children.length) {
         list.innerHTML =
-          '<p class="hint" style="margin:0">Rien aujourd‚Äôhui.</p>';
+          '<p class="hint" style="margin:0">Rien aujourdíhui.</p>';
       }
     }
 
@@ -262,7 +262,7 @@
     function renderWeek() {
       const dates = weekDates();
       document.getElementById("week-label").textContent =
-        fmtShort(iso(dates[0])) + " ‚Üí " + fmtShort(iso(dates[6])) + " ¬∑ " + dates[0].getFullYear();
+        fmtShort(iso(dates[0])) + " ? " + fmtShort(iso(dates[6])) + " ∑ " + dates[0].getFullYear();
 
       const grid = document.getElementById("week-grid");
       grid.innerHTML = "";
@@ -282,7 +282,7 @@
           " " +
           fmtShort(dateStr) +
           "</span><span>" +
-          (dateStr === today ? "Aujourd‚Äôhui" : "") +
+          (dateStr === today ? "Aujourdíhui" : "") +
           "</span>";
         col.appendChild(head);
 
@@ -299,7 +299,7 @@
             '"></span> <span>' +
             p.chapter +
             "</span>" +
-            '<button type="button" class="plan-x" aria-label="Retirer">√ó</button>';
+            '<button type="button" class="plan-x" aria-label="Retirer">◊</button>';
           chip.querySelector(".plan-x").addEventListener("click", (e) => {
             e.stopPropagation();
             P.removePlacement(p.id);
@@ -320,7 +320,7 @@
           if (!selectedChapter) {
             const bar = document.getElementById("sel-bar");
             bar.hidden = false;
-            bar.textContent = "Chapitre d‚Äôabord";
+            bar.textContent = "Chapitre díabord";
             return;
           }
           P.placeChapter(selectedChapter, dateStr);
@@ -343,7 +343,7 @@
         tr.innerHTML =
           "<td><strong>" +
           ch +
-          "</strong> ‚Äî " +
+          "</strong> ó " +
           P.CHAPTERS[ch] +
           "</td><td>" +
           fmtShort(a.lastQcmAt) +
@@ -374,6 +374,6 @@
 
     renderAll();
   </script><nav class="tabbar" aria-label="Navigation"><div class="tabbar-inner"></div></nav>
-<script src="./js/shell-tabbar.js?v=1"></script>
+<script src="./js/shell-tabbar.js?v=2"></script>
 </body>
 </html>

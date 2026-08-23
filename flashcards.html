@@ -1,13 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Flashcards — PASS Sorbonne</title>
+  <title>Flashcards ? PASS Sorbonne</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=da2" />
+  <link rel="stylesheet" href="./styles.css?v=da3" />
   <style>
     .fc-card {
       background: var(--surface);
@@ -200,11 +200,12 @@
       min-height: var(--tap-min);
       border-radius: var(--radius-pill);
     }
+    .rate-wrap { margin-top: 0.55rem; }
+    .rate-wrap.hidden { display: none; }
     .rate-row {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 0.45rem;
-      margin-top: 0.45rem;
     }
     .rate-row .btn {
       width: 100%;
@@ -212,16 +213,28 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 0.1rem;
-      min-height: 3.1rem;
+      gap: 0.15rem;
+      min-height: 3.35rem;
       line-height: 1.15;
-      padding-top: 0.45rem;
-      padding-bottom: 0.45rem;
+      padding: 0.5rem 0.35rem;
+      font-size: 0.82rem;
     }
     .rate-row .btn small {
       font-size: 0.68rem;
       font-weight: 650;
-      opacity: 0.75;
+      opacity: 0.8;
+    }
+    .rate-help {
+      margin: 0 0 0.4rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .mem-help {
+      margin: 0 0 0.75rem;
+      font-size: 0.86rem;
+      color: var(--muted);
+      line-height: 1.4;
     }
     .end-box {
       background: var(--surface);
@@ -243,6 +256,7 @@
 
     <section id="setup">
       <h1 class="page-title">Flashcards</h1>
+      <p class="mem-help">Tu retournes la carte, puis tu dis si tu savais. On te la rappellera plus tard si besoin.</p>
 
       <div class="panel">
         <h2>Chapitres</h2>
@@ -254,14 +268,14 @@
       </div>
 
       <div class="panel">
-        <h2>Priorité</h2>
-        <div class="prio-btns" id="priority-list" role="group" aria-label="Priorités">
+        <h2>Priorit?</h2>
+        <div class="prio-btns" id="priority-list" role="group" aria-label="Priorit?s">
           <button type="button" class="prio-btn" data-prio="P1" aria-pressed="true">P1</button>
           <button type="button" class="prio-btn" data-prio="P2" aria-pressed="true">P2</button>
           <button type="button" class="prio-btn" data-prio="P3" aria-pressed="true">P3</button>
         </div>
         <p class="prio-legend">
-          <a href="./conseils.html#priorites">P1–P3</a>
+          <a href="./conseils.html#priorites">P1?P3</a>
         </p>
       </div>
 
@@ -270,26 +284,26 @@
         <div class="kind-btns" id="kind-list" role="group" aria-label="Type de cartes">
           <button type="button" class="kind-btn" data-kind="all" aria-pressed="true">Tout</button>
           <button type="button" class="kind-btn" data-kind="text" aria-pressed="false">Texte</button>
-          <button type="button" class="kind-btn" data-kind="schema" aria-pressed="false">Schémas</button>
+          <button type="button" class="kind-btn" data-kind="schema" aria-pressed="false">Sch?mas</button>
         </div>
       </div>
 
       <div class="panel">
-        <h2>Session</h2>
+        <h2>Quelles cartes ?</h2>
         <div class="session-block">
           <div class="session-controls">
             <div class="field">
-              <span class="field-label">Pool</span>
-              <div class="mode-btns" id="mode-list" role="group" aria-label="Mode">
-                <button type="button" class="mode-btn" data-mode="due" aria-pressed="true">Aujourd'hui</button>
-                <button type="button" class="mode-btn" data-mode="review" aria-pressed="false">À revoir</button>
-                <button type="button" class="mode-btn" data-mode="all" aria-pressed="false">Tout</button>
+              <span class="field-label">? travailler</span>
+              <div class="mode-btns" id="mode-list" role="group" aria-label="? travailler">
+                <button type="button" class="mode-btn" data-mode="due" aria-pressed="true">? faire</button>
+                <button type="button" class="mode-btn" data-mode="review" aria-pressed="false">Rat?es</button>
+                <button type="button" class="mode-btn" data-mode="all" aria-pressed="false">Toutes</button>
               </div>
             </div>
             <div class="field">
-              <span class="field-label">Tirage</span>
+              <span class="field-label">Ordre</span>
               <div class="mode-btns">
-                <button type="button" class="mode-btn" id="opt-shuffle" aria-pressed="true">Mélanger</button>
+                <button type="button" class="mode-btn" id="opt-shuffle" aria-pressed="true">M?langer</button>
               </div>
             </div>
           </div>
@@ -298,7 +312,7 @@
             <button type="button" class="btn" id="btn-start">Commencer</button>
           </div>
           <div class="actions actions-secondary">
-            <button type="button" class="btn secondary" id="btn-clear-review">Reset SRS</button>
+            <button type="button" class="btn secondary" id="btn-clear-review">Effacer ma m?moire</button>
           </div>
         </div>
       </div>
@@ -306,33 +320,34 @@
 
     <section id="play" class="hidden">
       <div class="play-top">
-        <p class="note" id="progress">—</p>
+        <p class="note" id="progress">?</p>
         <button type="button" class="btn secondary btn-exit" id="btn-exit">Sortir</button>
       </div>
       <div class="fc-card" id="card" tabindex="0">
-        <div class="meta" id="card-meta">Touche</div>
+        <div class="meta" id="card-meta">Touche pour retourner</div>
         <div class="front" id="card-front"></div>
         <div class="back" id="card-back"></div>
       </div>
       <div class="actions">
-        <button type="button" class="btn secondary" id="btn-prev">Précédent</button>
-        <button type="button" class="btn" id="btn-flip">Retourner</button>
-        <button type="button" class="btn secondary" id="btn-next">Suivant</button>
+        <button type="button" class="btn" id="btn-flip">Voir la r?ponse</button>
       </div>
-      <div class="rate-row" role="group" aria-label="Notation">
-        <button type="button" class="btn secondary" id="btn-again">À revoir<small id="hint-again">auj.</small></button>
-        <button type="button" class="btn" id="btn-good">Bien<small id="hint-good">1 j</small></button>
-        <button type="button" class="btn secondary" id="btn-easy">Facile<small id="hint-easy">4 j</small></button>
+      <div class="rate-wrap hidden" id="rate-wrap">
+        <p class="rate-help">Tu savais ? ? prochaine fois</p>
+        <div class="rate-row" role="group" aria-label="Tu savais ?">
+          <button type="button" class="btn secondary" id="btn-again">Je bloque<small id="hint-again">aujourd?hui</small></button>
+          <button type="button" class="btn" id="btn-good">Je sais<small id="hint-good">demain</small></button>
+          <button type="button" class="btn secondary" id="btn-easy">Trop facile<small id="hint-easy">dans 4 jours</small></button>
+        </div>
       </div>
     </section>
 
     <section id="end" class="hidden">
       <div class="end-box">
-        <h2>Session terminée</h2>
-        <p class="note" id="end-stats">—</p>
+        <h2>Session termin?e</h2>
+        <p class="note" id="end-stats">?</p>
         <div class="actions">
-          <button type="button" class="btn" id="btn-again-due">Relancer aujourd'hui</button>
-          <button type="button" class="btn secondary" id="btn-again-review">Relancer à revoir</button>
+          <button type="button" class="btn" id="btn-again-due">Continuer ? faire</button>
+          <button type="button" class="btn secondary" id="btn-again-review">Revoir les rat?es</button>
           <button type="button" class="btn secondary" id="btn-end-setup">Sortir</button>
         </div>
       </div>
@@ -350,13 +365,13 @@
   <script src="./data/flash/ch09.js?v=5"></script>
   <script src="./data/flash/ch10.js?v=5"></script>
   <script src="./data/flash/ch11.js?v=5"></script>
-  <script src="./js/flash-srs.js?v=1"></script>
+  <script src="./js/flash-srs.js?v=2"></script>
     <script>
     const CHAPTER_ORDER = ["01","02","03","04","05","06","07","08","09","10","11"];
     const CHAPTER_META = {
-      "01":"Introduction","02":"Système nerveux","03":"Cardio-circulatoire","04":"Appareil respiratoire",
+      "01":"Introduction","02":"Syst?me nerveux","03":"Cardio-circulatoire","04":"Appareil respiratoire",
       "05":"Organes des sens","06":"Rachis","07":"Parois du tronc","08":"Appareil digestif",
-      "09":"Génito-urinaire","10":"Membre supérieur","11":"Membre inférieur"
+      "09":"G?nito-urinaire","10":"Membre sup?rieur","11":"Membre inf?rieur"
     };
     const SRS = window.PASS_FLASH_SRS;
     const decks = window.PASS_FLASH || {};
@@ -453,19 +468,17 @@
       const c1 = pool.filter((c) => c.priority === "P1").length;
       const c2 = pool.filter((c) => c.priority === "P2").length;
       const c3 = pool.filter((c) => c.priority === "P3").length;
-      if (!chs.length) elHint.innerHTML = '<span class="pool-stat warn">Aucun chapitre</span>';
-      else if (!prios.length) elHint.innerHTML = '<span class="pool-stat warn">Aucune priorité</span>';
+      if (!chs.length) elHint.innerHTML = '<span class="pool-stat warn">Choisis un chapitre</span>';
+      else if (!prios.length) elHint.innerHTML = '<span class="pool-stat warn">Choisis une priorit?</span>';
       else {
         elHint.innerHTML =
           '<span class="pool-stat total">' + n + " cartes</span>" +
-          '<span class="pool-stat">P1 · ' + c1 + "</span>" +
-          '<span class="pool-stat">P2 · ' + c2 + "</span>" +
-          '<span class="pool-stat">P3 · ' + c3 + "</span>" +
-          (kind !== "all" ? '<span class="pool-stat">' + (kind === "schema" ? "Schémas" : "Texte") + "</span>" : "") +
-          (mode === "due" ? '<span class="pool-stat">Aujourd\'hui</span>' : "") +
-          (mode === "review" ? '<span class="pool-stat">À revoir</span>' : "") +
-          (nDue ? '<span class="pool-stat">' + nDue + " dues</span>" : "") +
-          (nRev ? '<span class="pool-stat">' + nRev + " à revoir</span>" : "");
+          '<span class="pool-stat">P1 ? ' + c1 + "</span>" +
+          '<span class="pool-stat">P2 ? ' + c2 + "</span>" +
+          '<span class="pool-stat">P3 ? ' + c3 + "</span>" +
+          (kind !== "all" ? '<span class="pool-stat">' + (kind === "schema" ? "Sch?mas" : "Texte") + "</span>" : "") +
+          (nDue ? '<span class="pool-stat">' + nDue + " ? faire</span>" : "") +
+          (nRev ? '<span class="pool-stat">' + nRev + " rat?es</span>" : "");
       }
       document.getElementById("btn-start").disabled = !chs.length || !prios.length || n === 0;
     }
@@ -499,10 +512,10 @@
         if (!n) {
           btn.disabled = true;
           btn.setAttribute("aria-pressed", "false");
-          btn.innerHTML = '<span class="ch-id">' + ch + '</span><span class="ch-name">' + CHAPTER_META[ch] + " · bientôt</span>";
+          btn.innerHTML = '<span class="ch-id">' + ch + '</span><span class="ch-name">' + CHAPTER_META[ch] + " ? bient?t</span>";
         } else {
           btn.setAttribute("aria-pressed", focusOk ? (ch === focusCh ? "true" : "false") : "true");
-          btn.innerHTML = '<span class="ch-id">' + ch + '</span><span class="ch-name">' + CHAPTER_META[ch] + " · " + n + "</span>";
+          btn.innerHTML = '<span class="ch-id">' + ch + '</span><span class="ch-name">' + CHAPTER_META[ch] + " ? " + n + "</span>";
           btn.addEventListener("click", () => {
             const on = btn.getAttribute("aria-pressed") !== "true";
             btn.setAttribute("aria-pressed", on ? "true" : "false");
@@ -543,40 +556,56 @@
         if (text) {
           const p = document.createElement("p");
           p.className = isBack ? "fc-caption" : "fc-prompt";
-          p.textContent = isBack ? text : "Nomme les légendes";
+          p.textContent = isBack ? text : "Nomme les l?gendes";
           el.appendChild(p);
         }
         const img = document.createElement("img");
         img.className = "fc-schema";
         img.src = "./" + imgSrc;
-        img.alt = text || (isBack ? "Schéma légendé" : "Schéma sans légende");
+        img.alt = text || (isBack ? "Sch?ma l?gend?" : "Sch?ma sans l?gende");
         el.appendChild(img);
       } else el.textContent = text || "";
+    }
+
+    const elRateWrap = document.getElementById("rate-wrap");
+    const elFlip = document.getElementById("btn-flip");
+
+    function setFlipped(on) {
+      elCard.classList.toggle("flipped", !!on);
+      elRateWrap.classList.toggle("hidden", !on);
+      elFlip.textContent = on ? "Cacher la r?ponse" : "Voir la r?ponse";
+      elMeta.textContent = on
+        ? "Dis si tu savais"
+        : (elMeta.dataset.base || "Touche pour retourner");
     }
 
     function renderCard() {
       const card = session[index];
       if (!card) return;
-      elCard.classList.remove("flipped");
       const isSchema = (card.kind || "text") === "schema";
       fillSide(elFront, card.front, isSchema ? card.frontImg : null, false);
       fillSide(elBack, card.back, isSchema ? card.backImg : null, true);
-      elMeta.textContent = card.priority + " · ch." + card.chapter + (isSchema ? " · schéma" : "") + " · Touche";
+      elMeta.dataset.base = card.priority + " ? ch." + card.chapter + (isSchema ? " ? sch?ma" : "") + " ? Touche pour retourner";
       elProgress.textContent = index + 1 + " / " + session.length;
-      document.getElementById("btn-prev").disabled = index === 0;
-      document.getElementById("btn-next").disabled = index >= session.length - 1;
+      setFlipped(false);
       updateGradeHints();
     }
 
-    function flip() { elCard.classList.toggle("flipped"); }
+    function flip() { setFlipped(!elCard.classList.contains("flipped")); }
 
     function finishSession() {
       const chs = selectedChapters();
       const left = reviewIds(chs).size;
       const dueLeft = dueIds(chs).size;
-      document.getElementById("end-stats").textContent =
-        "À revoir : " + stats.again + " · Bien : " + stats.good + " · Facile : " + stats.easy +
-        " · En file : " + left + " · Dues : " + dueLeft + ".";
+      const parts = [];
+      if (stats.again) parts.push("bloqu? " + stats.again);
+      if (stats.good) parts.push("su " + stats.good);
+      if (stats.easy) parts.push("trop facile " + stats.easy);
+      let msg = parts.length ? "Tu as " + parts.join(" ? ") + "." : "Session vide.";
+      if (dueLeft) msg += " Encore " + dueLeft + " ? faire.";
+      else if (left) msg += " " + left + " rat?es ? revoir.";
+      else msg += " Rien d?autre pour l?instant.";
+      document.getElementById("end-stats").textContent = msg;
       document.getElementById("btn-again-due").disabled = dueLeft === 0;
       document.getElementById("btn-again-review").disabled = left === 0;
       show("end");
@@ -615,19 +644,13 @@
     document.getElementById("btn-start").addEventListener("click", () => startSession());
     function exitToSetup() { show("setup"); updateHint(); window.scrollTo(0, 0); }
     document.getElementById("btn-exit").addEventListener("click", exitToSetup);
-    document.getElementById("btn-flip").addEventListener("click", flip);
+    elFlip.addEventListener("click", flip);
     elCard.addEventListener("click", flip);
-    document.getElementById("btn-next").addEventListener("click", () => {
-      if (index < session.length - 1) { index += 1; renderCard(); } else finishSession();
-    });
-    document.getElementById("btn-prev").addEventListener("click", () => {
-      if (index > 0) { index -= 1; renderCard(); }
-    });
     document.getElementById("btn-again").addEventListener("click", () => gradeCurrent("again"));
     document.getElementById("btn-good").addEventListener("click", () => gradeCurrent("good"));
     document.getElementById("btn-easy").addEventListener("click", () => gradeCurrent("easy"));
     document.getElementById("btn-clear-review").addEventListener("click", () => {
-      if (!confirm("Effacer tout le SRS flash (échéances) ?")) return;
+      if (!confirm("Effacer quand chaque carte revient ? Tu repars de z?ro.")) return;
       SRS.clear();
       updateHint();
     });
@@ -656,6 +679,6 @@
     })();
     show("setup");
   </script><nav class="tabbar" aria-label="Navigation"><div class="tabbar-inner"></div></nav>
-<script src="./js/shell-tabbar.js?v=1"></script>
+<script src="./js/shell-tabbar.js?v=2"></script>
 </body>
 </html>
