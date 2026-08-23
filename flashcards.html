@@ -200,8 +200,29 @@
       min-height: var(--tap-min);
       border-radius: var(--radius-pill);
     }
-    .rate-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.35rem; }
-    .rate-row .btn { width: 100%; }
+    .rate-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.45rem;
+      margin-top: 0.45rem;
+    }
+    .rate-row .btn {
+      width: 100%;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.1rem;
+      min-height: 3.1rem;
+      line-height: 1.15;
+      padding-top: 0.45rem;
+      padding-bottom: 0.45rem;
+    }
+    .rate-row .btn small {
+      font-size: 0.68rem;
+      font-weight: 650;
+      opacity: 0.75;
+    }
     .end-box {
       background: var(--surface);
       border: 1px solid var(--line);
@@ -298,9 +319,10 @@
         <button type="button" class="btn" id="btn-flip">Retourner</button>
         <button type="button" class="btn secondary" id="btn-next">Suivant</button>
       </div>
-      <div class="rate-row">
-        <button type="button" class="btn secondary" id="btn-know">Je sais</button>
-        <button type="button" class="btn" id="btn-review">À revoir</button>
+      <div class="rate-row" role="group" aria-label="Notation">
+        <button type="button" class="btn secondary" id="btn-again">À revoir<small id="hint-again">auj.</small></button>
+        <button type="button" class="btn" id="btn-good">Bien<small id="hint-good">1 j</small></button>
+        <button type="button" class="btn secondary" id="btn-easy">Facile<small id="hint-easy">4 j</small></button>
       </div>
     </section>
 
@@ -328,25 +350,15 @@
   <script src="./data/flash/ch09.js?v=5"></script>
   <script src="./data/flash/ch10.js?v=5"></script>
   <script src="./data/flash/ch11.js?v=5"></script>
-  <script>
-    const CHAPTER_ORDER = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11"];
+  <script src="./js/flash-srs.js?v=1"></script>
+    <script>
+    const CHAPTER_ORDER = ["01","02","03","04","05","06","07","08","09","10","11"];
     const CHAPTER_META = {
-      "01": "Introduction",
-      "02": "Système nerveux",
-      "03": "Cardio-circulatoire",
-      "04": "Appareil respiratoire",
-      "05": "Organes des sens",
-      "06": "Rachis",
-      "07": "Parois du tronc",
-      "08": "Appareil digestif",
-      "09": "Génito-urinaire",
-      "10": "Membre supérieur",
-      "11": "Membre inférieur",
+      "01":"Introduction","02":"Système nerveux","03":"Cardio-circulatoire","04":"Appareil respiratoire",
+      "05":"Organes des sens","06":"Rachis","07":"Parois du tronc","08":"Appareil digestif",
+      "09":"Génito-urinaire","10":"Membre supérieur","11":"Membre inférieur"
     };
-    const LS_KEY = "pass-flash-srs-v2";
-    const LS_KEY_LEGACY = "pass-flash-review-v1";
-    const SRS_INTERVALS = [0, 1, 3, 7, 14];
-
+    const SRS = window.PASS_FLASH_SRS;
     const decks = window.PASS_FLASH || {};
     const elSetup = document.getElementById("setup");
     const elPlay = document.getElementById("play");
@@ -365,106 +377,45 @@
 
     let session = [];
     let index = 0;
-    let stats = { know: 0, review: 0 };
+    let stats = { again: 0, good: 0, easy: 0 };
 
-    function todayISO() {
-      const d = new Date();
-      return (
-        d.getFullYear() +
-        "-" +
-        String(d.getMonth() + 1).padStart(2, "0") +
-        "-" +
-        String(d.getDate()).padStart(2, "0")
-      );
-    }
-    function addDaysISO(iso, days) {
-      const d = new Date(iso + "T12:00:00");
-      d.setDate(d.getDate() + days);
-      return (
-        d.getFullYear() +
-        "-" +
-        String(d.getMonth() + 1).padStart(2, "0") +
-        "-" +
-        String(d.getDate()).padStart(2, "0")
-      );
-    }
-    function loadSrs() {
-      try {
-        const raw = localStorage.getItem(LS_KEY);
-        if (raw) return JSON.parse(raw) || {};
-      } catch (_) {}
-      try {
-        const legacy = JSON.parse(localStorage.getItem(LS_KEY_LEGACY) || "{}") || {};
-        const out = {};
-        const t = todayISO();
-        for (const [id, val] of Object.entries(legacy)) {
-          if (val === "review") out[id] = { box: 0, due: t };
-        }
-        if (Object.keys(out).length) localStorage.setItem(LS_KEY, JSON.stringify(out));
-        return out;
-      } catch (_) {
-        return {};
-      }
-    }
-    function saveSrs(map) {
-      localStorage.setItem(LS_KEY, JSON.stringify(map));
-    }
-    function dueIds(chs) {
-      const m = loadSrs();
-      const t = todayISO();
-      const known = new Set();
-      for (const [id, entry] of Object.entries(m)) {
-        if (String((entry && entry.due) || "") <= t) known.add(id);
-      }
-      // cartes jamais vues = dues (bootstrap file du jour)
-      const ids = new Set(known);
-      for (const ch of chs || []) {
-        for (const card of decks[ch] || []) {
-          if (!m[card.id]) ids.add(card.id);
-        }
-      }
+    function cardIdsFor(chs) {
+      const ids = [];
+      for (const ch of chs || []) for (const c of decks[ch] || []) ids.push(c.id);
       return ids;
     }
-    function reviewIds() {
-      const m = loadSrs();
-      return new Set(Object.keys(m).filter((id) => Number((m[id] && m[id].box) || 0) === 0));
-    }
-    function markCard(id, state) {
-      const m = loadSrs();
-      const t = todayISO();
-      const prev = m[id] || { box: 0, due: t };
-      let box = Number(prev.box) || 0;
-      if (state === "know") {
-        box = Math.min(SRS_INTERVALS.length - 1, box + 1);
-        m[id] = { box: box, due: addDaysISO(t, SRS_INTERVALS[box] || 1) };
-      } else {
-        m[id] = { box: 0, due: t };
-      }
-      saveSrs(m);
+    function dueIds(chs) { return SRS.dueIds(cardIdsFor(chs)); }
+    function reviewIds(chs) { return SRS.learningIds(cardIdsFor(chs)); }
+
+    function updateGradeHints() {
+      const card = session[index];
+      if (!card || !SRS) return;
+      const a = SRS.preview(card.id, "again");
+      const g = SRS.preview(card.id, "good");
+      const e = SRS.preview(card.id, "easy");
+      document.getElementById("hint-again").textContent = SRS.formatDays(a.interval);
+      document.getElementById("hint-good").textContent = SRS.formatDays(g.interval);
+      document.getElementById("hint-easy").textContent = SRS.formatDays(e.interval);
     }
 
     function selectedChapters() {
-      return [...elChapterList.querySelectorAll(".ch-chip[aria-pressed='true']")].map((b) =>
-        b.getAttribute("data-ch")
-      );
+      return [...elChapterList.querySelectorAll(".ch-chip[aria-pressed='true']")].map((b) => b.getAttribute("data-ch"));
     }
     function selectedPriorities() {
-      return [...elPriorityList.querySelectorAll(".prio-btn[aria-pressed='true']")].map((b) =>
-        b.getAttribute("data-prio")
-      );
+      return [...elPriorityList.querySelectorAll(".prio-btn[aria-pressed='true']")].map((b) => b.getAttribute("data-prio"));
     }
     function selectedKind() {
-      const btn = elKindList.querySelector(".kind-btn[aria-pressed='true']");
-      return (btn && btn.getAttribute("data-kind")) || "all";
+      const b = elKindList.querySelector(".kind-btn[aria-pressed='true']");
+      return (b && b.getAttribute("data-kind")) || "all";
     }
     function selectedMode() {
-      const btn = elModeList.querySelector(".mode-btn[aria-pressed='true']");
-      return (btn && btn.getAttribute("data-mode")) || "due";
+      const b = elModeList.querySelector(".mode-btn[aria-pressed='true']");
+      return (b && b.getAttribute("data-mode")) || "due";
     }
 
     function poolFrom(chs, prios, mode, kind) {
-      const allowP = new Set(prios.length ? prios : ["P1", "P2", "P3"]);
-      const rev = reviewIds();
+      const allowP = new Set(prios.length ? prios : ["P1","P2","P3"]);
+      const rev = reviewIds(chs);
       const due = mode === "due" ? dueIds(chs) : null;
       const pool = [];
       for (const ch of chs) {
@@ -497,16 +448,14 @@
       const kind = selectedKind();
       const pool = poolFrom(chs, prios, mode, kind);
       const n = pool.length;
-      const nRev = reviewIds().size;
+      const nRev = reviewIds(chs).size;
       const nDue = dueIds(chs).size;
       const c1 = pool.filter((c) => c.priority === "P1").length;
       const c2 = pool.filter((c) => c.priority === "P2").length;
       const c3 = pool.filter((c) => c.priority === "P3").length;
-      if (!chs.length) {
-        elHint.innerHTML = '<span class="pool-stat warn">Aucun chapitre</span>';
-      } else if (!prios.length) {
-        elHint.innerHTML = '<span class="pool-stat warn">Aucune priorité</span>';
-      } else {
+      if (!chs.length) elHint.innerHTML = '<span class="pool-stat warn">Aucun chapitre</span>';
+      else if (!prios.length) elHint.innerHTML = '<span class="pool-stat warn">Aucune priorité</span>';
+      else {
         elHint.innerHTML =
           '<span class="pool-stat total">' + n + " cartes</span>" +
           '<span class="pool-stat">P1 · ' + c1 + "</span>" +
@@ -516,7 +465,7 @@
           (mode === "due" ? '<span class="pool-stat">Aujourd\'hui</span>' : "") +
           (mode === "review" ? '<span class="pool-stat">À revoir</span>' : "") +
           (nDue ? '<span class="pool-stat">' + nDue + " dues</span>" : "") +
-          (nRev ? '<span class="pool-stat">' + nRev + " box0</span>" : "");
+          (nRev ? '<span class="pool-stat">' + nRev + " à revoir</span>" : "");
       }
       document.getElementById("btn-start").disabled = !chs.length || !prios.length || n === 0;
     }
@@ -538,8 +487,7 @@
 
     function buildChapters() {
       elChapterList.innerHTML = "";
-      const params = new URLSearchParams(location.search);
-      const focusCh = (params.get("ch") || "").padStart(2, "0");
+      const focusCh = (new URLSearchParams(location.search).get("ch") || "").padStart(2, "0");
       const focusOk = !!(focusCh && CHAPTER_META[focusCh]);
       for (const ch of CHAPTER_ORDER) {
         const list = decks[ch] || [];
@@ -551,15 +499,13 @@
         if (!n) {
           btn.disabled = true;
           btn.setAttribute("aria-pressed", "false");
-          btn.innerHTML =
-            '<span class="ch-id">' + ch + '</span><span class="ch-name">' + CHAPTER_META[ch] + " · bientôt</span>";
+          btn.innerHTML = '<span class="ch-id">' + ch + '</span><span class="ch-name">' + CHAPTER_META[ch] + " · bientôt</span>";
         } else {
           btn.setAttribute("aria-pressed", focusOk ? (ch === focusCh ? "true" : "false") : "true");
-          btn.innerHTML =
-            '<span class="ch-id">' + ch + '</span><span class="ch-name">' + CHAPTER_META[ch] + " · " + n + "</span>";
+          btn.innerHTML = '<span class="ch-id">' + ch + '</span><span class="ch-name">' + CHAPTER_META[ch] + " · " + n + "</span>";
           btn.addEventListener("click", () => {
-            const pressed = btn.getAttribute("aria-pressed") === "true";
-            btn.setAttribute("aria-pressed", pressed ? "false" : "true");
+            const on = btn.getAttribute("aria-pressed") !== "true";
+            btn.setAttribute("aria-pressed", on ? "true" : "false");
             updateHint();
           });
         }
@@ -605,9 +551,7 @@
         img.src = "./" + imgSrc;
         img.alt = text || (isBack ? "Schéma légendé" : "Schéma sans légende");
         el.appendChild(img);
-      } else {
-        el.textContent = text || "";
-      }
+      } else el.textContent = text || "";
     }
 
     function renderCard() {
@@ -617,35 +561,39 @@
       const isSchema = (card.kind || "text") === "schema";
       fillSide(elFront, card.front, isSchema ? card.frontImg : null, false);
       fillSide(elBack, card.back, isSchema ? card.backImg : null, true);
-      elMeta.textContent =
-        card.priority + " · ch." + card.chapter + (isSchema ? " · schéma" : "") + " · Touche";
+      elMeta.textContent = card.priority + " · ch." + card.chapter + (isSchema ? " · schéma" : "") + " · Touche";
       elProgress.textContent = index + 1 + " / " + session.length;
       document.getElementById("btn-prev").disabled = index === 0;
       document.getElementById("btn-next").disabled = index >= session.length - 1;
+      updateGradeHints();
     }
 
     function flip() { elCard.classList.toggle("flipped"); }
 
     function finishSession() {
-      const left = reviewIds().size;
-      const dueLeft = dueIds(selectedChapters()).size;
+      const chs = selectedChapters();
+      const left = reviewIds(chs).size;
+      const dueLeft = dueIds(chs).size;
       document.getElementById("end-stats").textContent =
-        "Je sais : " + stats.know + " · À revoir (session) : " + stats.review +
-        " · Box0 : " + left + " · Dues : " + dueLeft + ".";
-      const againDue = document.getElementById("btn-again-due");
-      if (againDue) againDue.disabled = dueLeft === 0;
+        "À revoir : " + stats.again + " · Bien : " + stats.good + " · Facile : " + stats.easy +
+        " · En file : " + left + " · Dues : " + dueLeft + ".";
+      document.getElementById("btn-again-due").disabled = dueLeft === 0;
       document.getElementById("btn-again-review").disabled = left === 0;
       show("end");
       updateHint();
     }
 
     function goNextOrEnd() {
-      if (index < session.length - 1) {
-        index += 1;
-        renderCard();
-      } else {
-        finishSession();
-      }
+      if (index < session.length - 1) { index += 1; renderCard(); }
+      else finishSession();
+    }
+
+    function gradeCurrent(grade) {
+      const card = session[index];
+      if (!card) return;
+      SRS.grade(card.id, grade);
+      stats[grade] += 1;
+      goNextOrEnd();
     }
 
     function startSession(modeOverride) {
@@ -655,51 +603,32 @@
       const kind = selectedKind();
       let pool = poolFrom(chs, prios, mode, kind);
       if (elShuffle && elShuffle.getAttribute("aria-pressed") === "true") pool = shuffle(pool);
-      if (mode === "due" && pool.length > 40) pool = pool.slice(0, 40);
+      if (mode === "due" && pool.length > SRS.SESSION_CAP) pool = pool.slice(0, SRS.SESSION_CAP);
       session = pool;
       index = 0;
-      stats = { know: 0, review: 0 };
-      if (!session.length) {
-        updateHint();
-        return;
-      }
+      stats = { again: 0, good: 0, easy: 0 };
+      if (!session.length) { updateHint(); return; }
       show("play");
       renderCard();
     }
 
     document.getElementById("btn-start").addEventListener("click", () => startSession());
-    function exitToSetup() {
-      show("setup");
-      updateHint();
-      window.scrollTo(0, 0);
-    }
+    function exitToSetup() { show("setup"); updateHint(); window.scrollTo(0, 0); }
     document.getElementById("btn-exit").addEventListener("click", exitToSetup);
     document.getElementById("btn-flip").addEventListener("click", flip);
     elCard.addEventListener("click", flip);
     document.getElementById("btn-next").addEventListener("click", () => {
-      if (index < session.length - 1) { index += 1; renderCard(); }
-      else finishSession();
+      if (index < session.length - 1) { index += 1; renderCard(); } else finishSession();
     });
     document.getElementById("btn-prev").addEventListener("click", () => {
       if (index > 0) { index -= 1; renderCard(); }
     });
-    document.getElementById("btn-know").addEventListener("click", () => {
-      const card = session[index];
-      if (!card) return;
-      markCard(card.id, "know");
-      stats.know += 1;
-      goNextOrEnd();
-    });
-    document.getElementById("btn-review").addEventListener("click", () => {
-      const card = session[index];
-      if (!card) return;
-      markCard(card.id, "review");
-      stats.review += 1;
-      goNextOrEnd();
-    });
+    document.getElementById("btn-again").addEventListener("click", () => gradeCurrent("again"));
+    document.getElementById("btn-good").addEventListener("click", () => gradeCurrent("good"));
+    document.getElementById("btn-easy").addEventListener("click", () => gradeCurrent("easy"));
     document.getElementById("btn-clear-review").addEventListener("click", () => {
       if (!confirm("Effacer tout le SRS flash (échéances) ?")) return;
-      saveSrs({});
+      SRS.clear();
       updateHint();
     });
     document.getElementById("btn-again-due").addEventListener("click", () => {
@@ -719,7 +648,6 @@
     buildChapters();
     (function applyModeFromUrl() {
       const mode = (new URLSearchParams(location.search).get("mode") || "").toLowerCase();
-      if (!mode || !elModeList) return;
       if (mode !== "due" && mode !== "review" && mode !== "all") return;
       elModeList.querySelectorAll(".mode-btn").forEach((b) => {
         b.setAttribute("aria-pressed", b.getAttribute("data-mode") === mode ? "true" : "false");
