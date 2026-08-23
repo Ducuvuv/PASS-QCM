@@ -43,14 +43,18 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
   font-family: var(--font);
   color: var(--ink);
   line-height: 1.45;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
   background:
     radial-gradient(90% 60% at 100% 0%, var(--bg-accent), transparent 50%),
     var(--bg);
@@ -61,7 +65,11 @@ a { color: var(--accent); }
 .wrap {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 0.85rem 1rem 2.75rem;
+  padding:
+    max(0.85rem, env(safe-area-inset-top, 0px))
+    max(1rem, env(safe-area-inset-right, 0px))
+    max(2.75rem, calc(1.5rem + env(safe-area-inset-bottom, 0px)))
+    max(1rem, env(safe-area-inset-left, 0px));
 }
 
 /* ——— Header + chips (style M) ——— */
@@ -108,7 +116,9 @@ a { color: var(--accent); }
 .nav-chips li { flex: 0 0 auto; }
 
 .nav-chips a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   font-size: 0.76rem;
   font-weight: 650;
@@ -116,9 +126,11 @@ a { color: var(--accent); }
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-pill);
-  padding: 0.36rem 0.65rem;
+  padding: 0.4rem 0.7rem;
+  min-height: var(--tap-min);
   white-space: nowrap;
   line-height: 1.2;
+  touch-action: manipulation;
   transition: border-color var(--ease), background var(--ease), color var(--ease);
 }
 
@@ -229,10 +241,13 @@ a { color: var(--accent); }
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 0.25rem 0.75rem;
+  align-items: center;
   padding: 0.85rem 0.95rem;
+  min-height: var(--tap-min);
   text-decoration: none;
   color: inherit;
   border-bottom: 1px solid var(--line);
+  touch-action: manipulation;
 }
 
 .rubric-row:last-child { border-bottom: 0; }
@@ -360,13 +375,16 @@ a { color: var(--accent); }
 .panel.list-panel > .panel-head p { margin: 0; }
 
 .chapter-link {
-  display: block;
+  display: flex;
+  align-items: center;
+  min-height: var(--tap-min);
   padding: 0.75rem 1.05rem;
   border-top: 1px solid var(--line);
   text-decoration: none;
   color: var(--deep);
   font-size: 0.92rem;
   font-weight: 600;
+  touch-action: manipulation;
 }
 
 .chapter-link:hover {
@@ -381,7 +399,9 @@ a { color: var(--accent); }
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   border: 1px solid var(--accent);
   background: var(--accent);
@@ -392,6 +412,8 @@ a { color: var(--accent); }
   font-weight: 600;
   cursor: pointer;
   min-height: var(--tap-min);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   transition: background var(--ease), border-color var(--ease), transform var(--ease), box-shadow var(--ease);
 }
 

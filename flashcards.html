@@ -2,12 +2,12 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Flashcards — PASS Sorbonne</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=m9" />
+  <link rel="stylesheet" href="./styles.css?v=m10" />
   <style>
     .fc-card {
       background: var(--surface);
@@ -41,6 +41,7 @@
     }
     .prio-btn, .kind-btn, .mode-btn {
       min-width: 3.5rem;
+      min-height: var(--tap-min);
       border: 1px solid var(--line);
       background: var(--surface);
       color: var(--ink);
@@ -49,6 +50,8 @@
       font: inherit;
       font-weight: 650;
       cursor: pointer;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
     }
     .prio-btn[aria-pressed="true"],
     .kind-btn[aria-pressed="true"],
@@ -75,6 +78,7 @@
       gap: 0.35rem;
       width: auto;
       max-width: 100%;
+      min-height: var(--tap-min);
       text-align: left;
       border: 1px solid var(--line);
       background: var(--surface);
@@ -83,7 +87,9 @@
       padding: 0.42rem 0.72rem;
       font: inherit;
       cursor: pointer;
-      transition: border-color 0.12s ease, background 0.12s ease;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+      transition: border-color var(--ease), background var(--ease);
     }
     .ch-chip .ch-id {
       font-weight: 800;
@@ -118,7 +124,8 @@
       font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 0.01em;
-      padding: 0.22rem 0.55rem;
+      padding: 0.35rem 0.65rem;
+      min-height: 2.25rem;
       border-radius: var(--radius-pill);
       line-height: 1.2;
     }
@@ -189,7 +196,8 @@
     .btn-exit {
       font-size: 0.78rem;
       font-weight: 650;
-      padding: 0.32rem 0.7rem;
+      padding: 0.4rem 0.85rem;
+      min-height: var(--tap-min);
       border-radius: var(--radius-pill);
     }
     .rate-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.35rem; }

@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>PASS — Test QCM</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,11 +42,18 @@
         var(--bg);
       color: var(--ink);
       line-height: 1.45;
+      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+      min-height: 100dvh;
     }
     main {
       max-width: 42rem;
       margin: 0 auto;
-      padding: 1.25rem 1rem 3rem;
+      padding:
+        max(1.25rem, env(safe-area-inset-top, 0px))
+        max(1rem, env(safe-area-inset-right, 0px))
+        max(3rem, calc(1.5rem + env(safe-area-inset-bottom, 0px)))
+        max(1rem, env(safe-area-inset-left, 0px));
     }
     h1 { font-size: 1.25rem; margin: 0 0 0.35rem; }
     .sub { color: var(--muted); font-size: 0.95rem; margin: 0 0 1.25rem; }
@@ -78,6 +85,7 @@
       gap: 0.35rem;
       width: auto;
       max-width: 100%;
+      min-height: var(--tap-min);
       text-align: left;
       border: 1px solid var(--line);
       background: var(--card);
@@ -86,6 +94,8 @@
       padding: 0.42rem 0.72rem;
       font: inherit;
       cursor: pointer;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
       transition: border-color var(--ease), background var(--ease), box-shadow var(--ease);
     }
     .ch-chip .ch-id {
@@ -108,7 +118,7 @@
       background: var(--pressed-bg);
       box-shadow: var(--shadow-pressed);
     }
-    .ch-chip[aria-pressed="true"] .ch-name { color: #1f4d3a; }
+    .ch-chip[aria-pressed="true"] .ch-name { color: var(--pressed-ink); }
     .ch-chip:disabled {
       opacity: 0.42;
       cursor: not-allowed;
@@ -124,9 +134,12 @@
       color: var(--ink);
       border-radius: var(--radius-pill);
       padding: 0.55rem 1rem;
+      min-height: var(--tap-min);
       font: inherit;
       font-weight: 650;
       cursor: pointer;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
     }
     .mode-btn[aria-pressed="true"] {
       border-color: var(--accent);
@@ -165,7 +178,8 @@
       font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 0.01em;
-      padding: 0.22rem 0.55rem;
+      padding: 0.35rem 0.65rem;
+      min-height: 2.25rem;
       border-radius: var(--radius-pill);
       line-height: 1.2;
     }
@@ -190,12 +204,15 @@
       display: flex;
       gap: 0.65rem;
       align-items: flex-start;
-      padding: 0.65rem 0.7rem;
+      padding: 0.75rem 0.8rem;
+      min-height: var(--tap-min);
       border: 1px solid var(--line);
       border-radius: var(--radius-md);
       margin-bottom: 0.5rem;
       cursor: pointer;
       background: var(--card);
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
     }
     .choice:has(input:checked) { border-color: var(--accent); background: var(--pressed-bg); }
     .choice.reveal-ok { border-color: #86efac; background: var(--ok-bg); }
@@ -290,6 +307,7 @@
     }
     .prio-btn {
       min-width: 3.5rem;
+      min-height: var(--tap-min);
       border: 1px solid var(--line);
       background: var(--card);
       color: var(--ink);
@@ -298,6 +316,8 @@
       font: inherit;
       font-weight: 650;
       cursor: pointer;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
     }
     .prio-btn[aria-pressed="true"] {
       border-color: var(--accent);
