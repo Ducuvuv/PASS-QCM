@@ -300,6 +300,26 @@
       font-size: 0.9rem;
       color: var(--muted);
     }
+    .next-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.85rem;
+    }
+    .next-links:empty { display: none; }
+    .next-links a {
+      display: inline-block;
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 0.45rem 0.85rem;
+      text-decoration: none;
+      font: inherit;
+      font-size: 0.88rem;
+      font-weight: 650;
+    }
+    .actions button[disabled] { opacity: 0.4; cursor: not-allowed; }
     .prio-btns {
       display: flex;
       flex-wrap: wrap;
@@ -480,11 +500,13 @@
           <div class="weak-tags" id="weak-tags"></div>
         </div>
         <p class="recap" id="recap"></p>
-        <div class="actions">
+                <div class="actions">
           <button type="button" id="btn-retry">Rejouer</button>
+          <button type="button" class="secondary" id="btn-retry-wrong" disabled>Ratés</button>
           <button type="button" class="secondary" id="btn-home">Réglages</button>
           <a class="secondary" id="btn-suivi" href="./suivi.html" style="display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:0.55rem 1rem;text-decoration:none;font:inherit;font-weight:650">Suivi</a>
         </div>
+        <div class="next-links" id="next-links" aria-label="Suite"></div>
       </div>
     </section>
   </main>
@@ -532,6 +554,7 @@
     let correctCount = 0;
     let history = []; // { id, ok, chapter, tags }
     let lastSettings = null;
+    let lastWrongItems = [];
 
     function availableChapters() {
       return Object.keys(CHAPTER_META)
@@ -665,11 +688,19 @@
     }
 
     function startSession(settings) {
-      lastSettings = settings;
-      const pool = poolFrom(settings.chapters, settings.priorities);
-      let picked =
-        settings.mode === "order" ? [...pool] : shuffle(pool);
-      const n = Math.min(settings.count, picked.length);
+      const fixed =
+        settings.fixedItems && settings.fixedItems.length
+          ? settings.fixedItems
+          : null;
+      if (!fixed) lastSettings = settings;
+      let picked;
+      if (fixed) {
+        picked = settings.mode === "order" ? [...fixed] : shuffle(fixed);
+      } else {
+        const pool = poolFrom(settings.chapters, settings.priorities);
+        picked = settings.mode === "order" ? [...pool] : shuffle(pool);
+      }
+      const n = Math.min(settings.count || picked.length, picked.length);
       sessionItems = picked.slice(0, n);
       index = 0;
       revealed = false;
@@ -793,6 +824,32 @@
         .slice(0, 6);
       const weakCh = Object.entries(chCount).sort((a, b) => b[1] - a[1]);
 
+      const byId = new Map(sessionItems.map((it) => [it.id, it]));
+      lastWrongItems = wrong.map((h) => byId.get(h.id)).filter(Boolean);
+      const btnWrong = document.getElementById("btn-retry-wrong");
+      if (btnWrong) {
+        btnWrong.disabled = lastWrongItems.length === 0;
+        btnWrong.textContent = lastWrongItems.length
+          ? "Ratés (" + lastWrongItems.length + ")"
+          : "Ratés";
+      }
+      const nextEl = document.getElementById("next-links");
+      if (nextEl) {
+        nextEl.innerHTML = "";
+        const topCh = weakCh.slice(0, 2).map(([c]) => c);
+        for (const ch of topCh) {
+          const pad = String(ch).padStart(2, "0");
+          const aFlash = document.createElement("a");
+          aFlash.href = "./flashcards.html?ch=" + pad;
+          aFlash.textContent = "Flash " + pad;
+          nextEl.appendChild(aFlash);
+          const aFiche = document.createElement("a");
+          aFiche.href = "./matiere/anatomie/ch" + pad + ".html";
+          aFiche.textContent = "Fiche " + pad;
+          nextEl.appendChild(aFiche);
+        }
+      }
+
       const advice = [];
       if (wrong.length === 0) {
         advice.push("Parfait : enchaîne sur un autre chapitre ou augmente le nombre de questions.");
@@ -877,6 +934,16 @@
     });
     document.getElementById("btn-retry").addEventListener("click", () => {
       if (lastSettings) startSession(lastSettings);
+    });
+    document.getElementById("btn-retry-wrong").addEventListener("click", () => {
+      if (!lastWrongItems.length) return;
+      startSession({
+        chapters: lastSettings ? lastSettings.chapters : [],
+        priorities: lastSettings ? lastSettings.priorities : ["P1", "P2", "P3"],
+        count: lastWrongItems.length,
+        mode: lastSettings ? lastSettings.mode : "shuffle",
+        fixedItems: lastWrongItems,
+      });
     });
     document.getElementById("btn-home").addEventListener("click", () => show("setup"));
 
