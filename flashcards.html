@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=m8" />
+  <link rel="stylesheet" href="./styles.css?v=m9" />
   <style>
     .fc-card {
       background: var(--surface);
@@ -28,7 +28,7 @@
       max-height: min(58vh, 420px);
       object-fit: contain;
       margin: 0.55rem 0 0;
-      border-radius: 8px;
+      border-radius: var(--radius-sm);
       background: #fff;
       border: 1px solid var(--line);
     }
@@ -44,7 +44,7 @@
       border: 1px solid var(--line);
       background: var(--surface);
       color: var(--ink);
-      border-radius: 999px;
+      border-radius: var(--radius-pill);
       padding: 0.55rem 1rem;
       font: inherit;
       font-weight: 650;
@@ -79,7 +79,7 @@
       border: 1px solid var(--line);
       background: var(--surface);
       color: var(--ink);
-      border-radius: 999px;
+      border-radius: var(--radius-pill);
       padding: 0.42rem 0.72rem;
       font: inherit;
       cursor: pointer;
@@ -102,10 +102,10 @@
     }
     .ch-chip[aria-pressed="true"] {
       border-color: var(--accent);
-      background: #e3efe8;
-      box-shadow: inset 0 0 0 1px var(--accent);
+      background: var(--pressed-bg);
+      box-shadow: var(--shadow-pressed);
     }
-    .ch-chip[aria-pressed="true"] .ch-name { color: #1f4d3a; }
+    .ch-chip[aria-pressed="true"] .ch-name { color: var(--pressed-ink); }
     .ch-chip:disabled { opacity: 0.42; cursor: not-allowed; }
     .toolbar {
       display: flex;
@@ -119,7 +119,7 @@
       font-weight: 600;
       letter-spacing: 0.01em;
       padding: 0.22rem 0.55rem;
-      border-radius: 999px;
+      border-radius: var(--radius-pill);
       line-height: 1.2;
     }
     .session-block {
@@ -127,7 +127,7 @@
       gap: 0.85rem;
       padding: 0.85rem 0.9rem;
       border: 1px solid var(--line);
-      border-radius: 12px;
+      border-radius: var(--radius-md);
       background: #f7f4ee;
     }
     .session-controls {
@@ -159,14 +159,14 @@
       font-size: 0.78rem;
       font-weight: 650;
       padding: 0.3rem 0.6rem;
-      border-radius: 999px;
+      border-radius: var(--radius-pill);
       border: 1px solid var(--line);
       background: #fff;
       color: var(--ink);
     }
     .pool-stat.total {
       border-color: var(--accent);
-      background: #e3efe8;
+      background: var(--pressed-bg);
     }
     .pool-stat.warn { color: var(--muted); border-style: dashed; }
     .session-block .actions { margin-top: 0; }
@@ -190,7 +190,7 @@
       font-size: 0.78rem;
       font-weight: 650;
       padding: 0.32rem 0.7rem;
-      border-radius: 999px;
+      border-radius: var(--radius-pill);
     }
     .rate-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.35rem; }
     .rate-row .btn { width: 100%; }

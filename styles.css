@@ -1,8 +1,10 @@
 /* PASS site shell — style M (Bibliothèque + chips mobile) */
 :root {
+  /* Color */
   --bg: #f3efe6;
   --bg-accent: #e5ecdf;
   --surface: #faf7f0;
+  --card: var(--surface);
   --ink: #1a2a22;
   --deep: #163528;
   --muted: #5a6a60;
@@ -10,7 +12,27 @@
   --accent: #1f5c45;
   --accent-soft: #e3efe8;
   --soon: #7a857c;
+  --ok: #166534;
+  --ok-bg: #dcfce7;
+  --bad: #991b1b;
+  --bad-bg: #fee2e2;
+
+  /* Radius scale */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
   --radius: 16px;
+  --radius-pill: 999px;
+
+  /* Elevation / pressed */
+  --shadow: 0 1px 0 rgba(22, 53, 40, 0.04);
+  --shadow-pressed: inset 0 0 0 1px var(--accent);
+  --pressed-bg: var(--accent-soft);
+  --pressed-ink: #1f4d3a;
+  --ease: 0.12s ease;
+  --tap-min: 44px;
+
+  /* Type */
   --font: "Manrope", system-ui, sans-serif;
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Literata", Georgia, serif;
@@ -70,7 +92,7 @@ a { color: var(--accent); }
   font-weight: 700;
   color: var(--accent);
   background: var(--accent-soft);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 0.28rem 0.55rem;
 }
 
@@ -93,10 +115,11 @@ a { color: var(--accent); }
   color: var(--muted);
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 0.36rem 0.65rem;
   white-space: nowrap;
   line-height: 1.2;
+  transition: border-color var(--ease), background var(--ease), color var(--ease);
 }
 
 .nav-chips a:hover {
@@ -104,10 +127,15 @@ a { color: var(--accent); }
   border-color: #a8bdb2;
 }
 
+.nav-chips a:active {
+  transform: translateY(1px);
+}
+
 .nav-chips a[aria-current="page"] {
   color: #fff;
   background: var(--accent);
   border-color: var(--accent);
+  box-shadow: var(--shadow);
 }
 
 /* Legacy topnav aliases (si une page n’est pas encore migrée) */
@@ -137,9 +165,10 @@ a { color: var(--accent); }
   color: var(--muted);
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 0.4rem 0.7rem;
   white-space: nowrap;
+  transition: border-color var(--ease), background var(--ease), color var(--ease);
 }
 
 .nav-links a:hover,
@@ -212,6 +241,10 @@ a { color: var(--accent); }
   background: #f0f5f1;
 }
 
+.rubric-row:active {
+  background: var(--pressed-bg);
+}
+
 .rubric-row h2,
 .rubric-row h3 {
   margin: 0;
@@ -237,8 +270,8 @@ a { color: var(--accent); }
   text-transform: uppercase;
   color: var(--accent);
   background: var(--accent-soft);
+  border-radius: var(--radius-pill);
   padding: 0.2rem 0.5rem;
-  border-radius: 999px;
 }
 
 .badge.soon {
@@ -353,22 +386,35 @@ a { color: var(--accent); }
   border: 1px solid var(--accent);
   background: var(--accent);
   color: #fff;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 0.55rem 1rem;
   font: inherit;
   font-weight: 600;
   cursor: pointer;
+  min-height: var(--tap-min);
+  transition: background var(--ease), border-color var(--ease), transform var(--ease), box-shadow var(--ease);
+}
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-pressed);
 }
 
 .btn.secondary {
-  background: transparent;
+  background: var(--surface);
   color: var(--deep);
   border-color: var(--line);
+  box-shadow: var(--shadow);
 }
 
 .btn.secondary:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.btn.secondary:active {
+  background: var(--pressed-bg);
+  color: var(--pressed-ink);
 }
 
 .note {
@@ -396,7 +442,7 @@ a { color: var(--accent); }
   display: inline-block;
   width: 0.85rem;
   height: 0.85rem;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   border: 1px solid var(--line);
   flex-shrink: 0;
   vertical-align: middle;
@@ -461,7 +507,7 @@ a { color: var(--accent); }
   border: 1px solid var(--line);
   background: var(--surface);
   color: var(--ink);
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 0.4rem 0.7rem;
   font: inherit;
   font-size: 0.82rem;
@@ -498,7 +544,7 @@ a { color: var(--accent); }
 .plan-day {
   min-height: 6.5rem;
   border: 1px dashed var(--line);
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   background: var(--surface);
   padding: 0.45rem;
   cursor: pointer;
@@ -531,7 +577,7 @@ a { color: var(--accent); }
   gap: 0.35rem;
   background: var(--accent-soft);
   border: 1px solid #b7cfc3;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   padding: 0.3rem 0.4rem;
   font-size: 0.78rem;
   cursor: grab;
@@ -554,7 +600,7 @@ a { color: var(--accent); }
   background: var(--surface);
   border: 1px solid var(--line);
   border-left: 4px solid #dc2626;
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   padding: 0.9rem 1rem;
   margin-bottom: 1rem;
 }
@@ -583,7 +629,7 @@ a { color: var(--accent); }
 .legend-fold {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   padding: 0.65rem 0.9rem;
   margin-bottom: 1rem;
 }
@@ -597,7 +643,7 @@ a { color: var(--accent); }
 .ch-card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   padding: 0.85rem 0.95rem;
 }
 .ch-card-top {
@@ -645,7 +691,7 @@ a { color: var(--accent); }
   text-align: center;
   padding: 1.25rem 1rem;
   border: 1px dashed var(--line);
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   background: var(--surface);
   color: var(--muted);
   font-size: 0.9rem;
@@ -656,7 +702,7 @@ a { color: var(--accent); }
 .today-box {
   background: var(--accent-soft);
   border: 1px solid #b7cfc3;
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   padding: 0.9rem 1rem;
   margin-bottom: 1rem;
 }
@@ -685,7 +731,7 @@ a { color: var(--accent); }
 .sel-bar {
   background: var(--deep);
   color: #fff;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   padding: 0.65rem 0.85rem;
   margin-bottom: 0.75rem;
   font-size: 0.88rem;
@@ -703,7 +749,7 @@ a { color: var(--accent); }
 .plan-day-row {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--radius-lg);
   padding: 0.75rem 0.85rem;
   min-height: 4.2rem;
   cursor: pointer;
@@ -737,7 +783,7 @@ a { color: var(--accent); }
   font-weight: 600;
   background: var(--accent-soft);
   border: 1px solid #b7cfc3;
-  border-radius: 999px;
+  border-radius: var(--radius-pill);
   padding: 0.3rem 0.45rem 0.3rem 0.55rem;
   color: var(--deep);
   cursor: grab;
