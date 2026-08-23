@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=m10" />
+  <link rel="stylesheet" href="./styles.css?v=m11" />
 </head>
 <body>
   <div class="wrap">
@@ -32,37 +32,32 @@
     <h1 class="page-title">Suivi</h1>
 
     <div id="review-box" class="review-box hidden">
-      <h2>À revoir en priorité</h2>
+      <h2>À revoir</h2>
       <div class="review-list" id="review-list"></div>
     </div>
 
     <div id="empty-state" class="empty-state hidden">
-      Aucune session encore.<br />
-      Lance au moins <strong>10 QCM</strong> sur un chapitre pour voir une pastille.
+      Pas assez de data — fais ≥ 10 QCM sur un chapitre.
       <div class="actions" style="justify-content:center;margin-top:0.75rem">
-        <a class="btn" href="./qcm-player.html">Lancer des QCM</a>
+        <a class="btn" href="./qcm-player.html">QCM</a>
       </div>
     </div>
 
     <details class="legend-fold">
-      <summary>Légende pastilles</summary>
+      <summary>Légende</summary>
       <ul class="suivi-legend" style="margin-top:0.65rem">
-        <li><span class="pill pill-none" aria-hidden="true"></span> Pas assez de data (&lt; 10 Q)</li>
-        <li><span class="pill pill-red" aria-hidden="true"></span> Rouge — &lt; 50 %</li>
-        <li><span class="pill pill-blue" aria-hidden="true"></span> Bleu — 50–75 %</li>
-        <li><span class="pill pill-green" aria-hidden="true"></span> Vert — &gt; 75 %</li>
+        <li><span class="pill pill-none" aria-hidden="true"></span> &lt; 10 Q</li>
+        <li><span class="pill pill-red" aria-hidden="true"></span> &lt; 50 %</li>
+        <li><span class="pill pill-blue" aria-hidden="true"></span> 50–75 %</li>
+        <li><span class="pill pill-green" aria-hidden="true"></span> &gt; 75 %</li>
       </ul>
-      <p class="hint" style="margin-top:0.5rem">
-        <strong>Dernière</strong> — session avec ≥ 10 Q sur ce chapitre.
-        <strong>Cumul</strong> — moyenne de toutes les questions (≥ 10 Q au total).
-      </p>
     </details>
 
     <div class="ch-cards" id="ch-cards"></div>
 
     <div class="actions" style="margin-top:1.25rem">
-      <a class="btn" href="./qcm-player.html">Faire des QCM</a>
-      <button type="button" class="btn secondary" id="btn-reset">Réinitialiser Anatomie</button>
+      <a class="btn" href="./qcm-player.html">QCM</a>
+      <button type="button" class="btn secondary" id="btn-reset">Reset Anatomie</button>
     </div>
   </div>
 
@@ -142,7 +137,7 @@
           ? "Dernière activité " + when
           : n
             ? "En cours de remplissage"
-            : "Pas encore de session";
+            : "—";
 
         const article = document.createElement("article");
         article.className = "ch-card";

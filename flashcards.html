@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=m10" />
+  <link rel="stylesheet" href="./styles.css?v=m11" />
   <style>
     .fc-card {
       background: var(--surface);
@@ -252,7 +252,7 @@
           <button type="button" class="prio-btn" data-prio="P3" aria-pressed="true">P3</button>
         </div>
         <p class="prio-legend">
-          Ordre de révision · <a href="./conseils.html#priorites">détail</a>
+          <a href="./conseils.html#priorites">P1–P3</a>
         </p>
       </div>
 
@@ -288,7 +288,7 @@
             <button type="button" class="btn" id="btn-start">Commencer</button>
           </div>
           <div class="actions actions-secondary">
-            <button type="button" class="btn secondary" id="btn-clear-review">Reset « À revoir »</button>
+            <button type="button" class="btn secondary" id="btn-clear-review">Reset à revoir</button>
           </div>
         </div>
       </div>
@@ -300,7 +300,7 @@
         <button type="button" class="btn secondary btn-exit" id="btn-exit">Sortir</button>
       </div>
       <div class="fc-card" id="card" tabindex="0">
-        <div class="meta" id="card-meta">Touche pour retourner</div>
+        <div class="meta" id="card-meta">Touche</div>
         <div class="front" id="card-front"></div>
         <div class="back" id="card-back"></div>
       </div>
@@ -320,7 +320,7 @@
         <h2>Session terminée</h2>
         <p class="note" id="end-stats">—</p>
         <div class="actions">
-          <button type="button" class="btn" id="btn-again-review">Relancer les « À revoir »</button>
+          <button type="button" class="btn" id="btn-again-review">Relancer à revoir</button>
           <button type="button" class="btn secondary" id="btn-end-setup">Sortir</button>
         </div>
       </div>
@@ -564,7 +564,7 @@
       fillSide(elFront, card.front, isSchema ? card.frontImg : null, false);
       fillSide(elBack, card.back, isSchema ? card.backImg : null, true);
       elMeta.textContent =
-        card.priority + " · ch." + card.chapter + (isSchema ? " · schéma" : "") + " · touche pour retourner";
+        card.priority + " · ch." + card.chapter + (isSchema ? " · schéma" : "") + " · Touche";
       elProgress.textContent = index + 1 + " / " + session.length;
       document.getElementById("btn-prev").disabled = index === 0;
       document.getElementById("btn-next").disabled = index >= session.length - 1;

@@ -414,7 +414,7 @@
           <button type="button" class="prio-btn" data-prio="P3" aria-pressed="true">P3</button>
         </div>
         <p class="prio-legend" style="margin:0.65rem 0 0">
-          Ordre de révision · <a href="./conseils.html#priorites" style="color:inherit">détail</a>
+          <a href="./conseils.html#priorites" style="color:inherit">P1–P3</a>
         </p>
       </div>
 
@@ -430,7 +430,7 @@
               <span class="field-label">Tirage</span>
               <div class="mode-btns" id="mode-list" role="group" aria-label="Tirage">
                 <button type="button" class="mode-btn" data-mode="shuffle" aria-pressed="true">Aléatoire</button>
-                <button type="button" class="mode-btn" data-mode="order" aria-pressed="false">Ordre du lot</button>
+                <button type="button" class="mode-btn" data-mode="order" aria-pressed="false">Ordre</button>
               </div>
             </div>
           </div>
@@ -445,7 +445,7 @@
     <!-- QUIZ -->
     <section id="quiz" class="hidden">
       <header class="quiz-bar">
-        <h1>Session en cours</h1>
+        <h1>QCM</h1>
         <div class="meta" id="progress">—</div>
       </header>
       <div class="card revealed-host" id="panel">
@@ -454,9 +454,9 @@
         <div id="choices"></div>
         <div class="score-box" id="item-score"></div>
         <div class="actions">
-          <button type="button" id="btn-validate">Valider / Corrigé</button>
+          <button type="button" id="btn-validate">Valider</button>
           <button type="button" class="secondary" id="btn-next" disabled>Suivant</button>
-          <button type="button" class="secondary" id="btn-abort">Abandonner</button>
+          <button type="button" class="secondary" id="btn-abort">Sortir</button>
         </div>
         <div class="tags" id="tags"></div>
       </div>
@@ -481,9 +481,9 @@
         </div>
         <p class="recap" id="recap"></p>
         <div class="actions">
-          <button type="button" id="btn-retry">Rejouer (mêmes réglages)</button>
-          <button type="button" class="secondary" id="btn-home">Changer de chapitres</button>
-          <a class="secondary" id="btn-suivi" href="./suivi.html" style="display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:0.55rem 1rem;text-decoration:none;font:inherit;font-weight:650">Voir le suivi</a>
+          <button type="button" id="btn-retry">Rejouer</button>
+          <button type="button" class="secondary" id="btn-home">Réglages</button>
+          <a class="secondary" id="btn-suivi" href="./suivi.html" style="display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:0.55rem 1rem;text-decoration:none;font:inherit;font-weight:650">Suivi</a>
         </div>
       </div>
     </section>
@@ -764,25 +764,21 @@
       const pct = total ? Math.round((score / total) * 100) : 0;
 
       document.getElementById("final-score").textContent = `${score} / ${total}`;
-      document.getElementById("final-label").textContent = `${pct} % de réussite`;
+      document.getElementById("final-label").textContent = `${pct} %`;
       document.getElementById("results-sub").textContent =
         lastSettings && lastSettings.chapters.length
-          ? `Chapitres : ${lastSettings.chapters.map((c) => c + " " + CHAPTER_META[c]).join(" · ")} · Priorité : ${(lastSettings.priorities || []).join(", ") || "—"}`
+          ? `${lastSettings.chapters.map((c) => c).join(" · ")} · ${(lastSettings.priorities || []).join(", ") || "—"}`
           : "";
 
       const feedback = document.getElementById("feedback-text");
       if (pct >= 85) {
-        feedback.textContent =
-          "Très bon niveau sur ce lot. Tu maîtrises bien les notions tirées — garde un rythme de révision courte pour figer.";
+        feedback.textContent = "Très bon lot — garde des révisions courtes.";
       } else if (pct >= 65) {
-        feedback.textContent =
-          "Base solide, avec encore des trous. Relis les explications des items ratés avant de relancer une session ciblée.";
+        feedback.textContent = "Solide. Relis les ratés, puis relance ciblé.";
       } else if (pct >= 40) {
-        feedback.textContent =
-          "Session fragile : plusieurs notions ne sont pas encore stabilisées. Mieux vaut revoir le cours sur les thèmes faibles, puis refaire 10–15 QCM.";
+        feedback.textContent = "Fragile. Cours sur les thèmes faibles, puis 10–15 Q.";
       } else {
-        feedback.textContent =
-          "Beaucoup d’erreurs : priorise le polycopié / les points-clés du (des) chapitre(s), puis recommence avec moins de questions.";
+        feedback.textContent = "Priorise le cours, puis recommence avec moins de Q.";
       }
 
       const wrong = history.filter((h) => !h.ok);

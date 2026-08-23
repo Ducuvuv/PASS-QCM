@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=m10" />
+  <link rel="stylesheet" href="./styles.css?v=m11" />
 </head>
 <body>
   <div class="wrap">
@@ -36,12 +36,12 @@
       <div id="today-list"></div>
     </div>
 
-    <div class="sel-bar" id="sel-bar" hidden>Chapitre sélectionné : —</div>
+    <div class="sel-bar" id="sel-bar" hidden>Chapitre : —</div>
 
-    <h2 class="plan-step">1. Choisis un chapitre</h2>
+    <h2 class="plan-step">1. Chapitre</h2>
     <div class="plan-bank" id="chapter-bank"></div>
 
-    <h2 class="plan-step">2. Place sur un jour</h2>
+    <h2 class="plan-step">2. Jour</h2>
     <div class="plan-week-nav">
       <button type="button" class="btn secondary tiny" id="btn-prev">← Semaine</button>
       <strong id="week-label">—</strong>
@@ -50,8 +50,7 @@
     <div class="plan-day-stack" id="week-grid"></div>
 
     <details class="legend-fold" style="margin-top:1.25rem">
-      <summary>Dernières activités</summary>
-      <p class="hint">QCM · fiche ouverte · dernier jour placé</p>
+      <summary>Activité</summary>
       <div class="table-wrap">
         <table class="suivi-table" id="activity-table">
           <thead>
@@ -179,7 +178,7 @@
       const items = P.placementsOn(t);
       if (!items.length) {
         list.innerHTML =
-          '<p class="hint" style="margin:0">Rien de planifié aujourd’hui — place un chapitre ci-dessous.</p>';
+          '<p class="hint" style="margin:0">Rien aujourd’hui.</p>';
         return;
       }
       items.forEach((p) => {
@@ -296,7 +295,7 @@
           if (!selectedChapter) {
             const bar = document.getElementById("sel-bar");
             bar.hidden = false;
-            bar.textContent = "Choisis d’abord un chapitre en haut";
+            bar.textContent = "Chapitre d’abord";
             return;
           }
           P.placeChapter(selectedChapter, dateStr);
