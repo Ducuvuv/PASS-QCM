@@ -164,6 +164,9 @@
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "")
         .replace(/['’`]/g, "")
+        .replace(/œ/g, "oe")
+        .replace(/æ/g, "ae")
+        .replace(/[\u2010-\u2015\-_\/]+/g, " ")
         .replace(/\s+/g, " ");
     }
 
