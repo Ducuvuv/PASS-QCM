@@ -257,12 +257,20 @@ a { color: var(--accent); }
 }
 
 .continue-card .continue-title {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.35rem;
   font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--deep);
 }
+
+.continue-card .continue-meta {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.continue-card .continue-meta:empty { display: none; }
 
 .continue-card .continue-actions {
   display: flex;
