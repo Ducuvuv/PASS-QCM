@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=da4" />
+  <link rel="stylesheet" href="./styles.css?v=da5" />
 </head>
 <body class="has-tabbar" data-tab="home">
   <div class="wrap">
@@ -18,12 +18,14 @@
       </div>
     </header>
 
+    <h1 class="page-title">Accueil</h1>
+
     <section class="continue-card" id="today-card" hidden>
       <p class="continue-kicker">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 1.5"/></svg>
-        Aujourd'hui
+        Aujourd&rsquo;hui
       </p>
-      <h2 class="continue-title" id="today-title">?</h2>
+      <h2 class="continue-title" id="today-title">&mdash;</h2>
       <p class="continue-meta" id="today-meta"></p>
       <div class="continue-actions">
         <a class="btn" id="today-qcm" href="./qcm-player.html">QCM</a>
@@ -32,9 +34,9 @@
       </div>
     </section>
 
-    <div class="stat-grid" id="home-stats" aria-label="Resume" hidden>
-      <div class="stat-cell"><b id="home-pct">?</b><span>Reussis</span></div>
-      <div class="stat-cell"><b id="home-review">0</b><span>A revoir</span></div>
+    <div class="stat-grid" id="home-stats" aria-label="R&eacute;sum&eacute;" hidden>
+      <div class="stat-cell"><b id="home-pct">&mdash;</b><span>R&eacute;ussis</span></div>
+      <div class="stat-cell"><b id="home-review">0</b><span>&Agrave; revoir</span></div>
       <div class="stat-cell"><b id="home-days">0</b><span>Jours</span></div>
     </div>
 
@@ -42,24 +44,24 @@
     <section class="rubric-panel" aria-label="Continuer">
       <a class="rubric-row" href="./entrainement.html">
         <span class="row-badge">Q</span>
-        <span class="row-body"><h2>Entrainement</h2><p id="home-qcm-sub">QCM cibles</p></span>
-        <span class="row-chev">?</span>
+        <span class="row-body"><h2>Entra&icirc;nement</h2><p id="home-qcm-sub">QCM cibl&eacute;s</p></span>
+        <span class="row-chev">&rsaquo;</span>
       </a>
       <a class="rubric-row" id="home-flash-row" href="./flashcards.html?mode=due">
         <span class="row-badge">F</span>
         <span class="row-body"><h2>Flashcards</h2><p id="home-flash-sub">Rien en retard</p></span>
-        <span class="row-chev">?</span>
+        <span class="row-chev">&rsaquo;</span>
       </a>
       <a class="rubric-row" id="home-weak-row" href="./suivi.html#rework-panel">
         <span class="row-badge">!</span>
         <span class="row-body"><h2>Points faibles</h2><p id="home-weak-sub">Voir le suivi</p></span>
-        <span class="row-chev">?</span>
+        <span class="row-chev">&rsaquo;</span>
       </a>
     </section>
   </div>
 
   <nav class="tabbar" aria-label="Navigation"><div class="tabbar-inner"></div></nav>
-  <script src="./js/shell-tabbar.js?v=2"></script>
+  <script src="./js/shell-tabbar.js?v=3"></script>
   <script src="./js/suivi-store.js?v=5"></script>
   <script src="./js/today-target.js?v=1"></script>
   <script src="./js/flash-srs.js?v=3"></script>
@@ -76,9 +78,9 @@
       var target = T.getTodayTarget(true);
       if (target && target.ch) {
         var links = T.hrefsFor(target.ch);
-        title.textContent = target.ch + " ? " + (S.CHAPTERS[target.ch] || "");
+        title.textContent = target.ch + " \u2014 " + (S.CHAPTERS[target.ch] || "");
         if (target.reason === "review") {
-          meta.textContent = target.level === "red" ? "Priorite faible" : "A consolider";
+          meta.textContent = target.level === "red" ? "Priorit\u00e9" : "\u00c0 consolider";
         } else if (target.reason === "start") {
           meta.textContent = "Premier chapitre";
         } else {
@@ -139,7 +141,7 @@
       var pct = n ? Math.round((ok / n) * 100) : null;
       var stats = document.getElementById("home-stats");
       if (n > 0 || due > 0 || streak > 0) {
-        document.getElementById("home-pct").textContent = pct == null ? "?" : pct + "%";
+        document.getElementById("home-pct").textContent = pct == null ? "\u2014" : pct + "%";
         document.getElementById("home-review").textContent = String(due);
         document.getElementById("home-days").textContent = String(streak);
         stats.hidden = false;
@@ -147,17 +149,17 @@
 
       var qcmSub = document.getElementById("home-qcm-sub");
       if (qcmSub && target && target.ch) {
-        qcmSub.textContent = (target.reason === "review" ? "Priorite" : "Reprise") + " · ch. " + target.ch;
+        qcmSub.textContent = (target.reason === "review" ? "Priorit\u00e9" : "Reprise") + " \u00b7 ch. " + target.ch;
       }
       var flashSub = document.getElementById("home-flash-sub");
-      if (flashSub) flashSub.textContent = due ? due + " a revoir aujourd'hui" : "Rien en retard";
+      if (flashSub) flashSub.textContent = due ? due + " \u00e0 revoir aujourd\u2019hui" : "Rien en retard";
       var flashRow = document.getElementById("home-flash-row");
       if (flashRow && due) flashRow.querySelector(".row-badge").classList.add("warn");
       var weakSub = document.getElementById("home-weak-sub");
       var weakRow = document.getElementById("home-weak-row");
       if (weakSub) {
         if (weak.length) {
-          weakSub.textContent = weak.slice(0, 2).map(function (w) { return "Ch. " + w.ch; }).join(" · ");
+          weakSub.textContent = weak.slice(0, 2).map(function (w) { return "Ch. " + w.ch; }).join(" \u00b7 ");
           if (weakRow) weakRow.querySelector(".row-badge").classList.add("warn");
         } else {
           weakSub.textContent = "Rien de critique";

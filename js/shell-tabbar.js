@@ -10,7 +10,7 @@
     {
       id: "matiere",
       href: "./matiere.html",
-      label: "Matière",
+      label: "Mati\u00e8re",
       icon: '<path d="M5 4h6.5a1 1 0 0 1 1 1v14L8.5 17 4 19V5a1 1 0 0 1 1-1z"/><path d="M12.5 4H19a1 1 0 0 1 1 1v14l-4.5-2-3 1.2"/>',
     },
     {

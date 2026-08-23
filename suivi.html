@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Suivi — PASS Sorbonne</title>
+  <title>Suivi &mdash; PASS Sorbonne</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=da4" />
+  <link rel="stylesheet" href="./styles.css?v=da5" />
 </head>
 <body class="has-tabbar" data-tab="suivi">
   <div class="wrap">
@@ -21,7 +21,7 @@
 
     <section class="continue-card" id="today-session" hidden>
       <p class="continue-kicker">Session du jour</p>
-      <h2 class="continue-title" id="today-title">—</h2>
+      <h2 class="continue-title" id="today-title">&mdash;</h2>
       <p class="continue-meta" id="today-meta"></p>
       <div class="continue-actions">
         <a class="btn" id="today-qcm" href="./qcm-player.html">QCM</a>
@@ -30,31 +30,31 @@
       </div>
     </section>
 
-    <div class="stat-grid" aria-label="Résumé">
+    <div class="stat-grid" aria-label="R&eacute;sum&eacute;">
       <div class="stat-cell"><b id="stat-qcm">0</b><span>QCM</span></div>
-      <div class="stat-cell"><b id="stat-pct">—</b><span>Réussis</span></div>
+      <div class="stat-cell"><b id="stat-pct">&mdash;</b><span>R&eacute;ussis</span></div>
       <div class="stat-cell"><b id="stat-days">0</b><span>Jours</span></div>
     </div>
 
     <p class="eyebrow">Continuer</p>
     <section class="rubric-panel" id="continue-panel" aria-label="Continuer"></section>
 
-    <p class="eyebrow" id="rework-label" hidden>A retravailler</p>
-    <section class="rubric-panel" id="rework-panel" aria-label="A retravailler" hidden></section>
+    <p class="eyebrow" id="rework-label" hidden>&Agrave; retravailler</p>
+    <section class="rubric-panel" id="rework-panel" aria-label="&Agrave; retravailler" hidden></section>
 
     <div id="empty-state" class="empty-state hidden">
-      Pas assez de data — fais ≥ 10 QCM sur un chapitre.
+      Pas assez de data &mdash; fais &ge; 10 QCM sur un chapitre.
       <div class="actions" style="justify-content:center;margin-top:0.75rem">
         <a class="btn" href="./qcm-player.html">QCM</a>
       </div>
     </div>
 
     <details class="legend-fold">
-      <summary>Légende pastilles</summary>
+      <summary>L&eacute;gende pastilles</summary>
       <ul class="suivi-legend" style="margin-top:0.65rem">
         <li><span class="pill pill-none" aria-hidden="true"></span> &lt; 10 Q</li>
         <li><span class="pill pill-red" aria-hidden="true"></span> &lt; 50 %</li>
-        <li><span class="pill pill-blue" aria-hidden="true"></span> 50–75 %</li>
+        <li><span class="pill pill-blue" aria-hidden="true"></span> 50&ndash;75 %</li>
         <li><span class="pill pill-green" aria-hidden="true"></span> &gt; 75 %</li>
       </ul>
     </details>
@@ -69,7 +69,7 @@
   </div>
 
   <nav class="tabbar" aria-label="Navigation"><div class="tabbar-inner"></div></nav>
-  <script src="./js/shell-tabbar.js?v=2"></script>
+  <script src="./js/shell-tabbar.js?v=3"></script>
   <script src="./js/suivi-store.js?v=5"></script>
   <script src="./js/today-target.js?v=1"></script>
   <script src="./js/flash-srs.js?v=3"></script>
@@ -83,7 +83,7 @@
     var SHORT = {
       "01": "Introduction", "02": "Nerveux", "03": "Cardio", "04": "Respiratoire",
       "05": "Sens", "06": "Rachis", "07": "Tronc", "08": "Digestif",
-      "09": "Génito-urinaire", "10": "Membre sup.", "11": "Membre inf."
+      "09": "G\u00e9nito-urinaire", "10": "Membre sup.", "11": "Membre inf."
     };
 
     var elToday = document.getElementById("today-session");
@@ -105,7 +105,7 @@
     function relativeTime(iso) {
       if (!iso) return null;
       var days = Math.floor((Date.now() - new Date(iso).getTime()) / 86400000);
-      if (days <= 0) return "aujourd’hui";
+      if (days <= 0) return "aujourd\u2019hui";
       if (days === 1) return "hier";
       if (days < 7) return "il y a " + days + " j";
       if (days < 30) return "il y a " + Math.floor(days / 7) + " sem.";
@@ -156,7 +156,7 @@
     function fmtScore(score20, pct, n, ready) {
       if (ready) return score20 + "/20 (" + pct + " %)";
       if (n) return n + "/" + S.MIN_Q + " Q";
-      return "—";
+      return "\u2014";
     }
 
     function getFlash() {
@@ -168,7 +168,7 @@
       return '<a class="rubric-row" href="' + opts.href + '">' +
         '<span class="row-badge' + (opts.warn ? " warn" : "") + '">' + opts.badge + "</span>" +
         '<span class="row-body"><h2>' + opts.title + "</h2><p>" + opts.sub + "</p></span>" +
-        '<span class="row-chev">›</span></a>';
+        '<span class="row-chev">&rsaquo;</span></a>';
     }
 
     function actionsHtml(ch) {
@@ -183,9 +183,9 @@
       var target = T.getTodayTarget();
       if (!target || !target.ch) { elToday.hidden = true; return; }
       var links = T.hrefsFor(target.ch);
-      document.getElementById("today-title").textContent = target.ch + " — " + (S.CHAPTERS[target.ch] || "");
+      document.getElementById("today-title").textContent = target.ch + " \u2014 " + (S.CHAPTERS[target.ch] || "");
       var meta = document.getElementById("today-meta");
-      if (target.reason === "review") meta.textContent = target.level === "red" ? "Priorité faible" : "À consolider";
+      if (target.reason === "review") meta.textContent = target.level === "red" ? "Priorit\u00e9" : "\u00c0 consolider";
       else if (target.reason === "start") meta.textContent = "Premier chapitre";
       else meta.textContent = "Reprise";
       document.getElementById("today-qcm").href = links.qcm;
@@ -203,12 +203,12 @@
         var w = worstLevel(data[S.CHAPTER_ORDER[i]] || {});
         if (w === "red" || w === "blue") weakN += 1;
       }
-      var qcmSub = "QCM ciblés";
-      if (target && target.ch) qcmSub = (target.reason === "review" ? "Priorité" : "Reprise") + " · ch. " + target.ch;
+      var qcmSub = "QCM cibl\u00e9s";
+      if (target && target.ch) qcmSub = (target.reason === "review" ? "Priorit\u00e9" : "Reprise") + " \u00b7 ch. " + target.ch;
 
       elContinue.innerHTML =
-        rowHtml({ href: links ? links.qcm : "./entrainement.html", badge: "Q", title: "Entraînement", sub: qcmSub, warn: false }) +
-        rowHtml({ href: "./flashcards.html?mode=due", badge: "F", title: "Flashcards", sub: due ? due + " à revoir aujourd’hui" : "Rien en retard", warn: due > 0 }) +
+        rowHtml({ href: links ? links.qcm : "./entrainement.html", badge: "Q", title: "Entra\u00eenement", sub: qcmSub, warn: false }) +
+        rowHtml({ href: "./flashcards.html?mode=due", badge: "F", title: "Flashcards", sub: due ? due + " \u00e0 revoir aujourd\u2019hui" : "Rien en retard", warn: due > 0 }) +
         rowHtml({ href: "#rework-panel", badge: "!", title: "Points faibles", sub: weakN ? weakN + " chapitre" + (weakN > 1 ? "s" : "") : "Rien de critique", warn: weakN > 0 });
     }
 
@@ -226,9 +226,9 @@
         st = (flash.byChapter && flash.byChapter[ch]) || {};
         flashN = st.learning || st.due || 0;
         sub = ((row.lastN || 0) >= S.MIN_Q && row.lastPct != null)
-          ? ("Dernière session " + row.lastPct + " %")
-          : (row.pct != null ? ("Cumul " + row.pct + " %") : "À consolider");
-        if (flashN) sub += " · " + flashN + " flash";
+          ? ("Derni\u00e8re session " + row.lastPct + " %")
+          : (row.pct != null ? ("Cumul " + row.pct + " %") : "\u00c0 consolider");
+        if (flashN) sub += " \u00b7 " + flashN + " flash";
         items.push({ rank: rankLevel(level), ch: ch, href: links.qcm, badge: ch, title: shortTitle(ch), sub: sub, warn: level === "red" });
         seen[ch] = true;
       }
@@ -244,7 +244,7 @@
           rank: 2, ch: ch,
           href: String(links.flash || "").replace("mode=due", "mode=review"),
           badge: ch, title: shortTitle(ch),
-          sub: n + " carte" + (n > 1 ? "s" : "") + " à revoir",
+          sub: n + " carte" + (n > 1 ? "s" : "") + " \u00e0 revoir",
           warn: true
         });
       }
@@ -286,21 +286,21 @@
         var when = relativeTime(row.lastQcmAt || row.updatedAt);
         var flashCh = (flash.byChapter && flash.byChapter[ch]) || {};
         var flashBit = "";
-        if (flashCh.due) flashBit = " · " + flashCh.due + " flash à faire";
-        else if (flashCh.learning) flashBit = " · " + flashCh.learning + " flash ratées";
+        if (flashCh.due) flashBit = " \u00b7 " + flashCh.due + " flash \u00e0 faire";
+        else if (flashCh.learning) flashBit = " \u00b7 " + flashCh.learning + " flash rat\u00e9es";
 
         var meta = when
-          ? ("Dernière activité " + when + flashBit)
-          : (n ? ("En cours de remplissage" + flashBit) : (flashBit ? flashBit.replace(/^ · /, "") : "—"));
+          ? ("Derni\u00e8re activit\u00e9 " + when + flashBit)
+          : (n ? ("En cours de remplissage" + flashBit) : (flashBit ? flashBit.replace(/^ \u00b7 /, "") : "\u2014"));
 
         var article = document.createElement("article");
         article.className = "ch-card";
         article.innerHTML =
           '<div class="ch-card-top"><div>' +
-          "<h3>" + ch + " — " + title + "</h3>" +
+          "<h3>" + ch + " \u2014 " + title + "</h3>" +
           '<p class="meta">' + meta + "</p></div></div>" +
           '<div class="pills-row">' +
-          '<span><span class="pill pill-' + lastLevel + '"></span> Dernière ' +
+          '<span><span class="pill pill-' + lastLevel + '"></span> Derni\u00e8re ' +
           fmtScore(row.lastScore20, row.lastPct, lastN, lastReady) + "</span>" +
           '<span><span class="pill pill-' + cumulLevel + '"></span> Cumul ' +
           fmtScore(row.score20, row.pct, n, cumulReady) + "</span></div>" +
@@ -310,7 +310,7 @@
 
       var pct = totalN ? Math.round((totalOk / totalN) * 100) : null;
       document.getElementById("stat-qcm").textContent = String(totalN);
-      document.getElementById("stat-pct").textContent = pct == null ? "—" : pct + "%";
+      document.getElementById("stat-pct").textContent = pct == null ? "\u2014" : pct + "%";
       document.getElementById("stat-days").textContent = String(streakDays(data));
 
       renderContinue(data, flash);

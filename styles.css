@@ -1087,3 +1087,29 @@ body.has-tabbar .nav-chips {
   background: #ffedd5;
   color: #9a3412;
 }
+
+
+/* ——— da5 polish ——— */
+.page-title {
+  margin: 0 0 0.95rem;
+  letter-spacing: -0.035em;
+}
+.stat-grid {
+  margin-bottom: 1.1rem;
+}
+.rubric-panel {
+  margin-bottom: 1.15rem;
+  box-shadow: 0 1px 0 rgba(22, 53, 40, 0.03);
+}
+.continue-card {
+  margin-bottom: 1.15rem;
+}
+.row-chev {
+  color: var(--muted);
+  font-size: 1.15rem;
+  line-height: 1;
+  opacity: 0.85;
+}
+.tabbar a[aria-current="page"] {
+  font-weight: 800;
+}
