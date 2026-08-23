@@ -272,8 +272,9 @@
             <div class="field">
               <span class="field-label">Pool</span>
               <div class="mode-btns" id="mode-list" role="group" aria-label="Mode">
-                <button type="button" class="mode-btn" data-mode="all" aria-pressed="true">Tout</button>
+                <button type="button" class="mode-btn" data-mode="due" aria-pressed="true">Aujourd'hui</button>
                 <button type="button" class="mode-btn" data-mode="review" aria-pressed="false">À revoir</button>
+                <button type="button" class="mode-btn" data-mode="all" aria-pressed="false">Tout</button>
               </div>
             </div>
             <div class="field">
@@ -288,7 +289,7 @@
             <button type="button" class="btn" id="btn-start">Commencer</button>
           </div>
           <div class="actions actions-secondary">
-            <button type="button" class="btn secondary" id="btn-clear-review">Reset à revoir</button>
+            <button type="button" class="btn secondary" id="btn-clear-review">Reset SRS</button>
           </div>
         </div>
       </div>
@@ -320,7 +321,8 @@
         <h2>Session terminée</h2>
         <p class="note" id="end-stats">—</p>
         <div class="actions">
-          <button type="button" class="btn" id="btn-again-review">Relancer à revoir</button>
+          <button type="button" class="btn" id="btn-again-due">Relancer aujourd'hui</button>
+          <button type="button" class="btn secondary" id="btn-again-review">Relancer à revoir</button>
           <button type="button" class="btn secondary" id="btn-end-setup">Sortir</button>
         </div>
       </div>
@@ -353,7 +355,9 @@
       "10": "Membre supérieur",
       "11": "Membre inférieur",
     };
-    const LS_KEY = "pass-flash-review-v1";
+    const LS_KEY = "pass-flash-srs-v2";
+    const LS_KEY_LEGACY = "pass-flash-review-v1";
+    const SRS_INTERVALS = [0, 1, 3, 7, 14];
 
     const decks = window.PASS_FLASH || {};
     const elSetup = document.getElementById("setup");
@@ -375,22 +379,80 @@
     let index = 0;
     let stats = { know: 0, review: 0 };
 
-    function loadReview() {
-      try { return JSON.parse(localStorage.getItem(LS_KEY) || "{}") || {}; }
-      catch { return {}; }
+    function todayISO() {
+      const d = new Date();
+      return (
+        d.getFullYear() +
+        "-" +
+        String(d.getMonth() + 1).padStart(2, "0") +
+        "-" +
+        String(d.getDate()).padStart(2, "0")
+      );
     }
-    function saveReview(map) {
+    function addDaysISO(iso, days) {
+      const d = new Date(iso + "T12:00:00");
+      d.setDate(d.getDate() + days);
+      return (
+        d.getFullYear() +
+        "-" +
+        String(d.getMonth() + 1).padStart(2, "0") +
+        "-" +
+        String(d.getDate()).padStart(2, "0")
+      );
+    }
+    function loadSrs() {
+      try {
+        const raw = localStorage.getItem(LS_KEY);
+        if (raw) return JSON.parse(raw) || {};
+      } catch (_) {}
+      try {
+        const legacy = JSON.parse(localStorage.getItem(LS_KEY_LEGACY) || "{}") || {};
+        const out = {};
+        const t = todayISO();
+        for (const [id, val] of Object.entries(legacy)) {
+          if (val === "review") out[id] = { box: 0, due: t };
+        }
+        if (Object.keys(out).length) localStorage.setItem(LS_KEY, JSON.stringify(out));
+        return out;
+      } catch (_) {
+        return {};
+      }
+    }
+    function saveSrs(map) {
       localStorage.setItem(LS_KEY, JSON.stringify(map));
     }
+    function dueIds(chs) {
+      const m = loadSrs();
+      const t = todayISO();
+      const known = new Set();
+      for (const [id, entry] of Object.entries(m)) {
+        if (String((entry && entry.due) || "") <= t) known.add(id);
+      }
+      // cartes jamais vues = dues (bootstrap file du jour)
+      const ids = new Set(known);
+      for (const ch of chs || []) {
+        for (const card of decks[ch] || []) {
+          if (!m[card.id]) ids.add(card.id);
+        }
+      }
+      return ids;
+    }
     function reviewIds() {
-      const m = loadReview();
-      return new Set(Object.keys(m).filter((id) => m[id] === "review"));
+      const m = loadSrs();
+      return new Set(Object.keys(m).filter((id) => Number((m[id] && m[id].box) || 0) === 0));
     }
     function markCard(id, state) {
-      const m = loadReview();
-      if (state === "know") delete m[id];
-      else m[id] = "review";
-      saveReview(m);
+      const m = loadSrs();
+      const t = todayISO();
+      const prev = m[id] || { box: 0, due: t };
+      let box = Number(prev.box) || 0;
+      if (state === "know") {
+        box = Math.min(SRS_INTERVALS.length - 1, box + 1);
+        m[id] = { box: box, due: addDaysISO(t, SRS_INTERVALS[box] || 1) };
+      } else {
+        m[id] = { box: 0, due: t };
+      }
+      saveSrs(m);
     }
 
     function selectedChapters() {
@@ -409,13 +471,13 @@
     }
     function selectedMode() {
       const btn = elModeList.querySelector(".mode-btn[aria-pressed='true']");
-      return (btn && btn.getAttribute("data-mode")) || "all";
+      return (btn && btn.getAttribute("data-mode")) || "due";
     }
 
     function poolFrom(chs, prios, mode, kind) {
       const allowP = new Set(prios.length ? prios : ["P1", "P2", "P3"]);
-      const needReview = mode === "review";
       const rev = reviewIds();
+      const due = mode === "due" ? dueIds(chs) : null;
       const pool = [];
       for (const ch of chs) {
         for (const card of decks[ch] || []) {
@@ -423,7 +485,8 @@
           const k = card.kind || "text";
           if (kind === "text" && k !== "text") continue;
           if (kind === "schema" && k !== "schema") continue;
-          if (needReview && !rev.has(card.id)) continue;
+          if (mode === "review" && !rev.has(card.id)) continue;
+          if (mode === "due" && due && !due.has(card.id)) continue;
           pool.push(card);
         }
       }
@@ -447,6 +510,7 @@
       const pool = poolFrom(chs, prios, mode, kind);
       const n = pool.length;
       const nRev = reviewIds().size;
+      const nDue = dueIds(chs).size;
       const c1 = pool.filter((c) => c.priority === "P1").length;
       const c2 = pool.filter((c) => c.priority === "P2").length;
       const c3 = pool.filter((c) => c.priority === "P3").length;
@@ -461,8 +525,10 @@
           '<span class="pool-stat">P2 · ' + c2 + "</span>" +
           '<span class="pool-stat">P3 · ' + c3 + "</span>" +
           (kind !== "all" ? '<span class="pool-stat">' + (kind === "schema" ? "Schémas" : "Texte") + "</span>" : "") +
+          (mode === "due" ? '<span class="pool-stat">Aujourd\'hui</span>' : "") +
           (mode === "review" ? '<span class="pool-stat">À revoir</span>' : "") +
-          (nRev ? '<span class="pool-stat">' + nRev + " en mémoire</span>" : "");
+          (nDue ? '<span class="pool-stat">' + nDue + " dues</span>" : "") +
+          (nRev ? '<span class="pool-stat">' + nRev + " box0</span>" : "");
       }
       document.getElementById("btn-start").disabled = !chs.length || !prios.length || n === 0;
     }
@@ -574,9 +640,12 @@
 
     function finishSession() {
       const left = reviewIds().size;
+      const dueLeft = dueIds(selectedChapters()).size;
       document.getElementById("end-stats").textContent =
-        "Je sais : " + stats.know + " · À revoir (cette session) : " + stats.review +
-        " · Encore marquées « À revoir » : " + left + ".";
+        "Je sais : " + stats.know + " · À revoir (session) : " + stats.review +
+        " · Box0 : " + left + " · Dues : " + dueLeft + ".";
+      const againDue = document.getElementById("btn-again-due");
+      if (againDue) againDue.disabled = dueLeft === 0;
       document.getElementById("btn-again-review").disabled = left === 0;
       show("end");
       updateHint();
@@ -598,6 +667,7 @@
       const kind = selectedKind();
       let pool = poolFrom(chs, prios, mode, kind);
       if (elShuffle && elShuffle.getAttribute("aria-pressed") === "true") pool = shuffle(pool);
+      if (mode === "due" && pool.length > 40) pool = pool.slice(0, 40);
       session = pool;
       index = 0;
       stats = { know: 0, review: 0 };
@@ -640,9 +710,15 @@
       goNextOrEnd();
     });
     document.getElementById("btn-clear-review").addEventListener("click", () => {
-      if (!confirm("Effacer toutes les cartes « À revoir » ?")) return;
-      saveReview({});
+      if (!confirm("Effacer tout le SRS flash (échéances) ?")) return;
+      saveSrs({});
       updateHint();
+    });
+    document.getElementById("btn-again-due").addEventListener("click", () => {
+      elModeList.querySelectorAll(".mode-btn").forEach((b) => {
+        b.setAttribute("aria-pressed", b.getAttribute("data-mode") === "due" ? "true" : "false");
+      });
+      startSession("due");
     });
     document.getElementById("btn-again-review").addEventListener("click", () => {
       elModeList.querySelectorAll(".mode-btn").forEach((b) => {
@@ -653,6 +729,15 @@
     document.getElementById("btn-end-setup").addEventListener("click", exitToSetup);
 
     buildChapters();
+    (function applyModeFromUrl() {
+      const mode = (new URLSearchParams(location.search).get("mode") || "").toLowerCase();
+      if (!mode || !elModeList) return;
+      if (mode !== "due" && mode !== "review" && mode !== "all") return;
+      elModeList.querySelectorAll(".mode-btn").forEach((b) => {
+        b.setAttribute("aria-pressed", b.getAttribute("data-mode") === mode ? "true" : "false");
+      });
+      updateHint();
+    })();
     show("setup");
   </script>
 </body>
