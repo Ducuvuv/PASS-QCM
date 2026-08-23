@@ -289,11 +289,22 @@
       margin-top: 0.5rem;
     }
     .chip {
+      font: inherit;
       font-size: 0.8rem;
-      padding: 0.2rem 0.55rem;
+      font-weight: 650;
+      padding: 0.35rem 0.65rem;
+      min-height: 2.5rem;
       border-radius: var(--radius-pill);
       background: #fef3c7;
       border: 1px solid #fcd34d;
+      color: var(--ink);
+      cursor: pointer;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .chip.ch {
+      background: #e8f0ea;
+      border-color: var(--accent);
     }
     .recap {
       margin-top: 1rem;
@@ -591,6 +602,24 @@
       return null;
     }
 
+    function isPrioTag(t) {
+      const u = String(t).trim().toUpperCase();
+      return u === "P1" || u === "P2" || u === "P3";
+    }
+
+    function poolByTag(tag, chapters) {
+      const chs = chapters && chapters.length ? chapters : availableChapters();
+      const needle = String(tag).trim().toLowerCase();
+      const pool = [];
+      for (const ch of chs) {
+        for (const item of lots[ch] || []) {
+          const tags = (item.tags || []).map((t) => String(t).trim().toLowerCase());
+          if (tags.includes(needle)) pool.push(item);
+        }
+      }
+      return pool;
+    }
+
     function poolFrom(chapters, priorities) {
       const allow = new Set(priorities && priorities.length ? priorities : ["P1", "P2", "P3"]);
       const pool = [];
@@ -820,6 +849,7 @@
         for (const t of h.tags) tagCount[t] = (tagCount[t] || 0) + 1;
       }
       const topTags = Object.entries(tagCount)
+        .filter(([t]) => !isPrioTag(t))
         .sort((a, b) => b[1] - a[1])
         .slice(0, 6);
       const weakCh = Object.entries(chCount).sort((a, b) => b[1] - a[1]);
@@ -839,6 +869,10 @@
         const topCh = weakCh.slice(0, 2).map(([c]) => c);
         for (const ch of topCh) {
           const pad = String(ch).padStart(2, "0");
+          const aQcm = document.createElement("a");
+          aQcm.href = "./qcm-player.html?ch=" + pad;
+          aQcm.textContent = "QCM " + pad;
+          nextEl.appendChild(aQcm);
           const aFlash = document.createElement("a");
           aFlash.href = "./flashcards.html?ch=" + pad;
           aFlash.textContent = "Flash " + pad;
@@ -887,11 +921,40 @@
 
       const weakEl = document.getElementById("weak-tags");
       weakEl.innerHTML = "";
+      for (const [c, n] of weakCh.slice(0, 3)) {
+        const pad = String(c).padStart(2, "0");
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "chip ch";
+        btn.textContent = "ch." + pad + " ×" + n;
+        btn.title = "QCM sur ce chapitre";
+        btn.addEventListener("click", () => {
+          location.href = "./qcm-player.html?ch=" + pad;
+        });
+        weakEl.appendChild(btn);
+      }
       for (const [t, n] of topTags) {
-        const span = document.createElement("span");
-        span.className = "chip";
-        span.textContent = `#${t} ×${n}`;
-        weakEl.appendChild(span);
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "chip";
+        btn.textContent = "#" + t + " ×" + n;
+        btn.title = "Session sur ce tag";
+        btn.addEventListener("click", () => {
+          const chs = lastSettings && lastSettings.chapters.length
+            ? lastSettings.chapters
+            : availableChapters();
+          const pool = poolByTag(t, chs);
+          if (!pool.length) return;
+          const count = Math.min(15, pool.length);
+          startSession({
+            chapters: chs,
+            priorities: lastSettings ? lastSettings.priorities : ["P1", "P2", "P3"],
+            count,
+            mode: "shuffle",
+            fixedItems: pool,
+          });
+        });
+        weakEl.appendChild(btn);
       }
 
       document.getElementById("recap").textContent =
