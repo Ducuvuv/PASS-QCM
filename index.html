@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=da3" />
+  <link rel="stylesheet" href="./styles.css?v=da4" />
 </head>
 <body class="has-tabbar" data-tab="home">
   <div class="wrap">
@@ -21,9 +21,9 @@
     <section class="continue-card" id="today-card" hidden>
       <p class="continue-kicker" id="today-kicker">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 1.5"/></svg>
-        Aujourd’hui
+        Aujourd?hui
       </p>
-      <h2 class="continue-title" id="today-title">—</h2>
+      <h2 class="continue-title" id="today-title">?</h2>
       <p class="continue-meta" id="today-meta"></p>
       <div class="continue-actions">
         <a class="btn" id="today-qcm" href="./qcm-player.html">QCM</a>
@@ -32,22 +32,28 @@
       </div>
     </section>
 
+    <div class="stat-grid" id="home-stats" aria-label="Résumé" hidden>
+      <div class="stat-cell"><b id="home-pct">?</b><span>Réussis</span></div>
+      <div class="stat-cell"><b id="home-review">0</b><span>À revoir</span></div>
+      <div class="stat-cell"><b id="home-days">0</b><span>Jours</span></div>
+    </div>
+
     <p class="eyebrow">Continuer</p>
     <section class="rubric-panel" aria-label="Continuer">
       <a class="rubric-row" href="./entrainement.html">
-        <svg class="row-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 1.5"/></svg>
-        <span class="row-body"><h2>Entraînement</h2></span>
-        <span class="row-chev">›</span>
+        <span class="row-badge">Q</span>
+        <span class="row-body"><h2>Entraînement</h2><p id="home-qcm-sub">QCM ciblés</p></span>
+        <span class="row-chev">?</span>
       </a>
-      <a class="rubric-row" href="./flashcards.html">
-        <svg class="row-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="12" height="15" rx="1.5"/><path d="M8 5V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v1"/><path d="M16 9h4v11a1.5 1.5 0 0 1-1.5 1.5H16"/></svg>
-        <span class="row-body"><h2>Flashcards</h2></span>
-        <span class="row-chev">›</span>
+      <a class="rubric-row" id="home-flash-row" href="./flashcards.html?mode=due">
+        <span class="row-badge">F</span>
+        <span class="row-body"><h2>Flashcards</h2><p id="home-flash-sub">Rien en retard</p></span>
+        <span class="row-chev">?</span>
       </a>
-      <a class="rubric-row" href="./planning.html">
-        <svg class="row-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3.5v3M16 3.5v3M3.5 10h17"/></svg>
-        <span class="row-body"><h2>Planning</h2></span>
-        <span class="row-chev">›</span>
+      <a class="rubric-row" id="home-weak-row" href="./suivi.html#rework-panel">
+        <span class="row-badge">!</span>
+        <span class="row-body"><h2>Points faibles</h2><p id="home-weak-sub">Voir le suivi</p></span>
+        <span class="row-chev">?</span>
       </a>
     </section>
   </div>
@@ -56,38 +62,137 @@
   <script src="./js/shell-tabbar.js?v=2"></script>
   <script src="./js/suivi-store.js?v=5"></script>
   <script src="./js/today-target.js?v=1"></script>
+  <script src="./js/flash-srs.js?v=3"></script>
   <script>
     (function () {
       const S = window.PASS_SUIVI;
       const T = window.PASS_TODAY;
+      const SRS = window.PASS_FLASH_SRS;
       if (!S || !T) return;
 
       const card = document.getElementById("today-card");
       const title = document.getElementById("today-title");
       const meta = document.getElementById("today-meta");
-      const aQcm = document.getElementById("today-qcm");
-      const aFlash = document.getElementById("today-flash");
-      const aFiche = document.getElementById("today-fiche");
-
       const target = T.getTodayTarget(true);
-      if (!target) return;
-
-      const name = S.CHAPTERS[target.ch] || "";
-      const links = T.hrefsFor(target.ch);
-
-      title.textContent = target.ch + " — " + name;
-      if (target.reason === "review") {
-        meta.textContent = target.level === "red" ? "Priorité faible" : "À consolider";
-      } else if (target.reason === "start") {
-        meta.textContent = "Premier chapitre";
-      } else {
-        meta.textContent = "Reprise";
+      if (target && target.ch) {
+        const name = S.CHAPTERS[target.ch] || "";
+        const links = T.hrefsFor(target.ch);
+        title.textContent = target.ch + " ? " + name;
+        if (target.reason === "review") {
+          meta.textContent = target.level === "red" ? "Priorité faible" : "À consolider";
+        } else if (target.reason === "start") {
+          meta.textContent = "Premier chapitre";
+        } else {
+          meta.textContent = "Reprise";
+        }
+        document.getElementById("today-qcm").href = links.qcm;
+        document.getElementById("today-flash").href = links.flash;
+        document.getElementById("today-fiche").href = links.fiche;
+        card.hidden = false;
       }
 
-      aQcm.href = links.qcm;
-      aFlash.href = links.flash;
-      aFiche.href = links.fiche;
-      card.hidden = false;
+      const data = S.getAnatomie() || {};
+      let n = 0;
+      let ok = 0;
+      const daySet = new Set();
+      const weak = [];
+      for (const ch of S.CHAPTER_ORDER) {
+        const row = data[ch] || {};
+        n += row.n || 0;
+        ok += row.ok || 0;
+        const iso = row.lastQcmAt || row.updatedAt;
+        if (iso) {
+          const d = new Date(iso);
+          if (d.getTime()) {
+            daySet.add(
+              d.getFullYear() +
+                "-" +
+                String(d.getMonth() + 1).padStart(2, "0") +
+                "-" +
+                String(d.getDate()).padStart(2, "0")
+            );
+          }
+        }
+        const lastReady = (row.lastN || 0) >= S.MIN_Q;
+        const cumulReady = (row.n || 0) >= S.MIN_Q;
+        const last = lastReady ? row.lastLevel || "none" : "none";
+        const cumul = cumulReady ? row.level || "none" : "none";
+        let level = "none";
+        if (last === "red" || cumul === "red") level = "red";
+        else if (last === "blue" || cumul === "blue") level = "blue";
+        if (level === "red" || level === "blue") weak.push({ ch: ch, level: level });
+      }
+      weak.sort(function (a, b) {
+        return (a.level === "red" ? 0 : 1) - (b.level === "red" ? 0 : 1) || a.ch.localeCompare(b.ch);
+      });
+
+      let streak = 0;
+      if (daySet.size) {
+        const today = T.todayISO();
+        let cursor = new Date(today + "T12:00:00");
+        const y = new Date(cursor);
+        y.setDate(y.getDate() - 1);
+        const yKey =
+          y.getFullYear() +
+          "-" +
+          String(y.getMonth() + 1).padStart(2, "0") +
+          "-" +
+          String(y.getDate()).padStart(2, "0");
+        if (daySet.has(today) || daySet.has(yKey)) {
+          if (!daySet.has(today)) cursor = y;
+          for (let i = 0; i < 60; i++) {
+            const k =
+              cursor.getFullYear() +
+              "-" +
+              String(cursor.getMonth() + 1).padStart(2, "0") +
+              "-" +
+              String(cursor.getDate()).padStart(2, "0");
+            if (!daySet.has(k)) break;
+            streak += 1;
+            cursor.setDate(cursor.getDate() - 1);
+          }
+        }
+      }
+
+      const flash = SRS && typeof SRS.chapterStats === "function" ? SRS.chapterStats() : { dueTotal: 0 };
+      const due = flash.dueTotal || 0;
+      const pct = n ? Math.round((ok / n) * 100) : null;
+
+      const stats = document.getElementById("home-stats");
+      if (n > 0 || due > 0 || streak > 0) {
+        document.getElementById("home-pct").textContent = pct == null ? "?" : pct + "%";
+        document.getElementById("home-review").textContent = String(due);
+        document.getElementById("home-days").textContent = String(streak);
+        stats.hidden = false;
+      }
+
+      const qcmSub = document.getElementById("home-qcm-sub");
+      if (qcmSub && target && target.ch) {
+        qcmSub.textContent =
+          (target.reason === "review" ? "Priorité" : "Reprise") + " · ch. " + target.ch;
+      }
+      const flashSub = document.getElementById("home-flash-sub");
+      if (flashSub) {
+        flashSub.textContent = due ? due + " à revoir aujourd?hui" : "Rien en retard";
+      }
+      const flashRow = document.getElementById("home-flash-row");
+      if (flashRow && due) flashRow.querySelector(".row-badge").classList.add("warn");
+
+      const weakSub = document.getElementById("home-weak-sub");
+      const weakRow = document.getElementById("home-weak-row");
+      if (weakSub) {
+        if (weak.length) {
+          weakSub.textContent = weak
+            .slice(0, 2)
+            .map(function (w) {
+              return "Ch. " + w.ch;
+            })
+            .join(" · ");
+          if (weakRow) weakRow.querySelector(".row-badge").classList.add("warn");
+        } else {
+          weakSub.textContent = "Rien de critique";
+        }
+      }
     })();
   </script>
 </body>

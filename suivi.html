@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Suivi � PASS Sorbonne</title>
+  <title>Suivi — PASS Sorbonne</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=da3" />
+  <link rel="stylesheet" href="./styles.css?v=da4" />
 </head>
 <body class="has-tabbar" data-tab="suivi">
   <div class="wrap">
@@ -17,41 +17,49 @@
       </div>
     </header>
 
-    <h1 class="page-title">Suivi</h1>
+    <h1 class="page-title">Progression</h1>
 
     <section class="continue-card" id="today-session" hidden>
       <p class="continue-kicker">Session du jour</p>
-      <h2 class="continue-title" id="today-session-title">�</h2>
-      <p class="continue-meta" id="today-session-meta"></p>
+      <h2 class="continue-title" id="today-title">—</h2>
+      <p class="continue-meta" id="today-meta"></p>
       <div class="continue-actions">
-        <a class="btn" id="today-session-qcm" href="./qcm-player.html">QCM</a>
-        <a class="btn secondary" id="today-session-flash" href="./flashcards.html?mode=due">Flash</a>
-        <a class="btn secondary" id="today-session-fiche" href="./matiere.html">Fiche</a>
+        <a class="btn" id="today-qcm" href="./qcm-player.html">QCM</a>
+        <a class="btn secondary" id="today-flash" href="./flashcards.html?mode=due">Flash</a>
+        <a class="btn secondary" id="today-fiche" href="./matiere.html">Fiche</a>
       </div>
     </section>
 
-    <div id="review-box" class="review-box hidden">
-      <h2>� revoir</h2>
-      <div class="review-list" id="review-list"></div>
+    <div class="stat-grid" aria-label="Résumé">
+      <div class="stat-cell"><b id="stat-qcm">0</b><span>QCM</span></div>
+      <div class="stat-cell"><b id="stat-pct">—</b><span>Réussis</span></div>
+      <div class="stat-cell"><b id="stat-days">0</b><span>Jours</span></div>
     </div>
 
+    <p class="eyebrow">Continuer</p>
+    <section class="rubric-panel" id="continue-panel" aria-label="Continuer"></section>
+
+    <p class="eyebrow" id="rework-label" hidden>À retravailler</p>
+    <section class="rubric-panel" id="rework-panel" aria-label="À retravailler" hidden></section>
+
     <div id="empty-state" class="empty-state hidden">
-      Pas assez de data � fais = 10 QCM sur un chapitre.
+      Pas assez de data — fais ≥ 10 QCM sur un chapitre.
       <div class="actions" style="justify-content:center;margin-top:0.75rem">
         <a class="btn" href="./qcm-player.html">QCM</a>
       </div>
     </div>
 
     <details class="legend-fold">
-      <summary>L�gende</summary>
+      <summary>Légende pastilles</summary>
       <ul class="suivi-legend" style="margin-top:0.65rem">
         <li><span class="pill pill-none" aria-hidden="true"></span> &lt; 10 Q</li>
         <li><span class="pill pill-red" aria-hidden="true"></span> &lt; 50 %</li>
-        <li><span class="pill pill-blue" aria-hidden="true"></span> 50�75 %</li>
+        <li><span class="pill pill-blue" aria-hidden="true"></span> 50–75 %</li>
         <li><span class="pill pill-green" aria-hidden="true"></span> &gt; 75 %</li>
       </ul>
     </details>
 
+    <p class="eyebrow">Chapitres</p>
     <div class="ch-cards" id="ch-cards"></div>
 
     <div class="actions" style="margin-top:1.25rem">
@@ -60,64 +68,80 @@
     </div>
   </div>
 
+  <nav class="tabbar" aria-label="Navigation"><div class="tabbar-inner"></div></nav>
+  <script src="./js/shell-tabbar.js?v=2"></script>
   <script src="./js/suivi-store.js?v=5"></script>
   <script src="./js/today-target.js?v=1"></script>
+  <script src="./js/flash-srs.js?v=3"></script>
   <script>
-    const S = window.PASS_SUIVI;
-    const T = window.PASS_TODAY;
-    const elReview = document.getElementById("review-box");
-    const elReviewList = document.getElementById("review-list");
-    const elCards = document.getElementById("ch-cards");
-    const elEmpty = document.getElementById("empty-state");
-    const elToday = document.getElementById("today-session");
+  (function () {
+    var S = window.PASS_SUIVI;
+    var T = window.PASS_TODAY;
+    var SRS = window.PASS_FLASH_SRS;
+    if (!S || !T) return;
 
-    function renderTodaySession() {
-      if (!T || !elToday) return;
-      const target = T.getTodayTarget();
-      if (!target || !target.ch) {
-        elToday.hidden = true;
-        return;
-      }
-      const links = T.hrefsFor(target.ch);
-      document.getElementById("today-session-title").textContent =
-        target.ch + " � " + (S.CHAPTERS[target.ch] || "");
-      const meta = document.getElementById("today-session-meta");
-      if (target.reason === "review") {
-        meta.textContent = target.level === "red" ? "Priorit� faible" : "� consolider";
-      } else if (target.reason === "start") {
-        meta.textContent = "Premier chapitre";
-      } else {
-        meta.textContent = "Reprise";
-      }
-      document.getElementById("today-session-qcm").href = links.qcm;
-      document.getElementById("today-session-flash").href = links.flash;
-      document.getElementById("today-session-fiche").href = links.fiche;
-      elToday.hidden = false;
-    }
+    var SHORT = {
+      "01": "Introduction", "02": "Nerveux", "03": "Cardio", "04": "Respiratoire",
+      "05": "Sens", "06": "Rachis", "07": "Tronc", "08": "Digestif",
+      "09": "Génito-urinaire", "10": "Membre sup.", "11": "Membre inf."
+    };
 
-    function fmtScore(score20, pct, n, ready) {
-      if (ready) return score20 + "/20 (" + pct + " %)";
-      if (n) return n + "/" + S.MIN_Q + " Q";
-      return "�";
+    var elToday = document.getElementById("today-session");
+    var elContinue = document.getElementById("continue-panel");
+    var elRework = document.getElementById("rework-panel");
+    var elReworkLabel = document.getElementById("rework-label");
+    var elCards = document.getElementById("ch-cards");
+    var elEmpty = document.getElementById("empty-state");
+
+    function shortTitle(ch) { return SHORT[ch] || S.CHAPTERS[ch] || ch; }
+
+    function dayKey(iso) {
+      if (!iso) return null;
+      var d = new Date(iso);
+      if (!d.getTime()) return null;
+      return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
     }
 
     function relativeTime(iso) {
       if (!iso) return null;
-      const t = new Date(iso).getTime();
-      if (!t) return null;
-      const days = Math.floor((Date.now() - t) / 86400000);
-      if (days <= 0) return "aujourd�hui";
+      var days = Math.floor((Date.now() - new Date(iso).getTime()) / 86400000);
+      if (days <= 0) return "aujourd’hui";
       if (days === 1) return "hier";
       if (days < 7) return "il y a " + days + " j";
       if (days < 30) return "il y a " + Math.floor(days / 7) + " sem.";
       return "il y a " + Math.floor(days / 30) + " mois";
     }
 
+    function streakDays(data) {
+      var set = {};
+      for (var i = 0; i < S.CHAPTER_ORDER.length; i++) {
+        var row = data[S.CHAPTER_ORDER[i]] || {};
+        var k = dayKey(row.lastQcmAt || row.updatedAt);
+        if (k) set[k] = true;
+      }
+      var keys = Object.keys(set);
+      if (!keys.length) return 0;
+      var today = T.todayISO();
+      var cursor = new Date(today + "T12:00:00");
+      var yest = new Date(cursor); yest.setDate(yest.getDate() - 1);
+      var yKey = dayKey(yest.toISOString());
+      if (!set[today] && !set[yKey]) return 0;
+      if (!set[today]) cursor = yest;
+      var n = 0;
+      for (var j = 0; j < 60; j++) {
+        var ck = dayKey(cursor.toISOString());
+        if (!set[ck]) break;
+        n += 1;
+        cursor.setDate(cursor.getDate() - 1);
+      }
+      return n;
+    }
+
     function worstLevel(row) {
-      const lastReady = (row.lastN || 0) >= S.MIN_Q;
-      const cumulReady = (row.n || 0) >= S.MIN_Q;
-      const last = lastReady ? row.lastLevel || "none" : "none";
-      const cumul = cumulReady ? row.level || "none" : "none";
+      var lastReady = (row.lastN || 0) >= S.MIN_Q;
+      var cumulReady = (row.n || 0) >= S.MIN_Q;
+      var last = lastReady ? (row.lastLevel || "none") : "none";
+      var cumul = cumulReady ? (row.level || "none") : "none";
       if (last === "red" || cumul === "red") return "red";
       if (last === "blue" || cumul === "blue") return "blue";
       return "none";
@@ -129,88 +153,172 @@
       return 9;
     }
 
+    function fmtScore(score20, pct, n, ready) {
+      if (ready) return score20 + "/20 (" + pct + " %)";
+      if (n) return n + "/" + S.MIN_Q + " Q";
+      return "—";
+    }
+
+    function getFlash() {
+      if (SRS && typeof SRS.chapterStats === "function") return SRS.chapterStats();
+      return { byChapter: {}, dueTotal: 0, learningTotal: 0 };
+    }
+
+    function rowHtml(opts) {
+      return '<a class="rubric-row" href="' + opts.href + '">' +
+        '<span class="row-badge' + (opts.warn ? " warn" : "") + '">' + opts.badge + "</span>" +
+        '<span class="row-body"><h2>' + opts.title + "</h2><p>" + opts.sub + "</p></span>" +
+        '<span class="row-chev">›</span></a>';
+    }
+
     function actionsHtml(ch) {
-      return (
-        '<div class="ch-actions">' +
-        '<a class="btn tiny" href="./qcm-player.html?ch=' + ch + '">QCM</a>' +
-        '<a class="btn tiny secondary" href="./flashcards.html?ch=' + ch + '&mode=due">Flash</a>' +
-        '<a class="btn tiny secondary" href="./matiere/anatomie/ch' + ch + '.html">Fiche</a>' +
-        "</div>"
-      );
+      var links = T.hrefsFor(ch);
+      return '<div class="ch-actions">' +
+        '<a class="btn tiny" href="' + links.qcm + '">QCM</a>' +
+        '<a class="btn tiny secondary" href="' + links.flash + '">Flash</a>' +
+        '<a class="btn tiny secondary" href="' + links.fiche + '">Fiche</a></div>';
+    }
+
+    function renderToday() {
+      var target = T.getTodayTarget();
+      if (!target || !target.ch) { elToday.hidden = true; return; }
+      var links = T.hrefsFor(target.ch);
+      document.getElementById("today-title").textContent = target.ch + " — " + (S.CHAPTERS[target.ch] || "");
+      var meta = document.getElementById("today-meta");
+      if (target.reason === "review") meta.textContent = target.level === "red" ? "Priorité faible" : "À consolider";
+      else if (target.reason === "start") meta.textContent = "Premier chapitre";
+      else meta.textContent = "Reprise";
+      document.getElementById("today-qcm").href = links.qcm;
+      document.getElementById("today-flash").href = links.flash;
+      document.getElementById("today-fiche").href = links.fiche;
+      elToday.hidden = false;
+    }
+
+    function renderContinue(data, flash) {
+      var target = T.getTodayTarget();
+      var links = target && target.ch ? T.hrefsFor(target.ch) : null;
+      var due = flash.dueTotal || 0;
+      var weakN = 0;
+      for (var i = 0; i < S.CHAPTER_ORDER.length; i++) {
+        var w = worstLevel(data[S.CHAPTER_ORDER[i]] || {});
+        if (w === "red" || w === "blue") weakN += 1;
+      }
+      var qcmSub = "QCM ciblés";
+      if (target && target.ch) qcmSub = (target.reason === "review" ? "Priorité" : "Reprise") + " · ch. " + target.ch;
+
+      elContinue.innerHTML =
+        rowHtml({ href: links ? links.qcm : "./entrainement.html", badge: "Q", title: "Entraînement", sub: qcmSub, warn: false }) +
+        rowHtml({ href: "./flashcards.html?mode=due", badge: "F", title: "Flashcards", sub: due ? due + " à revoir aujourd’hui" : "Rien en retard", warn: due > 0 }) +
+        rowHtml({ href: "#rework-panel", badge: "!", title: "Points faibles", sub: weakN ? weakN + " chapitre" + (weakN > 1 ? "s" : "") : "Rien de critique", warn: weakN > 0 });
+    }
+
+    function renderRework(data, flash) {
+      var items = [];
+      var seen = {};
+      var i, ch, row, level, links, st, flashN, sub, n;
+
+      for (i = 0; i < S.CHAPTER_ORDER.length; i++) {
+        ch = S.CHAPTER_ORDER[i];
+        row = data[ch] || {};
+        level = worstLevel(row);
+        if (level !== "red" && level !== "blue") continue;
+        links = T.hrefsFor(ch);
+        st = (flash.byChapter && flash.byChapter[ch]) || {};
+        flashN = st.learning || st.due || 0;
+        sub = ((row.lastN || 0) >= S.MIN_Q && row.lastPct != null)
+          ? ("Dernière session " + row.lastPct + " %")
+          : (row.pct != null ? ("Cumul " + row.pct + " %") : "À consolider");
+        if (flashN) sub += " · " + flashN + " flash";
+        items.push({ rank: rankLevel(level), ch: ch, href: links.qcm, badge: ch, title: shortTitle(ch), sub: sub, warn: level === "red" });
+        seen[ch] = true;
+      }
+
+      for (i = 0; i < S.CHAPTER_ORDER.length; i++) {
+        ch = S.CHAPTER_ORDER[i];
+        if (seen[ch]) continue;
+        st = (flash.byChapter && flash.byChapter[ch]) || {};
+        n = st.learning || st.due || 0;
+        if (!n) continue;
+        links = T.hrefsFor(ch);
+        items.push({
+          rank: 2, ch: ch,
+          href: String(links.flash || "").replace("mode=due", "mode=review"),
+          badge: ch, title: shortTitle(ch),
+          sub: n + " carte" + (n > 1 ? "s" : "") + " à revoir",
+          warn: true
+        });
+      }
+
+      items.sort(function (a, b) { return a.rank - b.rank || a.ch.localeCompare(b.ch); });
+      var top = items.slice(0, 5);
+      if (!top.length) {
+        elRework.hidden = true;
+        elReworkLabel.hidden = true;
+        elRework.innerHTML = "";
+        return;
+      }
+      elRework.hidden = false;
+      elReworkLabel.hidden = false;
+      elRework.innerHTML = top.map(rowHtml).join("");
     }
 
     function render() {
-      renderTodaySession();
-      const data = S.getAnatomie();
+      renderToday();
+      var data = S.getAnatomie();
+      var flash = getFlash();
+      var totalN = 0, totalOk = 0, anyData = false;
       elCards.innerHTML = "";
-      elReviewList.innerHTML = "";
 
-      let anyData = false;
-      const weak = [];
-
-      for (const ch of S.CHAPTER_ORDER) {
-        const title = S.CHAPTERS[ch];
-        const row = data[ch] || {};
-        const lastN = row.lastN || 0;
-        const n = row.n || 0;
-        const lastReady = lastN >= S.MIN_Q;
-        const cumulReady = n >= S.MIN_Q;
-        const lastLevel = row.lastLevel || "none";
-        const cumulLevel = row.level || "none";
+      for (var i = 0; i < S.CHAPTER_ORDER.length; i++) {
+        var ch = S.CHAPTER_ORDER[i];
+        var title = S.CHAPTERS[ch];
+        var row = data[ch] || {};
+        var lastN = row.lastN || 0;
+        var n = row.n || 0;
+        var lastReady = lastN >= S.MIN_Q;
+        var cumulReady = n >= S.MIN_Q;
+        var lastLevel = row.lastLevel || "none";
+        var cumulLevel = row.level || "none";
         if (n > 0) anyData = true;
+        totalN += n;
+        totalOk += row.ok || 0;
 
-        const when = relativeTime(row.lastQcmAt || row.updatedAt);
-        const meta = when
-          ? "Derni�re activit� " + when
-          : n
-            ? "En cours de remplissage"
-            : "�";
+        var when = relativeTime(row.lastQcmAt || row.updatedAt);
+        var flashCh = (flash.byChapter && flash.byChapter[ch]) || {};
+        var flashBit = "";
+        if (flashCh.due) flashBit = " · " + flashCh.due + " flash à faire";
+        else if (flashCh.learning) flashBit = " · " + flashCh.learning + " flash ratées";
 
-        const article = document.createElement("article");
+        var meta = when
+          ? ("Dernière activité " + when + flashBit)
+          : (n ? ("En cours de remplissage" + flashBit) : (flashBit ? flashBit.replace(/^ · /, "") : "—"));
+
+        var article = document.createElement("article");
         article.className = "ch-card";
         article.innerHTML =
           '<div class="ch-card-top"><div>' +
-          "<h3>" + ch + " � " + title + "</h3>" +
+          "<h3>" + ch + " — " + title + "</h3>" +
           '<p class="meta">' + meta + "</p></div></div>" +
           '<div class="pills-row">' +
-          '<span><span class="pill pill-' + lastLevel + '"></span> Derni�re ' +
+          '<span><span class="pill pill-' + lastLevel + '"></span> Dernière ' +
           fmtScore(row.lastScore20, row.lastPct, lastN, lastReady) + "</span>" +
           '<span><span class="pill pill-' + cumulLevel + '"></span> Cumul ' +
-          fmtScore(row.score20, row.pct, n, cumulReady) + "</span>" +
-          "</div>" +
+          fmtScore(row.score20, row.pct, n, cumulReady) + "</span></div>" +
           actionsHtml(ch);
         elCards.appendChild(article);
-
-        const w = worstLevel(row);
-        if (w === "red" || w === "blue") {
-          weak.push({ ch, title, level: w, rank: rankLevel(w) });
-        }
       }
 
-      weak.sort((a, b) => a.rank - b.rank || a.ch.localeCompare(b.ch));
-      const top = weak.slice(0, 3);
-      if (top.length) {
-        elReview.classList.remove("hidden");
-        for (const w of top) {
-          const div = document.createElement("div");
-          div.className = "review-item";
-          div.innerHTML =
-            '<span class="name"><span class="pill pill-' + w.level + '"></span> ' +
-            w.ch + " � " + w.title + "</span>" +
-            "<span>" +
-            '<a class="btn tiny" href="./qcm-player.html?ch=' + w.ch + '">QCM</a> ' +
-            '<a class="btn tiny secondary" href="./flashcards.html?ch=' + w.ch + '&mode=due">Flash</a>' +
-            "</span>";
-          elReviewList.appendChild(div);
-        }
-      } else {
-        elReview.classList.add("hidden");
-      }
+      var pct = totalN ? Math.round((totalOk / totalN) * 100) : null;
+      document.getElementById("stat-qcm").textContent = String(totalN);
+      document.getElementById("stat-pct").textContent = pct == null ? "—" : pct + "%";
+      document.getElementById("stat-days").textContent = String(streakDays(data));
 
-      elEmpty.classList.toggle("hidden", anyData);
+      renderContinue(data, flash);
+      renderRework(data, flash);
+      elEmpty.classList.toggle("hidden", anyData || (flash.dueTotal || 0) > 0);
     }
 
-    document.getElementById("btn-reset").addEventListener("click", () => {
+    document.getElementById("btn-reset").addEventListener("click", function () {
       if (confirm("Effacer le suivi Anatomie sur cet appareil ?")) {
         S.resetAnatomie();
         render();
@@ -218,7 +326,7 @@
     });
 
     render();
-  </script><nav class="tabbar" aria-label="Navigation"><div class="tabbar-inner"></div></nav>
-<script src="./js/shell-tabbar.js?v=2"></script>
+  })();
+  </script>
 </body>
 </html>

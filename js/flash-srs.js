@@ -192,6 +192,36 @@
     save({});
   }
 
+  function chapterFromId(id) {
+    const m = String(id || "").match(/-(\d{2})-/);
+    return m ? m[1] : null;
+  }
+
+  /** Compteurs flash par chapitre (cartes déjà vues seulement). */
+  function chapterStats() {
+    const m = load();
+    const t = todayISO();
+    const by = {};
+    let dueTotal = 0;
+    let learningTotal = 0;
+    for (const [id, row] of Object.entries(m)) {
+      const ch = chapterFromId(id);
+      if (!ch) continue;
+      if (!by[ch]) by[ch] = { due: 0, learning: 0 };
+      const due = String(row.due || "") <= t;
+      const learning = (Number(row.interval) || 0) === 0;
+      if (due) {
+        by[ch].due += 1;
+        dueTotal += 1;
+      }
+      if (learning) {
+        by[ch].learning += 1;
+        learningTotal += 1;
+      }
+    }
+    return { byChapter: by, dueTotal: dueTotal, learningTotal: learningTotal };
+  }
+
   global.PASS_FLASH_SRS = {
     KEY: KEY,
     SESSION_CAP: SESSION_CAP,
@@ -203,6 +233,8 @@
     formatDays: formatDays,
     dueIds: dueIds,
     learningIds: learningIds,
+    chapterFromId: chapterFromId,
+    chapterStats: chapterStats,
     clear: clear,
   };
 })(window);
