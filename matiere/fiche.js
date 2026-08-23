@@ -359,6 +359,39 @@
     });
   }
 
+  // Barre QCM · Flash (chapitre courant)
+  (function injectPracticeBar() {
+    const m = (location.pathname || "").match(/ch(\d{2})\.html/i);
+    if (!m) return;
+    const ch = m[1];
+    const tools =
+      document.querySelector(".hud-tools") || document.querySelector(".fiche-hud");
+    if (!tools) return;
+    if (tools.querySelector(".practice-bar")) return;
+
+    const bar = document.createElement("div");
+    bar.className = "practice-bar hud-chip";
+    bar.innerHTML =
+      '<a class="practice-link" href="../../qcm-player.html?ch=' +
+      ch +
+      '">QCM</a>' +
+      '<a class="practice-link secondary" href="../../flashcards.html?ch=' +
+      ch +
+      '">Flash</a>';
+    tools.appendChild(bar);
+
+    try {
+      localStorage.setItem(
+        "pass_continue_v1",
+        JSON.stringify({
+          ch: ch,
+          at: new Date().toISOString(),
+          reason: "fiche",
+        })
+      );
+    } catch (_) {}
+  })();
+
   // Suivi activité : ouverture de fiche (chXX.html)
   (function trackFicheOpen() {
     const m = (location.pathname || "").match(/ch(\d{2})\.html/i);
