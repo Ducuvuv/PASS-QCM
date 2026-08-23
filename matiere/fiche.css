@@ -1,12 +1,16 @@
 /* Fiches chapitre — style basique, variables pour restyler plus tard */
 :root {
-  --bg: #f4f2ee;
+  --bg: #f1eee7;
+  --bg-accent: #dfe8e1;
+  --bg-spot: var(--bg-accent);
   --surface: #fffcf7;
-  --ink: #1a1714;
-  --muted: #6f675e;
-  --line: #ddd6cb;
-  --accent: #0f3d3e;
-  --accent-soft: #d9ecea;
+  --card: var(--surface);
+  --ink: #14241c;
+  --deep: #0f2a1f;
+  --muted: #5c6b62;
+  --line: #d5cdc0;
+  --accent: #1a5c44;
+  --accent-soft: #e4f0ea;
   --p1: #b91c1c;
   --p1-bg: #fee2e2;
   --p2: #c2410c;
@@ -17,7 +21,12 @@
   --warn-bg: #fef3c7;
   --ok: #166534;
   --bad: #991b1b;
-  --font: "Segoe UI", system-ui, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius: 16px;
+  --radius-pill: 999px;
+  --font: "Manrope", system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; }

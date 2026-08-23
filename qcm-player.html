@@ -6,22 +6,25 @@
   <title>QCM — PASS Sorbonne</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=da5" />
   <style>
     :root {
-      --bg: #f3efe6;
-      --bg-accent: #e5ecdf;
-      --surface: #faf7f0;
+      --bg: #f1eee7;
+      --bg-accent: #dfe8e1;
+      --bg-spot: var(--bg-accent);
+      --surface: #fffcf7;
       --card: var(--surface);
-      --ink: #1a2a22;
-      --muted: #5a6a60;
-      --line: #cfc6b4;
+      --ink: #14241c;
+      --deep: #0f2a1f;
+      --muted: #5c6b62;
+      --line: #d5cdc0;
       --ok: #166534;
       --ok-bg: #dcfce7;
       --bad: #991b1b;
       --bad-bg: #fee2e2;
-      --accent: #1f5c45;
-      --accent-soft: #e3efe8;
+      --accent: #1a5c44;
+      --accent-soft: #e4f0ea;
       --pressed-bg: var(--accent-soft);
       --pressed-ink: #1f4d3a;
       --shadow: 0 1px 0 rgba(22, 53, 40, 0.04);
@@ -32,47 +35,14 @@
       --radius-pill: 999px;
       --ease: 0.12s ease;
       --tap-min: 44px;
+      --font: "Manrope", system-ui, sans-serif;
+      --font-display: "Fraunces", Georgia, serif;
+      --font-body: "Literata", Georgia, serif;
+      --max: 40rem;
     }
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: "Manrope", system-ui, sans-serif;
-      background:
-        radial-gradient(90% 60% at 100% 0%, var(--bg-accent), transparent 50%),
-        var(--bg);
-      color: var(--ink);
-      line-height: 1.45;
-      overflow-x: hidden;
-      -webkit-tap-highlight-color: transparent;
-      min-height: 100dvh;
-    }
-    main {
-      max-width: 42rem;
-      margin: 0 auto;
-      padding:
-        max(1.25rem, env(safe-area-inset-top, 0px))
-        max(1rem, env(safe-area-inset-right, 0px))
-        max(3rem, calc(1.5rem + env(safe-area-inset-bottom, 0px)))
-        max(1rem, env(safe-area-inset-left, 0px));
-    }
-    h1 { font-size: 1.25rem; margin: 0 0 0.35rem; }
     .sub { color: var(--muted); font-size: 0.95rem; margin: 0 0 1.25rem; }
     .meta { color: var(--muted); font-size: 0.9rem; }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      padding: 1.1rem 1.15rem;
-      margin-bottom: 1rem;
-      box-shadow: var(--shadow);
-    }
-    .card h2 {
-      font-size: 0.95rem;
-      margin: 0 0 0.75rem;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
     .chapters {
       display: flex;
       flex-wrap: wrap;
@@ -174,7 +144,7 @@
       gap: 0.35rem;
       margin: 0 0 1.05rem;
     }
-    .toolbar button.secondary {
+    .toolbar .btn.secondary {
       font-size: 0.72rem;
       font-weight: 600;
       letter-spacing: 0.01em;
@@ -229,29 +199,7 @@
       gap: 0.5rem;
       margin-top: 1rem;
     }
-    button {
-      border: 1px solid var(--accent);
-      background: var(--accent);
-      color: #fff;
-      border-radius: var(--radius-pill);
-      padding: 0.55rem 1rem;
-      font: inherit;
-      font-weight: 650;
-      cursor: pointer;
-      min-height: var(--tap-min);
-      transition: transform var(--ease), box-shadow var(--ease), background var(--ease);
-    }
-    button.secondary {
-      background: var(--card);
-      color: var(--ink);
-      border-color: var(--line);
-      box-shadow: var(--shadow);
-    }
-    button:active {
-      transform: translateY(1px);
-      box-shadow: var(--shadow-pressed);
-    }
-    button:disabled { opacity: 0.45; cursor: not-allowed; }
+    .btn:disabled { opacity: 0.45; cursor: not-allowed; }
     .score-box {
       margin-top: 0.85rem;
       padding: 0.7rem 0.8rem;
@@ -330,7 +278,16 @@
       font-size: 0.88rem;
       font-weight: 650;
     }
-    .actions button[disabled] { opacity: 0.4; cursor: not-allowed; }
+    .next-links a.primary-next {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: #fff;
+      flex-basis: 100%;
+      font-size: 0.98rem;
+      font-weight: 800;
+      text-align: center;
+    }
+    .actions .btn[disabled] { opacity: 0.4; cursor: not-allowed; }
     .prio-btns {
       display: flex;
       flex-wrap: wrap;
@@ -418,26 +375,32 @@
     }
     .pool-stat.warn { color: var(--muted); border-style: dashed; }
     .session-block .actions { margin-top: 0; }
-    .session-block .actions button { width: 100%; }
+    .session-block .actions .btn { width: 100%; }
   </style>
 </head>
-<body>
-  <main>
-    <p class="meta" style="margin:0 0 0.75rem"><a href="./entrainement.html" style="color:inherit">← Entraînement</a> · <a href="./suivi.html" style="color:inherit">Suivi</a> · <a href="./index.html" style="color:inherit">Accueil</a></p>
+<body class="has-tabbar" data-tab="qcm">
+  <div class="wrap">
+    <header class="site-header">
+      <div class="site-top">
+        <a class="brand" href="./index.html">PASS</a>
+        <span class="site-pill">Anatomie</span>
+      </div>
+    </header>
+
     <!-- SETUP -->
     <section id="setup">
-      <h1>QCM</h1>
+      <h1 class="page-title">QCM</h1>
 
-      <div class="card">
+      <div class="panel">
         <h2>Chapitres</h2>
         <div class="toolbar">
-          <button type="button" class="secondary" id="btn-all">Tout</button>
-          <button type="button" class="secondary" id="btn-none">Aucun</button>
+          <button type="button" class="btn secondary" id="btn-all">Tout</button>
+          <button type="button" class="btn secondary" id="btn-none">Aucun</button>
         </div>
         <div class="chapters" id="chapter-list"></div>
       </div>
 
-      <div class="card">
+      <div class="panel">
         <h2>Priorité</h2>
         <div class="prio-btns" id="priority-list" role="group" aria-label="Priorités">
           <button type="button" class="prio-btn" data-prio="P1" aria-pressed="true">P1</button>
@@ -449,7 +412,7 @@
         </p>
       </div>
 
-      <div class="card">
+      <div class="panel">
         <h2>Session</h2>
         <div class="session-block">
           <div class="session-controls">
@@ -467,7 +430,7 @@
           </div>
           <div class="pool-stats" id="pool-hint" aria-live="polite"></div>
           <div class="actions">
-            <button type="button" id="btn-start">Commencer</button>
+            <button type="button" class="btn" id="btn-start">Commencer</button>
           </div>
         </div>
       </div>
@@ -476,18 +439,18 @@
     <!-- QUIZ -->
     <section id="quiz" class="hidden">
       <header class="quiz-bar">
-        <h1>QCM</h1>
+        <h1 class="page-title">QCM</h1>
         <div class="meta" id="progress">—</div>
       </header>
-      <div class="card revealed-host" id="panel">
+      <div class="panel revealed-host" id="panel">
         <p class="stem" id="stem"></p>
         <div class="q-img-wrap hidden" id="q-img-wrap"><img id="q-img" alt="Schéma de la question" /></div>
         <div id="choices"></div>
         <div class="score-box" id="item-score"></div>
         <div class="actions">
-          <button type="button" id="btn-validate">Valider</button>
-          <button type="button" class="secondary" id="btn-next" disabled>Suivant</button>
-          <button type="button" class="secondary" id="btn-abort">Sortir</button>
+          <button type="button" class="btn" id="btn-validate">Valider</button>
+          <button type="button" class="btn secondary" id="btn-next" disabled>Suivant</button>
+          <button type="button" class="btn secondary" id="btn-abort">Sortir</button>
         </div>
         <div class="tags" id="tags"></div>
       </div>
@@ -495,9 +458,9 @@
 
     <!-- RESULTS -->
     <section id="results" class="hidden">
-      <h1>Résultat</h1>
+      <h1 class="page-title">Résultat</h1>
       <p class="sub" id="results-sub">—</p>
-      <div class="card">
+      <div class="panel">
         <div class="meta">Score</div>
         <div class="big-score" id="final-score">—</div>
         <p id="final-label"></p>
@@ -511,16 +474,18 @@
           <div class="weak-tags" id="weak-tags"></div>
         </div>
         <p class="recap" id="recap"></p>
-                <div class="actions">
-          <button type="button" id="btn-retry">Rejouer</button>
-          <button type="button" class="secondary" id="btn-retry-wrong" disabled>Ratés</button>
-          <button type="button" class="secondary" id="btn-home">Réglages</button>
-          <a class="secondary" id="btn-suivi" href="./suivi.html" style="display:inline-block;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:0.55rem 1rem;text-decoration:none;font:inherit;font-weight:650">Suivi</a>
+        <div class="actions">
+          <button type="button" class="btn" id="btn-retry">Rejouer</button>
+          <button type="button" class="btn secondary" id="btn-retry-wrong" disabled>Ratés</button>
+          <button type="button" class="btn secondary" id="btn-home">Réglages</button>
         </div>
         <div class="next-links" id="next-links" aria-label="Suite"></div>
       </div>
     </section>
-  </main>
+  </div>
+
+  <nav class="tabbar" aria-label="Navigation"><div class="tabbar-inner"></div></nav>
+  <script src="./js/shell-tabbar.js?v=3"></script>
 
   <script src="./js/suivi-store.js?v=4"></script>
   <script src="./data/lots.js?v=quota90"></script>
@@ -866,17 +831,26 @@
       const nextEl = document.getElementById("next-links");
       if (nextEl) {
         nextEl.innerHTML = "";
-        const sessionCh =
-          (lastSettings && lastSettings.chapters && lastSettings.chapters[0]) ||
+        const primaryCh =
           (weakCh[0] && weakCh[0][0]) ||
+          (lastSettings && lastSettings.chapters && lastSettings.chapters[0]) ||
           null;
-        if (sessionCh) {
-          const padFlash = String(sessionCh).padStart(2, "0");
+        if (primaryCh) {
+          const padFlash = String(primaryCh).padStart(2, "0");
           const aSrs = document.createElement("a");
+          aSrs.className = "primary-next";
           aSrs.href = "./flashcards.html?ch=" + padFlash + "&mode=due";
-          aSrs.textContent = "Flash ch." + padFlash;
+          aSrs.textContent = "Flash à faire · ch." + padFlash;
           nextEl.appendChild(aSrs);
         }
+        const aSuivi = document.createElement("a");
+        aSuivi.href = "./suivi.html";
+        aSuivi.textContent = "Suivi";
+        nextEl.appendChild(aSuivi);
+        const aHome = document.createElement("a");
+        aHome.href = "./index.html";
+        aHome.textContent = "Accueil";
+        nextEl.appendChild(aHome);
         const topCh = weakCh.slice(0, 2).map(([c]) => c);
         for (const ch of topCh) {
           const pad = String(ch).padStart(2, "0");
@@ -884,7 +858,7 @@
           aQcm.href = "./qcm-player.html?ch=" + pad;
           aQcm.textContent = "QCM " + pad;
           nextEl.appendChild(aQcm);
-          if (String(ch).padStart(2, "0") !== String(sessionCh || "").padStart(2, "0")) {
+          if (String(ch).padStart(2, "0") !== String(primaryCh || "").padStart(2, "0")) {
             const aFlash = document.createElement("a");
             aFlash.href = "./flashcards.html?ch=" + pad + "&mode=due";
             aFlash.textContent = "Flash " + pad;
