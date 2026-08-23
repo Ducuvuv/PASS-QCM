@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=m11" />
+  <link rel="stylesheet" href="./styles.css?v=m12" />
 </head>
 <body>
   <div class="wrap">
@@ -29,6 +29,15 @@
       </nav>
     </header>
 
+    <section class="continue-card" id="continue-card" hidden>
+      <p class="continue-kicker" id="continue-kicker">Continuer</p>
+      <h2 class="continue-title" id="continue-title">—</h2>
+      <div class="continue-actions">
+        <a class="btn" id="continue-qcm" href="./qcm-player.html">QCM</a>
+        <a class="btn secondary" id="continue-flash" href="./flashcards.html">Flash</a>
+      </div>
+    </section>
+
     <section class="rubric-panel" aria-label="Rubriques">
       <a class="rubric-row" href="./matiere.html"><h2>Matière</h2></a>
       <a class="rubric-row" href="./entrainement.html"><h2>Entraînement</h2></a>
@@ -42,5 +51,91 @@
       <a class="rubric-row" href="./conseils.html"><h2>Conseils</h2></a>
     </section>
   </div>
+
+  <script src="./js/suivi-store.js?v=5"></script>
+  <script>
+    (function () {
+      const S = window.PASS_SUIVI;
+      if (!S) return;
+
+      const card = document.getElementById("continue-card");
+      const kicker = document.getElementById("continue-kicker");
+      const title = document.getElementById("continue-title");
+      const aQcm = document.getElementById("continue-qcm");
+      const aFlash = document.getElementById("continue-flash");
+
+      function worstLevel(row) {
+        const lastReady = (row.lastN || 0) >= S.MIN_Q;
+        const cumulReady = (row.n || 0) >= S.MIN_Q;
+        const last = lastReady ? row.lastLevel || "none" : "none";
+        const cumul = cumulReady ? row.level || "none" : "none";
+        if (last === "red" || cumul === "red") return "red";
+        if (last === "blue" || cumul === "blue") return "blue";
+        return "none";
+      }
+
+      function rankLevel(level) {
+        if (level === "red") return 0;
+        if (level === "blue") return 1;
+        return 9;
+      }
+
+      function readContinueHint() {
+        try {
+          return JSON.parse(localStorage.getItem("pass_continue_v1") || "null");
+        } catch (_) {
+          return null;
+        }
+      }
+
+      function pickTarget() {
+        const data = S.getAnatomie() || {};
+        const weak = [];
+        for (const ch of S.CHAPTER_ORDER) {
+          const row = data[ch] || {};
+          const level = worstLevel(row);
+          if (level === "red" || level === "blue") {
+            weak.push({
+              ch,
+              level,
+              rank: rankLevel(level),
+              at: row.lastQcmAt || row.updatedAt || "",
+            });
+          }
+        }
+        weak.sort(
+          (a, b) => a.rank - b.rank || String(b.at).localeCompare(String(a.at)) || a.ch.localeCompare(b.ch)
+        );
+        if (weak[0]) {
+          return { ch: weak[0].ch, reason: "review", level: weak[0].level };
+        }
+
+        const hint = readContinueHint();
+        if (hint && hint.ch && S.CHAPTERS[hint.ch]) {
+          return { ch: hint.ch, reason: "last" };
+        }
+
+        let best = null;
+        for (const ch of S.CHAPTER_ORDER) {
+          const row = data[ch] || {};
+          if (!(row.n > 0)) continue;
+          const at = row.lastQcmAt || row.updatedAt || "";
+          if (!best || String(at) > String(best.at)) best = { ch, at };
+        }
+        if (best) return { ch: best.ch, reason: "last" };
+        return null;
+      }
+
+      const target = pickTarget();
+      if (!target) return;
+
+      const name = S.CHAPTERS[target.ch] || "";
+      kicker.textContent = target.reason === "review" ? "À revoir" : "Continuer";
+      title.textContent = target.ch + " — " + name;
+      aQcm.href = "./qcm-player.html?ch=" + target.ch;
+      aFlash.href = "./flashcards.html?ch=" + target.ch;
+      card.hidden = false;
+    })();
+  </script>
 </body>
 </html>

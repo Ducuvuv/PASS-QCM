@@ -966,6 +966,23 @@
         window.PASS_SUIVI.recordSession(history);
       }
 
+      try {
+        const contCh =
+          (weakCh[0] && weakCh[0][0]) ||
+          (lastSettings && lastSettings.chapters && lastSettings.chapters[0]) ||
+          null;
+        if (contCh) {
+          localStorage.setItem(
+            "pass_continue_v1",
+            JSON.stringify({
+              ch: String(contCh).padStart(2, "0"),
+              at: new Date().toISOString(),
+              reason: weakCh.length ? "weak" : "last",
+            })
+          );
+        }
+      } catch (_) {}
+
       show("results");
     }
 
