@@ -284,25 +284,57 @@
       color: #fff;
     }
     .prio-legend {
-      display: grid;
-      gap: 0.25rem;
       margin: 0.65rem 0 0;
-      padding: 0;
-      list-style: none;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--muted);
     }
-    .prio-legend strong { color: var(--ink); font-weight: 700; }
+    .prio-legend a { text-underline-offset: 2px; }
+    .session-block {
+      display: grid;
+      gap: 0.85rem;
+      padding: 0.85rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #f7f4ee;
+    }
+    .session-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.1rem;
+      align-items: end;
+    }
+    .session-controls .field label,
+    .session-controls .field-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 650;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    .session-controls input[type="number"] {
+      width: 4.5rem;
+      min-width: 0;
+      padding: 0.45rem 0.55rem;
+      border-radius: 999px;
+      text-align: center;
+      font-weight: 700;
+    }
+    .session-controls .mode-btn {
+      padding: 0.45rem 0.85rem;
+      font-size: 0.9rem;
+    }
     .pool-stats {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.45rem;
-      margin: 0.85rem 0 0.25rem;
+      gap: 0.4rem;
+      margin: 0;
     }
     .pool-stat {
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 650;
-      padding: 0.35rem 0.65rem;
+      padding: 0.3rem 0.6rem;
       border-radius: 999px;
       border: 1px solid var(--line);
       background: #fff;
@@ -313,6 +345,8 @@
       background: #e3efe8;
     }
     .pool-stat.warn { color: var(--muted); border-style: dashed; }
+    .session-block .actions { margin-top: 0; }
+    .session-block .actions button { width: 100%; }
   </style>
 </head>
 <body>
@@ -338,31 +372,31 @@
           <button type="button" class="prio-btn" data-prio="P2" aria-pressed="true">P2</button>
           <button type="button" class="prio-btn" data-prio="P3" aria-pressed="true">P3</button>
         </div>
-        <ul class="prio-legend">
-          <li><strong>P1</strong> — essentiel</li>
-          <li><strong>P2</strong> — important</li>
-          <li><strong>P3</strong> — complémentaire</li>
-        </ul>
+        <p class="prio-legend" style="margin:0.65rem 0 0">
+          Ordre de révision · <a href="./conseils.html#priorites" style="color:inherit">détail</a>
+        </p>
       </div>
 
       <div class="card">
         <h2>Session</h2>
-        <div class="row">
-          <div class="field">
-            <label for="qcount">Nombre de questions</label>
-            <input type="number" id="qcount" min="1" max="210" value="20" />
-          </div>
-          <div class="field">
-            <span style="display:block;font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem">Tirage</span>
-            <div class="mode-btns" id="mode-list" role="group" aria-label="Tirage">
-              <button type="button" class="mode-btn" data-mode="shuffle" aria-pressed="true">Aléatoire</button>
-              <button type="button" class="mode-btn" data-mode="order" aria-pressed="false">Ordre du lot</button>
+        <div class="session-block">
+          <div class="session-controls">
+            <div class="field">
+              <label for="qcount">Questions</label>
+              <input type="number" id="qcount" min="1" max="210" value="20" />
+            </div>
+            <div class="field">
+              <span class="field-label">Tirage</span>
+              <div class="mode-btns" id="mode-list" role="group" aria-label="Tirage">
+                <button type="button" class="mode-btn" data-mode="shuffle" aria-pressed="true">Aléatoire</button>
+                <button type="button" class="mode-btn" data-mode="order" aria-pressed="false">Ordre du lot</button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="pool-stats" id="pool-hint" aria-live="polite"></div>
-        <div class="actions">
-          <button type="button" id="btn-start">Commencer</button>
+          <div class="pool-stats" id="pool-hint" aria-live="polite"></div>
+          <div class="actions">
+            <button type="button" id="btn-start">Commencer</button>
+          </div>
         </div>
       </div>
     </section>

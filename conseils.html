@@ -7,7 +7,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=m2" />
+  <link rel="stylesheet" href="./styles.css?v=m6" />
+  <style>
+    .faq-body {
+      grid-column: 1 / -1;
+      margin: 0.35rem 0 0;
+      color: var(--ink);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+    .faq-body p { margin: 0 0 0.65rem; color: var(--ink); font-size: 0.92rem; }
+    .faq-body p:last-child { margin-bottom: 0; }
+    .faq-body ul {
+      margin: 0 0 0.65rem;
+      padding-left: 1.1rem;
+    }
+    .faq-body li { margin-bottom: 0.35rem; }
+    .faq-body strong { font-weight: 750; }
+  </style>
 </head>
 <body>
   <div class="wrap">
@@ -32,12 +49,24 @@
     <h1 class="page-title">Conseils / FAQ</h1>
 
     <section class="rubric-panel">
+      <article class="rubric-row" id="priorites" style="cursor:default;grid-template-columns:1fr">
+        <h2>Que signifient P1, P2 et P3&nbsp;?</h2>
+        <div class="faq-body">
+          <p>Ce sont des badges d’ordre de révision, déduits de la densité de notions déjà tombées au concours (repères ⭐ dans le cours). Ils ne figurent pas dans le polycopié d’origine.</p>
+          <ul>
+            <li><strong>P1</strong> — section avec beaucoup de notions tombées (≥&nbsp;5) → à travailler en premier</li>
+            <li><strong>P2</strong> — quelques notions tombées (1 à 4) → à bien connaître</li>
+            <li><strong>P3</strong> — aucune notion tombée recensée → toujours au programme, mais en dernier</li>
+          </ul>
+          <p><strong>P3 ≠ inutile.</strong> Tout reste au programme ; P3 veut seulement dire « moins souvent tombé jusqu’ici ».</p>
+        </div>
+      </article>
       <div class="rubric-row" style="cursor:default">
-        <h2>Comment réviser avec les QCM ?</h2>
+        <h2>Comment réviser avec les QCM&nbsp;?</h2>
         <span class="badge soon">Bientôt</span>
       </div>
       <div class="rubric-row" style="cursor:default">
-        <h2>Le lien téléphone est-il à jour ?</h2>
+        <h2>Le lien téléphone est-il à jour&nbsp;?</h2>
         <span class="badge soon">Bientôt</span>
       </div>
     </section>
