@@ -440,7 +440,9 @@
     let lastSettings = null;
 
     function availableChapters() {
-      return Object.keys(CHAPTER_META).filter((ch) => (lots[ch] || []).length);
+      return Object.keys(CHAPTER_META)
+        .filter((ch) => (lots[ch] || []).length)
+        .sort((a, b) => Number(a) - Number(b));
     }
 
     function selectedChapters() {
