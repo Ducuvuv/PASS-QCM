@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
@@ -7,26 +7,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=m11" />
+  <link rel="stylesheet" href="./styles.css?v=da1" />
 </head>
-<body>
+<body class="has-tabbar">
   <div class="wrap">
     <header class="site-header">
       <div class="site-top">
-        <a class="brand" href="./index.html">PASS Sorbonne</a>
+        <a class="brand" href="./index.html">PASS</a>
       </div>
-      <nav aria-label="Navigation principale">
-        <ul class="nav-chips">
-          <li><a href="./index.html">Accueil</a></li>
-          <li><a href="./matiere.html" aria-current="page">Matière</a></li>
-          <li><a href="./entrainement.html">Entraînement</a></li>
-          <li><a href="./flashcards.html">Flashcards</a></li>
-          <li><a href="./suivi.html">Suivi</a></li>
-          <li><a href="./planning.html">Planning</a></li>
-          <li><a href="./competitions.html">Compétitions</a></li>
-          <li><a href="./conseils.html">Conseils</a></li>
-        </ul>
-      </nav>
     </header>
 
     <h1 class="page-title">Matière</h1>
@@ -60,5 +48,14 @@
       </div>
     </section>
   </div>
-</body>
+
+<nav class="tabbar" aria-label="Navigation">
+  <div class="tabbar-inner">
+      <a href="./index.html">Accueil</a>
+      <a href="./matiere.html" aria-current="page">Matière</a>
+      <a href="./entrainement.html">QCM</a>
+      <a href="./suivi.html">Suivi</a>
+      <a href="./plus.html">Plus</a>
+  </div>
+</nav></body>
 </html>
