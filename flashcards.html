@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=m6" />
+  <link rel="stylesheet" href="./styles.css?v=m7" />
   <style>
     .fc-card {
       background: var(--surface);
@@ -34,14 +34,18 @@
     }
     .fc-card .fc-prompt { font-size: 0.92rem; font-weight: 650; margin: 0; }
     .fc-card .fc-caption { margin-top: 0.45rem; font-size: 0.9rem; color: var(--muted); }
-    .prio-btns, .kind-btns, .mode-btns { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.35rem; }
+    .prio-btns, .kind-btns, .mode-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
     .prio-btn, .kind-btn, .mode-btn {
       min-width: 3.5rem;
       border: 1px solid var(--line);
       background: var(--surface);
       color: var(--ink);
       border-radius: 999px;
-      padding: 0.5rem 0.95rem;
+      padding: 0.55rem 1rem;
       font: inherit;
       font-weight: 650;
       cursor: pointer;
@@ -53,28 +57,49 @@
       background: var(--accent);
       color: #fff;
     }
-    .prio-help { list-style: none; margin: 0.75rem 0 0; padding: 0; font-size: 0.88rem; color: var(--muted); }
-    .prio-help li { margin-bottom: 0.3rem; }
-    .prio-help strong { color: var(--ink); }
-    .chapters { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
-    @media (max-width: 520px) { .chapters { grid-template-columns: 1fr; } }
-    .ch-chip {
+    .prio-legend {
+      margin: 0.65rem 0 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .prio-legend a { color: inherit; text-underline-offset: 2px; }
+    .chapters {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.12rem;
-      width: 100%;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .ch-chip {
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.35rem;
+      width: auto;
+      max-width: 100%;
       text-align: left;
       border: 1px solid var(--line);
       background: var(--surface);
       color: var(--ink);
-      border-radius: 12px;
-      padding: 0.7rem 0.8rem;
+      border-radius: 999px;
+      padding: 0.42rem 0.72rem;
       font: inherit;
       cursor: pointer;
+      transition: border-color 0.12s ease, background 0.12s ease;
     }
-    .ch-chip .ch-id { font-weight: 800; font-size: 0.95rem; }
-    .ch-chip .ch-name { font-size: 0.8rem; color: var(--muted); font-weight: 550; line-height: 1.25; }
+    .ch-chip .ch-id {
+      font-weight: 800;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+      flex: 0 0 auto;
+    }
+    .ch-chip .ch-name {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 550;
+      line-height: 1.2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     .ch-chip[aria-pressed="true"] {
       border-color: var(--accent);
       background: #e3efe8;
@@ -82,8 +107,76 @@
     }
     .ch-chip[aria-pressed="true"] .ch-name { color: #1f4d3a; }
     .ch-chip:disabled { opacity: 0.42; cursor: not-allowed; }
-    .ch-toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.65rem; }
-    .ch-toolbar .btn { padding: 0.4rem 0.85rem; font-size: 0.88rem; }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem;
+      margin: 0 0 1.05rem;
+    }
+    .toolbar .btn.secondary {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      padding: 0.22rem 0.55rem;
+      border-radius: 999px;
+      line-height: 1.2;
+    }
+    .session-block {
+      display: grid;
+      gap: 0.85rem;
+      padding: 0.85rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #f7f4ee;
+    }
+    .session-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.1rem;
+      align-items: end;
+    }
+    .session-controls .field-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 650;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+    .session-controls .mode-btn {
+      padding: 0.45rem 0.85rem;
+      font-size: 0.9rem;
+    }
+    .pool-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0;
+    }
+    .pool-stat {
+      font-size: 0.78rem;
+      font-weight: 650;
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+    }
+    .pool-stat.total {
+      border-color: var(--accent);
+      background: #e3efe8;
+    }
+    .pool-stat.warn { color: var(--muted); border-style: dashed; }
+    .session-block .actions { margin-top: 0; }
+    .session-block .actions .btn { width: 100%; }
+    .session-block .actions-secondary { margin-top: 0; }
+    .session-block .actions-secondary .btn {
+      width: 100%;
+      font-size: 0.82rem;
+      padding: 0.4rem 0.85rem;
+    }
     .rate-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 0.35rem; }
     .rate-row .btn { width: 100%; }
     .end-box {
@@ -94,7 +187,6 @@
       margin: 0.75rem 0;
     }
     .end-box h2 { margin: 0 0 0.5rem; font-size: 1.15rem; }
-    .check-row { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.65rem; font-size: 0.92rem; }
   </style>
 </head>
 <body>
@@ -121,8 +213,8 @@
       <h1 class="page-title">Flashcards</h1>
 
       <div class="panel">
-        <h2>Chapitre</h2>
-        <div class="ch-toolbar">
+        <h2>Chapitres</h2>
+        <div class="toolbar">
           <button type="button" class="btn secondary" id="btn-ch-all">Tout</button>
           <button type="button" class="btn secondary" id="btn-ch-none">Aucun</button>
         </div>
@@ -136,6 +228,9 @@
           <button type="button" class="prio-btn" data-prio="P2" aria-pressed="true">P2</button>
           <button type="button" class="prio-btn" data-prio="P3" aria-pressed="true">P3</button>
         </div>
+        <p class="prio-legend">
+          Ordre de révision · <a href="./conseils.html#priorites">détail</a>
+        </p>
       </div>
 
       <div class="panel">
@@ -149,16 +244,29 @@
 
       <div class="panel">
         <h2>Session</h2>
-        <div class="mode-btns" id="mode-list" role="group" aria-label="Mode">
-          <button type="button" class="mode-btn" data-mode="all" aria-pressed="true">Tout le pool</button>
-          <button type="button" class="mode-btn" data-mode="review" aria-pressed="false">À revoir seulement</button>
-        </div>
-        <button type="button" class="mode-btn" id="opt-shuffle" aria-pressed="true" style="margin-top:0.65rem">Mélanger les cartes</button>
-        <p class="note" style="margin-top:0.75rem" id="pool-hint">—</p>
-        <p class="note" id="review-hint">—</p>
-        <div class="actions">
-          <button type="button" class="btn" id="btn-start">Commencer</button>
-          <button type="button" class="btn secondary" id="btn-clear-review">Reset « À revoir »</button>
+        <div class="session-block">
+          <div class="session-controls">
+            <div class="field">
+              <span class="field-label">Pool</span>
+              <div class="mode-btns" id="mode-list" role="group" aria-label="Mode">
+                <button type="button" class="mode-btn" data-mode="all" aria-pressed="true">Tout</button>
+                <button type="button" class="mode-btn" data-mode="review" aria-pressed="false">À revoir</button>
+              </div>
+            </div>
+            <div class="field">
+              <span class="field-label">Tirage</span>
+              <div class="mode-btns">
+                <button type="button" class="mode-btn" id="opt-shuffle" aria-pressed="true">Mélanger</button>
+              </div>
+            </div>
+          </div>
+          <div class="pool-stats" id="pool-hint" aria-live="polite"></div>
+          <div class="actions">
+            <button type="button" class="btn" id="btn-start">Commencer</button>
+          </div>
+          <div class="actions actions-secondary">
+            <button type="button" class="btn secondary" id="btn-clear-review">Reset « À revoir »</button>
+          </div>
         </div>
       </div>
     </section>
@@ -231,7 +339,6 @@
     const elKindList = document.getElementById("kind-list");
     const elModeList = document.getElementById("mode-list");
     const elHint = document.getElementById("pool-hint");
-    const elReviewHint = document.getElementById("review-hint");
     const elCard = document.getElementById("card");
     const elFront = document.getElementById("card-front");
     const elBack = document.getElementById("card-back");
@@ -312,13 +419,26 @@
       const prios = selectedPriorities();
       const mode = selectedMode();
       const kind = selectedKind();
-      const n = poolFrom(chs, prios, mode, kind).length;
+      const pool = poolFrom(chs, prios, mode, kind);
+      const n = pool.length;
       const nRev = reviewIds().size;
-      const kindLabel = kind === "all" ? "" : " · " + kind;
-      if (!chs.length) elHint.textContent = "Choisis au moins un chapitre.";
-      else if (!prios.length) elHint.textContent = "Active au moins une priorité.";
-      else elHint.textContent = n + " carte" + (n > 1 ? "s" : "") + " · " + prios.join("+") + kindLabel + (mode === "review" ? " · à revoir" : "") + ".";
-      elReviewHint.textContent = nRev ? nRev + " carte(s) marquées « À revoir » (local)." : "Aucune carte « À revoir » pour l’instant.";
+      const c1 = pool.filter((c) => c.priority === "P1").length;
+      const c2 = pool.filter((c) => c.priority === "P2").length;
+      const c3 = pool.filter((c) => c.priority === "P3").length;
+      if (!chs.length) {
+        elHint.innerHTML = '<span class="pool-stat warn">Aucun chapitre</span>';
+      } else if (!prios.length) {
+        elHint.innerHTML = '<span class="pool-stat warn">Aucune priorité</span>';
+      } else {
+        elHint.innerHTML =
+          '<span class="pool-stat total">' + n + " cartes</span>" +
+          '<span class="pool-stat">P1 · ' + c1 + "</span>" +
+          '<span class="pool-stat">P2 · ' + c2 + "</span>" +
+          '<span class="pool-stat">P3 · ' + c3 + "</span>" +
+          (kind !== "all" ? '<span class="pool-stat">' + (kind === "schema" ? "Schémas" : "Texte") + "</span>" : "") +
+          (mode === "review" ? '<span class="pool-stat">À revoir</span>' : "") +
+          (nRev ? '<span class="pool-stat">' + nRev + " en mémoire</span>" : "");
+      }
       document.getElementById("btn-start").disabled = !chs.length || !prios.length || n === 0;
     }
 
@@ -341,11 +461,10 @@
       elChapterList.innerHTML = "";
       const params = new URLSearchParams(location.search);
       const focusCh = (params.get("ch") || "").padStart(2, "0");
-      const focusOk = focusCh && CHAPTER_META[focusCh];
+      const focusOk = !!(focusCh && CHAPTER_META[focusCh]);
       for (const ch of CHAPTER_ORDER) {
         const list = decks[ch] || [];
         const n = list.length;
-        const nSchema = list.filter((c) => c.kind === "schema").length;
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "ch-chip";
@@ -356,11 +475,9 @@
           btn.innerHTML =
             '<span class="ch-id">' + ch + '</span><span class="ch-name">' + CHAPTER_META[ch] + " · bientôt</span>";
         } else {
-          const on = focusOk ? ch === focusCh : true;
-          btn.setAttribute("aria-pressed", on ? "true" : "false");
-          const extra = nSchema ? " · " + nSchema + " sch." : "";
+          btn.setAttribute("aria-pressed", focusOk ? (ch === focusCh ? "true" : "false") : "true");
           btn.innerHTML =
-            '<span class="ch-id">' + ch + '</span><span class="ch-name">' + CHAPTER_META[ch] + " · " + n + extra + "</span>";
+            '<span class="ch-id">' + ch + '</span><span class="ch-name">' + CHAPTER_META[ch] + " · " + n + "</span>";
           btn.addEventListener("click", () => {
             const pressed = btn.getAttribute("aria-pressed") === "true";
             btn.setAttribute("aria-pressed", pressed ? "false" : "true");
@@ -378,20 +495,14 @@
           elShuffle.setAttribute("aria-pressed", on ? "true" : "false");
         });
       }
-      const btnAll = document.getElementById("btn-ch-all");
-      const btnNone = document.getElementById("btn-ch-none");
-      if (btnAll) {
-        btnAll.addEventListener("click", () => {
-          elChapterList.querySelectorAll(".ch-chip:not(:disabled)").forEach((b) => b.setAttribute("aria-pressed", "true"));
-          updateHint();
-        });
-      }
-      if (btnNone) {
-        btnNone.addEventListener("click", () => {
-          elChapterList.querySelectorAll(".ch-chip").forEach((b) => b.setAttribute("aria-pressed", "false"));
-          updateHint();
-        });
-      }
+      document.getElementById("btn-ch-all").addEventListener("click", () => {
+        elChapterList.querySelectorAll(".ch-chip:not(:disabled)").forEach((b) => b.setAttribute("aria-pressed", "true"));
+        updateHint();
+      });
+      document.getElementById("btn-ch-none").addEventListener("click", () => {
+        elChapterList.querySelectorAll(".ch-chip").forEach((b) => b.setAttribute("aria-pressed", "false"));
+        updateHint();
+      });
       updateHint();
     }
 
