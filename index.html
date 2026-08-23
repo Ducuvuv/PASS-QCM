@@ -19,9 +19,9 @@
     </header>
 
     <section class="continue-card" id="today-card" hidden>
-      <p class="continue-kicker" id="today-kicker">
+      <p class="continue-kicker">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 1.5"/></svg>
-        Aujourd?hui
+        Aujourd'hui
       </p>
       <h2 class="continue-title" id="today-title">?</h2>
       <p class="continue-meta" id="today-meta"></p>
@@ -32,9 +32,9 @@
       </div>
     </section>
 
-    <div class="stat-grid" id="home-stats" aria-label="Résumé" hidden>
-      <div class="stat-cell"><b id="home-pct">?</b><span>Réussis</span></div>
-      <div class="stat-cell"><b id="home-review">0</b><span>À revoir</span></div>
+    <div class="stat-grid" id="home-stats" aria-label="Resume" hidden>
+      <div class="stat-cell"><b id="home-pct">?</b><span>Reussis</span></div>
+      <div class="stat-cell"><b id="home-review">0</b><span>A revoir</span></div>
       <div class="stat-cell"><b id="home-days">0</b><span>Jours</span></div>
     </div>
 
@@ -42,7 +42,7 @@
     <section class="rubric-panel" aria-label="Continuer">
       <a class="rubric-row" href="./entrainement.html">
         <span class="row-badge">Q</span>
-        <span class="row-body"><h2>Entraînement</h2><p id="home-qcm-sub">QCM ciblés</p></span>
+        <span class="row-body"><h2>Entrainement</h2><p id="home-qcm-sub">QCM cibles</p></span>
         <span class="row-chev">?</span>
       </a>
       <a class="rubric-row" id="home-flash-row" href="./flashcards.html?mode=due">
@@ -65,21 +65,20 @@
   <script src="./js/flash-srs.js?v=3"></script>
   <script>
     (function () {
-      const S = window.PASS_SUIVI;
-      const T = window.PASS_TODAY;
-      const SRS = window.PASS_FLASH_SRS;
+      var S = window.PASS_SUIVI;
+      var T = window.PASS_TODAY;
+      var SRS = window.PASS_FLASH_SRS;
       if (!S || !T) return;
 
-      const card = document.getElementById("today-card");
-      const title = document.getElementById("today-title");
-      const meta = document.getElementById("today-meta");
-      const target = T.getTodayTarget(true);
+      var card = document.getElementById("today-card");
+      var title = document.getElementById("today-title");
+      var meta = document.getElementById("today-meta");
+      var target = T.getTodayTarget(true);
       if (target && target.ch) {
-        const name = S.CHAPTERS[target.ch] || "";
-        const links = T.hrefsFor(target.ch);
-        title.textContent = target.ch + " ? " + name;
+        var links = T.hrefsFor(target.ch);
+        title.textContent = target.ch + " ? " + (S.CHAPTERS[target.ch] || "");
         if (target.reason === "review") {
-          meta.textContent = target.level === "red" ? "Priorité faible" : "À consolider";
+          meta.textContent = target.level === "red" ? "Priorite faible" : "A consolider";
         } else if (target.reason === "start") {
           meta.textContent = "Premier chapitre";
         } else {
@@ -91,33 +90,25 @@
         card.hidden = false;
       }
 
-      const data = S.getAnatomie() || {};
-      let n = 0;
-      let ok = 0;
-      const daySet = new Set();
-      const weak = [];
-      for (const ch of S.CHAPTER_ORDER) {
-        const row = data[ch] || {};
+      var data = S.getAnatomie() || {};
+      var n = 0, ok = 0, daySet = {}, weak = [];
+      for (var ci = 0; ci < S.CHAPTER_ORDER.length; ci++) {
+        var ch = S.CHAPTER_ORDER[ci];
+        var row = data[ch] || {};
         n += row.n || 0;
         ok += row.ok || 0;
-        const iso = row.lastQcmAt || row.updatedAt;
+        var iso = row.lastQcmAt || row.updatedAt;
         if (iso) {
-          const d = new Date(iso);
+          var d = new Date(iso);
           if (d.getTime()) {
-            daySet.add(
-              d.getFullYear() +
-                "-" +
-                String(d.getMonth() + 1).padStart(2, "0") +
-                "-" +
-                String(d.getDate()).padStart(2, "0")
-            );
+            daySet[d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0")] = true;
           }
         }
-        const lastReady = (row.lastN || 0) >= S.MIN_Q;
-        const cumulReady = (row.n || 0) >= S.MIN_Q;
-        const last = lastReady ? row.lastLevel || "none" : "none";
-        const cumul = cumulReady ? row.level || "none" : "none";
-        let level = "none";
+        var lastReady = (row.lastN || 0) >= S.MIN_Q;
+        var cumulReady = (row.n || 0) >= S.MIN_Q;
+        var last = lastReady ? (row.lastLevel || "none") : "none";
+        var cumul = cumulReady ? (row.level || "none") : "none";
+        var level = "none";
         if (last === "red" || cumul === "red") level = "red";
         else if (last === "blue" || cumul === "blue") level = "blue";
         if (level === "red" || level === "blue") weak.push({ ch: ch, level: level });
@@ -126,39 +117,27 @@
         return (a.level === "red" ? 0 : 1) - (b.level === "red" ? 0 : 1) || a.ch.localeCompare(b.ch);
       });
 
-      let streak = 0;
-      if (daySet.size) {
-        const today = T.todayISO();
-        let cursor = new Date(today + "T12:00:00");
-        const y = new Date(cursor);
-        y.setDate(y.getDate() - 1);
-        const yKey =
-          y.getFullYear() +
-          "-" +
-          String(y.getMonth() + 1).padStart(2, "0") +
-          "-" +
-          String(y.getDate()).padStart(2, "0");
-        if (daySet.has(today) || daySet.has(yKey)) {
-          if (!daySet.has(today)) cursor = y;
-          for (let i = 0; i < 60; i++) {
-            const k =
-              cursor.getFullYear() +
-              "-" +
-              String(cursor.getMonth() + 1).padStart(2, "0") +
-              "-" +
-              String(cursor.getDate()).padStart(2, "0");
-            if (!daySet.has(k)) break;
+      var streak = 0;
+      if (Object.keys(daySet).length) {
+        var today = T.todayISO();
+        var cursor = new Date(today + "T12:00:00");
+        var y = new Date(cursor); y.setDate(y.getDate() - 1);
+        var yKey = y.getFullYear() + "-" + String(y.getMonth() + 1).padStart(2, "0") + "-" + String(y.getDate()).padStart(2, "0");
+        if (daySet[today] || daySet[yKey]) {
+          if (!daySet[today]) cursor = y;
+          for (var i = 0; i < 60; i++) {
+            var k = cursor.getFullYear() + "-" + String(cursor.getMonth() + 1).padStart(2, "0") + "-" + String(cursor.getDate()).padStart(2, "0");
+            if (!daySet[k]) break;
             streak += 1;
             cursor.setDate(cursor.getDate() - 1);
           }
         }
       }
 
-      const flash = SRS && typeof SRS.chapterStats === "function" ? SRS.chapterStats() : { dueTotal: 0 };
-      const due = flash.dueTotal || 0;
-      const pct = n ? Math.round((ok / n) * 100) : null;
-
-      const stats = document.getElementById("home-stats");
+      var flash = (SRS && typeof SRS.chapterStats === "function") ? SRS.chapterStats() : { dueTotal: 0 };
+      var due = flash.dueTotal || 0;
+      var pct = n ? Math.round((ok / n) * 100) : null;
+      var stats = document.getElementById("home-stats");
       if (n > 0 || due > 0 || streak > 0) {
         document.getElementById("home-pct").textContent = pct == null ? "?" : pct + "%";
         document.getElementById("home-review").textContent = String(due);
@@ -166,28 +145,19 @@
         stats.hidden = false;
       }
 
-      const qcmSub = document.getElementById("home-qcm-sub");
+      var qcmSub = document.getElementById("home-qcm-sub");
       if (qcmSub && target && target.ch) {
-        qcmSub.textContent =
-          (target.reason === "review" ? "Priorité" : "Reprise") + " · ch. " + target.ch;
+        qcmSub.textContent = (target.reason === "review" ? "Priorite" : "Reprise") + " · ch. " + target.ch;
       }
-      const flashSub = document.getElementById("home-flash-sub");
-      if (flashSub) {
-        flashSub.textContent = due ? due + " à revoir aujourd?hui" : "Rien en retard";
-      }
-      const flashRow = document.getElementById("home-flash-row");
+      var flashSub = document.getElementById("home-flash-sub");
+      if (flashSub) flashSub.textContent = due ? due + " a revoir aujourd'hui" : "Rien en retard";
+      var flashRow = document.getElementById("home-flash-row");
       if (flashRow && due) flashRow.querySelector(".row-badge").classList.add("warn");
-
-      const weakSub = document.getElementById("home-weak-sub");
-      const weakRow = document.getElementById("home-weak-row");
+      var weakSub = document.getElementById("home-weak-sub");
+      var weakRow = document.getElementById("home-weak-row");
       if (weakSub) {
         if (weak.length) {
-          weakSub.textContent = weak
-            .slice(0, 2)
-            .map(function (w) {
-              return "Ch. " + w.ch;
-            })
-            .join(" · ");
+          weakSub.textContent = weak.slice(0, 2).map(function (w) { return "Ch. " + w.ch; }).join(" · ");
           if (weakRow) weakRow.querySelector(".row-badge").classList.add("warn");
         } else {
           weakSub.textContent = "Rien de critique";
