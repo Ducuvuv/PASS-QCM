@@ -785,11 +785,19 @@ a { color: var(--accent); }
   border-top: 1px solid #c5d9cd;
 }
 .today-item:first-of-type { border-top: 0; }
+.today-item.is-target { border-top: 0; }
 .today-name {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  flex-wrap: wrap;
   color: var(--deep);
+}
+.today-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--muted);
 }
 .sel-bar {
   background: var(--deep);

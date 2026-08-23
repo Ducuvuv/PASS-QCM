@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=m11" />
+  <link rel="stylesheet" href="./styles.css?v=m13" />
 </head>
 <body>
   <div class="wrap">
@@ -68,10 +68,12 @@
   </div>
 
   <script src="./js/suivi-store.js?v=5"></script>
+  <script src="./js/today-target.js?v=1"></script>
   <script src="./js/planning-store.js?v=3"></script>
   <script>
     const P = window.PASS_PLANNING;
     const S = window.PASS_SUIVI;
+    const T = window.PASS_TODAY;
     const DAYS = ["Lun", "Mar", "Mer", "Jeu", "Ven", "Sam", "Dim"];
     let weekOffset = 0;
     let selectedChapter = null;
@@ -168,6 +170,58 @@
       }
     }
 
+    function targetMeta(target) {
+      if (!target) return "";
+      if (target.reason === "review") {
+        return target.level === "red" ? "Priorité" : "Consolider";
+      }
+      if (target.reason === "start") return "Démarrer";
+      return "Reprise";
+    }
+
+    function appendTodayRow(list, ch, opts) {
+      const level = chapterLevel(ch);
+      const div = document.createElement("div");
+      div.className = "today-item" + (opts.target ? " is-target" : "");
+      const badge = opts.target
+        ? ' <span class="today-badge">' + (opts.meta || "Cible") + "</span>"
+        : "";
+      div.innerHTML =
+        '<span class="today-name"><span class="pill pill-' +
+        level +
+        '"></span> <strong>' +
+        ch +
+        " · " +
+        (P.CHAPTERS[ch] || "") +
+        "</strong>" +
+        badge +
+        "</span>" +
+        '<span class="ch-actions">' +
+        '<a class="btn tiny" href="./qcm-player.html?ch=' +
+        ch +
+        '">QCM</a>' +
+        '<a class="btn tiny secondary" href="./flashcards.html?ch=' +
+        ch +
+        '&mode=due">Flash</a>' +
+        '<a class="btn tiny secondary" href="./matiere/anatomie/ch' +
+        ch +
+        '.html">Fiche</a>' +
+        (opts.id
+          ? '<button type="button" class="btn tiny secondary plan-remove" data-id="' +
+            opts.id +
+            '">Retirer</button>'
+          : "") +
+        "</span>";
+      const rm = div.querySelector(".plan-remove");
+      if (rm) {
+        rm.addEventListener("click", () => {
+          P.removePlacement(opts.id);
+          renderAll();
+        });
+      }
+      list.appendChild(div);
+    }
+
     function renderToday() {
       const t = P.todayISO();
       const d = new Date();
@@ -175,44 +229,27 @@
         "Aujourd’hui — " + DAYS[(d.getDay() + 6) % 7] + " " + fmtShort(t);
       const list = document.getElementById("today-list");
       list.innerHTML = "";
-      const items = P.placementsOn(t);
-      if (!items.length) {
+      const shown = new Set();
+
+      const target = T ? T.getTodayTarget() : null;
+      if (target && target.ch) {
+        appendTodayRow(list, target.ch, {
+          target: true,
+          meta: targetMeta(target),
+        });
+        shown.add(target.ch);
+      }
+
+      P.placementsOn(t).forEach((p) => {
+        if (shown.has(p.chapter)) return;
+        appendTodayRow(list, p.chapter, { id: p.id });
+        shown.add(p.chapter);
+      });
+
+      if (!list.children.length) {
         list.innerHTML =
           '<p class="hint" style="margin:0">Rien aujourd’hui.</p>';
-        return;
       }
-      items.forEach((p) => {
-        const level = chapterLevel(p.chapter);
-        const div = document.createElement("div");
-        div.className = "today-item";
-        div.innerHTML =
-          '<span class="today-name"><span class="pill pill-' +
-          level +
-          '"></span> <strong>' +
-          p.chapter +
-          " · " +
-          (P.CHAPTERS[p.chapter] || "") +
-          "</strong></span>" +
-          "<span class=\"ch-actions\">" +
-          '<a class="btn tiny" href="./qcm-player.html?ch=' +
-          p.chapter +
-          '">QCM</a>' +
-          '<a class="btn tiny secondary" href="./flashcards.html?ch=' +
-          p.chapter +
-          '">Flash</a>' +
-          '<a class="btn tiny secondary" href="./matiere/anatomie/ch' +
-          p.chapter +
-          '.html">Fiche</a>' +
-          '<button type="button" class="btn tiny secondary plan-remove" data-id="' +
-          p.id +
-          '">Retirer</button>' +
-          "</span>";
-        div.querySelector(".plan-remove").addEventListener("click", () => {
-          P.removePlacement(p.id);
-          renderAll();
-        });
-        list.appendChild(div);
-      });
     }
 
     function bindDayDrop(col, dateStr) {

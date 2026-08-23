@@ -866,6 +866,17 @@
       const nextEl = document.getElementById("next-links");
       if (nextEl) {
         nextEl.innerHTML = "";
+        const sessionCh =
+          (lastSettings && lastSettings.chapters && lastSettings.chapters[0]) ||
+          (weakCh[0] && weakCh[0][0]) ||
+          null;
+        if (sessionCh) {
+          const padFlash = String(sessionCh).padStart(2, "0");
+          const aSrs = document.createElement("a");
+          aSrs.href = "./flashcards.html?ch=" + padFlash + "&mode=due";
+          aSrs.textContent = "Flash SRS " + padFlash;
+          nextEl.appendChild(aSrs);
+        }
         const topCh = weakCh.slice(0, 2).map(([c]) => c);
         for (const ch of topCh) {
           const pad = String(ch).padStart(2, "0");
@@ -873,10 +884,12 @@
           aQcm.href = "./qcm-player.html?ch=" + pad;
           aQcm.textContent = "QCM " + pad;
           nextEl.appendChild(aQcm);
-          const aFlash = document.createElement("a");
-          aFlash.href = "./flashcards.html?ch=" + pad;
-          aFlash.textContent = "Flash " + pad;
-          nextEl.appendChild(aFlash);
+          if (String(ch).padStart(2, "0") !== String(sessionCh || "").padStart(2, "0")) {
+            const aFlash = document.createElement("a");
+            aFlash.href = "./flashcards.html?ch=" + pad + "&mode=due";
+            aFlash.textContent = "Flash " + pad;
+            nextEl.appendChild(aFlash);
+          }
           const aFiche = document.createElement("a");
           aFiche.href = "./matiere/anatomie/ch" + pad + ".html";
           aFiche.textContent = "Fiche " + pad;

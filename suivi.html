@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=m11" />
+  <link rel="stylesheet" href="./styles.css?v=m13" />
 </head>
 <body>
   <div class="wrap">
@@ -30,6 +30,17 @@
     </header>
 
     <h1 class="page-title">Suivi</h1>
+
+    <section class="continue-card" id="today-session" hidden>
+      <p class="continue-kicker">Session du jour</p>
+      <h2 class="continue-title" id="today-session-title">—</h2>
+      <p class="continue-meta" id="today-session-meta"></p>
+      <div class="continue-actions">
+        <a class="btn" id="today-session-qcm" href="./qcm-player.html">QCM</a>
+        <a class="btn secondary" id="today-session-flash" href="./flashcards.html?mode=due">Flash</a>
+        <a class="btn secondary" id="today-session-fiche" href="./matiere.html">Fiche</a>
+      </div>
+    </section>
 
     <div id="review-box" class="review-box hidden">
       <h2>À revoir</h2>
@@ -62,12 +73,39 @@
   </div>
 
   <script src="./js/suivi-store.js?v=5"></script>
+  <script src="./js/today-target.js?v=1"></script>
   <script>
     const S = window.PASS_SUIVI;
+    const T = window.PASS_TODAY;
     const elReview = document.getElementById("review-box");
     const elReviewList = document.getElementById("review-list");
     const elCards = document.getElementById("ch-cards");
     const elEmpty = document.getElementById("empty-state");
+    const elToday = document.getElementById("today-session");
+
+    function renderTodaySession() {
+      if (!T || !elToday) return;
+      const target = T.getTodayTarget();
+      if (!target || !target.ch) {
+        elToday.hidden = true;
+        return;
+      }
+      const links = T.hrefsFor(target.ch);
+      document.getElementById("today-session-title").textContent =
+        target.ch + " — " + (S.CHAPTERS[target.ch] || "");
+      const meta = document.getElementById("today-session-meta");
+      if (target.reason === "review") {
+        meta.textContent = target.level === "red" ? "Priorité faible" : "À consolider";
+      } else if (target.reason === "start") {
+        meta.textContent = "Premier chapitre";
+      } else {
+        meta.textContent = "Reprise";
+      }
+      document.getElementById("today-session-qcm").href = links.qcm;
+      document.getElementById("today-session-flash").href = links.flash;
+      document.getElementById("today-session-fiche").href = links.fiche;
+      elToday.hidden = false;
+    }
 
     function fmtScore(score20, pct, n, ready) {
       if (ready) return score20 + "/20 (" + pct + " %)";
@@ -107,13 +145,14 @@
       return (
         '<div class="ch-actions">' +
         '<a class="btn tiny" href="./qcm-player.html?ch=' + ch + '">QCM</a>' +
-        '<a class="btn tiny secondary" href="./flashcards.html?ch=' + ch + '">Flash</a>' +
+        '<a class="btn tiny secondary" href="./flashcards.html?ch=' + ch + '&mode=due">Flash</a>' +
         '<a class="btn tiny secondary" href="./matiere/anatomie/ch' + ch + '.html">Fiche</a>' +
         "</div>"
       );
     }
 
     function render() {
+      renderTodaySession();
       const data = S.getAnatomie();
       elCards.innerHTML = "";
       elReviewList.innerHTML = "";
@@ -172,7 +211,7 @@
             w.ch + " — " + w.title + "</span>" +
             "<span>" +
             '<a class="btn tiny" href="./qcm-player.html?ch=' + w.ch + '">QCM</a> ' +
-            '<a class="btn tiny secondary" href="./flashcards.html?ch=' + w.ch + '">Flash</a>' +
+            '<a class="btn tiny secondary" href="./flashcards.html?ch=' + w.ch + '&mode=due">Flash</a>' +
             "</span>";
           elReviewList.appendChild(div);
         }
