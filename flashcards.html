@@ -32,6 +32,15 @@
       background: #fff;
       border: 1px solid var(--line);
     }
+    .fc-card .fc-schema-miss {
+      margin: 0.55rem 0 0;
+      padding: 0.75rem;
+      border: 1px dashed var(--line);
+      border-radius: var(--radius-sm);
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.4;
+    }
     .fc-card .fc-prompt { font-size: 0.92rem; font-weight: 650; margin: 0; }
     .fc-card .fc-caption { margin-top: 0.45rem; font-size: 0.9rem; color: var(--muted); }
     .prio-btns, .kind-btns, .mode-btns {
@@ -354,7 +363,7 @@
     </section>
   </div>
 
-  <script src="./data/flash/ch01.js?v=5"></script>
+  <script src="./data/flash/ch01.js?v=6"></script>
   <script src="./data/flash/ch02.js?v=5"></script>
   <script src="./data/flash/ch03.js?v=5"></script>
   <script src="./data/flash/ch04.js?v=5"></script>
@@ -561,8 +570,16 @@
         }
         const img = document.createElement("img");
         img.className = "fc-schema";
-        img.src = "./" + imgSrc;
+        img.loading = "eager";
+        img.decoding = "async";
         img.alt = text || (isBack ? "Sch\u00e9ma l\u00e9gend\u00e9" : "Sch\u00e9ma sans l\u00e9gende");
+        img.onerror = function () {
+          const miss = document.createElement("p");
+          miss.className = "fc-schema-miss";
+          miss.textContent = "Sch\u00e9ma introuvable \u2014 hard refresh (ou r\u00e9seau).";
+          img.replaceWith(miss);
+        };
+        img.src = "./" + imgSrc.replace(/^\.\//, "");
         el.appendChild(img);
       } else el.textContent = text || "";
     }

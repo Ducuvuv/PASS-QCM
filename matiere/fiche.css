@@ -220,6 +220,7 @@ body.lecture-on .practice-bar { display: inline-flex !important; }
   display: block;
   background: #fff;
 }
+.schema > img,
 .schema-stage > img {
   display: block;
   width: 100%;
