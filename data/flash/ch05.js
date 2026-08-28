@@ -109,7 +109,7 @@
     { id: "FC-ANAT-05-S26", chapter: "05", priority: "P1", kind: "schema", front: "Schéma — Voies auditives", back: "Voies auditives", frontImg: "matiere/anatomie/img/ch05/blank/28_voies_auditives.png", backImg: "matiere/anatomie/img/ch05/28_voies_auditives.png" },
     { id: "FC-ANAT-05-S27", chapter: "05", priority: "P1", kind: "schema", front: "Schéma — Voie lemniscale", back: "Voie lemniscale", frontImg: "matiere/anatomie/img/ch05/blank/29_tact_lemniscale.png", backImg: "matiere/anatomie/img/ch05/29_tact_lemniscale.png" },
     { id: "FC-ANAT-05-S28", chapter: "05", priority: "P1", kind: "schema", front: "Schéma — Voie extra-lemniscale", back: "Voie extra-lemniscale", frontImg: "matiere/anatomie/img/ch05/blank/30_tact_extra.png", backImg: "matiere/anatomie/img/ch05/30_tact_extra.png" },
-    { id: "FC-ANAT-05-S29", chapter: "05", priority: "P1", kind: "schema", front: "Schéma — Sensibilité de la face", back: "Sensibilité de la face", frontImg: "matiere/anatomie/img/ch05/blank/31_tact_face.png", backImg: "matiere/anatomie/img/ch05/31_tact_face.png" }
+    { id: "FC-ANAT-05-S29", chapter: "05", priority: "P1", kind: "schema", front: "Schéma — Sensibilité de la face", back: "Sensibilité de la face", frontImg: "matiere/anatomie/img/ch05/blank/31_tact_face.jpg", backImg: "matiere/anatomie/img/ch05/31_tact_face.jpg" }
   ];
   if (!w.PASS_FLASH_REGISTRY.includes("05")) w.PASS_FLASH_REGISTRY.push("05");
 })(window);
