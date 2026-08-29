@@ -76,6 +76,7 @@
     { id: "FC-ANAT-06-S13", chapter: "06", priority: "P1", kind: "schema", front: "Schéma — Axis C2", back: "Axis C2", frontImg: "matiere/anatomie/img/ch06/blank/14_axis.png", backImg: "matiere/anatomie/img/ch06/14_axis.png" },
     { id: "FC-ANAT-06-S14", chapter: "06", priority: "P1", kind: "schema", front: "Schéma — Articulation atlanto-axoïdienne médiane", back: "Articulation atlanto-axoïdienne médiane", frontImg: "matiere/anatomie/img/ch06/blank/16_c1_c2_mediane.jpg", backImg: "matiere/anatomie/img/ch06/16_c1_c2_mediane.png" },
     { id: "FC-ANAT-06-S15", chapter: "06", priority: "P1", kind: "schema", front: "Schéma — Trajet de l’artère vertébrale", back: "Trajet de l’artère vertébrale", frontImg: "matiere/anatomie/img/ch06/blank/17_artere_vertebrale.png", backImg: "matiere/anatomie/img/ch06/17_artere_vertebrale.png" },
+    { id: "FC-ANAT-06-S17", chapter: "06", priority: "P2", kind: "schema", front: "Schéma — Ligaments crânio-rachidiens", back: "Appareil ligamentaire crânio-rachidien", frontImg: "matiere/anatomie/img/ch06/blank/18_ligaments_cranio.jpg", backImg: "matiere/anatomie/img/ch06/18_ligaments_cranio.png" },
     { id: "FC-ANAT-06-S16", chapter: "06", priority: "P1", kind: "schema", front: "Schéma — Stabilisation de l’odontoïde", back: "Stabilisation de l’odontoïde", frontImg: "matiere/anatomie/img/ch06/blank/19_odontoide.png", backImg: "matiere/anatomie/img/ch06/19_odontoide.png" }
   ];
   if (!w.PASS_FLASH_REGISTRY.includes("06")) w.PASS_FLASH_REGISTRY.push("06");
