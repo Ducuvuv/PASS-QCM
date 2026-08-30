@@ -196,6 +196,8 @@ body.lecture-on .practice-bar { display: inline-flex !important; }
 .callout.hot { background: var(--p1-bg); border: 1px solid #fecaca; }
 .callout.trap { background: var(--warn-bg); border: 1px solid #fde68a; }
 .callout.novo { background: #e0e7ff; border: 1px solid #c7d2fe; }
+.callout.beta { background: #eef2ff; border: 1px solid #c7d2fe; color: var(--ink); }
+.callout.tip { background: var(--warn-bg); border: 1px solid #fde68a; }
 .callout strong { display: block; margin-bottom: 0.15rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
 
 .schema-slot {
