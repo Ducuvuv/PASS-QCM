@@ -1,6 +1,6 @@
 /**
  * Flashcards Anatomie - chapitre 07 (Parois du tronc)
- * Sync leger depuis fiches Matiere + decks existants. kind: text | schema | schema | schema | schema | schema
+ * Sync leger depuis fiches Matiere + decks existants. kind: text
  */
 (function (w) {
   w.PASS_FLASH = w.PASS_FLASH || {};
@@ -19,22 +19,22 @@
     { id: "FC-ANAT-07-010", chapter: "07", priority: "P2", kind: "text", front: "Côte : tête et tubercule ?", back: "Tête = 2 corps + 1 disque · tubercule = processus transverse." },
     { id: "FC-ANAT-07-011", chapter: "07", priority: "P2", kind: "text", front: "Côtes : articulations tête / tubercule ?", back: "Tête = 2 corps + 1 disque. Tubercule = processus transverse." },
     { id: "FC-ANAT-07-012", chapter: "07", priority: "P2", kind: "text", front: "Dentelé antérieur : actions clés ?", back: "Fixe la scapula au thorax ; l'attire en avant et en dehors (paralysie → décollement)." },
-    { id: "FC-ANAT-07-013", chapter: "07", priority: "P2", kind: "text", front: "Dentelé antérieur ?", back: "Fixe la scapula ⭐ · attire en avant et dehors ⭐⭐⭐." },
+    { id: "FC-ANAT-07-013", chapter: "07", priority: "P2", kind: "text", front: "Dentelé antérieur : actions sur la scapula ⭐⭐⭐ ?", back: "Fixe la scapula ⭐ · attire en avant et dehors ⭐⭐⭐." },
     { id: "FC-ANAT-07-014", chapter: "07", priority: "P2", kind: "text", front: "Espaces intercostaux : contenu clé ?", back: "Pédicule vasculo-nerveux intercostal (veine, artère, nerf) dans la gouttière." },
     { id: "FC-ANAT-07-015", chapter: "07", priority: "P2", kind: "text", front: "Fausses vs flottantes ?", back: "Fausses 8–10. Flottantes 11–12 (pas d'articulation sternale)." },
     { id: "FC-ANAT-07-016", chapter: "07", priority: "P2", kind: "text", front: "Grand dorsal : actions sur le bras ?", back: "Adducteur (+ extenseur et rotateur interne)." },
     { id: "FC-ANAT-07-017", chapter: "07", priority: "P2", kind: "text", front: "Grand dorsal : origine (repère) + terminaison ?", back: "Crête iliaque (niveau L4) ; coulisse bicipitale." },
-    { id: "FC-ANAT-07-018", chapter: "07", priority: "P2", kind: "text", front: "Grand dorsal ?", back: "Crête iliaque (L4) · adducteur du bras ⭐⭐⭐." },
+    { id: "FC-ANAT-07-018", chapter: "07", priority: "P2", kind: "text", front: "Grand dorsal : origine (repère L4) + action sur le bras ⭐⭐⭐ ?", back: "Crête iliaque (L4) · adducteur du bras ⭐⭐⭐." },
     { id: "FC-ANAT-07-019", chapter: "07", priority: "P2", kind: "text", front: "Grand droit : action ?", back: "Fléchisseur du thorax / tronc." },
     { id: "FC-ANAT-07-020", chapter: "07", priority: "P2", kind: "text", front: "Hernie inguinale vs crurale (repère ligament) ?", back: "Inguinale = au-dessus du ligament inguinal (via canal). Crurale = sous le ligament." },
     { id: "FC-ANAT-07-021", chapter: "07", priority: "P2", kind: "text", front: "Levator scapulae : idée d'action ?", back: "Élève la scapula (d'où le nom)." },
-    { id: "FC-ANAT-07-022", chapter: "07", priority: "P2", kind: "text", front: "Oblique externe + canal ?", back: "Fibres bas/avant/médial · anneau inguinal externe · superficiel plus médial." },
+    { id: "FC-ANAT-07-022", chapter: "07", priority: "P2", kind: "text", front: "Oblique externe : fibres + anneau inguinal externe + rapport au canal ?", back: "Fibres bas/avant/médial · anneau inguinal externe · superficiel plus médial." },
     { id: "FC-ANAT-07-023", chapter: "07", priority: "P2", kind: "text", front: "Oblique externe : anneau inguinal externe ?", back: "Ses piliers délimitent l'anneau inguinal superficiel/externe." },
     { id: "FC-ANAT-07-024", chapter: "07", priority: "P2", kind: "text", front: "Oblique externe : direction des fibres ?", back: "En bas, en avant et médialement." },
     { id: "FC-ANAT-07-025", chapter: "07", priority: "P2", kind: "text", front: "Oblique externe : rotation / flexion ?", back: "Rotateur controlatéral ; fléchisseur antérieur." },
     { id: "FC-ANAT-07-026", chapter: "07", priority: "P2", kind: "text", front: "Paralysie du dentelé : signe clinique ?", back: "Décollement de la scapula (scapula alata)." },
     { id: "FC-ANAT-07-027", chapter: "07", priority: "P2", kind: "text", front: "Petit pectoral : action (point fixe thorax) ?", back: "Abaisse le moignon de l'épaule (muscle triangulaire à sommet supérieur)." },
-    { id: "FC-ANAT-07-028", chapter: "07", priority: "P2", kind: "text", front: "Petit pectoral ?", back: "Abaisse le moignon de l’épaule ⭐⭐⭐." },
+    { id: "FC-ANAT-07-028", chapter: "07", priority: "P2", kind: "text", front: "Petit pectoral : action (point fixe thorax) ⭐⭐⭐ ?", back: "Abaisse le moignon de l’épaule ⭐⭐⭐." },
     { id: "FC-ANAT-07-029", chapter: "07", priority: "P2", kind: "text", front: "Pédicule intercostal + ponction ?", back: "Face inférieure de la côte · raser le pôle supérieur." },
     { id: "FC-ANAT-07-030", chapter: "07", priority: "P2", kind: "text", front: "Pédicule intercostal : où ? Ponction ?", back: "Face inférieure de la côte (gouttière). Ponction = raser le pôle supérieur." },
     { id: "FC-ANAT-07-031", chapter: "07", priority: "P2", kind: "text", front: "Rhomboïdes : origine scapula + niveaux rachis ?", back: "Bord médial de la scapula. Petit = C6–C7 ; grand = T1–T4. Adducteurs (vers la ligne médiane)." },
@@ -44,38 +44,19 @@
     { id: "FC-ANAT-07-035", chapter: "07", priority: "P2", kind: "text", front: "Rhomboïdes : origines ? (4)", back: "adducteurs." },
     { id: "FC-ANAT-07-036", chapter: "07", priority: "P2", kind: "text", front: "Tendon conjoint : quels muscles ?", back: "Transverse + oblique interne." },
     { id: "FC-ANAT-07-037", chapter: "07", priority: "P2", kind: "text", front: "Transverse de l'abdomen : profondeur + respiration ?", back: "Profond ; expirateur ; antagoniste du diaphragme ; participe au tendon conjoint." },
-    { id: "FC-ANAT-07-038", chapter: "07", priority: "P2", kind: "text", front: "Transverse de l’abdomen ?", back: "Profond · expirateur · tendon conjoint." },
+    { id: "FC-ANAT-07-038", chapter: "07", priority: "P2", kind: "text", front: "Transverse de l’abdomen : profondeur + rôle respiratoire + tendon conjoint ?", back: "Profond · expirateur · tendon conjoint." },
     { id: "FC-ANAT-07-039", chapter: "07", priority: "P3", kind: "text", front: "Angle de Louis / xyphoïde ?", back: "Repère sternum · xyphoïde s’ossifie ~40 ans." },
     { id: "FC-ANAT-07-040", chapter: "07", priority: "P3", kind: "text", front: "Angle de Louis : où ?", back: "Sur le sternum (jonction manubrium–corps) — repère clinique." },
     { id: "FC-ANAT-07-041", chapter: "07", priority: "P3", kind: "text", front: "Cage thoracique : rôles + sternum ?", back: "Protéger + mouvements respiratoires. Sternum = os plat ; angle de Louis ; xyphoïde s'ossifie ~40 ans." },
-    { id: "FC-ANAT-07-042", chapter: "07", priority: "P3", kind: "text", front: "Coupoles diaphragmatiques ?", back: "Droite 4ᵉ EIC · gauche 5ᵉ · inspirateur." },
+    { id: "FC-ANAT-07-042", chapter: "07", priority: "P3", kind: "text", front: "Coupoles diaphragmatiques : niveaux EIC + action ?", back: "Droite 4ᵉ EIC · gauche 5ᵉ · inspirateur." },
     { id: "FC-ANAT-07-043", chapter: "07", priority: "P3", kind: "text", front: "Diaphragme : coupoles EIC + action ?", back: "Droite 4e EIC, gauche 5e ; inspirateur (abaisse le centre phrénique, écarte les côtes)." },
     { id: "FC-ANAT-07-044", chapter: "07", priority: "P3", kind: "text", front: "Grand pectoral : action générale ?", back: "Adducteur / rotateur interne du bras (muscle antérieur du thorax)." },
     { id: "FC-ANAT-07-045", chapter: "07", priority: "P3", kind: "text", front: "Ligne blanche : idée ?", back: "Ligne médiane d'entrecroisement des aponévroses (accès chirurgical possible)." },
     { id: "FC-ANAT-07-046", chapter: "07", priority: "P3", kind: "text", front: "Oblique interne : direction des fibres (vs externe) ?", back: "Orientées autrement que l'externe (souvent en haut et en avant / médial selon le cours) — antagonist/synergiste selon l'action." },
-    { id: "FC-ANAT-07-047", chapter: "07", priority: "P3", kind: "text", front: "SCM unilatéral ?", back: "Rotation opposée + inclinaison même côté." },
+    { id: "FC-ANAT-07-047", chapter: "07", priority: "P3", kind: "text", front: "SCM unilatéral : actions sur la tête ?", back: "Rotation opposée + inclinaison même côté." },
     { id: "FC-ANAT-07-048", chapter: "07", priority: "P3", kind: "text", front: "SCM unilatéral vs bilatéral ?", back: "Unilatéral = rotation opposée + inclinaison homolatérale. Bilatéral = abaisseur + inspirateur accessoire." },
     { id: "FC-ANAT-07-049", chapter: "07", priority: "P3", kind: "text", front: "Sous-clavier : idée ?", back: "Sous la clavicule ; stabilise / abaisse la clavicule." },
-    { id: "FC-ANAT-07-050", chapter: "07", priority: "P3", kind: "text", front: "Trapèze : situation + actions bilatérales (idée) ?", back: "Postérieur superficiel ; 3 faisceaux ; bilatéral = extension tête / rapproche ou abaisse scapulas selon faisceau." },
-    { id: "FC-ANAT-07-S01", chapter: "07", priority: "P3", kind: "schema", front: "Schéma — Cage thoracique", back: "Cage thoracique", frontImg: "matiere/anatomie/img/ch07/blank/01_cage_thoracique.png", backImg: "matiere/anatomie/img/ch07/01_cage_thoracique.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S02", chapter: "07", priority: "P3", kind: "schema", front: "Schéma — Sternum", back: "Sternum", frontImg: "matiere/anatomie/img/ch07/blank/02_sternum.png", backImg: "matiere/anatomie/img/ch07/02_sternum.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S03", chapter: "07", priority: "P3", kind: "schema", front: "Schéma — Côte type", back: "Côte type", frontImg: "matiere/anatomie/img/ch07/blank/03_cote.png", backImg: "matiere/anatomie/img/ch07/03_cote.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S04", chapter: "07", priority: "P3", kind: "schema", front: "Schéma — Types de côtes", back: "Types de côtes", frontImg: "matiere/anatomie/img/ch07/blank/04_types_cotes.png", backImg: "matiere/anatomie/img/ch07/04_types_cotes.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S05", chapter: "07", priority: "P3", kind: "schema", front: "Schéma — Pédicule intercostal", back: "Pédicule intercostal", frontImg: "matiere/anatomie/img/ch07/blank/05_intercostal_frontal.png", backImg: "matiere/anatomie/img/ch07/05_intercostal_frontal.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S06", chapter: "07", priority: "P2", kind: "schema", front: "Schéma — SCM", back: "SCM", frontImg: "matiere/anatomie/img/ch07/blank/07_scm.png", backImg: "matiere/anatomie/img/ch07/07_scm.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S07", chapter: "07", priority: "P2", kind: "schema", front: "Schéma — Levator scapulae", back: "Levator scapulae", frontImg: "matiere/anatomie/img/ch07/blank/08_levator_scapulae.png", backImg: "matiere/anatomie/img/ch07/08_levator_scapulae.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S08", chapter: "07", priority: "P2", kind: "schema", front: "Schéma — Rhomboïdes", back: "Rhomboïdes", frontImg: "matiere/anatomie/img/ch07/blank/09_rhomboides.png", backImg: "matiere/anatomie/img/ch07/09_rhomboides.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S09", chapter: "07", priority: "P2", kind: "schema", front: "Schéma — Dentelé antérieur", back: "Dentelé antérieur", frontImg: "matiere/anatomie/img/ch07/blank/11_dentele.png", backImg: "matiere/anatomie/img/ch07/11_dentele.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S10", chapter: "07", priority: "P2", kind: "schema", front: "Schéma — Grand dorsal", back: "Grand dorsal", frontImg: "matiere/anatomie/img/ch07/blank/12_grand_dorsal.png", backImg: "matiere/anatomie/img/ch07/12_grand_dorsal.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S11", chapter: "07", priority: "P2", kind: "schema", front: "Schéma — Petit pectoral", back: "Petit pectoral", frontImg: "matiere/anatomie/img/ch07/blank/14_petit_pectoral.png", backImg: "matiere/anatomie/img/ch07/14_petit_pectoral.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S12", chapter: "07", priority: "P2", kind: "schema", front: "Schéma — Grand droit", back: "Grand droit", frontImg: "matiere/anatomie/img/ch07/blank/16_grand_droit.png", backImg: "matiere/anatomie/img/ch07/16_grand_droit.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S13", chapter: "07", priority: "P2", kind: "schema", front: "Schéma — Transverse", back: "Transverse", frontImg: "matiere/anatomie/img/ch07/blank/17_transverse.png", backImg: "matiere/anatomie/img/ch07/17_transverse.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S14", chapter: "07", priority: "P2", kind: "schema", front: "Schéma — Oblique externe", back: "Oblique externe", frontImg: "matiere/anatomie/img/ch07/blank/19_oblique_externe.png", backImg: "matiere/anatomie/img/ch07/19_oblique_externe.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S15", chapter: "07", priority: "P2", kind: "schema", front: "Schéma — Canal inguinal — coupe axiale", back: "Canal inguinal — coupe axiale", frontImg: "matiere/anatomie/img/ch07/blank/20_canal_inguinal_axial.png", backImg: "matiere/anatomie/img/ch07/20_canal_inguinal_axial.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S16", chapter: "07", priority: "P2", kind: "schema", front: "Schéma — Canal inguinal — vue antérieure", back: "Canal inguinal — vue antérieure", frontImg: "matiere/anatomie/img/ch07/blank/21_canal_inguinal_ant.png", backImg: "matiere/anatomie/img/ch07/21_canal_inguinal_ant.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S17", chapter: "07", priority: "P2", kind: "schema", front: "Schéma — Carré des lombes", back: "Carré des lombes", frontImg: "matiere/anatomie/img/ch07/blank/22_carre_lombes.png", backImg: "matiere/anatomie/img/ch07/22_carre_lombes.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S18", chapter: "07", priority: "P2", kind: "schema", front: "Schéma — Ilio-psoas", back: "Ilio-psoas", frontImg: "matiere/anatomie/img/ch07/blank/23_ilio_psoas.png", backImg: "matiere/anatomie/img/ch07/23_ilio_psoas.jpg?v=fc7v1" },
-    { id: "FC-ANAT-07-S19", chapter: "07", priority: "P2", kind: "schema", front: "Schéma — Diaphragme", back: "Diaphragme", frontImg: "matiere/anatomie/img/ch07/blank/24_diaphragme.png", backImg: "matiere/anatomie/img/ch07/24_diaphragme.jpg?v=fc7v1" }
+    { id: "FC-ANAT-07-050", chapter: "07", priority: "P3", kind: "text", front: "Trapèze : situation + actions bilatérales (idée) ?", back: "Postérieur superficiel ; 3 faisceaux ; bilatéral = extension tête / rapproche ou abaisse scapulas selon faisceau." }
   ];
   if (!w.PASS_FLASH_REGISTRY.includes("07")) w.PASS_FLASH_REGISTRY.push("07");
 })(window);

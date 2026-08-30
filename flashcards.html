@@ -363,17 +363,17 @@
     </section>
   </div>
 
-  <script src="./data/flash/ch01.js?v=6"></script>
-  <script src="./data/flash/ch02.js?v=5"></script>
-  <script src="./data/flash/ch03.js?v=5"></script>
-  <script src="./data/flash/ch04.js?v=5"></script>
-  <script src="./data/flash/ch05.js?v=5"></script>
-  <script src="./data/flash/ch06.js?v=5"></script>
-  <script src="./data/flash/ch07.js?v=5"></script>
-  <script src="./data/flash/ch08.js?v=5"></script>
-  <script src="./data/flash/ch09.js?v=5"></script>
-  <script src="./data/flash/ch10.js?v=5"></script>
-  <script src="./data/flash/ch11.js?v=5"></script>
+  <script src="./data/flash/ch01.js?v=7"></script>
+  <script src="./data/flash/ch02.js?v=7"></script>
+  <script src="./data/flash/ch03.js?v=7"></script>
+  <script src="./data/flash/ch04.js?v=7"></script>
+  <script src="./data/flash/ch05.js?v=7"></script>
+  <script src="./data/flash/ch06.js?v=7"></script>
+  <script src="./data/flash/ch07.js?v=7"></script>
+  <script src="./data/flash/ch08.js?v=7"></script>
+  <script src="./data/flash/ch09.js?v=7"></script>
+  <script src="./data/flash/ch10.js?v=7"></script>
+  <script src="./data/flash/ch11.js?v=7"></script>
   <script src="./js/flash-srs.js?v=2"></script>
     <script>
     const CHAPTER_ORDER = ["01","02","03","04","05","06","07","08","09","10","11"];
@@ -559,13 +559,20 @@
       elEnd.classList.toggle("hidden", view !== "end");
     }
 
+    function schemaFrontPrompt(front) {
+      if (!front) return "Sch\u00e9ma : nommer les l\u00e9gendes ?";
+      if (/[?:]/.test(front)) return front;
+      if (front.indexOf("Sch\u00e9ma") === 0) return front + " : nommer les l\u00e9gendes ?";
+      return front;
+    }
+
     function fillSide(el, text, imgSrc, isBack) {
       el.innerHTML = "";
       if (imgSrc) {
-        if (text) {
+        if (text || !isBack) {
           const p = document.createElement("p");
           p.className = isBack ? "fc-caption" : "fc-prompt";
-          p.textContent = isBack ? text : "Nomme les l\u00e9gendes";
+          p.textContent = isBack ? (text || "Sch\u00e9ma l\u00e9gend\u00e9") : schemaFrontPrompt(text);
           el.appendChild(p);
         }
         const img = document.createElement("img");
