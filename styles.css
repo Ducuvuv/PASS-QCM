@@ -261,6 +261,21 @@ body.has-tabbar .nav-chips {
   color: #3730a3;
 }
 
+.notice-important {
+  margin: 0 0 1rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid #fcd34d;
+  background: #fffbeb;
+  font-size: 0.88rem;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.notice-important strong {
+  color: #b45309;
+}
+
 .page-sub + .page-title {
   margin-top: 0.15rem;
 }
