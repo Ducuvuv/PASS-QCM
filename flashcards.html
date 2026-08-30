@@ -363,17 +363,17 @@
     </section>
   </div>
 
-  <script src="./data/flash/ch01.js?v=7"></script>
-  <script src="./data/flash/ch02.js?v=7"></script>
-  <script src="./data/flash/ch03.js?v=7"></script>
-  <script src="./data/flash/ch04.js?v=7"></script>
-  <script src="./data/flash/ch05.js?v=7"></script>
-  <script src="./data/flash/ch06.js?v=7"></script>
-  <script src="./data/flash/ch07.js?v=7"></script>
-  <script src="./data/flash/ch08.js?v=7"></script>
-  <script src="./data/flash/ch09.js?v=7"></script>
-  <script src="./data/flash/ch10.js?v=7"></script>
-  <script src="./data/flash/ch11.js?v=7"></script>
+  <script src="./data/flash/ch01.js?v=8"></script>
+  <script src="./data/flash/ch02.js?v=8"></script>
+  <script src="./data/flash/ch03.js?v=8"></script>
+  <script src="./data/flash/ch04.js?v=8"></script>
+  <script src="./data/flash/ch05.js?v=8"></script>
+  <script src="./data/flash/ch06.js?v=8"></script>
+  <script src="./data/flash/ch07.js?v=8"></script>
+  <script src="./data/flash/ch08.js?v=8"></script>
+  <script src="./data/flash/ch09.js?v=8"></script>
+  <script src="./data/flash/ch10.js?v=8"></script>
+  <script src="./data/flash/ch11.js?v=8"></script>
   <script src="./js/flash-srs.js?v=2"></script>
     <script>
     const CHAPTER_ORDER = ["01","02","03","04","05","06","07","08","09","10","11"];
@@ -445,7 +445,7 @@
       for (const ch of chs) {
         for (const card of decks[ch] || []) {
           if (!allowP.has(card.priority)) continue;
-          const k = card.kind || "text";
+      const k = card.frontImg ? "schema" : (card.kind || "text");
           if (kind === "text" && k !== "text") continue;
           if (kind === "schema" && k !== "schema") continue;
           if (mode === "review" && !rev.has(card.id)) continue;
@@ -606,7 +606,7 @@
     function renderCard() {
       const card = session[index];
       if (!card) return;
-      const isSchema = (card.kind || "text") === "schema";
+      const isSchema = !!card.frontImg || (card.kind || "text") === "schema";
       fillSide(elFront, card.front, isSchema ? card.frontImg : null, false);
       fillSide(elBack, card.back, isSchema ? card.backImg : null, true);
       elMeta.dataset.base = card.priority + " \u00b7 ch." + card.chapter + (isSchema ? " \u00b7 sch\u00e9ma" : "") + " \u00b7 Touche pour retourner";
