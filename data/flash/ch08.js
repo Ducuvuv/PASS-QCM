@@ -1,6 +1,6 @@
 /**
  * Flashcards Anatomie - chapitre 08 (Appareil digestif)
- * Sync leger depuis fiches Matiere + decks existants. kind: text | schema | schema | schema | schema
+ * Sync leger depuis fiches Matiere + decks existants. kind: text
  */
 (function (w) {
   w.PASS_FLASH = w.PASS_FLASH || {};
@@ -74,24 +74,7 @@
     { id: "FC-ANAT-08-065", chapter: "08", priority: "P3", kind: "text", front: "Pli sublingual 🆕 ?", back: "Relief de la glande sublinguale." },
     { id: "FC-ANAT-08-066", chapter: "08", priority: "P3", kind: "text", front: "Surface externe du côlon : reliefs ?", back: "Ténias, haustrations, appendices séro-graisseux." },
     { id: "FC-ANAT-08-067", chapter: "08", priority: "P3", kind: "text", front: "Tube digestif : enchaînement général ?", back: "Bouche → pharynx → œsophage → estomac → grêle → côlon → rectum → anus." },
-    { id: "FC-ANAT-08-068", chapter: "08", priority: "P3", kind: "text", front: "Volvulus : segment colique souvent cité ?", back: "Sigmoïde." },
-    { id: "FC-ANAT-08-S01", chapter: "08", priority: "P3", kind: "schema", front: "Schéma — Tube digestif", back: "Tube digestif", frontImg: "matiere/anatomie/img/ch08/blank/01_tube_digestif.png", backImg: "matiere/anatomie/img/ch08/01_tube_digestif.png" },
-    { id: "FC-ANAT-08-S02", chapter: "08", priority: "P3", kind: "schema", front: "Schéma — Isthme du gosier", back: "Isthme du gosier", frontImg: "matiere/anatomie/img/ch08/blank/02_isthme_gosier.png", backImg: "matiere/anatomie/img/ch08/02_isthme_gosier.png" },
-    { id: "FC-ANAT-08-S03", chapter: "08", priority: "P3", kind: "schema", front: "Schéma — Pharynx", back: "Pharynx", frontImg: "matiere/anatomie/img/ch08/blank/03_pharynx.png", backImg: "matiere/anatomie/img/ch08/03_pharynx.png" },
-    { id: "FC-ANAT-08-S04", chapter: "08", priority: "P3", kind: "schema", front: "Schéma — Œsophage", back: "Œsophage", frontImg: "matiere/anatomie/img/ch08/blank/04_oesophage.png", backImg: "matiere/anatomie/img/ch08/04_oesophage.png" },
-    { id: "FC-ANAT-08-S05", chapter: "08", priority: "P2", kind: "schema", front: "Schéma — Neuf cadrans", back: "Neuf cadrans", frontImg: "matiere/anatomie/img/ch08/blank/05_9_cadrans.png", backImg: "matiere/anatomie/img/ch08/05_9_cadrans.png" },
-    { id: "FC-ANAT-08-S06", chapter: "08", priority: "P2", kind: "schema", front: "Schéma — Méso", back: "Méso", frontImg: "matiere/anatomie/img/ch08/blank/06_meso.png", backImg: "matiere/anatomie/img/ch08/06_meso.png" },
-    { id: "FC-ANAT-08-S07", chapter: "08", priority: "P1", kind: "schema", front: "Schéma — Estomac", back: "Estomac", frontImg: "matiere/anatomie/img/ch08/blank/07_estomac.png", backImg: "matiere/anatomie/img/ch08/07_estomac.png" },
-    { id: "FC-ANAT-08-S08", chapter: "08", priority: "P1", kind: "schema", front: "Schéma — Intestin grêle", back: "Intestin grêle", frontImg: "matiere/anatomie/img/ch08/blank/08_intestin_grele.png", backImg: "matiere/anatomie/img/ch08/08_intestin_grele.png" },
-    { id: "FC-ANAT-08-S09", chapter: "08", priority: "P1", kind: "schema", front: "Schéma — Duodénum", back: "Duodénum", frontImg: "matiere/anatomie/img/ch08/blank/09_duodenum.png", backImg: "matiere/anatomie/img/ch08/09_duodenum.png" },
-    { id: "FC-ANAT-08-S10", chapter: "08", priority: "P1", kind: "schema", front: "Schéma — Côlon 5 segments", back: "Côlon 5 segments", frontImg: "matiere/anatomie/img/ch08/blank/10_colon_5.png", backImg: "matiere/anatomie/img/ch08/10_colon_5.png" },
-    { id: "FC-ANAT-08-S11", chapter: "08", priority: "P1", kind: "schema", front: "Schéma — Rectum", back: "Rectum", frontImg: "matiere/anatomie/img/ch08/blank/12_rectum.png", backImg: "matiere/anatomie/img/ch08/12_rectum.png" },
-    { id: "FC-ANAT-08-S12", chapter: "08", priority: "P2", kind: "schema", front: "Schéma — Glandes salivaires", back: "Glandes salivaires", frontImg: "matiere/anatomie/img/ch08/blank/13_glandes_salivaires.png", backImg: "matiere/anatomie/img/ch08/13_glandes_salivaires.png" },
-    { id: "FC-ANAT-08-S13", chapter: "08", priority: "P2", kind: "schema", front: "Schéma — Foie face supérieure", back: "Foie face supérieure", frontImg: "matiere/anatomie/img/ch08/blank/14_foie_sup.png", backImg: "matiere/anatomie/img/ch08/14_foie_sup.png" },
-    { id: "FC-ANAT-08-S14", chapter: "08", priority: "P2", kind: "schema", front: "Schéma — Foie face inférieure", back: "Foie face inférieure", frontImg: "matiere/anatomie/img/ch08/blank/15_foie_inf.png", backImg: "matiere/anatomie/img/ch08/15_foie_inf.png" },
-    { id: "FC-ANAT-08-S15", chapter: "08", priority: "P2", kind: "schema", front: "Schéma — Voies biliaires", back: "Voies biliaires", frontImg: "matiere/anatomie/img/ch08/blank/16_voies_biliaires.png", backImg: "matiere/anatomie/img/ch08/16_voies_biliaires.png" },
-    { id: "FC-ANAT-08-S16", chapter: "08", priority: "P2", kind: "schema", front: "Schéma — Pancréas", back: "Pancréas", frontImg: "matiere/anatomie/img/ch08/blank/17_pancreas.png", backImg: "matiere/anatomie/img/ch08/17_pancreas.png" },
-    { id: "FC-ANAT-08-S17", chapter: "08", priority: "P2", kind: "schema", front: "Schéma — Vascularisation artérielle", back: "Vascularisation artérielle", frontImg: "matiere/anatomie/img/ch08/blank/18_vascularisation.png", backImg: "matiere/anatomie/img/ch08/18_vascularisation.png" }
+    { id: "FC-ANAT-08-068", chapter: "08", priority: "P3", kind: "text", front: "Volvulus : segment colique souvent cité ?", back: "Sigmoïde." }
   ];
   if (!w.PASS_FLASH_REGISTRY.includes("08")) w.PASS_FLASH_REGISTRY.push("08");
 })(window);

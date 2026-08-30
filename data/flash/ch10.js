@@ -1,6 +1,6 @@
 /**
  * Flashcards Anatomie - chapitre 10 (Membre superieur)
- * Sync leger depuis fiches Matiere + decks existants. kind: text | schema | schema
+ * Sync leger depuis fiches Matiere + decks existants. kind: text
  */
 (function (w) {
   w.PASS_FLASH = w.PASS_FLASH || {};
@@ -120,46 +120,7 @@
     { id: "FC-ANAT-10-111", chapter: "10", priority: "P3", kind: "text", front: "Segments du MS ? (2)", back: "bras" },
     { id: "FC-ANAT-10-112", chapter: "10", priority: "P3", kind: "text", front: "Segments du MS ? (3)", back: "avant-bras" },
     { id: "FC-ANAT-10-113", chapter: "10", priority: "P3", kind: "text", front: "Segments du MS ? (4)", back: "main." },
-    { id: "FC-ANAT-10-114", chapter: "10", priority: "P3", kind: "text", front: "Segments du membre supérieur ?", back: "Ceinture (clavicule, scapula) → bras (humérus) → avant-bras (radius, ulna) → main (carpe, métacarpe, phalanges)." },
-    { id: "FC-ANAT-10-S01", chapter: "10", priority: "P2", kind: "schema", front: "Schéma — Segments", back: "Segments", frontImg: "matiere/anatomie/img/ch10/blank/01_segments.png", backImg: "matiere/anatomie/img/ch10/01_segments.png" },
-    { id: "FC-ANAT-10-S02", chapter: "10", priority: "P2", kind: "schema", front: "Schéma — Clavicule", back: "Clavicule", frontImg: "matiere/anatomie/img/ch10/blank/02_clavicule.png", backImg: "matiere/anatomie/img/ch10/02_clavicule.png" },
-    { id: "FC-ANAT-10-S03", chapter: "10", priority: "P2", kind: "schema", front: "Schéma — Humérus proximal", back: "Humérus proximal", frontImg: "matiere/anatomie/img/ch10/blank/06_humerus_prox.png", backImg: "matiere/anatomie/img/ch10/06_humerus_prox.png" },
-    { id: "FC-ANAT-10-S04", chapter: "10", priority: "P2", kind: "schema", front: "Schéma — Humérus distal", back: "Humérus distal", frontImg: "matiere/anatomie/img/ch10/blank/07_humerus_cols_dist.png", backImg: "matiere/anatomie/img/ch10/07_humerus_cols_dist.png" },
-    { id: "FC-ANAT-10-S05", chapter: "10", priority: "P2", kind: "schema", front: "Schéma — Trois fosses", back: "Trois fosses", frontImg: "matiere/anatomie/img/ch10/blank/08_humerus_fosses.png", backImg: "matiere/anatomie/img/ch10/08_humerus_fosses.png" },
-    { id: "FC-ANAT-10-S06", chapter: "10", priority: "P2", kind: "schema", front: "Schéma — Radius", back: "Radius", frontImg: "matiere/anatomie/img/ch10/blank/09_radius.png", backImg: "matiere/anatomie/img/ch10/09_radius.png" },
-    { id: "FC-ANAT-10-S07", chapter: "10", priority: "P2", kind: "schema", front: "Schéma — Ulna", back: "Ulna", frontImg: "matiere/anatomie/img/ch10/blank/10_ulna.png", backImg: "matiere/anatomie/img/ch10/10_ulna.png" },
-    { id: "FC-ANAT-10-S08", chapter: "10", priority: "P2", kind: "schema", front: "Schéma — Carpe", back: "Carpe", frontImg: "matiere/anatomie/img/ch10/blank/12_carpe.png", backImg: "matiere/anatomie/img/ch10/12_carpe.png" },
-    { id: "FC-ANAT-10-S09", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Coiffe", back: "Coiffe", frontImg: "matiere/anatomie/img/ch10/blank/18_coiffe.png", backImg: "matiere/anatomie/img/ch10/18_coiffe.png" },
-    { id: "FC-ANAT-10-S10", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Deltoïde", back: "Deltoïde", frontImg: "matiere/anatomie/img/ch10/blank/21_deltoide.png", backImg: "matiere/anatomie/img/ch10/21_deltoide.png" },
-    { id: "FC-ANAT-10-S11", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Groupe antérieur", back: "Groupe antérieur", frontImg: "matiere/anatomie/img/ch10/blank/17_groupe_ant.png", backImg: "matiere/anatomie/img/ch10/17_groupe_ant.png" },
-    { id: "FC-ANAT-10-S12", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Ronds et dorsal", back: "Ronds et dorsal", frontImg: "matiere/anatomie/img/ch10/blank/19_ronds_dorsal.png", backImg: "matiere/anatomie/img/ch10/19_ronds_dorsal.png" },
-    { id: "FC-ANAT-10-S13", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Coaptation", back: "Coaptation", frontImg: "matiere/anatomie/img/ch10/blank/22_coaptation.png", backImg: "matiere/anatomie/img/ch10/22_coaptation.png" },
-    { id: "FC-ANAT-10-S14", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Fosse axillaire", back: "Fosse axillaire", frontImg: "matiere/anatomie/img/ch10/blank/48_fosse_coupes.png", backImg: "matiere/anatomie/img/ch10/48_fosse_coupes.png" },
-    { id: "FC-ANAT-10-S15", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Espaces scapulo-huméraux", back: "Espaces scapulo-huméraux", frontImg: "matiere/anatomie/img/ch10/blank/50_espaces.png", backImg: "matiere/anatomie/img/ch10/50_espaces.png" },
-    { id: "FC-ANAT-10-S16", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Coraco-brachial", back: "Coraco-brachial", frontImg: "matiere/anatomie/img/ch10/blank/23_coraco_brachial.png", backImg: "matiere/anatomie/img/ch10/23_coraco_brachial.png" },
-    { id: "FC-ANAT-10-S17", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Biceps et triceps", back: "Biceps et triceps", frontImg: "matiere/anatomie/img/ch10/blank/24_biceps_triceps.png", backImg: "matiere/anatomie/img/ch10/24_biceps_triceps.png" },
-    { id: "FC-ANAT-10-S18", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Prono-supination", back: "Prono-supination", frontImg: "matiere/anatomie/img/ch10/blank/27_prono_sup.png", backImg: "matiere/anatomie/img/ch10/27_prono_sup.png" },
-    { id: "FC-ANAT-10-S19", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Rond pronateur", back: "Rond pronateur", frontImg: "matiere/anatomie/img/ch10/blank/28_rond_pronateur.png", backImg: "matiere/anatomie/img/ch10/28_rond_pronateur.png" },
-    { id: "FC-ANAT-10-S20", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Épicondyliens", back: "Épicondyliens", frontImg: "matiere/anatomie/img/ch10/blank/29_epicondyliens.png", backImg: "matiere/anatomie/img/ch10/29_epicondyliens.png" },
-    { id: "FC-ANAT-10-S21", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — FSD", back: "FSD", frontImg: "matiere/anatomie/img/ch10/blank/30_fsd.png", backImg: "matiere/anatomie/img/ch10/30_fsd.png" },
-    { id: "FC-ANAT-10-S22", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Plan profond antérieur", back: "Plan profond antérieur", frontImg: "matiere/anatomie/img/ch10/blank/31_plan_profond_ant.png", backImg: "matiere/anatomie/img/ch10/31_plan_profond_ant.png" },
-    { id: "FC-ANAT-10-S23", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Extenseurs", back: "Extenseurs", frontImg: "matiere/anatomie/img/ch10/blank/33_extenseurs.png", backImg: "matiere/anatomie/img/ch10/33_extenseurs.png" },
-    { id: "FC-ANAT-10-S24", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Supinateur", back: "Supinateur", frontImg: "matiere/anatomie/img/ch10/blank/34_supinateur.png", backImg: "matiere/anatomie/img/ch10/34_supinateur.png" },
-    { id: "FC-ANAT-10-S25", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Groupe latéral", back: "Groupe latéral", frontImg: "matiere/anatomie/img/ch10/blank/35_groupe_lateral.png", backImg: "matiere/anatomie/img/ch10/35_groupe_lateral.png" },
-    { id: "FC-ANAT-10-S26", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Tabatière et canal", back: "Tabatière et canal", frontImg: "matiere/anatomie/img/ch10/blank/36_tabatiere_canal.png", backImg: "matiere/anatomie/img/ch10/36_tabatiere_canal.png" },
-    { id: "FC-ANAT-10-S27", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Lombricaux et interosseux", back: "Lombricaux et interosseux", frontImg: "matiere/anatomie/img/ch10/blank/39_lombricaux_io.png", backImg: "matiere/anatomie/img/ch10/39_lombricaux_io.png" },
-    { id: "FC-ANAT-10-S28", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Gaines", back: "Gaines", frontImg: "matiere/anatomie/img/ch10/blank/40_gaines.png", backImg: "matiere/anatomie/img/ch10/40_gaines.png" },
-    { id: "FC-ANAT-10-S29", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Thénar", back: "Thénar", frontImg: "matiere/anatomie/img/ch10/blank/41_thenar.png", backImg: "matiere/anatomie/img/ch10/41_thenar.png" },
-    { id: "FC-ANAT-10-S30", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Passages de la main", back: "Passages de la main", frontImg: "matiere/anatomie/img/ch10/blank/54_passages_main.png", backImg: "matiere/anatomie/img/ch10/54_passages_main.png" },
-    { id: "FC-ANAT-10-S31", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Plexus", back: "Plexus", frontImg: "matiere/anatomie/img/ch10/blank/42_plexus.png", backImg: "matiere/anatomie/img/ch10/42_plexus.png" },
-    { id: "FC-ANAT-10-S32", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Musculo-cutané", back: "Musculo-cutané", frontImg: "matiere/anatomie/img/ch10/blank/43_musculo_cutane.png", backImg: "matiere/anatomie/img/ch10/43_musculo_cutane.png" },
-    { id: "FC-ANAT-10-S33", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Médian", back: "Médian", frontImg: "matiere/anatomie/img/ch10/blank/44_median.png", backImg: "matiere/anatomie/img/ch10/44_median.png" },
-    { id: "FC-ANAT-10-S34", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Ulnaire", back: "Ulnaire", frontImg: "matiere/anatomie/img/ch10/blank/45_ulnaire.png", backImg: "matiere/anatomie/img/ch10/45_ulnaire.png" },
-    { id: "FC-ANAT-10-S35", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Radial", back: "Radial", frontImg: "matiere/anatomie/img/ch10/blank/46_radial.png", backImg: "matiere/anatomie/img/ch10/46_radial.png" },
-    { id: "FC-ANAT-10-S36", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Axillaire", back: "Axillaire", frontImg: "matiere/anatomie/img/ch10/blank/47_axillaire.png", backImg: "matiere/anatomie/img/ch10/47_axillaire.png" },
-    { id: "FC-ANAT-10-S37", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Artères du bras", back: "Artères du bras", frontImg: "matiere/anatomie/img/ch10/blank/51_arteres_bras.png", backImg: "matiere/anatomie/img/ch10/51_arteres_bras.png" },
-    { id: "FC-ANAT-10-S38", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Vascularisation du coude", back: "Vascularisation du coude", frontImg: "matiere/anatomie/img/ch10/blank/52_vasc_coude.png", backImg: "matiere/anatomie/img/ch10/52_vasc_coude.png" },
-    { id: "FC-ANAT-10-S39", chapter: "10", priority: "P1", kind: "schema", front: "Schéma — Vascularisation de la main", back: "Vascularisation de la main", frontImg: "matiere/anatomie/img/ch10/blank/53_vasc_main.png", backImg: "matiere/anatomie/img/ch10/53_vasc_main.png" }
+    { id: "FC-ANAT-10-114", chapter: "10", priority: "P3", kind: "text", front: "Segments du membre supérieur ?", back: "Ceinture (clavicule, scapula) → bras (humérus) → avant-bras (radius, ulna) → main (carpe, métacarpe, phalanges)." }
   ];
   if (!w.PASS_FLASH_REGISTRY.includes("10")) w.PASS_FLASH_REGISTRY.push("10");
 })(window);

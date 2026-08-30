@@ -1,6 +1,6 @@
 /**
  * Flashcards Anatomie - chapitre 09 (Genito-urinaire)
- * Sync leger depuis fiches Matiere + decks existants. kind: text | schema | schema | schema
+ * Sync leger depuis fiches Matiere + decks existants. kind: text
  */
 (function (w) {
   w.PASS_FLASH = w.PASS_FLASH || {};
@@ -55,17 +55,7 @@
     { id: "FC-ANAT-09-046", chapter: "09", priority: "P3", kind: "text", front: "Uretères : longueur / calibre / parties ?", back: "~25 cm, 3–5 mm ; abdominale (lombaire L2–L5 + iliaque) puis pelvienne." },
     { id: "FC-ANAT-09-047", chapter: "09", priority: "P3", kind: "text", front: "Urothélium : où ?", back: "Muqueuse continue des voies excrétrices." },
     { id: "FC-ANAT-09-048", chapter: "09", priority: "P3", kind: "text", front: "Urètre : généralités (idée) ?", back: "Conduit d'évacuation vésicale ; long et segmenté chez l'homme, court chez la femme." },
-    { id: "FC-ANAT-09-049", chapter: "09", priority: "P3", kind: "text", front: "Voie excrétrice intra-rénale : ordre ?", back: "8–10 petits calices → 3 grands → tiges → pelvis → jonction pyélo-urétérale au hile." },
-    { id: "FC-ANAT-09-S01", chapter: "09", priority: "P2", kind: "schema", front: "Schéma — Appareil urinaire", back: "Appareil urinaire", frontImg: "matiere/anatomie/img/ch09/blank/01_appareil_urinaire.png", backImg: "matiere/anatomie/img/ch09/01_appareil_urinaire.png" },
-    { id: "FC-ANAT-09-S02", chapter: "09", priority: "P2", kind: "schema", front: "Schéma — Rein vue antérieure", back: "Rein vue antérieure", frontImg: "matiere/anatomie/img/ch09/blank/02_rein_ant.png", backImg: "matiere/anatomie/img/ch09/02_rein_ant.png" },
-    { id: "FC-ANAT-09-S03", chapter: "09", priority: "P2", kind: "schema", front: "Schéma — Coupe du rein", back: "Coupe du rein", frontImg: "matiere/anatomie/img/ch09/blank/03_rein_coupe.png", backImg: "matiere/anatomie/img/ch09/03_rein_coupe.png" },
-    { id: "FC-ANAT-09-S04", chapter: "09", priority: "P2", kind: "schema", front: "Schéma — Parenchyme", back: "Parenchyme", frontImg: "matiere/anatomie/img/ch09/blank/04_parenchyme.png", backImg: "matiere/anatomie/img/ch09/04_parenchyme.png" },
-    { id: "FC-ANAT-09-S05", chapter: "09", priority: "P2", kind: "schema", front: "Schéma — Voie excrétrice", back: "Voie excrétrice", frontImg: "matiere/anatomie/img/ch09/blank/05_voie_excretrice.png", backImg: "matiere/anatomie/img/ch09/05_voie_excretrice.png" },
-    { id: "FC-ANAT-09-S06", chapter: "09", priority: "P2", kind: "schema", front: "Schéma — Segments rénaux", back: "Segments rénaux", frontImg: "matiere/anatomie/img/ch09/blank/06_segments.png", backImg: "matiere/anatomie/img/ch09/06_segments.png" },
-    { id: "FC-ANAT-09-S07", chapter: "09", priority: "P2", kind: "schema", front: "Schéma — Uretères", back: "Uretères", frontImg: "matiere/anatomie/img/ch09/blank/07_ureteres.png", backImg: "matiere/anatomie/img/ch09/07_ureteres.png" },
-    { id: "FC-ANAT-09-S08", chapter: "09", priority: "P2", kind: "schema", front: "Schéma — Vessie et trigone", back: "Vessie et trigone", frontImg: "matiere/anatomie/img/ch09/blank/08_vessie.png", backImg: "matiere/anatomie/img/ch09/08_vessie.png" },
-    { id: "FC-ANAT-09-S09", chapter: "09", priority: "P1", kind: "schema", front: "Schéma — Urètre masculin", back: "Urètre masculin", frontImg: "matiere/anatomie/img/ch09/blank/09_uretre_masculin.png", backImg: "matiere/anatomie/img/ch09/09_uretre_masculin.png" },
-    { id: "FC-ANAT-09-S10", chapter: "09", priority: "P1", kind: "schema", front: "Schéma — Urètre féminin", back: "Urètre féminin", frontImg: "matiere/anatomie/img/ch09/blank/10_uretre_feminin.png", backImg: "matiere/anatomie/img/ch09/10_uretre_feminin.png" }
+    { id: "FC-ANAT-09-049", chapter: "09", priority: "P3", kind: "text", front: "Voie excrétrice intra-rénale : ordre ?", back: "8–10 petits calices → 3 grands → tiges → pelvis → jonction pyélo-urétérale au hile." }
   ];
   if (!w.PASS_FLASH_REGISTRY.includes("09")) w.PASS_FLASH_REGISTRY.push("09");
 })(window);
