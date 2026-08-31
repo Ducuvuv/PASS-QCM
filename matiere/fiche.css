@@ -27,6 +27,7 @@
   --radius: 16px;
   --radius-pill: 999px;
   --font: "Manrope", system-ui, sans-serif;
+  --font-emoji: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -37,7 +38,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: var(--font);
+  font-family: var(--font), var(--font-emoji);
   color: var(--ink);
   background: var(--bg);
   line-height: 1.45;
@@ -163,6 +164,7 @@ body.lecture-on .practice-bar { display: inline-flex !important; }
   border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--surface);
+  font-family: var(--font), var(--font-emoji);
 }
 .tag.p1 { background: var(--p1-bg); color: var(--p1); border-color: #fecaca; }
 .tag.p2 { background: var(--p2-bg); color: var(--p2); border-color: #fed7aa; }
