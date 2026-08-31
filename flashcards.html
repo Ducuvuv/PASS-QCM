@@ -499,10 +499,10 @@
     function saveFlashPlay() {
       try {
         if (!session.length || elPlay.classList.contains("hidden")) {
-          sessionStorage.removeItem(FLASH_PLAY_KEY);
+          localStorage.removeItem(FLASH_PLAY_KEY);
           return;
         }
-        sessionStorage.setItem(
+        localStorage.setItem(
           FLASH_PLAY_KEY,
           JSON.stringify({
             ids: session.map(function (c) { return c.id; }),
@@ -515,13 +515,13 @@
 
     function clearFlashPlay() {
       try {
-        sessionStorage.removeItem(FLASH_PLAY_KEY);
+        localStorage.removeItem(FLASH_PLAY_KEY);
       } catch (_) {}
     }
 
     function tryResumeFlashPlay() {
       try {
-        const raw = JSON.parse(sessionStorage.getItem(FLASH_PLAY_KEY) || "null");
+        const raw = JSON.parse(localStorage.getItem(FLASH_PLAY_KEY) || "null");
         if (!raw || !raw.ids || !raw.ids.length) return false;
         const restored = raw.ids.map(cardById).filter(Boolean);
         if (!restored.length) {
