@@ -44,6 +44,10 @@
   }
 
   window.addEventListener("beforeunload", saveChrono);
+  window.addEventListener("pagehide", saveChrono);
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") saveChrono();
+  });
 
   if (btnChrono && chronoEl) {
     btnChrono.addEventListener("click", () => {
@@ -453,6 +457,32 @@
       );
     } catch (_) {}
   })();
+
+  function flushAllQuizState() {
+    if (!ficheStore || !FICHE_CH) return;
+    const quizzes = {};
+    document.querySelectorAll(".label-quiz").forEach(function (quiz, quizIndex) {
+      const slots = [...quiz.querySelectorAll(".slot, .label-slot")];
+      const placements = [];
+      slots.forEach(function (slot, slotIndex) {
+        const drop = slot.matches(".drop") ? slot : slot.querySelector(".drop");
+        if (drop && drop.dataset.chip) {
+          placements.push({
+            slotIndex: slotIndex,
+            chipId: drop.dataset.chip,
+            value: drop.dataset.value || "",
+          });
+        }
+      });
+      if (placements.length) quizzes["q" + quizIndex] = { placements: placements };
+    });
+    ficheStore.saveChapter(FICHE_CH, { quizzes: quizzes, chrono: seconds });
+  }
+
+  window.addEventListener("pagehide", flushAllQuizState);
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") flushAllQuizState();
+  });
 
   // Suivi activité : ouverture de fiche (chXX.html)
   (function trackFicheOpen() {

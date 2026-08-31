@@ -335,6 +335,34 @@
       text-align: right;
       font-variant-numeric: tabular-nums;
     }
+    .flash-resume {
+      margin: 0 0 0.85rem;
+      padding: 0.85rem 0.9rem;
+      border: 1px solid #f0c9a8;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+    }
+    .flash-resume[hidden] { display: none !important; }
+    .flash-resume-title {
+      margin: 0 0 0.25rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #9a3412;
+    }
+    .flash-resume-meta {
+      margin: 0 0 0.65rem;
+      font-size: 0.92rem;
+      font-weight: 650;
+      color: var(--deep);
+    }
+    .flash-resume-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.45rem;
+    }
+    .flash-resume-actions .btn { width: 100%; margin: 0; }
   </style>
 </head>
 <body class="has-tabbar" data-tab="plus">
@@ -381,6 +409,14 @@
 
       <div class="panel">
         <h2>Quelles cartes ?</h2>
+        <div id="flash-resume" class="flash-resume" hidden>
+          <p class="flash-resume-title">Session en cours</p>
+          <p class="flash-resume-meta" id="flash-resume-meta">&mdash;</p>
+          <div class="flash-resume-actions">
+            <button type="button" class="btn" id="btn-flash-resume">Reprendre</button>
+            <button type="button" class="btn secondary" id="btn-flash-discard">Abandonner</button>
+          </div>
+        </div>
         <div id="fc-forecast" aria-live="polite"></div>
         <div class="session-block">
           <div class="session-controls">
@@ -458,6 +494,7 @@
   <script src="./data/flash/ch10.js?v=8"></script>
   <script src="./data/flash/ch11.js?v=8"></script>
   <script src="./js/flash-srs.js?v=5"></script>
+  <script src="./js/flash-session.js?v=1"></script>
   <script src="./js/flash-forecast.js?v=1"></script>
     <script>
     const CHAPTER_ORDER = ["01","02","03","04","05","06","07","08","09","10","11"];
@@ -485,7 +522,7 @@
     const elProgress = document.getElementById("progress");
     const elShuffle = document.getElementById("opt-shuffle");
 
-    const FLASH_PLAY_KEY = "pass-flash-play-v1";
+    const FLASH_SESSION = window.PASS_FLASH_SESSION;
 
     function cardById(id) {
       for (const ch of CHAPTER_ORDER) {
@@ -496,47 +533,57 @@
       return null;
     }
 
+    function flashPlayPayload() {
+      if (!session.length) return null;
+      return {
+        ids: session.map(function (c) { return c.id; }),
+        index: index,
+        stats: stats,
+      };
+    }
+
     function saveFlashPlay() {
-      try {
-        if (!session.length || elPlay.classList.contains("hidden")) {
-          localStorage.removeItem(FLASH_PLAY_KEY);
-          return;
-        }
-        localStorage.setItem(
-          FLASH_PLAY_KEY,
-          JSON.stringify({
-            ids: session.map(function (c) { return c.id; }),
-            index: index,
-            stats: stats,
-          })
-        );
-      } catch (_) {}
+      if (!FLASH_SESSION) return;
+      const payload = flashPlayPayload();
+      if (payload) FLASH_SESSION.write(payload);
+    }
+
+    function forceSaveFlashPlay() {
+      if (!FLASH_SESSION) return;
+      const payload = flashPlayPayload();
+      if (payload) FLASH_SESSION.write(payload);
     }
 
     function clearFlashPlay() {
-      try {
-        localStorage.removeItem(FLASH_PLAY_KEY);
-      } catch (_) {}
+      if (FLASH_SESSION) FLASH_SESSION.clear();
+      const el = document.getElementById("flash-resume");
+      if (el) el.hidden = true;
     }
 
-    function tryResumeFlashPlay() {
-      try {
-        const raw = JSON.parse(localStorage.getItem(FLASH_PLAY_KEY) || "null");
-        if (!raw || !raw.ids || !raw.ids.length) return false;
-        const restored = raw.ids.map(cardById).filter(Boolean);
-        if (!restored.length) {
-          clearFlashPlay();
-          return false;
-        }
-        session = restored;
-        index = Math.min(Math.max(0, Number(raw.index) || 0), session.length - 1);
-        stats = raw.stats || { again: 0, good: 0, easy: 0 };
-        show("play");
-        renderCard();
-        return true;
-      } catch (_) {
-        return false;
-      }
+    function showResumeOffer(raw) {
+      const data = raw || (FLASH_SESSION && FLASH_SESSION.read());
+      const el = document.getElementById("flash-resume");
+      const meta = document.getElementById("flash-resume-meta");
+      if (!data || !data.ids || !data.ids.length || !el) return false;
+      const idx = Math.min(Math.max(0, Number(data.index) || 0), data.ids.length - 1);
+      if (meta) meta.textContent = "Carte " + (idx + 1) + " / " + data.ids.length;
+      el.hidden = false;
+      return true;
+    }
+
+    function restoreFlashPlay(raw) {
+      const data = raw || (FLASH_SESSION && FLASH_SESSION.read());
+      if (!data || !data.ids || !data.ids.length) return false;
+      const restored = data.ids.map(cardById).filter(Boolean);
+      if (!restored.length) return false;
+      session = restored;
+      index = Math.min(Math.max(0, Number(data.index) || 0), session.length - 1);
+      stats = data.stats || { again: 0, good: 0, easy: 0 };
+      const el = document.getElementById("flash-resume");
+      if (el) el.hidden = true;
+      show("play");
+      renderCard();
+      return true;
     }
 
     let session = [];
@@ -864,8 +911,24 @@
     });
     document.getElementById("btn-end-setup").addEventListener("click", exitToSetup);
 
+    document.getElementById("btn-flash-resume").addEventListener("click", function () {
+      if (!restoreFlashPlay()) showResumeOffer();
+    });
+    document.getElementById("btn-flash-discard").addEventListener("click", function () {
+      clearFlashPlay();
+    });
+
+    window.addEventListener("pagehide", forceSaveFlashPlay);
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "hidden") forceSaveFlashPlay();
+    });
+
     buildChapters();
-    if (!tryResumeFlashPlay()) {
+    const savedPlay = FLASH_SESSION && FLASH_SESSION.read();
+    if (savedPlay && savedPlay.ids && savedPlay.ids.length) {
+      if (!restoreFlashPlay(savedPlay)) showResumeOffer();
+    }
+    if (elPlay.classList.contains("hidden")) {
       (function applyModeFromUrl() {
         const mode = (new URLSearchParams(location.search).get("mode") || "").toLowerCase();
         if (mode !== "due" && mode !== "review" && mode !== "all") return;
