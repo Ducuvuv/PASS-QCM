@@ -53,6 +53,32 @@
     return "";
   }
 
+  function scriptBase() {
+    const cur = document.currentScript;
+    if (cur && cur.src) {
+      const u = new URL(cur.src, location.href);
+      return u.href.replace(/\/js\/shell-tabbar\.js.*$/, "/");
+    }
+    return new URL("./", location.href).href;
+  }
+
+  function loadScript(base, file) {
+    return new Promise(function (resolve) {
+      if (file.indexOf("meta.js") >= 0 && window.PASS_FLASH_META) return resolve();
+      if (file.indexOf("flash-srs") >= 0 && window.PASS_FLASH_SRS) return resolve();
+      if (file.indexOf("flash-due-menu") >= 0 && window.PASS_FLASH_DUE_MENU) return resolve();
+      const s = document.createElement("script");
+      s.src = base + file;
+      s.onload = function () {
+        resolve();
+      };
+      s.onerror = function () {
+        resolve();
+      };
+      document.head.appendChild(s);
+    });
+  }
+
   function mount() {
     let nav = document.querySelector("nav.tabbar");
     if (!nav) {
@@ -85,9 +111,27 @@
       "</div>";
   }
 
+  function boot() {
+    const base = scriptBase();
+    Promise.resolve()
+      .then(function () {
+        return loadScript(base, "data/flash/meta.js?v=1");
+      })
+      .then(function () {
+        return loadScript(base, "js/flash-srs.js?v=5");
+      })
+      .then(function () {
+        return loadScript(base, "js/flash-due-menu.js?v=2");
+      })
+      .then(function () {
+        mount();
+        if (window.PASS_FLASH_DUE_MENU) PASS_FLASH_DUE_MENU.apply();
+      });
+  }
+
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", mount);
+    document.addEventListener("DOMContentLoaded", boot);
   } else {
-    mount();
+    boot();
   }
 })();

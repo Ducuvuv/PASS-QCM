@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=da5" />
+  <link rel="stylesheet" href="./styles.css?v=da6" />
 </head>
 <body class="has-tabbar" data-tab="plus">
   <div class="wrap">
@@ -19,10 +19,17 @@
 
     <h1 class="page-title">Plus</h1>
 
+    <a class="flash-due-banner" id="plus-flash-banner" href="./flashcards.html?mode=due" hidden>
+      <span class="flash-due-banner-kicker">Aujourd&rsquo;hui</span>
+      <span class="flash-due-banner-body"><strong data-flash-due-n>0</strong> pour aujourd&rsquo;hui</span>
+      <span class="flash-due-banner-cap" data-flash-due-cap hidden></span>
+      <span class="flash-due-banner-go">&rsaquo;</span>
+    </a>
+
     <section class="rubric-panel" aria-label="Plus">
-      <a class="rubric-row" href="./flashcards.html">
+      <a class="rubric-row" id="plus-flash-row" href="./flashcards.html?mode=due">
         <svg class="row-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="12" height="15" rx="1.5"/><path d="M8 5V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v1"/><path d="M16 9h4v11a1.5 1.5 0 0 1-1.5 1.5H16"/></svg>
-        <span class="row-body"><h2>Flashcards</h2></span>
+        <span class="row-body"><h2>Flashcards</h2><p id="plus-flash-sub">Rien en retard</p><p class="row-detail" id="plus-flash-detail" hidden></p></span>
         <span class="row-chev">&rsaquo;</span>
       </a>
       <a class="rubric-row" href="./planning.html">
@@ -44,6 +51,6 @@
   </div>
 
   <nav class="tabbar" aria-label="Navigation"><div class="tabbar-inner"></div></nav>
-  <script src="./js/shell-tabbar.js?v=3"></script>
+  <script src="./js/shell-tabbar.js?v=4"></script>
 </body>
 </html>

@@ -6,6 +6,8 @@
   const DEFAULT_EASE = 2.5;
   const MIN_EASE = 1.3;
   const SESSION_CAP = 40;
+  const NEW_DAILY_LIMIT = 20;
+  const NEW_DAY_KEY = "pass-flash-new-day-v1";
   const V2_BOX_DAYS = [0, 1, 3, 7, 14];
 
   function todayISO() {
@@ -143,9 +145,11 @@
     if (!id) return null;
     if (g !== "again" && g !== "good" && g !== "easy") g = "good";
     const m = load();
+    const wasNew = !m[id];
     const next = nextState(m[id], g);
     m[id] = next;
     save(m);
+    if (wasNew) bumpNewDayCount();
     return next;
   }
 
@@ -158,6 +162,117 @@
     if (n === 0) return "aujourd’hui";
     if (n === 1) return "demain";
     return "dans " + n + " jours";
+  }
+
+  function loadNewDayCount() {
+    try {
+      const raw = JSON.parse(localStorage.getItem(NEW_DAY_KEY));
+      if (raw && raw.date === todayISO()) return Math.max(0, Number(raw.count) || 0);
+    } catch (_) {}
+    return 0;
+  }
+
+  function bumpNewDayCount() {
+    const t = todayISO();
+    let count = 0;
+    try {
+      const raw = JSON.parse(localStorage.getItem(NEW_DAY_KEY));
+      if (raw && raw.date === t) count = Math.max(0, Number(raw.count) || 0);
+    } catch (_) {}
+    count += 1;
+    try {
+      localStorage.setItem(NEW_DAY_KEY, JSON.stringify({ date: t, count: count }));
+    } catch (_) {}
+  }
+
+  function newSlotsLeft(newAvail) {
+    const left = NEW_DAILY_LIMIT - loadNewDayCount();
+    return Math.max(0, Math.min(left, Math.max(0, Number(newAvail) || 0)));
+  }
+
+  /** Nouvelles du jour : tour de rôle entre chapitres (PASS = multi-UE). */
+  function pickNewRoundRobin(candidates, slots) {
+    if (!slots || !candidates || !candidates.length) return [];
+    const byCh = {};
+    for (const id of candidates) {
+      const ch = chapterFromId(id) || "00";
+      if (!byCh[ch]) byCh[ch] = [];
+      byCh[ch].push(id);
+    }
+    const keys = Object.keys(byCh).sort();
+    const out = [];
+    while (out.length < slots) {
+      let added = false;
+      for (const k of keys) {
+        if (out.length >= slots) break;
+        if (byCh[k].length) {
+          out.push(byCh[k].shift());
+          added = true;
+        }
+      }
+      if (!added) break;
+    }
+    return out;
+  }
+
+  /** Découpe la file du jour (logique Anki : révisions + ratées + nouvelles plafonnées). */
+  function splitToday(cardIds) {
+    const m = load();
+    const t = todayISO();
+    let reviews = 0;
+    let learning = 0;
+    let newAvail = 0;
+    for (const id of cardIds || []) {
+      const row = m[id];
+      if (!row) {
+        newAvail += 1;
+        continue;
+      }
+      if (String(row.due || "") > t) continue;
+      if ((Number(row.interval) || 0) === 0) learning += 1;
+      else reviews += 1;
+    }
+    const newToday = newSlotsLeft(newAvail);
+    return {
+      reviews: reviews,
+      learning: learning,
+      newAvail: newAvail,
+      newToday: newToday,
+      newUsedToday: loadNewDayCount(),
+      total: reviews + learning + newToday,
+    };
+  }
+
+  /** File réelle du jour — pas toutes les cartes jamais vues d'un coup. */
+  function queueIds(cardIds) {
+    const m = load();
+    const t = todayISO();
+    const out = new Set();
+    const newCandidates = [];
+    for (const id of cardIds || []) {
+      const row = m[id];
+      if (!row) {
+        newCandidates.push(id);
+        continue;
+      }
+      if (String(row.due || "") <= t) out.add(id);
+    }
+    const slots = newSlotsLeft(newCandidates.length);
+    for (const id of pickNewRoundRobin(newCandidates, slots)) out.add(id);
+    return out;
+  }
+
+  function todayStats(cardIds) {
+    return splitToday(cardIds);
+  }
+
+  function formatTodayStats(stats) {
+    if (!stats || !stats.total) return "Rien en retard";
+    const parts = [];
+    if (stats.reviews) parts.push(stats.reviews + " révisions");
+    if (stats.learning) parts.push(stats.learning + " ratées");
+    if (stats.newToday) parts.push(stats.newToday + " nouvelles");
+    return parts.join(" · ");
   }
 
   /** dues = jamais vue OU due ≤ today */
@@ -190,6 +305,9 @@
 
   function clear() {
     save({});
+    try {
+      localStorage.removeItem(NEW_DAY_KEY);
+    } catch (_) {}
   }
 
   function chapterFromId(id) {
@@ -225,13 +343,18 @@
   global.PASS_FLASH_SRS = {
     KEY: KEY,
     SESSION_CAP: SESSION_CAP,
+    NEW_DAILY_LIMIT: NEW_DAILY_LIMIT,
     todayISO: todayISO,
     load: load,
     get: get,
     grade: grade,
     preview: preview,
     formatDays: formatDays,
+    formatTodayStats: formatTodayStats,
     dueIds: dueIds,
+    queueIds: queueIds,
+    todayStats: todayStats,
+    splitToday: splitToday,
     learningIds: learningIds,
     chapterFromId: chapterFromId,
     chapterStats: chapterStats,

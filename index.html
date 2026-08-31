@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=da5" />
+  <link rel="stylesheet" href="./styles.css?v=da6" />
 </head>
 <body class="has-tabbar" data-tab="home">
   <div class="wrap">
@@ -61,10 +61,12 @@
   </div>
 
   <nav class="tabbar" aria-label="Navigation"><div class="tabbar-inner"></div></nav>
-  <script src="./js/shell-tabbar.js?v=3"></script>
+  <script src="./js/shell-tabbar.js?v=4"></script>
+  <script src="./data/flash/meta.js?v=1"></script>
   <script src="./js/suivi-store.js?v=5"></script>
   <script src="./js/today-target.js?v=1"></script>
-  <script src="./js/flash-srs.js?v=3"></script>
+  <script src="./js/flash-srs.js?v=5"></script>
+  <script src="./js/flash-due-menu.js?v=2"></script>
   <script>
     (function () {
       var S = window.PASS_SUIVI;
@@ -136,8 +138,10 @@
         }
       }
 
-      var flash = (SRS && typeof SRS.chapterStats === "function") ? SRS.chapterStats() : { dueTotal: 0 };
-      var due = flash.dueTotal || 0;
+      var flash = (window.PASS_FLASH_DUE_MENU && typeof PASS_FLASH_DUE_MENU.todayStats === "function")
+        ? PASS_FLASH_DUE_MENU.todayStats()
+        : ((SRS && typeof SRS.chapterStats === "function") ? SRS.chapterStats() : { total: 0, dueTotal: 0 });
+      var due = flash.total != null ? flash.total : (flash.dueTotal || 0);
       var pct = n ? Math.round((ok / n) * 100) : null;
       var stats = document.getElementById("home-stats");
       if (n > 0 || due > 0 || streak > 0) {
@@ -151,10 +155,7 @@
       if (qcmSub && target && target.ch) {
         qcmSub.textContent = (target.reason === "review" ? "Priorit\u00e9" : "Reprise") + " \u00b7 ch. " + target.ch;
       }
-      var flashSub = document.getElementById("home-flash-sub");
-      if (flashSub) flashSub.textContent = due ? due + " \u00e0 revoir aujourd\u2019hui" : "Rien en retard";
-      var flashRow = document.getElementById("home-flash-row");
-      if (flashRow && due) flashRow.querySelector(".row-badge").classList.add("warn");
+      if (window.PASS_FLASH_DUE_MENU) PASS_FLASH_DUE_MENU.applyHome();
       var weakSub = document.getElementById("home-weak-sub");
       var weakRow = document.getElementById("home-weak-row");
       if (weakSub) {

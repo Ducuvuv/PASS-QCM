@@ -1052,6 +1052,95 @@ body.has-tabbar .nav-chips {
   transform: translateY(1px);
 }
 
+.tabbar a.has-badge .tab-ico {
+  transform: translateY(-1px);
+}
+
+.tabbar .tab-badge {
+  position: absolute;
+  top: 0.18rem;
+  right: calc(50% - 1.35rem);
+  min-width: 1.05rem;
+  height: 1.05rem;
+  padding: 0 0.28rem;
+  border-radius: var(--radius-pill);
+  background: #ea580c;
+  color: #fff;
+  font-size: 0.52rem;
+  font-weight: 800;
+  line-height: 1.05rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  box-shadow: 0 0 0 2px rgba(255, 252, 247, 0.94);
+  pointer-events: none;
+}
+
+.flash-due-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0 0 0.85rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: var(--radius-md);
+  border: 1px solid #f0c9a8;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  text-decoration: none;
+  color: var(--deep);
+  box-shadow: 0 1px 0 rgba(154, 52, 18, 0.06);
+}
+
+.flash-due-banner-kicker {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #9a3412;
+  flex: 0 0 auto;
+}
+
+.flash-due-banner-body {
+  flex: 1 1 auto;
+  font-size: 0.92rem;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.flash-due-banner-body strong {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #9a3412;
+}
+
+.flash-due-banner-go {
+  flex: 0 0 auto;
+  font-size: 1.2rem;
+  color: #9a3412;
+  opacity: 0.75;
+}
+
+.rubric-row--hot {
+  border-color: #f0c9a8;
+  background: linear-gradient(180deg, #fffaf5 0%, #fff 100%);
+  box-shadow: inset 3px 0 0 #ea580c;
+}
+
+.rubric-row .row-body p.row-detail {
+  margin-top: 0.2rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.flash-due-banner-cap {
+  display: block;
+  flex: 1 1 100%;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #9a3412;
+  opacity: 0.9;
+}
+
 .eyebrow {
   margin: 0 0 0.45rem;
   font-size: 0.72rem;

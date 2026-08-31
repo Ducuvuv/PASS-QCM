@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=da5" />
+  <link rel="stylesheet" href="./styles.css?v=da6" />
   <style>
     .fc-card {
       background: var(--surface);
@@ -266,6 +266,75 @@
       margin: 0.75rem 0;
     }
     .end-box h2 { margin: 0 0 0.5rem; font-size: 1.15rem; }
+    .fc-forecast {
+      margin: 0 0 0.85rem;
+      padding: 0.75rem 0.8rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: #fff;
+    }
+    .fc-forecast--empty { background: transparent; border-style: dashed; }
+    .fc-forecast-empty {
+      margin: 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    .fc-forecast-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.35rem 0.75rem;
+      margin-bottom: 0.55rem;
+    }
+    .fc-forecast-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .fc-forecast-sum {
+      font-size: 0.78rem;
+      font-weight: 650;
+      color: var(--ink);
+    }
+    .fc-forecast-bars { display: grid; gap: 0.35rem; }
+    .fc-forecast-row {
+      display: grid;
+      grid-template-columns: 2.35rem 1fr 1.65rem;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .fc-forecast-row--today .fc-forecast-label { color: var(--accent); font-weight: 700; }
+    .fc-forecast-row--today .fc-forecast-fill { background: var(--accent); }
+    .fc-forecast-label {
+      font-size: 0.72rem;
+      font-weight: 650;
+      color: var(--muted);
+      line-height: 1.1;
+    }
+    .fc-forecast-track {
+      height: 0.45rem;
+      border-radius: var(--radius-pill);
+      background: #ece8e0;
+      overflow: hidden;
+    }
+    .fc-forecast-fill {
+      display: block;
+      height: 100%;
+      min-width: 0;
+      border-radius: inherit;
+      background: #c4bdb0;
+      transition: width 0.2s ease;
+    }
+    .fc-forecast-n {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
   </style>
 </head>
 <body class="has-tabbar" data-tab="plus">
@@ -312,6 +381,7 @@
 
       <div class="panel">
         <h2>Quelles cartes ?</h2>
+        <div id="fc-forecast" aria-live="polite"></div>
         <div class="session-block">
           <div class="session-controls">
             <div class="field">
@@ -387,7 +457,8 @@
   <script src="./data/flash/ch09.js?v=8"></script>
   <script src="./data/flash/ch10.js?v=8"></script>
   <script src="./data/flash/ch11.js?v=8"></script>
-  <script src="./js/flash-srs.js?v=2"></script>
+  <script src="./js/flash-srs.js?v=5"></script>
+  <script src="./js/flash-forecast.js?v=1"></script>
     <script>
     const CHAPTER_ORDER = ["01","02","03","04","05","06","07","08","09","10","11"];
     const CHAPTER_META = {
@@ -405,6 +476,8 @@
     const elKindList = document.getElementById("kind-list");
     const elModeList = document.getElementById("mode-list");
     const elHint = document.getElementById("pool-hint");
+    const elForecast = document.getElementById("fc-forecast");
+    const FORECAST = window.PASS_FLASH_FORECAST;
     const elCard = document.getElementById("card");
     const elFront = document.getElementById("card-front");
     const elBack = document.getElementById("card-back");
@@ -421,7 +494,8 @@
       for (const ch of chs || []) for (const c of decks[ch] || []) ids.push(c.id);
       return ids;
     }
-    function dueIds(chs) { return SRS.dueIds(cardIdsFor(chs)); }
+    function dueIds(chs) { return SRS.queueIds(cardIdsFor(chs)); }
+    function todayForChs(chs) { return SRS.todayStats(cardIdsFor(chs)); }
     function reviewIds(chs) { return SRS.learningIds(cardIdsFor(chs)); }
 
     function updateGradeHints() {
@@ -478,15 +552,34 @@
       return a;
     }
 
+    function forecastCardIds(chs, prios, kind) {
+      return poolFrom(chs, prios, "all", kind).map((c) => c.id);
+    }
+
+    function updateForecast(chs, prios, kind) {
+      if (!FORECAST || !elForecast) return;
+      if (!chs.length) {
+        FORECAST.refresh(elForecast, [], { emptyMessage: "Choisis un chapitre" });
+        return;
+      }
+      if (!prios.length) {
+        FORECAST.refresh(elForecast, [], { emptyMessage: "Choisis une priorit\u00e9" });
+        return;
+      }
+      FORECAST.refresh(elForecast, forecastCardIds(chs, prios, kind));
+    }
+
     function updateHint() {
       const chs = selectedChapters();
       const prios = selectedPriorities();
       const mode = selectedMode();
       const kind = selectedKind();
+      updateForecast(chs, prios, kind);
       const pool = poolFrom(chs, prios, mode, kind);
       const n = pool.length;
       const nRev = reviewIds(chs).size;
       const nDue = dueIds(chs).size;
+      const today = todayForChs(chs);
       const c1 = pool.filter((c) => c.priority === "P1").length;
       const c2 = pool.filter((c) => c.priority === "P2").length;
       const c3 = pool.filter((c) => c.priority === "P3").length;
@@ -499,10 +592,12 @@
           '<span class="pool-stat">P2 &middot; ' + c2 + "</span>" +
           '<span class="pool-stat">P3 &middot; ' + c3 + "</span>" +
           (kind !== "all" ? '<span class="pool-stat">' + (kind === "schema" ? "Sch&eacute;mas" : "Texte") + "</span>" : "") +
-          (nDue ? '<span class="pool-stat">' + nDue + " &agrave; faire</span>" : "") +
+          (nDue ? '<span class="pool-stat">' + nDue + " pour aujourd'hui</span>" : "") +
+          (today.newAvail > today.newToday ? '<span class="pool-stat warn">' + today.newAvail + " nouvelles au deck</span>" : "") +
           (nRev ? '<span class="pool-stat">' + nRev + " rat&eacute;es</span>" : "");
       }
       document.getElementById("btn-start").disabled = !chs.length || !prios.length || n === 0;
+      if (window.PASS_FLASH_DUE_MENU) PASS_FLASH_DUE_MENU.applyTabbar();
     }
 
     function wireToggleGroup(root, sel, exclusive) {
@@ -719,6 +814,6 @@
     })();
     show("setup");
   </script><nav class="tabbar" aria-label="Navigation"><div class="tabbar-inner"></div></nav>
-<script src="./js/shell-tabbar.js?v=3"></script>
+<script src="./js/shell-tabbar.js?v=4"></script>
 </body>
 </html>
