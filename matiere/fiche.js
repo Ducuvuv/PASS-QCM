@@ -5,10 +5,16 @@
   const btnLecture =
     document.getElementById("btn-lecture") || document.getElementById("btn-focus");
   const btnChrono = document.getElementById("btn-chrono");
+  const FICHE_CH =
+    (window.PASS_FICHE_PROGRESS && PASS_FICHE_PROGRESS.chapterFromPath()) ||
+    ((location.pathname || "").match(/ch(\d{2})\.html/i) || [])[1] ||
+    null;
+  const ficheStore = window.PASS_FICHE_PROGRESS;
 
   let seconds = 0;
   let ticking = false;
   let timerId = null;
+  let chronoSaveId = null;
 
   function fmt(s) {
     const m = Math.floor(s / 60);
@@ -16,10 +22,28 @@
     return String(m).padStart(2, "0") + ":" + String(r).padStart(2, "0");
   }
 
+  function saveChrono() {
+    if (!ficheStore || !FICHE_CH) return;
+    ficheStore.saveChapter(FICHE_CH, { chrono: seconds });
+  }
+
+  if (ficheStore && FICHE_CH) {
+    const saved = ficheStore.loadChapter(FICHE_CH);
+    if (saved.chrono) {
+      seconds = Math.max(0, Number(saved.chrono) || 0);
+      if (chronoEl) chronoEl.textContent = fmt(seconds);
+    }
+  }
+
   function tick() {
     seconds += 1;
     if (chronoEl) chronoEl.textContent = fmt(seconds);
+    if (!chronoSaveId) {
+      chronoSaveId = setInterval(saveChrono, 8000);
+    }
   }
+
+  window.addEventListener("beforeunload", saveChrono);
 
   if (btnChrono && chronoEl) {
     btnChrono.addEventListener("click", () => {
@@ -170,13 +194,14 @@
         .replace(/\s+/g, " ");
     }
 
-    document.querySelectorAll(".label-quiz").forEach((quiz) => {
+    document.querySelectorAll(".label-quiz").forEach((quiz, quizIndex) => {
       let answers = [];
       try {
         answers = JSON.parse(quiz.getAttribute("data-labels") || "[]");
       } catch (_) {
         answers = [];
       }
+      const quizKey = "q" + quizIndex;
       const bank = quiz.querySelector(".label-bank");
       const slots = [...quiz.querySelectorAll(".slot, .label-slot")];
       const feedback = quiz.querySelector(".cloze-feedback");
@@ -184,6 +209,27 @@
       const btnReveal = quiz.querySelector("[data-reveal]");
       const btnReset = quiz.querySelector("[data-reset]");
       let selected = null;
+
+      function saveQuizState() {
+        if (!ficheStore || !FICHE_CH) return;
+        const placements = [];
+        slots.forEach((slot, slotIndex) => {
+          const drop = slotDrop(slot);
+          if (drop && drop.dataset.chip) {
+            placements.push({
+              slotIndex: slotIndex,
+              chipId: drop.dataset.chip,
+              value: drop.dataset.value || "",
+            });
+          }
+        });
+        ficheStore.scheduleSave(FICHE_CH, function () {
+          const cur = ficheStore.loadChapter(FICHE_CH);
+          const quizzes = cur.quizzes || {};
+          quizzes[quizKey] = { placements: placements };
+          ficheStore.saveChapter(FICHE_CH, { quizzes: quizzes, chrono: seconds });
+        });
+      }
 
       if (!quiz.querySelector(".label-quiz-hint") && bank) {
         const hint = document.createElement("p");
@@ -213,6 +259,7 @@
           delete drop.dataset.value;
         }
         slot.classList.remove("filled", "ok", "bad");
+        saveQuizState();
       }
 
       function placeInSlot(slot, chip) {
@@ -233,6 +280,7 @@
         slot.classList.remove("ok", "bad");
         selected = null;
         setPicking(false);
+        saveQuizState();
       }
 
       if (bank) {
@@ -343,6 +391,17 @@
             feedback.classList.remove("show", "ok", "bad");
             feedback.textContent = "";
           }
+          saveQuizState();
+        });
+      }
+
+      if (ficheStore && FICHE_CH && bank) {
+        const saved = ficheStore.loadChapter(FICHE_CH);
+        const placements = (saved.quizzes && saved.quizzes[quizKey] && saved.quizzes[quizKey].placements) || [];
+        placements.forEach(function (p) {
+          const slot = slots[p.slotIndex];
+          const chip = bank.querySelector('[data-id="' + p.chipId + '"]');
+          if (slot && chip) placeInSlot(slot, chip);
         });
       }
     });

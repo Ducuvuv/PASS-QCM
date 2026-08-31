@@ -485,6 +485,60 @@
     const elProgress = document.getElementById("progress");
     const elShuffle = document.getElementById("opt-shuffle");
 
+    const FLASH_PLAY_KEY = "pass-flash-play-v1";
+
+    function cardById(id) {
+      for (const ch of CHAPTER_ORDER) {
+        for (const c of decks[ch] || []) {
+          if (c.id === id) return c;
+        }
+      }
+      return null;
+    }
+
+    function saveFlashPlay() {
+      try {
+        if (!session.length || elPlay.classList.contains("hidden")) {
+          sessionStorage.removeItem(FLASH_PLAY_KEY);
+          return;
+        }
+        sessionStorage.setItem(
+          FLASH_PLAY_KEY,
+          JSON.stringify({
+            ids: session.map(function (c) { return c.id; }),
+            index: index,
+            stats: stats,
+          })
+        );
+      } catch (_) {}
+    }
+
+    function clearFlashPlay() {
+      try {
+        sessionStorage.removeItem(FLASH_PLAY_KEY);
+      } catch (_) {}
+    }
+
+    function tryResumeFlashPlay() {
+      try {
+        const raw = JSON.parse(sessionStorage.getItem(FLASH_PLAY_KEY) || "null");
+        if (!raw || !raw.ids || !raw.ids.length) return false;
+        const restored = raw.ids.map(cardById).filter(Boolean);
+        if (!restored.length) {
+          clearFlashPlay();
+          return false;
+        }
+        session = restored;
+        index = Math.min(Math.max(0, Number(raw.index) || 0), session.length - 1);
+        stats = raw.stats || { again: 0, good: 0, easy: 0 };
+        show("play");
+        renderCard();
+        return true;
+      } catch (_) {
+        return false;
+      }
+    }
+
     let session = [];
     let index = 0;
     let stats = { again: 0, good: 0, easy: 0 };
@@ -712,6 +766,7 @@
       elMeta.textContent = on
         ? "Dis si tu savais"
         : (elMeta.dataset.base || "Touche pour retourner");
+      saveFlashPlay();
     }
 
     function renderCard() {
@@ -724,6 +779,7 @@
       elProgress.textContent = index + 1 + " / " + session.length;
       setFlipped(false);
       updateGradeHints();
+      saveFlashPlay();
     }
 
     function flip() { setFlipped(!elCard.classList.contains("flipped")); }
@@ -745,6 +801,7 @@
       document.getElementById("btn-again-review").disabled = left === 0;
       show("end");
       updateHint();
+      clearFlashPlay();
     }
 
     function goNextOrEnd() {
@@ -757,10 +814,12 @@
       if (!card) return;
       SRS.grade(card.id, grade);
       stats[grade] += 1;
+      saveFlashPlay();
       goNextOrEnd();
     }
 
     function startSession(modeOverride) {
+      clearFlashPlay();
       const chs = selectedChapters();
       const prios = selectedPriorities();
       const mode = modeOverride || selectedMode();
@@ -774,10 +833,11 @@
       if (!session.length) { updateHint(); return; }
       show("play");
       renderCard();
+      saveFlashPlay();
     }
 
     document.getElementById("btn-start").addEventListener("click", () => startSession());
-    function exitToSetup() { show("setup"); updateHint(); window.scrollTo(0, 0); }
+    function exitToSetup() { clearFlashPlay(); show("setup"); updateHint(); window.scrollTo(0, 0); }
     document.getElementById("btn-exit").addEventListener("click", exitToSetup);
     elFlip.addEventListener("click", flip);
     elCard.addEventListener("click", flip);
@@ -787,6 +847,7 @@
     document.getElementById("btn-clear-review").addEventListener("click", () => {
       if (!confirm("Effacer quand chaque carte revient ? Tu repars de z\u00e9ro.")) return;
       SRS.clear();
+      clearFlashPlay();
       updateHint();
     });
     document.getElementById("btn-again-due").addEventListener("click", () => {
@@ -804,16 +865,18 @@
     document.getElementById("btn-end-setup").addEventListener("click", exitToSetup);
 
     buildChapters();
-    (function applyModeFromUrl() {
-      const mode = (new URLSearchParams(location.search).get("mode") || "").toLowerCase();
-      if (mode !== "due" && mode !== "review" && mode !== "all") return;
-      elModeList.querySelectorAll(".mode-btn").forEach((b) => {
-        b.setAttribute("aria-pressed", b.getAttribute("data-mode") === mode ? "true" : "false");
-      });
-      updateHint();
-    })();
-    show("setup");
+    if (!tryResumeFlashPlay()) {
+      (function applyModeFromUrl() {
+        const mode = (new URLSearchParams(location.search).get("mode") || "").toLowerCase();
+        if (mode !== "due" && mode !== "review" && mode !== "all") return;
+        elModeList.querySelectorAll(".mode-btn").forEach((b) => {
+          b.setAttribute("aria-pressed", b.getAttribute("data-mode") === mode ? "true" : "false");
+        });
+        updateHint();
+      })();
+      show("setup");
+    }
   </script><nav class="tabbar" aria-label="Navigation"><div class="tabbar-inner"></div></nav>
-<script src="./js/shell-tabbar.js?v=4"></script>
+<script src="./js/shell-tabbar.js?v=5"></script>
 </body>
 </html>
