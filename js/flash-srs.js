@@ -183,24 +183,30 @@
   }
 
   function loadNewDayCount() {
-    try {
-      const raw = JSON.parse(localStorage.getItem(NEW_DAY_KEY));
-      if (raw && raw.date === todayISO()) return Math.max(0, Number(raw.count) || 0);
-    } catch (_) {}
+    const S = global.PASS_STORAGE;
+    let raw = null;
+    if (S) raw = S.getJSON(NEW_DAY_KEY);
+    else {
+      try {
+        raw = JSON.parse(localStorage.getItem(NEW_DAY_KEY));
+      } catch (_) {}
+    }
+    if (raw && raw.date === todayISO()) return Math.max(0, Number(raw.count) || 0);
     return 0;
   }
 
   function bumpNewDayCount() {
     const t = todayISO();
-    let count = 0;
-    try {
-      const raw = JSON.parse(localStorage.getItem(NEW_DAY_KEY));
-      if (raw && raw.date === t) count = Math.max(0, Number(raw.count) || 0);
-    } catch (_) {}
+    let count = loadNewDayCount();
     count += 1;
-    try {
-      localStorage.setItem(NEW_DAY_KEY, JSON.stringify({ date: t, count: count }));
-    } catch (_) {}
+    const payload = { date: t, count: count };
+    const S = global.PASS_STORAGE;
+    if (S) S.setJSON(NEW_DAY_KEY, payload);
+    else {
+      try {
+        localStorage.setItem(NEW_DAY_KEY, JSON.stringify(payload));
+      } catch (_) {}
+    }
   }
 
   function newSlotsLeft(newAvail) {
@@ -323,9 +329,13 @@
 
   function clear() {
     save({});
-    try {
-      localStorage.removeItem(NEW_DAY_KEY);
-    } catch (_) {}
+    const S = global.PASS_STORAGE;
+    if (S) S.remove(NEW_DAY_KEY);
+    else {
+      try {
+        localStorage.removeItem(NEW_DAY_KEY);
+      } catch (_) {}
+    }
   }
 
   function chapterFromId(id) {

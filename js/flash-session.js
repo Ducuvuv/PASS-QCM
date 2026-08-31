@@ -27,8 +27,10 @@
       at: Date.now(),
     };
     const S = STORE();
-    if (S) S.setJSON(KEY, data);
-    else {
+    if (S) {
+      S.setJSON(KEY, data);
+      if (S.flush) S.flush();
+    } else {
       try {
         localStorage.setItem(KEY, JSON.stringify(data));
       } catch (_) {}

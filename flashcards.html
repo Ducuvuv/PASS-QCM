@@ -449,7 +449,7 @@
     <section id="play" class="hidden">
       <div class="play-top">
         <p class="note" id="progress">&mdash;</p>
-        <button type="button" class="btn secondary btn-exit" id="btn-exit">Sortir</button>
+        <button type="button" class="btn secondary btn-exit" id="btn-exit">Pause</button>
       </div>
       <div class="fc-card" id="card" tabindex="0">
         <div class="meta" id="card-meta">Touche pour retourner</div>
@@ -476,7 +476,7 @@
         <div class="actions">
           <button type="button" class="btn" id="btn-again-due">Continuer &agrave; faire</button>
           <button type="button" class="btn secondary" id="btn-again-review">Revoir les rat&eacute;es</button>
-          <button type="button" class="btn secondary" id="btn-end-setup">Sortir</button>
+          <button type="button" class="btn secondary" id="btn-end-setup">Pause</button>
         </div>
       </div>
     </section>
@@ -493,9 +493,9 @@
   <script src="./data/flash/ch09.js?v=8"></script>
   <script src="./data/flash/ch10.js?v=8"></script>
   <script src="./data/flash/ch11.js?v=8"></script>
-  <script src="./js/pass-storage.js?v=2"></script>
-  <script src="./js/flash-srs.js?v=6"></script>
-  <script src="./js/flash-session.js?v=2"></script>
+  <script src="./js/pass-storage.js?v=3"></script>
+  <script src="./js/flash-srs.js?v=7"></script>
+  <script src="./js/flash-session.js?v=3"></script>
   <script src="./js/flash-forecast.js?v=1"></script>
     <script>
     const CHAPTER_ORDER = ["01","02","03","04","05","06","07","08","09","10","11"];
@@ -857,12 +857,20 @@
       else finishSession();
     }
 
+    function persistNow() {
+      forceSaveFlashPlay();
+      if (window.PASS_STORAGE) {
+        if (PASS_STORAGE.requestPersist) PASS_STORAGE.requestPersist();
+        if (PASS_STORAGE.flush) PASS_STORAGE.flush();
+      }
+    }
+
     function gradeCurrent(grade) {
       const card = session[index];
       if (!card) return;
       SRS.grade(card.id, grade);
       stats[grade] += 1;
-      saveFlashPlay();
+      persistNow();
       goNextOrEnd();
     }
 
@@ -885,7 +893,13 @@
     }
 
     document.getElementById("btn-start").addEventListener("click", () => startSession());
-    function exitToSetup() { clearFlashPlay(); show("setup"); updateHint(); window.scrollTo(0, 0); }
+    function exitToSetup() {
+      saveFlashPlay();
+      show("setup");
+      showResumeOffer();
+      updateHint();
+      window.scrollTo(0, 0);
+    }
     document.getElementById("btn-exit").addEventListener("click", exitToSetup);
     elFlip.addEventListener("click", flip);
     elCard.addEventListener("click", flip);
@@ -919,9 +933,9 @@
       clearFlashPlay();
     });
 
-    window.addEventListener("pagehide", forceSaveFlashPlay);
+    window.addEventListener("pagehide", persistNow);
     document.addEventListener("visibilitychange", function () {
-      if (document.visibilityState === "hidden") forceSaveFlashPlay();
+      if (document.visibilityState === "hidden") persistNow();
     });
 
     function bootFlashcards() {

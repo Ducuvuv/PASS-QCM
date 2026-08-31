@@ -1,4 +1,4 @@
-/* Stockage local robuste — localStorage + IndexedDB + cookie miroir (petites clés) */
+/* Stockage local — cache mémoire + localStorage + IndexedDB (survit fermeture onglet) */
 (function (global) {
   const COOKIE_PREFIX = "passck_";
   const HEARTBEAT_KEY = "pass-storage-heartbeat-v1";
@@ -12,8 +12,11 @@
     "pass-flash-due-badge-v1",
   ];
 
+  const mem = Object.create(null);
+  const memAt = Object.create(null);
   let dbPromise = null;
   let readyPromise = null;
+  let pendingFlushes = [];
 
   function cookiePath() {
     const p = location.pathname || "/";
@@ -88,14 +91,13 @@
     return dbPromise;
   }
 
-  function idbGet(key) {
+  function idbGetEntry(key) {
     return openDb().then(function (db) {
       if (!db) return null;
       return new Promise(function (resolve) {
         try {
           const tx = db.transaction(DB_STORE, "readonly");
-          const store = tx.objectStore(DB_STORE);
-          const req = store.get(key);
+          const req = tx.objectStore(DB_STORE).get(key);
           req.onsuccess = function () {
             resolve(req.result || null);
           };
@@ -109,14 +111,31 @@
     });
   }
 
-  function idbSet(key, raw) {
-    return openDb().then(function (db) {
+  function idbPutEntry(key, raw, at) {
+    const job = openDb().then(function (db) {
       if (!db) return;
-      try {
-        const tx = db.transaction(DB_STORE, "readwrite");
-        tx.objectStore(DB_STORE).put(raw, key);
-      } catch (_) {}
+      return new Promise(function (resolve) {
+        try {
+          const tx = db.transaction(DB_STORE, "readwrite");
+          tx.objectStore(DB_STORE).put({ raw: raw, at: at || Date.now() }, key);
+          tx.oncomplete = function () {
+            resolve();
+          };
+          tx.onerror = function () {
+            resolve();
+          };
+        } catch (_) {
+          resolve();
+        }
+      });
     });
+    pendingFlushes.push(job);
+    job.finally(function () {
+      pendingFlushes = pendingFlushes.filter(function (p) {
+        return p !== job;
+      });
+    });
+    return job;
   }
 
   function idbRemove(key) {
@@ -127,6 +146,43 @@
         tx.objectStore(DB_STORE).delete(key);
       } catch (_) {}
     });
+  }
+
+  function readLsRaw(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function writeLsRaw(key, raw) {
+    try {
+      localStorage.setItem(key, raw);
+      return true;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function parseRaw(raw) {
+    if (!raw) return null;
+    try {
+      return JSON.parse(raw);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function adopt(key, raw, at) {
+    if (!raw) return;
+    const parsed = parseRaw(raw);
+    if (parsed === null) return;
+    const prevAt = memAt[key] || 0;
+    if (at && at < prevAt) return;
+    mem[key] = parsed;
+    memAt[key] = at || Date.now();
+    writeLsRaw(key, raw);
   }
 
   function ping(extra) {
@@ -150,39 +206,48 @@
 
   function setJSON(key, obj) {
     const raw = JSON.stringify(obj);
-    let lsOk = false;
-    try {
-      localStorage.setItem(key, raw);
-      lsOk = true;
-    } catch (_) {}
+    const at = Date.now();
+    mem[key] = obj;
+    memAt[key] = at;
+    const lsOk = writeLsRaw(key, raw);
     if (raw.length < 3500) {
       setCookie(COOKIE_PREFIX + key, raw, 60 * 60 * 24 * 30);
     }
-    idbSet(key, raw);
+    idbPutEntry(key, raw, at);
     ping({ key: key, lsOk: lsOk, bytes: raw.length });
     return lsOk;
   }
 
   function getJSON(key) {
-    try {
-      const ls = localStorage.getItem(key);
-      if (ls) return JSON.parse(ls);
-    } catch (_) {}
+    if (mem[key] !== undefined) return mem[key];
+    const ls = readLsRaw(key);
+    if (ls) {
+      const parsed = parseRaw(ls);
+      if (parsed !== null) {
+        mem[key] = parsed;
+        memAt[key] = memAt[key] || 0;
+        return parsed;
+      }
+    }
     try {
       const ck = getCookie(COOKIE_PREFIX + key);
       if (ck) {
-        const parsed = JSON.parse(ck);
-        try {
-          localStorage.setItem(key, ck);
-        } catch (_) {}
-        idbSet(key, ck);
-        return parsed;
+        const parsed = parseRaw(ck);
+        if (parsed !== null) {
+          mem[key] = parsed;
+          memAt[key] = Date.now();
+          writeLsRaw(key, ck);
+          idbPutEntry(key, ck, memAt[key]);
+          return parsed;
+        }
       }
     } catch (_) {}
     return null;
   }
 
   function remove(key) {
+    delete mem[key];
+    delete memAt[key];
     try {
       localStorage.removeItem(key);
     } catch (_) {}
@@ -190,29 +255,44 @@
     idbRemove(key);
   }
 
+  function hydrateKey(key) {
+    const lsRaw = readLsRaw(key);
+    const lsAt = lsRaw ? memAt[key] || 0 : 0;
+    return idbGetEntry(key).then(function (entry) {
+      if (!entry) {
+        if (lsRaw) adopt(key, lsRaw, Date.now());
+        return;
+      }
+      const idbRaw = typeof entry === "string" ? entry : entry.raw;
+      const idbAt = typeof entry === "string" ? 0 : Number(entry.at) || 0;
+      if (lsRaw && lsAt >= idbAt) {
+        adopt(key, lsRaw, lsAt || Date.now());
+        if (idbAt < lsAt) idbPutEntry(key, lsRaw, lsAt);
+        return;
+      }
+      if (idbRaw) adopt(key, idbRaw, idbAt || Date.now());
+    });
+  }
+
   function hydrateFromIdb() {
     if (readyPromise) return readyPromise;
-    readyPromise = openDb().then(function (db) {
-      if (!db) return;
-      const jobs = MIRROR_KEYS.map(function (key) {
-        return idbGet(key).then(function (raw) {
-          if (!raw || typeof raw !== "string") return;
-          let lsMissing = false;
-          try {
-            lsMissing = !localStorage.getItem(key);
-          } catch (_) {
-            lsMissing = true;
-          }
-          if (lsMissing) {
-            try {
-              localStorage.setItem(key, raw);
-            } catch (_) {}
-          }
-        });
-      });
-      return Promise.all(jobs);
+    readyPromise = Promise.all(MIRROR_KEYS.map(hydrateKey)).then(function () {
+      ping({ hydrated: true });
     });
     return readyPromise;
+  }
+
+  function flush() {
+    return Promise.all(pendingFlushes.slice());
+  }
+
+  function requestPersist() {
+    try {
+      if (navigator.storage && navigator.storage.persist) {
+        return navigator.storage.persist();
+      }
+    } catch (_) {}
+    return Promise.resolve(false);
   }
 
   function heartbeat() {
@@ -246,8 +326,20 @@
     };
   }
 
+  function bindLifecycleFlush() {
+    function onHide() {
+      flush();
+    }
+    window.addEventListener("pagehide", onHide);
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "hidden") onHide();
+    });
+  }
+
   ping();
+  bindLifecycleFlush();
   hydrateFromIdb();
+  requestPersist();
 
   global.PASS_STORAGE = {
     storageOk: storageOk,
@@ -258,6 +350,8 @@
     heartbeat: heartbeat,
     isStandalone: isStandalone,
     ready: hydrateFromIdb,
+    flush: flush,
+    requestPersist: requestPersist,
     diagnostic: diagnostic,
   };
 })(window);

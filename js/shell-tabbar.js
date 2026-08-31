@@ -172,10 +172,16 @@
     const base = scriptBase();
     Promise.resolve()
       .then(function () {
+        return loadScript(base, "js/pass-storage.js?v=3");
+      })
+      .then(function () {
+        return window.PASS_STORAGE && PASS_STORAGE.ready ? PASS_STORAGE.ready() : null;
+      })
+      .then(function () {
         return loadScript(base, "data/flash/meta.js?v=1");
       })
       .then(function () {
-        return loadScript(base, "js/flash-srs.js?v=6");
+        return loadScript(base, "js/flash-srs.js?v=7");
       })
       .then(function () {
         return loadScript(base, "js/flash-due-menu.js?v=3");
