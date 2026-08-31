@@ -22,15 +22,28 @@
     .fc-card .front { font-size: 1.05rem; font-weight: 600; }
     .fc-card .back { display: none; margin-top: 0.75rem; color: var(--muted); font-size: 0.98rem; line-height: 1.45; }
     .fc-card.flipped .back { display: block; }
+    .fc-schema-wrap {
+      margin: 0.55rem 0 0;
+      width: 100%;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--line);
+      background: #fff;
+      line-height: 0;
+      max-height: min(72vh, 560px);
+    }
     .fc-card img.fc-schema {
       display: block;
       width: 100%;
-      max-height: min(58vh, 420px);
+      height: auto;
+      max-width: 100%;
       object-fit: contain;
-      margin: 0.55rem 0 0;
-      border-radius: var(--radius-sm);
+      object-position: center top;
+      margin: 0;
+      border: none;
+      border-radius: 0;
       background: #fff;
-      border: 1px solid var(--line);
     }
     .fc-card .fc-schema-miss {
       margin: 0.55rem 0 0;
@@ -575,6 +588,8 @@
           p.textContent = isBack ? (text || "Sch\u00e9ma l\u00e9gend\u00e9") : schemaFrontPrompt(text);
           el.appendChild(p);
         }
+        const wrap = document.createElement("div");
+        wrap.className = "fc-schema-wrap";
         const img = document.createElement("img");
         img.className = "fc-schema";
         img.loading = "eager";
@@ -584,10 +599,11 @@
           const miss = document.createElement("p");
           miss.className = "fc-schema-miss";
           miss.textContent = "Sch\u00e9ma introuvable \u2014 hard refresh (ou r\u00e9seau).";
-          img.replaceWith(miss);
+          wrap.replaceWith(miss);
         };
         img.src = "./" + imgSrc.replace(/^\.\//, "");
-        el.appendChild(img);
+        wrap.appendChild(img);
+        el.appendChild(wrap);
       } else el.textContent = text || "";
     }
 
