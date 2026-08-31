@@ -159,9 +159,18 @@
   function writeLsRaw(key, raw) {
     try {
       localStorage.setItem(key, raw);
+      localStorage.setItem(key + ":ts", String(Date.now()));
       return true;
     } catch (_) {
       return false;
+    }
+  }
+
+  function lsTimestamp(key) {
+    try {
+      return Number(localStorage.getItem(key + ":ts")) || 0;
+    } catch (_) {
+      return 0;
     }
   }
 
@@ -250,6 +259,7 @@
     delete memAt[key];
     try {
       localStorage.removeItem(key);
+      localStorage.removeItem(key + ":ts");
     } catch (_) {}
     setCookie(COOKIE_PREFIX + key, "", 0);
     idbRemove(key);
@@ -257,18 +267,20 @@
 
   function hydrateKey(key) {
     const lsRaw = readLsRaw(key);
-    const lsAt = lsRaw ? memAt[key] || 0 : 0;
+    const lsAt = lsRaw ? lsTimestamp(key) || memAt[key] || 0 : 0;
     return idbGetEntry(key).then(function (entry) {
       if (!entry) {
-        if (lsRaw) adopt(key, lsRaw, Date.now());
+        if (lsRaw) adopt(key, lsRaw, lsAt || Date.now());
         return;
       }
       const idbRaw = typeof entry === "string" ? entry : entry.raw;
       const idbAt = typeof entry === "string" ? 0 : Number(entry.at) || 0;
-      if (lsRaw && lsAt >= idbAt) {
-        adopt(key, lsRaw, lsAt || Date.now());
-        if (idbAt < lsAt) idbPutEntry(key, lsRaw, lsAt);
-        return;
+      if (lsRaw) {
+        if (!idbRaw || lsAt >= idbAt || lsRaw.length >= String(idbRaw).length) {
+          adopt(key, lsRaw, lsAt || Date.now());
+          if (idbRaw !== lsRaw) idbPutEntry(key, lsRaw, lsAt || Date.now());
+          return;
+        }
       }
       if (idbRaw) adopt(key, idbRaw, idbAt || Date.now());
     });

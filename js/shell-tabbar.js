@@ -172,7 +172,7 @@
     const base = scriptBase();
     Promise.resolve()
       .then(function () {
-        return loadScript(base, "js/pass-storage.js?v=3");
+        return loadScript(base, "js/pass-storage.js?v=4");
       })
       .then(function () {
         return window.PASS_STORAGE && PASS_STORAGE.ready ? PASS_STORAGE.ready() : null;

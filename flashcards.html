@@ -363,6 +363,13 @@
       gap: 0.45rem;
     }
     .flash-resume-actions .btn { width: 100%; margin: 0; }
+    .flash-save-status {
+      margin: 0.65rem 0 0;
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+    .flash-save-status.warn { color: var(--bad); }
   </style>
 </head>
 <body class="has-tabbar" data-tab="plus">
@@ -436,6 +443,7 @@
             </div>
           </div>
           <div class="pool-stats" id="pool-hint" aria-live="polite"></div>
+          <p class="flash-save-status" id="flash-save-status" role="status"></p>
           <div class="actions">
             <button type="button" class="btn" id="btn-start">Commencer</button>
           </div>
@@ -493,7 +501,7 @@
   <script src="./data/flash/ch09.js?v=8"></script>
   <script src="./data/flash/ch10.js?v=8"></script>
   <script src="./data/flash/ch11.js?v=8"></script>
-  <script src="./js/pass-storage.js?v=3"></script>
+  <script src="./js/pass-storage.js?v=4"></script>
   <script src="./js/flash-srs.js?v=7"></script>
   <script src="./js/flash-session.js?v=3"></script>
   <script src="./js/flash-forecast.js?v=1"></script>
@@ -671,6 +679,28 @@
       FORECAST.refresh(elForecast, forecastCardIds(chs, prios, kind));
     }
 
+    function updateSaveStatus() {
+      const el = document.getElementById("flash-save-status");
+      if (!el) return;
+      const S = window.PASS_STORAGE;
+      const ok = S ? S.storageOk() : true;
+      let srsN = 0;
+      try {
+        srsN = Object.keys(SRS.load()).length;
+      } catch (_) {}
+      const parts = [];
+      if (!ok) parts.push("M\u00e9moire bloqu\u00e9e sur ce navigateur");
+      else if (srsN) parts.push(srsN + " carte" + (srsN > 1 ? "s" : "") + " not\u00e9e" + (srsN > 1 ? "s" : ""));
+      else parts.push("Note au moins 1 carte (Su / Bloqu\u00e9) pour sauvegarder");
+      const hb = S && S.heartbeat ? S.heartbeat() : null;
+      if (hb && hb.at) {
+        const min = Math.round((Date.now() - hb.at) / 60000);
+        parts.push(min <= 0 ? "save \u00e0 l\u2019instant" : "save il y a " + min + " min");
+      }
+      el.textContent = parts.join(" \u00b7 ");
+      el.classList.toggle("warn", !ok);
+    }
+
     function updateHint() {
       const chs = selectedChapters();
       const prios = selectedPriorities();
@@ -700,6 +730,7 @@
       }
       document.getElementById("btn-start").disabled = !chs.length || !prios.length || n === 0;
       if (window.PASS_FLASH_DUE_MENU) PASS_FLASH_DUE_MENU.applyTabbar();
+      updateSaveStatus();
     }
 
     function wireToggleGroup(root, sel, exclusive) {
@@ -863,6 +894,7 @@
         if (PASS_STORAGE.requestPersist) PASS_STORAGE.requestPersist();
         if (PASS_STORAGE.flush) PASS_STORAGE.flush();
       }
+      updateSaveStatus();
     }
 
     function gradeCurrent(grade) {
