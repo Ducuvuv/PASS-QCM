@@ -50,13 +50,52 @@
     </section>
 
     <p class="notice-warn" role="note">
-      <strong>Progression sur ce t&eacute;l&eacute;phone</strong> &mdash; flash, fiches et QCM finis restent en m&eacute;moire locale.
-      Rouvre le site dans <strong>Safari</strong> (m&ecirc;me lien), pas depuis Instagram ou Discord.
-      Session flash en cours : reprends via <strong>Reprendre</strong> ; <strong>Sortir</strong> l&rsquo;efface.
+      <strong>Progression sur ce t&eacute;l&eacute;phone</strong> &mdash; m&eacute;morisation locale (pas de compte).
+      Ouvre <strong>toujours pareil</strong> : onglet Safari <em>ou</em> ic&ocirc;ne &eacute;cran d&rsquo;accueil (pas les deux). Pas Instagram / Discord.
+      Flash en cours : <strong>Reprendre</strong> sur la page flash ; <strong>Sortir</strong> efface la session.
     </p>
+    <p class="notice-beta" id="storage-status" role="status">M&eacute;moire locale&hellip;</p>
   </div>
 
   <nav class="tabbar" aria-label="Navigation"><div class="tabbar-inner"></div></nav>
+  <script src="./js/pass-storage.js?v=2"></script>
   <script src="./js/shell-tabbar.js?v=5"></script>
+  <script src="./data/flash/meta.js?v=1"></script>
+  <script src="./js/flash-srs.js?v=6"></script>
+  <script src="./js/flash-due-menu.js?v=3"></script>
+  <script>
+    (function () {
+      var el = document.getElementById("storage-status");
+      var S = window.PASS_STORAGE;
+      if (!el || !S) return;
+      function paint() {
+        var d = S.diagnostic ? S.diagnostic() : {};
+        var ok = d.ok !== false;
+        var parts = [];
+        parts.push(ok ? "M\u00e9moire OK" : "M\u00e9moire bloqu\u00e9e \u2014 ouvre dans Safari");
+        parts.push(d.standalone ? "app \u00e9cran accueil" : "Safari / onglet");
+        if (d.srsN) parts.push(d.srsN + " flash not\u00e9es");
+        if (d.ficheChapters) parts.push(d.ficheChapters + " fiche(s) sauv\u00e9es");
+        if (d.flashSession && d.flashSession.ids && d.flashSession.ids.length) {
+          parts.push(
+            "session flash " +
+              (Math.min(d.flashSession.index, d.flashSession.ids.length - 1) + 1) +
+              "/" +
+              d.flashSession.ids.length
+          );
+        }
+        var hb = d.heartbeat;
+        if (hb && hb.at) {
+          var min = Math.round((Date.now() - hb.at) / 60000);
+          parts.push("save " + (min <= 0 ? "\u00e0 l\u2019instant" : "il y a " + min + " min"));
+        }
+        el.textContent = parts.join(" \u00b7 ");
+        el.className = ok ? "notice-beta" : "notice-warn";
+      }
+      if (S.ready) S.ready().then(paint);
+      else paint();
+    })();
+    if (window.PASS_FLASH_DUE_MENU) PASS_FLASH_DUE_MENU.applyPlusPage();
+  </script>
 </body>
 </html>

@@ -175,7 +175,7 @@
         return loadScript(base, "data/flash/meta.js?v=1");
       })
       .then(function () {
-        return loadScript(base, "js/flash-srs.js?v=5");
+        return loadScript(base, "js/flash-srs.js?v=6");
       })
       .then(function () {
         return loadScript(base, "js/flash-due-menu.js?v=3");

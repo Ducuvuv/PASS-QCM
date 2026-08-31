@@ -1,5 +1,6 @@
 /* Chrono + mode lecture + cloze + flashcards (local, no server) */
 (function () {
+  function initFiche() {
   const body = document.body;
   const chronoEl = document.getElementById("chrono");
   const btnLecture =
@@ -227,12 +228,10 @@
             });
           }
         });
-        ficheStore.scheduleSave(FICHE_CH, function () {
-          const cur = ficheStore.loadChapter(FICHE_CH);
-          const quizzes = cur.quizzes || {};
-          quizzes[quizKey] = { placements: placements };
-          ficheStore.saveChapter(FICHE_CH, { quizzes: quizzes, chrono: seconds });
-        });
+        const cur = ficheStore.loadChapter(FICHE_CH);
+        const quizzes = cur.quizzes || {};
+        quizzes[quizKey] = { placements: placements };
+        ficheStore.saveChapter(FICHE_CH, { quizzes: quizzes, chrono: seconds });
       }
 
       if (!quiz.querySelector(".label-quiz-hint") && bank) {
@@ -502,4 +501,10 @@
       document.head.appendChild(s);
     }
   })();
+  }
+  if (window.PASS_STORAGE && PASS_STORAGE.ready) {
+    PASS_STORAGE.ready().then(initFiche);
+  } else {
+    initFiche();
+  }
 })();

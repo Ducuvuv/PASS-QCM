@@ -1,4 +1,4 @@
-/* Sauvegarde locale fiche — trous + chrono (survit au refresh) */
+/* Sauvegarde locale fiche — trous + chrono (immédiat, pas de debounce) */
 (function (global) {
   const KEY = "pass-fiche-progress-v1";
 
@@ -7,29 +7,34 @@
     return m ? m[1] : null;
   }
 
-  function loadChapter(ch) {
+  function loadAll() {
+    const S = global.PASS_STORAGE;
+    if (S) {
+      const all = S.getJSON(KEY);
+      return all && typeof all === "object" ? all : {};
+    }
     try {
-      const all = JSON.parse(localStorage.getItem(KEY) || "{}");
-      return all[ch] || {};
+      return JSON.parse(localStorage.getItem(KEY) || "{}") || {};
     } catch (_) {
       return {};
     }
   }
 
-  function saveChapter(ch, partial) {
-    if (!ch) return;
-    try {
-      const all = JSON.parse(localStorage.getItem(KEY) || "{}");
-      all[ch] = Object.assign({}, all[ch], partial, { updatedAt: Date.now() });
-      localStorage.setItem(KEY, JSON.stringify(all));
-    } catch (_) {}
+  function loadChapter(ch) {
+    return loadAll()[ch] || {};
   }
 
-  function scheduleSave(ch, fn) {
+  function saveChapter(ch, partial) {
     if (!ch) return;
-    const t = "__passFicheSave_" + ch;
-    clearTimeout(global[t]);
-    global[t] = setTimeout(fn, 280);
+    const all = loadAll();
+    all[ch] = Object.assign({}, all[ch], partial, { updatedAt: Date.now() });
+    const S = global.PASS_STORAGE;
+    if (S) S.setJSON(KEY, all);
+    else {
+      try {
+        localStorage.setItem(KEY, JSON.stringify(all));
+      } catch (_) {}
+    }
   }
 
   global.PASS_FICHE_PROGRESS = {
@@ -37,6 +42,5 @@
     chapterFromPath: chapterFromPath,
     loadChapter: loadChapter,
     saveChapter: saveChapter,
-    scheduleSave: scheduleSave,
   };
 })(window);

@@ -493,8 +493,9 @@
   <script src="./data/flash/ch09.js?v=8"></script>
   <script src="./data/flash/ch10.js?v=8"></script>
   <script src="./data/flash/ch11.js?v=8"></script>
-  <script src="./js/flash-srs.js?v=5"></script>
-  <script src="./js/flash-session.js?v=1"></script>
+  <script src="./js/pass-storage.js?v=2"></script>
+  <script src="./js/flash-srs.js?v=6"></script>
+  <script src="./js/flash-session.js?v=2"></script>
   <script src="./js/flash-forecast.js?v=1"></script>
     <script>
     const CHAPTER_ORDER = ["01","02","03","04","05","06","07","08","09","10","11"];
@@ -923,21 +924,29 @@
       if (document.visibilityState === "hidden") forceSaveFlashPlay();
     });
 
-    buildChapters();
-    const savedPlay = FLASH_SESSION && FLASH_SESSION.read();
-    if (savedPlay && savedPlay.ids && savedPlay.ids.length) {
-      if (!restoreFlashPlay(savedPlay)) showResumeOffer();
+    function bootFlashcards() {
+      buildChapters();
+      const savedPlay = FLASH_SESSION && FLASH_SESSION.read();
+      if (savedPlay && savedPlay.ids && savedPlay.ids.length) {
+        if (!restoreFlashPlay(savedPlay)) showResumeOffer();
+      }
+      if (elPlay.classList.contains("hidden")) {
+        (function applyModeFromUrl() {
+          const mode = (new URLSearchParams(location.search).get("mode") || "").toLowerCase();
+          if (mode !== "due" && mode !== "review" && mode !== "all") return;
+          elModeList.querySelectorAll(".mode-btn").forEach((b) => {
+            b.setAttribute("aria-pressed", b.getAttribute("data-mode") === mode ? "true" : "false");
+          });
+          updateHint();
+        })();
+        show("setup");
+      }
     }
-    if (elPlay.classList.contains("hidden")) {
-      (function applyModeFromUrl() {
-        const mode = (new URLSearchParams(location.search).get("mode") || "").toLowerCase();
-        if (mode !== "due" && mode !== "review" && mode !== "all") return;
-        elModeList.querySelectorAll(".mode-btn").forEach((b) => {
-          b.setAttribute("aria-pressed", b.getAttribute("data-mode") === mode ? "true" : "false");
-        });
-        updateHint();
-      })();
-      show("setup");
+
+    if (window.PASS_STORAGE && PASS_STORAGE.ready) {
+      PASS_STORAGE.ready().then(bootFlashcards);
+    } else {
+      bootFlashcards();
     }
   </script><nav class="tabbar" aria-label="Navigation"><div class="tabbar-inner"></div></nav>
 <script src="./js/shell-tabbar.js?v=5"></script>

@@ -68,10 +68,23 @@
     return out;
   }
 
+  function readRaw(key) {
+    const S = global.PASS_STORAGE;
+    if (S) {
+      const j = S.getJSON(key);
+      if (j && typeof j === "object" && !Array.isArray(j)) return j;
+    }
+    try {
+      const raw = localStorage.getItem(key);
+      if (raw) return JSON.parse(raw) || {};
+    } catch (_) {}
+    return null;
+  }
+
   function load() {
     try {
-      const v3 = localStorage.getItem(KEY);
-      if (v3) return JSON.parse(v3) || {};
+      const v3map = readRaw(KEY);
+      if (v3map) return v3map;
     } catch (_) {}
     try {
       const v2 = localStorage.getItem(KEY_V2);
@@ -93,9 +106,14 @@
   }
 
   function save(map) {
-    try {
-      localStorage.setItem(KEY, JSON.stringify(map || {}));
-    } catch (_) {}
+    const data = map || {};
+    const S = global.PASS_STORAGE;
+    if (S) S.setJSON(KEY, data);
+    else {
+      try {
+        localStorage.setItem(KEY, JSON.stringify(data));
+      } catch (_) {}
+    }
   }
 
   function get(id) {
