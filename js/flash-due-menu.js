@@ -1,5 +1,32 @@
 /* Badge menu — file du jour (style Anki, pas tout le deck) */
 (function (global) {
+  const BADGE_CACHE_KEY = "pass-flash-due-badge-v1";
+
+  function todayKey() {
+    var d = new Date();
+    return (
+      d.getFullYear() +
+      "-" +
+      String(d.getMonth() + 1).padStart(2, "0") +
+      "-" +
+      String(d.getDate()).padStart(2, "0")
+    );
+  }
+
+  function writeBadgeCache(n) {
+    try {
+      localStorage.setItem(BADGE_CACHE_KEY, JSON.stringify({ date: todayKey(), n: Math.max(0, Number(n) || 0) }));
+    } catch (_) {}
+  }
+
+  function readBadgeCache() {
+    try {
+      var raw = JSON.parse(localStorage.getItem(BADGE_CACHE_KEY));
+      if (raw && raw.date === todayKey()) return Math.max(0, Number(raw.n) || 0);
+    } catch (_) {}
+    return 0;
+  }
+
   function allIds() {
     var meta = global.PASS_FLASH_META;
     return meta && meta.ids ? meta.ids : [];
@@ -38,8 +65,7 @@
     return null;
   }
 
-  function applyTabbar() {
-    var n = dueTodayCount();
+  function paintTabbar(n) {
     var plusLink = findPlusTab(document.querySelector("nav.tabbar"));
     if (!plusLink) return;
     var badge = plusLink.querySelector(".tab-badge");
@@ -56,6 +82,16 @@
     badge.textContent = formatBadge(n);
     badge.setAttribute("aria-label", n + " flashcards pour aujourd'hui");
     plusLink.classList.add("has-badge");
+  }
+
+  function applyTabbar() {
+    var n = dueTodayCount();
+    writeBadgeCache(n);
+    paintTabbar(n);
+  }
+
+  function applyTabbarCached() {
+    paintTabbar(readBadgeCache());
   }
 
   function applyPlusPage() {
@@ -128,6 +164,7 @@
     dueTodayDetail: dueTodayDetail,
     apply: applyAll,
     applyTabbar: applyTabbar,
+    applyTabbarCached: applyTabbarCached,
     applyPlusPage: applyPlusPage,
     applyHome: applyHome,
   };

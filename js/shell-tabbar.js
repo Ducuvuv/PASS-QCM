@@ -1,5 +1,7 @@
 /* Tab bar shell — icônes + labels, 1 seul endroit à maintenir */
 (function () {
+  const BADGE_CACHE_KEY = "pass-flash-due-badge-v1";
+
   const TABS = [
     {
       id: "home",
@@ -32,6 +34,54 @@
       icon: '<circle cx="6.5" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="17.5" cy="12" r="1.4" fill="currentColor" stroke="none"/>',
     },
   ];
+
+  function todayKey() {
+    const d = new Date();
+    return (
+      d.getFullYear() +
+      "-" +
+      String(d.getMonth() + 1).padStart(2, "0") +
+      "-" +
+      String(d.getDate()).padStart(2, "0")
+    );
+  }
+
+  function cachedDueCount() {
+    try {
+      const raw = JSON.parse(localStorage.getItem(BADGE_CACHE_KEY));
+      if (raw && raw.date === todayKey()) return Math.max(0, Number(raw.n) || 0);
+    } catch (_) {}
+    return 0;
+  }
+
+  function formatBadge(n) {
+    if (n <= 0) return "";
+    return n > 99 ? "99+" : String(n);
+  }
+
+  function paintPlusBadge(n) {
+    const nav = document.querySelector("nav.tabbar");
+    if (!nav) return;
+    let plusLink = null;
+    nav.querySelectorAll("a").forEach(function (a) {
+      if ((a.getAttribute("href") || "").indexOf("plus.html") >= 0) plusLink = a;
+    });
+    if (!plusLink) return;
+    let badge = plusLink.querySelector(".tab-badge");
+    if (n <= 0) {
+      if (badge) badge.remove();
+      plusLink.classList.remove("has-badge");
+      return;
+    }
+    if (!badge) {
+      badge = document.createElement("span");
+      badge.className = "tab-badge";
+      plusLink.appendChild(badge);
+    }
+    badge.textContent = formatBadge(n);
+    badge.setAttribute("aria-label", n + " flashcards pour aujourd'hui");
+    plusLink.classList.add("has-badge");
+  }
 
   function currentId() {
     const forced = document.body.getAttribute("data-tab");
@@ -112,6 +162,13 @@
   }
 
   function boot() {
+    mount();
+    if (window.PASS_FLASH_DUE_MENU && typeof PASS_FLASH_DUE_MENU.applyTabbarCached === "function") {
+      PASS_FLASH_DUE_MENU.applyTabbarCached();
+    } else {
+      paintPlusBadge(cachedDueCount());
+    }
+
     const base = scriptBase();
     Promise.resolve()
       .then(function () {
@@ -121,10 +178,9 @@
         return loadScript(base, "js/flash-srs.js?v=5");
       })
       .then(function () {
-        return loadScript(base, "js/flash-due-menu.js?v=2");
+        return loadScript(base, "js/flash-due-menu.js?v=3");
       })
       .then(function () {
-        mount();
         if (window.PASS_FLASH_DUE_MENU) PASS_FLASH_DUE_MENU.apply();
       });
   }
